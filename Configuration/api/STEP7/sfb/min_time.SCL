@@ -1,0 +1,19 @@
+
+FUNCTION CB_min_time : TIME
+
+TITLE = ' Search for the greater variable '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : minTime
+FAMILY  : TNI
+
+VAR_INPUT
+    IN0 : TIME;
+    IN1 : TIME;
+END_VAR
+
+BEGIN
+
+    CB_min_time := MIN(IN1 := IN0, IN2 := IN1);
+
+END_FUNCTION

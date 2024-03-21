@@ -1,0 +1,22 @@
+
+FUNCTION CB_word_to_int : INT
+
+TITLE = ' Convert a word into a integer '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : worToIn
+FAMILY  : TNI
+
+VAR_INPUT
+    IN : WORD;
+END_VAR
+
+VAR_TEMP
+
+END_VAR    
+
+BEGIN
+
+CB_word_to_int := WORD_TO_INT(IN);
+
+END_FUNCTION

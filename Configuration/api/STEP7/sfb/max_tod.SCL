@@ -1,0 +1,19 @@
+
+FUNCTION CB_max_tod : TOD
+
+TITLE = ' Search for the greater variable '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : maxTod
+FAMILY  : TNI
+
+VAR_INPUT
+    IN0 : TOD;
+    IN1 : TOD;
+END_VAR
+
+BEGIN
+
+    CB_max_tod := MAX(IN1 := IN0, IN2 := IN1);
+
+END_FUNCTION

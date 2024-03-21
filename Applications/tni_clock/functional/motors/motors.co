@@ -1,0 +1,12 @@
+ stepMotorSecond IB1
+ stepMotorMinute IB2
+ stepMotorHour IB3
+ hourHand LI4
+ minuteHand LI5
+ secondHand LI6
+ stepMotorHour_PREV LB7
+ stepMotorHour_EDGE LI8
+ stepMotorMinute_PREV LB9
+ stepMotorMinute_EDGE LI10
+ stepMotorSecond_PREV LB11
+ stepMotorSecond_EDGE LI12

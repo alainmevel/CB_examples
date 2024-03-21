@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild2019_1 -->
+
+<APPLICATION_REQUIREMENTS>
+	<NODE NAME="drill" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\drill\functional\drill" UUID="00000000-0000-0000-0000-000000000000">
+		<CHILDREN>
+			<NODE NAME="generalPanel" TYPE="mac" MODEL_NAME="gen_panel" UUID="e1374eb2-c584-42ce-b010-dbe665762cb7">
+				<CHILDREN>
+					<NODE NAME="powerUpPB" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\equipment_library\functional\momentary_button" UUID="d680b7ba-65da-4d88-b812-084415bf4aa1">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="startCyclePB" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\equipment_library\functional\momentary_button" UUID="5e4d0f19-4c26-491a-8b15-f9614ec9dc91">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="cycleSwitch" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\equipment_library\functional\switch_2pos_2outputs" UUID="718c153c-dced-4805-b088-d0d5b5cad765">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="modeSwitch" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\equipment_library\functional\switch_2pos_2outputs" UUID="8dfebce0-daf5-4815-a511-418968dc8a02">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="acknowledgePB" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\equipment_library\functional\momentary_button" UUID="2b8179b7-228d-4e02-9f85-b75ce2c4e371">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="emergencyStop" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\equipment_library\functional\maintained_button" UUID="586f3b53-57e7-4f6b-8e36-d5f9dd01c3f1">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="workingModes" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\drill\functional\mode" UUID="3dc88bb5-ab80-45cb-8cda-b5fb692bb791">
+				<CHILDREN>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="functional" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\drill\functional\function" UUID="844c5ad2-4c8c-4d93-84e0-1fbdaed62b3d">
+				<CHILDREN>
+					<NODE NAME="functionChart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\drill\functional\run" UUID="33df65fe-4273-40f8-97ec-043747f93f6b">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="descent" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\drill\functional\mdescent" UUID="7287c59c-9f9c-496e-9739-e46b9a97b56d">
+						<CHILDREN>
+							<NODE NAME="ascentFunction" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\drill\functional\descent" UUID="2976e3eb-80f3-4e02-870a-b793e75ba11c">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="motorOfTurret" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\io_library\functional\io_engine_2d2s" UUID="c1969f33-d457-4c21-8327-20a428378970">
+								<CHILDREN>
+									<NODE NAME="panel1" TYPE="mac" MODEL_NAME="panel" UUID="23e7b76c-3310-48d6-8bc1-94e4e5f777d5">
+										<CHILDREN>
+											<NODE NAME="forwardPB" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\equipment_library\functional\momentary_button" UUID="07253b04-00f9-4874-aee6-e23deb58a67c">
+												<CHILDREN>
+												</CHILDREN>
+											</NODE>
+											<NODE NAME="backwardPB" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\equipment_library\functional\momentary_button" UUID="856e3485-faf4-4284-930e-283d3d8572b7">
+												<CHILDREN>
+												</CHILDREN>
+											</NODE>
+											<NODE NAME="speedSwitch" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\equipment_library\functional\switch_2pos_2outputs" UUID="c6dbb002-8c3a-4f64-a52f-58c231dfc6ef">
+												<CHILDREN>
+												</CHILDREN>
+											</NODE>
+											<NODE NAME="stopPB" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\equipment_library\functional\momentary_button" UUID="140d1dac-6ad2-4dc3-acf3-725ff36e99d8">
+												<CHILDREN>
+												</CHILDREN>
+											</NODE>
+										</CHILDREN>
+									</NODE>
+									<NODE NAME="motor" TYPE="c" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\equipment_library\functional\motor_2dir_2speed" UUID="97533b38-c403-48bc-8a87-1311fd549621">
+										<CHILDREN>
+										</CHILDREN>
+									</NODE>
+									<NODE NAME="cmdOfMotor" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\cmd_equipment_library\functional\cmd_motor_2d2s" UUID="313de1d3-ddd6-4d14-955d-7556fa1eb823">
+										<CHILDREN>
+											<NODE NAME="actions" TYPE="rel" MODEL_NAME="actuator" UUID="069ac9fa-7282-426a-86d6-5271030a3167">
+												<CHILDREN>
+												</CHILDREN>
+											</NODE>
+											<NODE NAME="faults1" TYPE="rel" MODEL_NAME="faults" UUID="376051c4-fd4a-47f4-8a9b-5d85ab64b32b">
+												<CHILDREN>
+													<NODE NAME="TON_FW" TYPE="c" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\timers_counters\functional\cb_ton" UUID="365e178e-82c2-4f99-ab98-9ccddd1c225c">
+														<CHILDREN>
+														</CHILDREN>
+													</NODE>
+													<NODE NAME="TON_BW" TYPE="c" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\timers_counters\functional\cb_ton" UUID="30d3e4b9-525d-4a2d-99dc-8fb0e90e104f">
+														<CHILDREN>
+														</CHILDREN>
+													</NODE>
+												</CHILDREN>
+											</NODE>
+										</CHILDREN>
+									</NODE>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="turret" TYPE="c" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\drill\functional\turret" UUID="925f8500-457b-4c87-ad40-cf6f3b0431bf">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="clamping" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\drill\functional\mclamping" UUID="e35003bc-884f-49d9-acca-3fc4d05ea27b">
+						<CHILDREN>
+							<NODE NAME="clampingFunction" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\drill\functional\clamping" UUID="4eae63f2-9d1e-472d-9dab-fa066bd4a037">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="leftJack" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\io_library\functional\io_single_acting_jack" UUID="2289fd62-a976-4345-8149-9fd07c6065e6">
+								<CHILDREN>
+									<NODE NAME="panel1" TYPE="mac" MODEL_NAME="panel" UUID="5bcd224c-8f69-48c2-a069-2be3d745e0e4">
+										<CHILDREN>
+											<NODE NAME="switch" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\equipment_library\functional\switch_2pos_1output" UUID="d6bd9525-fffd-4c86-a86c-309ecebf2e81">
+												<CHILDREN>
+												</CHILDREN>
+											</NODE>
+										</CHILDREN>
+									</NODE>
+									<NODE NAME="cmdOfJack" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\cmd_equipment_library\functional\cmd_single_acting_jack" UUID="d040329a-54b7-4ec1-8205-5dbdd6df1061">
+										<CHILDREN>
+											<NODE NAME="actions" TYPE="rel" MODEL_NAME="actuator" UUID="f4b90889-247c-4f44-9eb0-0cb22f2a33e9">
+												<CHILDREN>
+												</CHILDREN>
+											</NODE>
+											<NODE NAME="faults1" TYPE="rel" MODEL_NAME="faults" UUID="8924741a-2421-4356-bb2f-578e76570dec">
+												<CHILDREN>
+													<NODE NAME="TON_OUT" TYPE="c" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\timers_counters\functional\cb_ton" UUID="74ff68a8-039d-47b6-aeb0-3397bee2a7d7">
+														<CHILDREN>
+														</CHILDREN>
+													</NODE>
+													<NODE NAME="TON_IN" TYPE="c" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\timers_counters\functional\cb_ton" UUID="c3057f5e-9a91-48f6-923c-f970523cf901">
+														<CHILDREN>
+														</CHILDREN>
+													</NODE>
+													<NODE NAME="TON_DISC" TYPE="c" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\timers_counters\functional\cb_ton" UUID="21a35344-fa89-4bbb-ac8d-bfd7b305a0a7">
+														<CHILDREN>
+														</CHILDREN>
+													</NODE>
+												</CHILDREN>
+											</NODE>
+										</CHILDREN>
+									</NODE>
+									<NODE NAME="jack" TYPE="c" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\equipment_library\functional\single_acting_jack" UUID="fb39343c-8e04-41e4-b08a-925fb3005915">
+										<CHILDREN>
+										</CHILDREN>
+									</NODE>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="rightJack" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\io_library\functional\io_single_acting_jack" UUID="cfce6d63-987c-4792-947f-faa635d30979">
+								<CHILDREN>
+									<NODE NAME="panel1" TYPE="mac" MODEL_NAME="panel" UUID="f3319991-77a2-41c0-bc46-41bdff26b0dd">
+										<CHILDREN>
+											<NODE NAME="switch" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\equipment_library\functional\switch_2pos_1output" UUID="dfe4b897-1d43-4c52-9a86-cfee98ab6b38">
+												<CHILDREN>
+												</CHILDREN>
+											</NODE>
+										</CHILDREN>
+									</NODE>
+									<NODE NAME="cmdOfJack" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\cmd_equipment_library\functional\cmd_single_acting_jack" UUID="cf324962-d3f8-4a34-bb1e-79e63e4d5ef7">
+										<CHILDREN>
+											<NODE NAME="actions" TYPE="rel" MODEL_NAME="actuator" UUID="420f3a27-e04c-4508-b369-efd05b69274a">
+												<CHILDREN>
+												</CHILDREN>
+											</NODE>
+											<NODE NAME="faults1" TYPE="rel" MODEL_NAME="faults" UUID="25fb4dcd-c9a7-4587-b488-58827690c0db">
+												<CHILDREN>
+													<NODE NAME="TON_OUT" TYPE="c" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\timers_counters\functional\cb_ton" UUID="752a802d-e872-4e37-a990-865552d5cff0">
+														<CHILDREN>
+														</CHILDREN>
+													</NODE>
+													<NODE NAME="TON_IN" TYPE="c" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\timers_counters\functional\cb_ton" UUID="dd9252de-fd14-42dd-b6be-6a833a8dcf99">
+														<CHILDREN>
+														</CHILDREN>
+													</NODE>
+													<NODE NAME="TON_DISC" TYPE="c" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\timers_counters\functional\cb_ton" UUID="7936edf2-b7c9-487e-afe0-13e26b50627f">
+														<CHILDREN>
+														</CHILDREN>
+													</NODE>
+												</CHILDREN>
+											</NODE>
+										</CHILDREN>
+									</NODE>
+									<NODE NAME="jack" TYPE="c" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\equipment_library\functional\single_acting_jack" UUID="67c0a062-7506-4560-90ef-7ce14e3c90fe">
+										<CHILDREN>
+										</CHILDREN>
+									</NODE>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="spindle" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\drill\functional\mspindle" UUID="64ef8073-b739-4b0a-8436-7f75b5acfa0c">
+						<CHILDREN>
+							<NODE NAME="spindle" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\drill\functional\spindle" UUID="15fb6765-52e4-4b6a-95e3-a1cbefcb4bb5">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="spindleMotor" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\io_library\functional\io_engine_1d1s" UUID="ab8220c0-95bf-4d55-9f82-c9a4c62166c6">
+								<CHILDREN>
+									<NODE NAME="panel1" TYPE="mac" MODEL_NAME="panel" UUID="03d20d62-8ded-410d-a89e-91377d4f7ff2">
+										<CHILDREN>
+											<NODE NAME="forwardPB" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\equipment_library\functional\momentary_button" UUID="b8885a52-5c72-4c08-b727-493b1c482ca6">
+												<CHILDREN>
+												</CHILDREN>
+											</NODE>
+											<NODE NAME="stopPB" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\equipment_library\functional\momentary_button" UUID="aba5d688-e69a-4a89-bf6f-d777f62ce63d">
+												<CHILDREN>
+												</CHILDREN>
+											</NODE>
+										</CHILDREN>
+									</NODE>
+									<NODE NAME="motor" TYPE="c" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\equipment_library\functional\motor_1dir_1speed" UUID="4703c12e-e7aa-4bf7-94e6-4a8654c46dd3">
+										<CHILDREN>
+										</CHILDREN>
+									</NODE>
+									<NODE NAME="cmdOfMotor" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\cmd_equipment_library\functional\cmd_motor_1d1s" UUID="6e51edc0-8790-4e45-8321-5f50a208062b">
+										<CHILDREN>
+											<NODE NAME="actions" TYPE="rel" MODEL_NAME="actuator" UUID="442036f5-ab3e-4da9-830a-96dfd4750127">
+												<CHILDREN>
+												</CHILDREN>
+											</NODE>
+											<NODE NAME="faults1" TYPE="rel" MODEL_NAME="faults" UUID="e975060a-e7c6-4d06-bbe7-4375ff1a131e">
+												<CHILDREN>
+													<NODE NAME="TON_FB" TYPE="c" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Standard\timers_counters\functional\cb_ton" UUID="438145aa-b7d9-400a-a664-8a4c138b7f10">
+														<CHILDREN>
+														</CHILDREN>
+													</NODE>
+												</CHILDREN>
+											</NODE>
+										</CHILDREN>
+									</NODE>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="load" TYPE="c" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\drill\functional\piece" UUID="503609d1-13d3-4397-97a6-7fa39c140208">
+				<CHILDREN>
+				</CHILDREN>
+			</NODE>
+		</CHILDREN>
+	</NODE>
+</APPLICATION_REQUIREMENTS>

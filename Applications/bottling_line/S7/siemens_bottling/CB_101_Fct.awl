@@ -1,0 +1,31 @@
+FUNCTION_BLOCK FB101
+TITLE = 'pilot_Z3'
+AUTHOR : CB
+
+VAR
+	pilot_Z3AGIT1VAD : FB98;
+	pilot_Z3EV1VAD : FB100;
+END_VAR
+
+
+BEGIN
+
+
+NETWORK
+TITLE = 
+//
+//	pilot/pilot_Z3/pilot_Z3AGIT1VAD
+CALL #pilot_Z3AGIT1VAD;
+
+
+
+NETWORK
+TITLE = 
+//
+//	pilot/pilot_Z3/pilot_Z3EV1VAD
+CALL #pilot_Z3EV1VAD;
+
+
+
+
+END_FUNCTION_BLOCK

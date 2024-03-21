@@ -1,0 +1,82 @@
+FUNCTION FC78: VOID
+AUTHOR : CB
+VAR_INPUT
+        combE : INT;
+END_VAR
+
+LABEL
+        combi_e, actions, combi_s;
+END_LABEL
+
+BEGIN
+        IF (combE = 0) THEN GOTO actions;
+        END_IF;
+(* Gestion des combinatoires d'entree *)
+combi_e: 
+"DB120".FloMGT1_endOfWeighing := (("DB120".FloMGT1_totalWeight + "DB120".FloMGT1_weighedWeight) >= "DB120".FloMGT1_flourWeight) OR 
+("DB120".FloMGT1_weighedWeight >= "DB120".FloMGT1_maxWeight);
+RETURN;
+
+(* Gestion des actions du graphe *)
+actions: 
+(* Step activity of Step10 *)
+IF DB78.Step10.X THEN
+"DB120".FloMGT1_totalWeight := 0;
+END_IF;
+
+(* Step activity of Step11 *)
+IF DB78.Step11.S1 THEN
+"DB120".FloMGT1_introduceFlour := TRUE;
+END_IF;
+IF DB78.Step11.X THEN
+"DB120".FloMGT1_introduceFlour := TRUE;
+END_IF;
+IF DB78.Step11.S0 THEN
+"DB120".FloMGT1_introduceFlour := FALSE;
+END_IF;
+
+(* Step activity of Step12 *)
+IF DB78.Step12.X THEN
+IF (DB78.Step12.S1) THEN
+	"DB120".FloMGT1_totalWeight := "DB120".FloMGT1_totalWeight + "DB120".FloMGT1_weighedWeight;
+END_IF;
+END_IF;
+
+(* Step activity of Step13 *)
+IF DB78.Step13.S1 THEN
+"DB120".FloMGT1_exitFlour := TRUE;
+END_IF;
+IF DB78.Step13.X THEN
+"DB120".FloMGT1_exitFlour := TRUE;
+END_IF;
+IF DB78.Step13.S0 THEN
+"DB120".FloMGT1_exitFlour := FALSE;
+END_IF;
+
+(* Step activity of Step14 *)
+
+(* Step activity of Step15 *)
+IF DB78.Step15.S1 THEN
+"DB120".FloMGT1_weighingOk := TRUE;
+END_IF;
+IF DB78.Step15.X THEN
+"DB120".FloMGT1_weighingOk := TRUE;
+END_IF;
+IF DB78.Step15.S0 THEN
+"DB120".FloMGT1_weighingOk := FALSE;
+END_IF;
+
+(* Gestion des combinatoires de sortie *)
+combi_s: 
+IF NOT "DB120".WKM1_cycleInProgress THEN
+	"DB120".FloMGT1_introduceFlour := FALSE;
+	
+	"DB120".FloMGT1_exitFlour := FALSE;
+END_IF;
+
+"DB120".FloMGT1_introFlourEnd := NOT "DB120".FloMGT1_introduceFlour OR NOT "DB120".WKM1_cycleInProgress;
+
+"DB120".FloMGT1_exitFlourEnd := NOT "DB120".FloMGT1_exitFlour OR NOT "DB120".WKM1_cycleInProgress;
+
+(* Memory edges *)
+END_FUNCTION

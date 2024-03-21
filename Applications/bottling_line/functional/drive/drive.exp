@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<CB_COMPONENT NAME="drive" COMMENTS="" COMMENTS_PATTERN="&lt;CLASS_PATTERN&gt;" PICTURE_PATH="" INSTANCE_NAMIMG_PATTERN="&lt;CLASS_PATTERN&gt;" COMPONENT_CLASS="CONTROL_UNIT" SAFE_MODE="True" BREAKPOINT="False" GEN_STATUS="good">
+	<MODEL_REQUIREMENTS>
+&#9;
+		<COMMENTS />
+&#9;
+		<FUNCTIONAL_TREE TYPE="mac">
+&#9;&#9;
+			<CHILDREN>
+				<NODE NAME="conveyor" MODEL_PATH="Standard\io_library\io_engine_1d1s" />
+				<NODE NAME="pulse" MODEL_PATH="Applications\bottling_line\pulse_generator">
+					<NODE NAME="bottles" MODEL_PATH="Applications\bottling_line\bottle" /></NODE></CHILDREN></FUNCTIONAL_TREE></MODEL_REQUIREMENTS>
+</CB_COMPONENT>

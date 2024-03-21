@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<MODEL_REQUIREMENTS>
+	<FUNCTIONAL_TREE TYPE="mac">
+		<CHILDREN>
+			<NODE NAME="key2position" MODEL_PATH="Applications\tni_train\key2position">
+			</NODE>
+			<NODE NAME="service_side" MODEL_PATH="Applications\tni_train\service_side">
+			</NODE>
+			<NODE NAME="closingPB" MODEL_PATH="Applications\tni_train\pb">
+			</NODE>
+			<NODE NAME="trainSpeed" MODEL_PATH="Applications\tni_train\speed">
+			</NODE>
+			<NODE NAME="cabControlPart" MODEL_PATH="Applications\tni_train\cp_cab">
+			</NODE>
+		</CHILDREN>
+	</FUNCTIONAL_TREE>
+</MODEL_REQUIREMENTS>

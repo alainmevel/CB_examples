@@ -1,0 +1,9 @@
+ energy IB1
+ cmdSupply IB2
+ ctrlValve IB3
+ pipeWork OB4
+ pipeRest OB5
+ workingMode OB6
+ slidePosition LI7
+ d_work DB8
+ v_d_work DB9

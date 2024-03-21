@@ -1,0 +1,4 @@
+Component "conveyor1": some branches have not been covered or some variables have not changed
+File 'conveyor1_cov.c'
+Lines executed:19.57% of 46
+

@@ -1,0 +1,20 @@
+
+FUNCTION CB_eq_bool : BOOL
+
+
+TITLE = ' Equality of two boolean '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : eq_bool
+FAMILY  : TNI
+
+VAR_INPUT
+    IN0 : BOOL;
+    IN1 : BOOL;
+END_VAR
+
+BEGIN
+
+CB_eq_bool := (IN0 = IN1);
+
+END_FUNCTION

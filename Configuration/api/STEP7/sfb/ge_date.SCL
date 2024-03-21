@@ -1,0 +1,20 @@
+
+FUNCTION CB_ge_date : BOOL
+
+
+TITLE = ' Test Whether IN0 is greater than or equal to IN1 '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : ge_date
+FAMILY  : TNI
+
+VAR_INPUT
+    IN0 : DATE;
+    IN1 : DATE;    
+END_VAR
+
+BEGIN
+
+CB_ge_date := (IN0 >= IN1);
+
+END_FUNCTION

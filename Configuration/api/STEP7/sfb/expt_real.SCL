@@ -1,0 +1,21 @@
+
+FUNCTION CB_expt_real : REAL
+
+
+TITLE = ' Exponentiation of a variable  '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : exptReal
+FAMILY  : TNI
+
+VAR_INPUT
+    IN1 : REAL;
+    IN2 : REAL;
+
+END_VAR
+
+BEGIN
+
+CB_expt_real := IN1 ** IN2;
+
+END_FUNCTION

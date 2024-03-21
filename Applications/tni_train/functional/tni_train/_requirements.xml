@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<MODEL_REQUIREMENTS>
+	<FUNCTIONAL_TREE TYPE="mac">
+		<CHILDREN>
+			<NODE NAME="cab1" MODEL_PATH="Applications\tni_train\cab">
+			</NODE>
+			<NODE NAME="cab2" MODEL_PATH="Applications\tni_train\cab">
+			</NODE>
+			<NODE NAME="motorCar1" MODEL_PATH="Applications\tni_train\car">
+			</NODE>
+			<NODE NAME="car1" MODEL_PATH="Applications\tni_train\car">
+			</NODE>
+			<NODE NAME="car2" MODEL_PATH="Applications\tni_train\car">
+			</NODE>
+			<NODE NAME="car3" MODEL_PATH="Applications\tni_train\car">
+			</NODE>
+			<NODE NAME="motorCar2" MODEL_PATH="Applications\tni_train\car">
+			</NODE>
+		</CHILDREN>
+	</FUNCTIONAL_TREE>
+</MODEL_REQUIREMENTS>

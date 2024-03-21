@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<MODEL_REQUIREMENTS>
+	<FUNCTIONAL_TREE TYPE="mac">
+		<CHILDREN>
+			<NODE NAME="collectedMixture" MODEL_PATH="Applications\batch\add_syrup">
+			</NODE>
+			<NODE NAME="flow" MODEL_PATH="Standard\equipment_library\flow_compute">
+			</NODE>
+			<NODE NAME="kneading" MODEL_PATH="Applications\batch\kneading">
+			</NODE>
+			<NODE NAME="motorOfAgitator" MODEL_PATH="Standard\io_library\io_agitator_1speed">
+			</NODE>
+			<NODE NAME="cleaningValve" MODEL_PATH="Standard\io_library\io_on_off_valve">
+			</NODE>
+			<NODE NAME="mixtureExtractingValve" MODEL_PATH="Standard\io_library\io_on_off_valve">
+			</NODE>
+			<NODE NAME="mixtureWeighing" MODEL_PATH="Standard\equipment_library\tank">
+			</NODE>
+			<NODE NAME="faults" TYPE="rel">
+			</NODE>
+			<NODE NAME="level" MODEL_PATH="Standard\equipment_library\analog_sensor">
+			</NODE>
+			<NODE NAME="scale" MODEL_PATH="Standard\equipment_library\bounded_scale">
+			</NODE>
+		</CHILDREN>
+	</FUNCTIONAL_TREE>
+</MODEL_REQUIREMENTS>

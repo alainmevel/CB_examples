@@ -1,0 +1,18 @@
+
+FUNCTION CB_mod_int : INT
+
+
+TITLE = ' Modulo of integer '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : modInt
+FAMILY  : TNI
+
+VAR_INPUT
+    IN1 : INT;
+    IN2 : INT;
+END_VAR
+
+BEGIN
+    CB_mod_int := IN1 MOD IN2;  
+END_FUNCTION

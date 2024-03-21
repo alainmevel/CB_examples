@@ -1,0 +1,10 @@
+ fwdHighSpeedState IB1
+ fwdLowSpeedState IB2
+ positionRamp OF3
+ percentRamp OF4
+ increment LF5
+ pBound LF6
+ maxRamp PF7
+ timeRamp PF8
+ d_locking DB9
+ v_d_locking DF10

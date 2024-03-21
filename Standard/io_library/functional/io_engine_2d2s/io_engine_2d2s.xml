@@ -1,0 +1,1129 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-03T11:12:47-01:00" />
+	<contentHeader name="io_engine_2d2s">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="32" y="8" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+			<pou name="io_library.io_engine_2d2s" pouType="program">
+				<interface>
+					<inputVars>
+						<variable name="autoMode">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Automatic mode</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>f4f23eb7-a17f-4f1b-81ac-ca1284de11b4</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="manualMode">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Manual mode</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>5bb90d83-b04a-4047-a7c5-a67ac7153109</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>Modes</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="autoFwdCmd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Automatic forward command</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>2ab24f3c-6c11-4dc6-9019-59b293ffcddd</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="autoBwdCmd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Automatic backward command</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>26fb6806-8b84-4acd-a96e-86d9680ed23f</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="autoHSCmd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Automatic high speed command</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>7d312907-a31b-4bf5-93e2-ff9c91f78766</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="autoLSCmd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Automatic low speed command</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>d1b74196-50bc-435f-a94b-47924112a701</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>Commands</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="acknowledgePB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Acknowledgement pushbutton</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>6d23d6ed-55ce-4186-8591-7b43aafacaab</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<outputVars>
+						<variable name="speedVal">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Speed value of the motor</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>7092866f-a335-4888-bb36-c3cf19b238c1</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="speedPercent">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Speed percentage of the motor</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>a6e01112-555e-4ab7-bc98-606b7cd7ad7a</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>speed</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<outputVars>
+						<variable name="generalFault">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>General fault of the motor</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>6605b6ef-f4d8-4c2e-8615-8a7d115692c8</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<addData>
+						<data name="Geensys.CB.groupIn" handleUnknown="preserve">
+							<value>Modes,,Commands,</value>
+						</data>
+						<data name="Geensys.CB.groupOut" handleUnknown="preserve">
+							<value>speed,</value>
+						</data>
+					</addData>
+				</interface>
+				<actions>
+				</actions>
+				<body>
+					<FBD>
+						<inVariable localId="0">
+							<position x="552" y="72" />
+							<expression>autoMode</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Modes</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>552,72</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="1">
+							<position x="552" y="72" />
+							<expression>manualMode</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Modes</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>552,72</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="2">
+							<position x="552" y="96" />
+							<expression>autoFwdCmd</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Commands</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>552,96</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="3">
+							<position x="552" y="96" />
+							<expression>autoBwdCmd</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Commands</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>552,96</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="4">
+							<position x="552" y="96" />
+							<expression>autoHSCmd</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Commands</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>552,96</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="5">
+							<position x="552" y="96" />
+							<expression>autoLSCmd</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Commands</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>552,96</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="6">
+							<position x="576" y="168" />
+							<expression>acknowledgePB</expression>
+						</inVariable>
+						<outVariable localId="7">
+							<position x="600" y="264" />
+							<connectionPointIn>
+								<connection refLocalId="8" formalParameter="speedVal" />
+							</connectionPointIn>
+							<expression>speedVal</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>speed</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>600,264</value>
+								</data>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>8.speed,speed</value>
+								</data>
+							</addData>
+						</outVariable>
+						<outVariable localId="9">
+							<position x="600" y="264" />
+							<connectionPointIn>
+								<connection refLocalId="8" formalParameter="speedPercent" />
+							</connectionPointIn>
+							<expression>speedPercent</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>speed</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>600,264</value>
+								</data>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>8.speed,speed</value>
+								</data>
+							</addData>
+						</outVariable>
+						<outVariable localId="10">
+							<position x="1152" y="96" />
+							<connectionPointIn>
+								<connection refLocalId="11" formalParameter="generalFault" />
+							</connectionPointIn>
+							<expression>generalFault</expression>
+						</outVariable>
+						<block localId="12" width="241" height="96" typeName="panel" instanceName="panel1">
+							<position x="192" y="72" />
+							<inputVariables>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="forwardPB">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="backwardPB">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="highSpeedPB">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="lowSpeedPB">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="stopPB">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.targetablePropertyName" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>61d4f2f2-3770-4ff7-80ca-72afd0df5d41</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="8" width="450" height="117" typeName="equipment_library.motor_2dir_2speed" instanceName="motor">
+							<position x="72" y="192" />
+							<inputVariables>
+								<variable formalParameter="voltage380">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="cmdSupply">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="sensorSupply">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="forward">
+									<connectionPointIn>
+										<connection refLocalId="11" formalParameter="forwardCmd">
+											<position x="1080" y="72" />
+											<position x="1134" y="72" />
+											<position x="1134" y="257" />
+											<position x="33" y="257" />
+											<position x="33" y="264" />
+											<position x="72" y="264" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="backward">
+									<connectionPointIn>
+										<connection refLocalId="11" formalParameter="backwardCmd">
+											<position x="1080" y="72" />
+											<position x="1134" y="72" />
+											<position x="1134" y="257" />
+											<position x="33" y="257" />
+											<position x="33" y="264" />
+											<position x="72" y="264" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="highSpeed">
+									<connectionPointIn>
+										<connection refLocalId="11" formalParameter="highSpeedCmd">
+											<position x="1080" y="72" />
+											<position x="1134" y="72" />
+											<position x="1134" y="257" />
+											<position x="33" y="257" />
+											<position x="33" y="264" />
+											<position x="72" y="264" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="lowSpeed">
+									<connectionPointIn>
+										<connection refLocalId="11" formalParameter="lowSpeedCmd">
+											<position x="1080" y="72" />
+											<position x="1134" y="72" />
+											<position x="1134" y="257" />
+											<position x="33" y="257" />
+											<position x="33" y="264" />
+											<position x="72" y="264" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="forwardFB">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="backwardFB">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="highSpeedFB">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="lowSpeedFB">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="thermal">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="speedVal">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="speedPercent">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>11.Orders,cmd</value>
+								</data>
+								<data name="Geensys.CB.connectionOut" handleUnknown="preserve">
+									<value>speed,speed:600@264</value>
+								</data>
+								<data name="Geensys.CB.PY" handleUnknown="preserve">
+									<value>M</value>
+								</data>
+								<data name="Geensys.CB.targetablePropertyName" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value>This module simulates the behaviour of a motor with 2 directions et 2 speeds and its electrical control logic. : &lt;UNIT&gt;_M&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>e23ffb7e-8b7b-41eb-ab96-fcd9427b61ea</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="11" width="456" height="192" typeName="cmd_equipment_library.cmd_motor_2d2s" instanceName="cmdOfMotor">
+							<position x="624" y="24" />
+							<inputVariables>
+								<variable formalParameter="autoMode">
+									<connectionPointIn>
+										<connection refLocalId="0">
+											<position x="560" y="72" />
+											<position x="581" y="72" />
+											<position x="581" y="72" />
+											<position x="624" y="72" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="manualMode">
+									<connectionPointIn>
+										<connection refLocalId="1">
+											<position x="560" y="72" />
+											<position x="581" y="72" />
+											<position x="581" y="72" />
+											<position x="624" y="72" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="autoFwdCmd">
+									<connectionPointIn>
+										<connection refLocalId="2">
+											<position x="560" y="96" />
+											<position x="583" y="96" />
+											<position x="583" y="96" />
+											<position x="624" y="96" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="autoBwdCmd">
+									<connectionPointIn>
+										<connection refLocalId="3">
+											<position x="560" y="96" />
+											<position x="583" y="96" />
+											<position x="583" y="96" />
+											<position x="624" y="96" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="autoHSCmd">
+									<connectionPointIn>
+										<connection refLocalId="4">
+											<position x="560" y="96" />
+											<position x="583" y="96" />
+											<position x="583" y="96" />
+											<position x="624" y="96" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="autoLSCmd">
+									<connectionPointIn>
+										<connection refLocalId="5">
+											<position x="560" y="96" />
+											<position x="583" y="96" />
+											<position x="583" y="96" />
+											<position x="624" y="96" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="forwardPB">
+									<connectionPointIn>
+										<connection refLocalId="12" formalParameter="forwardPB">
+											<position x="433" y="120" />
+											<position x="526" y="120" />
+											<position x="526" y="120" />
+											<position x="624" y="120" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="backwardPB">
+									<connectionPointIn>
+										<connection refLocalId="12" formalParameter="backwardPB">
+											<position x="433" y="120" />
+											<position x="526" y="120" />
+											<position x="526" y="120" />
+											<position x="624" y="120" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="highSpeedPB">
+									<connectionPointIn>
+										<connection refLocalId="12" formalParameter="highSpeedPB">
+											<position x="433" y="120" />
+											<position x="526" y="120" />
+											<position x="526" y="120" />
+											<position x="624" y="120" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="lowSpeedPB">
+									<connectionPointIn>
+										<connection refLocalId="12" formalParameter="lowSpeedPB">
+											<position x="433" y="120" />
+											<position x="526" y="120" />
+											<position x="526" y="120" />
+											<position x="624" y="120" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="stopPB">
+									<connectionPointIn>
+										<connection refLocalId="12" formalParameter="stopPB">
+											<position x="433" y="120" />
+											<position x="526" y="120" />
+											<position x="526" y="120" />
+											<position x="624" y="120" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="forwardFB">
+									<connectionPointIn>
+										<connection refLocalId="8" formalParameter="forwardFB">
+											<position x="522" y="240" />
+											<position x="575" y="240" />
+											<position x="575" y="144" />
+											<position x="624" y="144" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="backwardFB">
+									<connectionPointIn>
+										<connection refLocalId="8" formalParameter="backwardFB">
+											<position x="522" y="240" />
+											<position x="575" y="240" />
+											<position x="575" y="144" />
+											<position x="624" y="144" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="highSpeedFB">
+									<connectionPointIn>
+										<connection refLocalId="8" formalParameter="highSpeedFB">
+											<position x="522" y="240" />
+											<position x="575" y="240" />
+											<position x="575" y="144" />
+											<position x="624" y="144" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="lowSpeedFB">
+									<connectionPointIn>
+										<connection refLocalId="8" formalParameter="lowSpeedFB">
+											<position x="522" y="240" />
+											<position x="575" y="240" />
+											<position x="575" y="144" />
+											<position x="624" y="144" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="thermalFB">
+									<connectionPointIn>
+										<connection refLocalId="8" formalParameter="thermal">
+											<position x="522" y="240" />
+											<position x="575" y="240" />
+											<position x="575" y="144" />
+											<position x="624" y="144" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="acknowledgePB">
+									<connectionPointIn>
+										<connection refLocalId="6">
+											<position x="584" y="168" />
+											<position x="599" y="168" />
+											<position x="599" y="168" />
+											<position x="624" y="168" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="forwardCmd">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="backwardCmd">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="highSpeedCmd">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="lowSpeedCmd">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="generalFault">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>Modes:552@72,Modes,12.PushButtons,PushButtons,8.contactors,FeedBacks,Commands:552@96,Commands</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value> Structure</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>ba35d844-33a2-4f2f-a3ad-871d82f65e1d</value>
+								</data>
+							</addData>
+						</block>
+					</FBD>
+					<documentation>
+						<xhtml:pre>CB.group=Modes,552,72
+CB.group=Commands,552,96
+CB.group=speed,600,264
+</xhtml:pre>
+					</documentation>
+				</body>
+				<addData>
+					<data name="Geensys.CB.AutomaticScheduling" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+					<data name="Geensys.CB.COMPONENT_CLASS" handleUnknown="preserve">
+						<value>COMPONENT</value>
+					</data>
+					<data name="Geensys.CB.COMPONENT_CLASS_UUID" handleUnknown="preserve">
+						<value>511d5be3-3647-4b0e-96c8-b08505f96b4e</value>
+					</data>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+				</addData>
+				<documentation>
+					<xhtml:pre>Integrated object C/C+OP of a motor with two speed and two directions</xhtml:pre>
+				</documentation>
+			</pou>
+			<pou name="panel" pouType="program">
+				<interface>
+					<outputVars>
+						<variable name="forwardPB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Forward pushbutton</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>0361add3-89d2-45dd-9a01-9f3edc761359</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>fwdPB&lt;SY&gt;&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="backwardPB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Backward pushbutton</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>dc87cd45-76b6-430f-93cb-9921f27d9685</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>bwdPB&lt;SY&gt;&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="highSpeedPB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>High speed pushbutton</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>9442b297-c7df-40a2-8654-5ee6275d03a0</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>hSPB&lt;SY&gt;&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="lowSpeedPB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Low speed pushbutton</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>6d5ee627-c940-4376-911f-118ddd08f81f</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>lSPB&lt;SY&gt;&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="stopPB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Stop pushbutton</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>5d68b6f6-079b-41e3-8361-1cbd08e80e12</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>stopPB&lt;SY&gt;&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>PushButtons</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<addData>
+						<data name="Geensys.CB.groupOut" handleUnknown="preserve">
+							<value>PushButtons,</value>
+						</data>
+					</addData>
+				</interface>
+				<actions>
+				</actions>
+				<body>
+					<FBD>
+						<outVariable localId="0">
+							<position x="816" y="47" />
+							<connectionPointIn>
+								<connection refLocalId="1" formalParameter="PB" />
+							</connectionPointIn>
+							<expression>forwardPB</expression>
+						</outVariable>
+						<outVariable localId="2">
+							<position x="840" y="191" />
+							<connectionPointIn>
+								<connection refLocalId="3" formalParameter="PB" />
+							</connectionPointIn>
+							<expression>backwardPB</expression>
+						</outVariable>
+						<outVariable localId="4">
+							<position x="792" y="360" />
+							<connectionPointIn>
+								<connection refLocalId="5" formalParameter="leftVariable" />
+							</connectionPointIn>
+							<expression>highSpeedPB</expression>
+						</outVariable>
+						<outVariable localId="6">
+							<position x="792" y="384" />
+							<connectionPointIn>
+								<connection refLocalId="5" formalParameter="rightVariable" />
+							</connectionPointIn>
+							<expression>lowSpeedPB</expression>
+						</outVariable>
+						<outVariable localId="7">
+							<position x="936" y="624" />
+							<connectionPointIn>
+								<connection refLocalId="8" formalParameter="PB" />
+							</connectionPointIn>
+							<expression>stopPB</expression>
+						</outVariable>
+						<block localId="1" width="480" height="120" typeName="equipment_library.momentary_button" instanceName="forwardPB">
+							<position x="192" y="0" />
+							<inputVariables>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="PB">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.PY" handleUnknown="preserve">
+									<value>PbFWD</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value>This module simulates a momentary contact push button. : &lt;UNIT&gt;_PbFWD&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>738c19e3-0d81-436e-a83a-385b9dedb242</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="3" width="480" height="120" typeName="equipment_library.momentary_button" instanceName="backwardPB">
+							<position x="216" y="144" />
+							<inputVariables>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="PB">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.PY" handleUnknown="preserve">
+									<value>PbBWD</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value>This module simulates a momentary contact push button. : &lt;UNIT&gt;_PbBWD&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>5b9591f0-2a7a-4d05-a15d-d2adf95db170</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="5" width="481" height="144" typeName="equipment_library.switch_2pos_2outputs" instanceName="speedSwitch">
+							<position x="239" y="312" />
+							<inputVariables>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="leftVariable">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="rightVariable">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.PY" handleUnknown="preserve">
+									<value>LSHS</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value>This module simulates a switch with 2 positions and 2 outputs. : _LSHS</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>90409556-85e3-45d7-ab0a-b43db4144f5e</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="8" width="480" height="120" typeName="equipment_library.momentary_button" instanceName="stopPB">
+							<position x="288" y="576" />
+							<inputVariables>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="PB">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.PY" handleUnknown="preserve">
+									<value>PbSTOP</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value>This module simulates a momentary contact push button. : &lt;UNIT&gt;_PbSTOP&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>4a7454c0-bc41-412b-a2dc-4fdd82ddf6c9</value>
+								</data>
+							</addData>
+						</block>
+					</FBD>
+				</body>
+				<addData>
+					<data name="Geensys.CB.AutomaticScheduling" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+				</addData>
+			</pou>
+		</pous>
+	</types>
+	<instances>
+		<configurations />
+	</instances>
+</project>

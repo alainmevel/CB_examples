@@ -1,0 +1,19 @@
+
+FUNCTION CB_min_tod : TOD
+
+TITLE = ' Search for the greater variable '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : minTod
+FAMILY  : TNI
+
+VAR_INPUT
+    IN0 : TOD;
+    IN1 : TOD;
+END_VAR
+
+BEGIN
+
+    CB_min_tod := MIN(IN1 := IN0, IN2 := IN1);
+
+END_FUNCTION

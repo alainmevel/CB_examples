@@ -1,0 +1,29 @@
+
+FUNCTION CB_mux_bool : BOOL
+
+
+TITLE = ' Multiplexer on N variable '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : muxBool
+FAMILY  : TNI
+
+VAR_INPUT
+    K : INT;
+    IN0 : BOOL;
+    IN1 : BOOL;
+    IN2 : BOOL;
+    IN3 : BOOL;
+    IN4 : BOOL;
+    IN5 : BOOL;
+    IN6 : BOOL;
+    IN7 : BOOL;
+    IN8 : BOOL;
+    IN9 : BOOL;
+END_VAR
+
+BEGIN
+
+CB_mux_bool := MUX (K := K, IN0 := IN0, IN1 := IN1, IN2 := IN2, IN3 := IN3, IN4 := IN4, IN5 := IN5, IN6 := IN6, IN7 := IN7, IN8 := IN8, IN9:= IN9 );
+
+END_FUNCTION

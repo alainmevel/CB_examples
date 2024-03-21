@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<APPLICATION NAME="tni_clock">
+	<PROPERTIES>
+		<PROPERTY NAME="IdentifierProperty" VALUE="2bb5379b-d9b0-4ee8-9fec-96aac8535d36">
+		</PROPERTY>
+		<PROPERTY NAME="noitintilppa" VALUE="true">
+			<PROPERTIES>
+				<PROPERTY NAME="IdentifierProperty" VALUE="00000000-0000-0000-0000-000000000000">
+				</PROPERTY>
+			</PROPERTIES>
+		</PROPERTY>
+		<PROPERTY NAME="groupNameProperty" VALUE="Sample applications">
+			<PROPERTIES>
+				<PROPERTY NAME="IdentifierProperty" VALUE="00000000-0000-0000-0000-000000000000">
+				</PROPERTY>
+			</PROPERTIES>
+		</PROPERTY>
+	</PROPERTIES>
+</APPLICATION>

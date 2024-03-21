@@ -1,0 +1,5 @@
+UTF8#1 11 TNI Sos mac124 2 
+
+1 92 1 2 561 FUNCTION_BLOCK "CB_TOF"TITLE =CB_TOFAUTHOR : TNIFAMILY : CBNAME : CB_TOFVERSION : 0.1VAR_INPUT  IN : BOOL ;	  PT : TIME ;	END_VARVAR_OUTPUT  Q0 : BOOL ;	  CV : TIME ;	END_VARVAR  tof1 : sfb5;	END_VARBEGINNETWORKTITLE =Appel TOF IEC Systme      A     #IN;       =     L      0.0;       BLD   103;       CALL #tof1 (           IN                       := L      0.0,           PT                       := #PT,           Q                        := #Q0,           ET                       := #CV	);      NOP   0; END_FUNCTION_BLOCK0 0 0 0 
+2 73 6 suffix1 4 .awl0 
+üp0f

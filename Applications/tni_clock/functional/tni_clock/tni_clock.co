@@ -1,0 +1,17 @@
+ B1 IB1
+ B2 IB2
+ B3 IB3
+ B4 IB4
+ depth II5
+ ~ LI6
+ ~ LB7
+ ~ LT8I8
+ ~ LB9
+ ~ LB10
+ ~ LB11
+ ~ LB12
+<tni_clock:environment environment/ 1 depth 5 B1 1 B2 2 B3 3 B4 4 pressure 6 tick 7>
+<tni_clock:controller controller/ 1 pressure 6 tick 7 B1 1 B2 2 B3 3 B4 4 displayValue 8 stepMotorSecond 9 stepMotorMinute 10 stepMotorHour 11 switchOnLight 12>
+<tni_clock:lcd LCD/ 1 displayValue 8>
+<tni_clock:motors motors/ 1 stepMotorSecond 9 stepMotorMinute 10 stepMotorHour 11>
+<tni_clock:lightclock light/ 1 switchOnLight 12>

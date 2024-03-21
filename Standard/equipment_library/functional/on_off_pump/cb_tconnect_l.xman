@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<AWTSynoptic screenX="1600" screenY="2262" name="cb_tconnect_l.xman" description="" date="03/10/2023" time="11:13" version="3.0_draft3" source="controlbuild " bkgColor="white" identifier="36ecb153-f3ca-41a9-806d-8ab45aa712f5" gridExtent="10" designLevel="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Colors>
+		<Color colorId="black" r="0" g="0" b="0" invisible="false" />
+		<Color colorId="white" r="255" g="255" b="255" invisible="false" />
+		<Color colorId="red" r="255" g="0" b="0" invisible="false" />
+		<Color colorId="yellow" r="255" g="255" b="0" invisible="false" />
+		<Color colorId="blue" r="0" g="0" b="255" invisible="false" />
+		<Color colorId="green" r="0" g="255" b="0" invisible="false" />
+		<Color colorId="purple" r="128" g="0" b="128" invisible="false" />
+		<Color colorId="brown" r="128" g="64" b="0" invisible="false" />
+		<Color colorId="gray" r="192" g="192" b="192" invisible="false" />
+		<Color colorId="orange" r="255" g="128" b="0" invisible="false" />
+		<Color colorId="pink" r="255" g="128" b="255" invisible="false" />
+		<Color colorId="transparent" invisible="true" />
+		<Color colorId="other" r="0" g="0" b="0" invisible="false" />
+		<Color colorId="visible" invisible="false" />
+	</Colors>
+	<Objects>
+		<Group>
+			<Basic xInit="164" yInit="120" xFinal="264" yFinal="220" xCenter="214" yCenter="170" />
+			<Comment>CB.form_name=raccord_off
+CB.num_rep=1
+</Comment>
+			<Image src="CB_Pipe_tee_gey_vertical_left.wmf" fit="true">
+				<Basic xInit="164" yInit="120" xFinal="264" yFinal="220" xCenter="214" yCenter="170" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+			</Image>
+			<ChangeColorOnBit colorFillBitOn="invisible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="invisible" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>outputFlow &gt; 0.0</Expression>
+					<Condition var="Var8" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>20c27d92-053d-4b42-a7ad-789aba09c216</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="visible" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>NOT (outputFlow &gt; 0.0)</Expression>
+					<Condition var="Var8" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>3d8d1888-bd0b-40bd-9e11-1ca5673a72d0</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+		</Group>
+		<Group>
+			<Basic xInit="160" yInit="120" xFinal="260" yFinal="220" xCenter="210" yCenter="170" />
+			<Comment>CB.form_name=raccord_on
+CB.num_rep=1
+</Comment>
+			<Image src="CB_Pipe_tee_blue_vertical_left.wmf" fit="true">
+				<Basic xInit="160" yInit="120" xFinal="260" yFinal="220" xCenter="210" yCenter="170" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+			</Image>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="visible" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>outputFlow &gt; 0.0</Expression>
+					<Condition var="Var8" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>ab1220b2-3581-4d80-a152-c03543059817</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<ChangeColorOnBit colorFillBitOn="invisible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="invisible" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>NOT (outputFlow &gt; 0.0)</Expression>
+					<Condition var="Var8" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>3769fb60-6b14-4af2-8aa1-606fd5661769</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+		</Group>
+	</Objects>
+	<Vars>
+		<Var varId="Var25" type="BOOL" name="v_d_electrical" />
+		<Var varId="Var16" type="REAL" name="flowMax" />
+		<Var varId="Var6" type="BOOL" name="thermal" />
+		<Var varId="Var15" type="BOOL" name="onFbLogic" />
+		<Var varId="Var7" type="REAL" name="speedVal" />
+		<Var varId="Var22" type="BOOL" name="d_flow" />
+		<Var varId="Var23" type="REAL" name="v_d_flow" />
+		<Var varId="Var0" type="BOOL" name="voltage380" />
+		<Var varId="Var4" type="REAL" name="inputFlow" />
+		<Var varId="Var8" type="REAL" name="outputFlow" />
+		<Var varId="Var26" type="BOOL" name="d_onFB" />
+		<Var varId="Var12" type="REAL" name="unit" />
+		<Var varId="Var17" type="REAL" name="nominalSpeed" />
+		<Var varId="Var27" type="BOOL" name="v_d_onFB" />
+		<Var varId="Var19" type="BOOL" name="flowPerMinute" />
+		<Var varId="Var3" type="BOOL" name="onCmd" />
+		<Var varId="Var1" type="BOOL" name="cmdSupply" />
+		<Var varId="Var5" type="BOOL" name="onFB" />
+		<Var varId="Var9" type="REAL" name="increment" />
+		<Var varId="Var21" type="REAL" name="v_d_locking" />
+		<Var varId="Var18" type="BOOL" name="flowPerHour" />
+		<Var varId="Var24" type="BOOL" name="d_electrical" />
+		<Var varId="Var20" type="BOOL" name="d_locking" />
+		<Var varId="Var13" type="REAL" name="nominalTime" />
+		<Var varId="Var10" type="BOOL" name="onState" />
+		<Var varId="Var11" type="REAL" name="speedSetpoint" />
+		<Var varId="Var14" type="BOOL" name="thermalLogic" />
+		<Var varId="Var2" type="BOOL" name="sensorSupply" />
+	</Vars>
+	<Fonts>
+	</Fonts>
+	<Meta>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var25</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>35d667d0-3a86-4aa5-9952-a448115124d6</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var16</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>507e58f1-8a6f-478c-aca9-30b73555312d</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var6</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>afb4ddd0-4736-40b3-abeb-f50dbec65252</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var15</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>a4571ff0-9254-41b8-b9f9-7d7b78975867</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var7</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>a39b0cb5-9d17-4996-acc4-b49ea3724a38</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var22</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>e838ff0a-8a30-4986-a1fe-d3c0b1204b69</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var23</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>f19f355c-c858-411a-8890-5d98ab73ddd5</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var0</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>30acf901-029f-400e-90e4-0292cb8ce827</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var4</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>2ae350e6-fcb3-47f9-ad3d-36ce3eeeca7a</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var8</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>3c65e713-6e94-4f75-a5f4-a23e868cb2f5</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var26</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>dd937254-82af-4512-b9e1-9615c3ba5e32</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var12</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>5e9dbb4c-8927-4baf-9b3c-382cbea4c3ed</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var17</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>8fdefb7e-c0d0-4c99-867b-bd0c789c5aa0</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var27</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>9f8a2826-5f21-412f-bb76-9cebb6c242a3</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var19</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>f3a78743-ea57-48bf-8c46-12cab1ca4542</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var3</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>ba367844-514e-4394-9c4a-52521d6d8913</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var1</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>de90a160-1e11-4331-98f5-43a58f8fbda1</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var5</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>c2a5f80d-b1df-4e99-ade1-84986d0c7839</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var9</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>271546e6-95e4-4a61-b15e-74f43aeca0fb</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var21</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>6b23730f-4451-4236-8422-0c362f96953a</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var18</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>27f008fb-043e-4895-9b86-44798589b0e5</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var24</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>6383dadd-c8ca-4f7a-81fe-5ac4ccac4257</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var20</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>5ce18bb9-6f8e-4e5f-979f-f0a7f06fea47</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var13</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>d409193f-8e6c-42ca-9d1b-63239765536a</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var10</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>972580f0-1373-45fc-9f0a-d2d04575c91e</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var11</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>1c9bcd67-4c71-49d9-b6ba-fd6c149f63ac</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var14</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>dd54f6e2-1d90-4e96-93cd-9b61d26224fb</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var2</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>88a5b45a-ee25-4222-b999-b916e56fde2d</ParamValue>
+			</Param>
+		</Metadata>
+	</Meta>
+</AWTSynoptic>

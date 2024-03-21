@@ -1,0 +1,983 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<AWTSynoptic screenX="1600" screenY="2262" name="bottling_line.xsyn" description="" date="03/10/2023" time="11:13" version="3.0_draft3" source="controlbuild " bkgColor="white" identifier="e8382557-6d2b-4ba7-99c8-e7cf4b30b8db" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Colors>
+		<Color colorId="black" r="0" g="0" b="0" invisible="false" />
+		<Color colorId="white" r="255" g="255" b="255" invisible="false" />
+		<Color colorId="red" r="255" g="0" b="0" invisible="false" />
+		<Color colorId="yellow" r="255" g="255" b="0" invisible="false" />
+		<Color colorId="blue" r="0" g="0" b="255" invisible="false" />
+		<Color colorId="green" r="0" g="255" b="0" invisible="false" />
+		<Color colorId="purple" r="128" g="0" b="128" invisible="false" />
+		<Color colorId="brown" r="128" g="64" b="0" invisible="false" />
+		<Color colorId="gray" r="192" g="192" b="192" invisible="false" />
+		<Color colorId="orange" r="255" g="128" b="0" invisible="false" />
+		<Color colorId="pink" r="255" g="128" b="255" invisible="false" />
+		<Color colorId="transparent" invisible="true" />
+		<Color colorId="other" r="0" g="0" b="0" invisible="false" />
+		<Color colorId="visible" invisible="false" />
+	</Colors>
+	<Objects>
+		<Text font="font0" textColor="red" hAlign="left" vAlign="top">
+			<Basic xInit="1326" yInit="32" xFinal="1738" yFinal="99" xCenter="1532" yCenter="65" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="white" />
+			<Content> Packaging machine</Content>
+		</Text>
+		<Text font="font1" textColor="black" hAlign="left" vAlign="top">
+			<Basic xInit="1697" yInit="454" xFinal="1876" yFinal="490" xCenter="1786" yCenter="472" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+			<Content>PREP  -  PROD</Content>
+		</Text>
+		<Text font="font1" textColor="black" hAlign="left" vAlign="top">
+			<Basic xInit="1436" yInit="456" xFinal="1605" yFinal="492" xCenter="1520" yCenter="474" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+			<Content>AUTO - MANU</Content>
+		</Text>
+		<Text font="font1" textColor="black" hAlign="left" vAlign="top">
+			<Basic xInit="1807" yInit="295" xFinal="1910" yFinal="332" xCenter="1858" yCenter="313" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+			<Content>  ACK</Content>
+		</Text>
+		<Text font="font1" textColor="black" hAlign="left" vAlign="top">
+			<Basic xInit="1616" yInit="298" xFinal="1719" yFinal="335" xCenter="1667" yCenter="316" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+			<Content>  Cycle</Content>
+		</Text>
+		<Text font="font1" textColor="black" hAlign="left" vAlign="top">
+			<Basic xInit="1430" yInit="298" xFinal="1537" yFinal="335" xCenter="1483" yCenter="316" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+			<Content>Power up</Content>
+		</Text>
+		<Rectangle>
+			<Basic xInit="1405" yInit="247" xFinal="1933" yFinal="820" xCenter="1669" yCenter="533" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="gray" />
+		</Rectangle>
+		<Rectangle>
+			<Basic xInit="1418" yInit="236" xFinal="1946" yFinal="809" xCenter="1682" yCenter="522" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="rgb(128,128,128)" />
+		</Rectangle>
+		<Line>
+			<Basic xInit="581" yInit="1321" xFinal="689" yFinal="1342" xCenter="635" yCenter="1331" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="gray" />
+		</Line>
+		<Text font="font1" textColor="blue" hAlign="left" vAlign="top">
+			<Basic xInit="431" yInit="1361" xFinal="571" yFinal="1411" xCenter="501" yCenter="1386" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="transparent" />
+			<Content>Conveyor</Content>
+		</Text>
+		<Text font="font1" textColor="blue" hAlign="left" vAlign="top">
+			<Basic xInit="810" yInit="900" xFinal="890" yFinal="942" xCenter="850" yCenter="921" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="transparent" />
+			<Content>Valve 5</Content>
+		</Text>
+		<Text font="font2" textColor="black" hAlign="left" vAlign="top">
+			<Basic xInit="640" yInit="840" xFinal="730" yFinal="873" xCenter="685" yCenter="856" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="transparent" />
+			<Content>Tank 3</Content>
+		</Text>
+		<Text font="font1" textColor="purple" hAlign="left" vAlign="top">
+			<Basic xInit="1239" yInit="806" xFinal="1333" yFinal="848" xCenter="1286" yCenter="827" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="transparent" />
+			<Content>Low L3</Content>
+		</Text>
+		<Text font="font1" textColor="purple" hAlign="left" vAlign="top">
+			<Basic xInit="1239" yInit="674" xFinal="1372" yFinal="716" xCenter="1305" yCenter="695" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="transparent" />
+			<Content>High L3</Content>
+		</Text>
+		<Text font="font2" textColor="black" hAlign="left" vAlign="top">
+			<Basic xInit="455" yInit="329" xFinal="543" yFinal="362" xCenter="499" yCenter="345" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="transparent" />
+			<Content>Tank 1</Content>
+		</Text>
+		<Text font="font2" textColor="black" hAlign="left" vAlign="top">
+			<Basic xInit="455" yInit="753" xFinal="543" yFinal="786" xCenter="499" yCenter="769" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="transparent" />
+			<Content>Tank 2</Content>
+		</Text>
+		<Text font="font1" textColor="purple" hAlign="left" vAlign="top">
+			<Basic xInit="34" yInit="705" xFinal="112" yFinal="741" xCenter="73" yCenter="723" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="transparent" />
+			<Content>Low L2</Content>
+		</Text>
+		<Text font="font1" textColor="purple" hAlign="left" vAlign="top">
+			<Basic xInit="34" yInit="598" xFinal="122" yFinal="631" xCenter="78" yCenter="614" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="transparent" />
+			<Content>High L2</Content>
+		</Text>
+		<Text font="font1" textColor="blue" hAlign="left" vAlign="top">
+			<Basic xInit="96" yInit="412" xFinal="195" yFinal="454" xCenter="145" yCenter="433" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="transparent" />
+			<Content>Valve 3</Content>
+		</Text>
+		<Text font="font1" textColor="blue" hAlign="left" vAlign="top">
+			<Basic xInit="648" yInit="428" xFinal="777" yFinal="470" xCenter="712" yCenter="449" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="transparent" />
+			<Content>Pump 2</Content>
+		</Text>
+		<Text font="font1" textColor="blue" hAlign="left" vAlign="top">
+			<Basic xInit="717" yInit="584" xFinal="818" yFinal="625" xCenter="767" yCenter="604" />
+			<Style lineStyle="invisible" lineWidth="0" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="transparent" />
+			<Content>Valve 4</Content>
+		</Text>
+		<Text font="font1" textColor="purple" hAlign="left" vAlign="top">
+			<Basic xInit="34" yInit="299" xFinal="119" yFinal="328" xCenter="76" yCenter="313" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="transparent" />
+			<Content>Low L1</Content>
+		</Text>
+		<Text font="font1" textColor="purple" hAlign="left" vAlign="top">
+			<Basic xInit="34" yInit="195" xFinal="130" yFinal="232" xCenter="82" yCenter="213" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="transparent" />
+			<Content>High L1</Content>
+		</Text>
+		<Text font="font1" textColor="blue" hAlign="left" vAlign="top">
+			<Basic xInit="98" yInit="12" xFinal="205" yFinal="59" xCenter="151" yCenter="35" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="transparent" />
+			<Content>Valve 1</Content>
+		</Text>
+		<Text font="font1" textColor="blue" hAlign="left" vAlign="top">
+			<Basic xInit="655" yInit="21" xFinal="793" yFinal="68" xCenter="724" yCenter="44" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="transparent" />
+			<Content>Pump 1</Content>
+		</Text>
+		<Text font="font1" textColor="blue" hAlign="left" vAlign="top">
+			<Basic xInit="951" yInit="265" xFinal="1050" yFinal="300" xCenter="1000" yCenter="282" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="transparent" />
+			<Content>Valve 2</Content>
+		</Text>
+		<Widget src="equipment_library\single_acting_valve\cb_elbow_l_b">
+			<Basic xInit="818" yInit="470" xFinal="878" yFinal="529" xCenter="848" yCenter="499" />
+			<Comment>CB.instance_path=pumpingTank2\emptying\valve
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=818
+CB.rotation_centerY=529
+</Comment>
+			<addData>
+				<data name="componentIdentifier" handleUnknown="preserve">
+					<value>330169fc-4b9a-4aa3-b24a-414450f091b2</value>
+				</data>
+				<data name="animationModelIdentifier" handleUnknown="preserve">
+					<value>07e20414-517b-429b-8c8c-ca2ea02fbb71</value>
+				</data>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>3142dba2-a45a-4a7f-af16-3c5106584cb0</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\single_acting_valve\cb_elbow_r_b">
+			<Basic xInit="320" yInit="468" xFinal="380" yFinal="527" xCenter="350" yCenter="497" />
+			<Comment>CB.instance_path=pumpingTank2\emptying\valve
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=320
+CB.rotation_centerY=527
+</Comment>
+			<addData>
+				<data name="componentIdentifier" handleUnknown="preserve">
+					<value>330169fc-4b9a-4aa3-b24a-414450f091b2</value>
+				</data>
+				<data name="animationModelIdentifier" handleUnknown="preserve">
+					<value>eb2f857f-57a5-4b61-a40b-e84313172aa3</value>
+				</data>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>3142dba2-a45a-4a7f-af16-3c5106584cb0</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\single_acting_valve\cb_elbow_l_b">
+			<Basic xInit="219" yInit="493" xFinal="279" yFinal="552" xCenter="249" yCenter="522" />
+			<Comment>CB.instance_path=pumpingTank2\filling\valve
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=219
+CB.rotation_centerY=552
+</Comment>
+			<addData>
+				<data name="componentIdentifier" handleUnknown="preserve">
+					<value>330169fc-4b9a-4aa3-b24a-414450f091b2</value>
+				</data>
+				<data name="animationModelIdentifier" handleUnknown="preserve">
+					<value>07e20414-517b-429b-8c8c-ca2ea02fbb71</value>
+				</data>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>3142dba2-a45a-4a7f-af16-3c5106584cb0</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\single_acting_valve\cb_elbow_r_b">
+			<Basic xInit="323" yInit="61" xFinal="383" yFinal="120" xCenter="353" yCenter="90" />
+			<Comment>CB.instance_path=pumpingTank1\emptying\valve
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=323
+CB.rotation_centerY=120
+</Comment>
+			<addData>
+				<data name="componentIdentifier" handleUnknown="preserve">
+					<value>330169fc-4b9a-4aa3-b24a-414450f091b2</value>
+				</data>
+				<data name="animationModelIdentifier" handleUnknown="preserve">
+					<value>eb2f857f-57a5-4b61-a40b-e84313172aa3</value>
+				</data>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>3142dba2-a45a-4a7f-af16-3c5106584cb0</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\single_acting_valve\cb_elbow_l_b">
+			<Basic xInit="1053" yInit="62" xFinal="1113" yFinal="121" xCenter="1083" yCenter="91" />
+			<Comment>CB.instance_path=pumpingTank1\emptying\valve
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1053
+CB.rotation_centerY=121
+</Comment>
+			<addData>
+				<data name="componentIdentifier" handleUnknown="preserve">
+					<value>330169fc-4b9a-4aa3-b24a-414450f091b2</value>
+				</data>
+				<data name="animationModelIdentifier" handleUnknown="preserve">
+					<value>07e20414-517b-429b-8c8c-ca2ea02fbb71</value>
+				</data>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>3142dba2-a45a-4a7f-af16-3c5106584cb0</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\single_acting_valve\cb_pipe_v">
+			<Basic xInit="1082" yInit="118" xFinal="1106" yFinal="677" xCenter="1094" yCenter="397" />
+			<Comment>CB.instance_path=pumpingTank1\emptying\valve
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1082
+CB.rotation_centerY=677
+</Comment>
+			<addData>
+				<data name="componentIdentifier" handleUnknown="preserve">
+					<value>330169fc-4b9a-4aa3-b24a-414450f091b2</value>
+				</data>
+				<data name="animationModelIdentifier" handleUnknown="preserve">
+					<value>cccbc014-3394-4c90-87f0-79d9441be35f</value>
+				</data>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>3142dba2-a45a-4a7f-af16-3c5106584cb0</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\single_acting_valve\cb_elbow_l_b">
+			<Basic xInit="222" yInit="82" xFinal="282" yFinal="141" xCenter="252" yCenter="111" />
+			<Comment>CB.instance_path=pumpingTank1\filling\valve
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=222
+CB.rotation_centerY=141
+</Comment>
+			<addData>
+				<data name="componentIdentifier" handleUnknown="preserve">
+					<value>330169fc-4b9a-4aa3-b24a-414450f091b2</value>
+				</data>
+				<data name="animationModelIdentifier" handleUnknown="preserve">
+					<value>07e20414-517b-429b-8c8c-ca2ea02fbb71</value>
+				</data>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>3142dba2-a45a-4a7f-af16-3c5106584cb0</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="bottling_line\bottle\bottle">
+			<Basic xInit="670" yInit="936" xFinal="1377" yFinal="1371" xCenter="1023" yCenter="1153" />
+			<Comment>CB.instance_path=drive\bottles
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=670
+CB.rotation_centerY=1371
+</Comment>
+			<addData>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>547d09a2-b763-4ae2-9f8d-1348bae598b2</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\tank\tank">
+			<Basic xInit="732" yInit="668" xFinal="1214" yFinal="888" xCenter="973" yCenter="778" />
+			<Comment>CB.instance_path=mixing\mixingTank
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=732
+CB.rotation_centerY=888
+</Comment>
+			<addData>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>0a9ee6dd-425a-4958-9a26-3672c1246e63</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\tank\tank">
+			<Basic xInit="143" yInit="170" xFinal="457" yFinal="378" xCenter="300" yCenter="274" />
+			<Comment>CB.instance_path=pumpingTank1\tank
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=143
+CB.rotation_centerY=378
+</Comment>
+			<addData>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>377b1da7-a2cb-4c5e-807f-a716cbc7661a</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\threshold_sensor\threshold_sensor">
+			<Basic xInit="38" yInit="230" xFinal="102" yFinal="266" xCenter="70" yCenter="248" />
+			<Comment>CB.instance_path=pumpingTank1\highLevel
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=38
+CB.rotation_centerY=266
+</Comment>
+			<addData>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>533dcf3a-5e4c-41e4-ba6d-24119e496113</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\threshold_sensor\threshold_sensor">
+			<Basic xInit="38" yInit="335" xFinal="103" yFinal="372" xCenter="70" yCenter="353" />
+			<Comment>CB.instance_path=pumpingTank1\lowLevel
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=38
+CB.rotation_centerY=372
+</Comment>
+			<addData>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>d089c237-914b-4849-b78e-f62bedd3bd08</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\analog_sensor\level_sensor">
+			<Basic xInit="390" yInit="129" xFinal="581" yFinal="230" xCenter="485" yCenter="179" />
+			<Comment>CB.instance_path=pumpingTank1\levelMeasurement
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=390
+CB.rotation_centerY=230
+</Comment>
+			<addData>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>b6c41657-b08f-4fa5-8026-9e91817c42e0</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\tank\tank">
+			<Basic xInit="140" yInit="579" xFinal="458" yFinal="793" xCenter="299" yCenter="686" />
+			<Comment>CB.instance_path=pumpingTank2\tank
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=140
+CB.rotation_centerY=793
+</Comment>
+			<addData>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>377b1da7-a2cb-4c5e-807f-a716cbc7661a</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\single_acting_valve\drop">
+			<Basic xInit="224" yInit="617" xFinal="272" yFinal="668" xCenter="248" yCenter="642" />
+			<Comment>CB.instance_path=pumpingTank2\filling\valve
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=224
+CB.rotation_centerY=668
+</Comment>
+			<addData>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>3142dba2-a45a-4a7f-af16-3c5106584cb0</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\threshold_sensor\threshold_sensor">
+			<Basic xInit="38" yInit="629" xFinal="98" yFinal="661" xCenter="68" yCenter="645" />
+			<Comment>CB.instance_path=pumpingTank2\highLevel
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=38
+CB.rotation_centerY=661
+</Comment>
+			<addData>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>533dcf3a-5e4c-41e4-ba6d-24119e496113</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\threshold_sensor\threshold_sensor">
+			<Basic xInit="38" yInit="742" xFinal="97" yFinal="774" xCenter="67" yCenter="758" />
+			<Comment>CB.instance_path=pumpingTank2\lowLevel
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=38
+CB.rotation_centerY=774
+</Comment>
+			<addData>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>d089c237-914b-4849-b78e-f62bedd3bd08</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\analog_sensor\level_sensor">
+			<Basic xInit="403" yInit="545" xFinal="581" yFinal="642" xCenter="492" yCenter="593" />
+			<Comment>CB.instance_path=pumpingTank2\levelMeasurement
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=403
+CB.rotation_centerY=642
+</Comment>
+			<addData>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>b6c41657-b08f-4fa5-8026-9e91817c42e0</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\threshold_sensor\threshold_sensor">
+			<Basic xInit="1251" yInit="703" xFinal="1331" yFinal="738" xCenter="1291" yCenter="720" />
+			<Comment>CB.instance_path=mixing\highLevel3
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1251
+CB.rotation_centerY=738
+</Comment>
+			<addData>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>6ba515f3-3092-4b10-bb4d-dd3716a79664</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\threshold_sensor\threshold_sensor">
+			<Basic xInit="1251" yInit="836" xFinal="1331" yFinal="871" xCenter="1291" yCenter="853" />
+			<Comment>CB.instance_path=mixing\highLevel3
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1251
+CB.rotation_centerY=871
+</Comment>
+			<addData>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>6ba515f3-3092-4b10-bb4d-dd3716a79664</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\agitator_2speed\agitator_2speed">
+			<Basic xInit="917" yInit="548" xFinal="1115" yFinal="779" xCenter="1016" yCenter="663" />
+			<Comment>CB.instance_path=mixing\agitator\agitator
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=917
+CB.rotation_centerY=779
+</Comment>
+			<addData>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>02950ccd-ddb0-492e-9360-1fe9c1f93575</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\momentary_button\blue_momentary_pb">
+			<Basic xInit="1423" yInit="342" xFinal="1535" yFinal="439" xCenter="1479" yCenter="390" />
+			<Comment>CB.instance_path=generalPanel\powerUpPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1423
+CB.rotation_centerY=439
+</Comment>
+			<addData>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>af61e2b6-c4dd-425f-8a36-c2151662aec0</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\momentary_button\green_momentary_pb">
+			<Basic xInit="1612" yInit="344" xFinal="1722" yFinal="436" xCenter="1667" yCenter="390" />
+			<Comment>CB.instance_path=generalPanel\startCyclePB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1612
+CB.rotation_centerY=436
+</Comment>
+			<addData>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>2537a231-cf70-439a-a2d1-b68673487f56</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\momentary_button\black_momentary_pb">
+			<Basic xInit="1798" yInit="342" xFinal="1915" yFinal="439" xCenter="1856" yCenter="390" />
+			<Comment>CB.instance_path=generalPanel\acknowledgePB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1798
+CB.rotation_centerY=439
+</Comment>
+			<addData>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>593f4639-0dd2-4aab-a9c6-28a8a023ef8d</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\switch_2pos_2outputs\switch_2pos_2outputs">
+			<Basic xInit="1432" yInit="499" xFinal="1607" yFinal="648" xCenter="1519" yCenter="573" />
+			<Comment>CB.instance_path=generalPanel\modesSwitch
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1432
+CB.rotation_centerY=648
+</Comment>
+			<addData>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>7685b3c8-04a0-48ab-b09a-b79bdec76963</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\switch_2pos_2outputs\switch_2pos_2outputs">
+			<Basic xInit="1699" yInit="497" xFinal="1874" yFinal="645" xCenter="1786" yCenter="571" />
+			<Comment>CB.instance_path=generalPanel\productionSwitch
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1699
+CB.rotation_centerY=645
+</Comment>
+			<addData>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>9a728cad-2fb4-407a-9f8a-38a62e1eca70</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\maintained_button\emergency_stop">
+			<Basic xInit="1571" yInit="620" xFinal="1764" yFinal="790" xCenter="1667" yCenter="705" />
+			<Comment>CB.instance_path=generalPanel\emergencyStopPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1571
+CB.rotation_centerY=790
+</Comment>
+			<addData>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>4349b87b-94e6-4329-ae0c-48dd3d26ac16</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\analog_sensor\level_sensor">
+			<Basic xInit="1152" yInit="612" xFinal="1330" yFinal="709" xCenter="1241" yCenter="660" />
+			<Comment>CB.instance_path=mixing\levelMeasurement
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1152
+CB.rotation_centerY=709
+</Comment>
+			<addData>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>6234acc5-e9e4-492a-9faa-e304583d8ec3</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\single_acting_valve\cb_pipe">
+			<Basic xInit="3" yInit="86" xFinal="225" yFinal="112" xCenter="114" yCenter="99" />
+			<Comment>CB.instance_path=pumpingTank1\filling\valve
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=3
+CB.rotation_centerY=112
+</Comment>
+			<addData>
+				<data name="componentIdentifier" handleUnknown="preserve">
+					<value>330169fc-4b9a-4aa3-b24a-414450f091b2</value>
+				</data>
+				<data name="animationModelIdentifier" handleUnknown="preserve">
+					<value>e3a28338-2b00-4ec2-b35e-91b2f2be7103</value>
+				</data>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>3142dba2-a45a-4a7f-af16-3c5106584cb0</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\single_acting_valve\cb_pipe_v">
+			<Basic xInit="252" yInit="138" xFinal="276" yFinal="176" xCenter="264" yCenter="157" />
+			<Comment>CB.instance_path=pumpingTank1\filling\valve
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=252
+CB.rotation_centerY=176
+</Comment>
+			<addData>
+				<data name="componentIdentifier" handleUnknown="preserve">
+					<value>330169fc-4b9a-4aa3-b24a-414450f091b2</value>
+				</data>
+				<data name="animationModelIdentifier" handleUnknown="preserve">
+					<value>cccbc014-3394-4c90-87f0-79d9441be35f</value>
+				</data>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>3142dba2-a45a-4a7f-af16-3c5106584cb0</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\single_acting_valve\cb_valve_hor">
+			<Basic xInit="54" yInit="36" xFinal="171" yFinal="170" xCenter="112" yCenter="103" />
+			<Comment>CB.instance_path=pumpingTank1\filling\valve
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=54
+CB.rotation_centerY=170
+</Comment>
+			<addData>
+				<data name="componentIdentifier" handleUnknown="preserve">
+					<value>330169fc-4b9a-4aa3-b24a-414450f091b2</value>
+				</data>
+				<data name="animationModelIdentifier" handleUnknown="preserve">
+					<value>82b57f55-54cd-4312-ba93-8e1ba8f25721</value>
+				</data>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>3142dba2-a45a-4a7f-af16-3c5106584cb0</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\single_acting_valve\cb_pipe">
+			<Basic xInit="380" yInit="67" xFinal="1056" yFinal="93" xCenter="718" yCenter="80" />
+			<Comment>CB.instance_path=pumpingTank1\emptying\valve
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=380
+CB.rotation_centerY=93
+</Comment>
+			<addData>
+				<data name="componentIdentifier" handleUnknown="preserve">
+					<value>330169fc-4b9a-4aa3-b24a-414450f091b2</value>
+				</data>
+				<data name="animationModelIdentifier" handleUnknown="preserve">
+					<value>e3a28338-2b00-4ec2-b35e-91b2f2be7103</value>
+				</data>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>3142dba2-a45a-4a7f-af16-3c5106584cb0</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\single_acting_valve\cb_valve_ver">
+			<Basic xInit="1010" yInit="237" xFinal="1171" yFinal="323" xCenter="1090" yCenter="280" />
+			<Comment>CB.instance_path=pumpingTank1\emptying\valve
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1010
+CB.rotation_centerY=323
+</Comment>
+			<addData>
+				<data name="componentIdentifier" handleUnknown="preserve">
+					<value>330169fc-4b9a-4aa3-b24a-414450f091b2</value>
+				</data>
+				<data name="animationModelIdentifier" handleUnknown="preserve">
+					<value>8eccca14-99ce-449e-9cac-1335331e8759</value>
+				</data>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>3142dba2-a45a-4a7f-af16-3c5106584cb0</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\on_off_pump\cb_pump_right">
+			<Basic xInit="627" yInit="61" xFinal="721" yFinal="163" xCenter="674" yCenter="112" />
+			<Comment>CB.instance_path=pumpingTank1\extraction\pump
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=627
+CB.rotation_centerY=163
+</Comment>
+			<addData>
+				<data name="componentIdentifier" handleUnknown="preserve">
+					<value>69515667-fe62-463b-8c92-c468cd40f5c2</value>
+				</data>
+				<data name="animationModelIdentifier" handleUnknown="preserve">
+					<value>d3de8fd0-8280-40b4-9aa0-91fca6c15766</value>
+				</data>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>10ea49a9-36ee-4407-8d38-cb5f59a24b2d</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\single_acting_valve\cb_pipe_v">
+			<Basic xInit="328" yInit="117" xFinal="352" yFinal="182" xCenter="340" yCenter="149" />
+			<Comment>CB.instance_path=pumpingTank1\emptying\valve
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=328
+CB.rotation_centerY=182
+</Comment>
+			<addData>
+				<data name="componentIdentifier" handleUnknown="preserve">
+					<value>330169fc-4b9a-4aa3-b24a-414450f091b2</value>
+				</data>
+				<data name="animationModelIdentifier" handleUnknown="preserve">
+					<value>cccbc014-3394-4c90-87f0-79d9441be35f</value>
+				</data>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>3142dba2-a45a-4a7f-af16-3c5106584cb0</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\single_acting_valve\cb_pipe">
+			<Basic xInit="0" yInit="497" xFinal="222" yFinal="523" xCenter="111" yCenter="510" />
+			<Comment>CB.instance_path=pumpingTank2\filling\valve
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=0
+CB.rotation_centerY=523
+</Comment>
+			<addData>
+				<data name="componentIdentifier" handleUnknown="preserve">
+					<value>330169fc-4b9a-4aa3-b24a-414450f091b2</value>
+				</data>
+				<data name="animationModelIdentifier" handleUnknown="preserve">
+					<value>e3a28338-2b00-4ec2-b35e-91b2f2be7103</value>
+				</data>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>3142dba2-a45a-4a7f-af16-3c5106584cb0</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\single_acting_valve\cb_valve_hor">
+			<Basic xInit="51" yInit="447" xFinal="168" yFinal="581" xCenter="109" yCenter="514" />
+			<Comment>CB.instance_path=pumpingTank2\filling\valve
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=51
+CB.rotation_centerY=581
+</Comment>
+			<addData>
+				<data name="componentIdentifier" handleUnknown="preserve">
+					<value>330169fc-4b9a-4aa3-b24a-414450f091b2</value>
+				</data>
+				<data name="animationModelIdentifier" handleUnknown="preserve">
+					<value>82b57f55-54cd-4312-ba93-8e1ba8f25721</value>
+				</data>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>3142dba2-a45a-4a7f-af16-3c5106584cb0</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\single_acting_valve\cb_pipe_v">
+			<Basic xInit="249" yInit="549" xFinal="273" yFinal="587" xCenter="261" yCenter="568" />
+			<Comment>CB.instance_path=pumpingTank2\filling\valve
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=249
+CB.rotation_centerY=587
+</Comment>
+			<addData>
+				<data name="componentIdentifier" handleUnknown="preserve">
+					<value>330169fc-4b9a-4aa3-b24a-414450f091b2</value>
+				</data>
+				<data name="animationModelIdentifier" handleUnknown="preserve">
+					<value>cccbc014-3394-4c90-87f0-79d9441be35f</value>
+				</data>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>3142dba2-a45a-4a7f-af16-3c5106584cb0</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\single_acting_valve\cb_pipe_v">
+			<Basic xInit="325" yInit="524" xFinal="349" yFinal="589" xCenter="337" yCenter="556" />
+			<Comment>CB.instance_path=pumpingTank2\emptying\valve
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=325
+CB.rotation_centerY=589
+</Comment>
+			<addData>
+				<data name="componentIdentifier" handleUnknown="preserve">
+					<value>330169fc-4b9a-4aa3-b24a-414450f091b2</value>
+				</data>
+				<data name="animationModelIdentifier" handleUnknown="preserve">
+					<value>cccbc014-3394-4c90-87f0-79d9441be35f</value>
+				</data>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>3142dba2-a45a-4a7f-af16-3c5106584cb0</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\single_acting_valve\cb_pipe">
+			<Basic xInit="377" yInit="474" xFinal="821" yFinal="500" xCenter="599" yCenter="487" />
+			<Comment>CB.instance_path=pumpingTank2\emptying\valve
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=377
+CB.rotation_centerY=500
+</Comment>
+			<addData>
+				<data name="componentIdentifier" handleUnknown="preserve">
+					<value>330169fc-4b9a-4aa3-b24a-414450f091b2</value>
+				</data>
+				<data name="animationModelIdentifier" handleUnknown="preserve">
+					<value>e3a28338-2b00-4ec2-b35e-91b2f2be7103</value>
+				</data>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>3142dba2-a45a-4a7f-af16-3c5106584cb0</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\on_off_pump\cb_pump_right">
+			<Basic xInit="624" yInit="468" xFinal="718" yFinal="570" xCenter="671" yCenter="519" />
+			<Comment>CB.instance_path=pumpingTank2\extraction\pump
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=624
+CB.rotation_centerY=570
+</Comment>
+			<addData>
+				<data name="componentIdentifier" handleUnknown="preserve">
+					<value>69515667-fe62-463b-8c92-c468cd40f5c2</value>
+				</data>
+				<data name="animationModelIdentifier" handleUnknown="preserve">
+					<value>d3de8fd0-8280-40b4-9aa0-91fca6c15766</value>
+				</data>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>10ea49a9-36ee-4407-8d38-cb5f59a24b2d</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\single_acting_valve\cb_pipe_v">
+			<Basic xInit="848" yInit="526" xFinal="872" yFinal="675" xCenter="860" yCenter="600" />
+			<Comment>CB.instance_path=pumpingTank2\emptying\valve
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=848
+CB.rotation_centerY=675
+</Comment>
+			<addData>
+				<data name="componentIdentifier" handleUnknown="preserve">
+					<value>330169fc-4b9a-4aa3-b24a-414450f091b2</value>
+				</data>
+				<data name="animationModelIdentifier" handleUnknown="preserve">
+					<value>cccbc014-3394-4c90-87f0-79d9441be35f</value>
+				</data>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>3142dba2-a45a-4a7f-af16-3c5106584cb0</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\single_acting_valve\cb_valve_ver">
+			<Basic xInit="776" yInit="555" xFinal="937" yFinal="641" xCenter="856" yCenter="598" />
+			<Comment>CB.instance_path=pumpingTank2\emptying\valve
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=776
+CB.rotation_centerY=641
+</Comment>
+			<addData>
+				<data name="componentIdentifier" handleUnknown="preserve">
+					<value>330169fc-4b9a-4aa3-b24a-414450f091b2</value>
+				</data>
+				<data name="animationModelIdentifier" handleUnknown="preserve">
+					<value>8eccca14-99ce-449e-9cac-1335331e8759</value>
+				</data>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>3142dba2-a45a-4a7f-af16-3c5106584cb0</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\single_acting_valve\cb_pipe_v">
+			<Basic xInit="911" yInit="886" xFinal="935" yFinal="1120" xCenter="923" yCenter="1003" />
+			<Comment>CB.instance_path=mixing\valve5\valve
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=911
+CB.rotation_centerY=1120
+</Comment>
+			<addData>
+				<data name="componentIdentifier" handleUnknown="preserve">
+					<value>330169fc-4b9a-4aa3-b24a-414450f091b2</value>
+				</data>
+				<data name="animationModelIdentifier" handleUnknown="preserve">
+					<value>cccbc014-3394-4c90-87f0-79d9441be35f</value>
+				</data>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>3142dba2-a45a-4a7f-af16-3c5106584cb0</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\single_acting_valve\cb_valve_ver">
+			<Basic xInit="839" yInit="936" xFinal="1000" yFinal="1022" xCenter="919" yCenter="979" />
+			<Comment>CB.instance_path=mixing\valve5\valve
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=839
+CB.rotation_centerY=1022
+</Comment>
+			<addData>
+				<data name="componentIdentifier" handleUnknown="preserve">
+					<value>330169fc-4b9a-4aa3-b24a-414450f091b2</value>
+				</data>
+				<data name="animationModelIdentifier" handleUnknown="preserve">
+					<value>8eccca14-99ce-449e-9cac-1335331e8759</value>
+				</data>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>3142dba2-a45a-4a7f-af16-3c5106584cb0</value>
+				</data>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\motor_1dir_1speed\motor_1dir_1speed">
+			<Basic xInit="396" yInit="1257" xFinal="586" yFinal="1359" xCenter="491" yCenter="1308" />
+			<Comment>CB.instance_path=drive\conveyor\motor
+CB.rotation_angle=0
+CB.symmetry_kind=1
+CB.rotation_centerX=396
+CB.rotation_centerY=1359
+</Comment>
+			<addData>
+				<data name="componentIdentifier" handleUnknown="preserve">
+					<value>d665af65-0ccb-4451-9b98-6fdd2711c38f</value>
+				</data>
+				<data name="animationModelIdentifier" handleUnknown="preserve">
+					<value>eb70e477-b90c-4982-ac3e-56e9aec7570c</value>
+				</data>
+				<data name="instanceIdentifier" handleUnknown="preserve">
+					<value>5f9c9a7b-ecc4-4346-af6a-ba763ce6e520</value>
+				</data>
+			</addData>
+		</Widget>
+	</Objects>
+	<Vars>
+	</Vars>
+	<Fonts>
+		<Font fontId="font0" family="Arial" size="16pt" style="normal" weight="normal" text-decoration="none" letter-spacing="0" word-spacing="0" />
+		<Font fontId="font1" family="Arial" size="7pt" style="normal" weight="normal" text-decoration="none" letter-spacing="0" word-spacing="0" />
+		<Font fontId="font2" family="Arial" size="9pt" style="normal" weight="normal" text-decoration="none" letter-spacing="0" word-spacing="0" />
+	</Fonts>
+	<Meta>
+		<Metadata type="synoptic">
+			<Param>
+				<ParamName>groundPlanOnxyz</ParamName>
+				<ParamValue>3</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskpx</ParamName>
+				<ParamValue>0</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskpy</ParamName>
+				<ParamValue>0</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskpz</ParamName>
+				<ParamValue>0</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskdx</ParamName>
+				<ParamValue>10</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskdy</ParamName>
+				<ParamValue>10</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskdz</ParamName>
+				<ParamValue>10</ParamValue>
+			</Param>
+		</Metadata>
+	</Meta>
+</AWTSynoptic>

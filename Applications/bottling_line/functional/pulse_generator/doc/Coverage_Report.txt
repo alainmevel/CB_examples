@@ -1,0 +1,1 @@
+Component "pulse_generator": some branches have not been covered or some variables have not changed

@@ -1,0 +1,27 @@
+ autoMode IB1
+ manualMode IB2
+ autoFwdCmd IB3
+ autoBwdCmd IB4
+ acknowledgePB IB5
+ speedVal OF6
+ speedPercent OF7
+ generalFault OB8
+ ~ LB9
+ ~ LB10
+ ~ LB11
+ ~ LB12
+ ~ LB13
+ ~ LB14
+ ~ LB15
+ ~ LB16
+ ~ LB17
+ ~ LB18
+ ~ LB19
+ panel1/forwardPB OB14
+ panel1/backwardPB OB15
+ panel1/stopPB OB16
+<equipment_library:momentary_button panel1/forwardPB/ 1 PB 14>
+<equipment_library:momentary_button panel1/backwardPB/ 1 PB 15>
+<equipment_library:momentary_button panel1/stopPB/ 1 PB 16>
+<equipment_library:motor_2dir_1speed motor/ 1 voltage380 11 cmdSupply 10 sensorSupply 9 forward 12 backward 13 forwardFB 18 backwardFB 19 thermal 17 speedVal 6 speedPercent 7>
+<cmd_equipment_library:cmd_motor_2d1s cmdOfMotor/ 1 autoMode 1 manualMode 2 autoFwdCmd 3 autoBwdCmd 4 forwardPB 14 backwardPB 15 stopPB 16 thermalFB 17 forwardFB 18 backwardFB 19 acknowledgePB 5 forwardCmd 12 backwardCmd 13 generalFault 8>

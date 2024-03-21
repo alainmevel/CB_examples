@@ -1,0 +1,21 @@
+
+FUNCTION CB_limit_date : DATE
+
+
+TITLE = ' Limiting (min and max) a variable '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : limiDate
+FAMILY  : TNI
+
+VAR_INPUT
+    MN : DATE;
+    IN : DATE;
+    MX : DATE;
+END_VAR
+
+BEGIN
+
+CB_limit_date := LIMIT(MN := MN, IN := IN, MX := MX); 
+
+END_FUNCTION

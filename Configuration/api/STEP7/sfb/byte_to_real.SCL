@@ -1,0 +1,19 @@
+
+FUNCTION CB_byte_to_real : REAL
+
+
+TITLE = ' Convert a byte into a real '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : bytToRea
+FAMILY  : TNI
+
+VAR_INPUT
+    IN : BYTE;
+END_VAR
+
+BEGIN
+
+CB_byte_to_real := DINT_TO_REAL(BYTE_TO_DINT(IN));
+
+END_FUNCTION

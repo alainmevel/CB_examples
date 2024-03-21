@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<APPLICATION NAME="drill">
+	<PROPERTIES>
+		<PROPERTY NAME="IdentifierProperty" VALUE="7c36133b-ee9e-41bc-8330-19334125538e">
+		</PROPERTY>
+		<PROPERTY NAME="noitintilppa" VALUE="true">
+			<PROPERTIES>
+				<PROPERTY NAME="IdentifierProperty" VALUE="00000000-0000-0000-0000-000000000000">
+				</PROPERTY>
+			</PROPERTIES>
+		</PROPERTY>
+		<PROPERTY NAME="groupNameProperty" VALUE="Sample applications">
+			<PROPERTIES>
+				<PROPERTY NAME="IdentifierProperty" VALUE="00000000-0000-0000-0000-000000000000">
+				</PROPERTY>
+			</PROPERTIES>
+		</PROPERTY>
+	</PROPERTIES>
+	<GROUPS>
+		<GROUP NAME="Process">
+			<FILES>
+				<FILE NAME="spindle" />
+				<FILE NAME="descent" />
+				<FILE NAME="clamping" />
+				<FILE NAME="run" />
+				<FILE NAME="function" />
+				<FILE NAME="mdescent" />
+				<FILE NAME="mclamping" />
+				<FILE NAME="mspindle" />
+				<FILE NAME="mode" />
+			</FILES>
+			<GROUPS>
+			</GROUPS>
+		</GROUP>
+		<GROUP NAME="Specific">
+			<FILES>
+				<FILE NAME="turret" />
+				<FILE NAME="piece" />
+			</FILES>
+			<GROUPS>
+			</GROUPS>
+		</GROUP>
+	</GROUPS>
+</APPLICATION>

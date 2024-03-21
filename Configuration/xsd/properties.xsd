@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="PROPERTIES_FILE">
+		<xs:annotation>
+			<xs:appinfo>
+				<cbIcon>preferences</cbIcon>
+				<cbBalloon>File which contains properties for ControlBuild variables</cbBalloon>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" minOccurs="0" ref="ENUM"/>
+				<xs:element maxOccurs="unbounded" ref="PROPERTIES_SET"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="ENUM">
+		<xs:annotation>
+			<xs:appinfo>
+				<cbIcon>propertie</cbIcon>
+				<cbBalloon>Declaration of an enumerated type</cbBalloon>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="NAME" type="xs:string" use="required"/>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" name="ITEM" type="xs:string">
+					<xs:annotation>
+						<xs:appinfo>
+							<cbIcon>propertie</cbIcon>
+							<cbBalloon>An item of an enumeration</cbBalloon>
+						</xs:appinfo>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="TABLE">
+		<xs:annotation>
+			<xs:appinfo>
+				<cbIcon>propertie</cbIcon>
+				<cbBalloon>Declaration of a table type</cbBalloon>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="NAME" type="xs:string" use="required"/>
+			<xs:attribute name="FILE" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="PROPERTIES_SET">
+		<xs:annotation>
+			<xs:appinfo>
+				<cbIcon>propertie</cbIcon>
+				<cbBalloon>A set of properties</cbBalloon>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="NAME" type="xs:string" use="optional"/>
+			<xs:attribute name="IF" type="xs:string" use="optional"/>
+			<xs:sequence>
+				<xs:element minOccurs="0" ref="LANGUAGES"/>
+				<xs:element maxOccurs="unbounded" ref="PROPERTY"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="LANGUAGES">
+		<xs:annotation>
+			<xs:appinfo>
+				<cbIcon>propertie</cbIcon>
+				<cbBalloon>Contains the labels depending on the language of ControlBuild</cbBalloon>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" name="LANGUAGE" type="xs:string">
+					<xs:annotation>
+						<xs:appinfo>
+							<cbIcon>propertie</cbIcon>
+							<cbBalloon>Contains the label for one language</cbBalloon>
+						</xs:appinfo>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:attribute name="NAME" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="PROPERTY">
+		<xs:annotation>
+			<xs:appinfo>
+				<cbIcon>propertie</cbIcon>
+  				<cbBalloon>Definition of a property</cbBalloon>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="NAME" type="xs:string" use="required"/>
+			<xs:attribute name="TYPE" type="xs:string" use="required"/>
+			<xs:attribute name="EDITIONMODE" type="xs:NMTOKEN" use="optional"/>
+			<xs:attribute name="DEFAULT" type="xs:string" use="optional"/>
+			<xs:attribute name="MINLENGTH" type="xs:unsignedInt" use="optional"/>
+			<xs:attribute name="MAXLENGTH" type="xs:unsignedInt" use="optional"/>
+			<xs:attribute name="LOWERBOUND" type="xs:string" use="optional"/>
+			<xs:attribute name="UPPERBOUND" type="xs:string" use="optional"/>
+			<xs:attribute name="SIZE" type="xs:unsignedInt" use="optional"/>
+			<xs:attribute name="IF" type="xs:string" use="optional"/>
+			<xs:sequence>
+				<xs:element minOccurs="0" ref="LANGUAGES"/>
+				<xs:element minOccurs="0" ref="PROPERTIES_SET"/>
+				<xs:element minOccurs="0" maxOccurs="unbounded" name="APPLIED_TO">
+					<xs:annotation>
+						<xs:appinfo>
+							<cbIcon>propertie</cbIcon>
+							<cbBalloon>Declaration of a class on which the property is available</cbBalloon>
+						</xs:appinfo>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:attribute name="CLASS" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

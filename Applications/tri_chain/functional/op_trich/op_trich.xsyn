@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<AWTSynoptic screenX="1600" screenY="2262" name="op_trich.xsyn" description="" date="03/10/2023" time="11:13" version="3.0_draft3" source="controlbuild " bkgColor="white" identifier="89184085-1d90-49ce-8909-43b6910837b5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Colors>
+		<Color colorId="black" r="0" g="0" b="0" invisible="false" />
+		<Color colorId="white" r="255" g="255" b="255" invisible="false" />
+		<Color colorId="red" r="255" g="0" b="0" invisible="false" />
+		<Color colorId="yellow" r="255" g="255" b="0" invisible="false" />
+		<Color colorId="blue" r="0" g="0" b="255" invisible="false" />
+		<Color colorId="green" r="0" g="255" b="0" invisible="false" />
+		<Color colorId="purple" r="128" g="0" b="128" invisible="false" />
+		<Color colorId="brown" r="128" g="64" b="0" invisible="false" />
+		<Color colorId="gray" r="192" g="192" b="192" invisible="false" />
+		<Color colorId="orange" r="255" g="128" b="0" invisible="false" />
+		<Color colorId="pink" r="255" g="128" b="255" invisible="false" />
+		<Color colorId="transparent" invisible="true" />
+		<Color colorId="other" r="0" g="0" b="0" invisible="false" />
+		<Color colorId="visible" invisible="false" />
+	</Colors>
+	<Objects>
+		<Widget src="tri_chain\conveyor1\conveyor">
+			<Basic xInit="880" yInit="2344" xFinal="1383" yFinal="3600" xCenter="1131" yCenter="2972" />
+			<Comment>CB.instance_path=outputChain\chain
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=880
+CB.rotation_centerY=3600
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tri_chain\creation\creation">
+			<Basic xInit="689" yInit="125" xFinal="878" yFinal="502" xCenter="783" yCenter="313" />
+			<Comment>CB.instance_path=creation1
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=689
+CB.rotation_centerY=502
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tri_chain\creation\creation">
+			<Basic xInit="1131" yInit="126" xFinal="1320" yFinal="503" xCenter="1225" yCenter="314" />
+			<Comment>CB.instance_path=creation2
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1131
+CB.rotation_centerY=503
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tri_chain\creation\creation">
+			<Basic xInit="1634" yInit="126" xFinal="1823" yFinal="503" xCenter="1728" yCenter="314" />
+			<Comment>CB.instance_path=creation3
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1634
+CB.rotation_centerY=503
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tri_chain\conveyor1\conveyor">
+			<Basic xInit="375" yInit="365" xFinal="878" yFinal="1621" xCenter="626" yCenter="993" />
+			<Comment>CB.instance_path=chain1\chain
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=375
+CB.rotation_centerY=1621
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tri_chain\conveyor1\conveyor">
+			<Basic xInit="817" yInit="364" xFinal="1320" yFinal="1621" xCenter="1068" yCenter="992" />
+			<Comment>CB.instance_path=chain2\chain
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=817
+CB.rotation_centerY=1621
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tri_chain\conveyor1\conveyor">
+			<Basic xInit="1320" yInit="364" xFinal="1823" yFinal="1621" xCenter="1571" yCenter="992" />
+			<Comment>CB.instance_path=chain3\chain
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1320
+CB.rotation_centerY=1621
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tri_chain\passing_sensor\passing_sensor">
+			<Basic xInit="1571" yInit="440" xFinal="1634" yFinal="503" xCenter="1602" yCenter="471" />
+			<Comment>CB.instance_path=chain3\start_sensor
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1571
+CB.rotation_centerY=503
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tri_chain\passing_sensor\passing_sensor">
+			<Basic xInit="1376" yInit="1320" xFinal="1439" yFinal="1383" xCenter="1407" yCenter="1351" />
+			<Comment>CB.instance_path=chain3\end_sensor
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1376
+CB.rotation_centerY=1383
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tri_chain\passing_sensor\passing_sensor">
+			<Basic xInit="867" yInit="1320" xFinal="930" yFinal="1383" xCenter="898" yCenter="1351" />
+			<Comment>CB.instance_path=chain2\end_sensor
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=867
+CB.rotation_centerY=1383
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tri_chain\passing_sensor\passing_sensor">
+			<Basic xInit="1068" yInit="440" xFinal="1131" yFinal="503" xCenter="1099" yCenter="471" />
+			<Comment>CB.instance_path=chain2\start_sensor
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1068
+CB.rotation_centerY=503
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tri_chain\rangesensor\range_sensor">
+			<Basic xInit="1433" yInit="1571" xFinal="1496" yFinal="1634" xCenter="1464" yCenter="1602" />
+			<Comment>CB.instance_path=shuttle\pos3Sensor
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1433
+CB.rotation_centerY=1634
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tri_chain\passing_sensor2\passing_sensor">
+			<Basic xInit="687" yInit="2212" xFinal="729" yFinal="2258" xCenter="708" yCenter="2235" />
+			<Comment>CB.instance_path=shuttle\endSensor
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=687
+CB.rotation_centerY=2258
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tri_chain\passing_sensor\passing_sensor">
+			<Basic xInit="1216" yInit="2327" xFinal="1279" yFinal="2390" xCenter="1247" yCenter="2358" />
+			<Comment>CB.instance_path=outputChain\start_sensor
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1216
+CB.rotation_centerY=2390
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tri_chain\passing_sensor\passing_sensor">
+			<Basic xInit="936" yInit="3230" xFinal="999" yFinal="3293" xCenter="967" yCenter="3261" />
+			<Comment>CB.instance_path=outputChain\end_sensor
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=936
+CB.rotation_centerY=3293
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tri_chain\trash\trash">
+			<Basic xInit="893" yInit="3476" xFinal="1043" yFinal="3790" xCenter="968" yCenter="3633" />
+			<Comment>CB.instance_path=trash
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=893
+CB.rotation_centerY=3790
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tri_chain\boxtri\box">
+			<Basic xInit="141" yInit="140" xFinal="461" yFinal="620" xCenter="301" yCenter="380" />
+			<Comment>CB.instance_path=
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=141
+CB.rotation_centerY=620
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tri_chain\rangesensor\range_sensor">
+			<Basic xInit="437" yInit="1571" xFinal="500" yFinal="1634" xCenter="468" yCenter="1602" />
+			<Comment>CB.instance_path=shuttle\pos1Sensor
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=437
+CB.rotation_centerY=1634
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tri_chain\passing_sensor\passing_sensor">
+			<Basic xInit="419" yInit="1320" xFinal="482" yFinal="1383" xCenter="450" yCenter="1351" />
+			<Comment>CB.instance_path=chain1\end_sensor
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=419
+CB.rotation_centerY=1383
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tri_chain\shuttle\shuttle">
+			<Basic xInit="657" yInit="1496" xFinal="1034" yFinal="2438" xCenter="845" yCenter="1967" />
+			<Comment>CB.instance_path=shuttle\shuttle
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=657
+CB.rotation_centerY=2438
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tri_chain\rangesensor\range_sensor">
+			<Basic xInit="880" yInit="1571" xFinal="943" yFinal="1634" xCenter="911" yCenter="1602" />
+			<Comment>CB.instance_path=shuttle\pos2Sensor
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=880
+CB.rotation_centerY=1634
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tri_chain\passing_sensor\passing_sensor">
+			<Basic xInit="656" yInit="440" xFinal="719" yFinal="503" xCenter="687" yCenter="471" />
+			<Comment>CB.instance_path=chain1\start_sensor
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=656
+CB.rotation_centerY=503
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+	</Objects>
+	<Vars>
+	</Vars>
+	<Fonts>
+	</Fonts>
+	<Meta>
+		<Metadata type="synoptic">
+			<Param>
+				<ParamName>groundPlanOnxyz</ParamName>
+				<ParamValue>3</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskpx</ParamName>
+				<ParamValue>0</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskpy</ParamName>
+				<ParamValue>0</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskpz</ParamName>
+				<ParamValue>0</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskdx</ParamName>
+				<ParamValue>18000</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskdy</ParamName>
+				<ParamValue>31000</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskdz</ParamName>
+				<ParamValue>31000</ParamValue>
+			</Param>
+		</Metadata>
+	</Meta>
+</AWTSynoptic>

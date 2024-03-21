@@ -1,0 +1,21 @@
+
+FUNCTION CB_limit_sint : INT
+
+
+TITLE = ' Limiting (min and max) a variable '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : limiSint
+FAMILY  : TNI
+
+VAR_INPUT
+    MN : INT;
+    IN : INT;
+    MX : INT;
+END_VAR
+
+BEGIN
+
+CB_limit_sint := LIMIT(MN := MN, IN := IN, MX := MX); 
+
+END_FUNCTION

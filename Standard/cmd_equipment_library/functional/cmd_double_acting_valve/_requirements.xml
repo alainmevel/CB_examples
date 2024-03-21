@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<MODEL_REQUIREMENTS>
+	<FUNCTIONAL_TREE TYPE="mac">
+		<CHILDREN>
+			<NODE NAME="actions" TYPE="rel">
+			</NODE>
+			<NODE NAME="faults" TYPE="rel">
+			</NODE>
+		</CHILDREN>
+	</FUNCTIONAL_TREE>
+</MODEL_REQUIREMENTS>

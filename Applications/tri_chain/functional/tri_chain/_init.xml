@@ -1,0 +1,3911 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-05T15:45:14-01:00" />
+	<contentHeader name="tri_chain">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="32" y="8" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+		</pous>
+	</types>
+	<instances>
+		<configurations>
+			<configuration name="tri_chain">
+				<globalVars>
+					<variable name="simuperiod">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="50000.0" />
+						</initialValue>
+					</variable>
+					<variable name="taskname">
+						<type>
+							<string length="50" />
+						</type>
+						<initialValue>
+							<simpleValue value="'tri_chain.exe'" />
+						</initialValue>
+					</variable>
+					<variable name="allowpreconditions">
+						<type>
+							<BOOL />
+						</type>
+						<initialValue>
+							<simpleValue value="true" />
+						</initialValue>
+					</variable>
+					<variable name="allowpostconditions">
+						<type>
+							<BOOL />
+						</type>
+						<initialValue>
+							<simpleValue value="true" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation1/status_act_prod">
+						<type>
+							<DINT />
+						</type>
+						<initialValue>
+							<simpleValue value="0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation1/m11">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1502.68" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation1/m12">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation1/m13">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="-2.44921e-14" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation1/m14">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="5480.36" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation1/m21">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation1/m22">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="2997.32" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation1/m23">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation1/m24">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="27006.2" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation1/m31">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="3.68038e-13" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation1/m32">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation1/m33">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation1/m34">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation1/m41">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation1/m42">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation1/m43">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation1/m44">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation1/px">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="5600.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation1/py">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="27000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation1/pz">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.5" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation1/dx">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation1/dy">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="3000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation1/dz">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation1/pulseType">
+						<type>
+							<BOOL />
+						</type>
+						<initialValue>
+							<simpleValue value="true" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/motor1dir/nominalSpeed">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/motor1dir/nominalTime">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.1" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/start_sensor/status_act_prod">
+						<type>
+							<DINT />
+						</type>
+						<initialValue>
+							<simpleValue value="0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/start_sensor/m11">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="498.214" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/start_sensor/m12">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/start_sensor/m13">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="-2.44921e-14" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/start_sensor/m14">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="5223.22" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/start_sensor/m21">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/start_sensor/m22">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="498.214" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/start_sensor/m23">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/start_sensor/m24">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="26998.2" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/start_sensor/m31">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.22023e-13" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/start_sensor/m32">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/start_sensor/m33">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/start_sensor/m34">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/start_sensor/m41">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/start_sensor/m42">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/start_sensor/m43">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/start_sensor/m44">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/start_sensor/px">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="4500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/start_sensor/py">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="27000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/start_sensor/dx">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/start_sensor/dy">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/start_sensor/dz">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/end_sensor/status_act_prod">
+						<type>
+							<DINT />
+						</type>
+						<initialValue>
+							<simpleValue value="0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/end_sensor/m11">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="498.214" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/end_sensor/m12">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/end_sensor/m13">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="-2.44921e-14" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/end_sensor/m14">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="3334.82" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/end_sensor/m21">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/end_sensor/m22">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="498.214" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/end_sensor/m23">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/end_sensor/m24">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="19999.1" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/end_sensor/m31">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.22023e-13" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/end_sensor/m32">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/end_sensor/m33">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/end_sensor/m34">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.05" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/end_sensor/m41">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/end_sensor/m42">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/end_sensor/m43">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/end_sensor/m44">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/end_sensor/px">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="2850.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/end_sensor/py">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="20000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/end_sensor/dx">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/end_sensor/dy">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/end_sensor/dz">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/chain/status_act_prod">
+						<type>
+							<DINT />
+						</type>
+						<initialValue>
+							<simpleValue value="0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/chain/m11">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="4001.79" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/chain/m12">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/chain/m13">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="-2.44921e-14" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/chain/m14">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="2981.25" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/chain/m21">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/chain/m22">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="9996.43" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/chain/m23">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/chain/m24">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="18102.7" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/chain/m31">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="9.80123e-13" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/chain/m32">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/chain/m33">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/chain/m34">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/chain/m41">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/chain/m42">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/chain/m43">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/chain/m44">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/chain/px">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="2500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/chain/py">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="18100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/chain/pz">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/chain/dx">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="4000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/chain/dy">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="10000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain1/chain/dz">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/motor1dir/nominalSpeed">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/motor1dir/nominalTime">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.1" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/start_sensor/status_act_prod">
+						<type>
+							<DINT />
+						</type>
+						<initialValue>
+							<simpleValue value="0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/start_sensor/m11">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/start_sensor/m12">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/start_sensor/m13">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/start_sensor/m14">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="8500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/start_sensor/m21">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/start_sensor/m22">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/start_sensor/m23">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/start_sensor/m24">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="27000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/start_sensor/m31">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/start_sensor/m32">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/start_sensor/m33">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/start_sensor/m34">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/start_sensor/m41">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/start_sensor/m42">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/start_sensor/m43">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/start_sensor/m44">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/start_sensor/px">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="8500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/start_sensor/py">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="27000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/start_sensor/dx">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/start_sensor/dy">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/start_sensor/dz">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/end_sensor/status_act_prod">
+						<type>
+							<DINT />
+						</type>
+						<initialValue>
+							<simpleValue value="0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/end_sensor/m11">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/end_sensor/m12">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/end_sensor/m13">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/end_sensor/m14">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="6900.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/end_sensor/m21">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/end_sensor/m22">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/end_sensor/m23">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/end_sensor/m24">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="20000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/end_sensor/m31">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/end_sensor/m32">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/end_sensor/m33">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/end_sensor/m34">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/end_sensor/m41">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/end_sensor/m42">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/end_sensor/m43">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/end_sensor/m44">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/end_sensor/px">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="6900.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/end_sensor/py">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="20000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/end_sensor/dx">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/end_sensor/dy">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/end_sensor/dz">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/chain/status_act_prod">
+						<type>
+							<DINT />
+						</type>
+						<initialValue>
+							<simpleValue value="0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/chain/m11">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="4000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/chain/m12">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/chain/m13">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/chain/m14">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="6500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/chain/m21">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/chain/m22">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="10000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/chain/m23">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/chain/m24">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="18100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/chain/m31">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/chain/m32">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/chain/m33">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/chain/m34">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/chain/m41">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/chain/m42">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/chain/m43">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/chain/m44">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/chain/px">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="6500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/chain/py">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="18100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/chain/dx">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="4000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/chain/dy">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="10000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain2/chain/dz">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation2/status_act_prod">
+						<type>
+							<DINT />
+						</type>
+						<initialValue>
+							<simpleValue value="0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation2/m11">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation2/m12">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation2/m13">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation2/m14">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="9000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation2/m21">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation2/m22">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="3000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation2/m23">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation2/m24">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="27000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation2/m31">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation2/m32">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation2/m33">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation2/m34">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation2/m41">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation2/m42">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation2/m43">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation2/m44">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation2/px">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="8990.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation2/py">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="27000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation2/pz">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.5" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation2/dx">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation2/dy">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="3000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation2/dz">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation2/pulseType">
+						<type>
+							<BOOL />
+						</type>
+						<initialValue>
+							<simpleValue value="true" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/motor1dir/nominalSpeed">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/motor1dir/nominalTime">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.1" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/start_sensor/status_act_prod">
+						<type>
+							<DINT />
+						</type>
+						<initialValue>
+							<simpleValue value="0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/start_sensor/m11">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/start_sensor/m12">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/start_sensor/m13">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/start_sensor/m14">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="12500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/start_sensor/m21">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/start_sensor/m22">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/start_sensor/m23">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/start_sensor/m24">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="27000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/start_sensor/m31">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/start_sensor/m32">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/start_sensor/m33">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/start_sensor/m34">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/start_sensor/m41">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/start_sensor/m42">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/start_sensor/m43">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/start_sensor/m44">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/start_sensor/px">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="12500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/start_sensor/py">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="27000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/start_sensor/dx">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/start_sensor/dy">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/start_sensor/dz">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/end_sensor/status_act_prod">
+						<type>
+							<DINT />
+						</type>
+						<initialValue>
+							<simpleValue value="0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/end_sensor/m11">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/end_sensor/m12">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/end_sensor/m13">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/end_sensor/m14">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="10950.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/end_sensor/m21">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/end_sensor/m22">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/end_sensor/m23">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/end_sensor/m24">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="20000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/end_sensor/m31">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/end_sensor/m32">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/end_sensor/m33">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/end_sensor/m34">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/end_sensor/m41">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/end_sensor/m42">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/end_sensor/m43">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/end_sensor/m44">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/end_sensor/px">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="10950.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/end_sensor/py">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="20000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/chain/status_act_prod">
+						<type>
+							<DINT />
+						</type>
+						<initialValue>
+							<simpleValue value="0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/chain/m11">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="4000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/chain/m12">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/chain/m13">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/chain/m14">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="10500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/chain/m21">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/chain/m22">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="10000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/chain/m23">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/chain/m24">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="18100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/chain/m31">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/chain/m32">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/chain/m33">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/chain/m34">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/chain/m41">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/chain/m42">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/chain/m43">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/chain/m44">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/chain/px">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="10500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/chain/py">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="18100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/chain/dx">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="4000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/chain/dy">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="10000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/chain3/chain/dz">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/motor1dir/nominalSpeed">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/motor1dir/nominalTime">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.1" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/start_sensor/status_act_prod">
+						<type>
+							<DINT />
+						</type>
+						<initialValue>
+							<simpleValue value="0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/start_sensor/m11">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="498.214" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/start_sensor/m12">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/start_sensor/m13">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/start_sensor/m14">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="9675.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/start_sensor/m21">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/start_sensor/m22">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="498.214" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/start_sensor/m23">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/start_sensor/m24">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="11987.5" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/start_sensor/m31">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/start_sensor/m32">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/start_sensor/m33">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/start_sensor/m34">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.06" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/start_sensor/m41">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/start_sensor/m42">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/start_sensor/m43">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/start_sensor/m44">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/start_sensor/dx">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/start_sensor/dy">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/start_sensor/dz">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/end_sensor/status_act_prod">
+						<type>
+							<DINT />
+						</type>
+						<initialValue>
+							<simpleValue value="0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/end_sensor/m11">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/end_sensor/m12">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/end_sensor/m13">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/end_sensor/m14">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="7450.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/end_sensor/m21">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/end_sensor/m22">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/end_sensor/m23">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/end_sensor/m24">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="4800.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/end_sensor/m31">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/end_sensor/m32">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/end_sensor/m33">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/end_sensor/m34">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/end_sensor/m41">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/end_sensor/m42">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/end_sensor/m43">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/end_sensor/m44">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/end_sensor/px">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="7450.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/end_sensor/py">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="4800.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/end_sensor/dx">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/end_sensor/dy">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/end_sensor/dz">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/chain/status_act_prod">
+						<type>
+							<DINT />
+						</type>
+						<initialValue>
+							<simpleValue value="0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/chain/m11">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="4001.79" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/chain/m12">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/chain/m13">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/chain/m14">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="7003.57" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/chain/m21">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/chain/m22">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="9996.43" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/chain/m23">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/chain/m24">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="2352.06" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/chain/m31">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/chain/m32">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/chain/m33">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/chain/m34">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.06" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/chain/m41">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/chain/m42">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/chain/m43">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/chain/m44">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/chain/px">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="7100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/chain/py">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="3000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/chain/dx">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="4000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/chain/dy">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="10000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/outputChain/chain/dz">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/motor2dir/nominalSpeed">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/motor2dir/nominalTime">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.1" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/chainMotor/nominalSpeed">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/chainMotor/nominalTime">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.1" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/axle/initTranslat">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="5100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/axle/maxTranslat">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="30000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/shuttle/status_act_prod">
+						<type>
+							<DINT />
+						</type>
+						<initialValue>
+							<simpleValue value="0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/shuttle/m11">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="2997.32" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/shuttle/m12">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/shuttle/m13">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="-2.44921e-14" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/shuttle/m14">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="5231.25" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/shuttle/m21">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/shuttle/m22">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="7497.32" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/shuttle/m23">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/shuttle/m24">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="11601.8" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/shuttle/m31">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="7.34108e-13" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/shuttle/m32">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/shuttle/m33">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/shuttle/m34">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.05" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/shuttle/m41">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/shuttle/m42">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/shuttle/m43">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/shuttle/m44">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/shuttle/px">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="5250.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/shuttle/py">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="11600.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/shuttle/pz">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.05" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/shuttle/dx">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="3000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/shuttle/dy">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="7500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/shuttle/dz">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos1Sensor/status_act_prod">
+						<type>
+							<DINT />
+						</type>
+						<initialValue>
+							<simpleValue value="0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos1Sensor/m11">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="498.214" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos1Sensor/m12">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos1Sensor/m13">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos1Sensor/m14">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="3479.47" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos1Sensor/m21">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos1Sensor/m22">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="498.214" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos1Sensor/m23">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos1Sensor/m24">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="17998.2" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos1Sensor/m31">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos1Sensor/m32">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos1Sensor/m33">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos1Sensor/m34">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.05" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos1Sensor/m41">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos1Sensor/m42">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos1Sensor/m43">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos1Sensor/m44">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos1Sensor/threshold">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="900.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos1Sensor/range">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="900.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos2Sensor/status_act_prod">
+						<type>
+							<DINT />
+						</type>
+						<initialValue>
+							<simpleValue value="0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos2Sensor/m11">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos2Sensor/m12">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos2Sensor/m13">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos2Sensor/m14">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="7000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos2Sensor/m21">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos2Sensor/m22">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos2Sensor/m23">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos2Sensor/m24">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="18000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos2Sensor/m31">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos2Sensor/m32">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos2Sensor/m33">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos2Sensor/m34">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.06" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos2Sensor/m41">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos2Sensor/m42">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos2Sensor/m43">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos2Sensor/m44">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos2Sensor/threshold">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="4500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos2Sensor/range">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="900.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos3Sensor/status_act_prod">
+						<type>
+							<DINT />
+						</type>
+						<initialValue>
+							<simpleValue value="0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos3Sensor/m11">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos3Sensor/m12">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos3Sensor/m13">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos3Sensor/m14">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="11400.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos3Sensor/m21">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos3Sensor/m22">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos3Sensor/m23">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos3Sensor/m24">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="18000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos3Sensor/m31">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos3Sensor/m32">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos3Sensor/m33">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos3Sensor/m34">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos3Sensor/m41">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos3Sensor/m42">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos3Sensor/m43">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos3Sensor/m44">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos3Sensor/threshold">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="9200.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/pos3Sensor/range">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="900.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/endSensor/status_act_prod">
+						<type>
+							<DINT />
+						</type>
+						<initialValue>
+							<simpleValue value="0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/endSensor/m11">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="337.5" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/endSensor/m12">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/endSensor/m13">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/endSensor/m14">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="5464.29" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/endSensor/m21">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/endSensor/m22">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="369.643" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/endSensor/m23">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/endSensor/m24">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="13032.1" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/endSensor/m31">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/endSensor/m32">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/endSensor/m33">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/endSensor/m34">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/endSensor/m41">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/endSensor/m42">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/endSensor/m43">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/endSensor/m44">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/endSensor/py">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="14500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/endSensor/dx">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/endSensor/dy">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/endSensor/dz">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/shuttle/endSensor/initialPosition">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation3/status_act_prod">
+						<type>
+							<DINT />
+						</type>
+						<initialValue>
+							<simpleValue value="0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation3/m11">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation3/m12">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation3/m13">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation3/m14">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="13000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation3/m21">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation3/m22">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="3000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation3/m23">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation3/m24">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="27000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation3/m31">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation3/m32">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation3/m33">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation3/m34">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation3/m41">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation3/m42">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation3/m43">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation3/m44">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation3/px">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="12990.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation3/py">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="27000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation3/pz">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.5" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation3/dx">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation3/dy">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="3000.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation3/dz">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/creation3/pulseType">
+						<type>
+							<BOOL />
+						</type>
+						<initialValue>
+							<simpleValue value="true" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/trash/status_act_prod">
+						<type>
+							<DINT />
+						</type>
+						<initialValue>
+							<simpleValue value="0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/trash/m11">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1197.32" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/trash/m12">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/trash/m13">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="-2.44921e-14" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/trash/m14">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="7103.57" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/trash/m21">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/trash/m22">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="2499.11" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/trash/m23">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/trash/m24">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="841.954" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/trash/m31">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="2.9325e-13" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/trash/m32">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/trash/m33">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/trash/m34">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/trash/m41">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/trash/m42">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/trash/m43">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="0.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/trash/m44">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/trash/px">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="7100.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/trash/py">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1400.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/trash/dx">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="1200.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/trash/dy">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="2500.0" />
+						</initialValue>
+					</variable>
+					<variable name="op_trichain/trash/dz">
+						<type>
+							<REAL />
+						</type>
+						<initialValue>
+							<simpleValue value="100.0" />
+						</initialValue>
+					</variable>
+				</globalVars>
+				<addData>
+					<data name="Geensys.CB.Products" handleUnknown="preserve">
+						<value>tri_chain.boxtri=10</value>
+					</data>
+					<data name="Geensys.CB.ActorsAndProductsDeclaration" handleUnknown="preserve">
+						<value>T_ElementTableActeursProduits TableActeursProduits[] = {
+&#9;{0, {127, 526, 17, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__creation, 0, mx_status_static, 10, {{0, 0}, {0, 0}}},
+&#9;{0, {151, 527, 49, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__passing_sensor, 0, mx_status_static, 14, {{0, 0}, {0, 0}}},
+&#9;{0, {155, 528, 71, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__passing_sensor, 0, mx_status_static, 15, {{0, 0}, {0, 0}}},
+&#9;{0, {159, 529, 93, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__conveyor1, 0, mx_status_static, 16, {{0, 0}, {0, 0}}},
+&#9;{0, {181, 530, 124, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__passing_sensor, 0, mx_status_static, 20, {{0, 0}, {0, 0}}},
+&#9;{0, {185, 531, 146, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__passing_sensor, 0, mx_status_static, 21, {{0, 0}, {0, 0}}},
+&#9;{0, {189, 532, 168, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__conveyor1, 0, mx_status_static, 22, {{0, 0}, {0, 0}}},
+&#9;{0, {192, 533, 191, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__creation, 0, mx_status_static, 23, {{0, 0}, {0, 0}}},
+&#9;{0, {216, 534, 223, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__passing_sensor, 0, mx_status_static, 27, {{0, 0}, {0, 0}}},
+&#9;{0, {220, 535, 245, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__passing_sensor, 0, mx_status_static, 28, {{0, 0}, {0, 0}}},
+&#9;{0, {224, 536, 267, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__conveyor1, 0, mx_status_static, 29, {{0, 0}, {0, 0}}},
+&#9;{0, {246, 537, 298, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__passing_sensor, 0, mx_status_static, 33, {{0, 0}, {0, 0}}},
+&#9;{0, {250, 538, 320, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__passing_sensor, 0, mx_status_static, 34, {{0, 0}, {0, 0}}},
+&#9;{0, {254, 539, 342, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__conveyor1, 0, mx_status_static, 35, {{0, 0}, {0, 0}}},
+&#9;{0, {298, 540, 386, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__shuttle, 0, mx_status_static, 40, {{0, 0}, {0, 0}}},
+&#9;{0, {300, 541, 410, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__rangesensor, 0, mx_status_static, 41, {{0, 0}, {0, 0}}},
+&#9;{0, {303, 542, 428, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__rangesensor, 0, mx_status_static, 42, {{0, 0}, {0, 0}}},
+&#9;{0, {306, 543, 446, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__rangesensor, 0, mx_status_static, 43, {{0, 0}, {0, 0}}},
+&#9;{0, {309, 544, 464, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__passing_sensor2, 0, mx_status_static, 44, {{0, 0}, {0, 0}}},
+&#9;{0, {316, 545, 488, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__creation, 0, mx_status_static, 46, {{0, 0}, {0, 0}}},
+&#9;{0, {321, 546, 512, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__trash, 0, mx_status_static, 47, {{0, 0}, {0, 0}}},
+&#9;{0, {321, 547, 534, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, tri_chain__boxtri, tri_chain__boxtri__test_interarctions, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{0, {321, 548, 559, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, tri_chain__boxtri, tri_chain__boxtri__test_interarctions, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{0, {321, 549, 584, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, tri_chain__boxtri, tri_chain__boxtri__test_interarctions, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{0, {321, 550, 609, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, tri_chain__boxtri, tri_chain__boxtri__test_interarctions, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{0, {321, 551, 634, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, tri_chain__boxtri, tri_chain__boxtri__test_interarctions, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{0, {321, 552, 659, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, tri_chain__boxtri, tri_chain__boxtri__test_interarctions, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{0, {321, 553, 684, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, tri_chain__boxtri, tri_chain__boxtri__test_interarctions, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{0, {321, 554, 709, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, tri_chain__boxtri, tri_chain__boxtri__test_interarctions, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{0, {321, 555, 734, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, tri_chain__boxtri, tri_chain__boxtri__test_interarctions, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{0, {321, 556, 759, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, tri_chain__boxtri, tri_chain__boxtri__test_interarctions, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{0, {0, 0, 0, 0}, {0, 0, 0, 0},
+&#9;0, 0, 0, 0, 0, {{0, 0, 0}, {0, 0, 0}}}
+};
+T_Instance NbActeurs = 21;
+T_Instance NbProduits = 10;
+T_Instance NbActeursEtProduits = 31;
+
+</value>
+					</data>
+					<data name="Geensys.CB.timecycle" handleUnknown="preserve">
+						<value>50000.0</value>
+					</data>
+					<data name="Geensys.CB.execstatus" handleUnknown="preserve">
+						<value>mx_exec_status_stop</value>
+					</data>
+					<data name="Geensys.CB.delay" handleUnknown="preserve">
+						<value>0</value>
+					</data>
+				</addData>
+			</configuration>
+		</configurations>
+	</instances>
+</project>

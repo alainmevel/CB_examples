@@ -1,0 +1,19 @@
+
+FUNCTION CB_rol_byte : BYTE
+
+TITLE = ' shift on bit string '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : rolByte
+FAMILY  : TNI
+
+VAR_INPUT
+    IN : BYTE;
+    N : INT;
+END_VAR
+
+BEGIN
+
+    CB_rol_byte := ROL(IN := IN, N := N);
+
+END_FUNCTION

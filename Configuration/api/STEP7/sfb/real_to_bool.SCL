@@ -1,0 +1,19 @@
+
+FUNCTION CB_real_to_bool : BOOL
+
+
+TITLE = ' Convert a real into a boolean '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : realToBo
+FAMILY  : TNI
+
+VAR_INPUT
+    IN : REAL;
+END_VAR
+
+BEGIN
+
+CB_real_to_bool := (IN <>0);
+
+END_FUNCTION

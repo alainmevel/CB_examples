@@ -1,0 +1,49 @@
+FUNCTION_BLOCK FB106
+TITLE = 'pilot'
+AUTHOR : CB
+
+VAR
+	pilot_Z1 : FB88;
+	pilot_Z2 : FB95;
+	pilot_Z3 : FB101;
+	pilot_Z4 : FB105;
+END_VAR
+
+
+BEGIN
+
+
+NETWORK
+TITLE = 
+//
+//	pilot/pilot_Z1
+CALL #pilot_Z1;
+
+
+
+NETWORK
+TITLE = 
+//
+//	pilot/pilot_Z2
+CALL #pilot_Z2;
+
+
+
+NETWORK
+TITLE = 
+//
+//	pilot/pilot_Z3
+CALL #pilot_Z3;
+
+
+
+NETWORK
+TITLE = 
+//
+//	pilot/pilot_Z4
+CALL #pilot_Z4;
+
+
+
+
+END_FUNCTION_BLOCK

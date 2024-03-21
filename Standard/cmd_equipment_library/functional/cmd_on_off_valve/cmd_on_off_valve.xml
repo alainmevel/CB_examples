@@ -1,0 +1,2333 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-03T11:13:37-01:00" />
+	<contentHeader name="cmd_on_off_valve">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="32" y="8" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+			<pou name="cmd_equipment_library.cmd_on_off_valve" pouType="program">
+				<interface>
+					<inputVars>
+						<variable name="autoMode">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Automatic mode</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>9f0dd878-06eb-4902-a829-7796b54d4c25</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="manualMode">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Manual mode</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>7fb4d1df-97d5-48cb-9929-e54fb464764b</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>Modes</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="closedSensorFB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Closed sensor feedback</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>3139aee9-aa65-4849-9b3c-d699e50c9b18</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="openedSensorFB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Opened sensor feedback</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>599c9192-790e-4e1d-9d67-0408a394092f</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>Sensors</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="autoCloseCmd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Automatic close command to the valve</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>58d43b17-97e9-427c-bb64-f2b131958edb</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="autoOpenCmd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Automatic open command to the valve</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>098d675f-a26b-4cd0-ac15-68191974e4db</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>Commands</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="closeValvePB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Close valve pushbutton</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>8768b2bc-db1d-4161-ab51-9c349153a1be</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="openValvePB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Open valve pushbutton</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>5a470dca-e23e-4bf4-8399-5a6d49d27eba</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>PushButtons</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="acknowledgePB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Acknowledgement pushbutton</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>19848990-a720-4481-b664-4425194e400a</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<outputVars>
+						<variable name="closeCmd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Close command to the valve</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>feccc48c-b089-4e66-ad5f-1a76a32d606d</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="openCmd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Open command to the valve</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>c4bf8b14-3bee-4b20-96ea-1f2f154d0acd</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>Orders</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<outputVars>
+						<variable name="generalFault">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>General fault of the valve</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>19283407-2534-4f41-aecc-631953695480</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<addData>
+						<data name="Geensys.CB.groupIn" handleUnknown="preserve">
+							<value>Modes,,Sensors,,Commands,,PushButtons,</value>
+						</data>
+						<data name="Geensys.CB.groupOut" handleUnknown="preserve">
+							<value>Orders,</value>
+						</data>
+					</addData>
+				</interface>
+				<actions>
+				</actions>
+				<body>
+					<FBD>
+						<inVariable localId="0">
+							<position x="113" y="96" />
+							<expression>autoMode</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Modes</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>113,96</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="1">
+							<position x="113" y="96" />
+							<expression>manualMode</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Modes</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>113,96</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="2">
+							<position x="281" y="144" />
+							<expression>closedSensorFB</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Sensors</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>281,144</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="3">
+							<position x="841" y="216" />
+							<expression>closedSensorFB</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Sensors</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>841,216</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="4">
+							<position x="281" y="144" />
+							<expression>openedSensorFB</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Sensors</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>281,144</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="5">
+							<position x="841" y="216" />
+							<expression>openedSensorFB</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Sensors</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>841,216</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="6">
+							<position x="233" y="120" />
+							<expression>autoCloseCmd</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Commands</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>233,120</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="7">
+							<position x="233" y="120" />
+							<expression>autoOpenCmd</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Commands</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>233,120</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="8">
+							<position x="353" y="168" />
+							<expression>closeValvePB</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>PushButtons</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>353,168</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="9">
+							<position x="353" y="168" />
+							<expression>openValvePB</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>PushButtons</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>353,168</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="10">
+							<position x="913" y="240" />
+							<expression>acknowledgePB</expression>
+						</inVariable>
+						<outVariable localId="11">
+							<position x="977" y="96" />
+							<connectionPointIn>
+								<connection refLocalId="12" formalParameter="closeCmd" />
+							</connectionPointIn>
+							<expression>closeCmd</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Orders</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>977,96</value>
+								</data>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>12.Orders,Orders</value>
+								</data>
+							</addData>
+						</outVariable>
+						<outVariable localId="13">
+							<position x="977" y="96" />
+							<connectionPointIn>
+								<connection refLocalId="12" formalParameter="openCmd" />
+							</connectionPointIn>
+							<expression>openCmd</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Orders</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>977,96</value>
+								</data>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>12.Orders,Orders</value>
+								</data>
+							</addData>
+						</outVariable>
+						<outVariable localId="14">
+							<position x="1369" y="192" />
+							<connectionPointIn>
+								<connection refLocalId="15" formalParameter="generalFault" />
+							</connectionPointIn>
+							<expression>generalFault</expression>
+						</outVariable>
+						<block localId="12" width="336" height="192" typeName="actuator" instanceName="actions">
+							<position x="401" y="48" />
+							<inputVariables>
+								<variable formalParameter="autoMode">
+									<connectionPointIn>
+										<connection refLocalId="0">
+											<position x="121" y="96" />
+											<position x="246" y="96" />
+											<position x="246" y="96" />
+											<position x="401" y="96" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="manualMode">
+									<connectionPointIn>
+										<connection refLocalId="1">
+											<position x="121" y="96" />
+											<position x="246" y="96" />
+											<position x="246" y="96" />
+											<position x="401" y="96" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="autoCloseCmd">
+									<connectionPointIn>
+										<connection refLocalId="6">
+											<position x="241" y="120" />
+											<position x="309" y="120" />
+											<position x="309" y="120" />
+											<position x="401" y="120" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="autoOpenCmd">
+									<connectionPointIn>
+										<connection refLocalId="7">
+											<position x="241" y="120" />
+											<position x="309" y="120" />
+											<position x="309" y="120" />
+											<position x="401" y="120" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="closedSensorFB">
+									<connectionPointIn>
+										<connection refLocalId="2">
+											<position x="289" y="144" />
+											<position x="335" y="144" />
+											<position x="335" y="144" />
+											<position x="401" y="144" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="openedSensorFB">
+									<connectionPointIn>
+										<connection refLocalId="4">
+											<position x="289" y="144" />
+											<position x="335" y="144" />
+											<position x="335" y="144" />
+											<position x="401" y="144" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="closeValvePB">
+									<connectionPointIn>
+										<connection refLocalId="8">
+											<position x="361" y="168" />
+											<position x="375" y="168" />
+											<position x="375" y="168" />
+											<position x="401" y="168" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="openValvePB">
+									<connectionPointIn>
+										<connection refLocalId="9">
+											<position x="361" y="168" />
+											<position x="375" y="168" />
+											<position x="375" y="168" />
+											<position x="401" y="168" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="generalFault">
+									<connectionPointIn>
+										<connection refLocalId="15" formalParameter="generalFault">
+											<position x="1273" y="192" />
+											<position x="1313" y="192" />
+											<position x="1313" y="305" />
+											<position x="366" y="305" />
+											<position x="366" y="192" />
+											<position x="401" y="192" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="closeCmd">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="openCmd">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>PushButtons:353@168,PushButtons,Sensors:281@144,Sensors,Commands:233@120,Commands,Modes:113@96,Modes</value>
+								</data>
+								<data name="Geensys.CB.connectionOut" handleUnknown="preserve">
+									<value>Orders,Orders:977@96</value>
+								</data>
+								<data name="Geensys.CB.CY" handleUnknown="preserve">
+									<value>ACT</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value> : </value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>a57f643e-8752-4072-8bee-27f914eb4d86</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="15" width="312" height="121" typeName="faults" instanceName="faults1">
+							<position x="961" y="144" />
+							<inputVariables>
+								<variable formalParameter="closeCmd">
+									<connectionPointIn>
+										<connection refLocalId="12" formalParameter="closeCmd">
+											<position x="737" y="96" />
+											<position x="830" y="96" />
+											<position x="830" y="192" />
+											<position x="961" y="192" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="openCmd">
+									<connectionPointIn>
+										<connection refLocalId="12" formalParameter="openCmd">
+											<position x="737" y="96" />
+											<position x="830" y="96" />
+											<position x="830" y="192" />
+											<position x="961" y="192" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="closedSensorFB">
+									<connectionPointIn>
+										<connection refLocalId="3">
+											<position x="849" y="216" />
+											<position x="892" y="216" />
+											<position x="892" y="216" />
+											<position x="961" y="216" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="openedSensorFB">
+									<connectionPointIn>
+										<connection refLocalId="5">
+											<position x="849" y="216" />
+											<position x="892" y="216" />
+											<position x="892" y="216" />
+											<position x="961" y="216" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="acknowledgePB">
+									<connectionPointIn>
+										<connection refLocalId="10">
+											<position x="921" y="240" />
+											<position x="936" y="240" />
+											<position x="936" y="240" />
+											<position x="961" y="240" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="generalFault">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>12.Orders,Orders,Sensors:841@216,Sensors</value>
+								</data>
+								<data name="Geensys.CB.CY" handleUnknown="preserve">
+									<value>FLT</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value> : </value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>359c22b1-d2cc-4331-8358-51f5425e1754</value>
+								</data>
+							</addData>
+						</block>
+					</FBD>
+					<documentation>
+						<xhtml:pre>CB.group=Modes,113,96
+CB.group=Sensors,281,144
+CB.group=Sensors,841,216
+CB.group=Commands,233,120
+CB.group=PushButtons,353,168
+CB.group=Orders,977,96
+</xhtml:pre>
+					</documentation>
+				</body>
+				<addData>
+					<data name="Geensys.CB.AutomaticScheduling" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+					<data name="Geensys.CB.COMPONENT_CLASS" handleUnknown="preserve">
+						<value>DEVICE</value>
+					</data>
+					<data name="Geensys.CB.COMPONENT_CLASS_UUID" handleUnknown="preserve">
+						<value>aeb9f572-1f16-490b-b7b6-bd370c6b71f7</value>
+					</data>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+				</addData>
+				<documentation>
+					<xhtml:pre>Command of an on/off valve with fault detection.</xhtml:pre>
+				</documentation>
+			</pou>
+			<pou name="actuator" pouType="functionBlock">
+				<interface>
+					<inputVars>
+						<variable name="autoMode">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Automatic mode</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>182d5701-1ad0-49b5-8b0d-2fa63b05ac91</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="manualMode">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Manual mode</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>2369a78d-4fdb-4f41-8385-5a0ce0f89c7d</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>Modes</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="autoCloseCmd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Automatic close command to the valve</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>266fdb73-7664-40a4-a1b0-b63f95843192</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="autoOpenCmd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Automatic open command to the valve</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>f040b3ec-4142-41e5-bd44-798fa1209385</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>Commands</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="closedSensorFB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Closed sensor feedback</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>2dab156c-73fd-484d-be7d-9e53bab06a9b</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="openedSensorFB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Opened sensor feedback</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>7781c806-9bdf-414b-9859-13d8be5dcdad</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>Sensors</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="closeValvePB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Close valve pushbutton</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>b171fa70-9c43-4740-85b9-87a8041c5b79</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="openValvePB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Open valve pushbutton</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>f2bce446-de37-45f5-ac10-08e7c55e2a67</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>PushButtons</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="generalFault">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>General fault of the valve</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>bda35289-0aa2-4b96-af04-cb0095ac4f86</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<outputVars>
+						<variable name="closeCmd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Close command to the valve</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>689a34e9-5d17-4557-a5f1-0c0776f7ca02</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="openCmd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Open command to the valve</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>429d3f79-fbf3-475b-9c26-98c1827f973e</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>Orders</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<addData>
+						<data name="Geensys.CB.groupIn" handleUnknown="preserve">
+							<value>Modes,,Commands,,Sensors,,PushButtons,</value>
+						</data>
+						<data name="Geensys.CB.groupOut" handleUnknown="preserve">
+							<value>Orders,</value>
+						</data>
+					</addData>
+				</interface>
+				<actions>
+				</actions>
+				<body>
+					<LD>
+						<leftPowerRail localId="20">
+							<position x="0" y="100" />
+						</leftPowerRail>
+						<label localId="0" label="1">
+							<position x="0" y="0" />
+							<documentation>
+								<xhtml:pre>Open command</xhtml:pre>
+							</documentation>
+						</label>
+						<contact localId="1">
+							<position x="0" y="100" />
+							<variable>autoMode</variable>
+						</contact>
+						<contact localId="3">
+							<position x="0" y="200" />
+							<variable>manualMode</variable>
+						</contact>
+						<contact localId="2">
+							<position x="100" y="100" />
+							<connectionPointIn>
+								<connection refLocalId="1">
+									<position x="90" y="150" />
+									<position x="100" y="150" />
+									<position x="100" y="150" />
+									<position x="110" y="150" />
+								</connection>
+							</connectionPointIn>
+							<variable>autoOpenCmd</variable>
+						</contact>
+						<contact localId="4">
+							<position x="100" y="200" />
+							<connectionPointIn>
+								<connection refLocalId="3">
+									<position x="90" y="250" />
+									<position x="100" y="250" />
+									<position x="100" y="250" />
+									<position x="110" y="250" />
+								</connection>
+							</connectionPointIn>
+							<variable>openValvePB</variable>
+						</contact>
+						<contact localId="8" negated="true">
+							<position x="200" y="100" />
+							<connectionPointIn>
+								<connection refLocalId="2">
+									<position x="190" y="150" />
+									<position x="200" y="150" />
+									<position x="200" y="150" />
+									<position x="210" y="150" />
+								</connection>
+							</connectionPointIn>
+							<variable>autoCloseCmd</variable>
+						</contact>
+						<contact localId="9" negated="true">
+							<position x="200" y="200" />
+							<connectionPointIn>
+								<connection refLocalId="4">
+									<position x="190" y="250" />
+									<position x="200" y="250" />
+									<position x="200" y="250" />
+									<position x="210" y="250" />
+								</connection>
+							</connectionPointIn>
+							<variable>closeValvePB</variable>
+						</contact>
+						<contact localId="5" negated="true">
+							<position x="400" y="100" />
+							<connectionPointIn>
+								<connection refLocalId="8">
+									<position x="290" y="150" />
+									<position x="300" y="150" />
+									<position x="300" y="150" />
+									<position x="410" y="150" />
+								</connection>
+								<connection refLocalId="9">
+									<position x="290" y="250" />
+									<position x="400" y="250" />
+									<position x="400" y="150" />
+									<position x="410" y="150" />
+								</connection>
+							</connectionPointIn>
+							<variable>openedSensorFB</variable>
+						</contact>
+						<contact localId="7" negated="true">
+							<position x="600" y="100" />
+							<connectionPointIn>
+								<connection refLocalId="5">
+									<position x="490" y="150" />
+									<position x="500" y="150" />
+									<position x="500" y="150" />
+									<position x="610" y="150" />
+								</connection>
+							</connectionPointIn>
+							<variable>generalFault</variable>
+						</contact>
+						<coil localId="6">
+							<position x="1000" y="100" />
+							<connectionPointIn>
+								<connection refLocalId="7">
+									<position x="690" y="150" />
+									<position x="700" y="150" />
+									<position x="700" y="150" />
+									<position x="1010" y="150" />
+								</connection>
+							</connectionPointIn>
+							<variable>openCmd</variable>
+						</coil>
+						<label localId="10" label="2">
+							<position x="0" y="300" />
+							<documentation>
+								<xhtml:pre>Close command</xhtml:pre>
+							</documentation>
+						</label>
+						<contact localId="11">
+							<position x="0" y="400" />
+							<variable>autoMode</variable>
+						</contact>
+						<contact localId="13">
+							<position x="0" y="500" />
+							<variable>manualMode</variable>
+						</contact>
+						<contact localId="12">
+							<position x="100" y="400" />
+							<connectionPointIn>
+								<connection refLocalId="11">
+									<position x="90" y="150" />
+									<position x="100" y="150" />
+									<position x="100" y="150" />
+									<position x="110" y="150" />
+								</connection>
+							</connectionPointIn>
+							<variable>autoCloseCmd</variable>
+						</contact>
+						<contact localId="14">
+							<position x="100" y="500" />
+							<connectionPointIn>
+								<connection refLocalId="13">
+									<position x="90" y="250" />
+									<position x="100" y="250" />
+									<position x="100" y="250" />
+									<position x="110" y="250" />
+								</connection>
+							</connectionPointIn>
+							<variable>closeValvePB</variable>
+						</contact>
+						<contact localId="18" negated="true">
+							<position x="200" y="400" />
+							<connectionPointIn>
+								<connection refLocalId="12">
+									<position x="190" y="150" />
+									<position x="200" y="150" />
+									<position x="200" y="150" />
+									<position x="210" y="150" />
+								</connection>
+							</connectionPointIn>
+							<variable>autoOpenCmd</variable>
+						</contact>
+						<contact localId="19" negated="true">
+							<position x="200" y="500" />
+							<connectionPointIn>
+								<connection refLocalId="14">
+									<position x="190" y="250" />
+									<position x="200" y="250" />
+									<position x="200" y="250" />
+									<position x="210" y="250" />
+								</connection>
+							</connectionPointIn>
+							<variable>openValvePB</variable>
+						</contact>
+						<contact localId="15" negated="true">
+							<position x="400" y="400" />
+							<connectionPointIn>
+								<connection refLocalId="18">
+									<position x="290" y="150" />
+									<position x="300" y="150" />
+									<position x="300" y="150" />
+									<position x="410" y="150" />
+								</connection>
+								<connection refLocalId="19">
+									<position x="290" y="250" />
+									<position x="400" y="250" />
+									<position x="400" y="150" />
+									<position x="410" y="150" />
+								</connection>
+							</connectionPointIn>
+							<variable>closedSensorFB</variable>
+						</contact>
+						<contact localId="17" negated="true">
+							<position x="600" y="400" />
+							<connectionPointIn>
+								<connection refLocalId="15">
+									<position x="490" y="150" />
+									<position x="500" y="150" />
+									<position x="500" y="150" />
+									<position x="610" y="150" />
+								</connection>
+							</connectionPointIn>
+							<variable>generalFault</variable>
+						</contact>
+						<coil localId="16">
+							<position x="1000" y="400" />
+							<connectionPointIn>
+								<connection refLocalId="17">
+									<position x="690" y="150" />
+									<position x="700" y="150" />
+									<position x="700" y="150" />
+									<position x="1010" y="150" />
+								</connection>
+							</connectionPointIn>
+							<variable>closeCmd</variable>
+						</coil>
+						<rightPowerRail localId="21">
+							<position x="1100" y="100" />
+							<connectionPointIn>
+								<connection refLocalId="6" />
+								<connection refLocalId="16" />
+							</connectionPointIn>
+						</rightPowerRail>
+					</LD>
+				</body>
+				<addData>
+					<data name="Geensys.CB.COMPONENT_CLASS" handleUnknown="preserve">
+						<value>CONTROL_UNIT</value>
+					</data>
+					<data name="Geensys.CB.COMPONENT_CLASS_UUID" handleUnknown="preserve">
+						<value>2edda594-a0f5-4376-8025-1a0fad969398</value>
+					</data>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+				</addData>
+			</pou>
+			<pou name="faults" pouType="functionBlock">
+				<interface>
+					<inputVars>
+						<variable name="closeCmd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Close command to the valve</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>195d7299-42ca-4c72-8948-8d2e9facc5ff</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="openCmd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Open command to the valve</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>2f37092d-4b62-46a5-8313-c187efcf63d5</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>Orders</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="closedSensorFB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Closed sensor feedback</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>7e839f56-95be-4d66-ac46-68be53e47b06</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="openedSensorFB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Opened sensor feedback</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>060d14e6-e6cc-4605-beaa-093a7abbf90b</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>Sensors</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="acknowledgePB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Acknowledgement pushbutton</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>1430eb3f-2f01-4f58-a3c3-678f491159fe</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<outputVars>
+						<variable name="generalFault">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>General fault of the valve</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>b6a820dd-bd35-4f29-9699-21f35a280bb8</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<localVars>
+						<variable name="closedSensorFault">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Closed sensor fault</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>2a7d56bf-4470-464d-bb4b-af4970017f0f</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="openedSensorFault">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Opened sensor fault</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>99031f0e-90f6-41c5-9af4-ce62414d1e60</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="discordanceFault">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Discordance between sensors</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>3f7c0f88-d95c-4336-9845-0050815ef2f6</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>Faults</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>localVars</value>
+							</data>
+						</addData>
+					</localVars>
+					<localVars>
+						<variable name="ton_sec_1_i_ton">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>_____</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>cf40c0c3-8f23-4409-8c70-2033ae0bb528</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="ton_sec_1_t1_ton">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>_____</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>76d90c86-36e0-418d-8490-e10b5095db14</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="ton_sec_1_t2_ton">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>_____</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>332b82bc-d710-4a06-8379-329c16200ab1</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="ton_sec_1_Q">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>_____</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>5c00972e-8cd0-45b6-9751-26ddaf9fe67a</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="ton_sec_1_CV">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>_____</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>c7f03be3-488c-4856-80d0-5363d9b58373</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="ton_sec_2_i_ton">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>_____</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>f57b943f-8628-4403-87fc-cad70e529d92</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="ton_sec_2_t1_ton">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>_____</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>972b5d1c-1aaf-453c-b1c4-dd01f73ff4d5</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="ton_sec_2_t2_ton">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>_____</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>115c426a-49f9-4cd5-860a-ddeb956f1914</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="ton_sec_2_Q">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>_____</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>31cc2f76-dc35-4aa4-8037-14f239ccfbec</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="ton_sec_2_CV">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>_____</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>eba56192-ba8d-48d6-974c-d79a0b77577b</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="ton_ms_3_i_tonms">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>_____</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>c0d01afd-c1a7-4111-87bb-a442afacd449</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="ton_ms_3_t1_tonms">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>_____</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>3b7e2744-555f-4bf0-9536-e8ce0544f8ba</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="ton_ms_3_t2_tonms">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>_____</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>29450e76-f963-437b-9f7d-dc52c1efcede</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="ton_ms_3_Q">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>_____</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>cf2bc5df-0901-4b91-a01e-2523e078f5e8</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="ton_ms_3_CV">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>_____</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>b02e4eb5-7fea-400d-8261-eadcd67c250c</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>localVars</value>
+							</data>
+						</addData>
+					</localVars>
+					<localVars constant="true">
+						<variable name="presetMvt">
+							<type>
+								<TIME />
+							</type>
+							<initialValue>
+								<simpleValue value="T#0h0m4s0ms" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>in seconds</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>ab0803d5-bbad-4b7a-8b65-b2c7d576ca44</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="presetDiscordance">
+							<type>
+								<TIME />
+							</type>
+							<initialValue>
+								<simpleValue value="T#0h0m0s200ms" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>in milliseconds</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>b6295d6b-7958-4fae-951e-706c937a80ac</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>parameterVars</value>
+							</data>
+						</addData>
+					</localVars>
+					<addData>
+						<data name="Geensys.CB.groupIn" handleUnknown="preserve">
+							<value>Orders,,Sensors,</value>
+						</data>
+					</addData>
+				</interface>
+				<actions>
+				</actions>
+				<body>
+					<LD>
+						<leftPowerRail localId="25">
+							<position x="0" y="100" />
+						</leftPowerRail>
+						<label localId="0" label="1">
+							<position x="0" y="0" />
+							<documentation>
+								<xhtml:pre>Faults acknowledgement</xhtml:pre>
+							</documentation>
+						</label>
+						<contact localId="1">
+							<position x="0" y="100" />
+							<variable>acknowledgePB</variable>
+						</contact>
+						<coil localId="2" storage="reset">
+							<position x="1000" y="100" />
+							<connectionPointIn>
+								<connection refLocalId="1">
+									<position x="90" y="150" />
+									<position x="100" y="150" />
+									<position x="100" y="150" />
+									<position x="1010" y="150" />
+								</connection>
+							</connectionPointIn>
+							<variable>closedSensorFault</variable>
+						</coil>
+						<coil localId="3" storage="reset">
+							<position x="1000" y="200" />
+							<connectionPointIn>
+								<connection refLocalId="1">
+									<position x="90" y="150" />
+									<position x="100" y="150" />
+									<position x="100" y="250" />
+									<position x="1010" y="250" />
+								</connection>
+							</connectionPointIn>
+							<variable>openedSensorFault</variable>
+						</coil>
+						<coil localId="4" storage="reset">
+							<position x="1000" y="300" />
+							<connectionPointIn>
+								<connection refLocalId="1">
+									<position x="90" y="150" />
+									<position x="100" y="150" />
+									<position x="100" y="350" />
+									<position x="1010" y="350" />
+								</connection>
+							</connectionPointIn>
+							<variable>discordanceFault</variable>
+						</coil>
+						<coil localId="5" storage="reset">
+							<position x="1000" y="400" />
+							<connectionPointIn>
+								<connection refLocalId="1">
+									<position x="90" y="150" />
+									<position x="100" y="150" />
+									<position x="100" y="450" />
+									<position x="1010" y="450" />
+								</connection>
+							</connectionPointIn>
+							<variable>generalFault</variable>
+						</coil>
+						<label localId="6" label="2">
+							<position x="0" y="500" />
+							<documentation>
+								<xhtml:pre>Faults of movements</xhtml:pre>
+							</documentation>
+						</label>
+						<contact localId="7">
+							<position x="0" y="700" />
+							<variable>openCmd</variable>
+						</contact>
+						<contact localId="12">
+							<position x="0" y="1000" />
+							<variable>closeCmd</variable>
+						</contact>
+						<block localId="13" width="300" height="300" typeName="timers_counters.cb_ton" instanceName="TON_O">
+							<position x="200" y="600" />
+							<inputVariables>
+								<variable formalParameter="IN">
+									<connectionPointIn>
+										<connection refLocalId="7">
+											<position x="90" y="250" />
+											<position x="100" y="250" />
+											<position x="100" y="250" />
+											<position x="230" y="250" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PT">
+									<connectionPointIn>
+										<expression>presetMvt</expression>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="Q0">
+								</variable>
+								<variable formalParameter="CV">
+								</variable>
+							</outputVariables>
+						</block>
+						<block localId="14" width="300" height="300" typeName="timers_counters.cb_ton" instanceName="TON_C">
+							<position x="200" y="900" />
+							<inputVariables>
+								<variable formalParameter="IN">
+									<connectionPointIn>
+										<connection refLocalId="12">
+											<position x="90" y="550" />
+											<position x="100" y="550" />
+											<position x="100" y="550" />
+											<position x="230" y="550" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PT">
+									<connectionPointIn>
+										<expression>presetMvt</expression>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="Q0">
+								</variable>
+								<variable formalParameter="CV">
+								</variable>
+							</outputVariables>
+						</block>
+						<contact localId="8" negated="true">
+							<position x="600" y="700" />
+							<connectionPointIn>
+								<connection refLocalId="13" formalParameter="Q0">
+									<position x="470" y="250" />
+									<position x="500" y="250" />
+									<position x="500" y="250" />
+									<position x="610" y="250" />
+								</connection>
+							</connectionPointIn>
+							<variable>openedSensorFB</variable>
+						</contact>
+						<contact localId="10" negated="true">
+							<position x="600" y="1000" />
+							<connectionPointIn>
+								<connection refLocalId="14" formalParameter="Q0">
+									<position x="470" y="550" />
+									<position x="500" y="550" />
+									<position x="500" y="550" />
+									<position x="610" y="550" />
+								</connection>
+							</connectionPointIn>
+							<variable>closedSensorFB</variable>
+						</contact>
+						<coil localId="9" storage="set">
+							<position x="1000" y="700" />
+							<connectionPointIn>
+								<connection refLocalId="8">
+									<position x="690" y="250" />
+									<position x="700" y="250" />
+									<position x="700" y="250" />
+									<position x="1010" y="250" />
+								</connection>
+							</connectionPointIn>
+							<variable>openedSensorFault</variable>
+						</coil>
+						<coil localId="11" storage="set">
+							<position x="1000" y="1000" />
+							<connectionPointIn>
+								<connection refLocalId="10">
+									<position x="690" y="550" />
+									<position x="700" y="550" />
+									<position x="700" y="550" />
+									<position x="1010" y="550" />
+								</connection>
+							</connectionPointIn>
+							<variable>closedSensorFault</variable>
+						</coil>
+						<label localId="15" label="3">
+							<position x="0" y="1200" />
+							<documentation>
+								<xhtml:pre>Discordance fault</xhtml:pre>
+							</documentation>
+						</label>
+						<contact localId="16">
+							<position x="0" y="1400" />
+							<variable>openedSensorFB</variable>
+						</contact>
+						<contact localId="17">
+							<position x="100" y="1400" />
+							<connectionPointIn>
+								<connection refLocalId="16">
+									<position x="90" y="250" />
+									<position x="100" y="250" />
+									<position x="100" y="250" />
+									<position x="110" y="250" />
+								</connection>
+							</connectionPointIn>
+							<variable>closedSensorFB</variable>
+						</contact>
+						<block localId="19" width="300" height="300" typeName="timers_counters.cb_ton" instanceName="TON_DISC">
+							<position x="300" y="1300" />
+							<inputVariables>
+								<variable formalParameter="IN">
+									<connectionPointIn>
+										<connection refLocalId="17">
+											<position x="190" y="250" />
+											<position x="200" y="250" />
+											<position x="200" y="250" />
+											<position x="330" y="250" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="PT">
+									<connectionPointIn>
+										<expression>presetDiscordance</expression>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="Q0">
+								</variable>
+								<variable formalParameter="CV">
+								</variable>
+							</outputVariables>
+						</block>
+						<coil localId="18" storage="set">
+							<position x="1000" y="1400" />
+							<connectionPointIn>
+								<connection refLocalId="19" formalParameter="Q0">
+									<position x="570" y="250" />
+									<position x="600" y="250" />
+									<position x="600" y="250" />
+									<position x="1010" y="250" />
+								</connection>
+							</connectionPointIn>
+							<variable>discordanceFault</variable>
+						</coil>
+						<label localId="20" label="4">
+							<position x="0" y="1600" />
+							<documentation>
+								<xhtml:pre>General fault</xhtml:pre>
+							</documentation>
+						</label>
+						<contact localId="21">
+							<position x="0" y="1700" />
+							<variable>closedSensorFault</variable>
+						</contact>
+						<contact localId="22">
+							<position x="0" y="1800" />
+							<variable>openedSensorFault</variable>
+						</contact>
+						<contact localId="23">
+							<position x="0" y="1900" />
+							<variable>discordanceFault</variable>
+						</contact>
+						<coil localId="24" storage="set">
+							<position x="1000" y="1700" />
+							<connectionPointIn>
+								<connection refLocalId="21">
+									<position x="90" y="150" />
+									<position x="100" y="150" />
+									<position x="100" y="150" />
+									<position x="1010" y="150" />
+								</connection>
+								<connection refLocalId="22">
+									<position x="90" y="250" />
+									<position x="1000" y="250" />
+									<position x="1000" y="150" />
+									<position x="1010" y="150" />
+								</connection>
+								<connection refLocalId="23">
+									<position x="90" y="350" />
+									<position x="1000" y="350" />
+									<position x="1000" y="150" />
+									<position x="1010" y="150" />
+								</connection>
+							</connectionPointIn>
+							<variable>generalFault</variable>
+						</coil>
+						<rightPowerRail localId="26">
+							<position x="1100" y="100" />
+							<connectionPointIn>
+								<connection refLocalId="2" />
+								<connection refLocalId="3" />
+								<connection refLocalId="4" />
+								<connection refLocalId="5" />
+								<connection refLocalId="9" />
+								<connection refLocalId="11" />
+								<connection refLocalId="18" />
+								<connection refLocalId="24" />
+							</connectionPointIn>
+						</rightPowerRail>
+					</LD>
+				</body>
+				<addData>
+					<data name="Geensys.CB.COMPONENT_CLASS" handleUnknown="preserve">
+						<value>CONTROL_UNIT</value>
+					</data>
+					<data name="Geensys.CB.COMPONENT_CLASS_UUID" handleUnknown="preserve">
+						<value>2edda594-a0f5-4376-8025-1a0fad969398</value>
+					</data>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+				</addData>
+			</pou>
+		</pous>
+	</types>
+	<instances>
+		<configurations />
+	</instances>
+</project>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild2009_4 -->
+
+<properties_file xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:xsd/properties.xsd">
+	<properties_set>
+		<languages>
+			<language NAME="EN">Hardware properties</language>
+			<language NAME="FR">Propri&#233;t&#233;s de la configuration mat&#233;rielle</language>
+		</languages>
+		<property NAME="rackName" TYPE="string" DEFAULT="EXT">
+			<languages>
+				<language NAME="EN">Rack Name</language>
+				<language NAME="FR">Nom du rack</language>
+			</languages>
+			<APPLIED_TO CLASS="plcExtendedRack" />
+		</property>
+	</properties_set>
+</properties_file>

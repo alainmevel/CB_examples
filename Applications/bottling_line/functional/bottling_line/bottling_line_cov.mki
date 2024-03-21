@@ -1,0 +1,441 @@
+
+### User options :
+# $Id: options.mk 513 2023-01-05 14:13:40Z EM7 $
+#options de compilation et d'edition de lien :
+_CC_OPTS=-DSY_MSW -DWIN32 -DGCC -m32
+_CPP_OPTS=$(_CINCL)
+
+_LD_LIBS=-Xlinker -no-whole-archive -lkernel32
+_LD_OPTS=-Xlinker -whole-archive -m32
+
+#edition de liens :
+_LD1=gcc -o $@ $(_LD_OPTS)
+_LD2=$(_LD_LIBS)
+#edition de liens intermediaire :
+_LDI1=ar -ruv $@
+_LDI2=
+_AR=ar
+#compilation :
+_CC1=gcc -c -o $@ -I.. $(_CPP_OPTS) $(_CC_OPTS)
+_CC2=
+
+
+
+### Categories definition :
+TOOL_MACH=MinGW
+bottling_line_o=$(TOOL_MACH)
+bottling_line_obj=obj
+momentary_button_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Standard/equipment_library/functional/momentary_button
+momentary_button_o=$(momentary_button_c)/$(TOOL_MACH)
+momentary_button_obj=$(momentary_button_c)/obj
+maintained_button_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Standard/equipment_library/functional/maintained_button
+maintained_button_o=$(maintained_button_c)/$(TOOL_MACH)
+maintained_button_obj=$(maintained_button_c)/obj
+switch_2pos_2outputs_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Standard/equipment_library/functional/switch_2pos_2outputs
+switch_2pos_2outputs_o=$(switch_2pos_2outputs_c)/$(TOOL_MACH)
+switch_2pos_2outputs_obj=$(switch_2pos_2outputs_c)/obj
+mode_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Applications/bottling_line/functional/mode
+mode_o=$(mode_c)/$(TOOL_MACH)
+mode_obj=$(mode_c)/obj
+process_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Applications/bottling_line/functional/process
+process_o=$(process_c)/$(TOOL_MACH)
+process_obj=$(process_c)/obj
+master_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Applications/bottling_line/functional/master
+master_o=$(master_c)/$(TOOL_MACH)
+master_obj=$(master_c)/obj
+tanks_management_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Applications/bottling_line/functional/tanks_management
+tanks_management_o=$(tanks_management_c)/$(TOOL_MACH)
+tanks_management_obj=$(tanks_management_c)/obj
+preparation_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Applications/bottling_line/functional/preparation
+preparation_o=$(preparation_c)/$(TOOL_MACH)
+preparation_obj=$(preparation_c)/obj
+conveyor_management_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Applications/bottling_line/functional/conveyor_management
+conveyor_management_o=$(conveyor_management_c)/$(TOOL_MACH)
+conveyor_management_obj=$(conveyor_management_c)/obj
+requests_management_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Applications/bottling_line/functional/requests_management
+requests_management_o=$(requests_management_c)/$(TOOL_MACH)
+requests_management_obj=$(requests_management_c)/obj
+pumping_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Applications/bottling_line/functional/pumping
+pumping_o=$(pumping_c)/$(TOOL_MACH)
+pumping_obj=$(pumping_c)/obj
+io_single_acting_valve_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Standard/io_library/functional/io_single_acting_valve
+io_single_acting_valve_o=$(io_single_acting_valve_c)/$(TOOL_MACH)
+io_single_acting_valve_obj=$(io_single_acting_valve_c)/obj
+switch_2pos_1output_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Standard/equipment_library/functional/switch_2pos_1output
+switch_2pos_1output_o=$(switch_2pos_1output_c)/$(TOOL_MACH)
+switch_2pos_1output_obj=$(switch_2pos_1output_c)/obj
+cmd_single_acting_valve_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Standard/cmd_equipment_library/functional/cmd_single_acting_valve
+cmd_single_acting_valve_o=$(cmd_single_acting_valve_c)/$(TOOL_MACH)
+cmd_single_acting_valve_obj=$(cmd_single_acting_valve_c)/obj
+cb_ton_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Standard/timers_counters/functional/cb_ton
+cb_ton_o=$(cb_ton_c)/$(TOOL_MACH)
+cb_ton_obj=$(cb_ton_c)/obj
+single_acting_valve_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Standard/equipment_library/functional/single_acting_valve
+single_acting_valve_o=$(single_acting_valve_c)/$(TOOL_MACH)
+single_acting_valve_obj=$(single_acting_valve_c)/obj
+tank_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Standard/equipment_library/functional/tank
+tank_o=$(tank_c)/$(TOOL_MACH)
+tank_obj=$(tank_c)/obj
+io_on_off_pump_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Standard/io_library/functional/io_on_off_pump
+io_on_off_pump_o=$(io_on_off_pump_c)/$(TOOL_MACH)
+io_on_off_pump_obj=$(io_on_off_pump_c)/obj
+on_off_pump_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Standard/equipment_library/functional/on_off_pump
+on_off_pump_o=$(on_off_pump_c)/$(TOOL_MACH)
+on_off_pump_obj=$(on_off_pump_c)/obj
+cmd_on_off_pump_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Standard/cmd_equipment_library/functional/cmd_on_off_pump
+cmd_on_off_pump_o=$(cmd_on_off_pump_c)/$(TOOL_MACH)
+cmd_on_off_pump_obj=$(cmd_on_off_pump_c)/obj
+bounded_scale_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Standard/equipment_library/functional/bounded_scale
+bounded_scale_o=$(bounded_scale_c)/$(TOOL_MACH)
+bounded_scale_obj=$(bounded_scale_c)/obj
+threshold_sensor_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Standard/equipment_library/functional/threshold_sensor
+threshold_sensor_o=$(threshold_sensor_c)/$(TOOL_MACH)
+threshold_sensor_obj=$(threshold_sensor_c)/obj
+analog_sensor_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Standard/equipment_library/functional/analog_sensor
+analog_sensor_o=$(analog_sensor_c)/$(TOOL_MACH)
+analog_sensor_obj=$(analog_sensor_c)/obj
+addition_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Standard/equipment_library/functional/addition
+addition_o=$(addition_c)/$(TOOL_MACH)
+addition_obj=$(addition_c)/obj
+mixing_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Applications/bottling_line/functional/mixing
+mixing_o=$(mixing_c)/$(TOOL_MACH)
+mixing_obj=$(mixing_c)/obj
+io_agitator_2speed_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Standard/io_library/functional/io_agitator_2speed
+io_agitator_2speed_o=$(io_agitator_2speed_c)/$(TOOL_MACH)
+io_agitator_2speed_obj=$(io_agitator_2speed_c)/obj
+agitator_2speed_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Standard/equipment_library/functional/agitator_2speed
+agitator_2speed_o=$(agitator_2speed_c)/$(TOOL_MACH)
+agitator_2speed_obj=$(agitator_2speed_c)/obj
+cmd_agitator_2speed_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Standard/cmd_equipment_library/functional/cmd_agitator_2speed
+cmd_agitator_2speed_o=$(cmd_agitator_2speed_c)/$(TOOL_MACH)
+cmd_agitator_2speed_obj=$(cmd_agitator_2speed_c)/obj
+flow_compute_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Standard/equipment_library/functional/flow_compute
+flow_compute_o=$(flow_compute_c)/$(TOOL_MACH)
+flow_compute_obj=$(flow_compute_c)/obj
+drive_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Applications/bottling_line/functional/drive
+drive_o=$(drive_c)/$(TOOL_MACH)
+drive_obj=$(drive_c)/obj
+io_engine_1d1s_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Standard/io_library/functional/io_engine_1d1s
+io_engine_1d1s_o=$(io_engine_1d1s_c)/$(TOOL_MACH)
+io_engine_1d1s_obj=$(io_engine_1d1s_c)/obj
+motor_1dir_1speed_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Standard/equipment_library/functional/motor_1dir_1speed
+motor_1dir_1speed_o=$(motor_1dir_1speed_c)/$(TOOL_MACH)
+motor_1dir_1speed_obj=$(motor_1dir_1speed_c)/obj
+cmd_motor_1d1s_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Standard/cmd_equipment_library/functional/cmd_motor_1d1s
+cmd_motor_1d1s_o=$(cmd_motor_1d1s_c)/$(TOOL_MACH)
+cmd_motor_1d1s_obj=$(cmd_motor_1d1s_c)/obj
+pulse_generator_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Applications/bottling_line/functional/pulse_generator
+pulse_generator_o=$(pulse_generator_c)/$(TOOL_MACH)
+pulse_generator_obj=$(pulse_generator_c)/obj
+bottle_c=C:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Applications/bottling_line/functional/bottle
+bottle_o=$(bottle_c)/$(TOOL_MACH)
+bottle_obj=$(bottle_c)/obj
+_simu_c=E:/CB_TRUNK/toolpublicdir/embedded/nt_simu/embedded
+_simu_o=$(_simu_c)/$(TOOL_MACH)
+
+### Directories for the search of includes :
+_CINCL=-IE:/CB_TRUNK/tooldir -IE:/CB_TRUNK/toolpublicdir/embedded/nt_simu/embedded  -IC:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Applications/bottling_line/functional/bottling_line -IC:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Applications -IC:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Standard -IC:/Users/Public/DassaultSystemes/ControlBuild_2024x_Refresh1/examples/examples/Specific
+
+### Link rules :
+cible : $(bottling_line_o) $(momentary_button_o) $(maintained_button_o) $(switch_2pos_2outputs_o) $(mode_o) $(process_o) $(master_o) $(tanks_management_o) $(preparation_o) $(conveyor_management_o) $(requests_management_o) $(pumping_o) $(io_single_acting_valve_o) $(switch_2pos_1output_o) $(cmd_single_acting_valve_o) $(cb_ton_o) $(single_acting_valve_o) $(tank_o) $(io_on_off_pump_o) $(on_off_pump_o) $(cmd_on_off_pump_o) $(bounded_scale_o) $(threshold_sensor_o) $(analog_sensor_o) $(addition_o) $(mixing_o) $(io_agitator_2speed_o) $(agitator_2speed_o) $(cmd_agitator_2speed_o) $(flow_compute_o) $(drive_o) $(io_engine_1d1s_o) $(motor_1dir_1speed_o) $(cmd_motor_1d1s_o) $(pulse_generator_o) $(bottle_o) $(bottling_line_obj) $(bottling_line_obj)/bottling_line_cov.exe
+	@echo "Compilation Ok"
+
+$(bottling_line_o)/_bottling_line_1_cov.a : bottling_line_cov.mki $(bottling_line_o)/bottling_line_cov.o $(momentary_button_o)/momentary_button_cov.o $(maintained_button_o)/maintained_button_cov.o $(switch_2pos_2outputs_o)/switch_2pos_2outputs_cov.o $(mode_o)/mode_cov.o $(process_o)/process_cov.o $(master_o)/master_cov.o $(tanks_management_o)/tanks_management_cov.o $(preparation_o)/preparation_cov.o $(conveyor_management_o)/conveyor_management_cov.o 
+	rm -f $@ 
+	$(_LDI1) $(bottling_line_o)/bottling_line_cov.o $(momentary_button_o)/momentary_button_cov.o $(maintained_button_o)/maintained_button_cov.o $(switch_2pos_2outputs_o)/switch_2pos_2outputs_cov.o $(mode_o)/mode_cov.o $(process_o)/process_cov.o $(master_o)/master_cov.o $(tanks_management_o)/tanks_management_cov.o $(preparation_o)/preparation_cov.o $(conveyor_management_o)/conveyor_management_cov.o $(_LDI2)
+	$(_AR) s $@
+
+$(bottling_line_o)/_bottling_line_2_cov.a : bottling_line_cov.mki $(requests_management_o)/requests_management_cov.o $(pumping_o)/pumping_cov.o $(io_single_acting_valve_o)/io_single_acting_valve_cov.o $(switch_2pos_1output_o)/switch_2pos_1output_cov.o $(cmd_single_acting_valve_o)/cmd_single_acting_valve_cov.o $(cb_ton_o)/cb_ton_cov.o $(single_acting_valve_o)/single_acting_valve_cov.o $(tank_o)/tank_cov.o $(io_on_off_pump_o)/io_on_off_pump_cov.o $(on_off_pump_o)/on_off_pump_cov.o 
+	rm -f $@ 
+	$(_LDI1) $(requests_management_o)/requests_management_cov.o $(pumping_o)/pumping_cov.o $(io_single_acting_valve_o)/io_single_acting_valve_cov.o $(switch_2pos_1output_o)/switch_2pos_1output_cov.o $(cmd_single_acting_valve_o)/cmd_single_acting_valve_cov.o $(cb_ton_o)/cb_ton_cov.o $(single_acting_valve_o)/single_acting_valve_cov.o $(tank_o)/tank_cov.o $(io_on_off_pump_o)/io_on_off_pump_cov.o $(on_off_pump_o)/on_off_pump_cov.o $(_LDI2)
+	$(_AR) s $@
+
+$(bottling_line_o)/_bottling_line_3_cov.a : bottling_line_cov.mki $(cmd_on_off_pump_o)/cmd_on_off_pump_cov.o $(bounded_scale_o)/bounded_scale_cov.o $(threshold_sensor_o)/threshold_sensor_cov.o $(analog_sensor_o)/analog_sensor_cov.o $(addition_o)/addition_cov.o $(mixing_o)/mixing_cov.o $(io_agitator_2speed_o)/io_agitator_2speed_cov.o $(agitator_2speed_o)/agitator_2speed_cov.o $(cmd_agitator_2speed_o)/cmd_agitator_2speed_cov.o $(flow_compute_o)/flow_compute_cov.o 
+	rm -f $@ 
+	$(_LDI1) $(cmd_on_off_pump_o)/cmd_on_off_pump_cov.o $(bounded_scale_o)/bounded_scale_cov.o $(threshold_sensor_o)/threshold_sensor_cov.o $(analog_sensor_o)/analog_sensor_cov.o $(addition_o)/addition_cov.o $(mixing_o)/mixing_cov.o $(io_agitator_2speed_o)/io_agitator_2speed_cov.o $(agitator_2speed_o)/agitator_2speed_cov.o $(cmd_agitator_2speed_o)/cmd_agitator_2speed_cov.o $(flow_compute_o)/flow_compute_cov.o $(_LDI2)
+	$(_AR) s $@
+
+$(bottling_line_o)/_bottling_line_4_cov.a : bottling_line_cov.mki $(drive_o)/drive_cov.o $(io_engine_1d1s_o)/io_engine_1d1s_cov.o $(motor_1dir_1speed_o)/motor_1dir_1speed_cov.o $(cmd_motor_1d1s_o)/cmd_motor_1d1s_cov.o $(pulse_generator_o)/pulse_generator_cov.o $(bottle_o)/bottle_cov.o $(bottling_line_o)/_init.o 
+	rm -f $@ 
+	$(_LDI1) $(drive_o)/drive_cov.o $(io_engine_1d1s_o)/io_engine_1d1s_cov.o $(motor_1dir_1speed_o)/motor_1dir_1speed_cov.o $(cmd_motor_1d1s_o)/cmd_motor_1d1s_cov.o $(pulse_generator_o)/pulse_generator_cov.o $(bottle_o)/bottle_cov.o $(bottling_line_o)/_init.o $(_LDI2)
+	$(_AR) s $@
+
+$(bottling_line_obj)/bottling_line_cov.exe : $(bottling_line_o)/_bottling_line_1_cov.a $(bottling_line_o)/_bottling_line_2_cov.a $(bottling_line_o)/_bottling_line_3_cov.a $(bottling_line_o)/_bottling_line_4_cov.a $(_simu_o)/cb_main_cov.o $(_simu_o)/cb_memory.o $(_simu_o)/cb_hook.o $(_simu_o)/cb_io.o $(_simu_o)/cb_products.o $(_simu_o)/iec_1131.o $(bottling_line_o)/_sign.o 
+	$(_LD1) $(bottling_line_o)/_bottling_line_1_cov.a $(bottling_line_o)/_bottling_line_2_cov.a $(bottling_line_o)/_bottling_line_3_cov.a $(bottling_line_o)/_bottling_line_4_cov.a $(_simu_o)/cb_main_cov.o $(_simu_o)/cb_memory.o $(_simu_o)/cb_hook.o $(_simu_o)/cb_io.o $(_simu_o)/cb_products.o $(_simu_o)/iec_1131.o $(bottling_line_o)/_sign.o $(_LD2) -lgcov
+
+$(bottling_line_o)/_sign.o :
+	@echo "unsigned int getSignature(void) { return " > _sign.c
+	@echo "0u" >> _sign.c
+	@echo "; }" >> _sign.c
+	@echo "int getGenerationTime(void) { return " >> _sign.c
+	@echo "1246547349" >> _sign.c
+	@echo "; }" >> _sign.c
+	$(_CC1) _sign.c
+	$(_CC2)
+	@echo "New Signature"
+
+### Directories making for .o files :
+$(bottling_line_o) :
+	@mkdir $@
+$(momentary_button_o) :
+	@mkdir $@
+$(maintained_button_o) :
+	@mkdir $@
+$(switch_2pos_2outputs_o) :
+	@mkdir $@
+$(mode_o) :
+	@mkdir $@
+$(process_o) :
+	@mkdir $@
+$(master_o) :
+	@mkdir $@
+$(tanks_management_o) :
+	@mkdir $@
+$(preparation_o) :
+	@mkdir $@
+$(conveyor_management_o) :
+	@mkdir $@
+$(requests_management_o) :
+	@mkdir $@
+$(pumping_o) :
+	@mkdir $@
+$(io_single_acting_valve_o) :
+	@mkdir $@
+$(switch_2pos_1output_o) :
+	@mkdir $@
+$(cmd_single_acting_valve_o) :
+	@mkdir $@
+$(cb_ton_o) :
+	@mkdir $@
+$(single_acting_valve_o) :
+	@mkdir $@
+$(tank_o) :
+	@mkdir $@
+$(io_on_off_pump_o) :
+	@mkdir $@
+$(on_off_pump_o) :
+	@mkdir $@
+$(cmd_on_off_pump_o) :
+	@mkdir $@
+$(bounded_scale_o) :
+	@mkdir $@
+$(threshold_sensor_o) :
+	@mkdir $@
+$(analog_sensor_o) :
+	@mkdir $@
+$(addition_o) :
+	@mkdir $@
+$(mixing_o) :
+	@mkdir $@
+$(io_agitator_2speed_o) :
+	@mkdir $@
+$(agitator_2speed_o) :
+	@mkdir $@
+$(cmd_agitator_2speed_o) :
+	@mkdir $@
+$(flow_compute_o) :
+	@mkdir $@
+$(drive_o) :
+	@mkdir $@
+$(io_engine_1d1s_o) :
+	@mkdir $@
+$(motor_1dir_1speed_o) :
+	@mkdir $@
+$(cmd_motor_1d1s_o) :
+	@mkdir $@
+$(pulse_generator_o) :
+	@mkdir $@
+$(bottle_o) :
+	@mkdir $@
+$(bottling_line_obj) :
+	@mkdir $@
+$(momentary_button_obj) :
+	@mkdir $@
+$(maintained_button_obj) :
+	@mkdir $@
+$(switch_2pos_2outputs_obj) :
+	@mkdir $@
+$(mode_obj) :
+	@mkdir $@
+$(process_obj) :
+	@mkdir $@
+$(master_obj) :
+	@mkdir $@
+$(tanks_management_obj) :
+	@mkdir $@
+$(preparation_obj) :
+	@mkdir $@
+$(conveyor_management_obj) :
+	@mkdir $@
+$(requests_management_obj) :
+	@mkdir $@
+$(pumping_obj) :
+	@mkdir $@
+$(io_single_acting_valve_obj) :
+	@mkdir $@
+$(switch_2pos_1output_obj) :
+	@mkdir $@
+$(cmd_single_acting_valve_obj) :
+	@mkdir $@
+$(cb_ton_obj) :
+	@mkdir $@
+$(single_acting_valve_obj) :
+	@mkdir $@
+$(tank_obj) :
+	@mkdir $@
+$(io_on_off_pump_obj) :
+	@mkdir $@
+$(on_off_pump_obj) :
+	@mkdir $@
+$(cmd_on_off_pump_obj) :
+	@mkdir $@
+$(bounded_scale_obj) :
+	@mkdir $@
+$(threshold_sensor_obj) :
+	@mkdir $@
+$(analog_sensor_obj) :
+	@mkdir $@
+$(addition_obj) :
+	@mkdir $@
+$(mixing_obj) :
+	@mkdir $@
+$(io_agitator_2speed_obj) :
+	@mkdir $@
+$(agitator_2speed_obj) :
+	@mkdir $@
+$(cmd_agitator_2speed_obj) :
+	@mkdir $@
+$(flow_compute_obj) :
+	@mkdir $@
+$(drive_obj) :
+	@mkdir $@
+$(io_engine_1d1s_obj) :
+	@mkdir $@
+$(motor_1dir_1speed_obj) :
+	@mkdir $@
+$(cmd_motor_1d1s_obj) :
+	@mkdir $@
+$(pulse_generator_obj) :
+	@mkdir $@
+$(bottle_obj) :
+	@mkdir $@
+
+### Compilation rules :
+$(bottling_line_o)/bottling_line_cov.o : bottling_line_cov.c bottling_line.h
+	$(_CC1) -fprofile-arcs -ftest-coverage  bottling_line_cov.c
+	$(_CC2)
+$(momentary_button_o)/momentary_button_cov.o : $(momentary_button_c)/momentary_button_cov.c $(momentary_button_c)/momentary_button.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(momentary_button_c)/momentary_button_cov.c
+	$(_CC2)
+$(maintained_button_o)/maintained_button_cov.o : $(maintained_button_c)/maintained_button_cov.c $(maintained_button_c)/maintained_button.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(maintained_button_c)/maintained_button_cov.c
+	$(_CC2)
+$(switch_2pos_2outputs_o)/switch_2pos_2outputs_cov.o : $(switch_2pos_2outputs_c)/switch_2pos_2outputs_cov.c $(switch_2pos_2outputs_c)/switch_2pos_2outputs.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(switch_2pos_2outputs_c)/switch_2pos_2outputs_cov.c
+	$(_CC2)
+$(mode_o)/mode_cov.o : $(mode_c)/mode_cov.c $(mode_c)/mode.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(mode_c)/mode_cov.c
+	$(_CC2)
+$(process_o)/process_cov.o : $(process_c)/process_cov.c $(process_c)/process.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(process_c)/process_cov.c
+	$(_CC2)
+$(master_o)/master_cov.o : $(master_c)/master_cov.c $(master_c)/master.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(master_c)/master_cov.c
+	$(_CC2)
+$(tanks_management_o)/tanks_management_cov.o : $(tanks_management_c)/tanks_management_cov.c $(tanks_management_c)/tanks_management.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(tanks_management_c)/tanks_management_cov.c
+	$(_CC2)
+$(preparation_o)/preparation_cov.o : $(preparation_c)/preparation_cov.c $(preparation_c)/preparation.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(preparation_c)/preparation_cov.c
+	$(_CC2)
+$(conveyor_management_o)/conveyor_management_cov.o : $(conveyor_management_c)/conveyor_management_cov.c $(conveyor_management_c)/conveyor_management.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(conveyor_management_c)/conveyor_management_cov.c
+	$(_CC2)
+$(requests_management_o)/requests_management_cov.o : $(requests_management_c)/requests_management_cov.c $(requests_management_c)/requests_management.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(requests_management_c)/requests_management_cov.c
+	$(_CC2)
+$(pumping_o)/pumping_cov.o : $(pumping_c)/pumping_cov.c $(pumping_c)/pumping.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(pumping_c)/pumping_cov.c
+	$(_CC2)
+$(io_single_acting_valve_o)/io_single_acting_valve_cov.o : $(io_single_acting_valve_c)/io_single_acting_valve_cov.c $(io_single_acting_valve_c)/io_single_acting_valve.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(io_single_acting_valve_c)/io_single_acting_valve_cov.c
+	$(_CC2)
+$(switch_2pos_1output_o)/switch_2pos_1output_cov.o : $(switch_2pos_1output_c)/switch_2pos_1output_cov.c $(switch_2pos_1output_c)/switch_2pos_1output.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(switch_2pos_1output_c)/switch_2pos_1output_cov.c
+	$(_CC2)
+$(cmd_single_acting_valve_o)/cmd_single_acting_valve_cov.o : $(cmd_single_acting_valve_c)/cmd_single_acting_valve_cov.c $(cmd_single_acting_valve_c)/cmd_single_acting_valve.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(cmd_single_acting_valve_c)/cmd_single_acting_valve_cov.c
+	$(_CC2)
+$(cb_ton_o)/cb_ton_cov.o : $(cb_ton_c)/cb_ton_cov.c $(cb_ton_c)/cb_ton.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(cb_ton_c)/cb_ton_cov.c
+	$(_CC2)
+$(single_acting_valve_o)/single_acting_valve_cov.o : $(single_acting_valve_c)/single_acting_valve_cov.c $(single_acting_valve_c)/single_acting_valve.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(single_acting_valve_c)/single_acting_valve_cov.c
+	$(_CC2)
+$(tank_o)/tank_cov.o : $(tank_c)/tank_cov.c $(tank_c)/tank.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(tank_c)/tank_cov.c
+	$(_CC2)
+$(io_on_off_pump_o)/io_on_off_pump_cov.o : $(io_on_off_pump_c)/io_on_off_pump_cov.c $(io_on_off_pump_c)/io_on_off_pump.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(io_on_off_pump_c)/io_on_off_pump_cov.c
+	$(_CC2)
+$(on_off_pump_o)/on_off_pump_cov.o : $(on_off_pump_c)/on_off_pump_cov.c $(on_off_pump_c)/on_off_pump.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(on_off_pump_c)/on_off_pump_cov.c
+	$(_CC2)
+$(cmd_on_off_pump_o)/cmd_on_off_pump_cov.o : $(cmd_on_off_pump_c)/cmd_on_off_pump_cov.c $(cmd_on_off_pump_c)/cmd_on_off_pump.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(cmd_on_off_pump_c)/cmd_on_off_pump_cov.c
+	$(_CC2)
+$(bounded_scale_o)/bounded_scale_cov.o : $(bounded_scale_c)/bounded_scale_cov.c $(bounded_scale_c)/bounded_scale.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(bounded_scale_c)/bounded_scale_cov.c
+	$(_CC2)
+$(threshold_sensor_o)/threshold_sensor_cov.o : $(threshold_sensor_c)/threshold_sensor_cov.c $(threshold_sensor_c)/threshold_sensor.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(threshold_sensor_c)/threshold_sensor_cov.c
+	$(_CC2)
+$(analog_sensor_o)/analog_sensor_cov.o : $(analog_sensor_c)/analog_sensor_cov.c $(analog_sensor_c)/analog_sensor.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(analog_sensor_c)/analog_sensor_cov.c
+	$(_CC2)
+$(addition_o)/addition_cov.o : $(addition_c)/addition_cov.c $(addition_c)/addition.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(addition_c)/addition_cov.c
+	$(_CC2)
+$(mixing_o)/mixing_cov.o : $(mixing_c)/mixing_cov.c $(mixing_c)/mixing.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(mixing_c)/mixing_cov.c
+	$(_CC2)
+$(io_agitator_2speed_o)/io_agitator_2speed_cov.o : $(io_agitator_2speed_c)/io_agitator_2speed_cov.c $(io_agitator_2speed_c)/io_agitator_2speed.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(io_agitator_2speed_c)/io_agitator_2speed_cov.c
+	$(_CC2)
+$(agitator_2speed_o)/agitator_2speed_cov.o : $(agitator_2speed_c)/agitator_2speed_cov.c $(agitator_2speed_c)/agitator_2speed.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(agitator_2speed_c)/agitator_2speed_cov.c
+	$(_CC2)
+$(cmd_agitator_2speed_o)/cmd_agitator_2speed_cov.o : $(cmd_agitator_2speed_c)/cmd_agitator_2speed_cov.c $(cmd_agitator_2speed_c)/cmd_agitator_2speed.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(cmd_agitator_2speed_c)/cmd_agitator_2speed_cov.c
+	$(_CC2)
+$(flow_compute_o)/flow_compute_cov.o : $(flow_compute_c)/flow_compute_cov.c $(flow_compute_c)/flow_compute.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(flow_compute_c)/flow_compute_cov.c
+	$(_CC2)
+$(drive_o)/drive_cov.o : $(drive_c)/drive_cov.c $(drive_c)/drive.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(drive_c)/drive_cov.c
+	$(_CC2)
+$(io_engine_1d1s_o)/io_engine_1d1s_cov.o : $(io_engine_1d1s_c)/io_engine_1d1s_cov.c $(io_engine_1d1s_c)/io_engine_1d1s.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(io_engine_1d1s_c)/io_engine_1d1s_cov.c
+	$(_CC2)
+$(motor_1dir_1speed_o)/motor_1dir_1speed_cov.o : $(motor_1dir_1speed_c)/motor_1dir_1speed_cov.c $(motor_1dir_1speed_c)/motor_1dir_1speed.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(motor_1dir_1speed_c)/motor_1dir_1speed_cov.c
+	$(_CC2)
+$(cmd_motor_1d1s_o)/cmd_motor_1d1s_cov.o : $(cmd_motor_1d1s_c)/cmd_motor_1d1s_cov.c $(cmd_motor_1d1s_c)/cmd_motor_1d1s.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(cmd_motor_1d1s_c)/cmd_motor_1d1s_cov.c
+	$(_CC2)
+$(pulse_generator_o)/pulse_generator_cov.o : $(pulse_generator_c)/pulse_generator_cov.c $(pulse_generator_c)/pulse_generator.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(pulse_generator_c)/pulse_generator_cov.c
+	$(_CC2)
+$(bottle_o)/bottle_cov.o : $(bottle_c)/bottle_cov.c $(bottle_c)/bottle.h
+	$(_CC1)  -fprofile-arcs -ftest-coverage $(bottle_c)/bottle_cov.c
+	$(_CC2)
+$(bottling_line_o)/_init.o : _init.c _init.h
+	$(_CC1) _init.c
+	$(_CC2)
+
+### Compilation rules for externals functions :
+$(_simu_o)/iec_1131.o : $(_simu_c)/iec_1131.c $(_simu_c)/iec_1131.h
+	$(_CC1) $(_simu_c)/iec_1131.c
+	$(_CC2)
+
+### Compilation rules for externals fbs :

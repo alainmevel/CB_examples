@@ -1,0 +1,29 @@
+
+FUNCTION CB_mux_dword : DWORD
+
+
+TITLE = ' Multiplexer on N variable '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : muxDword
+FAMILY  : TNI
+
+VAR_INPUT
+    K : INT;
+    IN0 : DWORD;
+    IN1 : DWORD;
+    IN2 : DWORD;
+    IN3 : DWORD;
+    IN4 : DWORD;
+    IN5 : DWORD;
+    IN6 : DWORD;
+    IN7 : DWORD;
+    IN8 : DWORD;
+    IN9 : DWORD;
+END_VAR
+
+BEGIN
+
+CB_mux_dword := MUX (K := K, IN0 := IN0, IN1 := IN1, IN2 := IN2, IN3 := IN3, IN4 := IN4, IN5 := IN5, IN6 := IN6, IN7 := IN7, IN8 := IN8, IN9:= IN9 );
+
+END_FUNCTION

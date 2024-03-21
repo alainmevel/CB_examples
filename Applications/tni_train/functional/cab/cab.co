@@ -1,0 +1,20 @@
+ keyCabEnabled2 IB1
+ keyCabDisabled2 IB2
+ enableOpeningRightC1 OB3
+ enableOpeningLeftC1 OB4
+ enableClosingRightC1 OB5
+ enableClosingLeftC1 OB6
+ cabEnabled OB7
+ cabDisabled OB8
+ cabIncoherence OB9
+ ~ LB10
+ ~ LB11
+ ~ LB12
+ ~ LB13
+ ~ LB14
+ ~ LF15
+<tni_train:key2position key2position/ 1 keyCabEnabled 10 keyCabDisabled 11>
+<tni_train:service_side service_side/ 1 rightServiceSide 12 leftServiceSide 13>
+<tni_train:pb closingPB/ 1 PB 14>
+<tni_train:speed trainSpeed/ 1 speed 15>
+<tni_train:cp_cab cabControlPart/ 1 keyCabEnabled 10 keyCabDisabled 11 rightServiceSide 12 leftServiceSide 13 pbDoorClosing 14 speed 15 keyCabEnabled2 1 keyCabDisabled2 2 enableOpeningRightC1 3 enableOpeningLeftC1 4 enableClosingRightC1 5 enableClosingLeftC1 6 cabEnabled 7 cabDisabled 8 cabIncoherence 9>

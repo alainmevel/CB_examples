@@ -1,0 +1,18 @@
+
+FUNCTION CB_int_to_dword : DWORD
+
+TITLE = ' Convert an integer into a Dword '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : intToDwo
+FAMILY  : TNI
+
+VAR_INPUT
+    IN : INT;
+END_VAR
+
+BEGIN
+
+CB_int_to_dword := INT_TO_DWORD(IN);
+
+END_FUNCTION

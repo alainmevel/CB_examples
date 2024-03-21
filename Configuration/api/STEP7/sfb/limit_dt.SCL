@@ -1,0 +1,29 @@
+
+FUNCTION CB_limit_dt : DT
+
+TITLE = ' Limiting (min and max) a variable '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : limiDt
+FAMILY  : TNI
+
+VAR_INPUT
+    MN : DT;
+    IN : DT;
+    MX : DT;
+END_VAR
+VAR_TEMP
+    CMN : DT;
+    CIN : DT;
+    CMX : DT;
+END_VAR
+
+
+BEGIN
+CMN := MN;
+CIN := IN;
+CMX := MX;
+CB_limit_dt := LIMIT(MN := CMN, IN := CIN, MX := CMX); 
+
+END_FUNCTION
+

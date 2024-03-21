@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-03T11:13:52-01:00" />
+	<contentHeader name="door">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="32" y="8" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+			<pou name="tni_train.door" pouType="program">
+				<interface>
+					<inputVars>
+						<variable name="compressedAir">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="200.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>6f784bf8-c603-4690-8994-b23cf41b5e4b</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="cmdSupply">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="true" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>b39807c3-1049-44ef-a911-e785b774ca9f</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="sensorSupply">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="true" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>1b67b7ac-c62f-4c2e-9e55-263b5109dba5</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>Energy</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="enableOpening">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>7670fa27-cf86-44e6-8889-78cc2413be8f</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="enableClosing">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>d1b1031c-0f6a-442a-9991-821066948317</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>Authorizations</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<outputVars>
+						<variable name="closedDoorState">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>68c463ab-38e3-4341-8b47-1dbb98296fe7</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="openedDoorState">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>41d12539-f494-4d24-b57a-4318f3f4e0fc</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="faultState">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>a8142ab1-f737-4563-8b8d-d77158e3841f</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>DoorStates</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<addData>
+						<data name="Geensys.CB.groupIn" handleUnknown="preserve">
+							<value>Energy,,Authorizations,</value>
+						</data>
+						<data name="Geensys.CB.groupOut" handleUnknown="preserve">
+							<value>DoorStates,</value>
+						</data>
+					</addData>
+				</interface>
+				<actions>
+				</actions>
+				<body>
+					<FBD>
+						<inVariable localId="0">
+							<position x="1176" y="240" />
+							<expression>compressedAir</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Energy</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>1176,240</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="1">
+							<position x="1176" y="240" />
+							<expression>cmdSupply</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Energy</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>1176,240</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="2">
+							<position x="1176" y="240" />
+							<expression>sensorSupply</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Energy</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>1176,240</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="3">
+							<position x="576" y="96" />
+							<expression>enableOpening</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Authorizations</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>576,96</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="4">
+							<position x="576" y="96" />
+							<expression>enableClosing</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Authorizations</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>576,96</value>
+								</data>
+							</addData>
+						</inVariable>
+						<outVariable localId="5">
+							<position x="1128" y="144" />
+							<connectionPointIn>
+								<connection refLocalId="6" formalParameter="closedDoorState" />
+							</connectionPointIn>
+							<expression>closedDoorState</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>DoorStates</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>1128,144</value>
+								</data>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>6.DoorsStates,DoorStates</value>
+								</data>
+							</addData>
+						</outVariable>
+						<outVariable localId="7">
+							<position x="1128" y="144" />
+							<connectionPointIn>
+								<connection refLocalId="6" formalParameter="openedDoorState" />
+							</connectionPointIn>
+							<expression>openedDoorState</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>DoorStates</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>1128,144</value>
+								</data>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>6.DoorsStates,DoorStates</value>
+								</data>
+							</addData>
+						</outVariable>
+						<outVariable localId="8">
+							<position x="1128" y="144" />
+							<connectionPointIn>
+								<connection refLocalId="6" formalParameter="faultState" />
+							</connectionPointIn>
+							<expression>faultState</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>DoorStates</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>1128,144</value>
+								</data>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>6.DoorsStates,DoorStates</value>
+								</data>
+							</addData>
+						</outVariable>
+						<block localId="9" width="288" height="72" typeName="tni_train.pb_door" instanceName="doorPB">
+							<position x="144" y="120" />
+							<inputVariables>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="doorPB">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.targetablePropertyName" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>8cc1e09e-ff37-4297-a593-ea8c2af08701</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="10" width="408" height="96" typeName="tni_train.op_door_locking" instanceName="doorLocking">
+							<position x="24" y="216" />
+							<inputVariables>
+								<variable formalParameter="lockingCmd">
+									<connectionPointIn>
+										<connection refLocalId="6" formalParameter="doorLockingCmd">
+											<position x="1032" y="120" />
+											<position x="1071" y="120" />
+											<position x="1071" y="303" />
+											<position x="13" y="303" />
+											<position x="13" y="264" />
+											<position x="24" y="264" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="unlockingCmd">
+									<connectionPointIn>
+										<connection refLocalId="6" formalParameter="doorUnlockingCmd">
+											<position x="1032" y="120" />
+											<position x="1071" y="120" />
+											<position x="1071" y="303" />
+											<position x="13" y="303" />
+											<position x="13" y="264" />
+											<position x="24" y="264" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="doorLocked">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="doorUnlocked">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="lockActive">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>6.LockCommands,LockCommands</value>
+								</data>
+								<data name="Geensys.CB.targetablePropertyName" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>9c9478e3-c98a-400d-884c-5aad5ea6632c</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="6" width="432" height="144" typeName="tni_train.cp_door" instanceName="doorControlPart">
+							<position x="600" y="48" />
+							<inputVariables>
+								<variable formalParameter="enableOpening">
+									<connectionPointIn>
+										<connection refLocalId="3">
+											<position x="584" y="96" />
+											<position x="592" y="96" />
+											<position x="592" y="96" />
+											<position x="600" y="96" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="enableClosing">
+									<connectionPointIn>
+										<connection refLocalId="4">
+											<position x="584" y="96" />
+											<position x="592" y="96" />
+											<position x="592" y="96" />
+											<position x="600" y="96" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="openedDoor">
+									<connectionPointIn>
+										<connection refLocalId="11" formalParameter="doorOpened">
+											<position x="1488" y="240" />
+											<position x="1527" y="240" />
+											<position x="1527" y="303" />
+											<position x="561" y="303" />
+											<position x="561" y="120" />
+											<position x="600" y="120" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="closedDoor">
+									<connectionPointIn>
+										<connection refLocalId="11" formalParameter="doorClosed">
+											<position x="1488" y="240" />
+											<position x="1527" y="240" />
+											<position x="1527" y="303" />
+											<position x="561" y="303" />
+											<position x="561" y="120" />
+											<position x="600" y="120" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="lockedDoor">
+									<connectionPointIn>
+										<connection refLocalId="10" formalParameter="doorLocked">
+											<position x="432" y="264" />
+											<position x="530" y="264" />
+											<position x="530" y="144" />
+											<position x="600" y="144" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="unlockedDoor">
+									<connectionPointIn>
+										<connection refLocalId="10" formalParameter="doorUnlocked">
+											<position x="432" y="264" />
+											<position x="530" y="264" />
+											<position x="530" y="144" />
+											<position x="600" y="144" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="openingRequest">
+									<connectionPointIn>
+										<connection refLocalId="9" formalParameter="doorPB">
+											<position x="432" y="168" />
+											<position x="475" y="168" />
+											<position x="475" y="168" />
+											<position x="600" y="168" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="doorOpeningCmd">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="doorClosingCmd">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="doorLockingCmd">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="doorUnlockingCmd">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="closedDoorState">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="openedDoorState">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="faultState">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>10.LockSensors,LockFeedBacks,11.DoorSensors,DoorSensors,Authorizations:576@96,Authorizations</value>
+								</data>
+								<data name="Geensys.CB.connectionOut" handleUnknown="preserve">
+									<value>DoorsStates,DoorStates:1128@144</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>1bc570ea-fd0f-4347-9d43-44827824bed0</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="11" width="288" height="120" typeName="tni_train.op_door" instanceName="door">
+							<position x="1200" y="192" />
+							<inputVariables>
+								<variable formalParameter="compressedAir">
+									<connectionPointIn>
+										<connection refLocalId="0">
+											<position x="1184" y="240" />
+											<position x="1192" y="240" />
+											<position x="1192" y="240" />
+											<position x="1200" y="240" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="cmdSupply">
+									<connectionPointIn>
+										<connection refLocalId="1">
+											<position x="1184" y="240" />
+											<position x="1192" y="240" />
+											<position x="1192" y="240" />
+											<position x="1200" y="240" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="sensorSupply">
+									<connectionPointIn>
+										<connection refLocalId="2">
+											<position x="1184" y="240" />
+											<position x="1192" y="240" />
+											<position x="1192" y="240" />
+											<position x="1200" y="240" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="openDoorCmd">
+									<connectionPointIn>
+										<connection refLocalId="6" formalParameter="doorOpeningCmd">
+											<position x="1032" y="96" />
+											<position x="1092" y="96" />
+											<position x="1092" y="264" />
+											<position x="1200" y="264" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="closeDoorCmd">
+									<connectionPointIn>
+										<connection refLocalId="6" formalParameter="doorClosingCmd">
+											<position x="1032" y="96" />
+											<position x="1092" y="96" />
+											<position x="1092" y="264" />
+											<position x="1200" y="264" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="lockActive">
+									<connectionPointIn>
+										<connection refLocalId="10" formalParameter="lockActive">
+											<position x="432" y="288" />
+											<position x="808" y="288" />
+											<position x="808" y="288" />
+											<position x="1200" y="288" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="doorOpened">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="doorClosed">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>Energy:1176@240,Energy,6.DoorCommands,DoorCommand</value>
+								</data>
+								<data name="Geensys.CB.targetablePropertyName" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>ccc46911-573a-4ca2-96f0-9ba0666aa735</value>
+								</data>
+							</addData>
+						</block>
+					</FBD>
+					<documentation>
+						<xhtml:pre>CB.group=Energy,1176,240
+CB.group=Authorizations,576,96
+CB.group=DoorStates,1128,144
+</xhtml:pre>
+					</documentation>
+				</body>
+				<addData>
+					<data name="Geensys.CB.AutomaticScheduling" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+				</addData>
+			</pou>
+		</pous>
+	</types>
+	<instances>
+		<configurations />
+	</instances>
+</project>

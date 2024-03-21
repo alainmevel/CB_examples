@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<MODEL_REQUIREMENTS>
+	<FUNCTIONAL_TREE TYPE="mac">
+		<CHILDREN>
+			<NODE NAME="panel" TYPE="mac">
+				<CHILDREN>
+					<NODE NAME="forwardPB" MODEL_PATH="Standard\equipment_library\momentary_button">
+					</NODE>
+					<NODE NAME="backwardPB" MODEL_PATH="Standard\equipment_library\momentary_button">
+					</NODE>
+					<NODE NAME="stopPB" MODEL_PATH="Standard\equipment_library\momentary_button">
+					</NODE>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="motor" MODEL_PATH="Standard\equipment_library\motor_2dir_1speed">
+			</NODE>
+			<NODE NAME="cmdOfMotor" MODEL_PATH="Standard\cmd_equipment_library\cmd_motor_2d1s">
+			</NODE>
+		</CHILDREN>
+	</FUNCTIONAL_TREE>
+</MODEL_REQUIREMENTS>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<MODEL_REQUIREMENTS>
+	<FUNCTIONAL_TREE TYPE="mac">
+		<CHILDREN>
+			<NODE NAME="conveyor" MODEL_PATH="Standard\io_library\io_engine_1d1s">
+			</NODE>
+			<NODE NAME="pulse" MODEL_PATH="Applications\bottling_line\pulse_generator">
+			</NODE>
+			<NODE NAME="bottles" MODEL_PATH="Applications\bottling_line\bottle">
+			</NODE>
+		</CHILDREN>
+	</FUNCTIONAL_TREE>
+</MODEL_REQUIREMENTS>

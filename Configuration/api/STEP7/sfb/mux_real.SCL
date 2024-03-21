@@ -1,0 +1,29 @@
+
+FUNCTION CB_mux_real : REAL
+
+
+TITLE = ' Multiplexer on N variable '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : muxReal
+FAMILY  : TNI
+
+VAR_INPUT
+    K : INT;
+    IN0 : REAL;
+    IN1 : REAL;
+    IN2 : REAL;
+    IN3 : REAL;
+    IN4 : REAL;
+    IN5 : REAL;
+    IN6 : REAL;
+    IN7 : REAL;
+    IN8 : REAL;
+    IN9 : REAL;
+END_VAR
+
+BEGIN
+
+CB_mux_real := MUX (K := K, IN0 := IN0, IN1 := IN1, IN2 := IN2, IN3 := IN3, IN4 := IN4, IN5 := IN5, IN6 := IN6, IN7 := IN7, IN8 := IN8, IN9:= IN9 );
+
+END_FUNCTION

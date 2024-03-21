@@ -1,0 +1,29 @@
+
+FUNCTION CB_mux_Date : DATE
+
+
+TITLE = ' Multiplexer on N variable '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : muxDate
+FAMILY  : TNI
+
+VAR_INPUT
+    K : INT;
+    IN0 : DATE;
+    IN1 : DATE;
+    IN2 : DATE;
+    IN3 : DATE;
+    IN4 : DATE;
+    IN5 : DATE;
+    IN6 : DATE;
+    IN7 : DATE;
+    IN8 : DATE;
+    IN9 : DATE;
+END_VAR
+
+BEGIN
+
+CB_mux_Date := MUX (K := K, IN0 := IN0, IN1 := IN1, IN2 := IN2, IN3 := IN3, IN4 := IN4, IN5 := IN5, IN6 := IN6, IN7 := IN7, IN8 := IN8, IN9:= IN9 );
+
+END_FUNCTION

@@ -1,0 +1,206 @@
+FUNCTION FC58: VOID
+AUTHOR : CB
+VAR_INPUT
+        combE : INT;
+END_VAR
+
+LABEL
+        combi_e, actions, combi_s;
+END_LABEL
+
+BEGIN
+        IF (combE = 0) THEN GOTO actions;
+        END_IF;
+(* Gestion des combinatoires d'entree *)
+combi_e: 
+IF (("DB90".F3SpinM1_acknowledgePB AND NOT M1.2)) THEN
+	"DB90".RUN1_movementFault := 0;
+END_IF;
+
+IF ((DB58.Step12.X AND ("DB90".RUN1_cnt >= "DB90".RUN1_fastDescentDuration) AND 
+NOT "DB90".forwardDeceleration)) THEN
+	"DB90".RUN1_movementFault := 1;
+END_IF;
+
+IF ((DB58.Step13.X AND ("DB90".RUN1_cnt >= "DB90".RUN1_slowDescentDuration) AND 
+NOT "DB90".forwardEnd)) THEN
+	"DB90".RUN1_movementFault := 2;
+END_IF;
+
+IF ((DB58.Step14.X AND ("DB90".RUN1_cnt >= "DB90".fastAscentDurationRUN1) AND 
+NOT "DB90".backwardDeceleration)) THEN
+	"DB90".RUN1_movementFault := 3;
+END_IF;
+
+IF ((DB58.Step15.X AND ("DB90".RUN1_cnt >= "DB90".slowAscentDurationRUN1) AND 
+NOT "DB90".backwardEnd)) THEN
+	"DB90".RUN1_movementFault := 4;
+END_IF;
+
+IF ((DB58.Step12.X AND "DB90".forwardEnd AND NOT "DB90".forwardDeceleration)) THEN
+	"DB90".RUN1_movementFault := 5;
+END_IF;
+
+IF ((DB58.Step14.X AND "DB90".backwardEnd AND NOT "DB90".backwardDeceleration)) THEN
+	"DB90".RUN1_movementFault := 6;
+END_IF;
+
+IF (((DB58.Step13.X OR DB58.Step14.X) AND "DB90".backwardEnd)) THEN
+	"DB90".RUN1_movementFault := 7;
+END_IF;
+
+IF (((DB58.Step11.X OR DB58.Step13.X OR DB58.Step16.X OR DB58.Step17.X) AND 
+"DB90".backwardDeceleration)) THEN
+	"DB90".RUN1_movementFault := 8;
+END_IF;
+
+IF (((DB58.Step11.X OR DB58.Step15.X OR DB58.Step16.X OR DB58.Step17.X) AND 
+"DB90".forwardDeceleration)) THEN
+	"DB90".RUN1_movementFault := 9;
+END_IF;
+
+IF (((DB58.Step11.X OR DB58.Step15.X OR DB58.Step16.X OR DB58.Step17.X) AND 
+"DB90".forwardEnd)) THEN
+	"DB90".RUN1_movementFault := 10;
+END_IF;
+
+"DB90".RUN1_noFaultCond := ("DB90".clampingFaultClaF1 = 0) AND ("DB90".motorFaultAscF1 = 0) AND 
+("DB90".rotationFaultSpinF1 = 0) AND 
+("DB90".RUN1_movementFault = 0);
+
+"DB90".RUN1_initialCond := "DB90".RUN1_noFaultCond AND 
+(("DB90".piece AND (("DB90".unitProdWKM1 AND NOT M1.3) OR "DB90".batchProdWKM1)) OR 
+"DB90".emptyProdWKM1);
+RETURN;
+
+(* Gestion des actions du graphe *)
+actions: 
+(* Step activity of Step10 *)
+IF DB58.Step10.S1 THEN
+"DB90".RUN1_loadingRequest := TRUE;
+"DB90".RUN1_cycleEnd := TRUE;
+END_IF;
+IF DB58.Step10.X THEN
+"DB90".RUN1_loadingRequest := TRUE;
+
+"DB90".RUN1_cycleEnd := TRUE;
+END_IF;
+IF DB58.Step10.S0 THEN
+"DB90".RUN1_loadingRequest := FALSE;
+"DB90".RUN1_cycleEnd := FALSE;
+END_IF;
+
+(* Step activity of Step11 *)
+IF DB58.Step11.S1 THEN
+"DB90".RUN1_clamping := TRUE;
+END_IF;
+IF DB58.Step11.X THEN
+"DB90".RUN1_clamping := TRUE;
+END_IF;
+IF DB58.Step11.S0 THEN
+"DB90".RUN1_clamping := FALSE;
+END_IF;
+
+(* Step activity of Step12 *)
+IF DB58.Step12.S1 THEN
+"DB90".RUN1_fastDescent := TRUE;
+"DB90".RUN1_rotation := TRUE;
+END_IF;
+IF DB58.Step12.X THEN
+"DB90".RUN1_fastDescent := TRUE;
+
+"DB90".RUN1_rotation := TRUE;
+
+"DB90".RUN1_cnt := "DB90".RUN1_cnt + 1;
+END_IF;
+IF DB58.Step12.S0 THEN
+"DB90".RUN1_fastDescent := FALSE;
+"DB90".RUN1_rotation := FALSE;
+END_IF;
+
+(* Step activity of Step13 *)
+IF DB58.Step13.S1 THEN
+"DB90".RUN1_slowDescent := TRUE;
+"DB90".RUN1_rotation := TRUE;
+END_IF;
+IF DB58.Step13.X THEN
+"DB90".RUN1_slowDescent := TRUE;
+
+"DB90".RUN1_rotation := TRUE;
+
+"DB90".RUN1_cnt := "DB90".RUN1_cnt + 1;
+END_IF;
+IF DB58.Step13.S0 THEN
+"DB90".RUN1_slowDescent := FALSE;
+"DB90".RUN1_rotation := FALSE;
+END_IF;
+
+(* Step activity of Step14 *)
+IF DB58.Step14.S1 THEN
+"DB90".RUN1_fastAscent := TRUE;
+"DB90".RUN1_rotation := TRUE;
+END_IF;
+IF DB58.Step14.X THEN
+"DB90".RUN1_fastAscent := TRUE;
+
+"DB90".RUN1_rotation := TRUE;
+
+"DB90".RUN1_cnt := "DB90".RUN1_cnt + 1;
+END_IF;
+IF DB58.Step14.S0 THEN
+"DB90".RUN1_fastAscent := FALSE;
+"DB90".RUN1_rotation := FALSE;
+END_IF;
+
+(* Step activity of Step15 *)
+IF DB58.Step15.S1 THEN
+"DB90".RUN1_slowAscent := TRUE;
+END_IF;
+IF DB58.Step15.X THEN
+"DB90".RUN1_slowAscent := TRUE;
+
+"DB90".RUN1_cnt := "DB90".RUN1_cnt + 1;
+END_IF;
+IF DB58.Step15.S0 THEN
+"DB90".RUN1_slowAscent := FALSE;
+END_IF;
+
+(* Step activity of Step16 *)
+IF DB58.Step16.S1 THEN
+"DB90".RUN1_releasing := TRUE;
+END_IF;
+IF DB58.Step16.X THEN
+"DB90".RUN1_releasing := TRUE;
+END_IF;
+IF DB58.Step16.S0 THEN
+"DB90".RUN1_releasing := FALSE;
+END_IF;
+
+(* Step activity of Step17 *)
+IF DB58.Step17.S1 THEN
+"DB90".RUN1_cycleEnd := TRUE;
+"DB90".RUN1_unloadingRequest := TRUE;
+END_IF;
+IF DB58.Step17.X THEN
+"DB90".RUN1_cycleEnd := TRUE;
+
+"DB90".RUN1_unloadingRequest := TRUE;
+END_IF;
+IF DB58.Step17.S0 THEN
+"DB90".RUN1_cycleEnd := FALSE;
+"DB90".RUN1_unloadingRequest := FALSE;
+END_IF;
+
+(* Gestion des combinatoires de sortie *)
+combi_s: 
+IF ((DB58.Step10.X OR DB58.Step12.S1 OR DB58.Step13.S1 OR DB58.Step14.S1 OR 
+DB58.Step15.S1)) THEN
+	"DB90".RUN1_cnt := 0;
+END_IF;
+
+"DB90".RUN1_faultyState := NOT "DB90".RUN1_noFaultCond;
+
+(* Memory edges *)
+M1.2 := "DB90".F3SpinM1_acknowledgePB;
+M1.3 := "DB90".unitProdWKM1;
+END_FUNCTION

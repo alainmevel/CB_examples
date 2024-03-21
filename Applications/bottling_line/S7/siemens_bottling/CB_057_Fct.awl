@@ -1,0 +1,40 @@
+FUNCTION_BLOCK FB57
+TITLE = 'fault_Z2'
+AUTHOR : CB
+
+VAR
+	fault_Z2FV1VAD : FB52;
+	fault_Z2EV1VAD : FB54;
+	fault_Z2EXP1VAD : FB56;
+END_VAR
+
+
+BEGIN
+
+
+NETWORK
+TITLE = 
+//
+//	fault/fault_Z2/fault_Z2FV1VAD
+CALL #fault_Z2FV1VAD;
+
+
+
+NETWORK
+TITLE = 
+//
+//	fault/fault_Z2/fault_Z2EV1VAD
+CALL #fault_Z2EV1VAD;
+
+
+
+NETWORK
+TITLE = 
+//
+//	fault/fault_Z2/fault_Z2EXP1VAD
+CALL #fault_Z2EXP1VAD;
+
+
+
+
+END_FUNCTION_BLOCK

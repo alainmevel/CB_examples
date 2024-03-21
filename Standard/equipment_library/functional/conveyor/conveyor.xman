@@ -1,0 +1,1126 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<AWTSynoptic screenX="1600" screenY="2262" name="conveyor.xman" description="" date="03/10/2023" time="11:12" version="3.0_draft3" source="controlbuild " bkgColor="white" identifier="2aa32393-46cb-43f4-9a2f-a3cb11b841d5" gridExtent="10" designLevel="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Colors>
+		<Color colorId="black" r="0" g="0" b="0" invisible="false" />
+		<Color colorId="white" r="255" g="255" b="255" invisible="false" />
+		<Color colorId="red" r="255" g="0" b="0" invisible="false" />
+		<Color colorId="yellow" r="255" g="255" b="0" invisible="false" />
+		<Color colorId="blue" r="0" g="0" b="255" invisible="false" />
+		<Color colorId="green" r="0" g="255" b="0" invisible="false" />
+		<Color colorId="purple" r="128" g="0" b="128" invisible="false" />
+		<Color colorId="brown" r="128" g="64" b="0" invisible="false" />
+		<Color colorId="gray" r="192" g="192" b="192" invisible="false" />
+		<Color colorId="orange" r="255" g="128" b="0" invisible="false" />
+		<Color colorId="pink" r="255" g="128" b="255" invisible="false" />
+		<Color colorId="transparent" invisible="true" />
+		<Color colorId="other" r="0" g="0" b="0" invisible="false" />
+		<Color colorId="visible" invisible="false" />
+	</Colors>
+	<Objects>
+		<Group>
+			<Basic xInit="256" yInit="225" xFinal="922" yFinal="458" xCenter="589" yCenter="341" />
+			<Comment>CB.form_name=positiveDirection
+CB.num_rep=1
+</Comment>
+			<Polygon>
+				<Basic xInit="826" yInit="425" xFinal="866" yFinal="455" xCenter="846" yCenter="440" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="826" y="425" />
+				<Point x="826" y="455" />
+				<Point x="866" y="440" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="696" yInit="425" xFinal="736" yFinal="455" xCenter="716" yCenter="440" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="696" y="425" />
+				<Point x="696" y="455" />
+				<Point x="736" y="440" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="566" yInit="425" xFinal="606" yFinal="455" xCenter="586" yCenter="440" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="566" y="425" />
+				<Point x="566" y="455" />
+				<Point x="606" y="440" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="436" yInit="425" xFinal="476" yFinal="455" xCenter="456" yCenter="440" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="436" y="425" />
+				<Point x="436" y="455" />
+				<Point x="476" y="440" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="306" yInit="425" xFinal="346" yFinal="455" xCenter="326" yCenter="440" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="306" y="425" />
+				<Point x="306" y="455" />
+				<Point x="346" y="440" />
+			</Polygon>
+			<Rectangle>
+				<Basic xInit="256" yInit="425" xFinal="922" yFinal="458" xCenter="589" yCenter="441" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="black" />
+			</Rectangle>
+			<Polygon>
+				<Basic xInit="826" yInit="225" xFinal="866" yFinal="255" xCenter="846" yCenter="240" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="826" y="225" />
+				<Point x="826" y="255" />
+				<Point x="866" y="240" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="696" yInit="225" xFinal="736" yFinal="255" xCenter="716" yCenter="240" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="696" y="225" />
+				<Point x="696" y="255" />
+				<Point x="736" y="240" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="566" yInit="225" xFinal="606" yFinal="255" xCenter="586" yCenter="240" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="566" y="225" />
+				<Point x="566" y="255" />
+				<Point x="606" y="240" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="436" yInit="225" xFinal="476" yFinal="255" xCenter="456" yCenter="240" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="436" y="225" />
+				<Point x="436" y="255" />
+				<Point x="476" y="240" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="306" yInit="225" xFinal="346" yFinal="255" xCenter="326" yCenter="240" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="306" y="225" />
+				<Point x="306" y="255" />
+				<Point x="346" y="240" />
+			</Polygon>
+			<Rectangle>
+				<Basic xInit="256" yInit="225" xFinal="922" yFinal="258" xCenter="589" yCenter="241" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="black" />
+			</Rectangle>
+			<ChangeColorOnBit colorFillBitOn="invisible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="invisible" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>linearSpeed &lt;= 0.0</Expression>
+					<Condition var="Var9" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>747bd05c-f93b-4f2f-9701-97c93e6d1cba</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="visible" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>NOT (linearSpeed &lt;= 0.0)</Expression>
+					<Condition var="Var9" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>1a40e85d-0eb5-4de1-82a5-3753a7e735cf</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+		</Group>
+		<Group>
+			<Basic xInit="256" yInit="225" xFinal="922" yFinal="458" xCenter="589" yCenter="341" />
+			<Comment>CB.form_name=negativeDirection
+CB.num_rep=1
+</Comment>
+			<Polygon>
+				<Basic xInit="306" yInit="425" xFinal="346" yFinal="455" xCenter="326" yCenter="440" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="346" y="425" />
+				<Point x="346" y="455" />
+				<Point x="306" y="440" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="436" yInit="425" xFinal="476" yFinal="455" xCenter="456" yCenter="440" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="476" y="425" />
+				<Point x="476" y="455" />
+				<Point x="436" y="440" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="566" yInit="425" xFinal="606" yFinal="455" xCenter="586" yCenter="440" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="606" y="425" />
+				<Point x="606" y="455" />
+				<Point x="566" y="440" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="696" yInit="425" xFinal="736" yFinal="455" xCenter="716" yCenter="440" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="736" y="425" />
+				<Point x="736" y="455" />
+				<Point x="696" y="440" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="826" yInit="425" xFinal="866" yFinal="455" xCenter="846" yCenter="440" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="866" y="425" />
+				<Point x="866" y="455" />
+				<Point x="826" y="440" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="306" yInit="225" xFinal="346" yFinal="255" xCenter="326" yCenter="240" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="346" y="225" />
+				<Point x="346" y="255" />
+				<Point x="306" y="240" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="436" yInit="225" xFinal="476" yFinal="255" xCenter="456" yCenter="240" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="476" y="225" />
+				<Point x="476" y="255" />
+				<Point x="436" y="240" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="566" yInit="225" xFinal="606" yFinal="255" xCenter="586" yCenter="240" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="606" y="225" />
+				<Point x="606" y="255" />
+				<Point x="566" y="240" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="696" yInit="225" xFinal="736" yFinal="255" xCenter="716" yCenter="240" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="736" y="225" />
+				<Point x="736" y="255" />
+				<Point x="696" y="240" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="826" yInit="225" xFinal="866" yFinal="255" xCenter="846" yCenter="240" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="866" y="225" />
+				<Point x="866" y="255" />
+				<Point x="826" y="240" />
+			</Polygon>
+			<Rectangle>
+				<Basic xInit="256" yInit="425" xFinal="922" yFinal="458" xCenter="589" yCenter="441" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="black" />
+			</Rectangle>
+			<Rectangle>
+				<Basic xInit="256" yInit="225" xFinal="922" yFinal="258" xCenter="589" yCenter="241" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="black" />
+			</Rectangle>
+			<ChangeColorOnBit colorFillBitOn="invisible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="invisible" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>linearSpeed &gt;= 0.0</Expression>
+					<Condition var="Var9" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>28c87ea2-a357-47fa-a318-0675e78a5f2c</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="visible" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>NOT (linearSpeed &gt;= 0.0)</Expression>
+					<Condition var="Var9" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>96abf891-9540-4758-a04e-cb815d07c701</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+		</Group>
+		<Group>
+			<Basic xInit="256" yInit="216" xFinal="926" yFinal="466" xCenter="591" yCenter="341" />
+			<Comment>CB.form_name=conveyor
+CB.num_rep=1
+</Comment>
+			<Rectangle>
+				<Basic xInit="256" yInit="426" xFinal="922" yFinal="459" xCenter="589" yCenter="442" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="black" />
+			</Rectangle>
+			<Rectangle>
+				<Basic xInit="256" yInit="226" xFinal="922" yFinal="259" xCenter="589" yCenter="242" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="black" />
+			</Rectangle>
+			<Rectangle>
+				<Basic xInit="256" yInit="216" xFinal="926" yFinal="466" xCenter="591" yCenter="341" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="rgb(128,128,128)" />
+			</Rectangle>
+		</Group>
+		<Group>
+			<Basic xInit="256" yInit="225" xFinal="922" yFinal="458" xCenter="589" yCenter="341" />
+			<Comment>CB.form_name=positiveDirection
+CB.num_rep=2
+</Comment>
+			<Polygon>
+				<Basic xInit="826" yInit="425" xFinal="866" yFinal="455" xCenter="846" yCenter="440" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="826" y="425" />
+				<Point x="826" y="455" />
+				<Point x="866" y="440" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="696" yInit="425" xFinal="736" yFinal="455" xCenter="716" yCenter="440" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="696" y="425" />
+				<Point x="696" y="455" />
+				<Point x="736" y="440" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="566" yInit="425" xFinal="606" yFinal="455" xCenter="586" yCenter="440" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="566" y="425" />
+				<Point x="566" y="455" />
+				<Point x="606" y="440" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="436" yInit="425" xFinal="476" yFinal="455" xCenter="456" yCenter="440" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="436" y="425" />
+				<Point x="436" y="455" />
+				<Point x="476" y="440" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="306" yInit="425" xFinal="346" yFinal="455" xCenter="326" yCenter="440" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="306" y="425" />
+				<Point x="306" y="455" />
+				<Point x="346" y="440" />
+			</Polygon>
+			<Rectangle>
+				<Basic xInit="256" yInit="425" xFinal="922" yFinal="458" xCenter="589" yCenter="441" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="black" />
+			</Rectangle>
+			<Polygon>
+				<Basic xInit="826" yInit="225" xFinal="866" yFinal="255" xCenter="846" yCenter="240" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="826" y="225" />
+				<Point x="826" y="255" />
+				<Point x="866" y="240" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="696" yInit="225" xFinal="736" yFinal="255" xCenter="716" yCenter="240" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="696" y="225" />
+				<Point x="696" y="255" />
+				<Point x="736" y="240" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="566" yInit="225" xFinal="606" yFinal="255" xCenter="586" yCenter="240" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="566" y="225" />
+				<Point x="566" y="255" />
+				<Point x="606" y="240" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="436" yInit="225" xFinal="476" yFinal="255" xCenter="456" yCenter="240" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="436" y="225" />
+				<Point x="436" y="255" />
+				<Point x="476" y="240" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="306" yInit="225" xFinal="346" yFinal="255" xCenter="326" yCenter="240" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="306" y="225" />
+				<Point x="306" y="255" />
+				<Point x="346" y="240" />
+			</Polygon>
+			<Rectangle>
+				<Basic xInit="256" yInit="225" xFinal="922" yFinal="258" xCenter="589" yCenter="241" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="black" />
+			</Rectangle>
+		</Group>
+		<Group>
+			<Basic xInit="256" yInit="225" xFinal="922" yFinal="458" xCenter="589" yCenter="341" />
+			<Comment>CB.form_name=negativeDirection
+CB.num_rep=2
+</Comment>
+			<Polygon>
+				<Basic xInit="306" yInit="425" xFinal="346" yFinal="455" xCenter="326" yCenter="440" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="346" y="425" />
+				<Point x="346" y="455" />
+				<Point x="306" y="440" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="436" yInit="425" xFinal="476" yFinal="455" xCenter="456" yCenter="440" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="476" y="425" />
+				<Point x="476" y="455" />
+				<Point x="436" y="440" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="566" yInit="425" xFinal="606" yFinal="455" xCenter="586" yCenter="440" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="606" y="425" />
+				<Point x="606" y="455" />
+				<Point x="566" y="440" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="696" yInit="425" xFinal="736" yFinal="455" xCenter="716" yCenter="440" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="736" y="425" />
+				<Point x="736" y="455" />
+				<Point x="696" y="440" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="826" yInit="425" xFinal="866" yFinal="455" xCenter="846" yCenter="440" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="866" y="425" />
+				<Point x="866" y="455" />
+				<Point x="826" y="440" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="306" yInit="225" xFinal="346" yFinal="255" xCenter="326" yCenter="240" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="346" y="225" />
+				<Point x="346" y="255" />
+				<Point x="306" y="240" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="436" yInit="225" xFinal="476" yFinal="255" xCenter="456" yCenter="240" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="476" y="225" />
+				<Point x="476" y="255" />
+				<Point x="436" y="240" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="566" yInit="225" xFinal="606" yFinal="255" xCenter="586" yCenter="240" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="606" y="225" />
+				<Point x="606" y="255" />
+				<Point x="566" y="240" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="696" yInit="225" xFinal="736" yFinal="255" xCenter="716" yCenter="240" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="736" y="225" />
+				<Point x="736" y="255" />
+				<Point x="696" y="240" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="826" yInit="225" xFinal="866" yFinal="255" xCenter="846" yCenter="240" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="866" y="225" />
+				<Point x="866" y="255" />
+				<Point x="826" y="240" />
+			</Polygon>
+			<Rectangle>
+				<Basic xInit="256" yInit="425" xFinal="922" yFinal="458" xCenter="589" yCenter="441" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="black" />
+			</Rectangle>
+			<Rectangle>
+				<Basic xInit="256" yInit="225" xFinal="922" yFinal="258" xCenter="589" yCenter="241" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="black" />
+			</Rectangle>
+		</Group>
+		<Group>
+			<Basic xInit="256" yInit="216" xFinal="926" yFinal="466" xCenter="591" yCenter="341" />
+			<Comment>CB.form_name=conveyor
+CB.num_rep=2
+</Comment>
+			<Rectangle>
+				<Basic xInit="256" yInit="426" xFinal="922" yFinal="459" xCenter="589" yCenter="442" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="black" />
+			</Rectangle>
+			<Rectangle>
+				<Basic xInit="256" yInit="226" xFinal="922" yFinal="259" xCenter="589" yCenter="242" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="black" />
+			</Rectangle>
+			<Rectangle>
+				<Basic xInit="256" yInit="216" xFinal="926" yFinal="466" xCenter="591" yCenter="341" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="rgb(128,128,128)" />
+			</Rectangle>
+		</Group>
+		<Group>
+			<Basic xInit="331" yInit="280" xFinal="997" yFinal="313" xCenter="664" yCenter="296" />
+			<Comment>CB.form_name=positiveDirection
+CB.num_rep=3
+</Comment>
+			<Polygon>
+				<Basic xInit="901" yInit="280" xFinal="941" yFinal="310" xCenter="921" yCenter="295" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="901" y="280" />
+				<Point x="901" y="310" />
+				<Point x="941" y="295" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="771" yInit="280" xFinal="811" yFinal="310" xCenter="791" yCenter="295" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="771" y="280" />
+				<Point x="771" y="310" />
+				<Point x="811" y="295" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="641" yInit="280" xFinal="681" yFinal="310" xCenter="661" yCenter="295" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="641" y="280" />
+				<Point x="641" y="310" />
+				<Point x="681" y="295" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="511" yInit="280" xFinal="551" yFinal="310" xCenter="531" yCenter="295" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="511" y="280" />
+				<Point x="511" y="310" />
+				<Point x="551" y="295" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="381" yInit="280" xFinal="421" yFinal="310" xCenter="401" yCenter="295" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="381" y="280" />
+				<Point x="381" y="310" />
+				<Point x="421" y="295" />
+			</Polygon>
+			<Rectangle>
+				<Basic xInit="331" yInit="280" xFinal="997" yFinal="313" xCenter="664" yCenter="296" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="black" />
+			</Rectangle>
+		</Group>
+		<Group>
+			<Basic xInit="331" yInit="280" xFinal="997" yFinal="313" xCenter="664" yCenter="296" />
+			<Comment>CB.form_name=negativeDirection
+CB.num_rep=3
+</Comment>
+			<Polygon>
+				<Basic xInit="381" yInit="280" xFinal="421" yFinal="310" xCenter="401" yCenter="295" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="421" y="280" />
+				<Point x="421" y="310" />
+				<Point x="381" y="295" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="511" yInit="280" xFinal="551" yFinal="310" xCenter="531" yCenter="295" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="551" y="280" />
+				<Point x="551" y="310" />
+				<Point x="511" y="295" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="641" yInit="280" xFinal="681" yFinal="310" xCenter="661" yCenter="295" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="681" y="280" />
+				<Point x="681" y="310" />
+				<Point x="641" y="295" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="771" yInit="280" xFinal="811" yFinal="310" xCenter="791" yCenter="295" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="811" y="280" />
+				<Point x="811" y="310" />
+				<Point x="771" y="295" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="901" yInit="280" xFinal="941" yFinal="310" xCenter="921" yCenter="295" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="941" y="280" />
+				<Point x="941" y="310" />
+				<Point x="901" y="295" />
+			</Polygon>
+			<Rectangle>
+				<Basic xInit="331" yInit="280" xFinal="997" yFinal="313" xCenter="664" yCenter="296" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="black" />
+			</Rectangle>
+		</Group>
+		<Group>
+			<Basic xInit="331" yInit="265" xFinal="1001" yFinal="323" xCenter="666" yCenter="294" />
+			<Comment>CB.form_name=conveyor
+CB.num_rep=3
+</Comment>
+			<Rectangle>
+				<Basic xInit="331" yInit="274" xFinal="997" yFinal="307" xCenter="664" yCenter="290" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="black" />
+			</Rectangle>
+			<Rectangle>
+				<Basic xInit="331" yInit="265" xFinal="1001" yFinal="323" xCenter="666" yCenter="294" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="rgb(128,128,128)" />
+			</Rectangle>
+		</Group>
+		<Group>
+			<Basic xInit="331" yInit="280" xFinal="997" yFinal="313" xCenter="664" yCenter="296" />
+			<Comment>CB.form_name=positiveDirection
+CB.num_rep=4
+</Comment>
+			<Polygon>
+				<Basic xInit="901" yInit="280" xFinal="941" yFinal="310" xCenter="921" yCenter="295" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="901" y="280" />
+				<Point x="901" y="310" />
+				<Point x="941" y="295" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="771" yInit="280" xFinal="811" yFinal="310" xCenter="791" yCenter="295" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="771" y="280" />
+				<Point x="771" y="310" />
+				<Point x="811" y="295" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="641" yInit="280" xFinal="681" yFinal="310" xCenter="661" yCenter="295" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="641" y="280" />
+				<Point x="641" y="310" />
+				<Point x="681" y="295" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="511" yInit="280" xFinal="551" yFinal="310" xCenter="531" yCenter="295" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="511" y="280" />
+				<Point x="511" y="310" />
+				<Point x="551" y="295" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="381" yInit="280" xFinal="421" yFinal="310" xCenter="401" yCenter="295" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="381" y="280" />
+				<Point x="381" y="310" />
+				<Point x="421" y="295" />
+			</Polygon>
+			<Rectangle>
+				<Basic xInit="331" yInit="280" xFinal="997" yFinal="313" xCenter="664" yCenter="296" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="black" />
+			</Rectangle>
+		</Group>
+		<Group>
+			<Basic xInit="331" yInit="280" xFinal="997" yFinal="313" xCenter="664" yCenter="296" />
+			<Comment>CB.form_name=negativeDirection
+CB.num_rep=4
+</Comment>
+			<Polygon>
+				<Basic xInit="381" yInit="280" xFinal="421" yFinal="310" xCenter="401" yCenter="295" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="421" y="280" />
+				<Point x="421" y="310" />
+				<Point x="381" y="295" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="511" yInit="280" xFinal="551" yFinal="310" xCenter="531" yCenter="295" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="551" y="280" />
+				<Point x="551" y="310" />
+				<Point x="511" y="295" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="641" yInit="280" xFinal="681" yFinal="310" xCenter="661" yCenter="295" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="681" y="280" />
+				<Point x="681" y="310" />
+				<Point x="641" y="295" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="771" yInit="280" xFinal="811" yFinal="310" xCenter="791" yCenter="295" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="811" y="280" />
+				<Point x="811" y="310" />
+				<Point x="771" y="295" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="901" yInit="280" xFinal="941" yFinal="310" xCenter="921" yCenter="295" />
+				<Style lineStyle="invisible" lineWidth="0" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="yellow" />
+				<Point x="941" y="280" />
+				<Point x="941" y="310" />
+				<Point x="901" y="295" />
+			</Polygon>
+			<Rectangle>
+				<Basic xInit="331" yInit="280" xFinal="997" yFinal="313" xCenter="664" yCenter="296" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="black" />
+			</Rectangle>
+		</Group>
+		<Group>
+			<Basic xInit="331" yInit="265" xFinal="1001" yFinal="323" xCenter="666" yCenter="294" />
+			<Comment>CB.form_name=conveyor
+CB.num_rep=4
+</Comment>
+			<Rectangle>
+				<Basic xInit="331" yInit="274" xFinal="997" yFinal="307" xCenter="664" yCenter="290" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="black" />
+			</Rectangle>
+			<Rectangle>
+				<Basic xInit="331" yInit="265" xFinal="1001" yFinal="323" xCenter="666" yCenter="294" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="rgb(128,128,128)" />
+			</Rectangle>
+		</Group>
+		<Group>
+			<Basic xInit="285" yInit="219" xFinal="955" yFinal="269" xCenter="620" yCenter="244" />
+			<Comment>CB.form_name=conveyor
+CB.num_rep=5
+</Comment>
+			<Rectangle>
+				<Basic xInit="285" yInit="219" xFinal="955" yFinal="269" xCenter="620" yCenter="244" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="rgb(128,128,128)" />
+			</Rectangle>
+		</Group>
+		<Group>
+			<Basic xInit="285" yInit="219" xFinal="955" yFinal="269" xCenter="620" yCenter="244" />
+			<Comment>CB.form_name=conveyor
+CB.num_rep=6
+</Comment>
+			<Rectangle>
+				<Basic xInit="285" yInit="219" xFinal="955" yFinal="269" xCenter="620" yCenter="244" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="rgb(128,128,128)" />
+			</Rectangle>
+		</Group>
+	</Objects>
+	<Vars>
+		<Var varId="Var14" type="REAL" name="m14" />
+		<Var varId="Var0" type="REAL" name="incPositionX" />
+		<Var varId="Var1" type="REAL" name="incPositionY" />
+		<Var varId="Var2" type="REAL" name="incPositionZ" />
+		<Var varId="Var15" type="REAL" name="m21" />
+		<Var varId="Var16" type="REAL" name="m22" />
+		<Var varId="Var17" type="REAL" name="m23" />
+		<Var varId="Var3" type="REAL" name="coordCenterX" />
+		<Var varId="Var4" type="REAL" name="coordCenterY" />
+		<Var varId="Var5" type="REAL" name="coordCenterZ" />
+		<Var varId="Var18" type="REAL" name="m24" />
+		<Var varId="Var10" type="DINT" name="status_act_prod" />
+		<Var varId="Var27" type="REAL" name="incrementPositionX" />
+		<Var varId="Var28" type="REAL" name="incrementPositionY" />
+		<Var varId="Var19" type="REAL" name="m31" />
+		<Var varId="Var20" type="REAL" name="m32" />
+		<Var varId="Var21" type="REAL" name="m33" />
+		<Var varId="Var22" type="REAL" name="m34" />
+		<Var varId="Var29" type="REAL" name="incrementPositionZ" />
+		<Var varId="Var23" type="REAL" name="m41" />
+		<Var varId="Var24" type="REAL" name="m42" />
+		<Var varId="Var6" type="REAL" name="incRotationX" />
+		<Var varId="Var7" type="REAL" name="incRotationY" />
+		<Var varId="Var8" type="REAL" name="incRotationZ" />
+		<Var varId="Var25" type="REAL" name="m43" />
+		<Var varId="Var26" type="REAL" name="m44" />
+		<Var varId="Var30" type="REAL" name="incShiftProduct" />
+		<Var varId="Var9" type="REAL" name="linearSpeed" />
+		<Var varId="Var31" type="REAL" name="centerRotX" />
+		<Var varId="Var32" type="REAL" name="centerRotY" />
+		<Var varId="Var33" type="REAL" name="centerRotZ" />
+		<Var varId="Var37" type="BOOL" name="d_locking" />
+		<Var varId="Var38" type="BOOL" name="v_d_locking" />
+		<Var varId="Var36" type="REAL" name="incRotX" />
+		<Var varId="Var34" type="REAL" name="incRotY" />
+		<Var varId="Var35" type="REAL" name="incRotZ" />
+		<Var varId="Var11" type="REAL" name="m11" />
+		<Var varId="Var12" type="REAL" name="m12" />
+		<Var varId="Var13" type="REAL" name="m13" />
+	</Vars>
+	<Fonts>
+	</Fonts>
+	<Meta>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var14</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>659ebf9a-9256-4558-aa0d-c830b1d5eef7</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var0</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>1a729afb-b5e4-4a3c-9f6f-aa81a2f338de</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var1</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>612bdf54-51f5-44d4-8f9e-ed8477b05a60</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var2</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>34b921cd-85b6-473b-b974-265af6043275</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var15</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>671e2cf9-13fc-4eab-ab45-d49ccf1f8af8</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var16</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>d2ece111-a268-4fcf-ac1a-0b1d7391a620</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var17</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>1a714e3b-9b6f-4185-97d0-71276d4a53b9</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var3</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>7814c9b6-7586-4254-802b-e7eec8c43639</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var4</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>fba2a7c1-2c76-4551-94e3-183cd2852f2b</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var5</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>a73e055d-7097-4b5f-888c-2c2eeff31b3f</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var18</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>5743ea2d-3d54-41b0-8d18-2273d357b02d</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var10</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>cba82719-93b4-470d-8974-a22a089a8fd7</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var27</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>35d40e35-091f-448d-829d-90febb3c0049</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var28</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>dbcf2b26-fa62-4d7b-8321-1222df03146a</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var19</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>64eeb885-3a32-487e-8552-ca0346d4f496</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var20</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>f6416e1b-7fc2-48ea-a962-87dcd3b9e26d</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var21</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>dba4db27-23a1-4dda-98b5-257ce52262be</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var22</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>367f1a51-d26b-4fce-b6f6-6bbf812cce46</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var29</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>eb2d7247-e640-4f85-aee9-23758d2662a6</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var23</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>e38fa0bb-c8ab-48d4-bd51-4e285990f4aa</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var24</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>13363f86-6270-4e23-be47-89ad8f7b3dd7</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var6</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>5274c95d-8449-4c9d-8f0f-d5602c594a79</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var7</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>f0953422-8147-4f7f-9e54-87a02956f471</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var8</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>fe7b0cdd-ca31-4de4-90b1-f7e99bbb42c8</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var25</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>47613d6a-7cf2-4c55-82f1-27d7dd9bfacf</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var26</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>4b92ef9b-b541-4d9b-a760-2fa3a4861f57</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var30</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>21cb4fd9-8111-45de-bcba-a05339fbc60e</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var9</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>8587eb4f-499b-4a50-b84a-e8cbae908ebf</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var31</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>8b8de28f-1f01-4839-9330-430b90067dfb</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var32</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>bc132356-cb2c-4bf6-84ac-332469a1272b</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var33</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>aec098f5-26c9-43d6-850c-3525982b2f5d</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var37</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>615271fe-01a5-4a01-823a-513ee872384c</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var38</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>d5346d10-9a93-42bc-b1b4-223abd9d1900</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var36</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>303fec49-e702-4e16-b030-3c867bc17ddf</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var34</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>2c991b6a-6bb5-4ca1-8c00-dbda2dbcca49</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var35</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>3d511401-7240-4c3f-bf01-1e0a854a2c3c</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var11</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>c50c0a7a-39b2-4d8f-bac4-0d2fc45d2227</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var12</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>0c33ef65-d447-4d4b-b140-40184da25620</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var13</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>fcd5a87c-3c0f-4f7e-9874-0dc4b1e5e817</ParamValue>
+			</Param>
+		</Metadata>
+	</Meta>
+</AWTSynoptic>

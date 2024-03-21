@@ -1,0 +1,50 @@
+FUNCTION_BLOCK FB66
+TITLE = 'process'
+AUTHOR : CB
+
+VAR
+	process_F1 : FB60;
+	process_F2 : FB62;
+	process_F3 : FB64;
+END_VAR
+
+
+BEGIN
+
+
+NETWORK
+TITLE = 
+//
+//	process/RUN1PROC
+CALL FC58 (combE := 1);
+CALL FB58,	DB58;
+CALL FC58 (combE := 0);
+
+
+
+NETWORK
+TITLE = 
+//
+//	process/process_F1
+CALL #process_F1;
+
+
+
+NETWORK
+TITLE = 
+//
+//	process/process_F2
+CALL #process_F2;
+
+
+
+NETWORK
+TITLE = 
+//
+//	process/process_F3
+CALL #process_F3;
+
+
+
+
+END_FUNCTION_BLOCK

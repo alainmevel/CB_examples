@@ -1,0 +1,109 @@
+FUNCTION_BLOCK FB 74
+
+CMPSET
+	S7Graph-Version: 5100
+         WarningLevel: None
+         FBInterface: Minimum
+         SSBLevel: Individual
+         ASMsgLevel: No
+         TargetMachine: AS300StdBlock
+         RuntimeBlock: FC 70
+         CritAvail: F
+         SSkipOn: F
+         AckReq: F
+         SyncAvail: F
+         PermILMan: F
+         SWMLocked: F
+         InitVarStat: 4401
+         SaveSwitching: F
+END_CMPSET
+
+INITIAL_STEP Step10 (*$_NUM 10*)  :
+(* $_COM Initial step
+Tank 3 *)
+END_STEP
+
+STEP Step11 (*$_NUM 11*)  :
+(* $_COM Low speed agitator *)
+END_STEP
+
+STEP Step12 (*$_NUM 12*)  :
+(* $_COM High speed agitator 
+AND filling of tank 3 *)
+END_STEP
+
+STEP Step13 (*$_NUM 13*)  :
+(* $_COM End of closing *)
+END_STEP
+
+INITIAL_STEP Step20 (*$_NUM 20*)  :
+(* $_COM Initial step
+Tank 1 *)
+END_STEP
+
+STEP Step21 (*$_NUM 21*)  :
+(* $_COM Filling of tank 1 *)
+END_STEP
+
+INITIAL_STEP Step30 (*$_NUM 30*)  :
+(* $_COM Initial step
+Tank 2 *)
+END_STEP
+
+STEP Step31 (*$_NUM 31*)  :
+(* $_COM Filling of tank 2 *)
+END_STEP
+
+TRANSITION Trans10 (*$_NUM 10*) 
+	FROM (Step10)
+	TO (Step11) :
+CONDITION := "DB110".MAST1_productionRqst OR "DB110".MAST1_closingRqst
+END_TRANSITION
+
+TRANSITION Trans11 (*$_NUM 11*) 
+	FROM (Step11)
+	TO (Step12) :
+CONDITION := I02.1 AND NOT I00.4 AND NOT I01.0 AND "DB110".MAST1_productionRqst OR 
+"DB110".MAST1_closingRqst
+END_TRANSITION
+
+TRANSITION Trans12 (*$_NUM 12*) 
+	FROM (Step12)
+	TO (Step13) :
+CONDITION := I02.3 OR I00.4 OR I01.0 OR 
+NOT ("DB110".MAST1_productionRqst AND "DB110".MAST1_closingRqst)
+END_TRANSITION
+
+TRANSITION Trans13 (*$_NUM 13*) 
+	FROM (Step13)
+	TO (Step10) (*$_JUMP*) :
+CONDITION := "DB110".MAST1_masterInStandBy
+END_TRANSITION
+
+TRANSITION Trans20 (*$_NUM 20*) 
+	FROM (Step20)
+	TO (Step21) :
+CONDITION := "DB110".MAST1_productionRqst AND I00.4
+END_TRANSITION
+
+TRANSITION Trans21 (*$_NUM 21*) 
+	FROM (Step21)
+	TO (Step20) (*$_JUMP*) :
+CONDITION := I00.2 OR NOT "DB110".MAST1_productionRqst
+END_TRANSITION
+
+TRANSITION Trans30 (*$_NUM 30*) 
+	FROM (Step30)
+	TO (Step31) :
+CONDITION := "DB110".MAST1_productionRqst AND I01.0
+END_TRANSITION
+
+TRANSITION Trans31 (*$_NUM 31*) 
+	FROM (Step31)
+	TO (Step30) (*$_JUMP*) :
+CONDITION := I01.3 OR NOT "DB110".MAST1_productionRqst
+END_TRANSITION
+
+
+
+END_FUNCTION_BLOCK

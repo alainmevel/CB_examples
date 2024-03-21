@@ -1,0 +1,22 @@
+
+FUNCTION CB_sel_byte : BYTE
+
+
+TITLE = ' Binary selection on 2 variables '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : sel_byte
+FAMILY  : TNI
+
+VAR_INPUT
+    G : BOOL;
+    IN0 : BYTE ;
+    IN1 : BYTE ;
+     
+END_VAR
+
+BEGIN
+
+CB_sel_byte := SEL(G:= G, IN0 := IN0, IN1 := IN1);
+ 
+END_FUNCTION

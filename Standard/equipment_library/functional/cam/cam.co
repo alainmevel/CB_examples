@@ -1,0 +1,15 @@
+ rotationSpeedRadS IF1
+ rotationSpeedDegS IF2
+ positionTranslat OF3
+ percentTranslat OF4
+ incrementTranslat OF5
+ angleRotationDeg OF6
+ angleRotationRad OF7
+ firstCycle LB8
+ incrementRotation LF9
+ oldPosition LF10
+ maxTranslat PF11
+ initTranslat PF12
+ minTranslat PF13
+ d_locking DB14
+ v_d_locking DB15

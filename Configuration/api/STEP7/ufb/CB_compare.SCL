@@ -1,0 +1,137 @@
+
+FUNCTION CB_compare : BOOL
+
+
+TITLE = 'Compare heterogene type'
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : equal
+FAMILY  : TNI
+
+VAR_INPUT
+    IN1 : DWORD;
+    TYPE1 : INT;
+    IN2 : DWORD;
+    TYPE2 : INT;
+    TCOMP : INT;
+END_VAR
+
+VAR_TEMP
+    op1 : DINT;
+    op2 : DINT;
+    pf1 : INT;
+    pf2 : INT;
+    op1r : REAL;
+    op2r : REAL;
+END_VAR
+
+BEGIN
+// *************************  Init  ************************************
+pf1 := 0;
+pf2 := 0;
+
+// ********************** Convert IN1 ***********************************
+
+  CASE TYPE1 OF
+    1 :
+        // IN1 is an integer
+        op1 := INT_TO_DINT(DWORD_TO_INT(IN1)) ;
+    2 :
+        // IN1 is a double integer
+        op1 := DWORD_TO_DINT(IN1) ;
+    3 :     
+        // IN1 is a word
+        IF ((IN1 AND DW#16#0000_8000) <> 0) THEN
+            op1 := DWORD_TO_DINT(IN1 AND DW#16#0000_7FFF) + DINT#16#8000   ;
+        ELSE
+            op1 := DWORD_TO_DINT(IN1) ;
+        END_IF;
+    4 :      
+        // IN1 is a double word
+        op1 := DWORD_TO_DINT(IN1 AND DW#16#7FFF_FFFF);
+        IF ((IN1 AND DW#16#8000_0000) <> 0) THEN pf1 := 1; END_IF;
+    5 :     
+        // IN1 is a BYTE
+        IF ((IN1 AND DW#16#0000_0080) <> 0) THEN
+            op1 := DWORD_TO_DINT(IN1 AND DW#16#0000_007F) + DINT#16#0080   ;
+        ELSE
+            op1 := DWORD_TO_DINT(IN1) ;
+        END_IF;
+        
+  END_CASE;
+// ********************** Convert IN2 ***********************************
+  CASE TYPE2 OF
+    1 :
+        // IN2 is an integer
+        op2 := INT_TO_DINT(DWORD_TO_INT(IN2)) ;
+    2 :
+        // IN2 is a double integer
+        op2 := DWORD_TO_DINT(IN2) ;
+    3 :     
+        // IN2 is a word
+        IF ((IN2 AND DW#16#0000_8000) <> 0) THEN
+            op2 := DWORD_TO_DINT(IN2 AND DW#16#0000_7FFF) + DINT#16#8000   ;
+        ELSE
+            op2 := DWORD_TO_DINT(IN2) ;
+        END_IF;
+    4 :      
+        // IN2 is a double word
+        op2 := DWORD_TO_DINT(IN2 AND DW#16#7FFF_FFFF);
+        IF ((IN2 AND DW#16#8000_0000) <> 0) THEN pf2 := 1; END_IF;
+        
+    5 :     
+        // IN1 is a BYTE
+        IF ((IN2 AND DW#16#0000_0080) <> 0) THEN
+            op2 := DWORD_TO_DINT(IN2 AND DW#16#0000_007F) + DINT#16#0080   ;
+        ELSE
+            op2 := DWORD_TO_DINT(IN2) ;
+        END_IF;
+        
+        
+  END_CASE;
+
+// ********************** Calculation of the result if not Réal ***********************
+IF ((TYPE1 <> 5) AND (TYPE2 <> 5)) THEN
+  CASE TCOMP OF
+    1 : // Lower or equal
+       CB_compare:= (pf1 < pf2) OR  ((pf1 = pf2) AND (op1 <= op2));
+    2 : // Strictly Less
+       CB_compare:= (pf1 < pf2) OR  ((pf1 = pf2) AND (op1 < op2));
+    3 : // greater or equal
+       CB_compare:= (pf1 > pf2) OR  ((pf1 = pf2) AND (op1 >= op2));
+    4 : // Strictly greater
+       CB_compare:= (pf1 > pf2) OR  ((pf1 = pf2) AND (op1 > op2));
+    5 : // Equal
+       CB_compare:= ((op1 = op2) AND (pf1 = pf2));
+    6 : // No Equal
+       CB_compare:= ((op1 <> op2) OR (pf1 <> pf2));
+  ELSE:
+        CB_compare := false;
+  END_CASE;
+// ********************** Calculation of the result if there is a Real ***********************
+ELSIF ((TYPE1 = 5) OR (TYPE2 = 5)) THEN
+  IF (TYPE1 <> 5) THEN  op1r := DINT_TO_REAL(op1); ELSE op1r := DWORD_TO_REAL(IN1); END_IF;
+  IF (TYPE2 <> 5) THEN  op1r := DINT_TO_REAL(op2); ELSE op2r := DWORD_TO_REAL(IN2); END_IF;
+  IF (pf1 = 1) THEN op1r := op1r + 2147483648.0;; END_IF;       // Add bit 31 if exist
+  IF (pf2 = 2) THEN op2r := op2r + 2147483648.0;; END_IF;
+  CASE TCOMP OF
+    1 : // Lower or equal
+       CB_compare:= (op1r <= op2r);
+    2 : // Strictly Less
+       CB_compare:= (op1r < op2r);
+    3 : // greater or equal
+       CB_compare:= (op1r >= op2r);
+    4 : // Strictly greater
+       CB_compare:= (op1r > op2r);
+    5 : // Equal
+       CB_compare:= (op1r = op2r);
+    6 : // No Equal
+       CB_compare:= (op1r <> op2r);
+  ELSE:
+       CB_compare := false;             // Bad code of comparaison
+  END_CASE; 
+ELSE
+       CB_compare := false;             // Bad code of operand's type
+END_IF;  
+END_FUNCTION
+

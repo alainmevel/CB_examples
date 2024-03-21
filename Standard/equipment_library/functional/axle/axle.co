@@ -1,0 +1,11 @@
+ speed IF1
+ positionTranslat OF2
+ percentTranslat OF3
+ incTranslat OF4
+ firstCycle LB5
+ nbCyclePerSec LF6
+ initTranslat PF7
+ maxTranslat PF8
+ minTranslat PF9
+ d_locking DB10
+ v_d_locking DB11

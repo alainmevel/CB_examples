@@ -1,0 +1,49 @@
+FUNCTION_BLOCK FB104
+TITLE = 'pilot_Z4CONV1VAD'
+AUTHOR : CB
+
+VAR
+	Z4CONV1ACT : FB102;
+END_VAR
+
+
+BEGIN
+
+
+NETWORK
+TITLE = 
+//
+//	pilot/pilot_Z4/pilot_Z4CONV1VAD/Z4CONV1ACT
+A	"DB110".WKM1_autoMode;
+=	L	0.0;
+BLD	103;
+A	"DB110".WKM1_manualMode;
+=	L	0.1;
+BLD	103;
+A	"DB110".CONV1_convoy;
+=	L	0.2;
+BLD	103;
+A	I06.2;
+=	L	0.3;
+BLD	103;
+A	I06.3;
+=	L	0.4;
+BLD	103;
+A	"DB110".Z4CONV1_generalFault;
+=	L	0.5;
+BLD	103;
+CALL #Z4CONV1ACT(
+	autoMode := L	0.0,
+	manualMode := L	0.1,
+	autoCmd := L	0.2,
+	forwardPB := L	0.3,
+	stopPB := L	0.4,
+	generalFault := L	0.5,
+	forwardCmd := Q01.3
+);
+NOP 0;
+
+
+
+
+END_FUNCTION_BLOCK

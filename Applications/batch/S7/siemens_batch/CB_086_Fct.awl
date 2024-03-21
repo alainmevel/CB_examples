@@ -1,0 +1,76 @@
+FUNCTION_BLOCK FB 86
+TITLE = 'cmd_on_off_valve_pilot_actuator'
+AUTHOR : CB
+
+
+VAR_INPUT
+	autoMode : BOOL := FALSE;	//Automatic mode
+	manualMode : BOOL := FALSE;	//Manual mode
+	autoCloseCmd : BOOL := FALSE;	//Automatic close command to the valve
+	autoOpenCmd : BOOL := FALSE;	//Automatic open command to the valve
+	closedSensorFB : BOOL := FALSE;	//Closed sensor feedback
+	openedSensorFB : BOOL := FALSE;	//Opened sensor feedback
+	closeValvePB : BOOL := FALSE;	//Close valve pushbutton
+	openValvePB : BOOL := FALSE;	//Open valve pushbutton
+	generalFault : BOOL := FALSE;	//General fault of the valve
+END_VAR
+
+VAR_OUTPUT
+	closeCmd : BOOL := FALSE;	//Close command to the valve
+	openCmd : BOOL := FALSE;	//Open command to the valve
+END_VAR
+
+BEGIN
+
+
+NETWORK
+TITLE = 
+//Open command
+L1:	A(	;
+A(	;
+A	autoMode;
+A	autoOpenCmd;
+AN	autoCloseCmd;
+O	;
+A	manualMode;
+A	openValvePB;
+AN	closeValvePB;
+)	;
+AN	openedSensorFB;
+)	;
+AN	generalFault;
+=	openCmd;
+
+
+
+
+NETWORK
+TITLE = 
+//Close command
+L2:	A(	;
+A(	;
+A	autoMode;
+A	autoCloseCmd;
+AN	autoOpenCmd;
+O	;
+A	manualMode;
+A	closeValvePB;
+AN	openValvePB;
+)	;
+AN	closedSensorFB;
+)	;
+AN	generalFault;
+=	closeCmd;
+
+
+
+
+NETWORK
+TITLE = 
+//
+L3:	NOP 0
+
+
+
+
+END_FUNCTION_BLOCK

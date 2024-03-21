@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: controlbuild -->
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Configuration">
+		<xs:annotation>
+			<xs:appinfo>
+				<cbIcon>preferences</cbIcon>
+				<cbBalloon lang="en">___________________________________________________________________________________________
+Configuration: contains the global parameters.
+___________________________________________________________________________________________
+OPTIONAL PARAMETERS:
+maxBytePerFrame: maximum number of bytes per frame.
+ - it must be greater or equal to 1.
+ 
+trace: 0, 1 or 2: displays the initialization and the exchanged data.
+ - 0: displays only the communication errors (used for optimal performances).
+ - 1: displays the communication errors and the exchanged data.
+ - 2: displays the initialization, the communication errors and the exchanged data.
+ 
+log: 0, 1, 2 or 3: write the messages of the console into a log file.
+ - 0: no log written.
+ - 1: writes the error messages.
+ - 2: writes the error and warning messages.
+ - 3: writes all messages (not recommended).</cbBalloon>
+				<cbBalloon lang="fr">___________________________________________________________________________________________
+Configuration : contient les paramètres globaux.
+___________________________________________________________________________________________
+PARAMETRES OPTIONNELS :
+maxBytePerFrame : nombre maximum d'octets par trame.
+ - il doit être supérieur ou égal à 1.
+
+ trace : 0, 1 ou 2 : affichage de l’initialisation et des données échangées.
+ - 0 : affichage des erreurs de communication uniquement (optimise les performances).
+ - 1 : affichage des erreurs de communication et des données échangées.
+ - 2 : affichage de l’initialisation, des erreurs de communication et des données échangées.
+ 
+log: 0, 1, 2 ou 3 : écrit les messages de la console dans un fichier log.
+ - 0 : pas de log écrit.
+ - 1 : écrit les messages d'erreur.
+ - 2 : écrit les messages d'erreur et de warning.
+ - 3 : écrit tous les messages (déconseillé).</cbBalloon>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Card"/>
+			</xs:sequence>
+			<xs:attribute name="xmlns:xsi"/>
+			<xs:attribute name="xsi:noNamespaceSchemaLocation"/>
+			<xs:attribute name="maxBytePerFrame" use="optional" default="8192"/>
+			<xs:attribute name="trace" use="optional" default="2"/>
+			<xs:attribute name="log" use="optional" default="1"/>
+			<xs:attribute name="logName" use="prohibited" default="C:\CB_Advantech.log"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Card">
+		<xs:annotation>
+			<xs:appinfo>
+				<cbIcon>carte</cbIcon>
+				<cbBalloon lang="en">___________________________________________________________________________________________
+Card: contains the parameters of an Advantech card.
+___________________________________________________________________________________________
+REQUIRED PARAMETERS:
+cardNumber: is the card number given by the Advantech card configurator.
+ - it must be greater or equal to 0.
+
+cycleTime: is the time between two information exchanges.
+ - its unit is the millisecond and it must be greater or equal to 1.
+
+trace: 0, 1 or 2: displays the content of a frame for this particular card.
+ - 0: displays only the communication errors (used for optimal performances).
+ - 1: displays the content of the frames in hexadecimal format.
+ - 2: displays the content of the frames in hexadecimal format and the state of the variables of the frame.
+ 
+ 
+OPTIONAL PARAMETERS:
+name: name used to identify the card in the trace.
+ - the first character of the name has to be a letter.
+ 
+disable: 0 or 1: deactivates the treatment of the card by the driver.
+ - 0: treated card .
+ - 1: not treated card.</cbBalloon>
+				<cbBalloon lang="fr">___________________________________________________________________________________________
+Carte : contient les paramètres d'une carte Advantech.
+___________________________________________________________________________________________
+PARAMETRES OBLIGATOIRES :
+cardNumber : est le numéro de carte donné par le configurateur de carte Advantech.
+ - il doit être supérieur ou égal à 0.
+
+cycleTime : est l’intervalle de temps entre deux échanges d’informations 
+ - il est exprimé en millisecondes et doit être supérieur ou égal à 1.
+
+trace : 0, 1 ou 2 : affichage du contenu des trames pour cette carte.
+ - 0 : affichage des erreurs de communication uniquement (optimise les performances).
+ - 1 : affichage du contenu des trames en hexadécimal.
+ - 2 : affichage du contenu des trames en hexadécimal et de l'état des variables de la trame.
+ 
+ 
+PARAMETRES OPTIONNELS :
+name : est le nom utilisé pour différencier les cartes dans la trace.
+ - le nom doit commencer par une lettre.
+
+disable : 0 ou 1 : désactive le traitement de la carte par le driver.
+ - 0 : carte traitée.
+ - 1 : carte non traitée.</cbBalloon>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Port">
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="cardNumber" use="required" default="1"/>
+			<xs:attribute name="cycleTime" use="required" default="1000"/>
+			<xs:attribute name="trace" use="required" default="1"/>
+			<xs:attribute name="name" use="optional" default=""/>
+			<xs:attribute name="disable" use="optional" default="1"/>
+			<xs:attribute name="switchBytesForBytesAndBooleans" use="prohibited" default="1"/>
+			<xs:attribute name="switchBytesInWords" use="prohibited" default="1"/>
+			<xs:attribute name="switchWordsInDWords" use="prohibited" default="1"/>
+			<xs:attribute name="switchBytesInWordsInDWords" use="prohibited" default="1"/>
+			<xs:attribute name="SwitchBytesInFrame" use="prohibited" default="1"/>
+			<xs:attribute name="noFrameSplit" use="prohibited" default="1"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Port">
+		<xs:annotation>
+			<xs:appinfo>
+				<cbIcon>port</cbIcon>
+				<cbBalloon lang="en">___________________________________________________________________________________________
+Port: contains the parameters of a port.
+___________________________________________________________________________________________
+REQUIRED PARAMETERS:
+CB_EquipmentNumber: is the number of the card/port combo. 
+ - it must be greater or equal to 1.
+ - it must be unique in the configuration.
+
+portNumber: number of the port on the card.
+ - it must be greater or equal to 1.
+
+direction: indicates if the port is an input or an output.
+ - In: the port is an input.
+ - Out: the port is an output.
+
+mod: Analog or Digital: sets the type of use of the port.
+ - Analog: treats Analogical value.
+ - Digital: treats bits or bytes.
+
+logicIn: 0 or 1: allow to invert the logic on the inputs of the Boolean port.
+ - 0: inversion of the logic deactivated.
+ - 1: inversion of the logic activated.
+
+logicOut: 0 or 1: allows to invert the logic on the outputs of the Boolean port.
+ - 0: inversion of the logic deactivated.
+ - 1: inversion of the logic activated.
+
+OPTIONAL PARAMETERS:
+name: name used to identify the port in the trace.
+ - the first character of the name has to be a letter.
+ 
+trace: 0, 1 or 2: display the content of a frame for this port.
+ - 0: displays only the communication errors (used for optimal performances).
+ - 1: displays the content of the frames in hexadecimal format.
+ - 2: displays the content of the frames in hexadecimal format and the state of the variables of the frame.</cbBalloon>
+				<cbBalloon lang="fr">___________________________________________________________________________________________
+Port : contient les paramètres d'un port.
+___________________________________________________________________________________________
+PARAMETRES OBLIGATOIRES :
+CB_EquipmentNumber : est le numéro de combinaison carte/port. 
+ - il doit être supérieur ou égal à 1.
+ - il doit être unique dans la configuration.
+
+portNumber : numéro de port sur la carte.
+ - il doit être supérieur ou égal à 1.
+
+direction : indique si le port est une entrée ou une sortie.
+ - In : le port est une entrée.
+ - Out : le port est une sortie.
+
+mod : Analog ou Digital : détermine le choix d'utilisation du port.
+ - Analog : traitement par valeur analogique.
+ - Digital : traitement par bit ou octet.
+
+logicIn : 0 ou 1 : permet de mettre une logique inverse sur les ports booléens en entrée.
+ - 0 : logique inverse est désactivée.
+ - 1 : logique inverse est activée.
+
+logicOut : 0 ou 1 : permet de mettre une logique inverse sur les ports booléens en sortie.
+ - 0 : logique inverse est désactivée.
+ - 1 : logique inverse est activée.
+
+PARAMETRES OPTIONNELS :
+name : nom utilisé pour différencier les ports dans la trace.
+ - le nom doit commencer par une lettre.
+ 
+trace : 0, 1 ou 2 : affichage du contenu des trames pour ce port.
+ - 0 : affichage des erreurs de communication uniquement (optimise les performances).
+ - 1 : affichage du contenu des trames en hexadécimal.
+ - 2 : affichage du contenu des trames en hexadécimal et de l'état des variables de la trame.</cbBalloon>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="CB_EquipmentNumber" use="required" default="1"/>
+			<xs:attribute name="portNumber" use="required" default="0"/>
+			<xs:attribute name="direction"  use="required" default="in"/>
+			<xs:attribute name="mod" use="required" default="Digital"/>
+			<xs:attribute name="logicIn" use="required" default="0"/>
+			<xs:attribute name="logicOut" use="required" default="0"/>
+			<xs:attribute name="name" use="optional" default=""/>
+			<xs:attribute name="trace" use="optional" default="0"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

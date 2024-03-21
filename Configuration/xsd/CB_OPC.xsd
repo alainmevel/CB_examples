@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: controlbuild -->
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Configuration">
+		<xs:annotation>
+			<xs:appinfo>
+				<cbIcon>preferences</cbIcon>
+				<cbBalloon lang="en">___________________________________________________________________________________________
+Configuration: contains the global parameters.
+___________________________________________________________________________________________
+OPTIONAL PARAMETERS:
+trace: 0, 1 or 2: displays the initialization and the exchanged data.
+ - 0: displays only the communication errors (used for optimal performances).
+ - 1: displays the communication errors and the exchanged data.
+ - 2: displays the initialization, the communication errors and the exchanged data.
+ 
+log: 0, 1, 2 or 3: write the messages of the console into a log file.
+ - 0: no log written.
+ - 1: writes the error messages.
+ - 2: writes the error and warning messages.
+ - 3: writes all messages (not recommended).</cbBalloon>
+				<cbBalloon lang="fr">___________________________________________________________________________________________
+Configuration : contient les paramètres globaux.
+___________________________________________________________________________________________
+PARAMETRES OPTIONNELS :
+trace : 0, 1 ou 2 : affichage de l’initialisation et des données échangées.
+ - 0 : affichage des erreurs de communication uniquement (optimise les performances).
+ - 1 : affichage des erreurs de communication et des données échangées.
+ - 2 : affichage de l’initialisation, des erreurs de communication et des données échangées.
+ 
+log: 0, 1, 2 ou 3 : écrit les messages de la console dans un fichier log.
+ - 0 : pas de log écrit.
+ - 1 : écrit les messages d'erreur.
+ - 2 : écrit les messages d'erreur et de warning.
+ - 3 : écrit tous les messages (déconseillé).</cbBalloon>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Server"/>
+			</xs:sequence>
+			<xs:attribute name="xmlns:xsi"/>
+			<xs:attribute name="xsi:noNamespaceSchemaLocation"/>
+			<xs:attribute name="CBRefreshRate" use="prohibited" default="50"/>
+			<xs:attribute name="trace" use="optional" default="2"/>
+			<xs:attribute name="log" use="optional" default="1"/>
+			<xs:attribute name="logName" use="prohibited" default="C:\CB_OPC.log"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Server">
+		<xs:annotation>
+			<xs:appinfo>
+				<cbIcon>rack</cbIcon>
+				<cbBalloon lang="en">___________________________________________________________________________________________
+Server: contains the parameters of an OPC server.
+___________________________________________________________________________________________
+REQUIRED PARAMETERS:
+serverName: name of the OPC server.
+
+ipAddress: IP address of the OPC server.
+
+trace: 0 or 1: displays the details of communcations for this server.
+ - 0: displays only the communication errors (used for optimal performances).
+ - 1: displays the details of communcations.</cbBalloon>
+ 			<cbBalloon lang="fr">___________________________________________________________________________________________
+Server : contient les paramètres d'un serveur OPC.
+___________________________________________________________________________________________
+PARAMETRES OBLIGATOIRES :
+serverName : nom du serveur OPC.
+
+ipAddress : adresse IP du serveur OPC.
+
+trace : 0 ou 1 : affichage du détail des communications pour ce serveur.
+ - 0 : affichage des erreurs de communication uniquement (optimise les performances).
+ - 1 : affichage du détail des communications.</cbBalloon>
+ 		</xs:appinfo>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Group">
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="serverName" use="required" default="NoName.OPC.V1"/>
+			<xs:attribute name="ipAddress" use="required" default="127.0.0.1"/>
+			<xs:attribute name="trace" use="required" default="1"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Group">
+		<xs:annotation>
+			<xs:appinfo>
+				<cbIcon>frame2</cbIcon>
+				<cbBalloon lang="en">___________________________________________________________________________________________
+Group: contains the parameters of a group of variables.
+___________________________________________________________________________________________
+REQUIRED PARAMETERS:
+CB_EquipmentNumber: is the number of the server/group combo. 
+ - it must be greater or equal to 1.
+ - it must be unique in the configuration.
+
+hierarchy: hierarchy under which one will find the OPC item.
+
+updateRate: is the time after which the driver checks if some variables need an update.
+ - its unit is the millisecond and it must be greater or equal to 1.
+
+writeMethod: sync, async10 or async20: defines the method of writing.
+
+dataChangeMethod: dataChange10, dataTimeChange10 or dataChange20: defines the method of reading.</cbBalloon>
+				<cbBalloon lang="fr">___________________________________________________________________________________________
+Group : contient les paramètres d'un groupe de variables.
+___________________________________________________________________________________________
+PARAMETRES OBLIGATOIRES :
+CB_EquipmentNumber : est le numéro de combinaison serveur/groupe. 
+ - il doit être supérieur ou égal à 1.
+ - il doit être unique dans la configuration.
+
+hierarchy : hiérarchie sur laquelle se trouve l'item OPC.
+
+updateRate : spécifie le temps au bout duquel le driver vérifie si les variables sont à mettre à jour.
+ - il est exprimé en millisecondes et doit être supérieur ou égal à 1.
+
+writeMethod : sync, async10 ou async20 : définit la méthode d'écriture.
+
+dataChangeMethod : dataChange10, dataTimeChange10 ou dataChange20 : définit la méthode de lecture.</cbBalloon>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="CB_EquipmentNumber" use="required" default="1"/>
+			<xs:attribute name="hierarchy" use="required" default="Channel1"/>
+			<xs:attribute name="updateRate" use="required" default="300"/>
+			<xs:attribute name="writeMethod" use="required" default="async20"/>
+			<xs:attribute name="dataChangeMethod" use="required" default="dataChange20"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

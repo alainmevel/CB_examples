@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-03T11:13:59-01:00" />
+	<contentHeader name="op_chain">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="32" y="8" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+			<pou name="tri_chain.op_chain" pouType="program">
+				<interface>
+					<inputVars>
+						<variable name="forward">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>c4f58f8b-9712-40b0-9ada-b0859b629ca2</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<outputVars>
+						<variable name="localRun">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>61b1e014-2c6c-4e6a-9bce-305694380bf5</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="start_sensor">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>468dc5cf-9bbd-4ea1-9ade-0ec65985e37a</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="end_sensor">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>14a8dd11-ce41-428a-a7fb-bb64c82ba85a</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<addData>
+					</addData>
+				</interface>
+				<actions>
+				</actions>
+				<body>
+					<FBD>
+						<inVariable localId="0">
+							<position x="72" y="144" />
+							<expression>forward</expression>
+						</inVariable>
+						<outVariable localId="1">
+							<position x="504" y="360" />
+							<connectionPointIn>
+								<connection refLocalId="2" formalParameter="output" />
+							</connectionPointIn>
+							<expression>localRun</expression>
+						</outVariable>
+						<outVariable localId="3">
+							<position x="504" y="384" />
+							<connectionPointIn>
+								<connection refLocalId="4" formalParameter="passing" />
+							</connectionPointIn>
+							<expression>start_sensor</expression>
+						</outVariable>
+						<outVariable localId="5">
+							<position x="504" y="408" />
+							<connectionPointIn>
+								<connection refLocalId="6" formalParameter="passing" />
+							</connectionPointIn>
+							<expression>end_sensor</expression>
+						</outVariable>
+						<block localId="7" width="252" height="151" typeName="tri_chain.motor1dir_1speed" instanceName="motor1dir">
+							<position x="144" y="96" />
+							<inputVariables>
+								<variable formalParameter="forward">
+									<connectionPointIn>
+										<connection refLocalId="0">
+											<position x="80" y="144" />
+											<position x="113" y="144" />
+											<position x="113" y="144" />
+											<position x="144" y="144" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="cmdSupply">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="sensorSupply">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="voltage380">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="speedVal">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="speedPercent">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="thermal">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="forwardFB">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value>This module simulates the behaviour of a motor with 1 direction and 1 speed and its electrical control logic.</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>d8ad55e0-c2c6-4610-8302-3cf4f2f310a9</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="2" width="182" height="86" typeName="tri_chain.button" instanceName="runButton">
+							<position x="144" y="312" />
+							<inputVariables>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="output">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>ec7826f5-0196-48e0-9380-1e43c4d33183</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="4" width="253" height="97" typeName="tri_chain.passing_sensor" instanceName="start_sensor">
+							<position x="144" y="408" />
+							<inputVariables>
+								<variable formalParameter="sensorSupply">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="passing">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>7cca8008-0c73-41fe-9124-f1ef99c93568</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="6" width="285" height="82" typeName="tri_chain.passing_sensor" instanceName="end_sensor">
+							<position x="144" y="528" />
+							<inputVariables>
+								<variable formalParameter="sensorSupply">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="passing">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>ff8d08ff-4b01-4435-87d3-490e0f89c3b9</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="8" width="360" height="106" typeName="tri_chain.conveyor1" instanceName="chain">
+							<position x="456" y="96" />
+							<inputVariables>
+								<variable formalParameter="linearSpeed">
+									<connectionPointIn>
+										<connection refLocalId="7" formalParameter="speedVal">
+											<position x="396" y="144" />
+											<position x="434" y="144" />
+											<position x="434" y="144" />
+											<position x="456" y="144" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>8a02cbb5-53cf-433f-9bcc-8fca57ae50b9</value>
+								</data>
+							</addData>
+						</block>
+					</FBD>
+				</body>
+				<addData>
+					<data name="Geensys.CB.AutomaticScheduling" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+				</addData>
+			</pou>
+		</pous>
+	</types>
+	<instances>
+		<configurations />
+	</instances>
+</project>

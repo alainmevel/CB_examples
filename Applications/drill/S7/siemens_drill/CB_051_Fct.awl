@@ -1,0 +1,69 @@
+FUNCTION_BLOCK FB51
+TITLE = 'fault_F2'
+AUTHOR : CB
+
+VAR
+	F2RCYL1FLT : FB46;
+	F2LCYL1FLT : FB46;
+END_VAR
+
+
+BEGIN
+
+
+NETWORK
+TITLE = 
+//
+//	fault/fault_F2/F2RCYL1FLT
+A	"DB90".F2RCYL1_workCmd;
+=	L	0.0;
+BLD	103;
+A	"DB90".F2RCYL1_outletSensor;
+=	L	0.1;
+BLD	103;
+A	"DB90".F2RCYL1_inletSensor;
+=	L	0.2;
+BLD	103;
+A	"DB90".F3SpinM1_acknowledgePB;
+=	L	0.3;
+BLD	103;
+CALL #F2RCYL1FLT(
+	workCmd := L	0.0,
+	outletSensor := L	0.1,
+	inletSensor := L	0.2,
+	acknowledgePB := L	0.3,
+	generalFault := "DB90".F2RCYL1_generalFault
+);
+NOP 0;
+
+
+
+NETWORK
+TITLE = 
+//
+//	fault/fault_F2/F2LCYL1FLT
+A	"DB90".F2LCYL1_workCmd;
+=	L	0.0;
+BLD	103;
+A	"DB90".F2LCYL1_outletSensor;
+=	L	0.1;
+BLD	103;
+A	"DB90".F2LCYL1_inletSensor;
+=	L	0.2;
+BLD	103;
+A	"DB90".F3SpinM1_acknowledgePB;
+=	L	0.3;
+BLD	103;
+CALL #F2LCYL1FLT(
+	workCmd := L	0.0,
+	outletSensor := L	0.1,
+	inletSensor := L	0.2,
+	acknowledgePB := L	0.3,
+	generalFault := "DB90".F2LCYL1_generalFault
+);
+NOP 0;
+
+
+
+
+END_FUNCTION_BLOCK

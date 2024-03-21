@@ -1,0 +1,25 @@
+ acknowledgePB IB1
+ autoMode IB2
+ manualMode IB3
+ releasing IB4
+ clamping IB5
+ clampingOK OB6
+ releasingOK OB7
+ clampingFault OI8
+ ~ LF9
+ ~ LF10
+ ~ LF11
+ ~ LF12
+ ~ LF13
+ ~ LF14
+ ~ LB15
+ ~ LB16
+ ~ LB17
+ ~ LB18
+ ~ LB19
+ ~ LB20
+ ~ LB21
+ ~ LB22
+<drill:clamping clampingFunction/ 1 acknowledgePB 1 releasing 4 clamping 5 rightUnlocked 15 rightLocked 16 leftUnlocked 17 leftLocked 18 rightFault 19 leftFault 20 clampingOK 6 releasingOK 7 clampingFault 8 rightLocking 22 leftLocking 21>
+<io_library:io_single_acting_jack leftJack/ 1 acknowledgePB 1 autoMode 2 manualMode 3 autoWorkCmd 21 generalFault 20 inletSensor 17 outletSensor 18 rodPosition 14 rodPercent 13 incrementValue 12>
+<io_library:io_single_acting_jack rightJack/ 1 acknowledgePB 1 autoMode 2 manualMode 3 autoWorkCmd 22 generalFault 19 inletSensor 15 outletSensor 16 rodPosition 11 rodPercent 10 incrementValue 9>

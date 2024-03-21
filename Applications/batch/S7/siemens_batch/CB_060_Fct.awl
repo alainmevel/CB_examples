@@ -1,0 +1,169 @@
+FUNCTION_BLOCK FB60
+TITLE = 'fault_F2'
+AUTHOR : CB
+
+VAR
+	F2ArVSir1FLT : FB42;
+	F2ArVSir2FLT : FB42;
+	F2ArVSir3FLT : FB42;
+	F2SirExV1FLT : FB42;
+	FLT2PROC : FB59;
+END_VAR
+
+
+BEGIN
+
+
+NETWORK
+TITLE = 
+//
+//	fault/fault_F2/F2ArVSir1FLT
+A	Q00.4;
+=	L	0.0;
+BLD	103;
+A	Q00.3;
+=	L	0.1;
+BLD	103;
+A	I05.5;
+=	L	0.2;
+BLD	103;
+A	I05.6;
+=	L	0.3;
+BLD	103;
+A	I00.6;
+=	L	0.4;
+BLD	103;
+CALL #F2ArVSir1FLT(
+	closeCmd := L	0.0,
+	openCmd := L	0.1,
+	closedSensorFB := L	0.2,
+	openedSensorFB := L	0.3,
+	acknowledgePB := L	0.4,
+	generalFault := "DB120".F2ArVSir1_generalFault
+);
+NOP 0;
+
+
+
+NETWORK
+TITLE = 
+//
+//	fault/fault_F2/F2ArVSir2FLT
+A	Q01.2;
+=	L	0.0;
+BLD	103;
+A	Q01.1;
+=	L	0.1;
+BLD	103;
+A	I05.3;
+=	L	0.2;
+BLD	103;
+A	I05.4;
+=	L	0.3;
+BLD	103;
+A	I00.6;
+=	L	0.4;
+BLD	103;
+CALL #F2ArVSir2FLT(
+	closeCmd := L	0.0,
+	openCmd := L	0.1,
+	closedSensorFB := L	0.2,
+	openedSensorFB := L	0.3,
+	acknowledgePB := L	0.4,
+	generalFault := "DB120".F2ArVSir2_generalFault
+);
+NOP 0;
+
+
+
+NETWORK
+TITLE = 
+//
+//	fault/fault_F2/F2ArVSir3FLT
+A	Q01.6;
+=	L	0.0;
+BLD	103;
+A	Q01.5;
+=	L	0.1;
+BLD	103;
+A	I05.1;
+=	L	0.2;
+BLD	103;
+A	I05.2;
+=	L	0.3;
+BLD	103;
+A	I00.6;
+=	L	0.4;
+BLD	103;
+CALL #F2ArVSir3FLT(
+	closeCmd := L	0.0,
+	openCmd := L	0.1,
+	closedSensorFB := L	0.2,
+	openedSensorFB := L	0.3,
+	acknowledgePB := L	0.4,
+	generalFault := "DB120".F2ArVSir3_generalFault
+);
+NOP 0;
+
+
+
+NETWORK
+TITLE = 
+//
+//	fault/fault_F2/F2SirExV1FLT
+A	Q02.2;
+=	L	0.0;
+BLD	103;
+A	Q02.1;
+=	L	0.1;
+BLD	103;
+A	I04.7;
+=	L	0.2;
+BLD	103;
+A	I05.0;
+=	L	0.3;
+BLD	103;
+A	I00.6;
+=	L	0.4;
+BLD	103;
+CALL #F2SirExV1FLT(
+	closeCmd := L	0.0,
+	openCmd := L	0.1,
+	closedSensorFB := L	0.2,
+	openedSensorFB := L	0.3,
+	acknowledgePB := L	0.4,
+	generalFault := "DB120".F2SirExV1_generalFault
+);
+NOP 0;
+
+
+
+NETWORK
+TITLE = 
+//
+//	fault/fault_F2/FLT2PROC
+A	"DB120".F2ArVSir1_generalFault;
+=	L	0.0;
+BLD	103;
+A	"DB120".F2ArVSir2_generalFault;
+=	L	0.1;
+BLD	103;
+A	"DB120".F2ArVSir3_generalFault;
+=	L	0.2;
+BLD	103;
+A	"DB120".F2SirExV1_generalFault;
+=	L	0.3;
+BLD	103;
+CALL #FLT2PROC(
+	generalFault1 := L	0.0,
+	generalFault2 := L	0.1,
+	generalFault3 := L	0.2,
+	generalFault4 := L	0.3,
+	fault := "DB120".faultFLT2
+);
+NOP 0;
+
+
+
+
+END_FUNCTION_BLOCK

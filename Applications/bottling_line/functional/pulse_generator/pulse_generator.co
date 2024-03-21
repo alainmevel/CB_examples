@@ -1,0 +1,7 @@
+ speed IF1
+ sensorSupply IB2
+ pulseSensor OB3
+ counter LF4
+ pulseDuration PF5
+ d_sensor DB6
+ v_d_sensor DB7

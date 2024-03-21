@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild4.00 -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6.xsd TC6_XML_V099_TNI.xsd">
+	<fileHeader companyName="TNI-Software" productName="ControlBuild" productVersion="4.00.17" creationDateTime="2005-06-20T11:53:55-01:00" />
+	<contentHeader name="actuator">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="32" y="8" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+			<pou name="cmd_equipment_library.actuator" pouType="functionBlock">
+				<interface>
+					<inputVars>
+						<variable name="autoMode">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<documentation>CB.libelle=Automatic mode</documentation>
+						</variable>
+						<variable name="manualMode">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<documentation>CB.libelle=Manual mode</documentation>
+						</variable>
+						<documentation>CB.group=Modes
+CB.kind=inputVars</documentation>
+					</inputVars>
+					<inputVars>
+						<variable name="autoCmd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<documentation>CB.libelle=Automatic command of the pump</documentation>
+						</variable>
+						<documentation>CB.group=Commands
+CB.kind=inputVars</documentation>
+					</inputVars>
+					<inputVars>
+						<variable name="onPB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<documentation>CB.libelle=On pump pushbutton</documentation>
+						</variable>
+						<variable name="offPB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<documentation>CB.libelle=Off pump pushbutton</documentation>
+						</variable>
+						<documentation>CB.group=PushButtons
+CB.kind=inputVars</documentation>
+					</inputVars>
+					<inputVars>
+						<variable name="generalFault">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<documentation>CB.mnemonicPatternPropertyName=&lt;SY&gt;_DEF_&lt;NU&gt;
+CB.libelle=General fault of the valve</documentation>
+						</variable>
+						<documentation>CB.kind=inputVars</documentation>
+					</inputVars>
+					<outputVars>
+						<variable name="cmd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<documentation>CB.mnemonicPatternPropertyName=cmd&lt;SY&gt;&lt;NU&gt;
+CB.libelle=Command to the pump</documentation>
+						</variable>
+						<documentation>CB.group=Orders
+CB.kind=outputVars</documentation>
+					</outputVars>
+				</interface>
+				<actions>
+				</actions>
+				<body>
+					<LD>
+						<leftPowerRail localId="9">
+							<position x="0" y="100" />
+						</leftPowerRail>
+						<label localId="0" label="1">
+							<position x="0" y="0" />
+							<documentation>Command to the pump</documentation>
+						</label>
+						<contact localId="1">
+							<position x="0" y="100" />
+							<variable>autoMode</variable>
+						</contact>
+						<contact localId="2">
+							<position x="0" y="200" />
+							<variable>manualMode</variable>
+						</contact>
+						<contact localId="6">
+							<position x="100" y="100" />
+							<connectionPointIn>
+								<connection refLocalId="1" />
+							</connectionPointIn>
+							<variable>autoCmd</variable>
+						</contact>
+						<contact localId="3">
+							<position x="100" y="200" />
+							<connectionPointIn>
+								<connection refLocalId="2" />
+							</connectionPointIn>
+							<variable>onPB</variable>
+						</contact>
+						<contact localId="4">
+							<position x="100" y="300" />
+							<connectionPointIn>
+								<connection refLocalId="2" />
+							</connectionPointIn>
+							<variable>cmd</variable>
+						</contact>
+						<contact localId="7" negated="true">
+							<position x="200" y="200" />
+							<connectionPointIn>
+								<connection refLocalId="3" />
+								<connection refLocalId="4" />
+							</connectionPointIn>
+							<variable>offPB</variable>
+						</contact>
+						<contact localId="8" negated="true">
+							<position x="900" y="100" />
+							<connectionPointIn>
+								<connection refLocalId="6" />
+								<connection refLocalId="7" />
+							</connectionPointIn>
+							<variable>generalFault</variable>
+						</contact>
+						<coil localId="5">
+							<position x="1000" y="100" />
+							<connectionPointIn>
+								<connection refLocalId="8" />
+							</connectionPointIn>
+							<variable>cmd</variable>
+						</coil>
+						<rightPowerRail localId="10">
+							<position x="1100" y="100" />
+							<connectionPointIn>
+								<connection refLocalId="5" />
+							</connectionPointIn>
+						</rightPowerRail>
+					</LD>
+				</body>
+			</pou>
+		</pous>
+	</types>
+	<instances>
+		<configurations />
+	</instances>
+</project>

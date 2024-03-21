@@ -1,0 +1,45 @@
+FUNCTION_BLOCK FB 74
+TITLE = 'manufacturing_fault_faults'
+AUTHOR : CB
+
+
+VAR_INPUT
+	fault3 : BOOL := FALSE;	//
+	fault2 : BOOL := FALSE;	//
+	fault1 : BOOL := FALSE;	//
+END_VAR
+
+VAR_OUTPUT
+	generalFault : BOOL := FALSE;	//
+END_VAR
+
+BEGIN
+
+
+NETWORK
+TITLE = 
+//
+L1:	O	fault3;
+O	fault1;
+O	fault2;
+=	generalFault;
+
+
+
+
+NETWORK
+TITLE = 
+//
+L2:	NOP 0
+
+
+
+NETWORK
+TITLE = 
+//
+L3:	NOP 0
+
+
+
+
+END_FUNCTION_BLOCK

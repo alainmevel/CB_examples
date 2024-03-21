@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<MODEL_REQUIREMENTS>
+	<FUNCTIONAL_TREE TYPE="mac">
+		<CHILDREN>
+			<NODE NAME="cp_trichain" MODEL_PATH="Applications\tri_chain\cp_trich">
+			</NODE>
+			<NODE NAME="op_trichain" MODEL_PATH="Applications\tri_chain\op_trich">
+			</NODE>
+		</CHILDREN>
+	</FUNCTIONAL_TREE>
+</MODEL_REQUIREMENTS>

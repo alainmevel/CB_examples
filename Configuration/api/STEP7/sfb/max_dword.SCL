@@ -1,0 +1,32 @@
+
+FUNCTION CB_max_dword : DWORD
+
+TITLE = ' Search for the greater variable '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : maxDword
+FAMILY  : TNI
+
+VAR_INPUT
+    IN0 : DWORD;
+    IN1 : DWORD;
+END_VAR
+
+VAR_TEMP
+    pf1 : BOOL;
+    pf2 : BOOL;
+END_VAR
+
+BEGIN
+    
+pf1 := ((IN0 AND DW#16#8000_0000) <> 0) ;
+pf2 := ((IN1 AND DW#16#8000_0000) <> 0) ;
+IF (pf1 AND NOT pf2) THEN 
+    CB_max_dword := IN0;
+ELSIF (pf2 AND NOT pf1) THEN  
+    CB_max_dword := IN1;
+ELSE
+    CB_max_dword := DINT_TO_DWORD(MAX(IN1 := DWORD_TO_DINT((IN0 AND DW#16#7FFF_FFFF)), IN2 := DWORD_TO_DINT(IN1 AND DW#16#7FFF_FFFF)));
+END_IF;
+
+END_FUNCTION

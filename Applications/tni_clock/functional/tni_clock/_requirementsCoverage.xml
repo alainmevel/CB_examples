@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<APPLICATION_REQUIREMENTS>
+	<NODE NAME="tni_clock" TYPE="mac" MODEL_PATH="E:\dev\ControlBuild_2012-1\examples\examples\Applications\tni_clock\functional\tni_clock" UUID="6ae4423e-4c9f-481c-8463-aae2c8ee0ac6">
+		<CHILDREN>
+			<NODE NAME="environment" TYPE="c" MODEL_PATH="E:\dev\ControlBuild_2012-1\examples\examples\Applications\tni_clock\functional\environment" UUID="e5e566b6-6cb6-46fb-9e16-79645ff055f2">
+				<CHILDREN>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="controller" TYPE="mac" MODEL_PATH="E:\dev\ControlBuild_2012-1\examples\examples\Applications\tni_clock\functional\controller" UUID="bd9779a4-fbbe-468c-837b-ab3c49234e20">
+				<CHILDREN>
+					<NODE NAME="timeManagement" TYPE="st" MODEL_PATH="E:\dev\ControlBuild_2012-1\examples\examples\Applications\tni_clock\functional\time_management" UUID="94c9942e-ec2e-450a-b238-8a4f22ca67bd">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="displayManagement" TYPE="st" MODEL_PATH="E:\dev\ControlBuild_2012-1\examples\examples\Applications\tni_clock\functional\display_management" UUID="b84b447f-807c-4223-bbc0-64e7ec3e81fd">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="LCD" TYPE="st" MODEL_PATH="E:\dev\ControlBuild_2012-1\examples\examples\Applications\tni_clock\functional\lcd" UUID="f4ed0d6c-8581-486d-8f25-04b5b0cec89a">
+				<CHILDREN>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="motors" TYPE="st" MODEL_PATH="E:\dev\ControlBuild_2012-1\examples\examples\Applications\tni_clock\functional\motors" UUID="847f559b-4457-4236-a571-cd056420945e">
+				<CHILDREN>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="light" TYPE="st" MODEL_PATH="E:\dev\ControlBuild_2012-1\examples\examples\Applications\tni_clock\functional\light" UUID="78383e35-e3b9-426d-ae89-6cd781e5324c">
+				<CHILDREN>
+				</CHILDREN>
+			</NODE>
+		</CHILDREN>
+	</NODE>
+</APPLICATION_REQUIREMENTS>

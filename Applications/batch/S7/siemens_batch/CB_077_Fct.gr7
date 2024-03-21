@@ -1,0 +1,73 @@
+FUNCTION_BLOCK FB 77
+
+CMPSET
+	S7Graph-Version: 5100
+         WarningLevel: None
+         FBInterface: Minimum
+         SSBLevel: Individual
+         ASMsgLevel: No
+         TargetMachine: AS300StdBlock
+         RuntimeBlock: FC 70
+         CritAvail: F
+         SSkipOn: F
+         AckReq: F
+         SyncAvail: F
+         PermILMan: F
+         SWMLocked: F
+         InitVarStat: 4401
+         SaveSwitching: F
+END_CMPSET
+
+INITIAL_STEP Step10 (*$_NUM 10*)  :
+(* $_COM  *)
+END_STEP
+
+STEP Step11 (*$_NUM 11*)  :
+(* $_COM  *)
+END_STEP
+
+STEP Step12 (*$_NUM 12*)  :
+(* $_COM  *)
+END_STEP
+
+STEP Step13 (*$_NUM 13*)  :
+(* $_COM  *)
+END_STEP
+
+STEP Step14 (*$_NUM 14*)  :
+(* $_COM  *)
+END_STEP
+
+TRANSITION Trans10 (*$_NUM 10*) 
+	FROM (Step10)
+	TO (Step11) :
+CONDITION := "DB120".WKM1_cycleInProgress
+END_TRANSITION
+
+TRANSITION Trans11 (*$_NUM 11*) 
+	FROM (Step11)
+	TO (Step12) :
+CONDITION := "DB120".FloMGT1_weighingOk AND "DB120".WKM1_cycleInProgress
+END_TRANSITION
+
+TRANSITION Trans12 (*$_NUM 12*) 
+	FROM (Step12)
+	TO (Step13) :
+CONDITION := "DB120".SyrMGT1_weighingOk AND "DB120".WKM1_cycleInProgress
+END_TRANSITION
+
+TRANSITION Trans13 (*$_NUM 13*) 
+	FROM (Step13)
+	TO (Step14) :
+CONDITION := "DB120".KNEAD1_kneadingOK AND "DB120".WKM1_cycleInProgress
+END_TRANSITION
+
+TRANSITION Trans14 (*$_NUM 14*) 
+	FROM (Step14)
+	TO (Step10) (*$_JUMP*) :
+
+END_TRANSITION
+
+
+
+END_FUNCTION_BLOCK

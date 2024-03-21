@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<MODEL_REQUIREMENTS>
+	<FUNCTIONAL_TREE TYPE="mac">
+		<CHILDREN>
+			<NODE NAME="doorPB" MODEL_PATH="Applications\tni_train\pb_door">
+			</NODE>
+			<NODE NAME="doorLocking" MODEL_PATH="Applications\tni_train\op_door_locking">
+			</NODE>
+			<NODE NAME="doorControlPart" MODEL_PATH="Applications\tni_train\cp_door">
+			</NODE>
+			<NODE NAME="door" MODEL_PATH="Applications\tni_train\op_door">
+			</NODE>
+		</CHILDREN>
+	</FUNCTIONAL_TREE>
+</MODEL_REQUIREMENTS>

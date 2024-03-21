@@ -1,0 +1,8 @@
+ inputValueD II1
+ inputValueI II2
+ outputValue OF3
+ coefficient PF4
+ offset PF5
+ selectDouble PB6
+ d_scale DB7
+ v_d_scale DF8

@@ -1,0 +1,23 @@
+
+FUNCTION CB_real_to_int : INT
+
+
+TITLE = ' Convert a real into an integer '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : realInt
+FAMILY  : TNI
+
+VAR_INPUT
+    IN : REAL;
+END_VAR
+
+VAR_TEMP
+
+END_VAR    
+
+BEGIN
+
+CB_real_to_int := REAL_TO_INT(IN);
+
+END_FUNCTION

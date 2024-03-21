@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<CB_COMPONENT NAME="controller" COMMENTS="" PICTURE_PATH="" INSTANCE_NAMIMG_PATTERN="" COMPONENT_CLASS="" SAFE_MODE="True" BREAKPOINT="False" GEN_STATUS="good">
+	<MODEL_REQUIREMENTS>
+&#9;
+		<COMMENTS />
+&#9;
+		<FUNCTIONAL_TREE TYPE="mac">
+&#9;&#9;
+			<CHILDREN>
+				<NODE NAME="timeManagement" MODEL_PATH="Applications\tni_clock\time_management">
+					<NODE NAME="displayManagement" MODEL_PATH="Applications\tni_clock\display_management" /></NODE></CHILDREN></FUNCTIONAL_TREE></MODEL_REQUIREMENTS>
+</CB_COMPONENT>

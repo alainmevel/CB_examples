@@ -1,0 +1,19 @@
+
+FUNCTION CB_min_real : REAL
+
+TITLE = ' Search for the greater variable '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : minReal
+FAMILY  : TNI
+
+VAR_INPUT
+    IN0 : REAL;
+    IN1 : REAL;
+END_VAR
+
+BEGIN
+
+    CB_min_real := MIN(IN1 := IN0, IN2 := IN1);
+
+END_FUNCTION

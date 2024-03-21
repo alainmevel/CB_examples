@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<LIBRARY NAME="equipment_library" STANDARD="TRUE" LV="FALSE" FB="FALSE">
+	<PROPERTIES>
+		<PROPERTY NAME="IdentifierProperty" VALUE="67698f8e-5470-415a-b09d-326f25734dc0">
+		</PROPERTY>
+		<PROPERTY NAME="noitintilppa" VALUE="true">
+			<PROPERTIES>
+				<PROPERTY NAME="IdentifierProperty" VALUE="00000000-0000-0000-0000-000000000000">
+				</PROPERTY>
+			</PROPERTIES>
+		</PROPERTY>
+		<PROPERTY NAME="groupNameProperty" VALUE="Equipment Library">
+			<PROPERTIES>
+				<PROPERTY NAME="IdentifierProperty" VALUE="00000000-0000-0000-0000-000000000000">
+				</PROPERTY>
+			</PROPERTIES>
+		</PROPERTY>
+	</PROPERTIES>
+	<GROUPS>
+		<GROUP NAME="Toolbox">
+			<FILES>
+				<FILE NAME="addition_10" />
+				<FILE NAME="bounded_scale" />
+				<FILE NAME="coef_scale" />
+				<FILE NAME="int2real_scale" />
+				<FILE NAME="real2int_scale" />
+				<FILE NAME="int2real_conversion" />
+				<FILE NAME="linear_function" />
+				<FILE NAME="logical_and" />
+				<FILE NAME="logical_and_10" />
+				<FILE NAME="logical_or" />
+				<FILE NAME="logical_or_10" />
+				<FILE NAME="logical_xor" />
+				<FILE NAME="average" />
+				<FILE NAME="average_5" />
+				<FILE NAME="real2int_conversion" />
+				<FILE NAME="trend" />
+				<FILE NAME="addition" />
+			</FILES>
+			<GROUPS>
+			</GROUPS>
+		</GROUP>
+		<GROUP NAME="Power">
+			<FILES>
+				<FILE NAME="light" />
+				<FILE NAME="fuse" />
+				<FILE NAME="relay" />
+				<FILE NAME="circuit_braker" />
+				<FILE NAME="switch_3pos_2outputs" />
+				<FILE NAME="switch_2pos_2outputs" />
+				<FILE NAME="switch_2pos_1output" />
+				<FILE NAME="illuminated_button" />
+				<FILE NAME="power_supply" />
+				<FILE NAME="maintained_button" />
+				<FILE NAME="momentary_button" />
+			</FILES>
+			<GROUPS>
+			</GROUPS>
+		</GROUP>
+		<GROUP NAME="Actuators">
+			<FILES>
+				<FILE NAME="axle" />
+				<FILE NAME="cam_1dir_1speed" />
+				<FILE NAME="cam" />
+				<FILE NAME="cam_1dir_2speed" />
+				<FILE NAME="cam_2dir_1speed" />
+				<FILE NAME="cam_2dir_2speed" />
+				<FILE NAME="ramp_1dir_1speed" />
+				<FILE NAME="ramp_1dir_2speed" />
+				<FILE NAME="ramp_2dir_1speed" />
+				<FILE NAME="ramp_2dir_2speed" />
+				<FILE NAME="double_acting_rod" />
+				<FILE NAME="single_acting_rod" />
+				<FILE NAME="roundcam" />
+			</FILES>
+			<GROUPS>
+			</GROUPS>
+		</GROUP>
+		<GROUP NAME="Preactuators">
+			<FILES>
+				<FILE NAME="contactor" />
+				<FILE NAME="contactor_1dir_2speed" />
+				<FILE NAME="contactor_2dir_1speed" />
+				<FILE NAME="contactor_2dir_2speed" />
+				<FILE NAME="control_valve_32" />
+				<FILE NAME="control_valve_53" />
+				<FILE NAME="control_valve_52" />
+				<FILE NAME="control_valve_42" />
+			</FILES>
+			<GROUPS>
+			</GROUPS>
+		</GROUP>
+		<GROUP NAME="Associations - motors">
+			<FILES>
+				<FILE NAME="motor_1dir_1speed" />
+				<FILE NAME="motor_1dir_2speed" />
+				<FILE NAME="motor_2dir_1speed" />
+				<FILE NAME="motor_2dir_2speed" />
+				<FILE NAME="variable_speed_drive" />
+			</FILES>
+			<GROUPS>
+			</GROUPS>
+		</GROUP>
+		<GROUP NAME="Associations - jacks">
+			<FILES>
+				<FILE NAME="single_acting_jack" />
+				<FILE NAME="double_acting_jack" />
+				<FILE NAME="electric_jack" />
+				<FILE NAME="double_acting_jack_lmp" />
+			</FILES>
+			<GROUPS>
+			</GROUPS>
+		</GROUP>
+		<GROUP NAME="Associations - batch">
+			<FILES>
+				<FILE NAME="on_off_valve" />
+				<FILE NAME="single_acting_valve" />
+				<FILE NAME="tank" />
+				<FILE NAME="agitator_1speed" />
+				<FILE NAME="agitator_2speed" />
+				<FILE NAME="motorized_valve" />
+				<FILE NAME="flow_compute" />
+				<FILE NAME="on_off_pump" />
+				<FILE NAME="analog_pump" />
+				<FILE NAME="control_valve" />
+				<FILE NAME="hopper" />
+				<FILE NAME="balance" />
+				<FILE NAME="conveyor_belt" />
+				<FILE NAME="flow_sensor" />
+			</FILES>
+			<GROUPS>
+			</GROUPS>
+		</GROUP>
+		<GROUP NAME="Actors and Products">
+			<FILES>
+				<FILE NAME="conveyor" />
+				<FILE NAME="presence_sensor" />
+				<FILE NAME="rotary_plate_ring" />
+				<FILE NAME="stop" />
+				<FILE NAME="suction_head" />
+				<FILE NAME="sensor_fault" />
+				<FILE NAME="product_creator" />
+				<FILE NAME="box" />
+				<FILE NAME="product_killer" />
+				<FILE NAME="tipper" />
+			</FILES>
+			<GROUPS>
+			</GROUPS>
+		</GROUP>
+		<GROUP NAME="Sensors">
+			<FILES>
+				<FILE NAME="binary_encoder" />
+				<FILE NAME="gray_encoder" />
+				<FILE NAME="range_sensor" />
+				<FILE NAME="threshold_sensor" />
+				<FILE NAME="analog_sensor" />
+			</FILES>
+			<GROUPS>
+			</GROUPS>
+		</GROUP>
+	</GROUPS>
+</LIBRARY>

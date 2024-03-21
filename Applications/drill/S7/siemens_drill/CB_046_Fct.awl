@@ -1,0 +1,142 @@
+FUNCTION_BLOCK FB 46
+TITLE = 'cmd_single_acting_jack_fault_faults'
+AUTHOR : CB
+
+
+VAR_INPUT
+	workCmd : BOOL := FALSE;	//Work command to the valve
+	outletSensor : BOOL := FALSE;	//Outlet sensor
+	inletSensor : BOOL := FALSE;	//Inlet sensor
+	acknowledgePB : BOOL := FALSE;	//Acknowledgement pushbutton
+END_VAR
+
+VAR_OUTPUT
+	generalFault : BOOL := FALSE;	//General fault of the jack
+END_VAR
+
+VAR
+	discordanceFault : BOOL := FALSE;	//Discordance between sensors
+	outletSensorFault : BOOL := FALSE;	//Outlet sensor fault
+	inletSensorFault : BOOL := FALSE;	//Inlet sensor fault
+	presetMvt : TIME := T#0h0m10s0ms;	//in seconds
+	presetDiscordance : TIME := T#0h0m0s200ms;	//in milliseconds
+	TON_OUT : "cb_ton";
+	TON_DISC : "cb_ton";
+	TON_IN : "cb_ton";
+END_VAR
+
+BEGIN
+
+
+NETWORK
+TITLE = 
+//Fault acknowledgement
+L1:	A	acknowledgePB;
+R	discordanceFault;
+
+NETWORK
+TITLE = 
+//Fault acknowledgement
+A	acknowledgePB;
+R	outletSensorFault;
+
+NETWORK
+TITLE = 
+//Fault acknowledgement
+A	acknowledgePB;
+R	inletSensorFault;
+
+NETWORK
+TITLE = 
+//Fault acknowledgement
+A	acknowledgePB;
+R	generalFault;
+
+
+
+
+NETWORK
+TITLE = 
+//Faults of movements
+L2:	A	workCmd;
+=	L0.0;
+BLD	103;
+L	presetMvt;
+T	LD2;
+BLD	103;
+CALL #TON_OUT(IN:=L0.0, 
+	PT:=LD2);
+NOP	0;
+
+NETWORK
+TITLE = 
+//Faults of movements
+A	TON_OUT.Q0;
+AN	outletSensor;
+S	outletSensorFault;
+
+NETWORK
+TITLE = 
+//Faults of movements
+AN	workCmd;
+=	L0.0;
+
+NETWORK
+TITLE = 
+//
+L	presetMvt;
+T	LD2;
+BLD	103;
+CALL #TON_IN(IN:=L0.0, 
+	PT:=LD2);
+NOP	0;
+
+NETWORK
+TITLE = 
+//Faults of movements
+A	TON_IN.Q0;
+AN	inletSensor;
+S	inletSensorFault;
+
+
+
+
+NETWORK
+TITLE = 
+//Discordance fault
+L3:	A	outletSensor;
+A	inletSensor;
+=	L0.0;
+
+NETWORK
+TITLE = 
+//
+L	presetDiscordance;
+T	LD2;
+BLD	103;
+CALL #TON_DISC(IN:=L0.0, 
+	PT:=LD2);
+NOP	0;
+
+NETWORK
+TITLE = 
+//Discordance fault
+A	TON_DISC.Q0;
+S	discordanceFault;
+
+
+
+
+NETWORK
+TITLE = 
+//General fault
+L4:	O	discordanceFault;
+O	outletSensorFault;
+O	inletSensorFault;
+S	generalFault;
+
+
+
+
+
+END_FUNCTION_BLOCK

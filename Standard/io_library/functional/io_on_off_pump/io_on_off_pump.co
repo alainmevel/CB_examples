@@ -1,0 +1,22 @@
+ acknowledgePB IB1
+ autoMode IB2
+ manualMode IB3
+ autoCmd IB4
+ inputFlow IF5
+ generalFault OB6
+ speedVal OF7
+ outputFlow OF8
+ ~ LB9
+ ~ LB10
+ ~ LB11
+ ~ LB12
+ ~ LB13
+ ~ LB14
+ ~ LB15
+ ~ LB16
+ panel1/onPB OB15
+ panel1/offPB OB16
+<equipment_library:momentary_button panel1/onPB/ 1 PB 15>
+<equipment_library:momentary_button panel1/offPB/ 1 PB 16>
+<equipment_library:on_off_pump pump/ 1 voltage380 11 cmdSupply 10 sensorSupply 9 onCmd 12 inputFlow 5 onFB 14 thermal 13 speedVal 7 outputFlow 8>
+<cmd_equipment_library:cmd_on_off_pump cmdOfMotor/ 1 autoMode 2 manualMode 3 autoCmd 4 thermalFB 13 onFB 14 onPB 15 offPB 16 acknowledgePB 1 cmd 12 generalFault 6>

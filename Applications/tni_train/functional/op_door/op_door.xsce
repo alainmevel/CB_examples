@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<project xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-03T11:13:50-01:00" />
+	<contentHeader name="op_door" language="C_source_code" />
+	<types>
+		<pous>
+			<pou name="tni_train.op_door">
+				<interface>
+					<variable name="doorOpened" literal="">
+						<type>
+							<BOOL />
+						</type>
+						<initialValue>
+							<simpleValue value="false" />
+						</initialValue>
+						<addData>
+							<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+								<value>00000000-0000-0000-0000-000000000000</value>
+							</data>
+							<data name="Geensys.CB.ModelIdentifierProperty" handleUnknown="preserve">
+								<value>cafa46d8-88ad-4929-a302-baa0d3451a61</value>
+							</data>
+							<data name="Geensys.CB.visibility" handleUnknown="preserve">
+								<value>true</value>
+							</data>
+							<data name="Geensys.CB.bitIndex" handleUnknown="preserve">
+								<value>-28</value>
+							</data>
+						</addData>
+						<mnemonic>
+							<identifier name="doorOpened" />
+						</mnemonic>
+					</variable>
+					<variable name="openDoor" literal="">
+						<type>
+							<BOOL />
+						</type>
+						<initialValue>
+							<simpleValue value="false" />
+						</initialValue>
+						<addData>
+							<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+								<value>00000000-0000-0000-0000-000000000000</value>
+							</data>
+							<data name="Geensys.CB.ModelIdentifierProperty" handleUnknown="preserve">
+								<value>cf2b2649-4373-4777-b47d-e8471591fdc0</value>
+							</data>
+							<data name="Geensys.CB.visibility" handleUnknown="preserve">
+								<value>true</value>
+							</data>
+							<data name="Geensys.CB.bitIndex" handleUnknown="preserve">
+								<value>-28</value>
+							</data>
+						</addData>
+						<mnemonic>
+							<identifier name="openDoor" />
+						</mnemonic>
+					</variable>
+					<variable name="doorClosed" literal="">
+						<type>
+							<BOOL />
+						</type>
+						<initialValue>
+							<simpleValue value="false" />
+						</initialValue>
+						<addData>
+							<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+								<value>00000000-0000-0000-0000-000000000000</value>
+							</data>
+							<data name="Geensys.CB.ModelIdentifierProperty" handleUnknown="preserve">
+								<value>1bf1ea82-0503-4354-a637-8936aa4e667f</value>
+							</data>
+							<data name="Geensys.CB.visibility" handleUnknown="preserve">
+								<value>true</value>
+							</data>
+							<data name="Geensys.CB.bitIndex" handleUnknown="preserve">
+								<value>-28</value>
+							</data>
+						</addData>
+						<mnemonic>
+							<identifier name="doorClosed" />
+						</mnemonic>
+					</variable>
+					<variable name="closeDoor" literal="">
+						<type>
+							<BOOL />
+						</type>
+						<initialValue>
+							<simpleValue value="false" />
+						</initialValue>
+						<addData>
+							<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+								<value>00000000-0000-0000-0000-000000000000</value>
+							</data>
+							<data name="Geensys.CB.ModelIdentifierProperty" handleUnknown="preserve">
+								<value>1718ca48-abe1-4e9e-a0e6-4e1afb1bb4a1</value>
+							</data>
+							<data name="Geensys.CB.visibility" handleUnknown="preserve">
+								<value>true</value>
+							</data>
+							<data name="Geensys.CB.bitIndex" handleUnknown="preserve">
+								<value>-28</value>
+							</data>
+						</addData>
+						<mnemonic>
+							<identifier name="closeDoor" />
+						</mnemonic>
+					</variable>
+					<variable name="closeDoorCmd" literal="">
+						<type>
+							<BOOL />
+						</type>
+						<initialValue>
+							<simpleValue value="false" />
+						</initialValue>
+						<addData>
+							<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+								<value>00000000-0000-0000-0000-000000000000</value>
+							</data>
+							<data name="Geensys.CB.ModelIdentifierProperty" handleUnknown="preserve">
+								<value>f6bf6aac-27ad-47f9-805a-bd929bea1ea2</value>
+							</data>
+							<data name="Geensys.CB.visibility" handleUnknown="preserve">
+								<value>true</value>
+							</data>
+							<data name="Geensys.CB.bitIndex" handleUnknown="preserve">
+								<value>-28</value>
+							</data>
+						</addData>
+						<mnemonic>
+							<identifier name="closeDoorCmd" />
+						</mnemonic>
+					</variable>
+					<variable name="openDoorCmd" literal="">
+						<type>
+							<BOOL />
+						</type>
+						<initialValue>
+							<simpleValue value="false" />
+						</initialValue>
+						<addData>
+							<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+								<value>00000000-0000-0000-0000-000000000000</value>
+							</data>
+							<data name="Geensys.CB.ModelIdentifierProperty" handleUnknown="preserve">
+								<value>0172759f-6185-4c22-a0ec-9581a3ebbc07</value>
+							</data>
+							<data name="Geensys.CB.visibility" handleUnknown="preserve">
+								<value>true</value>
+							</data>
+							<data name="Geensys.CB.bitIndex" handleUnknown="preserve">
+								<value>-28</value>
+							</data>
+						</addData>
+						<mnemonic>
+							<identifier name="openDoorCmd" />
+						</mnemonic>
+					</variable>
+				</interface>
+				<actions>
+					<action name="C_source_code">
+						<step name="init" breakpoints="">
+							<body>
+								<ST>openDoorCmd =1;
+closeDoorCmd = 0;
+if(doorOpened) sceNext(step1);</ST>
+							</body>
+						</step>
+						<step name="step1" breakpoints="">
+							<body>
+								<ST>openDoorCmd =0;
+closeDoorCmd = 1;
+if(doorClosed) sceNext(init);</ST>
+							</body>
+						</step>
+					</action>
+				</actions>
+				<addData>
+					<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+						<value>7e9fc4c5-98e2-475d-9be7-bef520eba477</value>
+					</data>
+					<data name="Traceability" handleUnknown="preserve">
+						<value>
+							<MODEL_REQUIREMENTS>
+								<FUNCTIONAL_TREE TYPE="sce">
+								</FUNCTIONAL_TREE>
+							</MODEL_REQUIREMENTS>
+						</value>
+					</data>
+				</addData>
+			</pou>
+		</pous>
+	</types>
+</project>

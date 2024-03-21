@@ -1,0 +1,19 @@
+ acknowledgePB IB1
+ autoMode IB2
+ manualMode IB3
+ autoOpenCmd IB4
+ inputFlow IF5
+ openedSensor OB6
+ closedSensor OB7
+ generalFault OB8
+ outputFlow OF9
+ percentOpening OF10
+ ~ LB11
+ ~ LB12
+ ~ LB13
+ ~ LB14
+ ~ LB15
+ panel1/openValvePB OB14
+<equipment_library:switch_2pos_1output panel1/switch/ 1 variable 14>
+<cmd_equipment_library:cmd_single_acting_valve cmdOfValve/ 1 autoMode 2 manualMode 3 autoOpenCmd 4 openValvePB 14 openedSensorFB 6 closedSensorFB 7 acknowledgePB 1 openCmd 15 generalFault 8>
+<equipment_library:single_acting_valve valve/ 1 voltage380 13 cmdSupply 12 sensorSupply 11 openCmd 15 inputFlow 5 openedSensor 6 closedSensor 7 outputFlow 9 percentOpening 10>

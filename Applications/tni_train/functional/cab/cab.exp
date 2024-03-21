@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<CB_COMPONENT NAME="cab" COMMENTS="" COMMENTS_PATTERN="" PICTURE_PATH="" INSTANCE_NAMIMG_PATTERN="" COMPONENT_CLASS="" AP_DEC="T_ElementTableActeursProduits TableActeursProduits[] = {
+&#9;{{0, 0, 0, 0}, {0, 0, 0, 0},
+&#9;0, 0, 0, 0, {{0, 0}, {0, 0}}}
+};
+T_Instance NbActeurs = 0;
+T_Instance NbProduits = 0;
+T_Instance NbActeursEtProduits = 0;
+
+void globalesInit()
+{
+}" SIGNATURE="2147483647" GENERATION_DATE="1331052420" SAFE_MODE="True" BREAKPOINT="False" GEN_STATUS="good">
+	<MODEL_REQUIREMENTS>
+&#9;
+		<COMMENTS />
+&#9;
+		<FUNCTIONAL_TREE TYPE="mac">
+&#9;&#9;
+			<CHILDREN>
+&#9;&#9;&#9;
+				<NODE NAME="key2position" MODEL_PATH="Applications\tni_train\key2position">
+&#9;&#9;&#9;&#9;
+					<NODE NAME="service_side" MODEL_PATH="Applications\tni_train\service_side">
+&#9;&#9;&#9;&#9;&#9;
+						<NODE NAME="closingPB" MODEL_PATH="Applications\tni_train\pb">
+							<NODE NAME="trainSpeed" MODEL_PATH="Applications\tni_train\speed">
+								<NODE NAME="cabControlPart" MODEL_PATH="Applications\tni_train\cp_cab" /></NODE></NODE></NODE></NODE></CHILDREN></FUNCTIONAL_TREE></MODEL_REQUIREMENTS>
+</CB_COMPONENT>

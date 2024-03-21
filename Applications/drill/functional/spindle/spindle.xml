@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-03T11:13:44-01:00" />
+	<contentHeader name="spindle">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="32" y="8" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+			<pou name="drill.spindle" pouType="functionBlock">
+				<interface>
+					<inputVars>
+						<variable name="rotation">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>23b4bd7a-d3ce-456b-b314-b488a29f4e42</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="acknowledgePB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>a0096654-688a-4784-ab0c-31d0f1fe3356</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="equipmentFault">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>5cff8f79-1132-4cfc-a88f-d8421b041df2</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<outputVars>
+						<variable name="contactor">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>41484c0a-4dc1-4809-a8d5-50e5207dbec7</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>contactor&lt;SY&gt;&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="rotationFault">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>57f08a7f-5aa7-4ed3-a47d-0563619488dc</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>rotationFault&lt;SY&gt;&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<addData>
+					</addData>
+				</interface>
+				<actions>
+					<action name="PreSFC">
+						<body>
+							<ST>IF((RE acknowledgePB)) THEN
+&#9;rotationFault := 0;
+END_IF;
+IF (X11 AND equipmentFault) THEN
+&#9;rotationFault := 1;
+END_IF;
+</ST>
+						</body>
+					</action>
+				</actions>
+				<body>
+					<SFC>
+						<label localId="0" label="G1">
+							<position x="0" y="0" />
+						</label>
+						<step name="10" localId="1" initialStep="true">
+							<position x="126" y="98" />
+							<connectionPointIn>
+								<connection refLocalId="3">
+									<position x="158" y="389" />
+									<position x="158" y="409" />
+									<position x="56" y="409" />
+									<position x="56" y="78" />
+									<position x="158" y="78" />
+									<position x="158" y="98" />
+								</connection>
+							</connectionPointIn>
+							<addData>
+							</addData>
+						</step>
+						<actionBlock localId="5" width="253" height="68">
+							<position x="206" y="268" />
+							<connectionPointIn>
+								<connection refLocalId="2" />
+							</connectionPointIn>
+							<action localId="6">
+								<relPosition x="0" y="0" />
+								<inline>
+									<ST>contactor;</ST>
+								</inline>
+							</action>
+						</actionBlock>
+						<step name="11" localId="2">
+							<position x="126" y="268" />
+							<connectionPointIn>
+								<connection refLocalId="4">
+									<position x="158" y="219" />
+									<position x="158" y="252" />
+									<position x="158" y="252" />
+									<position x="158" y="268" />
+								</connection>
+							</connectionPointIn>
+							<addData>
+								<data name="Geensys.CB.comment" handleUnknown="preserve">
+									<value>contactor excitation</value>
+								</data>
+							</addData>
+						</step>
+						<transition localId="3">
+							<position x="142" y="381" />
+							<connectionPointIn>
+								<connection refLocalId="2">
+									<position x="158" y="332" />
+									<position x="158" y="348" />
+									<position x="158" y="348" />
+									<position x="158" y="381" />
+								</connection>
+							</connectionPointIn>
+							<condition>
+								<inline name="3">
+									<ST>NOT rotation OR (rotationFault &gt; 0)</ST>
+								</inline>
+							</condition>
+							<addData>
+								<data name="Geensys.CB.index" handleUnknown="preserve">
+									<value>11</value>
+								</data>
+								<data name="Geensys.CB.comment" handleUnknown="preserve">
+									<value>Stop rotation request</value>
+								</data>
+							</addData>
+						</transition>
+						<transition localId="4">
+							<position x="142" y="211" />
+							<connectionPointIn>
+								<connection refLocalId="1">
+									<position x="158" y="162" />
+									<position x="158" y="178" />
+									<position x="158" y="178" />
+									<position x="158" y="211" />
+								</connection>
+							</connectionPointIn>
+							<condition>
+								<inline name="4">
+									<ST>rotation AND (rotationFault = 0) </ST>
+								</inline>
+							</condition>
+							<addData>
+								<data name="Geensys.CB.index" handleUnknown="preserve">
+									<value>10</value>
+								</data>
+								<data name="Geensys.CB.comment" handleUnknown="preserve">
+									<value>Rotation request</value>
+								</data>
+							</addData>
+						</transition>
+					</SFC>
+				</body>
+				<addData>
+					<data name="Geensys.CB.Or_Divergences_Exclusivity" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+					<data name="Geensys.CB.COMPONENT_CLASS" handleUnknown="preserve">
+						<value>PROCESS</value>
+					</data>
+					<data name="Geensys.CB.COMPONENT_CLASS_UUID" handleUnknown="preserve">
+						<value>efe67f35-7746-4c41-87ee-86d6ccbf6b60</value>
+					</data>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+				</addData>
+			</pou>
+		</pous>
+	</types>
+	<instances>
+		<configurations />
+	</instances>
+</project>

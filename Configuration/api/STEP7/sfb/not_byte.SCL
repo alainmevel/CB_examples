@@ -1,0 +1,19 @@
+
+FUNCTION CB_not_byte : BYTE
+
+TITLE = ' Bit  inversion '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : notByte
+FAMILY  : TNI
+
+VAR_INPUT
+    IN : BYTE;
+END_VAR
+
+BEGIN
+
+    CB_not_byte := (NOT IN) ;
+
+END_FUNCTION
+

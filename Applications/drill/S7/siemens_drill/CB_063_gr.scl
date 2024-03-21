@@ -1,0 +1,45 @@
+FUNCTION FC63: VOID
+AUTHOR : CB
+VAR_INPUT
+        combE : INT;
+END_VAR
+
+LABEL
+        combi_e, actions, combi_s;
+END_LABEL
+
+BEGIN
+        IF (combE = 0) THEN GOTO actions;
+        END_IF;
+(* Gestion des combinatoires d'entree *)
+combi_e: 
+IF ((("DB90".F3SpinM1_acknowledgePB AND NOT M1.6))) THEN
+	"DB90".rotationFaultSpinF1 := 0;
+END_IF;
+
+IF (DB63.Step11.X AND "DB90".F3SpinM1_generalFault) THEN
+	"DB90".rotationFaultSpinF1 := 1;
+END_IF;
+RETURN;
+
+(* Gestion des actions du graphe *)
+actions: 
+(* Step activity of Step10 *)
+
+(* Step activity of Step11 *)
+IF DB63.Step11.S1 THEN
+"DB90".contactorSpinF1 := TRUE;
+END_IF;
+IF DB63.Step11.X THEN
+"DB90".contactorSpinF1 := TRUE;
+END_IF;
+IF DB63.Step11.S0 THEN
+"DB90".contactorSpinF1 := FALSE;
+END_IF;
+
+(* Gestion des combinatoires de sortie *)
+combi_s: ;
+
+(* Memory edges *)
+M1.6 := "DB90".F3SpinM1_acknowledgePB;
+END_FUNCTION

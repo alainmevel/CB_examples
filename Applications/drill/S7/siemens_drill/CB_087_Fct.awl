@@ -1,0 +1,49 @@
+FUNCTION_BLOCK FB87
+TITLE = ''
+AUTHOR : CB
+
+VAR
+	modes : FB41;
+	fault : FB57;
+	process : FB66;
+	pilot : FB86;
+END_VAR
+
+
+BEGIN
+
+
+NETWORK
+TITLE = 
+//
+//	modes
+CALL #modes;
+
+
+
+NETWORK
+TITLE = 
+//
+//	fault
+CALL #fault;
+
+
+
+NETWORK
+TITLE = 
+//
+//	process
+CALL #process;
+
+
+
+NETWORK
+TITLE = 
+//
+//	pilot
+CALL #pilot;
+
+
+
+
+END_FUNCTION_BLOCK

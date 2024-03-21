@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<CB_COMPONENT NAME="door" COMMENTS="" COMMENTS_PATTERN="" PICTURE_PATH="" INSTANCE_NAMIMG_PATTERN="" COMPONENT_CLASS="" AP_DEC="" SIGNATURE="" GENERATION_DATE="" SAFE_MODE="True" BREAKPOINT="False" GEN_STATUS="good">
+	<MODEL_REQUIREMENTS>
+&#9;
+		<COMMENTS />
+&#9;
+		<FUNCTIONAL_TREE TYPE="mac">
+&#9;&#9;
+			<CHILDREN>
+&#9;&#9;&#9;
+				<NODE NAME="doorPB" MODEL_PATH="Applications\tni_train\pb_door">
+&#9;&#9;&#9;&#9;
+					<NODE NAME="doorLocking" MODEL_PATH="Applications\tni_train\op_door_locking">
+						<NODE NAME="doorControlPart" MODEL_PATH="Applications\tni_train\cp_door">
+							<NODE NAME="door" MODEL_PATH="Applications\tni_train\op_door" /></NODE></NODE></NODE></CHILDREN></FUNCTIONAL_TREE></MODEL_REQUIREMENTS>
+</CB_COMPONENT>

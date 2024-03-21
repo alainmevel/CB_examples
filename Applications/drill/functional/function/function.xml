@@ -1,0 +1,936 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-03T11:13:46-01:00" />
+	<contentHeader name="function">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="32" y="8" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+			<pou name="drill.function" pouType="program">
+				<interface>
+					<inputVars>
+						<variable name="piece">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>b8597cee-3b28-49dd-a90c-26dd0002a1b9</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="emptyProd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>34f8c42f-4716-4c21-83a9-bf82c729a777</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="unitProd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>214b44b3-34e0-483d-9f8c-1aa5beae2e1b</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="batchProd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>a73a08f2-68a9-4d7a-9272-29de28fff9c1</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>OperatingMode</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="acknowledgePB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>707467e6-6d75-4b62-ba36-85d02b4c3f58</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="autoMode">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Automatic mode</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>16e0bc21-1582-4b2b-a0f1-cd06306123cb</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="manualMode">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Manual mode</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>888310f5-c17e-4ddd-8c2f-d13dc983a534</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>Modes</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<outputVars>
+						<variable name="faultyState">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>1a92ead9-9773-4d9a-be6d-1f3a3c4dedbb</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="cycleEnd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>d0e77c80-feb1-4334-ae70-6010f31d358e</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="loadingRequest">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>ec290891-3a81-4019-9df8-4b03ea688bbc</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="unloadingRequest">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>d17902e4-0796-49f1-a8ff-d5c6051cbd9e</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<addData>
+						<data name="Geensys.CB.groupIn" handleUnknown="preserve">
+							<value>OperatingMode,,Modes,</value>
+						</data>
+					</addData>
+				</interface>
+				<actions>
+				</actions>
+				<body>
+					<FBD>
+						<inVariable localId="0">
+							<position x="144" y="264" />
+							<expression>piece</expression>
+						</inVariable>
+						<inVariable localId="1">
+							<position x="144" y="216" />
+							<expression>emptyProd</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>OperatingMode</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>144,216</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="2">
+							<position x="144" y="216" />
+							<expression>unitProd</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>OperatingMode</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>144,216</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="3">
+							<position x="144" y="216" />
+							<expression>batchProd</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>OperatingMode</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>144,216</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="4">
+							<position x="144" y="240" />
+							<expression>acknowledgePB</expression>
+						</inVariable>
+						<inVariable localId="5">
+							<position x="864" y="288" />
+							<expression>acknowledgePB</expression>
+						</inVariable>
+						<inVariable localId="6">
+							<position x="912" y="432" />
+							<expression>acknowledgePB</expression>
+						</inVariable>
+						<inVariable localId="7">
+							<position x="936" y="624" />
+							<expression>acknowledgePB</expression>
+						</inVariable>
+						<inVariable localId="8">
+							<position x="864" y="312" />
+							<expression>autoMode</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Modes</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>864,312</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="9">
+							<position x="912" y="456" />
+							<expression>autoMode</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Modes</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>912,456</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="10">
+							<position x="936" y="648" />
+							<expression>autoMode</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Modes</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>936,648</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="11">
+							<position x="864" y="312" />
+							<expression>manualMode</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Modes</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>864,312</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="12">
+							<position x="912" y="456" />
+							<expression>manualMode</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Modes</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>912,456</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="13">
+							<position x="936" y="648" />
+							<expression>manualMode</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Modes</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>936,648</value>
+								</data>
+							</addData>
+						</inVariable>
+						<outVariable localId="14">
+							<position x="648" y="264" />
+							<connectionPointIn>
+								<connection refLocalId="15" formalParameter="faultyState" />
+							</connectionPointIn>
+							<expression>faultyState</expression>
+						</outVariable>
+						<outVariable localId="16">
+							<position x="648" y="168" />
+							<connectionPointIn>
+								<connection refLocalId="15" formalParameter="cycleEnd" />
+							</connectionPointIn>
+							<expression>cycleEnd</expression>
+						</outVariable>
+						<outVariable localId="17">
+							<position x="648" y="216" />
+							<connectionPointIn>
+								<connection refLocalId="15" formalParameter="loadingRequest" />
+							</connectionPointIn>
+							<expression>loadingRequest</expression>
+						</outVariable>
+						<outVariable localId="18">
+							<position x="648" y="240" />
+							<connectionPointIn>
+								<connection refLocalId="15" formalParameter="unloadingRequest" />
+							</connectionPointIn>
+							<expression>unloadingRequest</expression>
+						</outVariable>
+						<block localId="15" width="352" height="264" typeName="drill.run" instanceName="functionChart">
+							<position x="232" y="96" />
+							<inputVariables>
+								<variable formalParameter="rotationFault">
+									<connectionPointIn>
+										<connection refLocalId="19" formalParameter="rotationFault">
+											<position x="1364" y="600" />
+											<position x="1376" y="600" />
+											<position x="1376" y="686" />
+											<position x="164" y="686" />
+											<position x="164" y="144" />
+											<position x="232" y="144" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="downState">
+									<connectionPointIn>
+										<connection refLocalId="20" formalParameter="descentEnd">
+											<position x="1296" y="264" />
+											<position x="1335" y="264" />
+											<position x="1335" y="399" />
+											<position x="169" y="399" />
+											<position x="169" y="168" />
+											<position x="232" y="168" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="downDeceleration">
+									<connectionPointIn>
+										<connection refLocalId="20" formalParameter="downDeceleration">
+											<position x="1296" y="264" />
+											<position x="1335" y="264" />
+											<position x="1335" y="399" />
+											<position x="169" y="399" />
+											<position x="169" y="168" />
+											<position x="232" y="168" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="topDeceleration">
+									<connectionPointIn>
+										<connection refLocalId="20" formalParameter="topDeceleration">
+											<position x="1296" y="264" />
+											<position x="1335" y="264" />
+											<position x="1335" y="399" />
+											<position x="169" y="399" />
+											<position x="169" y="168" />
+											<position x="232" y="168" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="topState">
+									<connectionPointIn>
+										<connection refLocalId="20" formalParameter="ascentEnd">
+											<position x="1296" y="264" />
+											<position x="1335" y="264" />
+											<position x="1335" y="399" />
+											<position x="169" y="399" />
+											<position x="169" y="168" />
+											<position x="232" y="168" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="motorFault">
+									<connectionPointIn>
+										<connection refLocalId="20" formalParameter="motorFault">
+											<position x="1296" y="264" />
+											<position x="1335" y="264" />
+											<position x="1335" y="399" />
+											<position x="169" y="399" />
+											<position x="169" y="168" />
+											<position x="232" y="168" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="clampingFault">
+									<connectionPointIn>
+										<connection refLocalId="21" formalParameter="clampingFault">
+											<position x="1328" y="432" />
+											<position x="1363" y="432" />
+											<position x="1363" y="374" />
+											<position x="173" y="374" />
+											<position x="173" y="192" />
+											<position x="232" y="192" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="releasingOK">
+									<connectionPointIn>
+										<connection refLocalId="21" formalParameter="releasingOK">
+											<position x="1328" y="432" />
+											<position x="1363" y="432" />
+											<position x="1363" y="374" />
+											<position x="173" y="374" />
+											<position x="173" y="192" />
+											<position x="232" y="192" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="clampingOK">
+									<connectionPointIn>
+										<connection refLocalId="21" formalParameter="clampingOK">
+											<position x="1328" y="432" />
+											<position x="1363" y="432" />
+											<position x="1363" y="374" />
+											<position x="173" y="374" />
+											<position x="173" y="192" />
+											<position x="232" y="192" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="emptyProd">
+									<connectionPointIn>
+										<connection refLocalId="1">
+											<position x="152" y="216" />
+											<position x="195" y="216" />
+											<position x="195" y="216" />
+											<position x="232" y="216" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="unitProd">
+									<connectionPointIn>
+										<connection refLocalId="2">
+											<position x="152" y="216" />
+											<position x="195" y="216" />
+											<position x="195" y="216" />
+											<position x="232" y="216" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="batchProd">
+									<connectionPointIn>
+										<connection refLocalId="3">
+											<position x="152" y="216" />
+											<position x="195" y="216" />
+											<position x="195" y="216" />
+											<position x="232" y="216" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="acknowledgePB">
+									<connectionPointIn>
+										<connection refLocalId="4">
+											<position x="152" y="240" />
+											<position x="194" y="240" />
+											<position x="194" y="240" />
+											<position x="232" y="240" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="piece">
+									<connectionPointIn>
+										<connection refLocalId="0">
+											<position x="152" y="264" />
+											<position x="193" y="264" />
+											<position x="193" y="264" />
+											<position x="232" y="264" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="rotation">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="cycleEnd">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="movementFault">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="loadingRequest">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="unloadingRequest">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="faultyState">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="slowAscent">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="fastAscent">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="slowDescent">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="fastDescent">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="releasing">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="clamping">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>OperatingMode:144@216,OperatingMode,20.DescentFB,DescentFB,21.ClampingFB,ClampingFB</value>
+								</data>
+								<data name="Geensys.CB.NU" handleUnknown="preserve">
+									<value>1</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value> : &lt;UNIT&gt;</value>
+								</data>
+								<data name="Geensys.CB.SY" handleUnknown="preserve">
+									<value>RUN</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>46964f2f-094a-45a0-b094-fa1acd3b4073</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="20" width="360" height="120" typeName="drill.mdescent" instanceName="descent">
+							<position x="936" y="216" />
+							<inputVariables>
+								<variable formalParameter="slowAscent">
+									<connectionPointIn>
+										<connection refLocalId="15" formalParameter="slowAscent">
+											<position x="584" y="288" />
+											<position x="767" y="288" />
+											<position x="767" y="264" />
+											<position x="936" y="264" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="fastAscent">
+									<connectionPointIn>
+										<connection refLocalId="15" formalParameter="fastAscent">
+											<position x="584" y="288" />
+											<position x="767" y="288" />
+											<position x="767" y="264" />
+											<position x="936" y="264" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="slowDescent">
+									<connectionPointIn>
+										<connection refLocalId="15" formalParameter="slowDescent">
+											<position x="584" y="288" />
+											<position x="767" y="288" />
+											<position x="767" y="264" />
+											<position x="936" y="264" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="fastDescent">
+									<connectionPointIn>
+										<connection refLocalId="15" formalParameter="fastDescent">
+											<position x="584" y="288" />
+											<position x="767" y="288" />
+											<position x="767" y="264" />
+											<position x="936" y="264" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="acknowledgePB">
+									<connectionPointIn>
+										<connection refLocalId="5">
+											<position x="872" y="288" />
+											<position x="898" y="288" />
+											<position x="898" y="288" />
+											<position x="936" y="288" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="autoMode">
+									<connectionPointIn>
+										<connection refLocalId="8">
+											<position x="872" y="312" />
+											<position x="896" y="312" />
+											<position x="896" y="312" />
+											<position x="936" y="312" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="manualMode">
+									<connectionPointIn>
+										<connection refLocalId="11">
+											<position x="872" y="312" />
+											<position x="896" y="312" />
+											<position x="896" y="312" />
+											<position x="936" y="312" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="ascentEnd">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="topDeceleration">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="downDeceleration">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="descentEnd">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="motorFault">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>Modes:864@312,Modes,15.DescentRequests,FunctionRequests</value>
+								</data>
+								<data name="Geensys.CB.UNIT" handleUnknown="preserve">
+									<value>F1</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value> : F1</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>86dc6cae-d76f-4822-a601-1bcc84848cd6</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="21" width="344" height="120" typeName="drill.mclamping" instanceName="clamping">
+							<position x="984" y="384" />
+							<inputVariables>
+								<variable formalParameter="acknowledgePB">
+									<connectionPointIn>
+										<connection refLocalId="6">
+											<position x="920" y="432" />
+											<position x="945" y="432" />
+											<position x="945" y="432" />
+											<position x="984" y="432" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="autoMode">
+									<connectionPointIn>
+										<connection refLocalId="9">
+											<position x="920" y="456" />
+											<position x="946" y="456" />
+											<position x="946" y="456" />
+											<position x="984" y="456" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="manualMode">
+									<connectionPointIn>
+										<connection refLocalId="12">
+											<position x="920" y="456" />
+											<position x="946" y="456" />
+											<position x="946" y="456" />
+											<position x="984" y="456" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="releasing">
+									<connectionPointIn>
+										<connection refLocalId="15" formalParameter="releasing">
+											<position x="584" y="312" />
+											<position x="796" y="312" />
+											<position x="796" y="480" />
+											<position x="984" y="480" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="clamping">
+									<connectionPointIn>
+										<connection refLocalId="15" formalParameter="clamping">
+											<position x="584" y="312" />
+											<position x="796" y="312" />
+											<position x="796" y="480" />
+											<position x="984" y="480" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="clampingOK">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="releasingOK">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="clampingFault">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>15.ClampingRequests,Requests,Modes:912@456,Modes</value>
+								</data>
+								<data name="Geensys.CB.UNIT" handleUnknown="preserve">
+									<value>F2</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value> : F2</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>7555a8d0-b14b-4802-950b-2680df85cb46</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="19" width="356" height="146" typeName="drill.mspindle" instanceName="spindle">
+							<position x="1008" y="528" />
+							<inputVariables>
+								<variable formalParameter="rotationFunction">
+									<connectionPointIn>
+										<connection refLocalId="15" formalParameter="rotation">
+											<position x="584" y="144" />
+											<position x="604" y="144" />
+											<position x="604" y="600" />
+											<position x="1008" y="600" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="acknowledgePB">
+									<connectionPointIn>
+										<connection refLocalId="7">
+											<position x="944" y="624" />
+											<position x="964" y="624" />
+											<position x="964" y="624" />
+											<position x="1008" y="624" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="autoMode">
+									<connectionPointIn>
+										<connection refLocalId="10">
+											<position x="944" y="648" />
+											<position x="967" y="648" />
+											<position x="967" y="648" />
+											<position x="1008" y="648" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="manualMode">
+									<connectionPointIn>
+										<connection refLocalId="13">
+											<position x="944" y="648" />
+											<position x="967" y="648" />
+											<position x="967" y="648" />
+											<position x="1008" y="648" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="rotationFault">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>Modes:936@648,Modes</value>
+								</data>
+								<data name="Geensys.CB.UNIT" handleUnknown="preserve">
+									<value>F3</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value> : F3</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>0e587536-9536-4c1a-b343-3a23bc8872c6</value>
+								</data>
+							</addData>
+						</block>
+					</FBD>
+					<documentation>
+						<xhtml:pre>CB.group=OperatingMode,144,216
+CB.group=Modes,864,312
+CB.group=Modes,912,456
+CB.group=Modes,936,648
+</xhtml:pre>
+					</documentation>
+				</body>
+				<addData>
+					<data name="Geensys.CB.AutomaticScheduling" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+				</addData>
+			</pou>
+		</pous>
+	</types>
+	<instances>
+		<configurations />
+	</instances>
+</project>

@@ -1,0 +1,25 @@
+<?xml version = "1.0" encoding = "ISO-8859-1"?>
+
+<!-- Generator: ControlBuild -->
+<PROPERTIES_FILE xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation = "file:xsd/properties.xsd">
+	<PROPERTIES_SET>
+		<LANGUAGES>
+			<LANGUAGE NAME = "EN">Identification</LANGUAGE>
+			<LANGUAGE NAME = "FR">Identification</LANGUAGE>
+		</LANGUAGES>
+		<PROPERTY NAME = "NU" TYPE = "string">
+			<LANGUAGES>
+				<LANGUAGE NAME = "EN">Number &lt;NU> :</LANGUAGE>
+				<LANGUAGE NAME = "FR">Numéro &lt;NU> :</LANGUAGE>
+			</LANGUAGES>
+			<APPLIED_TO CLASS = "CBNode"/>
+		</PROPERTY>
+		<PROPERTY NAME = "SY" TYPE = "string">
+			<LANGUAGES>
+				<LANGUAGE NAME = "EN">Symbol &lt;SY> :</LANGUAGE>
+				<LANGUAGE NAME = "FR">Symbole &lt;SY> :</LANGUAGE>
+			</LANGUAGES>
+			<APPLIED_TO CLASS = "CBNode"/>
+		</PROPERTY>
+	</PROPERTIES_SET>
+</PROPERTIES_FILE>

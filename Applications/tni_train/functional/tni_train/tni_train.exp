@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<CB_COMPONENT NAME="tni_train" COMMENTS="" COMMENTS_PATTERN="" PICTURE_PATH="" INSTANCE_NAMIMG_PATTERN="" COMPONENT_CLASS="" AP_DEC="T_ElementTableActeursProduits TableActeursProduits[] = {
+&#9;{0, {0, 0, 0, 0}, {0, 0, 0, 0},
+&#9;0, 0, 0, 0, 0, {{0, 0, 0}, {0, 0, 0}}}
+};
+T_Instance NbActeurs = 0;
+T_Instance NbProduits = 0;
+T_Instance NbActeursEtProduits = 0;
+
+void globalesInit()
+{
+}" SIGNATURE="0" GENERATION_DATE="1246547639" SAFE_MODE="True" BREAKPOINT="False" GEN_STATUS="good" SIMU_PERIOD="50000" ANIMATION_PERIOD="50000" SCENARIO_PERIOD="250000">
+	<MODEL_REQUIREMENTS>
+		<COMMENTS />
+		<FUNCTIONAL_TREE TYPE="mac">
+			<CHILDREN>
+				<NODE NAME="cab1" MODEL_PATH="Applications\tni_train\cab" />
+				<NODE NAME="cab2" MODEL_PATH="Applications\tni_train\cab" />
+				<NODE NAME="motorCar1" MODEL_PATH="Applications\tni_train\car" />
+				<NODE NAME="car1" MODEL_PATH="Applications\tni_train\car" />
+				<NODE NAME="car2" MODEL_PATH="Applications\tni_train\car" />
+				<NODE NAME="car3" MODEL_PATH="Applications\tni_train\car" />
+				<NODE NAME="motorCar2" MODEL_PATH="Applications\tni_train\car" />
+			</CHILDREN>
+		</FUNCTIONAL_TREE>
+	</MODEL_REQUIREMENTS>
+</CB_COMPONENT>

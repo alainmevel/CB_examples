@@ -1,0 +1,27 @@
+FUNCTION "CB_getBitWord" : BOOL
+TITLE =Extract a bit of a WORD
+AUTHOR : CB
+FAMILY : TNI
+NAME : getbitW
+VERSION : 0.1
+
+
+VAR_INPUT
+  N : INT ;	//number of the bit (0 - 15)
+  IN : WORD ;	//WORD source
+END_VAR
+BEGIN
+NETWORK
+TITLE =Bit extraction 
+
+
+      L     #N; 
+      L     #IN; 
+      SRW   ; 
+      T     LW     0; 
+      A     L      1.0; 
+      =     #RET_VAL; 
+      BE    ; 
+
+END_FUNCTION
+

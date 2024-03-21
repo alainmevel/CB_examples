@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<CB_COMPONENT NAME="op_trich" COMMENTS="" COMMENTS_PATTERN="" PICTURE_PATH="" INSTANCE_NAMIMG_PATTERN="" COMPONENT_CLASS="" AP_DEC="T_ElementTableActeursProduits TableActeursProduits[] = {
+&#9;{{32, 526, 17, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__creation, mx_status_static, 2, {{0, 0}, {0, 0}}},
+&#9;{{56, 527, 49, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__passing_sensor, mx_status_static, 6, {{0, 0}, {0, 0}}},
+&#9;{{60, 528, 71, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__passing_sensor, mx_status_static, 7, {{0, 0}, {0, 0}}},
+&#9;{{64, 529, 93, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__conveyor, mx_status_static, 8, {{0, 0}, {0, 0}}},
+&#9;{{86, 530, 124, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__passing_sensor, mx_status_static, 12, {{0, 0}, {0, 0}}},
+&#9;{{90, 531, 146, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__passing_sensor, mx_status_static, 13, {{0, 0}, {0, 0}}},
+&#9;{{94, 532, 168, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__conveyor, mx_status_static, 14, {{0, 0}, {0, 0}}},
+&#9;{{97, 533, 191, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__creation, mx_status_static, 15, {{0, 0}, {0, 0}}},
+&#9;{{121, 534, 223, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__passing_sensor, mx_status_static, 19, {{0, 0}, {0, 0}}},
+&#9;{{125, 535, 245, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__passing_sensor, mx_status_static, 20, {{0, 0}, {0, 0}}},
+&#9;{{129, 536, 267, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__conveyor, mx_status_static, 21, {{0, 0}, {0, 0}}},
+&#9;{{151, 537, 298, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__passing_sensor, mx_status_static, 25, {{0, 0}, {0, 0}}},
+&#9;{{155, 538, 320, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__passing_sensor, mx_status_static, 26, {{0, 0}, {0, 0}}},
+&#9;{{159, 539, 342, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__conveyor, mx_status_static, 27, {{0, 0}, {0, 0}}},
+&#9;{{203, 540, 386, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__shuttle, mx_status_static, 32, {{0, 0}, {0, 0}}},
+&#9;{{205, 541, 410, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__range_sensor, mx_status_static, 33, {{0, 0}, {0, 0}}},
+&#9;{{208, 542, 428, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__range_sensor, mx_status_static, 34, {{0, 0}, {0, 0}}},
+&#9;{{211, 543, 446, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__range_sensor, mx_status_static, 35, {{0, 0}, {0, 0}}},
+&#9;{{214, 544, 464, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__passing_sensor2, mx_status_static, 36, {{0, 0}, {0, 0}}},
+&#9;{{221, 545, 488, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__creation, mx_status_static, 38, {{0, 0}, {0, 0}}},
+&#9;{{226, 546, 512, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__trash, mx_status_static, 39, {{0, 0}, {0, 0}}},
+&#9;{{226, 547, 534, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, tri_chain__box, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{{226, 548, 559, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, tri_chain__box, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{{226, 549, 584, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, tri_chain__box, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{{226, 550, 609, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, tri_chain__box, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{{226, 551, 634, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, tri_chain__box, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{{226, 552, 659, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, tri_chain__box, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{{226, 553, 684, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, tri_chain__box, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{{226, 554, 709, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, tri_chain__box, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{{226, 555, 734, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, tri_chain__box, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{{226, 556, 759, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_prod, tri_chain__box, mx_status_free, 0, {{0, 0}, {0, 0}}},
+&#9;{{0, 0, 0, 0}, {0, 0, 0, 0},
+&#9;0, 0, 0, 0, {{0, 0}, {0, 0}}}
+};
+T_Instance NbActeurs = 21;
+T_Instance NbProduits = 10;
+T_Instance NbActeursEtProduits = 31;
+&#10;void globalesInit()&#10;{&#10;}" SIGNATURE="2147483647" GENERATION_DATE="1331114909" SAFE_MODE="True" BREAKPOINT="False" GEN_STATUS="good">
+	<MODEL_REQUIREMENTS>
+&#9;
+		<COMMENTS />
+&#9;
+		<FUNCTIONAL_TREE TYPE="mac">
+&#9;&#9;
+			<CHILDREN>
+&#9;&#9;&#9;
+				<NODE NAME="creation1" MODEL_PATH="Applications\tri_chain\creation">
+&#9;&#9;&#9;&#9;
+					<NODE NAME="chain1" MODEL_PATH="Applications\tri_chain\op_chain" />
+&#9;&#9;&#9;&#9;
+					<NODE NAME="chain2" MODEL_PATH="Applications\tri_chain\op_chain" />
+&#9;&#9;&#9;&#9;
+					<NODE NAME="creation2" MODEL_PATH="Applications\tri_chain\creation">
+&#9;&#9;&#9;&#9;&#9;
+						<NODE NAME="chain3" MODEL_PATH="Applications\tri_chain\op_chain" />
+&#9;&#9;&#9;&#9;&#9;
+						<NODE NAME="outputChain" MODEL_PATH="Applications\tri_chain\op_chain" />
+&#9;&#9;&#9;&#9;&#9;
+						<NODE NAME="shuttle" MODEL_PATH="Applications\tri_chain\op_shuttle" />
+&#9;&#9;&#9;&#9;&#9;
+						<NODE NAME="runButton" MODEL_PATH="Applications\tri_chain\button">
+							<NODE NAME="creation3" MODEL_PATH="Applications\tri_chain\creation">
+								<NODE NAME="trash" MODEL_PATH="Applications\tri_chain\trash" /></NODE></NODE></NODE></NODE></CHILDREN></FUNCTIONAL_TREE></MODEL_REQUIREMENTS>
+</CB_COMPONENT>

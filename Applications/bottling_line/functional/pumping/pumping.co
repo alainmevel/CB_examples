@@ -1,0 +1,40 @@
+ fillingValve IB1
+ emptyingValve IB2
+ extractionPump IB3
+ acknowledgePB IB4
+ autoMode IB5
+ manualMode IB6
+ lowLevel OB7
+ highLevel OB8
+ pumpingFlow OF9
+ level OF10
+ ~ LF11
+ ~ LF12
+ ~ LB13
+ ~ LB14
+ ~ LB15
+ ~ LI16
+ ~ LI17
+ ~ LF18
+ ~ LB19
+ ~ LF20
+ ~ LB21
+ ~ LB22
+ ~ LB23
+ ~ LF24
+ ~ LB25
+ ~ LB26
+ ~ LB27
+ ~ LF28
+ ~ LF29
+ ~ LF30
+ ~ LF31
+ ~ LF32
+<io_library:io_single_acting_valve filling/ 1 acknowledgePB 4 autoMode 5 manualMode 6 autoOpenCmd 1 inputFlow 28 openedSensor 27 closedSensor 26 generalFault 25 outputFlow 30 percentOpening 24>
+<io_library:io_single_acting_valve emptying/ 1 acknowledgePB 4 autoMode 5 manualMode 6 autoOpenCmd 2 inputFlow 29 openedSensor 23 closedSensor 22 generalFault 21 outputFlow 9 percentOpening 20>
+<equipment_library:tank tank/ 1 inletFlow 30 outletFlow 9 tankLevel 31>
+<io_library:io_on_off_pump extraction/ 1 acknowledgePB 4 autoMode 5 manualMode 6 autoCmd 3 inputFlow 31 generalFault 19 speedVal 18 outputFlow 29>
+<equipment_library:bounded_scale levelScale/ 1 inputValue 31 realValue 32 dintValue 17 intValue 16>
+<equipment_library:threshold_sensor highLevel/ 1 level 31 sensorSupply 15 thresholdSensor 8>
+<equipment_library:threshold_sensor lowLevel/ 1 level 31 sensorSupply 14 thresholdSensor 7>
+<equipment_library:analog_sensor levelMeasurement/ 1 measure 32 sensorSupply 13 realValue 10 intValue 12 dintValue 11>

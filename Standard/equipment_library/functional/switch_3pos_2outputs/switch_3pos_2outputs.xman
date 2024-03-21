@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<AWTSynoptic screenX="1600" screenY="2262" name="switch_3pos_2outputs.xman" description="" date="03/10/2023" time="11:13" version="3.0_draft3" source="controlbuild " bkgColor="white" identifier="01779e34-50dd-4af8-bcfc-e79c5e0f0cbd" gridExtent="10" designLevel="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Colors>
+		<Color colorId="black" r="0" g="0" b="0" invisible="false" />
+		<Color colorId="white" r="255" g="255" b="255" invisible="false" />
+		<Color colorId="red" r="255" g="0" b="0" invisible="false" />
+		<Color colorId="yellow" r="255" g="255" b="0" invisible="false" />
+		<Color colorId="blue" r="0" g="0" b="255" invisible="false" />
+		<Color colorId="green" r="0" g="255" b="0" invisible="false" />
+		<Color colorId="purple" r="128" g="0" b="128" invisible="false" />
+		<Color colorId="brown" r="128" g="64" b="0" invisible="false" />
+		<Color colorId="gray" r="192" g="192" b="192" invisible="false" />
+		<Color colorId="orange" r="255" g="128" b="0" invisible="false" />
+		<Color colorId="pink" r="255" g="128" b="255" invisible="false" />
+		<Color colorId="transparent" invisible="true" />
+		<Color colorId="other" r="0" g="0" b="0" invisible="false" />
+		<Color colorId="visible" invisible="false" />
+	</Colors>
+	<Objects>
+		<Group>
+			<Basic xInit="210" yInit="90" xFinal="260" yFinal="140" xCenter="235" yCenter="115" />
+			<Comment>CB.form_name=To_Middle
+CB.num_rep=1
+CB.controlled_variable=Var3
+</Comment>
+			<Ellipse>
+				<Basic xInit="210" yInit="90" xFinal="260" yFinal="140" xCenter="235" yCenter="115" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+			</Ellipse>
+		</Group>
+		<Group>
+			<Basic xInit="340" yInit="120" xFinal="390" yFinal="170" xCenter="365" yCenter="145" />
+			<Comment>CB.form_name=To_Right
+CB.num_rep=1
+CB.controlled_variable=Var4
+</Comment>
+			<Ellipse>
+				<Basic xInit="340" yInit="120" xFinal="390" yFinal="170" xCenter="365" yCenter="145" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+			</Ellipse>
+		</Group>
+		<Group>
+			<Basic xInit="90" yInit="120" xFinal="140" yFinal="170" xCenter="115" yCenter="145" />
+			<Comment>CB.form_name=To_Left
+CB.num_rep=1
+CB.controlled_variable=Var2
+</Comment>
+			<Ellipse>
+				<Basic xInit="90" yInit="120" xFinal="140" yFinal="170" xCenter="115" yCenter="145" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+			</Ellipse>
+		</Group>
+		<Group>
+			<Basic xInit="80" yInit="100" xFinal="400" yFinal="390" xCenter="240" yCenter="245" />
+			<Comment>CB.form_name=Middle_Pos
+CB.num_rep=1
+</Comment>
+			<Rectangle>
+				<Basic xInit="190" yInit="200" xFinal="200" yFinal="260" xCenter="195" yCenter="230" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="white" lineEnd="round" patternStyle="full" patternColor="white" />
+			</Rectangle>
+			<Line>
+				<Basic xInit="210" yInit="180" xFinal="180" yFinal="180" xCenter="195" yCenter="180" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="gray" />
+			</Line>
+			<Polygon>
+				<Basic xInit="210" yInit="160" xFinal="250" yFinal="390" xCenter="230" yCenter="275" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="rgb(85,85,85)" />
+				<Point x="250" y="160" />
+				<Point x="250" y="370" />
+				<Point x="210" y="390" />
+				<Point x="210" y="180" />
+				<Point x="250" y="160" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="180" yInit="160" xFinal="250" yFinal="390" xCenter="215" yCenter="275" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="rgb(85,85,85)" />
+				<Point x="250" y="160" />
+				<Point x="250" y="370" />
+				<Point x="210" y="390" />
+				<Point x="180" y="390" />
+				<Point x="180" y="180" />
+				<Point x="220" y="160" />
+				<Point x="250" y="160" />
+			</Polygon>
+			<Ellipse>
+				<Basic xInit="140" yInit="150" xFinal="330" yFinal="340" xCenter="235" yCenter="245" />
+				<Style lineStyle="solid" lineWidth="6" lineColor="black" lineEnd="round" patternStyle="full" patternColor="rgb(85,85,85)" />
+			</Ellipse>
+			<Ellipse>
+				<Basic xInit="140" yInit="150" xFinal="350" yFinal="340" xCenter="245" yCenter="245" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="gray" />
+			</Ellipse>
+			<Rectangle>
+				<Basic xInit="80" yInit="100" xFinal="400" yFinal="390" xCenter="240" yCenter="245" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="gray" lineEnd="round" patternStyle="full" patternColor="gray" />
+			</Rectangle>
+			<ChangeColorOnBit colorFillBitOn="invisible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="invisible" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>rightVariable OR leftVariable</Expression>
+					<Condition var="Var1" rank="0" />
+					<Condition var="Var0" rank="1" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>acdb0234-4ad5-4f94-8302-0bb42b88a5aa</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="visible" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>NOT (rightVariable OR leftVariable)</Expression>
+					<Condition var="Var1" rank="0" />
+					<Condition var="Var0" rank="1" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>69d9d2f7-1470-4d32-8f48-5129ff8cc581</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+		</Group>
+		<Group>
+			<Basic xInit="80" yInit="100" xFinal="400" yFinal="390" xCenter="240" yCenter="245" />
+			<Comment>CB.form_name=Right_Pos
+CB.num_rep=1
+</Comment>
+			<Polygon>
+				<Basic xInit="190" yInit="180" xFinal="240" yFinal="240" xCenter="215" yCenter="210" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+				<Point x="190" y="230" />
+				<Point x="200" y="240" />
+				<Point x="240" y="190" />
+				<Point x="230" y="180" />
+				<Point x="190" y="230" />
+			</Polygon>
+			<Line>
+				<Basic xInit="260" yInit="180" xFinal="120" yFinal="360" xCenter="190" yCenter="270" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+			</Line>
+			<Line>
+				<Basic xInit="260" yInit="180" xFinal="230" yFinal="160" xCenter="245" yCenter="170" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+			</Line>
+			<Line>
+				<Basic xInit="260" yInit="180" xFinal="300" yFinal="180" xCenter="280" yCenter="180" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+			</Line>
+			<Polygon>
+				<Basic xInit="100" yInit="160" xFinal="300" yFinal="360" xCenter="200" yCenter="260" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="rgb(85,85,85)" />
+				<Point x="300" y="181" />
+				<Point x="270" y="160" />
+				<Point x="240" y="160" />
+				<Point x="100" y="339" />
+				<Point x="120" y="360" />
+				<Point x="160" y="360" />
+				<Point x="300" y="181" />
+			</Polygon>
+			<Ellipse>
+				<Basic xInit="140" yInit="150" xFinal="330" yFinal="340" xCenter="235" yCenter="245" />
+				<Style lineStyle="solid" lineWidth="6" lineColor="black" lineEnd="round" patternStyle="full" patternColor="rgb(85,85,85)" />
+			</Ellipse>
+			<Ellipse>
+				<Basic xInit="140" yInit="150" xFinal="350" yFinal="340" xCenter="245" yCenter="245" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="gray" />
+			</Ellipse>
+			<Rectangle>
+				<Basic xInit="80" yInit="100" xFinal="400" yFinal="390" xCenter="240" yCenter="245" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="gray" lineEnd="round" patternStyle="full" patternColor="gray" />
+			</Rectangle>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="visible" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<Condition var="Var1" rank="0" />
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>b0e3b8e5-7cbe-46d5-9934-593833f48404</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<ChangeColorOnBit colorFillBitOn="invisible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="invisible" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>NOT (rightVariable)</Expression>
+					<Condition var="Var1" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>77db78bd-10f0-4582-bd26-6e2d3c52c873</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+		</Group>
+		<Group>
+			<Basic xInit="80" yInit="100" xFinal="400" yFinal="390" xCenter="240" yCenter="245" />
+			<Comment>CB.form_name=Left_Pos
+CB.num_rep=1
+</Comment>
+			<Polygon>
+				<Basic xInit="170" yInit="180" xFinal="220" yFinal="240" xCenter="195" yCenter="210" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+				<Point x="170" y="190" />
+				<Point x="210" y="240" />
+				<Point x="220" y="230" />
+				<Point x="180" y="180" />
+				<Point x="170" y="190" />
+			</Polygon>
+			<Line>
+				<Basic xInit="350" yInit="340" xFinal="320" yFinal="340" xCenter="335" yCenter="340" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+			</Line>
+			<Line>
+				<Basic xInit="320" yInit="340" xFinal="300" yFinal="360" xCenter="310" yCenter="350" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+			</Line>
+			<Line>
+				<Basic xInit="170" yInit="160" xFinal="320" yFinal="340" xCenter="245" yCenter="250" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="rgb(85,85,85)" />
+			</Line>
+			<Polygon>
+				<Basic xInit="150" yInit="160" xFinal="350" yFinal="360" xCenter="250" yCenter="260" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="rgb(85,85,85)" />
+				<Point x="150" y="180" />
+				<Point x="170" y="160" />
+				<Point x="200" y="160" />
+				<Point x="350" y="340" />
+				<Point x="330" y="360" />
+				<Point x="300" y="360" />
+				<Point x="150" y="180" />
+			</Polygon>
+			<Ellipse>
+				<Basic xInit="140" yInit="150" xFinal="330" yFinal="340" xCenter="235" yCenter="245" />
+				<Style lineStyle="solid" lineWidth="6" lineColor="black" lineEnd="round" patternStyle="full" patternColor="rgb(85,85,85)" />
+			</Ellipse>
+			<Ellipse>
+				<Basic xInit="140" yInit="150" xFinal="350" yFinal="340" xCenter="245" yCenter="245" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="gray" />
+			</Ellipse>
+			<Rectangle>
+				<Basic xInit="80" yInit="100" xFinal="400" yFinal="390" xCenter="240" yCenter="245" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="gray" lineEnd="round" patternStyle="full" patternColor="gray" />
+			</Rectangle>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="visible" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<Condition var="Var0" rank="0" />
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>1b85a39f-04d9-4322-8965-e6bd5d187ee5</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<ChangeColorOnBit colorFillBitOn="invisible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="invisible" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>NOT (leftVariable)</Expression>
+					<Condition var="Var0" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>d79b59c2-01a6-4701-a60c-829d863e94ae</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+		</Group>
+	</Objects>
+	<Vars>
+		<Var varId="Var1" type="BOOL" name="rightVariable" />
+		<Var varId="Var2" type="BOOL" name="leftPosition" />
+		<Var varId="Var3" type="BOOL" name="middlePosition" />
+		<Var varId="Var4" type="BOOL" name="rightPosition" />
+		<Var varId="Var0" type="BOOL" name="leftVariable" />
+	</Vars>
+	<Fonts>
+	</Fonts>
+	<Meta>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var1</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>f8e3c52b-5d9a-43de-bf2d-131f16dc4310</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var2</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>cfc30dd0-247e-4b40-8a89-a6786813ecf0</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var3</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>a56e9309-5c4f-452b-bb09-1b7e9685748d</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var4</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>bf99f503-236a-4844-afef-89a08cf10bb6</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var0</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>0a7dc1f0-f69c-45de-8b06-afd0997f3135</ParamValue>
+			</Param>
+		</Metadata>
+	</Meta>
+</AWTSynoptic>

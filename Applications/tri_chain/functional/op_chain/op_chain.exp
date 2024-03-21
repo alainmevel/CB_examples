@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<CB_COMPONENT NAME="op_chain" COMMENTS="" COMMENTS_PATTERN="" PICTURE_PATH="" INSTANCE_NAMIMG_PATTERN="" COMPONENT_CLASS="" AP_DEC="T_ElementTableActeursProduits TableActeursProduits[] = {
+&#9;{{28, 523, 25, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__passing_sensor, mx_status_static, 4, {{0, 0}, {0, 0}}},
+&#9;{{32, 524, 47, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__passing_sensor, mx_status_static, 5, {{0, 0}, {0, 0}}},
+&#9;{{36, 525, 69, 53}, {0, 0, 0, 0},
+&#9;&#9;mx_nature_c, tri_chain__conveyor, mx_status_static, 6, {{0, 0}, {0, 0}}},
+&#9;{{0, 0, 0, 0}, {0, 0, 0, 0},
+&#9;0, 0, 0, 0, {{0, 0}, {0, 0}}}
+};
+T_Instance NbActeurs = 3;
+T_Instance NbProduits = 0;
+T_Instance NbActeursEtProduits = 3;
+
+void globalesInit()
+{
+}" SIGNATURE="2147483647" GENERATION_DATE="1331111674" SAFE_MODE="True" BREAKPOINT="False" GEN_STATUS="good">
+	<MODEL_REQUIREMENTS>
+&#9;
+		<COMMENTS />
+&#9;
+		<FUNCTIONAL_TREE TYPE="mac">
+&#9;&#9;
+			<CHILDREN>
+&#9;&#9;&#9;
+				<NODE NAME="motor1dir" MODEL_PATH="Applications\tri_chain\motor1dir_1speed">
+&#9;&#9;&#9;&#9;
+					<NODE NAME="runButton" MODEL_PATH="Applications\tri_chain\button">
+&#9;&#9;&#9;&#9;&#9;
+						<NODE NAME="start_sensor" MODEL_PATH="Applications\tri_chain\passing_sensor">
+							<NODE NAME="end_sensor" MODEL_PATH="Applications\tri_chain\passing_sensor">
+								<NODE NAME="chain" MODEL_PATH="Applications\tri_chain\conveyor1" /></NODE></NODE></NODE></NODE></CHILDREN></FUNCTIONAL_TREE></MODEL_REQUIREMENTS>
+</CB_COMPONENT>

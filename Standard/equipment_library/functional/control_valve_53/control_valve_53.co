@@ -1,0 +1,13 @@
+ valveWork IB1
+ valveRest IB2
+ energy IB3
+ cmdSupply IB4
+ pipeWork OB5
+ pipeRest OB6
+ workMode OB7
+ restMode OB8
+ slidePosition LI9
+ d_work DB10
+ v_d_work DB11
+ d_rest DB12
+ v_d_rest DB13

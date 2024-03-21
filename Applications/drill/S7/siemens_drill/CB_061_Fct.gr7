@@ -1,0 +1,108 @@
+FUNCTION_BLOCK FB 61
+
+CMPSET
+	S7Graph-Version: 5100
+         WarningLevel: None
+         FBInterface: Minimum
+         SSBLevel: Individual
+         ASMsgLevel: No
+         TargetMachine: AS300StdBlock
+         RuntimeBlock: FC 70
+         CritAvail: F
+         SSkipOn: F
+         AckReq: F
+         SyncAvail: F
+         PermILMan: F
+         SWMLocked: F
+         InitVarStat: 4401
+         SaveSwitching: F
+END_CMPSET
+
+INITIAL_STEP Step10 (*$_NUM 10*)  :
+(* $_COM Wait in rest position :
+clamping elements are open
+Signalling releasing OK *)
+END_STEP
+
+STEP Step11 (*$_NUM 11*)  :
+(* $_COM Locking orders to
+right element and 
+left element *)
+END_STEP
+
+STEP Step12 (*$_NUM 12*)  :
+(* $_COM Wait in rest position :
+clamping elements are closed
+Signalling clamping OK *)
+END_STEP
+
+STEP Step13 (*$_NUM 13*)  :
+(* $_COM Unlocking orders to
+right element and 
+left element *)
+END_STEP
+
+STEP Step14 (*$_NUM 14*)  :
+(* $_COM Manual change of the situation
+(no command in automatic mode) *)
+END_STEP
+
+TRANSITION Trans10 (*$_NUM 10*) 
+	FROM (Step10)
+	TO (Step11) :
+CONDITION := "DB90".RUN1_clamping AND NOT "DB90".RUN1_releasing AND 
+("DB90".clampingFaultClaF1 ==D L#0)
+END_TRANSITION
+
+TRANSITION Trans11 (*$_NUM 11*) 
+	FROM (Step11)
+	TO (Step12) :
+CONDITION := "DB90".F2RCYL1_outletSensor AND "DB90".F2LCYL1_outletSensor
+END_TRANSITION
+
+TRANSITION Trans13 (*$_NUM 13*) 
+	FROM (Step11)
+	TO (Step13) :
+CONDITION := "DB90".RUN1_releasing AND NOT "DB90".RUN1_clamping
+END_TRANSITION
+
+TRANSITION Trans14 (*$_NUM 14*) 
+	FROM (Step11)
+	TO (Step14) :
+CONDITION := ("DB90".clampingFaultClaF1 >D L#0)
+END_TRANSITION
+
+TRANSITION Trans12 (*$_NUM 12*) 
+	FROM (Step12)
+	TO (Step13) :
+CONDITION := "DB90".RUN1_releasing AND NOT "DB90".RUN1_clamping AND 
+("DB90".clampingFaultClaF1 ==D L#0)
+END_TRANSITION
+
+TRANSITION Trans15 (*$_NUM 15*) 
+	FROM (Step13)
+	TO (Step11) (*$_JUMP*) :
+CONDITION := "DB90".RUN1_clamping AND NOT "DB90".RUN1_releasing
+END_TRANSITION
+
+TRANSITION Trans16 (*$_NUM 16*) 
+	FROM (Step13)
+	TO (Step10) (*$_JUMP*) :
+CONDITION := "DB90".F2RCYL1_inletSensor AND "DB90".F2LCYL1_inletSensor
+END_TRANSITION
+
+TRANSITION Trans17 (*$_NUM 17*) 
+	FROM (Step13)
+	TO (Step14) :
+CONDITION := ("DB90".clampingFaultClaF1 >D L#0)
+END_TRANSITION
+
+TRANSITION Trans18 (*$_NUM 18*) 
+	FROM (Step14)
+	TO (Step10) (*$_JUMP*) :
+CONDITION := "DB90".F2RCYL1_inletSensor AND "DB90".F2LCYL1_inletSensor
+END_TRANSITION
+
+
+
+END_FUNCTION_BLOCK

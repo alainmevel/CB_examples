@@ -1,0 +1,912 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<AWTSynoptic screenX="1600" screenY="2262" name="double_acting_jack.xman" description="" date="03/10/2023" time="11:13" version="3.0_draft3" source="controlbuild " bkgColor="white" identifier="93417a3c-1121-4556-b530-e4966a3d26f1" gridExtent="10" designLevel="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Colors>
+		<Color colorId="black" r="0" g="0" b="0" invisible="false" />
+		<Color colorId="white" r="255" g="255" b="255" invisible="false" />
+		<Color colorId="red" r="255" g="0" b="0" invisible="false" />
+		<Color colorId="yellow" r="255" g="255" b="0" invisible="false" />
+		<Color colorId="blue" r="0" g="0" b="255" invisible="false" />
+		<Color colorId="green" r="0" g="255" b="0" invisible="false" />
+		<Color colorId="purple" r="128" g="0" b="128" invisible="false" />
+		<Color colorId="brown" r="128" g="64" b="0" invisible="false" />
+		<Color colorId="gray" r="192" g="192" b="192" invisible="false" />
+		<Color colorId="orange" r="255" g="128" b="0" invisible="false" />
+		<Color colorId="pink" r="255" g="128" b="255" invisible="false" />
+		<Color colorId="transparent" invisible="true" />
+		<Color colorId="other" r="0" g="0" b="0" invisible="false" />
+		<Color colorId="visible" invisible="false" />
+	</Colors>
+	<Objects>
+		<Group>
+			<Basic xInit="70" yInit="300" xFinal="760" yFinal="630" xCenter="415" yCenter="465" />
+			<Comment>CB.form_name=Rod
+CB.num_rep=1
+</Comment>
+			<Rectangle>
+				<Basic xInit="682" yInit="380" xFinal="760" yFinal="530" xCenter="721" yCenter="455" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="black" />
+			</Rectangle>
+			<Rectangle>
+				<Basic xInit="70" yInit="300" xFinal="159" yFinal="630" xCenter="114" yCenter="465" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="black" />
+			</Rectangle>
+			<Rectangle>
+				<Basic xInit="148" yInit="410" xFinal="693" yFinal="500" xCenter="420" yCenter="455" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="black" />
+			</Rectangle>
+			<Translation2>
+				<XAxisMoving>
+					<Expression>((rodPercent * (500 - 70)) / 100) + 70</Expression>
+					<Condition var="Var8" rank="0" />
+				</XAxisMoving>
+				<YAxisMoving>
+					<Expression>300</Expression>
+				</YAxisMoving>
+				<ComplexCondition>
+					<Expression>TRUE</Expression>
+				</ComplexCondition>
+				<addData>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>84ea8611-d12a-4417-86f4-0788644227bc</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</Translation2>
+		</Group>
+		<Group>
+			<Basic xInit="1120" yInit="540" xFinal="1190" yFinal="630" xCenter="1155" yCenter="585" />
+			<Comment>CB.form_name=Outlet_Sensor
+CB.num_rep=1
+</Comment>
+			<Rectangle>
+				<Basic xInit="1120" yInit="540" xFinal="1190" yFinal="630" xCenter="1155" yCenter="585" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="yellow" />
+			</Rectangle>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="green" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<Condition var="Var5" rank="0" />
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>96e9f770-d310-45da-bdbc-9094eaace0c6</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="yellow" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>NOT (outletSensor)</Expression>
+					<Condition var="Var5" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>2adf65ae-69a9-4e4d-9bf7-382cbefb5783</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="blinkColor(orange,red,10,10)" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<Condition var="Var22" rank="0" />
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>16005216-130e-45ae-b45d-e7f896ad1f39</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+		</Group>
+		<Group>
+			<Basic xInit="680" yInit="540" xFinal="750" yFinal="630" xCenter="715" yCenter="585" />
+			<Comment>CB.form_name=Inlet_Sensor
+CB.num_rep=1
+</Comment>
+			<Rectangle>
+				<Basic xInit="680" yInit="540" xFinal="750" yFinal="630" xCenter="715" yCenter="585" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="green" />
+			</Rectangle>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="green" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<Condition var="Var6" rank="0" />
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>153c178e-7009-40e1-8afe-1a386b48fad3</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="yellow" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>NOT (inletSensor)</Expression>
+					<Condition var="Var6" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>7b38f969-3f29-49d4-b98c-40dfbc5ac659</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="blinkColor(orange,red,10,10)" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<Condition var="Var20" rank="0" />
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>01dbeea4-333a-419a-bf3c-f2c7dbfd3532</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+		</Group>
+		<Group>
+			<Basic xInit="10" yInit="240" xFinal="650" yFinal="700" xCenter="330" yCenter="470" />
+			<Comment>CB.form_name=Chamber
+CB.num_rep=1
+</Comment>
+			<Rectangle>
+				<Basic xInit="612" yInit="390" xFinal="650" yFinal="510" xCenter="631" yCenter="450" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+			</Rectangle>
+			<Rectangle>
+				<Basic xInit="48" yInit="290" xFinal="612" yFinal="640" xCenter="330" yCenter="465" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+			</Rectangle>
+			<Rectangle>
+				<Basic xInit="10" yInit="240" xFinal="650" yFinal="700" xCenter="330" yCenter="470" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="gray" />
+			</Rectangle>
+		</Group>
+		<Group>
+			<Basic xInit="150" yInit="820" xFinal="310" yFinal="900" xCenter="230" yCenter="860" />
+			<Comment>CB.form_name=Control_Valve
+CB.num_rep=1
+</Comment>
+			<Rectangle>
+				<Basic xInit="230" yInit="820" xFinal="310" yFinal="900" xCenter="270" yCenter="860" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="gray" />
+			</Rectangle>
+			<Rectangle>
+				<Basic xInit="150" yInit="820" xFinal="310" yFinal="900" xCenter="230" yCenter="860" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="gray" />
+			</Rectangle>
+			<Translation2>
+				<XAxisMoving>
+					<Expression>150</Expression>
+				</XAxisMoving>
+				<YAxisMoving>
+					<Expression>820</Expression>
+				</YAxisMoving>
+				<ComplexCondition>
+					<Expression>slidePosition = 0</Expression>
+					<Condition var="Var10" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>59146226-8568-40ce-86fd-33e4e43d3115</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</Translation2>
+			<Translation2>
+				<XAxisMoving>
+					<Expression>230</Expression>
+				</XAxisMoving>
+				<YAxisMoving>
+					<Expression>820</Expression>
+				</YAxisMoving>
+				<ComplexCondition>
+					<Expression>slidePosition = 1</Expression>
+					<Condition var="Var10" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>71506175-270b-45b3-8853-3e5e57985daa</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</Translation2>
+		</Group>
+		<Group>
+			<Basic xInit="260" yInit="900" xFinal="280" yFinal="1000" xCenter="270" yCenter="950" />
+			<Comment>CB.form_name=Input_Pipe
+CB.num_rep=1
+</Comment>
+			<Rectangle>
+				<Basic xInit="260" yInit="900" xFinal="280" yFinal="1000" xCenter="270" yCenter="950" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="gray" />
+			</Rectangle>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="blue" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<Condition var="Var0" rank="0" />
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>b3913ddf-5755-4ed5-8201-92d6fd014564</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="gray" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>NOT (energy)</Expression>
+					<Condition var="Var0" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>f4e0cee7-07e9-4e1a-9405-1bc5b28fc153</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+		</Group>
+		<Group>
+			<Basic xInit="280" yInit="700" xFinal="580" yFinal="820" xCenter="430" yCenter="760" />
+			<Comment>CB.form_name=Pipe_Rest
+CB.num_rep=1
+</Comment>
+			<Rectangle>
+				<Basic xInit="280" yInit="760" xFinal="297" yFinal="820" xCenter="288" yCenter="790" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="gray" />
+			</Rectangle>
+			<Rectangle>
+				<Basic xInit="280" yInit="760" xFinal="580" yFinal="791" xCenter="430" yCenter="775" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="gray" />
+			</Rectangle>
+			<Rectangle>
+				<Basic xInit="563" yInit="700" xFinal="580" yFinal="791" xCenter="571" yCenter="745" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="gray" />
+			</Rectangle>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="blue" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<Condition var="Var12" rank="0" />
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>1887c8d1-d316-4aa6-838f-06fd5db03ca0</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="gray" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>NOT (pipeRest)</Expression>
+					<Condition var="Var12" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>79fbc94b-a97a-430a-a2be-e24b8e78e64c</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+		</Group>
+		<Group>
+			<Basic xInit="80" yInit="700" xFinal="260" yFinal="820" xCenter="170" yCenter="760" />
+			<Comment>CB.form_name=Pipe_Work
+CB.num_rep=1
+</Comment>
+			<Rectangle>
+				<Basic xInit="80" yInit="760" xFinal="260" yFinal="790" xCenter="170" yCenter="775" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="gray" />
+			</Rectangle>
+			<Rectangle>
+				<Basic xInit="240" yInit="760" xFinal="260" yFinal="820" xCenter="250" yCenter="790" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="gray" />
+			</Rectangle>
+			<Rectangle>
+				<Basic xInit="80" yInit="700" xFinal="100" yFinal="790" xCenter="90" yCenter="745" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="gray" />
+			</Rectangle>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="blue" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<Condition var="Var11" rank="0" />
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>bf12da41-2f9a-4cd1-87a5-8c86601a4ed0</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="gray" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>NOT (pipeWork)</Expression>
+					<Condition var="Var11" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>5a6dc0cc-fff7-42eb-b589-c52112aec95b</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+		</Group>
+		<Group>
+			<Basic xInit="1090" yInit="660" xFinal="1150" yFinal="720" xCenter="1120" yCenter="690" />
+			<Comment>CB.form_name=D_Outlet_Sensor
+CB.num_rep=1
+CB.controlled_variable=Var22
+</Comment>
+			<Ellipse>
+				<Basic xInit="1090" yInit="660" xFinal="1150" yFinal="720" xCenter="1120" yCenter="690" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="red" lineEnd="round" patternStyle="full" patternColor="white" />
+			</Ellipse>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="red" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<Condition var="Var22" rank="0" />
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>ae7c6c37-8052-4854-93ab-53ca392d18aa</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="white" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>NOT (d_outletSensor)</Expression>
+					<Condition var="Var22" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>9f5909fd-5228-4951-9f87-a292fe7081f7</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+		</Group>
+		<Group>
+			<Basic xInit="1160" yInit="660" xFinal="1220" yFinal="720" xCenter="1190" yCenter="690" />
+			<Comment>CB.form_name=V_D_Outlet_Sensor
+CB.num_rep=1
+CB.controlled_variable=Var23
+</Comment>
+			<Rectangle>
+				<Basic xInit="1160" yInit="660" xFinal="1220" yFinal="720" xCenter="1190" yCenter="690" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="green" lineEnd="round" patternStyle="full" patternColor="white" />
+			</Rectangle>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="green" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<Condition var="Var23" rank="0" />
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>3bab5efe-cb90-4eca-98b8-b2e2edfd0665</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="white" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>NOT (v_d_outletSensor)</Expression>
+					<Condition var="Var23" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>43d2fc3a-e1e5-444b-911f-76700cb2d6aa</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+		</Group>
+		<Group>
+			<Basic xInit="660" yInit="660" xFinal="720" yFinal="720" xCenter="690" yCenter="690" />
+			<Comment>CB.form_name=D_Inlet_Sensor
+CB.num_rep=1
+CB.controlled_variable=Var20
+</Comment>
+			<Ellipse>
+				<Basic xInit="660" yInit="660" xFinal="720" yFinal="720" xCenter="690" yCenter="690" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="red" lineEnd="round" patternStyle="full" patternColor="white" />
+			</Ellipse>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="red" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<Condition var="Var20" rank="0" />
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>6d7d6915-588f-4374-88dc-cd7e8f08961a</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="white" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>NOT (d_inletSensor)</Expression>
+					<Condition var="Var20" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>8bafaf46-a652-4f42-942a-97511608b2e8</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+		</Group>
+		<Group>
+			<Basic xInit="730" yInit="660" xFinal="790" yFinal="720" xCenter="760" yCenter="690" />
+			<Comment>CB.form_name=V_D_Inlet_Sensor
+CB.num_rep=1
+CB.controlled_variable=Var21
+</Comment>
+			<Rectangle>
+				<Basic xInit="730" yInit="660" xFinal="790" yFinal="720" xCenter="760" yCenter="690" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="green" lineEnd="round" patternStyle="full" patternColor="white" />
+			</Rectangle>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="green" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<Condition var="Var21" rank="0" />
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>2801bfdd-831e-4dc2-8122-afeca39e3362</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="white" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>NOT (v_d_inletSensor)</Expression>
+					<Condition var="Var21" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>d3e91840-635c-43c3-9c14-5c1ef2540360</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+		</Group>
+		<Group>
+			<Basic xInit="1110" yInit="230" xFinal="1190" yFinal="310" xCenter="1150" yCenter="270" />
+			<Comment>CB.form_name=Valve_Work
+CB.num_rep=1
+CB.controlled_variable=Var3
+</Comment>
+			<Polygon>
+				<Basic xInit="1110" yInit="230" xFinal="1190" yFinal="310" xCenter="1150" yCenter="270" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+				<Point x="1110" y="230" />
+				<Point x="1110" y="310" />
+				<Point x="1190" y="270" />
+				<Point x="1110" y="230" />
+			</Polygon>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="green" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<Condition var="Var3" rank="0" />
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>5246a170-c820-40aa-bd81-3fcf448f6954</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="white" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>NOT (valveWork)</Expression>
+					<Condition var="Var3" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>5cacba8b-e65f-4e9d-9f1c-966aa352a728</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+		</Group>
+		<Group>
+			<Basic xInit="700" yInit="230" xFinal="780" yFinal="310" xCenter="740" yCenter="270" />
+			<Comment>CB.form_name=Valve_Rest
+CB.num_rep=1
+CB.controlled_variable=Var4
+</Comment>
+			<Polygon>
+				<Basic xInit="700" yInit="230" xFinal="780" yFinal="310" xCenter="740" yCenter="270" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+				<Point x="780" y="230" />
+				<Point x="780" y="310" />
+				<Point x="700" y="270" />
+				<Point x="780" y="230" />
+			</Polygon>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="green" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<Condition var="Var4" rank="0" />
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>027c1ad8-8e34-44bd-975f-f42c6621262f</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="white" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>NOT (valveRest)</Expression>
+					<Condition var="Var4" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>004e6e54-5a0a-4ce3-8b37-6a8ce0592092</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+		</Group>
+	</Objects>
+	<Vars>
+		<Var varId="Var0" type="BOOL" name="energy" />
+		<Var varId="Var5" type="BOOL" name="outletSensor" />
+		<Var varId="Var8" type="REAL" name="rodPercent" />
+		<Var varId="Var9" type="REAL" name="incrementValue" />
+		<Var varId="Var6" type="BOOL" name="inletSensor" />
+		<Var varId="Var17" type="REAL" name="time2extend" />
+		<Var varId="Var22" type="BOOL" name="d_outletSensor" />
+		<Var varId="Var20" type="BOOL" name="d_inletSensor" />
+		<Var varId="Var16" type="REAL" name="rodLength" />
+		<Var varId="Var1" type="BOOL" name="cmdSupply" />
+		<Var varId="Var3" type="BOOL" name="valveWork" />
+		<Var varId="Var14" type="BOOL" name="outletSensorLogic" />
+		<Var varId="Var13" type="REAL" name="increment" />
+		<Var varId="Var19" type="REAL" name="v_d_locking" />
+		<Var varId="Var15" type="BOOL" name="inletSensorLogic" />
+		<Var varId="Var18" type="BOOL" name="d_locking" />
+		<Var varId="Var10" type="DINT" name="slidePosition" />
+		<Var varId="Var12" type="BOOL" name="pipeRest" />
+		<Var varId="Var11" type="BOOL" name="pipeWork" />
+		<Var varId="Var21" type="BOOL" name="v_d_inletSensor" />
+		<Var varId="Var7" type="REAL" name="rodPosition" />
+		<Var varId="Var4" type="BOOL" name="valveRest" />
+		<Var varId="Var23" type="BOOL" name="v_d_outletSensor" />
+		<Var varId="Var2" type="BOOL" name="sensorSupply" />
+	</Vars>
+	<Fonts>
+	</Fonts>
+	<Meta>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var0</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>f16e7565-da7c-4ef1-89c9-f896b7899fcf</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var5</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>69f587de-219e-4825-87dd-a9b0e84ba89f</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var8</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>9627c3f3-69c5-4dfb-9ff2-64a225a54abd</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var9</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>8ce0dba3-1fdc-4910-b2cd-d72bd6eb6cf2</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var6</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>1773bf4b-cde4-4120-af4e-087d8f071685</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var17</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>0193ad2f-a0e8-4188-87fd-eace0771df67</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var22</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>9483ac8e-21eb-476f-aa5d-e40aa2a33815</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var20</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>ff6e1e12-88dc-4f6a-a270-57088a0d5486</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var16</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>6b63ae30-5303-44e4-9368-f41b4d9fc31e</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var1</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>74d76ed4-7980-4448-ad8e-cf4a7720c6c3</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var3</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>3a353815-8a3f-4117-9abd-bd3b5b95f662</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var14</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>2bbe0972-c9b5-403a-964d-6d83d10b1242</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var13</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>438e2f70-3b83-450c-a245-57e0eb994e7b</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var19</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>b346aa8c-72b5-4d99-af11-fbb813c25097</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var15</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>b18d1f29-cd67-4f89-89f7-b4cb0f599e75</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var18</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>4f9334e5-29e7-434f-a8db-36968ad9dfeb</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var10</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>846cb785-5641-4833-bfe1-f2868c2e78fc</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var12</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>12792075-3733-48bd-8f41-f590e94df5f6</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var11</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>fb19012b-1971-4dca-b5fd-2bf59e427c1d</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var21</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>6b1567b0-4fed-4a2e-825f-581c9c0ecd86</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var7</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>03ce6dd7-4429-464b-af77-1e8a7995566c</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var4</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>0586c3a8-2a56-46a5-9666-2ef997e5ca1b</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var23</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>2caa901f-e3c6-4d50-9ba0-decbbb469fa1</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var2</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>7fbf06bd-ed1d-48b6-8b16-346dad742ec2</ParamValue>
+			</Param>
+		</Metadata>
+	</Meta>
+</AWTSynoptic>

@@ -1,0 +1,26 @@
+
+FUNCTION CB_min_dt : DT
+
+
+TITLE = ' Search for the greater variable '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : minDt
+FAMILY  : TNI
+
+VAR_INPUT
+    IN0 : DT;
+    IN1 : DT;
+END_VAR
+
+VAR_TEMP
+    CIN0 : DT;
+    CIN1 : DT;
+    temp1 : DT;
+END_VAR
+
+BEGIN
+temp1 := MIN(IN1 := CIN0, IN2 := CIN1);
+CB_min_dt := temp1;
+
+END_FUNCTION

@@ -1,0 +1,21 @@
+
+FUNCTION CB_expt_sint : INT
+
+
+TITLE = ' Exponentiation of a variable  '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : exptSint
+FAMILY  : TNI
+
+VAR_INPUT
+    IN1 : INT;
+    IN2 : INT;
+
+END_VAR
+
+BEGIN
+
+CB_expt_sint := BYTE_TO_INT(INT_TO_BYTE(REAL_TO_INT(IN1 ** IN2)));
+
+END_FUNCTION

@@ -1,0 +1,16 @@
+ pressure II1
+ tick IB2
+ B1 IB3
+ B2 IB4
+ B3 IB5
+ B4 IB6
+ displayValue OT8I7
+ stepMotorSecond OB8
+ stepMotorMinute OB9
+ stepMotorHour OB10
+ switchOnLight OB11
+ ~ LI12
+ ~ LI13
+ ~ LI14
+<tni_clock:time_management timeManagement/ 1 tick 2 B1 3 B2 4 B3 5 B4 6 stepMotorSecond 8 stepMotorMinute 9 stepMotorHour 10 hh 12 mn 13 sec 14>
+<tni_clock:display_management displayManagement/ 1 hh 12 mn 13 sec 14 tick 2 pressure 1 B1 3 B2 4 B3 5 B4 6 displayValue 7 switchOnLight 11>

@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<AWTSynoptic screenX="1600" screenY="2262" name="left_motor_car.xman" description="" date="03/10/2023" time="11:13" version="3.0_draft3" source="controlbuild " bkgColor="white" identifier="733091c2-7098-4bbd-98da-89a77039a0de" gridExtent="10" designLevel="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Colors>
+		<Color colorId="black" r="0" g="0" b="0" invisible="false" />
+		<Color colorId="white" r="255" g="255" b="255" invisible="false" />
+		<Color colorId="red" r="255" g="0" b="0" invisible="false" />
+		<Color colorId="yellow" r="255" g="255" b="0" invisible="false" />
+		<Color colorId="blue" r="0" g="0" b="255" invisible="false" />
+		<Color colorId="green" r="0" g="255" b="0" invisible="false" />
+		<Color colorId="purple" r="128" g="0" b="128" invisible="false" />
+		<Color colorId="brown" r="128" g="64" b="0" invisible="false" />
+		<Color colorId="gray" r="192" g="192" b="192" invisible="false" />
+		<Color colorId="orange" r="255" g="128" b="0" invisible="false" />
+		<Color colorId="pink" r="255" g="128" b="255" invisible="false" />
+		<Color colorId="transparent" invisible="true" />
+		<Color colorId="other" r="0" g="0" b="0" invisible="false" />
+		<Color colorId="visible" invisible="false" />
+	</Colors>
+	<Objects>
+		<Group>
+			<Basic xInit="10" yInit="0" xFinal="1000" yFinal="990" xCenter="505" yCenter="495" />
+			<Comment>CB.form_name=leftMotorCar
+CB.num_rep=1
+</Comment>
+			<Line>
+				<Basic xInit="920" yInit="0" xFinal="10" yFinal="660" xCenter="465" yCenter="330" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="gray" />
+			</Line>
+			<Line>
+				<Basic xInit="920" yInit="0" xFinal="1000" yFinal="0" xCenter="960" yCenter="0" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="gray" />
+			</Line>
+			<Line>
+				<Basic xInit="10" yInit="910" xFinal="10" yFinal="660" xCenter="10" yCenter="785" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+			</Line>
+			<Rectangle>
+				<Basic xInit="10" yInit="660" xFinal="1000" yFinal="780" xCenter="505" yCenter="720" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="red" lineEnd="round" patternStyle="full" patternColor="red" />
+			</Rectangle>
+			<Polygon>
+				<Basic xInit="10" yInit="780" xFinal="1000" yFinal="990" xCenter="505" yCenter="885" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="black" />
+				<Point x="10" y="780" />
+				<Point x="10" y="910" />
+				<Point x="707" y="990" />
+				<Point x="1000" y="990" />
+				<Point x="1000" y="780" />
+				<Point x="10" y="780" />
+			</Polygon>
+			<Polygon>
+				<Basic xInit="10" yInit="100" xFinal="980" yFinal="660" xCenter="495" yCenter="380" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="gray" />
+				<Point x="980" y="100" />
+				<Point x="790" y="100" />
+				<Point x="10" y="660" />
+				<Point x="980" y="660" />
+				<Point x="980" y="100" />
+			</Polygon>
+		</Group>
+	</Objects>
+	<Vars>
+		<Var varId="Var7" type="BOOL" name="AuthorizationOpeningLeftC2" />
+		<Var varId="Var13" type="DINT" name="doorL2Fault" />
+		<Var varId="Var20" type="BOOL" name="doorR2Closed" />
+		<Var varId="Var17" type="BOOL" name="doorR1Closed" />
+		<Var varId="Var27" type="BOOL" name="AlarmD2L" />
+		<Var varId="Var21" type="BOOL" name="doorR2Opened" />
+		<Var varId="Var8" type="BOOL" name="doorL1Closed" />
+		<Var varId="Var10" type="DINT" name="doorL1Fault" />
+		<Var varId="Var2" type="BOOL" name="AuthorizationClosingRightC1" />
+		<Var varId="Var6" type="BOOL" name="AuthorizationClosingRightC2" />
+		<Var varId="Var9" type="BOOL" name="doorL1Opened" />
+		<Var varId="Var18" type="BOOL" name="doorR1Opened" />
+		<Var varId="Var30" type="BOOL" name="AlarmD2R" />
+		<Var varId="Var28" type="BOOL" name="AlarmD3L" />
+		<Var varId="Var16" type="DINT" name="doorL3Fault" />
+		<Var varId="Var31" type="BOOL" name="AlarmD3R" />
+		<Var varId="Var23" type="BOOL" name="doorR3Closed" />
+		<Var varId="Var22" type="DINT" name="doorR2Fault" />
+		<Var varId="Var11" type="BOOL" name="doorL2Closed" />
+		<Var varId="Var24" type="BOOL" name="doorR3Opened" />
+		<Var varId="Var1" type="BOOL" name="AuthorizationOpeningRightC1" />
+		<Var varId="Var5" type="BOOL" name="AuthorizationOpeningRightC2" />
+		<Var varId="Var0" type="BOOL" name="AuthorizationClosingLeftC1" />
+		<Var varId="Var4" type="BOOL" name="AuthorizationClosingLeftC2" />
+		<Var varId="Var12" type="BOOL" name="doorL2Opened" />
+		<Var varId="Var19" type="DINT" name="doorR1Fault" />
+		<Var varId="Var25" type="DINT" name="doorR3Fault" />
+		<Var varId="Var26" type="BOOL" name="AlarmD1L" />
+		<Var varId="Var14" type="BOOL" name="doorL3Closed" />
+		<Var varId="Var15" type="BOOL" name="doorL3Opened" />
+		<Var varId="Var29" type="BOOL" name="AlarmD1R" />
+		<Var varId="Var3" type="BOOL" name="AuthorizationOpeningLeftC1" />
+	</Vars>
+	<Fonts>
+	</Fonts>
+	<Meta>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var7</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>1ca4f44f-bde4-4dfb-851a-6b8b2e5bc9d9</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var13</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>5eaeb940-d4fa-4e56-9654-fb2f8da322fb</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var20</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>6df7d9c0-9a98-4eb6-820b-ace590adcf9c</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var17</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>9fcd8a0a-5841-4426-9ac7-2251011a7bea</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var27</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>fc2f856e-8482-4a46-bac1-f43e6338d1de</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var21</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>d169c901-a974-47bd-b2a6-1cb8ca92e296</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var8</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>ebe41057-eb12-451b-a429-59e6297a1e02</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var10</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>b4410906-93f9-4f7d-b162-03599e44b058</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var2</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>42cd4eaa-5ea5-4b6f-bdc5-a43e6a14c672</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var6</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>c4fb692e-6e68-4ad4-b2c5-9b5c0ef8c4be</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var9</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>a2f8e0ee-2f22-4b9f-996e-3949bcc292a8</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var18</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>732dc8a7-89ae-4882-b264-8d3e0a625851</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var30</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>d4d6a047-80e2-4e6c-9916-93714fc736fe</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var28</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>982ebece-565d-41d9-b915-0c1b6a33af9a</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var16</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>86aa6ce6-2c67-4c73-97a1-6f4e10db0b01</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var31</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>198a1d12-5290-4c8f-9db3-7664e761d762</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var23</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>267e5d12-377f-4bcd-953b-9224fe29aee0</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var22</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>f277cf43-53a1-4209-8da7-31a46a803fea</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var11</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>8e351be0-6b47-4478-b7d2-9b9eb754b9b6</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var24</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>bd0a31f3-66c1-406f-b3f1-504680a9c02c</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var1</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>b777d29a-3e18-4057-a3b6-77075c33a816</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var5</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>33eca405-ece9-474d-8f22-15ee699da1b6</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var0</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>2584b84c-686a-4feb-80ae-0875de26e8dd</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var4</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>71ff2e8d-a660-4bfb-80e9-af74a91b9001</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var12</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>c0b90e57-0f09-4fcf-b8a6-605b08dd4c76</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var19</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>7f9ca377-4049-4fc0-872a-73f132fc9610</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var25</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>e6dec478-b4ae-4529-8a15-f99317d82df5</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var26</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>37381424-8d50-4d0f-9ca0-2ae0d45890b4</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var14</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>c2b46974-a0cf-432c-8e35-700e3763eef5</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var15</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>db133d58-3e37-4f11-94ab-f73e9d95cbcc</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var29</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>8895ce11-293f-4b1d-b533-0d6f61c41932</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var3</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>f0ae305a-5ac6-4748-be21-b14298601583</ParamValue>
+			</Param>
+		</Metadata>
+	</Meta>
+</AWTSynoptic>

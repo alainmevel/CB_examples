@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<MODEL_REQUIREMENTS>
+	<FUNCTIONAL_TREE TYPE="mac">
+		<CHILDREN>
+			<NODE NAME="motor1dir" MODEL_PATH="Applications\tri_chain\motor_1dir_1speed">
+			</NODE>
+			<NODE NAME="runButton" MODEL_PATH="Applications\tri_chain\button">
+			</NODE>
+			<NODE NAME="start_sensor" MODEL_PATH="Applications\tri_chain\passing_sensor">
+			</NODE>
+			<NODE NAME="end_sensor" MODEL_PATH="Applications\tri_chain\passing_sensor">
+			</NODE>
+			<NODE NAME="chain" MODEL_PATH="Applications\tri_chain\conveyor">
+			</NODE>
+		</CHILDREN>
+	</FUNCTIONAL_TREE>
+</MODEL_REQUIREMENTS>

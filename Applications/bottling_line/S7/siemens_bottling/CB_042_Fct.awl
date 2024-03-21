@@ -1,0 +1,142 @@
+FUNCTION_BLOCK FB 42
+TITLE = 'cmd_single_acting_valve_fault_faults'
+AUTHOR : CB
+
+
+VAR_INPUT
+	openCmd : BOOL := FALSE;	//Open command to the valve
+	openedSensorFB : BOOL := FALSE;	//Opened sensor feedback
+	closedSensorFB : BOOL := FALSE;	//Closed sensor feedback
+	acknowledgePB : BOOL := FALSE;	//Acknowledgement pushbutton
+END_VAR
+
+VAR_OUTPUT
+	generalFault : BOOL := FALSE;	//General fault of the valve
+END_VAR
+
+VAR
+	discordanceFault : BOOL := FALSE;	//Discordance between sensors
+	openedSensorFault : BOOL := FALSE;	//Opened sensor fault
+	closedSensorFault : BOOL := FALSE;	//Closed sensor fault
+	presetMvt : TIME := T#0h0m4s0ms;	//in seconds
+	presetDiscordance : TIME := T#0h0m0s200ms;	//in milliseconds
+	TON_O : "cb_ton";
+	TON_C : "cb_ton";
+	TON_DISC : "cb_ton";
+END_VAR
+
+BEGIN
+
+
+NETWORK
+TITLE = 
+//Faults acknowledgement
+L1:	A	acknowledgePB;
+R	discordanceFault;
+
+NETWORK
+TITLE = 
+//Faults acknowledgement
+A	acknowledgePB;
+R	openedSensorFault;
+
+NETWORK
+TITLE = 
+//Faults acknowledgement
+A	acknowledgePB;
+R	closedSensorFault;
+
+NETWORK
+TITLE = 
+//Faults acknowledgement
+A	acknowledgePB;
+R	generalFault;
+
+
+
+
+NETWORK
+TITLE = 
+//Faults of movements
+L2:	A	openCmd;
+=	L0.0;
+BLD	103;
+L	presetMvt;
+T	LD2;
+BLD	103;
+CALL #TON_O(IN:=L0.0, 
+	PT:=LD2);
+NOP	0;
+
+NETWORK
+TITLE = 
+//Faults of movements
+A	TON_O.Q0;
+AN	openedSensorFB;
+S	openedSensorFault;
+
+NETWORK
+TITLE = 
+//Faults of movements
+AN	openCmd;
+=	L0.0;
+
+NETWORK
+TITLE = 
+//
+L	presetMvt;
+T	LD2;
+BLD	103;
+CALL #TON_C(IN:=L0.0, 
+	PT:=LD2);
+NOP	0;
+
+NETWORK
+TITLE = 
+//Faults of movements
+A	TON_C.Q0;
+AN	closedSensorFB;
+S	closedSensorFault;
+
+
+
+
+NETWORK
+TITLE = 
+//Discordance fault
+L3:	A	openedSensorFB;
+A	closedSensorFB;
+=	L0.0;
+
+NETWORK
+TITLE = 
+//
+L	presetDiscordance;
+T	LD2;
+BLD	103;
+CALL #TON_DISC(IN:=L0.0, 
+	PT:=LD2);
+NOP	0;
+
+NETWORK
+TITLE = 
+//Discordance fault
+A	TON_DISC.Q0;
+S	discordanceFault;
+
+
+
+
+NETWORK
+TITLE = 
+//General fault
+L4:	O	discordanceFault;
+O	openedSensorFault;
+O	closedSensorFault;
+S	generalFault;
+
+
+
+
+
+END_FUNCTION_BLOCK
