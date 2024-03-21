@@ -1,0 +1,24 @@
+FUNCTION_BLOCK FB62
+TITLE = 'process_F2'
+AUTHOR : CB
+
+VAR
+	tmp : BOOL;
+END_VAR
+
+
+BEGIN
+
+
+NETWORK
+TITLE = 
+//
+//	process/process_F2/ClaF1PROC
+CALL FC61 (combE := 1);
+CALL FB61,	DB61;
+CALL FC61 (combE := 0);
+
+
+
+
+END_FUNCTION_BLOCK

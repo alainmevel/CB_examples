@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<CB_COMPONENT NAME="management" COMMENTS="" COMMENTS_PATTERN="&lt;CLASS_PATTERN&gt;" PICTURE_PATH="" INSTANCE_NAMIMG_PATTERN="&lt;CLASS_PATTERN&gt;" COMPONENT_CLASS="PROCESS" SAFE_MODE="False" BREAKPOINT="False" GEN_STATUS="good" AP_DEC="T_ElementTableActeursProduits TableActeursProduits[] = {
+&#9;{{0, 0, 0, 0}, {0, 0, 0, 0},
+&#9;0, 0, 0, 0, {{0, 0}, {0, 0}}}
+};
+T_Instance NbActeurs = 0;
+T_Instance NbProduits = 0;
+T_Instance NbActeursEtProduits = 0;
+
+void globalesInit()
+{
+}" GENERATION_DATE="1254319355" SIGNATURE="2147483647">
+	<MODEL_REQUIREMENTS>
+		<COMMENTS />
+		<FUNCTIONAL_TREE TYPE="graf" />
+	</MODEL_REQUIREMENTS>
+</CB_COMPONENT>

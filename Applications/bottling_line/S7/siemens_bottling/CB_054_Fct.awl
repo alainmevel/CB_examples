@@ -1,0 +1,41 @@
+FUNCTION_BLOCK FB54
+TITLE = 'fault_Z2EV1VAD'
+AUTHOR : CB
+
+VAR
+	Z2EV1DEF : FB42;
+END_VAR
+
+
+BEGIN
+
+
+NETWORK
+TITLE = 
+//
+//	fault/fault_Z2/fault_Z2EV1VAD/Z2EV1DEF
+A	Q00.3;
+=	L	0.0;
+BLD	103;
+A	I00.1;
+=	L	0.1;
+BLD	103;
+A	I00.0;
+=	L	0.2;
+BLD	103;
+A	I01.6;
+=	L	0.3;
+BLD	103;
+CALL #Z2EV1DEF(
+	openCmd := L	0.0,
+	openedSensorFB := L	0.1,
+	closedSensorFB := L	0.2,
+	acknowledgePB := L	0.3,
+	generalFault := "DB110".Z2EV1_generalFault
+);
+NOP 0;
+
+
+
+
+END_FUNCTION_BLOCK

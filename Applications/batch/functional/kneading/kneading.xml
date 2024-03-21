@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-03T11:13:38-01:00" />
+	<contentHeader name="kneading">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="32" y="8" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+			<pou name="batch.kneading" pouType="functionBlock">
+				<interface>
+					<inputVars>
+						<variable name="kneadingRequest">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>acca9289-735f-463b-b78d-1b9601308183</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="cycleInProgress">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>dec32ac2-0afb-4abe-a7d3-4b3f4e9d20cf</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="mixtureLevel">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>f4582b53-7a7b-4e1e-84a8-b07fc49c0d38</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<outputVars>
+						<variable name="kneadingOK">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>cb26f569-0ca5-4a32-993e-9db038f60540</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<outputVars>
+						<variable name="knead">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>faebacea-5440-425d-92f2-11883c443dc8</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="clean">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>aff95a22-d572-48df-afe2-64de7ca6ead6</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="cleaningEnd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>a1a7c24f-aab5-4343-acec-5e559e7ea48e</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="evacuateMixture">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>453a2e55-e999-4b16-a8c5-1a83b06b6516</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="evacMixtureEnd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>5318dbdd-acc2-483d-9111-39d677361848</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>MixingCommands</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<localVars>
+						<variable name="nbCycles">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>020d354c-a346-42b9-bc2f-7f4ad4006aec</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>localVars</value>
+							</data>
+						</addData>
+					</localVars>
+					<localVars constant="true">
+						<variable name="kneadingDuration">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="20" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>e956e37f-5c6d-4179-9abc-1b8e45da4ef3</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="nbOfCleanCycles">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="10" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>a8f01492-3476-43da-b0ee-f5a7f41c14fc</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="cleaningDuration">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="30" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>939ef45e-1d60-4af3-9c6e-78d6dd77bec9</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>parameterVars</value>
+							</data>
+						</addData>
+					</localVars>
+					<addData>
+						<data name="Geensys.CB.groupOut" handleUnknown="preserve">
+							<value>MixingCommands,</value>
+						</data>
+					</addData>
+				</interface>
+				<actions>
+					<action name="PostSFC">
+						<body>
+							<ST>IF NOT cycleInProgress THEN
+&#9;knead := FALSE;
+&#9;clean := FALSE;
+&#9;evacuateMixture := FALSE;
+END_IF;
+
+cleaningEnd := NOT cycleInProgress OR NOT clean;
+evacMixtureEnd := NOT cycleInProgress OR NOT evacuateMixture;</ST>
+						</body>
+					</action>
+				</actions>
+				<body>
+					<SFC>
+						<label localId="0" label="G1">
+							<position x="0" y="0" />
+						</label>
+						<actionBlock localId="18" width="249" height="64">
+							<position x="174" y="94" />
+							<connectionPointIn>
+								<connection refLocalId="1" />
+							</connectionPointIn>
+							<action localId="19">
+								<relPosition x="0" y="0" />
+								<inline>
+									<ST>nbCycles := 0;</ST>
+								</inline>
+							</action>
+						</actionBlock>
+						<step name="10" localId="1" initialStep="true">
+							<position x="94" y="94" />
+							<addData>
+							</addData>
+						</step>
+						<selectionConvergence localId="20" width="48">
+							<position x="94" y="264" />
+							<connectionPointIn>
+								<connection refLocalId="9">
+									<position x="126" y="215" />
+									<position x="126" y="248" />
+									<position x="126" y="248" />
+									<position x="126" y="264" />
+								</connection>
+								<connection refLocalId="10">
+									<position x="126" y="1405" />
+									<position x="126" y="1415" />
+									<position x="34" y="1415" />
+									<position x="34" y="244" />
+									<position x="126" y="244" />
+									<position x="126" y="264" />
+								</connection>
+							</connectionPointIn>
+						</selectionConvergence>
+						<step name="11" localId="2">
+							<position x="94" y="264" />
+							<connectionPointIn>
+								<connection refLocalId="20" />
+							</connectionPointIn>
+							<addData>
+							</addData>
+						</step>
+						<selectionConvergence localId="21" width="304">
+							<position x="94" y="1284" />
+							<connectionPointIn>
+								<connection refLocalId="11">
+									<position x="126" y="1065" />
+									<position x="126" y="1268" />
+									<position x="126" y="1268" />
+									<position x="126" y="1284" />
+								</connection>
+								<connection refLocalId="17">
+									<position x="382" y="1235" />
+									<position x="382" y="1268" />
+									<position x="126" y="1268" />
+									<position x="126" y="1284" />
+								</connection>
+							</connectionPointIn>
+						</selectionConvergence>
+						<actionBlock localId="22" width="256" height="64">
+							<position x="174" y="1284" />
+							<connectionPointIn>
+								<connection refLocalId="3" />
+							</connectionPointIn>
+							<action localId="23">
+								<relPosition x="0" y="0" />
+								<inline>
+									<ST>kneadingOK;</ST>
+								</inline>
+							</action>
+						</actionBlock>
+						<step name="17" localId="3">
+							<position x="94" y="1284" />
+							<connectionPointIn>
+								<connection refLocalId="21" />
+							</connectionPointIn>
+							<addData>
+							</addData>
+						</step>
+						<actionBlock localId="24" width="266" height="64">
+							<position x="174" y="944" />
+							<connectionPointIn>
+								<connection refLocalId="4" />
+							</connectionPointIn>
+							<action localId="25">
+								<relPosition x="0" y="0" />
+								<inline>
+									<ST>IF(RE X15) THEN
+&#9;nbCycles := nbCycles + 1;
+END_IF;</ST>
+								</inline>
+							</action>
+						</actionBlock>
+						<step name="15" localId="4">
+							<position x="94" y="944" />
+							<connectionPointIn>
+								<connection refLocalId="12">
+									<position x="126" y="895" />
+									<position x="126" y="928" />
+									<position x="126" y="928" />
+									<position x="126" y="944" />
+								</connection>
+							</connectionPointIn>
+							<addData>
+							</addData>
+						</step>
+						<actionBlock localId="26" width="251" height="64">
+							<position x="174" y="774" />
+							<connectionPointIn>
+								<connection refLocalId="5" />
+							</connectionPointIn>
+							<action localId="27">
+								<relPosition x="0" y="0" />
+								<inline>
+									<ST>evacuateMixture;</ST>
+								</inline>
+							</action>
+						</actionBlock>
+						<step name="14" localId="5">
+							<position x="94" y="774" />
+							<connectionPointIn>
+								<connection refLocalId="13">
+									<position x="126" y="725" />
+									<position x="126" y="758" />
+									<position x="126" y="758" />
+									<position x="126" y="774" />
+								</connection>
+							</connectionPointIn>
+							<addData>
+							</addData>
+						</step>
+						<actionBlock localId="28" width="250" height="64">
+							<position x="174" y="604" />
+							<connectionPointIn>
+								<connection refLocalId="6" />
+							</connectionPointIn>
+							<action localId="29">
+								<relPosition x="0" y="0" />
+								<inline>
+									<ST>knead;</ST>
+								</inline>
+							</action>
+						</actionBlock>
+						<step name="13" localId="6">
+							<position x="94" y="604" />
+							<connectionPointIn>
+								<connection refLocalId="14">
+									<position x="126" y="555" />
+									<position x="126" y="588" />
+									<position x="126" y="588" />
+									<position x="126" y="604" />
+								</connection>
+							</connectionPointIn>
+							<addData>
+							</addData>
+						</step>
+						<actionBlock localId="30" width="247" height="64">
+							<position x="174" y="434" />
+							<connectionPointIn>
+								<connection refLocalId="7" />
+							</connectionPointIn>
+							<action localId="31">
+								<relPosition x="0" y="0" />
+								<inline>
+									<ST>knead;</ST>
+								</inline>
+							</action>
+						</actionBlock>
+						<step name="12" localId="7">
+							<position x="94" y="434" />
+							<connectionPointIn>
+								<connection refLocalId="15">
+									<position x="126" y="385" />
+									<position x="126" y="418" />
+									<position x="126" y="418" />
+									<position x="126" y="434" />
+								</connection>
+							</connectionPointIn>
+							<addData>
+							</addData>
+						</step>
+						<actionBlock localId="32" width="253" height="64">
+							<position x="430" y="1114" />
+							<connectionPointIn>
+								<connection refLocalId="8" />
+							</connectionPointIn>
+							<action localId="33">
+								<relPosition x="0" y="0" />
+								<inline>
+									<ST>clean;
+knead;
+nbCycles := 0;</ST>
+								</inline>
+							</action>
+						</actionBlock>
+						<step name="16" localId="8">
+							<position x="350" y="1114" />
+							<connectionPointIn>
+								<connection refLocalId="16">
+									<position x="382" y="1065" />
+									<position x="382" y="1098" />
+									<position x="382" y="1098" />
+									<position x="382" y="1114" />
+								</connection>
+							</connectionPointIn>
+							<addData>
+							</addData>
+						</step>
+						<transition localId="9">
+							<position x="110" y="207" />
+							<connectionPointIn>
+								<connection refLocalId="1">
+									<position x="126" y="158" />
+									<position x="126" y="174" />
+									<position x="126" y="174" />
+									<position x="126" y="207" />
+								</connection>
+							</connectionPointIn>
+							<condition>
+								<inline name="9">
+									<ST>cycleInProgress</ST>
+								</inline>
+							</condition>
+							<addData>
+								<data name="Geensys.CB.index" handleUnknown="preserve">
+									<value>10</value>
+								</data>
+							</addData>
+						</transition>
+						<transition localId="10">
+							<position x="110" y="1397" />
+							<connectionPointIn>
+								<connection refLocalId="3">
+									<position x="126" y="1348" />
+									<position x="126" y="1364" />
+									<position x="126" y="1364" />
+									<position x="126" y="1397" />
+								</connection>
+							</connectionPointIn>
+							<condition>
+								<inline name="10">
+									<ST>T/X17/500ms</ST>
+								</inline>
+							</condition>
+							<addData>
+								<data name="Geensys.CB.index" handleUnknown="preserve">
+									<value>18</value>
+								</data>
+							</addData>
+						</transition>
+						<selectionDivergence localId="34" width="304">
+							<position x="94" y="1008" />
+							<connectionPointIn>
+								<connection refLocalId="4" />
+							</connectionPointIn>
+						</selectionDivergence>
+						<transition localId="11">
+							<position x="110" y="1057" />
+							<connectionPointIn>
+								<connection refLocalId="4">
+									<position x="126" y="1008" />
+									<position x="126" y="1024" />
+									<position x="126" y="1024" />
+									<position x="126" y="1057" />
+								</connection>
+							</connectionPointIn>
+							<condition>
+								<inline name="11">
+									<ST>nbCycles &lt; nbOfCleanCycles</ST>
+								</inline>
+							</condition>
+							<addData>
+								<data name="Geensys.CB.index" handleUnknown="preserve">
+									<value>15</value>
+								</data>
+							</addData>
+						</transition>
+						<transition localId="12">
+							<position x="110" y="887" />
+							<connectionPointIn>
+								<connection refLocalId="5">
+									<position x="126" y="838" />
+									<position x="126" y="854" />
+									<position x="126" y="854" />
+									<position x="126" y="887" />
+								</connection>
+							</connectionPointIn>
+							<condition>
+								<inline name="12">
+									<ST>mixtureLevel &lt;= 1</ST>
+								</inline>
+							</condition>
+							<addData>
+								<data name="Geensys.CB.index" handleUnknown="preserve">
+									<value>14</value>
+								</data>
+							</addData>
+						</transition>
+						<transition localId="13">
+							<position x="110" y="717" />
+							<connectionPointIn>
+								<connection refLocalId="6">
+									<position x="126" y="668" />
+									<position x="126" y="684" />
+									<position x="126" y="684" />
+									<position x="126" y="717" />
+								</connection>
+							</connectionPointIn>
+							<condition>
+								<inline name="13">
+									<ST>T/X13/kneadingDuration s </ST>
+								</inline>
+							</condition>
+							<addData>
+								<data name="Geensys.CB.index" handleUnknown="preserve">
+									<value>13</value>
+								</data>
+							</addData>
+						</transition>
+						<transition localId="14">
+							<position x="110" y="547" />
+							<connectionPointIn>
+								<connection refLocalId="7">
+									<position x="126" y="498" />
+									<position x="126" y="514" />
+									<position x="126" y="514" />
+									<position x="126" y="547" />
+								</connection>
+							</connectionPointIn>
+							<condition>
+								<inline name="14">
+									<ST>NOT kneadingRequest </ST>
+								</inline>
+							</condition>
+							<addData>
+								<data name="Geensys.CB.index" handleUnknown="preserve">
+									<value>12</value>
+								</data>
+							</addData>
+						</transition>
+						<transition localId="15">
+							<position x="110" y="377" />
+							<connectionPointIn>
+								<connection refLocalId="2">
+									<position x="126" y="328" />
+									<position x="126" y="344" />
+									<position x="126" y="344" />
+									<position x="126" y="377" />
+								</connection>
+							</connectionPointIn>
+							<condition>
+								<inline name="15">
+									<ST>cycleInProgress AND kneadingRequest </ST>
+								</inline>
+							</condition>
+							<addData>
+								<data name="Geensys.CB.index" handleUnknown="preserve">
+									<value>11</value>
+								</data>
+							</addData>
+						</transition>
+						<transition localId="16">
+							<position x="366" y="1057" />
+							<connectionPointIn>
+								<connection refLocalId="4">
+									<position x="126" y="1008" />
+									<position x="126" y="1024" />
+									<position x="382" y="1024" />
+									<position x="382" y="1057" />
+								</connection>
+							</connectionPointIn>
+							<condition>
+								<inline name="16">
+									<ST>nbCycles &gt;= nbOfCleanCycles</ST>
+								</inline>
+							</condition>
+							<addData>
+								<data name="Geensys.CB.index" handleUnknown="preserve">
+									<value>16</value>
+								</data>
+							</addData>
+						</transition>
+						<transition localId="17">
+							<position x="366" y="1227" />
+							<connectionPointIn>
+								<connection refLocalId="8">
+									<position x="382" y="1178" />
+									<position x="382" y="1194" />
+									<position x="382" y="1194" />
+									<position x="382" y="1227" />
+								</connection>
+							</connectionPointIn>
+							<condition>
+								<inline name="17">
+									<ST>T/X16/cleaningDuration s</ST>
+								</inline>
+							</condition>
+							<addData>
+								<data name="Geensys.CB.index" handleUnknown="preserve">
+									<value>17</value>
+								</data>
+							</addData>
+						</transition>
+					</SFC>
+				</body>
+				<addData>
+					<data name="Geensys.CB.Or_Divergences_Exclusivity" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+					<data name="Geensys.CB.COMPONENT_CLASS" handleUnknown="preserve">
+						<value>PROCESS</value>
+					</data>
+					<data name="Geensys.CB.COMPONENT_CLASS_UUID" handleUnknown="preserve">
+						<value>efe67f35-7746-4c41-87ee-86d6ccbf6b60</value>
+					</data>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+				</addData>
+			</pou>
+		</pous>
+	</types>
+	<instances>
+		<configurations />
+	</instances>
+</project>

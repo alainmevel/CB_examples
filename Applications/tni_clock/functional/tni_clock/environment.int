@@ -1,0 +1,61 @@
+UTF8#1 11 TNI Sos mac124 58 
+
+1 3 1 2 11 environment3 0 0 0 0 0 0 0 
+2 73 18 IdentifierProperty1 36 34abdb97-8829-4532-9075-8b7b004493320 
+3 5 4 4 5 6 7 0 0 0 11 environment1 1 7 8 36 48 55 56 57 58 0 0 10 10 0 0 1 n 0 0 0 
+4 73 14 sdPropertyName1 10 11577206460 
+5 73 18 IdentifierProperty1 36 f0bb9c8e-d22e-47f8-83c9-cfbba16c40060 
+6 73 15 dlcPropertyName1 1 00 
+7 73 25 containerNamePropertyName1 9 clock_tni0 
+8 7 0 0 1 3 0 2 9 32 1 0 0 
+9 7 2 10 11 7 Buttons1 3 8 4 12 17 22 27 1 0 0 
+10 73 18 IdentifierProperty1 36 160b6f3b-4fcb-466d-930c-78c1931ec9020 
+11 73 2 io1 4 true0 
+12 8 3 13 14 15 9 0 2 B11 3 9 16 12 Setting mode0 
+13 73 7 libelle1 12 Setting mode0 
+14 73 18 IdentifierProperty1 36 571d97e0-c1b4-4369-aeaf-89402e7eec140 
+15 73 2 io1 4 true0 
+16 21 -1 0 0 
+17 8 3 18 19 20 9 0 2 B21 3 9 21 15 Time adjustment0 
+18 73 7 libelle1 15 Time adjustment0 
+19 73 18 IdentifierProperty1 36 054c6e0f-ec63-44ca-ab8a-7e882f8b426b0 
+20 73 2 io1 4 true0 
+21 21 -1 0 0 
+22 8 3 23 24 25 9 0 2 B31 3 9 26 18 Pressure/Time mode0 
+23 73 7 libelle1 18 Pressure/Time mode0 
+24 73 18 IdentifierProperty1 36 bfc71095-8472-4024-99e1-afb5564bc7ee0 
+25 73 2 io1 4 true0 
+26 21 -1 0 0 
+27 8 3 28 29 30 9 0 2 B41 3 9 31 5 Light0 
+28 73 7 libelle1 5 Light0 
+29 73 18 IdentifierProperty1 36 a851651e-96ec-4d99-b8f6-9e705cbef6a00 
+30 73 2 io1 4 true0 
+31 21 -1 0 0 
+32 8 2 33 34 8 0 10 profondeur1 3 8 35 22 Profondeur d'immersion0 
+33 73 7 libelle1 22 Profondeur d'immersion0 
+34 73 18 IdentifierProperty1 36 8255e170-1874-4d26-9886-07b35d37eee40 
+35 23 -1 0 0 
+36 7 0 0 2 3 0 2 37 42 1 0 0 
+37 7 1 38 14 PressureSensor2 3 36 1 39 1 0 0 
+38 73 18 IdentifierProperty1 36 89686e7d-3ba6-4fe4-8a5e-f49c31b053980 
+39 8 1 40 37 0 8 pression2 3 37 41 0 0 
+40 73 18 IdentifierProperty1 36 1add4420-e593-49bf-a604-89c9d30021100 
+41 23 -1 0 0 
+42 7 1 43 10 fromQuartz2 3 36 1 44 1 0 0 
+43 73 18 IdentifierProperty1 36 0a8f911d-7ff4-4b24-9225-f1a9065dc7070 
+44 8 2 45 46 42 0 4 tick2 3 42 47 12 tick horloge0 
+45 73 7 libelle1 12 tick horloge0 
+46 73 18 IdentifierProperty1 36 467a24ac-0108-4f8f-82b4-3a0801e5b7910 
+47 21 -1 0 0 
+48 7 0 0 3 3 0 2 49 52 1 0 0 
+49 8 1 50 48 0 21 pressionHydrostatique3 3 48 51 0 0 
+50 73 18 IdentifierProperty1 36 307a4bd4-7cc0-4bef-9cb7-f3511f227e6b0 
+51 23 -1 0 0 
+52 8 1 53 48 0 15 pressionAbsolue3 3 48 54 0 0 
+53 73 18 IdentifierProperty1 36 09b909e3-4b3e-4c36-b979-7c8e157aa5570 
+54 23 -1 0 0 
+55 7 0 0 4 3 0 0 1 0 0 
+56 7 0 0 5 3 0 0 1 0 0 
+57 7 0 0 6 3 0 0 1 0 0 
+58 7 0 0 7 3 0 0 1 0 0 
+aPÔ+

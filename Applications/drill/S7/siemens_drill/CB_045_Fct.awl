@@ -1,0 +1,65 @@
+FUNCTION_BLOCK FB45
+TITLE = 'fault_F1'
+AUTHOR : CB
+
+VAR
+	F1TurM1FLT : FB42;
+END_VAR
+
+
+BEGIN
+
+
+NETWORK
+TITLE = 
+//
+//	fault/fault_F1/F1TurM1FLT
+A	"DB90".F1TurM1_forwardCmd;
+=	L	0.0;
+BLD	103;
+A	"DB90".F1TurM1_backwardCmd;
+=	L	0.1;
+BLD	103;
+A	"DB90".F1TurM1_highSpeedCmd;
+=	L	0.2;
+BLD	103;
+A	"DB90".F1TurM1_lowSpeedCmd;
+=	L	0.3;
+BLD	103;
+A	"DB90".F1TurM1_thermalFB;
+=	L	0.4;
+BLD	103;
+A	"DB90".F1TurM1_forwardFB;
+=	L	0.5;
+BLD	103;
+A	"DB90".F1TurM1_backwardFB;
+=	L	0.6;
+BLD	103;
+A	"DB90".F1TurM1_highSpeedFB;
+=	L	0.7;
+BLD	103;
+A	"DB90".F1TurM1_lowSpeedFB;
+=	L	1.0;
+BLD	103;
+A	"DB90".F3SpinM1_acknowledgePB;
+=	L	1.1;
+BLD	103;
+CALL #F1TurM1FLT(
+	forwardCmd := L	0.0,
+	backwardCmd := L	0.1,
+	highSpeedCmd := L	0.2,
+	lowSpeedCmd := L	0.3,
+	thermalFB := L	0.4,
+	forwardFB := L	0.5,
+	backwardFB := L	0.6,
+	highSpeedFB := L	0.7,
+	lowSpeedFB := L	1.0,
+	acknowledgePB := L	1.1,
+	generalFault := "DB90".F1TurM1_generalFault
+);
+NOP 0;
+
+
+
+
+END_FUNCTION_BLOCK

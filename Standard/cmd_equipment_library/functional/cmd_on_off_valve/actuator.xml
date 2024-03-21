@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild4.00 -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6.xsd TC6_XML_V099_TNI.xsd">
+	<fileHeader companyName="TNI-Software" productName="ControlBuild" productVersion="4.00.17" creationDateTime="2005-06-20T11:54:19-01:00" />
+	<contentHeader name="actuator">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="32" y="8" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+			<pou name="cmd_equipment_library.actuator" pouType="functionBlock">
+				<interface>
+					<inputVars>
+						<variable name="autoMode">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<documentation>CB.libelle=Automatic mode</documentation>
+						</variable>
+						<variable name="manualMode">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<documentation>CB.libelle=Manual mode</documentation>
+						</variable>
+						<documentation>CB.group=Modes
+CB.kind=inputVars</documentation>
+					</inputVars>
+					<inputVars>
+						<variable name="autoCloseCmd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<documentation>CB.libelle=Automatic close command to the valve</documentation>
+						</variable>
+						<variable name="autoOpenCmd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<documentation>CB.libelle=Automatic open command to the valve</documentation>
+						</variable>
+						<documentation>CB.group=Commands
+CB.kind=inputVars</documentation>
+					</inputVars>
+					<inputVars>
+						<variable name="closedSensorFB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<documentation>CB.libelle=Closed sensor feedback</documentation>
+						</variable>
+						<variable name="openedSensorFB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<documentation>CB.libelle=Opened sensor feedback</documentation>
+						</variable>
+						<documentation>CB.group=Sensors
+CB.kind=inputVars</documentation>
+					</inputVars>
+					<inputVars>
+						<variable name="closeValvePB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<documentation>CB.libelle=Close valve pushbutton</documentation>
+						</variable>
+						<variable name="openValvePB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<documentation>CB.libelle=Open valve pushbutton</documentation>
+						</variable>
+						<documentation>CB.group=PushButtons
+CB.kind=inputVars</documentation>
+					</inputVars>
+					<inputVars>
+						<variable name="generalFault">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<documentation>CB.mnemonicPatternPropertyName=defGeneral&lt;SY&gt;&lt;NU&gt;
+CB.libelle=General fault of the valve</documentation>
+						</variable>
+						<documentation>CB.kind=inputVars</documentation>
+					</inputVars>
+					<outputVars>
+						<variable name="closeCmd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<documentation>CB.mnemonicPatternPropertyName=closeCmd&lt;SY&gt;&lt;NU&gt;
+CB.libelle=Close command to the valve</documentation>
+						</variable>
+						<variable name="openCmd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<documentation>CB.mnemonicPatternPropertyName=openCmd&lt;SY&gt;&lt;NU&gt;
+CB.libelle=Open command to the valve</documentation>
+						</variable>
+						<documentation>CB.group=Orders
+CB.kind=outputVars</documentation>
+					</outputVars>
+				</interface>
+				<actions>
+				</actions>
+				<body>
+					<LD>
+						<leftPowerRail localId="20">
+							<position x="0" y="100" />
+						</leftPowerRail>
+						<label localId="0" label="1">
+							<position x="0" y="0" />
+							<documentation>Open command</documentation>
+						</label>
+						<contact localId="1">
+							<position x="0" y="100" />
+							<variable>autoMode</variable>
+						</contact>
+						<contact localId="3">
+							<position x="0" y="200" />
+							<variable>manualMode</variable>
+						</contact>
+						<contact localId="2">
+							<position x="100" y="100" />
+							<connectionPointIn>
+								<connection refLocalId="1" />
+							</connectionPointIn>
+							<variable>autoOpenCmd</variable>
+						</contact>
+						<contact localId="4">
+							<position x="100" y="200" />
+							<connectionPointIn>
+								<connection refLocalId="3" />
+							</connectionPointIn>
+							<variable>openValvePB</variable>
+						</contact>
+						<contact localId="8" negated="true">
+							<position x="200" y="100" />
+							<connectionPointIn>
+								<connection refLocalId="2" />
+							</connectionPointIn>
+							<variable>autoCloseCmd</variable>
+						</contact>
+						<contact localId="9" negated="true">
+							<position x="200" y="200" />
+							<connectionPointIn>
+								<connection refLocalId="4" />
+							</connectionPointIn>
+							<variable>closeValvePB</variable>
+						</contact>
+						<contact localId="5" negated="true">
+							<position x="400" y="100" />
+							<connectionPointIn>
+								<connection refLocalId="8" />
+								<connection refLocalId="9" />
+							</connectionPointIn>
+							<variable>openedSensorFB</variable>
+						</contact>
+						<contact localId="7" negated="true">
+							<position x="600" y="100" />
+							<connectionPointIn>
+								<connection refLocalId="5" />
+							</connectionPointIn>
+							<variable>generalFault</variable>
+						</contact>
+						<coil localId="6">
+							<position x="1000" y="100" />
+							<connectionPointIn>
+								<connection refLocalId="7" />
+							</connectionPointIn>
+							<variable>openCmd</variable>
+						</coil>
+						<label localId="10" label="2">
+							<position x="0" y="300" />
+							<documentation>Close command</documentation>
+						</label>
+						<contact localId="11">
+							<position x="0" y="400" />
+							<variable>autoMode</variable>
+						</contact>
+						<contact localId="13">
+							<position x="0" y="500" />
+							<variable>manualMode</variable>
+						</contact>
+						<contact localId="12">
+							<position x="100" y="400" />
+							<connectionPointIn>
+								<connection refLocalId="11" />
+							</connectionPointIn>
+							<variable>autoCloseCmd</variable>
+						</contact>
+						<contact localId="14">
+							<position x="100" y="500" />
+							<connectionPointIn>
+								<connection refLocalId="13" />
+							</connectionPointIn>
+							<variable>closeValvePB</variable>
+						</contact>
+						<contact localId="18" negated="true">
+							<position x="200" y="400" />
+							<connectionPointIn>
+								<connection refLocalId="12" />
+							</connectionPointIn>
+							<variable>autoOpenCmd</variable>
+						</contact>
+						<contact localId="19" negated="true">
+							<position x="200" y="500" />
+							<connectionPointIn>
+								<connection refLocalId="14" />
+							</connectionPointIn>
+							<variable>openValvePB</variable>
+						</contact>
+						<contact localId="15" negated="true">
+							<position x="400" y="400" />
+							<connectionPointIn>
+								<connection refLocalId="18" />
+								<connection refLocalId="19" />
+							</connectionPointIn>
+							<variable>closedSensorFB</variable>
+						</contact>
+						<contact localId="17" negated="true">
+							<position x="600" y="400" />
+							<connectionPointIn>
+								<connection refLocalId="15" />
+							</connectionPointIn>
+							<variable>generalFault</variable>
+						</contact>
+						<coil localId="16">
+							<position x="1000" y="400" />
+							<connectionPointIn>
+								<connection refLocalId="17" />
+							</connectionPointIn>
+							<variable>closeCmd</variable>
+						</coil>
+						<rightPowerRail localId="21">
+							<position x="1100" y="100" />
+							<connectionPointIn>
+								<connection refLocalId="6" />
+								<connection refLocalId="16" />
+							</connectionPointIn>
+						</rightPowerRail>
+					</LD>
+				</body>
+			</pou>
+		</pous>
+	</types>
+	<instances>
+		<configurations />
+	</instances>
+</project>

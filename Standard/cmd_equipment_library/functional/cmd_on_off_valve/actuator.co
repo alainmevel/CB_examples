@@ -1,0 +1,11 @@
+ autoMode IB1
+ manualMode IB2
+ autoCloseCmd IB3
+ autoOpenCmd IB4
+ closedSensorFB IB5
+ openedSensorFB IB6
+ closeValvePB IB7
+ openValvePB IB8
+ generalFault IB9
+ closeCmd OB10
+ openCmd OB11

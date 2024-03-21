@@ -1,0 +1,92 @@
+FUNCTION FC69: VOID
+AUTHOR : CB
+VAR_INPUT
+        combE : INT;
+END_VAR
+
+LABEL
+        combi_e, actions, combi_s;
+END_LABEL
+
+BEGIN
+        IF (combE = 0) THEN GOTO actions;
+        END_IF;
+(* Gestion des combinatoires d'entree *)
+combi_e: ;
+RETURN;
+
+(* Gestion des actions du graphe *)
+actions: 
+(* Step activity of Step10 *)
+IF DB69.Step10.S1 THEN
+"DB110".MAST1_masterInStandBy := TRUE;
+END_IF;
+IF DB69.Step10.X THEN
+"DB110".MAST1_masterInStandBy := TRUE;
+END_IF;
+IF DB69.Step10.S0 THEN
+"DB110".MAST1_masterInStandBy := FALSE;
+END_IF;
+
+(* Step activity of Step11 *)
+
+(* Step activity of Step12 *)
+IF DB69.Step12.S1 THEN
+"DB110".MAST1_initializationRqst := TRUE;
+END_IF;
+IF DB69.Step12.X THEN
+"DB110".MAST1_initializationRqst := TRUE;
+END_IF;
+IF DB69.Step12.S0 THEN
+"DB110".MAST1_initializationRqst := FALSE;
+END_IF;
+
+(* Step activity of Step13 *)
+IF DB69.Step13.S1 THEN
+"DB110".MAST1_preparationRqst := TRUE;
+END_IF;
+IF DB69.Step13.X THEN
+"DB110".MAST1_preparationRqst := TRUE;
+END_IF;
+IF DB69.Step13.S0 THEN
+"DB110".MAST1_preparationRqst := FALSE;
+END_IF;
+
+(* Step activity of Step16 *)
+IF DB69.Step16.S1 THEN
+"DB110".MAST1_closingRqst := TRUE;
+END_IF;
+IF DB69.Step16.X THEN
+"DB110".MAST1_closingRqst := TRUE;
+END_IF;
+IF DB69.Step16.S0 THEN
+"DB110".MAST1_closingRqst := FALSE;
+END_IF;
+
+(* Step activity of Step14 *)
+IF DB69.Step14.S1 THEN
+"DB110".MAST1_productionWaiting := TRUE;
+END_IF;
+IF DB69.Step14.X THEN
+"DB110".MAST1_productionWaiting := TRUE;
+END_IF;
+IF DB69.Step14.S0 THEN
+"DB110".MAST1_productionWaiting := FALSE;
+END_IF;
+
+(* Step activity of Step15 *)
+IF DB69.Step15.S1 THEN
+"DB110".MAST1_productionRqst := TRUE;
+END_IF;
+IF DB69.Step15.X THEN
+"DB110".MAST1_productionRqst := TRUE;
+END_IF;
+IF DB69.Step15.S0 THEN
+"DB110".MAST1_productionRqst := FALSE;
+END_IF;
+
+(* Gestion des combinatoires de sortie *)
+combi_s: ;
+
+(* Memory edges *)
+END_FUNCTION

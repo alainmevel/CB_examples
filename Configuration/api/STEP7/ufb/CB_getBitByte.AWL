@@ -1,0 +1,27 @@
+FUNCTION "CB_getBitByte" : BOOL
+TITLE =Extract a bit of a BYTE
+AUTHOR : CB
+FAMILY : TNI
+NAME : getbitB
+VERSION : 0.1
+
+
+VAR_INPUT
+  N : INT ;	//number of the bit (0 - 7)
+  IN : BYTE ;	//BYTE source
+END_VAR
+BEGIN
+NETWORK
+TITLE =Bit extraction 
+
+
+      L     #N; 
+      L     #IN; 
+      SRW   ; 
+      T     LW     0; 
+      A     L      1.0; 
+      =     #RET_VAL; 
+      BE    ; 
+
+END_FUNCTION
+

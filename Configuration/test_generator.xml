@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: spex -->
+
+<PROPERTIES_FILE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:xsd/test_generator.xsd">
+	<PROPERTIES_SET NAME="functional">
+		<LANGUAGES>
+			<LANGUAGE NAME="EN">Functional Test
+			</LANGUAGE>
+			<LANGUAGE NAME="FR">Test fonctionnel
+			</LANGUAGE>
+		</LANGUAGES>
+		<PROPERTY NAME="seq_len" TYPE="integer" DEFAULT="1000" LOWERBOUND="10" UPPERBOUND="10000">
+			<LANGUAGES>
+				<LANGUAGE NAME="EN">Maximum Sequence length:
+				</LANGUAGE>
+				<LANGUAGE NAME="FR">Longueur maximale des s&#233;quences de tests :
+				</LANGUAGE>
+			</LANGUAGES>
+			<APPLIED_TO CLASS="TestsConfigurator" />
+		</PROPERTY>
+		<PROPERTY NAME="nb_min" TYPE="integer" DEFAULT="10000" LOWERBOUND="10" UPPERBOUND="1000000">
+			<LANGUAGES>
+				<LANGUAGE NAME="EN">Minimum number of tests vector:
+				</LANGUAGE>
+				<LANGUAGE NAME="FR">Nombre minimum de vecteurs de tests :
+				</LANGUAGE>
+			</LANGUAGES>
+			<APPLIED_TO CLASS="TestsConfigurator" />
+		</PROPERTY>
+		<PROPERTY NAME="nb_max" TYPE="integer" DEFAULT="100000" LOWERBOUND="10">
+			<LANGUAGES>
+				<LANGUAGE NAME="EN">Maximum number of tests vector:
+				</LANGUAGE>
+				<LANGUAGE NAME="FR">Nombre maximum de vecteurs de tests :
+				</LANGUAGE>
+			</LANGUAGES>
+			<APPLIED_TO CLASS="TestsConfigurator" />
+		</PROPERTY>
+		<PROPERTY NAME="t_max" TYPE="integer" DEFAULT="10" LOWERBOUND="10" UPPERBOUND="100">
+			<LANGUAGES>
+				<LANGUAGE NAME="EN">Maximum duration of test (sec):
+				</LANGUAGE>
+				<LANGUAGE NAME="FR">Temps maximum d'exécution (sec) :
+				</LANGUAGE>
+			</LANGUAGES>
+			<APPLIED_TO CLASS="TestsConfigurator" />
+		</PROPERTY>
+		<PROPERTY NAME="cover_min" TYPE="integer" DEFAULT="100" LOWERBOUND="0" UPPERBOUND="100">
+			<LANGUAGES>
+				<LANGUAGE NAME="EN">Minimum coverage ratio of boolean values (%)
+				</LANGUAGE>
+				<LANGUAGE NAME="FR">Couverture booléenne minimale (en %) :
+				</LANGUAGE>
+			</LANGUAGES>
+			<APPLIED_TO CLASS="TestsConfigurator" />
+		</PROPERTY>
+	</PROPERTIES_SET>
+	<PROPERTIES_SETx NAME="structural">
+		<LANGUAGES>
+			<LANGUAGE NAME="EN">Structural Test
+			</LANGUAGE>
+			<LANGUAGE NAME="FR">Test structurel
+			</LANGUAGE>
+		</LANGUAGES>
+		<PROPERTY NAME="seq_len" TYPE="integer" DEFAULT="1000">
+			<LANGUAGES>
+				<LANGUAGE NAME="EN">Sequence length:
+				</LANGUAGE>
+				<LANGUAGE NAME="FR">Longueur des s&#233;quences de tests :
+				</LANGUAGE>
+			</LANGUAGES>
+			<APPLIED_TO CLASS="TestsConfigurator" />
+		</PROPERTY>
+		<PROPERTY NAME="nb_min" TYPE="integer" DEFAULT="10000">
+			<LANGUAGES>
+				<LANGUAGE NAME="EN">Minimum number of tests vector:
+				</LANGUAGE>
+				<LANGUAGE NAME="FR">Nombre minimum de vecteurs de tests :
+				</LANGUAGE>
+			</LANGUAGES>
+			<APPLIED_TO CLASS="TestsConfigurator" />
+		</PROPERTY>
+		<PROPERTY NAME="nb_max" TYPE="integer" DEFAULT="100000">
+			<LANGUAGES>
+				<LANGUAGE NAME="EN">Maximum number of tests vector:
+				</LANGUAGE>
+				<LANGUAGE NAME="FR">Nombre maximum de vecteurs de tests :
+				</LANGUAGE>
+			</LANGUAGES>
+			<APPLIED_TO CLASS="TestsConfigurator" />
+		</PROPERTY>
+		<PROPERTY NAME="t_max" TYPE="integer" DEFAULT="2">
+			<LANGUAGES>
+				<LANGUAGE NAME="EN">Maximum time (sec):
+				</LANGUAGE>
+				<LANGUAGE NAME="FR">Temps maximum (sec) :
+				</LANGUAGE>
+			</LANGUAGES>
+			<APPLIED_TO CLASS="TestsConfigurator" />
+		</PROPERTY>
+		<PROPERTY NAME="cover_min" TYPE="integer" DEFAULT="100">
+			<LANGUAGES>
+				<LANGUAGE NAME="EN">Minimum boolean coverage (in %)
+				</LANGUAGE>
+				<LANGUAGE NAME="FR">Couverture booléenne minimale (en %) :
+				</LANGUAGE>
+			</LANGUAGES>
+			<APPLIED_TO CLASS="TestsConfigurator" />
+		</PROPERTY>
+	</PROPERTIES_SETx>
+</PROPERTIES_FILE>

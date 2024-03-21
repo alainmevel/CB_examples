@@ -1,0 +1,63 @@
+FUNCTION_BLOCK FB 75
+
+CMPSET
+	S7Graph-Version: 5100
+         WarningLevel: None
+         FBInterface: Minimum
+         SSBLevel: Individual
+         ASMsgLevel: No
+         TargetMachine: AS300StdBlock
+         RuntimeBlock: FC 70
+         CritAvail: F
+         SSkipOn: F
+         AckReq: F
+         SyncAvail: F
+         PermILMan: F
+         SWMLocked: F
+         InitVarStat: 4401
+         SaveSwitching: F
+END_CMPSET
+
+INITIAL_STEP Step10 (*$_NUM 10*)  :
+(* $_COM Initial step *)
+END_STEP
+
+STEP Step11 (*$_NUM 11*)  :
+(* $_COM Filling of tanks 1 and 2 *)
+END_STEP
+
+STEP Step12 (*$_NUM 12*)  :
+(* $_COM Filling of tanks 3 *)
+END_STEP
+
+STEP Step13 (*$_NUM 13*)  :
+(* $_COM End of preparation *)
+END_STEP
+
+TRANSITION Trans10 (*$_NUM 10*) 
+	FROM (Step10)
+	TO (Step11) :
+CONDITION := "DB110".MAST1_preparationRqst
+END_TRANSITION
+
+TRANSITION Trans11 (*$_NUM 11*) 
+	FROM (Step11)
+	TO (Step12) :
+CONDITION := I00.2 AND I01.3
+END_TRANSITION
+
+TRANSITION Trans12 (*$_NUM 12*) 
+	FROM (Step12)
+	TO (Step13) :
+CONDITION := I02.3
+END_TRANSITION
+
+TRANSITION Trans13 (*$_NUM 13*) 
+	FROM (Step13)
+	TO (Step10) (*$_JUMP*) :
+CONDITION := "DB110".MAST1_productionWaiting
+END_TRANSITION
+
+
+
+END_FUNCTION_BLOCK

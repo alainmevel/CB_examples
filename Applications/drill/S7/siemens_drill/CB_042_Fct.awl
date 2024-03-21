@@ -1,0 +1,151 @@
+FUNCTION_BLOCK FB 42
+TITLE = 'cmd_motor_2d2s_fault_faults'
+AUTHOR : CB
+
+
+VAR_INPUT
+	forwardCmd : BOOL := FALSE;	//Forward command
+	backwardCmd : BOOL := FALSE;	//Backward command
+	highSpeedCmd : BOOL := FALSE;	//High speed command
+	lowSpeedCmd : BOOL := FALSE;	//Low speed command
+	thermalFB : BOOL := FALSE;	//Feedback of the thermal protection of the engine
+	forwardFB : BOOL := FALSE;	//Forward feedback
+	backwardFB : BOOL := FALSE;	//Backward feedback
+	highSpeedFB : BOOL := FALSE;	//High speed feedback
+	lowSpeedFB : BOOL := FALSE;	//Low speed feedback
+	acknowledgePB : BOOL := FALSE;	//Acknowledgement pushbutton
+END_VAR
+
+VAR_OUTPUT
+	generalFault : BOOL := FALSE;	//General fault of the engine
+END_VAR
+
+VAR
+	thermalFault : BOOL := FALSE;	//Thermal (electric) fault
+	forwardFBFault : BOOL := FALSE;	//Fault of the forward feedback
+	backwardFBFault : BOOL := FALSE;	//Fault of the backward feedback
+	TON_FW : "cb_ton";
+	TON_BW : "cb_ton";
+END_VAR
+
+BEGIN
+
+
+NETWORK
+TITLE = 
+//Fault aknowledgement
+L1:	A	acknowledgePB;
+R	thermalFault;
+
+NETWORK
+TITLE = 
+//Fault aknowledgement
+A	acknowledgePB;
+R	forwardFBFault;
+
+NETWORK
+TITLE = 
+//Fault aknowledgement
+A	acknowledgePB;
+R	backwardFBFault;
+
+NETWORK
+TITLE = 
+//Fault aknowledgement
+A	acknowledgePB;
+R	generalFault;
+
+
+
+
+NETWORK
+TITLE = 
+//Fault of forward and backward feedbacks
+L2:	A	forwardCmd;
+A	highSpeedCmd;
+=	L0.0;
+
+NETWORK
+TITLE = 
+//
+CALL #TON_FW(IN:=L0.0, 
+	PT:=T#0h0m2s0ms);
+NOP	0;
+
+NETWORK
+TITLE = 
+//Fault of forward and backward feedbacks
+A(	;
+A	TON_FW.Q0;
+AN	forwardFB;
+O	;
+A(	;
+A	TON_FW.Q0;
+A	highSpeedCmd;
+AN	highSpeedFB;
+O	;
+A	TON_FW.Q0;
+A	lowSpeedCmd;
+AN	lowSpeedFB;
+)	;
+)	;
+S	forwardFBFault;
+
+NETWORK
+TITLE = 
+//Fault of forward and backward feedbacks
+A	backwardCmd;
+A	highSpeedCmd;
+=	L0.0;
+
+NETWORK
+TITLE = 
+//
+CALL #TON_BW(IN:=L0.0, 
+	PT:=T#0h0m2s0ms);
+NOP	0;
+
+NETWORK
+TITLE = 
+//Fault of forward and backward feedbacks
+A(	;
+A	TON_BW.Q0;
+AN	backwardFB;
+O	;
+A(	;
+A	TON_BW.Q0;
+A	lowSpeedCmd;
+AN	lowSpeedFB;
+O	;
+A	TON_BW.Q0;
+A	highSpeedCmd;
+AN	highSpeedFB;
+)	;
+)	;
+S	backwardFBFault;
+
+
+
+
+NETWORK
+TITLE = 
+//Electric fault
+L3:	AN	thermalFB;
+S	thermalFault;
+
+
+
+
+NETWORK
+TITLE = 
+//General fault
+L4:	O	thermalFault;
+O	forwardFBFault;
+O	backwardFBFault;
+S	generalFault;
+
+
+
+
+
+END_FUNCTION_BLOCK

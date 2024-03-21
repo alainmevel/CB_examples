@@ -1,0 +1,87 @@
+FUNCTION_BLOCK FB 47
+TITLE = 'cmd_on_off_pump_fault_faults'
+AUTHOR : CB
+
+
+VAR_INPUT
+	cmd : BOOL := FALSE;	//Command to the pump
+	thermalFB : BOOL := FALSE;	//Feedback of the thermal protection of the pump
+	onFB : BOOL := FALSE;	//On sensor feedback
+	acknowledgePB : BOOL := FALSE;	//Acknowledgement pushbutton
+END_VAR
+
+VAR_OUTPUT
+	generalFault : BOOL := FALSE;	//General fault of the pump
+END_VAR
+
+VAR
+	thermalFault : BOOL := FALSE;	//Thermal (electric) fault
+	onFBFault : BOOL := FALSE;	//On feedback fault
+	TON_FB : "cb_ton";
+END_VAR
+
+BEGIN
+
+
+NETWORK
+TITLE = 
+//Faults acknowledgement
+L1:	A	acknowledgePB;
+R	thermalFault;
+
+NETWORK
+TITLE = 
+//Faults acknowledgement
+A	acknowledgePB;
+R	onFBFault;
+
+NETWORK
+TITLE = 
+//Faults acknowledgement
+A	acknowledgePB;
+R	generalFault;
+
+
+
+
+NETWORK
+TITLE = 
+//On feedback fault
+L2:	A	cmd;
+=	L0.0;
+BLD	103;
+CALL #TON_FB(IN:=L0.0, 
+	PT:=T#0h0m2s0ms);
+NOP	0;
+
+NETWORK
+TITLE = 
+//On feedback fault
+A	TON_FB.Q0;
+AN	onFB;
+S	onFBFault;
+
+
+
+
+NETWORK
+TITLE = 
+//Electric fault
+L3:	AN	thermalFB;
+S	thermalFault;
+
+
+
+
+NETWORK
+TITLE = 
+//General fault
+L4:	O	onFBFault;
+O	thermalFault;
+S	generalFault;
+
+
+
+
+
+END_FUNCTION_BLOCK

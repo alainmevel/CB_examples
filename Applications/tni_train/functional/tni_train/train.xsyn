@@ -1,0 +1,1004 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<AWTSynoptic screenX="1600" screenY="2262" name="train.xsyn" description="" date="03/10/2023" time="11:13" version="3.0_draft3" source="controlbuild " bkgColor="white" identifier="32008828-0710-4e85-af12-251661c5729a" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Colors>
+		<Color colorId="black" r="0" g="0" b="0" invisible="false" />
+		<Color colorId="white" r="255" g="255" b="255" invisible="false" />
+		<Color colorId="red" r="255" g="0" b="0" invisible="false" />
+		<Color colorId="yellow" r="255" g="255" b="0" invisible="false" />
+		<Color colorId="blue" r="0" g="0" b="255" invisible="false" />
+		<Color colorId="green" r="0" g="255" b="0" invisible="false" />
+		<Color colorId="purple" r="128" g="0" b="128" invisible="false" />
+		<Color colorId="brown" r="128" g="64" b="0" invisible="false" />
+		<Color colorId="gray" r="192" g="192" b="192" invisible="false" />
+		<Color colorId="orange" r="255" g="128" b="0" invisible="false" />
+		<Color colorId="pink" r="255" g="128" b="255" invisible="false" />
+		<Color colorId="transparent" invisible="true" />
+		<Color colorId="other" r="0" g="0" b="0" invisible="false" />
+		<Color colorId="visible" invisible="false" />
+	</Colors>
+	<Objects>
+		<Text font="font0" textColor="blue" hAlign="left" vAlign="top">
+			<Basic xInit="1147" yInit="970" xFinal="1257" yFinal="1010" xCenter="1202" yCenter="990" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="white" />
+			<Content>Closing</Content>
+		</Text>
+		<Text font="font0" textColor="blue" hAlign="left" vAlign="top">
+			<Basic xInit="1120" yInit="850" xFinal="1280" yFinal="890" xCenter="1200" yCenter="870" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="white" />
+			<Content>service-side</Content>
+		</Text>
+		<Text font="font0" textColor="blue" hAlign="left" vAlign="top">
+			<Basic xInit="1143" yInit="730" xFinal="1253" yFinal="770" xCenter="1198" yCenter="750" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="white" />
+			<Content>enabled</Content>
+		</Text>
+		<Text font="font0" textColor="blue" hAlign="left" vAlign="top">
+			<Basic xInit="1980" yInit="260" xFinal="2130" yFinal="313" xCenter="2055" yCenter="286" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="white" />
+			<Content>OPEN D1R</Content>
+		</Text>
+		<Text font="font0" textColor="blue" hAlign="left" vAlign="top">
+			<Basic xInit="1770" yInit="260" xFinal="1920" yFinal="313" xCenter="1845" yCenter="286" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="white" />
+			<Content>OPEN D2R</Content>
+		</Text>
+		<Text font="font0" textColor="blue" hAlign="left" vAlign="top">
+			<Basic xInit="870" yInit="260" xFinal="1020" yFinal="313" xCenter="945" yCenter="286" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="white" />
+			<Content>OPEN D3L</Content>
+		</Text>
+		<Text font="font0" textColor="blue" hAlign="left" vAlign="top">
+			<Basic xInit="660" yInit="260" xFinal="810" yFinal="313" xCenter="735" yCenter="286" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="white" />
+			<Content>OPEN D2L</Content>
+		</Text>
+		<Text font="font0" textColor="blue" hAlign="left" vAlign="top">
+			<Basic xInit="1560" yInit="260" xFinal="1710" yFinal="313" xCenter="1635" yCenter="286" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="white" />
+			<Content>OPEN D3R</Content>
+		</Text>
+		<Text font="font0" textColor="blue" hAlign="left" vAlign="top">
+			<Basic xInit="450" yInit="260" xFinal="600" yFinal="313" xCenter="525" yCenter="286" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="white" />
+			<Content>OPEN D1L</Content>
+		</Text>
+		<Text font="font0" textColor="blue" hAlign="left" vAlign="top">
+			<Basic xInit="1145" yInit="320" xFinal="1255" yFinal="360" xCenter="1200" yCenter="340" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="white" />
+			<Content>Closing</Content>
+		</Text>
+		<Text font="font0" textColor="blue" hAlign="left" vAlign="top">
+			<Basic xInit="1120" yInit="200" xFinal="1280" yFinal="240" xCenter="1200" yCenter="220" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="white" />
+			<Content>service-side</Content>
+		</Text>
+		<Text font="font0" textColor="blue" hAlign="left" vAlign="top">
+			<Basic xInit="1140" yInit="20" xFinal="1240" yFinal="70" xCenter="1190" yCenter="45" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="white" />
+			<Content> CAB 1</Content>
+		</Text>
+		<Text font="font0" textColor="blue" hAlign="left" vAlign="top">
+			<Basic xInit="1136" yInit="70" xFinal="1246" yFinal="110" xCenter="1191" yCenter="90" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="white" />
+			<Content>enabled</Content>
+		</Text>
+		<Text font="font0" textColor="blue" hAlign="left" vAlign="top">
+			<Basic xInit="1140" yInit="690" xFinal="1250" yFinal="730" xCenter="1195" yCenter="710" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="white" />
+			<Content> CAB 2</Content>
+		</Text>
+		<Rectangle>
+			<Basic xInit="1080" yInit="710" xFinal="1320" yFinal="1110" xCenter="1200" yCenter="910" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="white" />
+		</Rectangle>
+		<Line>
+			<Basic xInit="2090" yInit="340" xFinal="2090" yFinal="440" xCenter="2090" yCenter="390" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+		</Line>
+		<Line>
+			<Basic xInit="2090" yInit="530" xFinal="2090" yFinal="630" xCenter="2090" yCenter="580" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+		</Line>
+		<Line>
+			<Basic xInit="2090" yInit="720" xFinal="2090" yFinal="820" xCenter="2090" yCenter="770" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+		</Line>
+		<Line>
+			<Basic xInit="1430" yInit="720" xFinal="1430" yFinal="820" xCenter="1430" yCenter="770" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+		</Line>
+		<Line>
+			<Basic xInit="1430" yInit="530" xFinal="1430" yFinal="630" xCenter="1430" yCenter="580" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+		</Line>
+		<Line>
+			<Basic xInit="1430" yInit="340" xFinal="1430" yFinal="440" xCenter="1430" yCenter="390" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+		</Line>
+		<Line>
+			<Basic xInit="960" yInit="150" xFinal="960" yFinal="240" xCenter="960" yCenter="195" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+		</Line>
+		<Line>
+			<Basic xInit="960" yInit="340" xFinal="960" yFinal="430" xCenter="960" yCenter="385" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+		</Line>
+		<Line>
+			<Basic xInit="960" yInit="530" xFinal="960" yFinal="620" xCenter="960" yCenter="575" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+		</Line>
+		<Line>
+			<Basic xInit="960" yInit="720" xFinal="960" yFinal="810" xCenter="960" yCenter="765" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+		</Line>
+		<Line>
+			<Basic xInit="2090" yInit="910" xFinal="2090" yFinal="1010" xCenter="2090" yCenter="960" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+		</Line>
+		<Line>
+			<Basic xInit="310" yInit="910" xFinal="310" yFinal="1000" xCenter="310" yCenter="955" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+		</Line>
+		<Line>
+			<Basic xInit="300" yInit="720" xFinal="300" yFinal="810" xCenter="300" yCenter="765" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+		</Line>
+		<Line>
+			<Basic xInit="300" yInit="530" xFinal="300" yFinal="620" xCenter="300" yCenter="575" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+		</Line>
+		<Line>
+			<Basic xInit="300" yInit="340" xFinal="300" yFinal="430" xCenter="300" yCenter="385" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+		</Line>
+		<Line>
+			<Basic xInit="1430" yInit="150" xFinal="1430" yFinal="250" xCenter="1430" yCenter="200" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+		</Line>
+		<Text font="font1" textColor="blue" hAlign="left" vAlign="top">
+			<Basic xInit="10" yInit="140" xFinal="260" yFinal="1070" xCenter="135" yCenter="605" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="transparent" />
+			<Content>Motor-Car 1
+
+
+
+Car 1
+
+
+
+Car 2
+
+
+
+Car 3
+
+
+
+Motor-Car 2</Content>
+		</Text>
+		<Rectangle>
+			<Basic xInit="1080" yInit="50" xFinal="1320" yFinal="450" xCenter="1200" yCenter="250" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="blue" lineEnd="round" patternStyle="full" patternColor="white" />
+		</Rectangle>
+		<Text font="font2" textColor="blue" hAlign="left" vAlign="top">
+			<Basic xInit="520" yInit="90" xFinal="2000" yFinal="140" xCenter="1260" yCenter="115" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="transparent" />
+			<Content>LEFT SIDE                                                                                                       RIGHT SIDE</Content>
+		</Text>
+		<Rectangle>
+			<Basic xInit="10" yInit="10" xFinal="2210" yFinal="1210" xCenter="1110" yCenter="610" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="white" />
+		</Rectangle>
+		<Widget src="tni_train\op_door\op_door">
+			<Basic xInit="300" yInit="150" xFinal="517" yFinal="245" xCenter="408" yCenter="197" />
+			<Comment>CB.instance_path=motorCar1\doorL1\door
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=300
+CB.rotation_centerY=245
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\op_door\op_door">
+			<Basic xInit="517" yInit="150" xFinal="737" yFinal="245" xCenter="627" yCenter="197" />
+			<Comment>CB.instance_path=motorCar1\doorL2\door
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=517
+CB.rotation_centerY=245
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\op_door\op_door">
+			<Basic xInit="737" yInit="150" xFinal="959" yFinal="245" xCenter="848" yCenter="197" />
+			<Comment>CB.instance_path=motorCar1\doorL3\door
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=737
+CB.rotation_centerY=245
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\op_door\op_door">
+			<Basic xInit="1430" yInit="150" xFinal="1647" yFinal="251" xCenter="1538" yCenter="200" />
+			<Comment>CB.instance_path=motorCar1\doorR3\door
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1430
+CB.rotation_centerY=251
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\op_door\op_door">
+			<Basic xInit="1647" yInit="150" xFinal="1865" yFinal="251" xCenter="1756" yCenter="200" />
+			<Comment>CB.instance_path=motorCar1\doorR2\door
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1647
+CB.rotation_centerY=251
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\op_door\op_door">
+			<Basic xInit="1865" yInit="150" xFinal="2088" yFinal="251" xCenter="1976" yCenter="200" />
+			<Comment>CB.instance_path=motorCar1\doorR1\door
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1865
+CB.rotation_centerY=251
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\key2position\key2position">
+			<Basic xInit="1148" yInit="110" xFinal="1241" yFinal="196" xCenter="1194" yCenter="153" />
+			<Comment>CB.instance_path=cab1\key2position
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1148
+CB.rotation_centerY=196
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\service_side\service_side">
+			<Basic xInit="1152" yInit="242" xFinal="1243" yFinal="313" xCenter="1197" yCenter="277" />
+			<Comment>CB.instance_path=cab1\service_side
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1152
+CB.rotation_centerY=313
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\op_door\op_door">
+			<Basic xInit="300" yInit="720" xFinal="517" yFinal="815" xCenter="408" yCenter="767" />
+			<Comment>CB.instance_path=car3\doorL1\door
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=300
+CB.rotation_centerY=815
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\op_door\op_door">
+			<Basic xInit="517" yInit="720" xFinal="737" yFinal="815" xCenter="627" yCenter="767" />
+			<Comment>CB.instance_path=car3\doorL2\door
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=517
+CB.rotation_centerY=815
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\op_door\op_door">
+			<Basic xInit="737" yInit="720" xFinal="959" yFinal="815" xCenter="848" yCenter="767" />
+			<Comment>CB.instance_path=car3\doorL3\door
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=737
+CB.rotation_centerY=815
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\op_door\op_door">
+			<Basic xInit="517" yInit="530" xFinal="737" yFinal="625" xCenter="627" yCenter="577" />
+			<Comment>CB.instance_path=car2\doorL2\door
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=517
+CB.rotation_centerY=625
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\op_door\op_door">
+			<Basic xInit="737" yInit="530" xFinal="960" yFinal="625" xCenter="848" yCenter="577" />
+			<Comment>CB.instance_path=car2\doorL3\door
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=737
+CB.rotation_centerY=625
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\op_door\op_door">
+			<Basic xInit="300" yInit="530" xFinal="517" yFinal="625" xCenter="408" yCenter="577" />
+			<Comment>CB.instance_path=car2\doorL1\door
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=300
+CB.rotation_centerY=625
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\op_door\op_door">
+			<Basic xInit="527" yInit="910" xFinal="747" yFinal="1005" xCenter="637" yCenter="957" />
+			<Comment>CB.instance_path=motorCar2\doorL2\door
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=527
+CB.rotation_centerY=1005
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\op_door\op_door">
+			<Basic xInit="747" yInit="910" xFinal="967" yFinal="1005" xCenter="857" yCenter="957" />
+			<Comment>CB.instance_path=motorCar2\doorL3\door
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=747
+CB.rotation_centerY=1005
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\op_door\op_door">
+			<Basic xInit="310" yInit="910" xFinal="527" yFinal="1005" xCenter="418" yCenter="957" />
+			<Comment>CB.instance_path=motorCar2\doorL1\door
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=310
+CB.rotation_centerY=1005
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\op_door\op_door">
+			<Basic xInit="737" yInit="340" xFinal="960" yFinal="435" xCenter="848" yCenter="387" />
+			<Comment>CB.instance_path=car1\doorL3\door
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=737
+CB.rotation_centerY=435
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\op_door\op_door">
+			<Basic xInit="517" yInit="340" xFinal="737" yFinal="435" xCenter="627" yCenter="387" />
+			<Comment>CB.instance_path=car1\doorL2\door
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=517
+CB.rotation_centerY=435
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\op_door\op_door">
+			<Basic xInit="300" yInit="340" xFinal="517" yFinal="435" xCenter="408" yCenter="387" />
+			<Comment>CB.instance_path=car1\doorL1\door
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=300
+CB.rotation_centerY=435
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\service_side\service_side">
+			<Basic xInit="1152" yInit="892" xFinal="1243" yFinal="963" xCenter="1197" yCenter="927" />
+			<Comment>CB.instance_path=cab2\service_side
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1152
+CB.rotation_centerY=963
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\key2position\key2position">
+			<Basic xInit="1150" yInit="770" xFinal="1243" yFinal="852" xCenter="1196" yCenter="811" />
+			<Comment>CB.instance_path=cab2\key2position
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1150
+CB.rotation_centerY=852
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\op_door\op_door">
+			<Basic xInit="1647" yInit="340" xFinal="1865" yFinal="441" xCenter="1756" yCenter="390" />
+			<Comment>CB.instance_path=car1\doorR2\door
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1647
+CB.rotation_centerY=441
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\op_door\op_door">
+			<Basic xInit="1865" yInit="340" xFinal="2088" yFinal="441" xCenter="1976" yCenter="390" />
+			<Comment>CB.instance_path=car1\doorR1\door
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1865
+CB.rotation_centerY=441
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\op_door\op_door">
+			<Basic xInit="1430" yInit="340" xFinal="1647" yFinal="441" xCenter="1538" yCenter="390" />
+			<Comment>CB.instance_path=car1\doorR3\door
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1430
+CB.rotation_centerY=441
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\op_door\op_door">
+			<Basic xInit="1647" yInit="530" xFinal="1865" yFinal="631" xCenter="1756" yCenter="580" />
+			<Comment>CB.instance_path=car2\doorR2\door
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1647
+CB.rotation_centerY=631
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\op_door\op_door">
+			<Basic xInit="1430" yInit="530" xFinal="1647" yFinal="631" xCenter="1538" yCenter="580" />
+			<Comment>CB.instance_path=car2\doorR3\door
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1430
+CB.rotation_centerY=631
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\op_door\op_door">
+			<Basic xInit="1865" yInit="530" xFinal="2088" yFinal="631" xCenter="1976" yCenter="580" />
+			<Comment>CB.instance_path=car2\doorR1\door
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1865
+CB.rotation_centerY=631
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\op_door\op_door">
+			<Basic xInit="1647" yInit="720" xFinal="1865" yFinal="821" xCenter="1756" yCenter="770" />
+			<Comment>CB.instance_path=car3\doorR2\door
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1647
+CB.rotation_centerY=821
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\op_door\op_door">
+			<Basic xInit="1430" yInit="720" xFinal="1647" yFinal="821" xCenter="1538" yCenter="770" />
+			<Comment>CB.instance_path=car3\doorR3\door
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1430
+CB.rotation_centerY=821
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\op_door\op_door">
+			<Basic xInit="1865" yInit="720" xFinal="2088" yFinal="821" xCenter="1976" yCenter="770" />
+			<Comment>CB.instance_path=car3\doorR1\door
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1865
+CB.rotation_centerY=821
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\op_door\op_door">
+			<Basic xInit="1430" yInit="910" xFinal="1647" yFinal="1011" xCenter="1538" yCenter="960" />
+			<Comment>CB.instance_path=motorCar2\doorR3\door
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1430
+CB.rotation_centerY=1011
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\op_door\op_door">
+			<Basic xInit="1647" yInit="910" xFinal="1865" yFinal="1011" xCenter="1756" yCenter="960" />
+			<Comment>CB.instance_path=motorCar2\doorR2\door
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1647
+CB.rotation_centerY=1011
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\op_door\op_door">
+			<Basic xInit="1865" yInit="910" xFinal="2088" yFinal="1011" xCenter="1976" yCenter="960" />
+			<Comment>CB.instance_path=motorCar2\doorR1\door
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1865
+CB.rotation_centerY=1011
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb_door\pb_door">
+			<Basic xInit="607" yInit="250" xFinal="658" yFinal="306" xCenter="632" yCenter="278" />
+			<Comment>CB.instance_path=motorCar1\doorL2\doorPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=607
+CB.rotation_centerY=306
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb_door\pb_door">
+			<Basic xInit="399" yInit="250" xFinal="450" yFinal="306" xCenter="424" yCenter="278" />
+			<Comment>CB.instance_path=motorCar1\doorL1\doorPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=399
+CB.rotation_centerY=306
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb_door\pb_door">
+			<Basic xInit="815" yInit="250" xFinal="866" yFinal="306" xCenter="840" yCenter="278" />
+			<Comment>CB.instance_path=motorCar1\doorL3\doorPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=815
+CB.rotation_centerY=306
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb_door\pb_door">
+			<Basic xInit="399" yInit="451" xFinal="450" yFinal="507" xCenter="424" yCenter="479" />
+			<Comment>CB.instance_path=car1\doorL1\doorPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=399
+CB.rotation_centerY=507
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb_door\pb_door">
+			<Basic xInit="607" yInit="451" xFinal="658" yFinal="507" xCenter="632" yCenter="479" />
+			<Comment>CB.instance_path=car1\doorL2\doorPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=607
+CB.rotation_centerY=507
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb_door\pb_door">
+			<Basic xInit="815" yInit="451" xFinal="866" yFinal="507" xCenter="840" yCenter="479" />
+			<Comment>CB.instance_path=car1\doorL3\doorPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=815
+CB.rotation_centerY=507
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb_door\pb_door">
+			<Basic xInit="399" yInit="640" xFinal="450" yFinal="696" xCenter="424" yCenter="668" />
+			<Comment>CB.instance_path=car2\doorL1\doorPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=399
+CB.rotation_centerY=696
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb_door\pb_door">
+			<Basic xInit="607" yInit="640" xFinal="658" yFinal="696" xCenter="632" yCenter="668" />
+			<Comment>CB.instance_path=car2\doorL2\doorPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=607
+CB.rotation_centerY=696
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb_door\pb_door">
+			<Basic xInit="815" yInit="640" xFinal="866" yFinal="696" xCenter="840" yCenter="668" />
+			<Comment>CB.instance_path=car2\doorL3\doorPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=815
+CB.rotation_centerY=696
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb_door\pb_door">
+			<Basic xInit="399" yInit="830" xFinal="450" yFinal="886" xCenter="424" yCenter="858" />
+			<Comment>CB.instance_path=car3\doorL1\doorPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=399
+CB.rotation_centerY=886
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb_door\pb_door">
+			<Basic xInit="607" yInit="830" xFinal="658" yFinal="886" xCenter="632" yCenter="858" />
+			<Comment>CB.instance_path=car3\doorL2\doorPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=607
+CB.rotation_centerY=886
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb_door\pb_door">
+			<Basic xInit="815" yInit="830" xFinal="866" yFinal="886" xCenter="840" yCenter="858" />
+			<Comment>CB.instance_path=car3\doorL3\doorPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=815
+CB.rotation_centerY=886
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb_door\pb_door">
+			<Basic xInit="399" yInit="1020" xFinal="450" yFinal="1076" xCenter="424" yCenter="1048" />
+			<Comment>CB.instance_path=motorCar2\doorL1\doorPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=399
+CB.rotation_centerY=1076
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb_door\pb_door">
+			<Basic xInit="607" yInit="1020" xFinal="658" yFinal="1076" xCenter="632" yCenter="1048" />
+			<Comment>CB.instance_path=motorCar2\doorL2\doorPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=607
+CB.rotation_centerY=1076
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb_door\pb_door">
+			<Basic xInit="815" yInit="1020" xFinal="866" yFinal="1076" xCenter="840" yCenter="1048" />
+			<Comment>CB.instance_path=motorCar2\doorL3\doorPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=815
+CB.rotation_centerY=1076
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb_door\pb_door">
+			<Basic xInit="1510" yInit="260" xFinal="1561" yFinal="316" xCenter="1535" yCenter="288" />
+			<Comment>CB.instance_path=motorCar1\doorR3\doorPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1510
+CB.rotation_centerY=316
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb_door\pb_door">
+			<Basic xInit="1718" yInit="260" xFinal="1769" yFinal="316" xCenter="1743" yCenter="288" />
+			<Comment>CB.instance_path=motorCar1\doorR2\doorPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1718
+CB.rotation_centerY=316
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb_door\pb_door">
+			<Basic xInit="1926" yInit="260" xFinal="1977" yFinal="316" xCenter="1951" yCenter="288" />
+			<Comment>CB.instance_path=motorCar1\doorR1\doorPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1926
+CB.rotation_centerY=316
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb_door\pb_door">
+			<Basic xInit="1926" yInit="461" xFinal="1977" yFinal="517" xCenter="1951" yCenter="489" />
+			<Comment>CB.instance_path=car1\doorR1\doorPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1926
+CB.rotation_centerY=517
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb_door\pb_door">
+			<Basic xInit="1718" yInit="461" xFinal="1769" yFinal="517" xCenter="1743" yCenter="489" />
+			<Comment>CB.instance_path=car1\doorR2\doorPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1718
+CB.rotation_centerY=517
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb_door\pb_door">
+			<Basic xInit="1510" yInit="461" xFinal="1561" yFinal="517" xCenter="1535" yCenter="489" />
+			<Comment>CB.instance_path=car1\doorR3\doorPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1510
+CB.rotation_centerY=517
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb_door\pb_door">
+			<Basic xInit="1510" yInit="650" xFinal="1561" yFinal="706" xCenter="1535" yCenter="678" />
+			<Comment>CB.instance_path=car2\doorR3\doorPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1510
+CB.rotation_centerY=706
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb_door\pb_door">
+			<Basic xInit="1718" yInit="650" xFinal="1769" yFinal="706" xCenter="1743" yCenter="678" />
+			<Comment>CB.instance_path=car2\doorR2\doorPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1718
+CB.rotation_centerY=706
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb_door\pb_door">
+			<Basic xInit="1926" yInit="650" xFinal="1977" yFinal="706" xCenter="1951" yCenter="678" />
+			<Comment>CB.instance_path=car2\doorR1\doorPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1926
+CB.rotation_centerY=706
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb_door\pb_door">
+			<Basic xInit="1926" yInit="840" xFinal="1977" yFinal="896" xCenter="1951" yCenter="868" />
+			<Comment>CB.instance_path=car3\doorR1\doorPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1926
+CB.rotation_centerY=896
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb_door\pb_door">
+			<Basic xInit="1718" yInit="840" xFinal="1769" yFinal="896" xCenter="1743" yCenter="868" />
+			<Comment>CB.instance_path=car3\doorR2\doorPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1718
+CB.rotation_centerY=896
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb_door\pb_door">
+			<Basic xInit="1510" yInit="840" xFinal="1561" yFinal="896" xCenter="1535" yCenter="868" />
+			<Comment>CB.instance_path=car3\doorR3\doorPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1510
+CB.rotation_centerY=896
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb_door\pb_door">
+			<Basic xInit="1510" yInit="1030" xFinal="1561" yFinal="1086" xCenter="1535" yCenter="1058" />
+			<Comment>CB.instance_path=motorCar2\doorR3\doorPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1510
+CB.rotation_centerY=1086
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb_door\pb_door">
+			<Basic xInit="1718" yInit="1030" xFinal="1769" yFinal="1086" xCenter="1743" yCenter="1058" />
+			<Comment>CB.instance_path=motorCar2\doorR2\doorPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1718
+CB.rotation_centerY=1086
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb_door\pb_door">
+			<Basic xInit="1926" yInit="1030" xFinal="1977" yFinal="1086" xCenter="1951" yCenter="1058" />
+			<Comment>CB.instance_path=motorCar2\doorR1\doorPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1926
+CB.rotation_centerY=1086
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\car\left_motor_car">
+			<Basic xInit="205" yInit="149" xFinal="303" yFinal="245" xCenter="254" yCenter="197" />
+			<Comment>CB.instance_path=motorCar1
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=205
+CB.rotation_centerY=245
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\car\right_motor_car">
+			<Basic xInit="2066" yInit="150" xFinal="2167" yFinal="251" xCenter="2116" yCenter="200" />
+			<Comment>CB.instance_path=motorCar1
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=2066
+CB.rotation_centerY=251
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\car\left_motor_car">
+			<Basic xInit="1340" yInit="910" xFinal="1438" yFinal="1006" xCenter="1389" yCenter="958" />
+			<Comment>CB.instance_path=motorCar2
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1340
+CB.rotation_centerY=1006
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\car\right_motor_car">
+			<Basic xInit="960" yInit="910" xFinal="1061" yFinal="1003" xCenter="1010" yCenter="956" />
+			<Comment>CB.instance_path=motorCar2
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=960
+CB.rotation_centerY=1003
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb\pb">
+			<Basic xInit="1150" yInit="368" xFinal="1251" yFinal="427" xCenter="1200" yCenter="397" />
+			<Comment>CB.instance_path=cab1\closingPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1150
+CB.rotation_centerY=427
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="tni_train\pb\pb">
+			<Basic xInit="1150" yInit="1020" xFinal="1251" yFinal="1079" xCenter="1200" yCenter="1049" />
+			<Comment>CB.instance_path=cab2\closingPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=1150
+CB.rotation_centerY=1079
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+	</Objects>
+	<Vars>
+	</Vars>
+	<Fonts>
+		<Font fontId="font0" family="Arial" size="10pt" style="normal" weight="normal" text-decoration="none" letter-spacing="0" word-spacing="0" />
+		<Font fontId="font1" family="Arial" size="16pt" style="normal" weight="normal" text-decoration="none" letter-spacing="0" word-spacing="0" />
+		<Font fontId="font2" family="Arial" size="12pt" style="normal" weight="normal" text-decoration="none" letter-spacing="0" word-spacing="0" />
+	</Fonts>
+	<Meta>
+		<Metadata type="synoptic">
+			<Param>
+				<ParamName>groundPlanOnxyz</ParamName>
+				<ParamValue>3</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskpx</ParamName>
+				<ParamValue>0</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskpy</ParamName>
+				<ParamValue>0</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskpz</ParamName>
+				<ParamValue>0</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskdx</ParamName>
+				<ParamValue>10</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskdy</ParamName>
+				<ParamValue>10</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskdz</ParamName>
+				<ParamValue>10</ParamValue>
+			</Param>
+		</Metadata>
+	</Meta>
+</AWTSynoptic>

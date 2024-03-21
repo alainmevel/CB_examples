@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-03T11:13:58-01:00" />
+	<contentHeader name="input_chain_control">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="32" y="8" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+			<pou name="tri_chain.input_chain_control" pouType="functionBlock">
+				<interface>
+					<inputVars>
+						<variable name="globalRunning">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>7cf9b977-b1a8-402e-94ec-077b37a2fce4</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="localRunning">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>5a4eb4ad-6e4d-4cc4-a021-480474d35e53</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="startSensor">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>9e6d38c8-0a1a-491e-b43b-3421feeb90a2</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="endSensor">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>851da66a-96ab-43f9-980b-670f59262cdd</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="captureEnabled">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>31827b34-1416-4232-ac7f-ecc6a3ac8005</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<outputVars>
+						<variable name="movement">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>3fd0b435-20bf-4273-94a5-0eb65d33b2a2</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="captureRequest">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>83be413b-a08b-4f82-a81a-5a0ff594977e</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="captureFinished">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>c66d0543-bbd1-4646-bb6e-b8dd8ecba82c</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<addData>
+					</addData>
+				</interface>
+				<actions>
+				</actions>
+				<body>
+					<SFC>
+						<label localId="0" label="G1">
+							<position x="0" y="0" />
+						</label>
+						<step name="10" localId="1" initialStep="true">
+							<position x="94" y="94" />
+							<connectionPointIn>
+								<connection refLocalId="7">
+									<position x="126" y="1065" />
+									<position x="126" y="1085" />
+									<position x="8" y="1085" />
+									<position x="8" y="74" />
+									<position x="126" y="74" />
+									<position x="126" y="94" />
+								</connection>
+							</connectionPointIn>
+							<addData>
+							</addData>
+						</step>
+						<actionBlock localId="13" width="154" height="64">
+							<position x="174" y="944" />
+							<connectionPointIn>
+								<connection refLocalId="2" />
+							</connectionPointIn>
+							<action localId="14">
+								<relPosition x="0" y="0" />
+								<inline>
+									<ST>captureFinished;</ST>
+								</inline>
+							</action>
+						</actionBlock>
+						<step name="15" localId="2">
+							<position x="94" y="944" />
+							<connectionPointIn>
+								<connection refLocalId="8">
+									<position x="126" y="895" />
+									<position x="126" y="928" />
+									<position x="126" y="928" />
+									<position x="126" y="944" />
+								</connection>
+							</connectionPointIn>
+							<addData>
+							</addData>
+						</step>
+						<actionBlock localId="15" width="150" height="64">
+							<position x="174" y="774" />
+							<connectionPointIn>
+								<connection refLocalId="3" />
+							</connectionPointIn>
+							<action localId="16">
+								<relPosition x="0" y="0" />
+								<inline>
+									<ST>movement;</ST>
+								</inline>
+							</action>
+						</actionBlock>
+						<step name="14" localId="3">
+							<position x="94" y="774" />
+							<connectionPointIn>
+								<connection refLocalId="9">
+									<position x="126" y="725" />
+									<position x="126" y="758" />
+									<position x="126" y="758" />
+									<position x="126" y="774" />
+								</connection>
+							</connectionPointIn>
+							<addData>
+							</addData>
+						</step>
+						<actionBlock localId="17" width="144" height="64">
+							<position x="174" y="604" />
+							<connectionPointIn>
+								<connection refLocalId="4" />
+							</connectionPointIn>
+							<action localId="18">
+								<relPosition x="0" y="0" />
+								<inline>
+									<ST>captureRequest;</ST>
+								</inline>
+							</action>
+						</actionBlock>
+						<step name="13" localId="4">
+							<position x="94" y="604" />
+							<connectionPointIn>
+								<connection refLocalId="10">
+									<position x="126" y="550" />
+									<position x="126" y="588" />
+									<position x="126" y="588" />
+									<position x="126" y="604" />
+								</connection>
+							</connectionPointIn>
+							<addData>
+							</addData>
+						</step>
+						<step name="12" localId="5">
+							<position x="94" y="434" />
+							<connectionPointIn>
+								<connection refLocalId="11">
+									<position x="126" y="381" />
+									<position x="126" y="398" />
+									<position x="126" y="398" />
+									<position x="126" y="434" />
+								</connection>
+							</connectionPointIn>
+							<addData>
+							</addData>
+						</step>
+						<actionBlock localId="19" width="133" height="64">
+							<position x="174" y="267" />
+							<connectionPointIn>
+								<connection refLocalId="6" />
+							</connectionPointIn>
+							<action localId="20">
+								<relPosition x="0" y="0" />
+								<inline>
+									<ST>movement;</ST>
+								</inline>
+							</action>
+						</actionBlock>
+						<step name="11" localId="6">
+							<position x="94" y="267" />
+							<connectionPointIn>
+								<connection refLocalId="12">
+									<position x="126" y="211" />
+									<position x="126" y="228" />
+									<position x="126" y="228" />
+									<position x="126" y="267" />
+								</connection>
+							</connectionPointIn>
+							<addData>
+							</addData>
+						</step>
+						<transition localId="7">
+							<position x="110" y="1057" />
+							<connectionPointIn>
+								<connection refLocalId="2">
+									<position x="126" y="1008" />
+									<position x="126" y="1024" />
+									<position x="126" y="1024" />
+									<position x="126" y="1057" />
+								</connection>
+							</connectionPointIn>
+							<condition>
+								<inline name="7">
+									<ST>NOT captureEnabled</ST>
+								</inline>
+							</condition>
+							<addData>
+								<data name="Geensys.CB.index" handleUnknown="preserve">
+									<value>15</value>
+								</data>
+							</addData>
+						</transition>
+						<transition localId="8">
+							<position x="110" y="887" />
+							<connectionPointIn>
+								<connection refLocalId="3">
+									<position x="126" y="838" />
+									<position x="126" y="854" />
+									<position x="126" y="854" />
+									<position x="126" y="887" />
+								</connection>
+							</connectionPointIn>
+							<condition>
+								<inline name="8">
+									<ST>NOT endSensor</ST>
+								</inline>
+							</condition>
+							<addData>
+								<data name="Geensys.CB.index" handleUnknown="preserve">
+									<value>14</value>
+								</data>
+							</addData>
+						</transition>
+						<transition localId="9">
+							<position x="110" y="717" />
+							<connectionPointIn>
+								<connection refLocalId="4">
+									<position x="126" y="668" />
+									<position x="126" y="684" />
+									<position x="126" y="684" />
+									<position x="126" y="717" />
+								</connection>
+							</connectionPointIn>
+							<condition>
+								<inline name="9">
+									<ST>captureEnabled</ST>
+								</inline>
+							</condition>
+							<addData>
+								<data name="Geensys.CB.index" handleUnknown="preserve">
+									<value>13</value>
+								</data>
+							</addData>
+						</transition>
+						<transition localId="10">
+							<position x="110" y="542" />
+							<connectionPointIn>
+								<connection refLocalId="5">
+									<position x="126" y="498" />
+									<position x="126" y="514" />
+									<position x="126" y="514" />
+									<position x="126" y="542" />
+								</connection>
+							</connectionPointIn>
+							<condition>
+								<inline name="10">
+									<ST>localRunning</ST>
+								</inline>
+							</condition>
+							<addData>
+								<data name="Geensys.CB.index" handleUnknown="preserve">
+									<value>12</value>
+								</data>
+							</addData>
+						</transition>
+						<transition localId="11">
+							<position x="110" y="373" />
+							<connectionPointIn>
+								<connection refLocalId="6">
+									<position x="126" y="331" />
+									<position x="126" y="344" />
+									<position x="126" y="344" />
+									<position x="126" y="373" />
+								</connection>
+							</connectionPointIn>
+							<condition>
+								<inline name="11">
+									<ST>endSensor</ST>
+								</inline>
+							</condition>
+							<addData>
+								<data name="Geensys.CB.index" handleUnknown="preserve">
+									<value>11</value>
+								</data>
+							</addData>
+						</transition>
+						<transition localId="12">
+							<position x="110" y="203" />
+							<connectionPointIn>
+								<connection refLocalId="1">
+									<position x="126" y="158" />
+									<position x="126" y="174" />
+									<position x="126" y="174" />
+									<position x="126" y="203" />
+								</connection>
+							</connectionPointIn>
+							<condition>
+								<inline name="12">
+									<ST>startSensor AND NOT endSensor  AND globalRunning </ST>
+								</inline>
+							</condition>
+							<addData>
+								<data name="Geensys.CB.index" handleUnknown="preserve">
+									<value>10</value>
+								</data>
+							</addData>
+						</transition>
+					</SFC>
+				</body>
+				<addData>
+					<data name="Geensys.CB.Or_Divergences_Exclusivity" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+				</addData>
+			</pou>
+		</pous>
+	</types>
+	<instances>
+		<configurations />
+	</instances>
+</project>

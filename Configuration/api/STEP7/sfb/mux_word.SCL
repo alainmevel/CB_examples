@@ -1,0 +1,29 @@
+
+FUNCTION CB_mux_word : WORD
+
+
+TITLE = ' Multiplexer on N variable '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : muxWord
+FAMILY  : TNI
+
+VAR_INPUT
+    K : INT;
+    IN0 : WORD;
+    IN1 : WORD;
+    IN2 : WORD;
+    IN3 : WORD;
+    IN4 : WORD;
+    IN5 : WORD;
+    IN6 : WORD;
+    IN7 : WORD;
+    IN8 : WORD;
+    IN9 : WORD;
+END_VAR
+
+BEGIN
+
+CB_mux_word := MUX (K := K, IN0 := IN0, IN1 := IN1, IN2 := IN2, IN3 := IN3, IN4 := IN4, IN5 := IN5, IN6 := IN6, IN7 := IN7, IN8 := IN8, IN9:= IN9 );
+
+END_FUNCTION

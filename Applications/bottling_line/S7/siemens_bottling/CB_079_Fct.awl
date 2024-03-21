@@ -1,0 +1,132 @@
+FUNCTION_BLOCK FB79
+TITLE = 'process'
+AUTHOR : CB
+
+VAR
+	RstMGT1PROC : FB77;
+END_VAR
+
+
+BEGIN
+
+
+NETWORK
+TITLE = 
+//
+//	process/MAST1PROC
+CALL FC69 (combE := 1);
+CALL FB69,	DB69;
+CALL FC69 (combE := 0);
+
+
+
+NETWORK
+TITLE = 
+//
+//	process/TkMGT1PROC
+CALL FC74 (combE := 1);
+CALL FB74,	DB74;
+CALL FC74 (combE := 0);
+
+
+
+NETWORK
+TITLE = 
+//
+//	process/PREP1PROC
+CALL FC75 (combE := 1);
+CALL FB75,	DB75;
+CALL FC75 (combE := 0);
+
+
+
+NETWORK
+TITLE = 
+//
+//	process/CONV1PROC
+CALL FC76 (combE := 1);
+CALL FB76,	DB76;
+CALL FC76 (combE := 0);
+
+
+
+NETWORK
+TITLE = 
+//
+//	process/RstMGT1PROC
+A	"DB110".PREP1_preparationValve1;
+=	L	0.0;
+BLD	103;
+A	"DB110".PREP1_preparationValve2;
+=	L	0.1;
+BLD	103;
+A	"DB110".PREP1_preparationValve3;
+=	L	0.2;
+BLD	103;
+A	"DB110".PREP1_preparationValve4;
+=	L	0.3;
+BLD	103;
+A	"DB110".PREP1_preparationPump1;
+=	L	0.4;
+BLD	103;
+A	"DB110".PREP1_preparationPump2;
+=	L	0.5;
+BLD	103;
+A	"DB110".PREP1_preparationAgit;
+=	L	0.6;
+BLD	103;
+A	"DB110".TkMGT1_pump1;
+=	L	0.7;
+BLD	103;
+A	"DB110".TkMGT1_pump2;
+=	L	1.0;
+BLD	103;
+A	"DB110".TkMGT1_valve1;
+=	L	1.1;
+BLD	103;
+A	"DB110".TkMGT1_valve2;
+=	L	1.2;
+BLD	103;
+A	"DB110".TkMGT1_valve3;
+=	L	1.3;
+BLD	103;
+A	"DB110".TkMGT1_valve4;
+=	L	1.4;
+BLD	103;
+A	"DB110".TkMGT1_lowSpeedAgitator;
+=	L	1.5;
+BLD	103;
+A	"DB110".TkMGT1_highSpeedAgitator;
+=	L	1.6;
+BLD	103;
+CALL #RstMGT1PROC(
+	preparationValve1 := L	0.0,
+	preparationValve2 := L	0.1,
+	preparationValve3 := L	0.2,
+	preparationValve4 := L	0.3,
+	preparationPump1 := L	0.4,
+	preparationPump2 := L	0.5,
+	preparationAgitator := L	0.6,
+	productionPump1 := L	0.7,
+	productionPump2 := L	1.0,
+	productionValve1 := L	1.1,
+	productionValve2 := L	1.2,
+	productionValve3 := L	1.3,
+	productionValve4 := L	1.4,
+	productionLSAgitator := L	1.5,
+	productionHSAgitator := L	1.6,
+	pump1 := "DB110".pump1RqstMGT1,
+	pump2 := "DB110".pump2RqstMGT1,
+	valve1 := "DB110".valve1RqstMGT1,
+	valve2 := "DB110".valve2RqstMGT1,
+	valve3 := "DB110".valve3RqstMGT1,
+	valve4 := "DB110".valve4RqstMGT1,
+	loSpeedAgit := "DB110".RstMGT1_loSpeedAgit,
+	hiSpeedAgit := "DB110".RstMGT1_hiSpeedAgit
+);
+NOP 0;
+
+
+
+
+END_FUNCTION_BLOCK

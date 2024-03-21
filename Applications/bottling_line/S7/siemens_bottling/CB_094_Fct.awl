@@ -1,0 +1,49 @@
+FUNCTION_BLOCK FB94
+TITLE = 'pilot_Z2EXP1VAD'
+AUTHOR : CB
+
+VAR
+	Z2EXP1ACT : FB85;
+END_VAR
+
+
+BEGIN
+
+
+NETWORK
+TITLE = 
+//
+//	pilot/pilot_Z2/pilot_Z2EXP1VAD/Z2EXP1ACT
+A	"DB110".WKM1_autoMode;
+=	L	0.0;
+BLD	103;
+A	"DB110".WKM1_manualMode;
+=	L	0.1;
+BLD	103;
+A	"DB110".pump2RqstMGT1;
+=	L	0.2;
+BLD	103;
+A	I03.1;
+=	L	0.3;
+BLD	103;
+A	I03.2;
+=	L	0.4;
+BLD	103;
+A	"DB110".Z2EXP1_generalFault;
+=	L	0.5;
+BLD	103;
+CALL #Z2EXP1ACT(
+	autoMode := L	0.0,
+	manualMode := L	0.1,
+	autoCmd := L	0.2,
+	onPB := L	0.3,
+	offPB := L	0.4,
+	generalFault := L	0.5,
+	cmd := Q00.4
+);
+NOP 0;
+
+
+
+
+END_FUNCTION_BLOCK

@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-03T11:13:47-01:00" />
+	<contentHeader name="time_management">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="32" y="8" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+			<pou name="tni_clock.time_management" pouType="functionBlock">
+				<interface>
+					<inputVars>
+						<variable name="tick">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>clock tick</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>8791b086-0f78-4263-9cf7-749628118209</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>fromQuartz</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inOutVars>
+						<variable name="B1">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Setting mode</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>071eca02-8077-4187-870f-2762d56303d9</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="B2">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Time adjustment</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>0b83b6b2-f980-4877-bb4f-e180ca01792c</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="B3">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Pressure/Time mode</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>7ac14912-dfea-462d-b369-26a322d1666b</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="B4">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Light</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>0c45188f-2351-4fbe-88c1-fa730cafa337</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>Buttons</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inoutVars</value>
+							</data>
+						</addData>
+					</inOutVars>
+					<outputVars>
+						<variable name="stepMotorSecond">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Ask the seconds hand to move one step forward</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>53b08123-72ea-431c-9ec0-58ee22fd1c6f</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="stepMotorMinute">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Ask the minutes hand to move one step forward</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>5e0cfa25-4214-4f32-8ce7-5b0d122ca928</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="stepMotorHour">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Ask the hours hand to move one step forward</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>1797899e-bfa6-49a5-aec9-3e97d7939a84</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>Motors</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<outputVars>
+						<variable name="hh">
+							<type>
+								<SINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>12dcd093-4ac9-46d9-a00f-9ee8fa1663ac</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="mn">
+							<type>
+								<SINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>43956e6c-2c56-4ca2-ad76-fb3e40ff86ad</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="sec">
+							<type>
+								<SINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>7ed31431-df4d-4187-9e26-e0df43a34c40</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>DateAndTime</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<localVars>
+						<variable name="tickCount">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Time counting between 2 seconds (micro-seconds)</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>908c1b52-83ee-405d-941d-8f3b4f3463ae</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="adjustMode">
+							<type>
+								<INT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>75d0fcb2-3f21-43e6-b9ac-335dd2a23dd8</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>localVars</value>
+							</data>
+						</addData>
+					</localVars>
+					<addData>
+						<data name="Geensys.CB.groupIn" handleUnknown="preserve">
+							<value>fromQuartz,</value>
+						</data>
+						<data name="Geensys.CB.groupInout" handleUnknown="preserve">
+							<value>Buttons,</value>
+						</data>
+						<data name="Geensys.CB.groupOut" handleUnknown="preserve">
+							<value>Motors,,DateAndTime,</value>
+						</data>
+					</addData>
+				</interface>
+				<actions>
+				</actions>
+				<body>
+					<ST>(**************   Time setting  *****************)
+(* First B1 push : hour stting      *)
+(* Second B1 push : minutes setting&#9;*)
+(* Third B1 push : seconds setting   *)
+(* Push on B2 : current value modification       *)
+(**************************************************)
+
+
+(***** Motors running orders initialisation *****)
+stepMotorSecond:= FALSE;
+stepMotorMinute := FALSE;
+stepMotorHour := FALSE;
+
+IF (B1 OR (adjustMode &gt; 0)) THEN
+&#9;IF B1 THEN adjustMode := adjustMode + 1; END_IF;
+&#9;B1 := FALSE;
+&#9;IF adjustMode &gt; 3 THEN adjustMode := 0; END_IF;
+&#9;IF B2 THEN
+&#9;&#9;B2 := FALSE;
+&#9;&#9;CASE adjustMode OF
+&#9;&#9;&#9;1 : &#9;hh := hh + 1;
+&#9;&#9;&#9;&#9;stepMotorHour := true;&#9;
+&#9;&#9;&#9;2 : &#9;mn := mn + 1;
+&#9;&#9;&#9;&#9;stepMotorMinute := true;&#9;
+&#9;&#9;&#9;3 : &#9;sec := sec + 1;
+&#9;&#9;&#9;&#9;stepMotorSecond:= true;&#9;
+&#9;&#9;END_CASE;
+&#9;END_IF;&#9;
+END_IF;
+
+(***** Take quartz from pulse into account  ******)
+(** The pulse is not take into account when setting mode is on **)
+IF (RE tick and (adjustMode = 0)) THEN
+&#9;tickCount := tickCount + (CLOCK_PERIOD * 2.0); (* un RE de tick tous les 2 cycles *)
+&#9;IF tickCount &gt; 1000000.0 THEN
+&#9;&#9;sec := sec + 1;
+&#9;&#9;stepMotorSecond := true;
+&#9;&#9;tickCount := tickCount - 1000000.0;
+&#9;END_IF;
+END_IF;
+
+
+
+(***** Current time calculation ******)&#9;
+
+IF sec &gt; 60 THEN
+&#9;sec := 0;
+&#9;IF adjustMode = 0 THEN 
+&#9;&#9;mn := mn + 1;
+&#9;&#9;stepMotorMinute := true;
+&#9;END_IF;
+END_IF;
+IF mn &gt; 60 THEN
+&#9;mn := 0;
+&#9;IF adjustMode = 0 THEN
+&#9;&#9;hh := hh + 1; 
+&#9;&#9;stepMotorHour := true;
+&#9;END_IF;
+END_IF;
+IF hh &gt; 23 THEN
+&#9;hh := 0;&#9;
+END_IF;
+
+
+</ST>
+				</body>
+				<addData>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+				</addData>
+			</pou>
+		</pous>
+	</types>
+	<instances>
+		<configurations />
+	</instances>
+</project>

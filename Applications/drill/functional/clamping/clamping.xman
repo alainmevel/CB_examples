@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<AWTSynoptic screenX="1600" screenY="2262" name="clamping.xman" description="" date="03/10/2023" time="11:13" version="3.0_draft3" source="controlbuild " bkgColor="white" identifier="82c357a4-83bf-4427-9e72-61dfd64e1718" gridExtent="10" designLevel="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Colors>
+		<Color colorId="black" r="0" g="0" b="0" invisible="false" />
+		<Color colorId="white" r="255" g="255" b="255" invisible="false" />
+		<Color colorId="red" r="255" g="0" b="0" invisible="false" />
+		<Color colorId="yellow" r="255" g="255" b="0" invisible="false" />
+		<Color colorId="blue" r="0" g="0" b="255" invisible="false" />
+		<Color colorId="green" r="0" g="255" b="0" invisible="false" />
+		<Color colorId="purple" r="128" g="0" b="128" invisible="false" />
+		<Color colorId="brown" r="128" g="64" b="0" invisible="false" />
+		<Color colorId="gray" r="192" g="192" b="192" invisible="false" />
+		<Color colorId="orange" r="255" g="128" b="0" invisible="false" />
+		<Color colorId="pink" r="255" g="128" b="255" invisible="false" />
+		<Color colorId="transparent" invisible="true" />
+		<Color colorId="other" r="0" g="0" b="0" invisible="false" />
+		<Color colorId="visible" invisible="false" />
+	</Colors>
+	<Objects>
+		<Group>
+			<Basic xInit="0" yInit="0" xFinal="470" yFinal="48" xCenter="235" yCenter="24" />
+			<Comment>CB.form_name=Normal
+CB.num_rep=1
+</Comment>
+			<Text font="font0" textColor="green" hAlign="left" vAlign="top">
+				<Basic xInit="0" yInit="0" xFinal="470" yFinal="48" xCenter="235" yCenter="24" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="black" />
+				<Content>               Normal running mode</Content>
+			</Text>
+			<Translation2>
+				<XAxisMoving>
+					<Expression>20</Expression>
+				</XAxisMoving>
+				<YAxisMoving>
+					<Expression>20</Expression>
+				</YAxisMoving>
+				<ComplexCondition>
+					<Expression>clampingFault = 0</Expression>
+					<Condition var="Var11" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>a9b87394-e31f-4e0a-bb7a-6f98f94f25eb</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</Translation2>
+			<ChangeColorOnBit colorFillBitOn="invisible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="invisible" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>clampingFault &gt; 0</Expression>
+					<Condition var="Var11" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>c5ebf39a-0d02-4785-a926-abb4906171db</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+		</Group>
+		<Group>
+			<Basic xInit="0" yInit="3" xFinal="462" yFinal="51" xCenter="231" yCenter="27" />
+			<Comment>CB.form_name=Fault01
+CB.num_rep=1
+</Comment>
+			<Text font="font0" textColor="red" hAlign="left" vAlign="top">
+				<Basic xInit="0" yInit="3" xFinal="462" yFinal="51" xCenter="231" yCenter="27" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="black" />
+				<Content>    Movement fault during right locking</Content>
+			</Text>
+			<ChangeColorOnBit colorFillBitOn="invisible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="invisible" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>clampingFault = 0</Expression>
+					<Condition var="Var11" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>55436c5c-69ec-464e-b935-f4520fdd7ed6</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<Translation2>
+				<XAxisMoving>
+					<Expression>20</Expression>
+				</XAxisMoving>
+				<YAxisMoving>
+					<Expression>20</Expression>
+				</YAxisMoving>
+				<ComplexCondition>
+					<Expression>clampingFault = 1</Expression>
+					<Condition var="Var11" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>6478735a-14f6-46ec-b019-23742015bf34</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</Translation2>
+		</Group>
+		<Group>
+			<Basic xInit="3" yInit="3" xFinal="462" yFinal="54" xCenter="232" yCenter="28" />
+			<Comment>CB.form_name=Fault02
+CB.num_rep=1
+</Comment>
+			<Text font="font0" textColor="red" hAlign="left" vAlign="top">
+				<Basic xInit="3" yInit="3" xFinal="462" yFinal="54" xCenter="232" yCenter="28" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="black" />
+				<Content>      Movement fault during left locking</Content>
+			</Text>
+			<ChangeColorOnBit colorFillBitOn="invisible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="invisible" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>clampingFault = 0</Expression>
+					<Condition var="Var11" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>fd591550-3531-4b3a-bb6b-4cc92f530437</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<Translation2>
+				<XAxisMoving>
+					<Expression>20</Expression>
+				</XAxisMoving>
+				<YAxisMoving>
+					<Expression>20</Expression>
+				</YAxisMoving>
+				<ComplexCondition>
+					<Expression>clampingFault = 2</Expression>
+					<Condition var="Var11" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>3d9fb54e-d06b-4222-8a48-42c5e68a9522</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</Translation2>
+		</Group>
+		<Group>
+			<Basic xInit="0" yInit="0" xFinal="462" yFinal="46" xCenter="231" yCenter="23" />
+			<Comment>CB.form_name=Fault03
+CB.num_rep=1
+</Comment>
+			<Text font="font0" textColor="red" hAlign="left" vAlign="top">
+				<Basic xInit="0" yInit="0" xFinal="462" yFinal="46" xCenter="231" yCenter="23" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="black" />
+				<Content>   Movement fault during right unlocking</Content>
+			</Text>
+			<ChangeColorOnBit colorFillBitOn="invisible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="invisible" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>clampingFault = 0</Expression>
+					<Condition var="Var11" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>9a3f4a4e-8b8d-4a8f-adea-935a716260b9</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<Translation2>
+				<XAxisMoving>
+					<Expression>20</Expression>
+				</XAxisMoving>
+				<YAxisMoving>
+					<Expression>20</Expression>
+				</YAxisMoving>
+				<ComplexCondition>
+					<Expression>clampingFault = 3</Expression>
+					<Condition var="Var11" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>82f720ce-762c-4423-99d3-413397105988</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</Translation2>
+		</Group>
+		<Group>
+			<Basic xInit="0" yInit="0" xFinal="464" yFinal="48" xCenter="232" yCenter="24" />
+			<Comment>CB.form_name=Fault04
+CB.num_rep=1
+</Comment>
+			<Text font="font0" textColor="red" hAlign="left" vAlign="top">
+				<Basic xInit="0" yInit="0" xFinal="464" yFinal="48" xCenter="232" yCenter="24" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="black" />
+				<Content>      Movement fault during left unlocking</Content>
+			</Text>
+			<ChangeColorOnBit colorFillBitOn="invisible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="invisible" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>clampingFault = 0</Expression>
+					<Condition var="Var11" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>fd2cedec-5239-417a-b947-b5d1ab10805d</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<Translation2>
+				<XAxisMoving>
+					<Expression>20</Expression>
+				</XAxisMoving>
+				<YAxisMoving>
+					<Expression>20</Expression>
+				</YAxisMoving>
+				<ComplexCondition>
+					<Expression>clampingFault = 4</Expression>
+					<Condition var="Var11" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>b49ff84d-eb50-4569-8c0f-def834a35d5e</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</Translation2>
+		</Group>
+	</Objects>
+	<Vars>
+		<Var varId="Var14" type="BOOL" name="_X_10" />
+		<Var varId="Var15" type="BOOL" name="_X_11" />
+		<Var varId="Var16" type="BOOL" name="_X_12" />
+		<Var varId="Var17" type="BOOL" name="_X_13" />
+		<Var varId="Var6" type="BOOL" name="leftLocked" />
+		<Var varId="Var13" type="BOOL" name="leftLocking" />
+		<Var varId="Var1" type="BOOL" name="releasing" />
+		<Var varId="Var18" type="BOOL" name="_X_14" />
+		<Var varId="Var2" type="BOOL" name="clamping" />
+		<Var varId="Var10" type="BOOL" name="releasingOK" />
+		<Var varId="Var5" type="BOOL" name="leftUnlocked" />
+		<Var varId="Var11" type="DINT" name="clampingFault" />
+		<Var varId="Var12" type="BOOL" name="rightLocking" />
+		<Var varId="Var20" type="DINT" name="releasingDuration" />
+		<Var varId="Var4" type="BOOL" name="rightLocked" />
+		<Var varId="Var8" type="BOOL" name="leftFault" />
+		<Var varId="Var3" type="BOOL" name="rightUnlocked" />
+		<Var varId="Var7" type="BOOL" name="rightFault" />
+		<Var varId="Var0" type="BOOL" name="acknowledgePB" />
+		<Var varId="Var19" type="DINT" name="clampingDuration" />
+		<Var varId="Var9" type="BOOL" name="clampingOK" />
+	</Vars>
+	<Fonts>
+		<Font fontId="font0" family="Arial" size="9pt" style="normal" weight="normal" text-decoration="none" letter-spacing="0" word-spacing="0" />
+	</Fonts>
+	<Meta>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var14</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>00000000-0000-0000-0000-000000000000</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var15</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>00000000-0000-0000-0000-000000000000</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var16</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>00000000-0000-0000-0000-000000000000</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var17</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>00000000-0000-0000-0000-000000000000</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var6</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>bc26b6c8-fb6e-452d-9013-279bd57e1767</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var13</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>f99e729e-cf2e-4d62-a525-7203bcda1850</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var1</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>5717725c-98bb-46de-a736-2fe4cf07020a</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var18</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>00000000-0000-0000-0000-000000000000</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var2</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>c047e33b-08a0-491f-99a3-463f85ae40ff</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var10</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>087e35d8-86a1-490a-9e08-a5c540ff70c0</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var5</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>beaf0000-9b75-47f7-b3d8-7d3f27c0f6cf</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var11</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>12956e59-e1be-4f8b-a6e5-d87e58e38bb2</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var12</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>598afb88-f701-4711-a728-7e557f3c6d62</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var20</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>dda65309-16e0-4856-9bc5-0758fc83b12e</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var4</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>b0fca460-e3bb-4202-9244-0c2e71a8021b</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var8</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>9eafeebe-fd99-4ca1-9734-7d592e45b227</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var3</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>708ebc3d-6950-4493-87fe-ed8a786ca777</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var7</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>03762c83-47f9-417f-a556-f808cf001847</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var0</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>612abb24-2a99-4d41-bef4-f01a1aed6e0b</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var19</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>eaa3c0bb-4d6c-4a43-b4b4-ccd89e43fc2d</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var9</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>6371e574-ecee-4de0-a22d-1401de13895d</ParamValue>
+			</Param>
+		</Metadata>
+	</Meta>
+</AWTSynoptic>

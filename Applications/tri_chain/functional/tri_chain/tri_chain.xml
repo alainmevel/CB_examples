@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-03T11:13:58-01:00" />
+	<contentHeader name="tri_chain">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="32" y="8" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+			<pou name="tri_chain.tri_chain" pouType="program">
+				<interface>
+					<addData>
+					</addData>
+				</interface>
+				<actions>
+				</actions>
+				<body>
+					<FBD>
+						<block localId="0" width="363" height="469" typeName="tri_chain.cp_trich" instanceName="cp_trichain">
+							<position x="231" y="196" />
+							<inputVariables>
+								<variable formalParameter="ON">
+									<connectionPointIn>
+										<connection refLocalId="1" formalParameter="ON">
+											<position x="1074" y="268" />
+											<position x="1179" y="268" />
+											<position x="1179" y="772" />
+											<position x="127" y="772" />
+											<position x="127" y="268" />
+											<position x="231" y="268" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="run1">
+									<connectionPointIn>
+										<connection refLocalId="1" formalParameter="run1">
+											<position x="1074" y="292" />
+											<position x="1174" y="292" />
+											<position x="1174" y="767" />
+											<position x="131" y="767" />
+											<position x="131" y="292" />
+											<position x="231" y="292" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="startSensor1">
+									<connectionPointIn>
+										<connection refLocalId="1" formalParameter="startSensor1">
+											<position x="1074" y="316" />
+											<position x="1169" y="316" />
+											<position x="1169" y="762" />
+											<position x="136" y="762" />
+											<position x="136" y="316" />
+											<position x="231" y="316" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="endSensor1">
+									<connectionPointIn>
+										<connection refLocalId="1" formalParameter="endSensor1">
+											<position x="1074" y="340" />
+											<position x="1164" y="340" />
+											<position x="1164" y="757" />
+											<position x="141" y="757" />
+											<position x="141" y="340" />
+											<position x="231" y="340" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="run2">
+									<connectionPointIn>
+										<connection refLocalId="1" formalParameter="run2">
+											<position x="1074" y="364" />
+											<position x="1160" y="364" />
+											<position x="1160" y="753" />
+											<position x="146" y="753" />
+											<position x="146" y="364" />
+											<position x="231" y="364" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="startSensor2">
+									<connectionPointIn>
+										<connection refLocalId="1" formalParameter="startSensor2">
+											<position x="1074" y="388" />
+											<position x="1155" y="388" />
+											<position x="1155" y="748" />
+											<position x="151" y="748" />
+											<position x="151" y="388" />
+											<position x="231" y="388" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="endSensor2">
+									<connectionPointIn>
+										<connection refLocalId="1" formalParameter="endSensor2">
+											<position x="1074" y="412" />
+											<position x="1150" y="412" />
+											<position x="1150" y="743" />
+											<position x="155" y="743" />
+											<position x="155" y="412" />
+											<position x="231" y="412" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="run3">
+									<connectionPointIn>
+										<connection refLocalId="1" formalParameter="run3">
+											<position x="1074" y="436" />
+											<position x="1145" y="436" />
+											<position x="1145" y="738" />
+											<position x="160" y="738" />
+											<position x="160" y="436" />
+											<position x="231" y="436" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="startSensor3">
+									<connectionPointIn>
+										<connection refLocalId="1" formalParameter="startSensor3">
+											<position x="1074" y="460" />
+											<position x="1140" y="460" />
+											<position x="1140" y="733" />
+											<position x="165" y="733" />
+											<position x="165" y="460" />
+											<position x="231" y="460" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="endSensor3">
+									<connectionPointIn>
+										<connection refLocalId="1" formalParameter="endSensor3">
+											<position x="1074" y="484" />
+											<position x="1136" y="484" />
+											<position x="1136" y="729" />
+											<position x="170" y="729" />
+											<position x="170" y="484" />
+											<position x="231" y="484" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="sensor1">
+									<connectionPointIn>
+										<connection refLocalId="1" formalParameter="sensor1">
+											<position x="1074" y="532" />
+											<position x="1126" y="532" />
+											<position x="1126" y="719" />
+											<position x="175" y="719" />
+											<position x="175" y="508" />
+											<position x="231" y="508" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="sensor2">
+									<connectionPointIn>
+										<connection refLocalId="1" formalParameter="sensor2">
+											<position x="1074" y="556" />
+											<position x="1121" y="556" />
+											<position x="1121" y="714" />
+											<position x="179" y="714" />
+											<position x="179" y="532" />
+											<position x="231" y="532" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="sensor3">
+									<connectionPointIn>
+										<connection refLocalId="1" formalParameter="sensor3">
+											<position x="1074" y="580" />
+											<position x="1116" y="580" />
+											<position x="1116" y="709" />
+											<position x="184" y="709" />
+											<position x="184" y="556" />
+											<position x="231" y="556" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="endSensor">
+									<connectionPointIn>
+										<connection refLocalId="1" formalParameter="endSensor">
+											<position x="1074" y="604" />
+											<position x="1112" y="604" />
+											<position x="1112" y="705" />
+											<position x="189" y="705" />
+											<position x="189" y="580" />
+											<position x="231" y="580" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="endSensor4">
+									<connectionPointIn>
+										<connection refLocalId="1" formalParameter="endSensor4">
+											<position x="1074" y="508" />
+											<position x="1131" y="508" />
+											<position x="1131" y="724" />
+											<position x="194" y="724" />
+											<position x="194" y="604" />
+											<position x="231" y="604" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="mvt1">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="mvt2">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="mvt3">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="moveToLeft">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="moveToRight">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="chainMvt">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="mvt4">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>1.OP2CP,OP2CP</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>cd0ca7e3-a4b0-404a-b113-44d0104bb926</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="1" width="355" height="471" typeName="tri_chain.op_trich" instanceName="op_trichain">
+							<position x="719" y="196" />
+							<inputVariables>
+								<variable formalParameter="mvt1">
+									<connectionPointIn>
+										<connection refLocalId="0" formalParameter="mvt1">
+											<position x="594" y="268" />
+											<position x="688" y="268" />
+											<position x="688" y="268" />
+											<position x="719" y="268" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="mvt2">
+									<connectionPointIn>
+										<connection refLocalId="0" formalParameter="mvt2">
+											<position x="594" y="292" />
+											<position x="688" y="292" />
+											<position x="688" y="292" />
+											<position x="719" y="292" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="mvt3">
+									<connectionPointIn>
+										<connection refLocalId="0" formalParameter="mvt3">
+											<position x="594" y="316" />
+											<position x="688" y="316" />
+											<position x="688" y="316" />
+											<position x="719" y="316" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="mvt4">
+									<connectionPointIn>
+										<connection refLocalId="0" formalParameter="mvt4">
+											<position x="594" y="412" />
+											<position x="688" y="412" />
+											<position x="688" y="340" />
+											<position x="719" y="340" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="moveToLeft">
+									<connectionPointIn>
+										<connection refLocalId="0" formalParameter="moveToLeft">
+											<position x="594" y="340" />
+											<position x="688" y="340" />
+											<position x="688" y="364" />
+											<position x="719" y="364" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="moveToRight">
+									<connectionPointIn>
+										<connection refLocalId="0" formalParameter="moveToRight">
+											<position x="594" y="364" />
+											<position x="688" y="364" />
+											<position x="688" y="388" />
+											<position x="719" y="388" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="chainMvt">
+									<connectionPointIn>
+										<connection refLocalId="0" formalParameter="chainMvt">
+											<position x="594" y="388" />
+											<position x="688" y="388" />
+											<position x="688" y="412" />
+											<position x="719" y="412" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="ON">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="run1">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="startSensor1">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="endSensor1">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="run2">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="startSensor2">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="endSensor2">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="run3">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="startSensor3">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="endSensor3">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="endSensor4">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="sensor1">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="sensor2">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="sensor3">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="endSensor">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>0.CP2OP,CP2OP</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>367aba30-37da-477c-bbcc-970fc9529a68</value>
+								</data>
+							</addData>
+						</block>
+					</FBD>
+				</body>
+				<addData>
+					<data name="Geensys.CB.AutomaticScheduling" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+				</addData>
+			</pou>
+		</pous>
+	</types>
+	<instances>
+		<configurations />
+	</instances>
+</project>

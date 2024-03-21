@@ -1,0 +1,5 @@
+ loadingRequest IB1
+ unloadingRequest IB2
+ piece OB3
+ count LI4
+ loadingDuration PI5

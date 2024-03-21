@@ -1,0 +1,107 @@
+FUNCTION_BLOCK FB 59
+
+CMPSET
+	S7Graph-Version: 5100
+         WarningLevel: None
+         FBInterface: Minimum
+         SSBLevel: Individual
+         ASMsgLevel: No
+         TargetMachine: AS300StdBlock
+         RuntimeBlock: FC 70
+         CritAvail: F
+         SSkipOn: F
+         AckReq: F
+         SyncAvail: F
+         PermILMan: F
+         SWMLocked: F
+         InitVarStat: 4401
+         SaveSwitching: F
+END_CMPSET
+
+INITIAL_STEP Step10 (*$_NUM 10*)  :
+(* $_COM  *)
+END_STEP
+
+STEP Step11 (*$_NUM 11*)  :
+(* $_COM backward command
+high speed command *)
+END_STEP
+
+INITIAL_STEP Step20 (*$_NUM 20*)  :
+(* $_COM  *)
+END_STEP
+
+STEP Step21 (*$_NUM 21*)  :
+(* $_COM forward command
+high speed command *)
+END_STEP
+
+INITIAL_STEP Step30 (*$_NUM 30*)  :
+(* $_COM  *)
+END_STEP
+
+STEP Step31 (*$_NUM 31*)  :
+(* $_COM backward command
+low speed command *)
+END_STEP
+
+INITIAL_STEP Step40 (*$_NUM 40*)  :
+(* $_COM  *)
+END_STEP
+
+STEP Step41 (*$_NUM 41*)  :
+(* $_COM forward command
+low speed command *)
+END_STEP
+
+TRANSITION Trans10 (*$_NUM 10*) 
+	FROM (Step10)
+	TO (Step11) :
+CONDITION := "DB90".RUN1_fastAscent AND ("DB90".motorFaultAscF1 ==D L#0)
+END_TRANSITION
+
+TRANSITION Trans11 (*$_NUM 11*) 
+	FROM (Step11)
+	TO (Step10) (*$_JUMP*) :
+CONDITION := NOT "DB90".RUN1_fastAscent OR ("DB90".motorFaultAscF1 >D L#0)
+END_TRANSITION
+
+TRANSITION Trans20 (*$_NUM 20*) 
+	FROM (Step20)
+	TO (Step21) :
+CONDITION := "DB90".RUN1_fastDescent AND ("DB90".motorFaultAscF1 ==D L#0)
+END_TRANSITION
+
+TRANSITION Trans21 (*$_NUM 21*) 
+	FROM (Step21)
+	TO (Step20) (*$_JUMP*) :
+CONDITION := NOT "DB90".RUN1_fastDescent OR ("DB90".motorFaultAscF1 >D L#0)
+END_TRANSITION
+
+TRANSITION Trans30 (*$_NUM 30*) 
+	FROM (Step30)
+	TO (Step31) :
+CONDITION := "DB90".RUN1_slowAscent AND ("DB90".motorFaultAscF1 ==D L#0)
+END_TRANSITION
+
+TRANSITION Trans31 (*$_NUM 31*) 
+	FROM (Step31)
+	TO (Step30) (*$_JUMP*) :
+CONDITION := NOT "DB90".RUN1_slowAscent OR ("DB90".motorFaultAscF1 >D L#0)
+END_TRANSITION
+
+TRANSITION Trans40 (*$_NUM 40*) 
+	FROM (Step40)
+	TO (Step41) :
+CONDITION := "DB90".RUN1_slowDescent AND ("DB90".motorFaultAscF1 ==D L#0)
+END_TRANSITION
+
+TRANSITION Trans41 (*$_NUM 41*) 
+	FROM (Step41)
+	TO (Step40) (*$_JUMP*) :
+CONDITION := NOT "DB90".RUN1_slowDescent OR ("DB90".motorFaultAscF1 >D L#0)
+END_TRANSITION
+
+
+
+END_FUNCTION_BLOCK

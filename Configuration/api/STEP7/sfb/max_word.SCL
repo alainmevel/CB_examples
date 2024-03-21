@@ -1,0 +1,21 @@
+
+FUNCTION CB_max_word : WORD
+
+
+TITLE = ' Search for the greater variable '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : maxWord
+FAMILY  : TNI
+
+VAR_INPUT
+    IN0 : WORD;
+    IN1 : WORD;
+END_VAR
+
+BEGIN
+
+    CB_max_word := DINT_TO_WORD(MAX(IN1 := WORD_TO_DINT(IN0), IN2 := WORD_TO_DINT(IN1)));
+
+END_FUNCTION
+

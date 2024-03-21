@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<CB_COMPONENT NAME="pumping" COMMENTS="" COMMENTS_PATTERN="&lt;CLASS_PATTERN&gt;" PICTURE_PATH="" INSTANCE_NAMIMG_PATTERN="&lt;CLASS_PATTERN&gt;" COMPONENT_CLASS="CONTROL_UNIT" SAFE_MODE="True" BREAKPOINT="False" GEN_STATUS="good">
+	<MODEL_REQUIREMENTS>
+&#9;
+		<COMMENTS />
+&#9;
+		<FUNCTIONAL_TREE TYPE="mac">
+&#9;&#9;
+			<CHILDREN>
+&#9;&#9;&#9;
+				<NODE NAME="filling" MODEL_PATH="Standard\io_library\io_single_acting_valve" />
+&#9;&#9;&#9;
+				<NODE NAME="emptying" MODEL_PATH="Standard\io_library\io_single_acting_valve" />
+&#9;&#9;&#9;
+				<NODE NAME="tank" MODEL_PATH="Standard\equipment_library\tank">
+&#9;&#9;&#9;&#9;
+					<NODE NAME="extraction" MODEL_PATH="Standard\io_library\io_on_off_pump" />
+&#9;&#9;&#9;&#9;
+					<NODE NAME="levelScale" MODEL_PATH="Standard\equipment_library\bounded_scale">
+&#9;&#9;&#9;&#9;&#9;
+						<NODE NAME="highLevel" MODEL_PATH="Standard\equipment_library\threshold_sensor">
+							<NODE NAME="lowLevel" MODEL_PATH="Standard\equipment_library\threshold_sensor">
+								<NODE NAME="levelMeasurement" MODEL_PATH="Standard\equipment_library\analog_sensor" /></NODE></NODE></NODE></NODE></CHILDREN></FUNCTIONAL_TREE></MODEL_REQUIREMENTS>
+</CB_COMPONENT>

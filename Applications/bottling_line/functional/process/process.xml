@@ -1,0 +1,1741 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-03T11:13:42-01:00" />
+	<contentHeader name="process">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="32" y="8" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+			<pou name="bottling_line.process" pouType="program">
+				<interface>
+					<inputVars>
+						<variable name="highLevel1">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>8c84c740-3ca4-4db6-b423-788689e631a9</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="lowLevel1">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>6aa00950-125a-4117-95f4-89d4d23b58de</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>Levels1</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="highLevel2">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>0caf505c-4904-4805-bc15-617952f74e6e</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="lowLevel2">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>90e34b29-c48b-40b2-bab9-3cc86d70a8e7</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>Levels2</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="highLevel3">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>b94fe1d9-fdd2-4dc9-95b8-18a2ad8901db</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="lowLevel3">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>c7f1ef90-1ebe-447e-a72b-52cd484e6413</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>Levels3</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="startCyclePB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>6ca2f052-aaec-4acd-800c-4ce92a63fd20</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="initPB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>8b313101-a444-43cf-ad0d-7b5f53aeb90f</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="preparationPB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>b2cf23c7-1b0b-4b57-a1a1-62bc70e623f7</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="productionPB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>732ebe30-c5be-47ad-b648-f29a0c35f87a</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="closingPB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>c30b2950-9088-4cde-8b49-06d64f25100c</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>PushButtons</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="pulseGenerator">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>9647d2f4-446b-4ff0-8793-9b6dda1735a6</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="bottleFilled">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>b2cfb27e-2370-4dc5-8337-2fa044e4c394</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="bottlePresent">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>67afbbc1-e1d8-4d42-805c-60f1769bb411</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>ConveyorFB</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<outputVars>
+						<variable name="load">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>29c770d1-1038-4546-a58d-1ae6690ad6fb</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="evacuate">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>76eed94c-e3ba-4a64-8238-b8961d7161d3</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="convoy">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>178554ff-4aaf-4957-a8dd-7ff589959438</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>ConveyorFunctionRequests</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<outputVars>
+						<variable name="pump1">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>dbd7d501-e502-49f1-8fa3-48be6c0dcdab</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="pump2">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>ec938c0c-a4ed-4728-93b5-79040c081c38</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="valve1">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>defe7ccb-8f6c-4c5c-a0c6-1a850e9bd525</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="valve2">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>990fcd8d-93a0-4023-904b-235904c30a04</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="valve3">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>03630d01-ee2c-4408-abd3-b83d3c732514</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="valve4">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>d37b89da-ee87-42ef-8b2e-382aab4d6814</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="loSpeedAgitator">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>d5f53f25-8635-4396-9053-8a10fae00c2e</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="hiSpeedAgitator">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>ad7d7abf-ba3e-43d5-b019-dea43a01273d</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>FunctionalRequests</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<outputVars>
+						<variable name="valve5">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>fb52cfbf-006b-40a1-873d-1448516c4d4e</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<addData>
+						<data name="Geensys.CB.groupIn" handleUnknown="preserve">
+							<value>Levels1,,Levels2,,Levels3,,PushButtons,,ConveyorFB,</value>
+						</data>
+						<data name="Geensys.CB.groupOut" handleUnknown="preserve">
+							<value>ConveyorFunctionRequests,,FunctionalRequests,</value>
+						</data>
+					</addData>
+				</interface>
+				<actions>
+				</actions>
+				<body>
+					<FBD>
+						<inVariable localId="0">
+							<position x="650" y="432" />
+							<expression>highLevel1</expression>
+						</inVariable>
+						<inVariable localId="1">
+							<position x="530" y="816" />
+							<expression>highLevel1</expression>
+						</inVariable>
+						<inVariable localId="2">
+							<position x="530" y="912" />
+							<expression>lowLevel1</expression>
+						</inVariable>
+						<inVariable localId="3">
+							<position x="650" y="456" />
+							<expression>highLevel2</expression>
+						</inVariable>
+						<inVariable localId="4">
+							<position x="530" y="840" />
+							<expression>highLevel2</expression>
+						</inVariable>
+						<inVariable localId="5">
+							<position x="530" y="936" />
+							<expression>lowLevel2</expression>
+						</inVariable>
+						<inVariable localId="6">
+							<position x="650" y="480" />
+							<expression>highLevel3</expression>
+						</inVariable>
+						<inVariable localId="7">
+							<position x="530" y="864" />
+							<expression>highLevel3</expression>
+						</inVariable>
+						<inVariable localId="8">
+							<position x="530" y="960" />
+							<expression>lowLevel3</expression>
+						</inVariable>
+						<inVariable localId="9">
+							<position x="96" y="192" />
+							<expression>lowLevel3</expression>
+						</inVariable>
+						<inVariable localId="10">
+							<position x="122" y="96" />
+							<expression>startCyclePB</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>PushButtons</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>122,96</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="11">
+							<position x="122" y="96" />
+							<expression>initPB</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>PushButtons</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>122,96</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="12">
+							<position x="122" y="96" />
+							<expression>preparationPB</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>PushButtons</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>122,96</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="13">
+							<position x="122" y="96" />
+							<expression>productionPB</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>PushButtons</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>122,96</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="14">
+							<position x="122" y="96" />
+							<expression>closingPB</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>PushButtons</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>122,96</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="15">
+							<position x="792" y="120" />
+							<expression>pulseGenerator</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>ConveyorFB</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>792,120</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="16">
+							<position x="792" y="120" />
+							<expression>bottleFilled</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>ConveyorFB</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>792,120</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="17">
+							<position x="792" y="120" />
+							<expression>bottlePresent</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>ConveyorFB</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>792,120</value>
+								</data>
+							</addData>
+						</inVariable>
+						<outVariable localId="18">
+							<position x="1464" y="96" />
+							<connectionPointIn>
+								<connection refLocalId="19" formalParameter="load" />
+							</connectionPointIn>
+							<expression>load</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>ConveyorFunctionRequests</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>1464,96</value>
+								</data>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>19.ConveyorFunctionRequests,ConveyorFunctionRequests</value>
+								</data>
+							</addData>
+						</outVariable>
+						<outVariable localId="20">
+							<position x="1464" y="96" />
+							<connectionPointIn>
+								<connection refLocalId="19" formalParameter="evacuate" />
+							</connectionPointIn>
+							<expression>evacuate</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>ConveyorFunctionRequests</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>1464,96</value>
+								</data>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>19.ConveyorFunctionRequests,ConveyorFunctionRequests</value>
+								</data>
+							</addData>
+						</outVariable>
+						<outVariable localId="21">
+							<position x="1464" y="96" />
+							<connectionPointIn>
+								<connection refLocalId="19" formalParameter="convoy" />
+							</connectionPointIn>
+							<expression>convoy</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>ConveyorFunctionRequests</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>1464,96</value>
+								</data>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>19.ConveyorFunctionRequests,ConveyorFunctionRequests</value>
+								</data>
+							</addData>
+						</outVariable>
+						<outVariable localId="22">
+							<position x="1632" y="360" />
+							<connectionPointIn>
+								<connection refLocalId="23" formalParameter="pump1" />
+							</connectionPointIn>
+							<expression>pump1</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>FunctionalRequests</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>1632,360</value>
+								</data>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>23.FunctionalRequests,FunctionalRequests</value>
+								</data>
+							</addData>
+						</outVariable>
+						<outVariable localId="24">
+							<position x="1632" y="360" />
+							<connectionPointIn>
+								<connection refLocalId="23" formalParameter="pump2" />
+							</connectionPointIn>
+							<expression>pump2</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>FunctionalRequests</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>1632,360</value>
+								</data>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>23.FunctionalRequests,FunctionalRequests</value>
+								</data>
+							</addData>
+						</outVariable>
+						<outVariable localId="25">
+							<position x="1632" y="360" />
+							<connectionPointIn>
+								<connection refLocalId="23" formalParameter="valve1" />
+							</connectionPointIn>
+							<expression>valve1</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>FunctionalRequests</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>1632,360</value>
+								</data>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>23.FunctionalRequests,FunctionalRequests</value>
+								</data>
+							</addData>
+						</outVariable>
+						<outVariable localId="26">
+							<position x="1632" y="360" />
+							<connectionPointIn>
+								<connection refLocalId="23" formalParameter="valve2" />
+							</connectionPointIn>
+							<expression>valve2</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>FunctionalRequests</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>1632,360</value>
+								</data>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>23.FunctionalRequests,FunctionalRequests</value>
+								</data>
+							</addData>
+						</outVariable>
+						<outVariable localId="27">
+							<position x="1632" y="360" />
+							<connectionPointIn>
+								<connection refLocalId="23" formalParameter="valve3" />
+							</connectionPointIn>
+							<expression>valve3</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>FunctionalRequests</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>1632,360</value>
+								</data>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>23.FunctionalRequests,FunctionalRequests</value>
+								</data>
+							</addData>
+						</outVariable>
+						<outVariable localId="28">
+							<position x="1632" y="360" />
+							<connectionPointIn>
+								<connection refLocalId="23" formalParameter="valve4" />
+							</connectionPointIn>
+							<expression>valve4</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>FunctionalRequests</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>1632,360</value>
+								</data>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>23.FunctionalRequests,FunctionalRequests</value>
+								</data>
+							</addData>
+						</outVariable>
+						<outVariable localId="29">
+							<position x="1632" y="360" />
+							<connectionPointIn>
+								<connection refLocalId="23" formalParameter="loSpeedAgit" />
+							</connectionPointIn>
+							<expression>loSpeedAgitator</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>FunctionalRequests</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>1632,360</value>
+								</data>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>23.FunctionalRequests,FunctionalRequests</value>
+								</data>
+							</addData>
+						</outVariable>
+						<outVariable localId="30">
+							<position x="1632" y="360" />
+							<connectionPointIn>
+								<connection refLocalId="23" formalParameter="hiSpeedAgit" />
+							</connectionPointIn>
+							<expression>hiSpeedAgitator</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>FunctionalRequests</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>1632,360</value>
+								</data>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>23.FunctionalRequests,FunctionalRequests</value>
+								</data>
+							</addData>
+						</outVariable>
+						<outVariable localId="31">
+							<position x="1464" y="120" />
+							<connectionPointIn>
+								<connection refLocalId="19" formalParameter="valve5" />
+							</connectionPointIn>
+							<expression>valve5</expression>
+						</outVariable>
+						<block localId="32" width="337" height="240" typeName="bottling_line.master" instanceName="master">
+							<position x="169" y="48" />
+							<inputVariables>
+								<variable formalParameter="startCyclePB">
+									<connectionPointIn>
+										<connection refLocalId="10">
+											<position x="130" y="96" />
+											<position x="147" y="96" />
+											<position x="147" y="96" />
+											<position x="169" y="96" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="initPB">
+									<connectionPointIn>
+										<connection refLocalId="11">
+											<position x="130" y="96" />
+											<position x="147" y="96" />
+											<position x="147" y="96" />
+											<position x="169" y="96" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="preparationPB">
+									<connectionPointIn>
+										<connection refLocalId="12">
+											<position x="130" y="96" />
+											<position x="147" y="96" />
+											<position x="147" y="96" />
+											<position x="169" y="96" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="productionPB">
+									<connectionPointIn>
+										<connection refLocalId="13">
+											<position x="130" y="96" />
+											<position x="147" y="96" />
+											<position x="147" y="96" />
+											<position x="169" y="96" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="closingPB">
+									<connectionPointIn>
+										<connection refLocalId="14">
+											<position x="130" y="96" />
+											<position x="147" y="96" />
+											<position x="147" y="96" />
+											<position x="169" y="96" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="initEnd">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="preparationEnd">
+									<connectionPointIn>
+										<connection refLocalId="33" formalParameter="preparationEnd">
+											<position x="1034" y="384" />
+											<position x="1073" y="384" />
+											<position x="1073" y="305" />
+											<position x="115" y="305" />
+											<position x="115" y="144" />
+											<position x="169" y="144" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="closingEnd">
+									<connectionPointIn>
+										<connection refLocalId="34" formalParameter="closingEnd">
+											<position x="1035" y="720" />
+											<position x="1074" y="720" />
+											<position x="1074" y="488" />
+											<position x="120" y="488" />
+											<position x="120" y="168" />
+											<position x="169" y="168" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="lowLevel3">
+									<connectionPointIn>
+										<connection refLocalId="9">
+											<position x="104" y="192" />
+											<position x="143" y="192" />
+											<position x="143" y="192" />
+											<position x="169" y="192" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="initializationRqst">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="preparationRqst">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="productionRqst">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="closingRqst">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="masterInStandBy">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="productionWaiting">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>PushButtons:122@96,PushButtons</value>
+								</data>
+								<data name="Geensys.CB.NU" handleUnknown="preserve">
+									<value>1</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value> : </value>
+								</data>
+								<data name="Geensys.CB.SY" handleUnknown="preserve">
+									<value>MAST</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>aff53ac3-12a9-40f3-841c-346db0cee9d4</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="34" width="457" height="336" typeName="bottling_line.tanks_management" instanceName="tanks">
+							<position x="578" y="648" />
+							<inputVariables>
+								<variable formalParameter="productionRequest">
+									<connectionPointIn>
+										<connection refLocalId="32" formalParameter="productionRqst">
+											<position x="506" y="96" />
+											<position x="552" y="96" />
+											<position x="552" y="696" />
+											<position x="578" y="696" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="closingRequest">
+									<connectionPointIn>
+										<connection refLocalId="32" formalParameter="closingRqst">
+											<position x="506" y="96" />
+											<position x="550" y="96" />
+											<position x="550" y="720" />
+											<position x="578" y="720" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="masterInStandBy">
+									<connectionPointIn>
+										<connection refLocalId="32" formalParameter="masterInStandBy">
+											<position x="506" y="120" />
+											<position x="547" y="120" />
+											<position x="547" y="744" />
+											<position x="578" y="744" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="highLevel1">
+									<connectionPointIn>
+										<connection refLocalId="1">
+											<position x="538" y="816" />
+											<position x="550" y="816" />
+											<position x="550" y="816" />
+											<position x="578" y="816" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="highLevel2">
+									<connectionPointIn>
+										<connection refLocalId="4">
+											<position x="538" y="840" />
+											<position x="550" y="840" />
+											<position x="550" y="840" />
+											<position x="578" y="840" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="highLevel3">
+									<connectionPointIn>
+										<connection refLocalId="7">
+											<position x="538" y="864" />
+											<position x="550" y="864" />
+											<position x="550" y="864" />
+											<position x="578" y="864" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="lowLevel1">
+									<connectionPointIn>
+										<connection refLocalId="2">
+											<position x="538" y="912" />
+											<position x="549" y="912" />
+											<position x="549" y="912" />
+											<position x="578" y="912" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="lowLevel2">
+									<connectionPointIn>
+										<connection refLocalId="5">
+											<position x="538" y="936" />
+											<position x="549" y="936" />
+											<position x="549" y="936" />
+											<position x="578" y="936" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="lowLevel3">
+									<connectionPointIn>
+										<connection refLocalId="8">
+											<position x="538" y="960" />
+											<position x="549" y="960" />
+											<position x="549" y="960" />
+											<position x="578" y="960" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="pump1">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="pump2">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="valve1">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="valve2">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="valve3">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="valve4">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="lowSpeedAgitator">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="highSpeedAgitator">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="closingEnd">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.NU" handleUnknown="preserve">
+									<value>1</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value> : &lt;UNIT&gt;</value>
+								</data>
+								<data name="Geensys.CB.SY" handleUnknown="preserve">
+									<value>TkMGT</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>63364e2d-01be-49b4-9eae-fd321d02184e</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="33" width="336" height="192" typeName="bottling_line.preparation" instanceName="preparation">
+							<position x="698" y="312" />
+							<inputVariables>
+								<variable formalParameter="preparationRequest">
+									<connectionPointIn>
+										<connection refLocalId="32" formalParameter="preparationRqst">
+											<position x="506" y="96" />
+											<position x="633" y="96" />
+											<position x="633" y="360" />
+											<position x="698" y="360" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="productionWaiting">
+									<connectionPointIn>
+										<connection refLocalId="32" formalParameter="productionWaiting">
+											<position x="506" y="120" />
+											<position x="624" y="120" />
+											<position x="624" y="384" />
+											<position x="698" y="384" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="highLevel1">
+									<connectionPointIn>
+										<connection refLocalId="0">
+											<position x="658" y="432" />
+											<position x="673" y="432" />
+											<position x="673" y="432" />
+											<position x="698" y="432" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="highLevel2">
+									<connectionPointIn>
+										<connection refLocalId="3">
+											<position x="658" y="456" />
+											<position x="672" y="456" />
+											<position x="672" y="456" />
+											<position x="698" y="456" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="highLevel3">
+									<connectionPointIn>
+										<connection refLocalId="6">
+											<position x="658" y="480" />
+											<position x="672" y="480" />
+											<position x="672" y="480" />
+											<position x="698" y="480" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="preparationValve1">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="preparationValve2">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="preparationValve3">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="preparationValve4">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="preparationPump1">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="preparationPump2">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="preparationAgit">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="preparationEnd">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.NU" handleUnknown="preserve">
+									<value>1</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value> : </value>
+								</data>
+								<data name="Geensys.CB.SY" handleUnknown="preserve">
+									<value>PREP</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>b59c3a06-bff2-4c10-b9f1-4a496603166e</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="19" width="522" height="120" typeName="bottling_line.conveyor_management" instanceName="conveyor">
+							<position x="840" y="48" />
+							<inputVariables>
+								<variable formalParameter="productionRequest">
+									<connectionPointIn>
+										<connection refLocalId="32" formalParameter="productionRqst">
+											<position x="506" y="96" />
+											<position x="696" y="96" />
+											<position x="696" y="96" />
+											<position x="840" y="96" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="pulseGenerator">
+									<connectionPointIn>
+										<connection refLocalId="15">
+											<position x="800" y="120" />
+											<position x="819" y="120" />
+											<position x="819" y="120" />
+											<position x="840" y="120" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="bottleFilled">
+									<connectionPointIn>
+										<connection refLocalId="16">
+											<position x="800" y="120" />
+											<position x="819" y="120" />
+											<position x="819" y="120" />
+											<position x="840" y="120" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="bottlePresent">
+									<connectionPointIn>
+										<connection refLocalId="17">
+											<position x="800" y="120" />
+											<position x="819" y="120" />
+											<position x="819" y="120" />
+											<position x="840" y="120" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="load">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="evacuate">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="convoy">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="valve5">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>ConveyorFB:792@120,OP_FeedBacks</value>
+								</data>
+								<data name="Geensys.CB.connectionOut" handleUnknown="preserve">
+									<value>ConveyorFunctionRequests,ConveyorFunctionRequests:1464@96</value>
+								</data>
+								<data name="Geensys.CB.NU" handleUnknown="preserve">
+									<value>1</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value> : &lt;UNIT&gt;</value>
+								</data>
+								<data name="Geensys.CB.SY" handleUnknown="preserve">
+									<value>CONV</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>e7899b61-be11-4c9d-819f-f6d968f3eaad</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="23" width="498" height="168" typeName="bottling_line.requests_management" instanceName="manageFunctionalRq">
+							<position x="1104" y="312" />
+							<inputVariables>
+								<variable formalParameter="preparationValve1">
+									<connectionPointIn>
+										<connection refLocalId="33" formalParameter="preparationValve1">
+											<position x="1034" y="360" />
+											<position x="1064" y="360" />
+											<position x="1064" y="360" />
+											<position x="1104" y="360" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="preparationValve2">
+									<connectionPointIn>
+										<connection refLocalId="33" formalParameter="preparationValve2">
+											<position x="1034" y="360" />
+											<position x="1064" y="360" />
+											<position x="1064" y="360" />
+											<position x="1104" y="360" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="preparationValve3">
+									<connectionPointIn>
+										<connection refLocalId="33" formalParameter="preparationValve3">
+											<position x="1034" y="360" />
+											<position x="1064" y="360" />
+											<position x="1064" y="360" />
+											<position x="1104" y="360" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="preparationValve4">
+									<connectionPointIn>
+										<connection refLocalId="33" formalParameter="preparationValve4">
+											<position x="1034" y="360" />
+											<position x="1064" y="360" />
+											<position x="1064" y="360" />
+											<position x="1104" y="360" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="preparationPump1">
+									<connectionPointIn>
+										<connection refLocalId="33" formalParameter="preparationPump1">
+											<position x="1034" y="360" />
+											<position x="1064" y="360" />
+											<position x="1064" y="360" />
+											<position x="1104" y="360" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="preparationPump2">
+									<connectionPointIn>
+										<connection refLocalId="33" formalParameter="preparationPump2">
+											<position x="1034" y="360" />
+											<position x="1064" y="360" />
+											<position x="1064" y="360" />
+											<position x="1104" y="360" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="preparationAgitator">
+									<connectionPointIn>
+										<connection refLocalId="33" formalParameter="preparationAgit">
+											<position x="1034" y="360" />
+											<position x="1064" y="360" />
+											<position x="1064" y="360" />
+											<position x="1104" y="360" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="productionPump1">
+									<connectionPointIn>
+										<connection refLocalId="34" formalParameter="pump1">
+											<position x="1035" y="696" />
+											<position x="1056" y="696" />
+											<position x="1056" y="384" />
+											<position x="1104" y="384" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="productionPump2">
+									<connectionPointIn>
+										<connection refLocalId="34" formalParameter="pump2">
+											<position x="1035" y="696" />
+											<position x="1056" y="696" />
+											<position x="1056" y="384" />
+											<position x="1104" y="384" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="productionValve1">
+									<connectionPointIn>
+										<connection refLocalId="34" formalParameter="valve1">
+											<position x="1035" y="696" />
+											<position x="1056" y="696" />
+											<position x="1056" y="384" />
+											<position x="1104" y="384" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="productionValve2">
+									<connectionPointIn>
+										<connection refLocalId="34" formalParameter="valve2">
+											<position x="1035" y="696" />
+											<position x="1056" y="696" />
+											<position x="1056" y="384" />
+											<position x="1104" y="384" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="productionValve3">
+									<connectionPointIn>
+										<connection refLocalId="34" formalParameter="valve3">
+											<position x="1035" y="696" />
+											<position x="1056" y="696" />
+											<position x="1056" y="384" />
+											<position x="1104" y="384" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="productionValve4">
+									<connectionPointIn>
+										<connection refLocalId="34" formalParameter="valve4">
+											<position x="1035" y="696" />
+											<position x="1056" y="696" />
+											<position x="1056" y="384" />
+											<position x="1104" y="384" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="productionLSAgitator">
+									<connectionPointIn>
+										<connection refLocalId="34" formalParameter="lowSpeedAgitator">
+											<position x="1035" y="696" />
+											<position x="1056" y="696" />
+											<position x="1056" y="384" />
+											<position x="1104" y="384" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="productionHSAgitator">
+									<connectionPointIn>
+										<connection refLocalId="34" formalParameter="highSpeedAgitator">
+											<position x="1035" y="696" />
+											<position x="1056" y="696" />
+											<position x="1056" y="384" />
+											<position x="1104" y="384" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="pump1">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="pump2">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="valve1">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="valve2">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="valve3">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="valve4">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="loSpeedAgit">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="hiSpeedAgit">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>34.FunctionsRequests,ProductionFunctionsRequests,33.FunctionsRequests,PreparationFunctionsRequests</value>
+								</data>
+								<data name="Geensys.CB.connectionOut" handleUnknown="preserve">
+									<value>FunctionalRequests,FunctionalRequests:1632@360</value>
+								</data>
+								<data name="Geensys.CB.NU" handleUnknown="preserve">
+									<value>1</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value> : &lt;UNIT&gt;</value>
+								</data>
+								<data name="Geensys.CB.SY" handleUnknown="preserve">
+									<value>RstMGT</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>c98cccd4-f1c9-4fcb-83fc-b530c3c8c251</value>
+								</data>
+							</addData>
+						</block>
+					</FBD>
+					<documentation>
+						<xhtml:pre>CB.group=PushButtons,122,96
+CB.group=ConveyorFB,792,120
+CB.group=ConveyorFunctionRequests,1464,96
+CB.group=FunctionalRequests,1632,360
+</xhtml:pre>
+					</documentation>
+				</body>
+				<addData>
+					<data name="Geensys.CB.AutomaticScheduling" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+				</addData>
+			</pou>
+		</pous>
+	</types>
+	<instances>
+		<configurations />
+	</instances>
+</project>

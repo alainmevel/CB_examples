@@ -1,0 +1,6 @@
+ autoMode IB1
+ manualMode IB2
+ autoOpenCmd IB3
+ openValvePB IB4
+ generalFault IB5
+ openCmd OB6

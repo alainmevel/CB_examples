@@ -1,0 +1,150 @@
+_NAME "timers_counters"
+
+cb_ctd#29c8d0fc-f313-4a13-b79e-2c2835ad129c "unclassified"
+	_comment "This is a  IEC 1131-3 counter. "
+	_inputs
+		CD BOOL "0"
+_Literal "Count-up input"
+		LOAD BOOL "0"
+_Literal "Reset counter "
+		PV INT "0"
+_Literal "Threshold preselection"
+	_outputs
+		QD BOOL "0"
+_Literal "Upper threshold overflow"
+		CV INT "0"
+_Literal "Counter value"
+	_locals
+		step_counter INT "0"
+
+;
+
+cb_ctu#f9c6ec8f-90b3-4045-853b-3e4fc5a15910 "unclassified"
+	_comment "This is a  IEC 1131-3 decounter. "
+	_inputs
+		CU BOOL "0"
+_Literal "Count-up input"
+		R BOOL "0"
+_Literal "Reset counter "
+		PV INT "0"
+_Literal "Threshold preselection"
+	_outputs
+		QU BOOL "0"
+_Literal "Upper threshold overflow"
+		CV INT "0"
+_Literal "Counter value"
+	_locals
+		step_counter INT "0"
+
+;
+
+cb_ctud#0c76f4ad-ec3a-446e-9d99-258cc84bb20e "unclassified"
+	_comment "This is a  IEC 1131-3 counter /decounter"
+	_inputs
+		CU BOOL "0"
+_Literal "Count-up input"
+		CD BOOL "0"
+_Literal "Count-down input"
+		R BOOL "0"
+_Literal "Reset counter to 0"
+		LOAD BOOL "0"
+_Literal "Load preselection"
+		PV INT "0"
+_Literal "Threshold preselection"
+	_outputs
+		QU BOOL "0"
+_Literal "Upper threshold overflow"
+		QD BOOL "0"
+_Literal "Lower threshold overflow"
+		CV INT "0"
+_Literal "Counter value"
+	_locals
+		step_counter INT "0"
+
+;
+
+cb_f_trig#5598d69e-53ff-44a2-bab5-d796b8d6f634 "unclassified"
+	_comment "This is a IEC 1131-3 falling edge"
+	_inputs
+		IN BOOL "0"
+_Literal "Input"
+	_outputs
+		Q0 BOOL "0"
+_Literal "Falilng Edge"
+	_locals
+		Mem BOOL "0"
+_Literal "Memory"
+		step_counter INT "0"
+
+;
+
+cb_r_trig#a2d963e9-8547-4567-9978-31ad5e79915e "unclassified"
+	_comment "This is a IEC 1131-3 rising Edge"
+	_inputs
+		IN BOOL "0"
+_Literal "Input"
+	_outputs
+		Q0 BOOL "0"
+_Literal "Rising Edge"
+	_locals
+		Mem BOOL "0"
+_Literal "Memory"
+		step_counter INT "0"
+
+;
+
+cb_tof#144e3659-daad-4929-bd2c-072480c637c8 "unclassified"
+	_comment "This is a IEC 1131-3 TOFF Timer"
+	_inputs
+		IN BOOL "0"
+_Literal "Start tempo"
+		PT TIME "0 0"
+_Literal "Preset tempo"
+	_outputs
+		Q0 BOOL "0"
+_Literal "End of tempo"
+		CV TIME "0 0"
+_Literal " Current value of tempo"
+	_locals
+		memo_tof BOOL "0"
+_Literal "Memory tof"
+		step_counter INT "0"
+
+;
+
+cb_ton#ae809a0c-5ce1-4d5f-b221-608d33364485 "unclassified"
+	_comment "This is a IEC 1131-3 TON Timer"
+	_inputs
+		IN BOOL "0"
+_Literal "Start tempo"
+		PT TIME "0 0"
+_Literal "Preset tempo"
+	_outputs
+		Q0 BOOL "0"
+_Literal "End of tempo"
+		CV TIME "0 0"
+_Literal " Current value of tempo"
+	_locals
+		step_counter INT "0"
+
+;
+
+cb_tp#73c34b5d-4419-4ee1-84bf-c9bfc2039542 "unclassified"
+	_comment "This is a IEC 1131-3 TP timer (pulse)"
+	_inputs
+		IN BOOL "0"
+_Literal "Start tempo"
+		PT TIME "0 0"
+_Literal "Preset tempo"
+	_outputs
+		Q0 BOOL "0"
+_Literal "End of tempo"
+		CV TIME "0 0"
+_Literal " Current value of tempo"
+	_locals
+		memo_tof BOOL "0"
+_Literal "Memory tof"
+		step_counter INT "0"
+
+;
+

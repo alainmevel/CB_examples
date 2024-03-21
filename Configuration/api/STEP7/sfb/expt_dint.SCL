@@ -1,0 +1,21 @@
+
+FUNCTION CB_expt_dint : DINT
+
+
+TITLE = ' Exponentiation of a variable '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : exptDint
+FAMILY  : TNI
+
+VAR_INPUT
+    IN1 : DINT;
+    IN2 : DINT;
+
+END_VAR
+
+BEGIN
+
+CB_expt_dint := REAL_TO_DINT(IN1 ** IN2);
+
+END_FUNCTION

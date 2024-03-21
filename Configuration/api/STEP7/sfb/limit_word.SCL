@@ -1,0 +1,20 @@
+
+FUNCTION CB_limit_word : WORD
+
+
+TITLE = ' Limiting (min and max) a variable '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : limiWord
+FAMILY  : TNI
+
+VAR_INPUT
+    MN : WORD;
+    IN : WORD;
+    MX : WORD;
+END_VAR
+
+BEGIN
+
+CB_limit_word :=DINT_TO_WORD(LIMIT(MN := WORD_TO_DINT(MN), IN := WORD_TO_DINT(IN), MX := WORD_TO_DINT(MX)));
+END_FUNCTION

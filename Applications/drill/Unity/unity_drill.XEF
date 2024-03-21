@@ -1,0 +1,3621 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<FEFExchangeFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="FEFExchangeFile.xsd">
+	<fileHeader company="TNI-Software" product="ControlBuild version 4.10" dateTime="date_and_time#2007-03-13-17:20:50" content="Project source file" />
+	<contentHeader name="PLC2" version="0.0.000" />
+	<commParameters>
+		<PLCAddress address="SYS" media="UNTLW01" nbTries="2" timeout="3000" highSpeed="0" />
+		<simulatorAddress address="127.0.0.1" media="TCPIP" nbTries="2" timeout="3000" />
+		<bandwith animation="70" PLCMonitor="10" PLCScreen="10" diagnostic="10" />
+	</commParameters>
+	<FBSource nameOfFBType="cb_ton" version="0.07" dateTime="dt#2006-12-22-09:54:46">
+		<inputParameters>
+			<variables name="IN" typeName="BOOL">
+				<attribute name="PositionPin" value="1">
+				</attribute>
+			</variables>
+			<variables name="PT" typeName="TIME">
+				<attribute name="PositionPin" value="2">
+				</attribute>
+			</variables>
+		</inputParameters>
+		<outputParameters>
+			<variables name="Q0" typeName="BOOL">
+				<attribute name="PositionPin" value="1">
+				</attribute>
+			</variables>
+			<variables name="CV" typeName="TIME">
+				<attribute name="PositionPin" value="2">
+				</attribute>
+			</variables>
+		</outputParameters>
+		<privateLocalVariables>
+			<variables name="TON1" typeName="TON">
+			</variables>
+		</privateLocalVariables>
+		<FBProgram name="gestionTempo">
+			<LDSource nbColumns="11">
+				<networkLD>
+					<typeLine>
+						<emptyLine nbRows="2">
+						</emptyLine>
+					</typeLine>
+					<typeLine>
+						<emptyCell nbCells="5">
+						</emptyCell>
+						<FFBBlock instanceName="TON1" typeName="TON" additionnalPinNumber="0" enEnO="false" width="10" height="4">
+							<objPosition posX="5" posY="2">
+							</objPosition>
+							<descriptionFFB execAfter="">
+								<inputVariable invertedPin="false" formalParameter="EN">
+								</inputVariable>
+								<inputVariable invertedPin="false" formalParameter="IN">
+								</inputVariable>
+								<inputVariable invertedPin="false" formalParameter="PT" effectiveParameter="PT">
+								</inputVariable>
+								<outputVariable invertedPin="false" formalParameter="ENO">
+								</outputVariable>
+								<outputVariable invertedPin="false" formalParameter="Q">
+								</outputVariable>
+								<outputVariable invertedPin="false" formalParameter="ET" effectiveParameter="CV">
+								</outputVariable>
+							</descriptionFFB>
+						</FFBBlock>
+						<emptyCell nbCells="4">
+						</emptyCell>
+					</typeLine>
+					<typeLine>
+						<emptyLine nbRows="1">
+						</emptyLine>
+					</typeLine>
+					<typeLine>
+						<contact typeContact="openContact" contactVariableName="IN">
+						</contact>
+						<HLink nbCells="4">
+						</HLink>
+						<emptyCell nbCells="2">
+						</emptyCell>
+						<HLink nbCells="3">
+						</HLink>
+						<coil typeCoil="coil" coilVariableName="Q0">
+						</coil>
+					</typeLine>
+					<typeLine>
+						<emptyLine nbRows="95">
+						</emptyLine>
+					</typeLine>
+				</networkLD>
+			</LDSource>
+		</FBProgram>
+	</FBSource>
+<DDTSource DDTName="CB_Buffer_InputPLC">
+	<comment>Buffer Received from ControlBuild</comment>
+	<array>ARRAY[0..4] of WORD</array>
+</DDTSource>
+<DDTSource DDTName="CB_Buffer_OutputPLC">
+	<comment>Buffer Sent to ControlBuild</comment>
+	<array>ARRAY[0..1] of WORD</array>
+</DDTSource>
+<DDTSource DDTName="CB_Tmp16Bool">
+	<comment>Used to convert a word towards 16 booleans</comment>
+	<array>ARRAY[0..16] of EBOOL</array>
+</DDTSource>
+<dataBlock>
+	<variables name="CB_buffer_InputPLC" typeName="CB_Buffer_InputPLC" topologicalAddress="%MW0">
+	</variables>
+	<variables name="CB_buffer_OutputPLC" typeName="CB_Buffer_OutputPLC" topologicalAddress="%MW100">
+	</variables>
+	<variables name="CB_tmp16Bool" typeName="CB_Tmp16Bool">
+	</variables>
+	<variables name="CB_tmpWord" typeName="WORD">
+		<variableInit value="0" />
+	</variables>
+	<variables name="F3SpinM1_forwardPB" typeName="EBOOL" topologicalAddress="%I0.02.0">
+		<comment> : F3_SpinM1 : forwardPB</comment>
+	</variables>
+	<variables name="F3SpinM1_stopPB" typeName="EBOOL" topologicalAddress="%I0.02.1">
+		<comment> : F3_SpinM1 : stopPB</comment>
+	</variables>
+	<variables name="leftVarMode" typeName="EBOOL" topologicalAddress="%I0.02.2">
+	</variables>
+	<variables name="PBPower" typeName="EBOOL" topologicalAddress="%I0.02.3">
+	</variables>
+	<variables name="pbEmergStop" typeName="EBOOL" topologicalAddress="%I0.02.4">
+	</variables>
+	<variables name="rightVarMode" typeName="EBOOL" topologicalAddress="%I0.02.5">
+	</variables>
+	<variables name="piece" typeName="EBOOL" topologicalAddress="%I0.02.6">
+	</variables>
+	<variables name="leftVarCycle" typeName="EBOOL" topologicalAddress="%I0.02.7">
+	</variables>
+	<variables name="PBStart" typeName="EBOOL" topologicalAddress="%I0.02.8">
+	</variables>
+	<variables name="F3SpinM1_acknowledgePB" typeName="EBOOL" topologicalAddress="%I0.02.9">
+		<comment> : F3_SpinM1 : acknowledgePB</comment>
+	</variables>
+	<variables name="rightVarCycle" typeName="EBOOL" topologicalAddress="%I0.02.10">
+	</variables>
+	<variables name="forwardEnd" typeName="EBOOL" topologicalAddress="%I0.02.11">
+	</variables>
+	<variables name="forwardDeceleration" typeName="EBOOL" topologicalAddress="%I0.02.12">
+	</variables>
+	<variables name="backwardEnd" typeName="EBOOL" topologicalAddress="%I0.02.13">
+	</variables>
+	<variables name="backwardDeceleration" typeName="EBOOL" topologicalAddress="%I0.02.14">
+	</variables>
+	<variables name="F1TurM1_forwardFB" typeName="EBOOL" topologicalAddress="%I0.02.15">
+		<comment> : F1_TurM1 : forwardFB</comment>
+	</variables>
+	<variables name="F1TurM1_highSpeedFB" typeName="EBOOL" topologicalAddress="%I0.02.16">
+		<comment> : F1_TurM1 : highSpeedFB</comment>
+	</variables>
+	<variables name="F1TurM1_backwardFB" typeName="EBOOL" topologicalAddress="%I0.02.17">
+		<comment> : F1_TurM1 : backwardFB</comment>
+	</variables>
+	<variables name="F1TurM1_highSpeedPB" typeName="EBOOL" topologicalAddress="%I0.02.18">
+		<comment> : F1_TurM1 : highSpeedPB</comment>
+	</variables>
+	<variables name="F1TurM1_backwardPB" typeName="EBOOL" topologicalAddress="%I0.02.19">
+		<comment> : F1_TurM1 : backwardPB</comment>
+	</variables>
+	<variables name="F1TurM1_forwardPB" typeName="EBOOL" topologicalAddress="%I0.02.20">
+		<comment> : F1_TurM1 : forwardPB</comment>
+	</variables>
+	<variables name="F1TurM1_thermalFB" typeName="EBOOL" topologicalAddress="%I0.02.21">
+		<comment> : F1_TurM1 : thermalFB</comment>
+	</variables>
+	<variables name="F1TurM1_lowSpeedFB" typeName="EBOOL" topologicalAddress="%I0.02.22">
+		<comment> : F1_TurM1 : lowSpeedFB</comment>
+	</variables>
+	<variables name="F1TurM1_lowSpeedPB" typeName="EBOOL" topologicalAddress="%I0.02.23">
+		<comment> : F1_TurM1 : lowSpeedPB</comment>
+	</variables>
+	<variables name="F1TurM1_stopPB" typeName="EBOOL" topologicalAddress="%I0.02.24">
+		<comment> : F1_TurM1 : stopPB</comment>
+	</variables>
+	<variables name="F2RCYL1_outletSensor" typeName="EBOOL" topologicalAddress="%I0.02.25">
+		<comment> : F2_RCYL1 : outletSensor</comment>
+	</variables>
+	<variables name="F2RCYL1_inletSensor" typeName="EBOOL" topologicalAddress="%I0.02.26">
+		<comment> : F2_RCYL1 : inletSensor</comment>
+	</variables>
+	<variables name="F2LCYL1_inletSensor" typeName="EBOOL" topologicalAddress="%I0.02.27">
+		<comment> : F2_LCYL1 : inletSensor</comment>
+	</variables>
+	<variables name="F2LCYL1_outletSensor" typeName="EBOOL" topologicalAddress="%I0.02.28">
+		<comment> : F2_LCYL1 : outletSensor</comment>
+	</variables>
+	<variables name="F2RCYL1_valveWorkPB" typeName="EBOOL" topologicalAddress="%I0.02.29">
+		<comment> : F2_RCYL1 : valveWorkPB</comment>
+	</variables>
+	<variables name="F2LCYL1_valveWorkPB" typeName="EBOOL" topologicalAddress="%I0.02.30">
+		<comment> : F2_LCYL1 : valveWorkPB</comment>
+	</variables>
+	<variables name="F3SpinM1_forwardFB" typeName="EBOOL" topologicalAddress="%I0.02.31">
+		<comment> : F3_SpinM1 : forwardFB</comment>
+	</variables>
+	<variables name="F3SpinM1_thermalFB" typeName="EBOOL" topologicalAddress="%I0.02.32">
+		<comment> : F3_SpinM1 : thermalFB</comment>
+	</variables>
+	<variables name="F3SpinM1_forwardCmd" typeName="EBOOL" topologicalAddress="%Q0.03.0">
+		<comment> : F3_SpinM1 : forwardCmd</comment>
+	</variables>
+	<variables name="RUN1_loadingRequest" typeName="EBOOL" topologicalAddress="%Q0.03.1">
+		<comment> : </comment>
+	</variables>
+	<variables name="RUN1_unloadingRequest" typeName="EBOOL" topologicalAddress="%Q0.03.2">
+		<comment> : </comment>
+	</variables>
+	<variables name="lowSpeedAscF1" typeName="EBOOL" topologicalAddress="%Q0.03.3">
+	</variables>
+	<variables name="highSpeedAscF1" typeName="EBOOL" topologicalAddress="%Q0.03.4">
+	</variables>
+	<variables name="backwardAscF1" typeName="EBOOL" topologicalAddress="%Q0.03.5">
+	</variables>
+	<variables name="forwardAscF1" typeName="EBOOL" topologicalAddress="%Q0.03.6">
+	</variables>
+	<variables name="F1TurM1_lowSpeedCmd" typeName="EBOOL" topologicalAddress="%Q0.03.7">
+		<comment> : F1_TurM1 : lowSpeedCmd</comment>
+	</variables>
+	<variables name="F1TurM1_forwardCmd" typeName="EBOOL" topologicalAddress="%Q0.03.8">
+		<comment> : F1_TurM1 : forwardCmd</comment>
+	</variables>
+	<variables name="F1TurM1_backwardCmd" typeName="EBOOL" topologicalAddress="%Q0.03.9">
+		<comment> : F1_TurM1 : backwardCmd</comment>
+	</variables>
+	<variables name="F1TurM1_highSpeedCmd" typeName="EBOOL" topologicalAddress="%Q0.03.10">
+		<comment> : F1_TurM1 : highSpeedCmd</comment>
+	</variables>
+	<variables name="F2RCYL1_workCmd" typeName="EBOOL" topologicalAddress="%Q0.03.11">
+		<comment> : F2_RCYL1 : workCmd</comment>
+	</variables>
+	<variables name="F2LCYL1_workCmd" typeName="EBOOL" topologicalAddress="%Q0.03.12">
+		<comment> : F2_LCYL1 : workCmd</comment>
+	</variables>
+	<variables name="unitProdWKM1" typeName="EBOOL">
+		<variableInit value="false" />
+	</variables>
+	<variables name="batchProdWKM1" typeName="EBOOL">
+		<variableInit value="false" />
+	</variables>
+	<variables name="emptyProdWKM1" typeName="EBOOL">
+		<variableInit value="false" />
+	</variables>
+	<variables name="autoModeWKM1" typeName="EBOOL">
+		<variableInit value="false" />
+	</variables>
+	<variables name="manualModeWKM1" typeName="EBOOL">
+		<variableInit value="false" />
+	</variables>
+	<variables name="liveWKM1" typeName="EBOOL">
+		<variableInit value="false" />
+	</variables>
+	<variables name="emergencyStateWKM1" typeName="EBOOL">
+		<variableInit value="false" />
+	</variables>
+	<variables name="F1TurM1_generalFault" typeName="EBOOL">
+		<comment> : F1_TurM1 : generalFault</comment>
+		<variableInit value="false" />
+	</variables>
+	<variables name="F2LCYL1_generalFault" typeName="EBOOL">
+		<comment> : F2_LCYL1 : generalFault</comment>
+		<variableInit value="false" />
+	</variables>
+	<variables name="F2RCYL1_generalFault" typeName="EBOOL">
+		<comment> : F2_RCYL1 : generalFault</comment>
+		<variableInit value="false" />
+	</variables>
+	<variables name="F3SpinM1_generalFault" typeName="EBOOL">
+		<comment> : F3_SpinM1 : generalFault</comment>
+		<variableInit value="false" />
+	</variables>
+	<variables name="F1TurM1_thermalFault" typeName="EBOOL">
+		<comment> : F1_TurM1 : thermalFault</comment>
+		<variableInit value="false" />
+	</variables>
+	<variables name="F1TurM1_forwardFBFault" typeName="EBOOL">
+		<comment> : F1_TurM1 : forwardFBFault</comment>
+		<variableInit value="false" />
+	</variables>
+	<variables name="F1TurM1_backwardFBFault" typeName="EBOOL">
+		<comment> : F1_TurM1 : backwardFBFault</comment>
+		<variableInit value="false" />
+	</variables>
+	<variables name="discFltRCYL1" typeName="EBOOL">
+		<comment>Discordance between sensors</comment>
+		<variableInit value="false" />
+	</variables>
+	<variables name="outletFltRCYL1" typeName="EBOOL">
+		<comment>Outlet sensor fault</comment>
+		<variableInit value="false" />
+	</variables>
+	<variables name="inletFltRCYL1" typeName="EBOOL">
+		<comment>Inlet sensor fault</comment>
+		<variableInit value="false" />
+	</variables>
+	<variables name="presetMvtRCYL1" typeName="TIME">
+		<comment>in seconds</comment>
+		<variableInit value="T#0h0m10s0ms" />
+	</variables>
+	<variables name="presetDiscRCYL1" typeName="TIME">
+		<comment>in milliseconds</comment>
+		<variableInit value="T#0h0m0s200ms" />
+	</variables>
+	<variables name="discFltLCYL1" typeName="EBOOL">
+		<comment>Discordance between sensors</comment>
+		<variableInit value="false" />
+	</variables>
+	<variables name="outletFltLCYL1" typeName="EBOOL">
+		<comment>Outlet sensor fault</comment>
+		<variableInit value="false" />
+	</variables>
+	<variables name="inletFltLCYL1" typeName="EBOOL">
+		<comment>Inlet sensor fault</comment>
+		<variableInit value="false" />
+	</variables>
+	<variables name="presetMvtLCYL1" typeName="TIME">
+		<comment>in seconds</comment>
+		<variableInit value="T#0h0m10s0ms" />
+	</variables>
+	<variables name="presetDiscLCYL1" typeName="TIME">
+		<comment>in milliseconds</comment>
+		<variableInit value="T#0h0m0s200ms" />
+	</variables>
+	<variables name="F3SpinM1_thermalFault" typeName="EBOOL">
+		<comment> : F3_SpinM1 : thermalFault</comment>
+		<variableInit value="false" />
+	</variables>
+	<variables name="F3SpinM1_forwardFault" typeName="EBOOL">
+		<comment> : F3_SpinM1 : forwardFault</comment>
+		<variableInit value="false" />
+	</variables>
+	<variables name="RUN1_cycleEnd" typeName="EBOOL">
+		<comment> : </comment>
+		<variableInit value="false" />
+	</variables>
+	<variables name="rightLockingClaF1" typeName="EBOOL">
+		<variableInit value="false" />
+	</variables>
+	<variables name="leftLockingClaF1" typeName="EBOOL">
+		<variableInit value="false" />
+	</variables>
+	<variables name="contactorSpinF1" typeName="EBOOL">
+		<variableInit value="false" />
+	</variables>
+	<variables name="RUN1_rotation" typeName="EBOOL">
+		<comment> : </comment>
+		<variableInit value="false" />
+	</variables>
+	<variables name="RUN1_movementFault" typeName="DINT">
+		<comment> : </comment>
+		<variableInit value="0" />
+	</variables>
+	<variables name="RUN1_faultyState" typeName="EBOOL">
+		<comment> : </comment>
+		<variableInit value="false" />
+	</variables>
+	<variables name="RUN1_slowAscent" typeName="EBOOL">
+		<comment> : </comment>
+		<variableInit value="false" />
+	</variables>
+	<variables name="RUN1_fastAscent" typeName="EBOOL">
+		<comment> : </comment>
+		<variableInit value="false" />
+	</variables>
+	<variables name="RUN1_slowDescent" typeName="EBOOL">
+		<comment> : </comment>
+		<variableInit value="false" />
+	</variables>
+	<variables name="RUN1_fastDescent" typeName="EBOOL">
+		<comment> : </comment>
+		<variableInit value="false" />
+	</variables>
+	<variables name="RUN1_releasing" typeName="EBOOL">
+		<comment> : </comment>
+		<variableInit value="false" />
+	</variables>
+	<variables name="RUN1_clamping" typeName="EBOOL">
+		<comment> : </comment>
+		<variableInit value="false" />
+	</variables>
+	<variables name="RUN1_initialCond" typeName="EBOOL">
+		<comment> : </comment>
+		<variableInit value="false" />
+	</variables>
+	<variables name="RUN1_noFaultCond" typeName="EBOOL">
+		<comment> : </comment>
+		<variableInit value="false" />
+	</variables>
+	<variables name="RUN1_cnt" typeName="DINT">
+		<comment> : </comment>
+		<variableInit value="0" />
+	</variables>
+	<variables name="RUN1_fastDescentDuration" typeName="DINT">
+		<comment> : </comment>
+		<variableInit value="100" />
+	</variables>
+	<variables name="RUN1_slowDescentDuration" typeName="DINT">
+		<comment> : </comment>
+		<variableInit value="0" />
+	</variables>
+	<variables name="fastAscentDurationRUN1" typeName="DINT">
+		<variableInit value="100" />
+	</variables>
+	<variables name="slowAscentDurationRUN1" typeName="DINT">
+		<variableInit value="50" />
+	</variables>
+	<variables name="motorFaultAscF1" typeName="DINT">
+		<variableInit value="0" />
+	</variables>
+	<variables name="releasingOKClaF1" typeName="EBOOL">
+		<variableInit value="false" />
+	</variables>
+	<variables name="clampingOKClaF1" typeName="EBOOL">
+		<variableInit value="false" />
+	</variables>
+	<variables name="clampingFaultClaF1" typeName="DINT">
+		<variableInit value="0" />
+	</variables>
+	<variables name="clampingDurationClaF1" typeName="DINT">
+		<variableInit value="110" />
+	</variables>
+	<variables name="releasingDurationClaF1" typeName="DINT">
+		<variableInit value="110" />
+	</variables>
+	<variables name="rotationFaultSpinF1" typeName="DINT">
+		<variableInit value="0" />
+	</variables>
+	<variables name="RUN1PROC_S_12_edge" typeName="EBOOL">
+		<variableInit value="false" />
+	</variables>
+	<variables name="RUN1PROC_S_13_edge" typeName="EBOOL">
+		<variableInit value="false" />
+	</variables>
+	<variables name="RUN1PROC_S_14_edge" typeName="EBOOL">
+		<variableInit value="false" />
+	</variables>
+	<variables name="RUN1PROC_S_15_edge" typeName="EBOOL">
+		<variableInit value="false" />
+	</variables>
+	<variables name="TON_FW1" typeName="CB_TON" />
+	<variables name="TON_FW2" typeName="CB_TON" />
+	<variables name="TON_BW1" typeName="CB_TON" />
+	<variables name="TON_BW2" typeName="CB_TON" />
+	<variables name="TON_OUT1" typeName="CB_TON" />
+	<variables name="TON_OUT2" typeName="CB_TON" />
+	<variables name="TON_OUT3" typeName="CB_TON" />
+	<variables name="TON_OUT4" typeName="CB_TON" />
+	<variables name="TON_DISC1" typeName="CB_TON" />
+	<variables name="TON_DISC2" typeName="CB_TON" />
+	<variables name="TON_DISC3" typeName="CB_TON" />
+	<variables name="TON_DISC4" typeName="CB_TON" />
+	<variables name="TON_IN1" typeName="CB_TON" />
+	<variables name="TON_IN2" typeName="CB_TON" />
+	<variables name="TON_IN3" typeName="CB_TON" />
+	<variables name="TON_IN4" typeName="CB_TON" />
+	<variables name="TON_FB1" typeName="CB_TON" />
+	<variables name="TON_FB2" typeName="CB_TON" />
+	<variables name="sr11" typeName="SR" />
+</dataBlock>
+	<logicConf>
+		<resource resName="Premium" resIdent="TSX P57 554M 02.00">
+			<taskDesc task="MAST" taskType="cyclic" valueType="0" maxExecTime="250">
+				<sectionDesc name="WKM1PROC" FMId="ROOT" FMName="modes" />
+				<sectionDesc name="F1TurM1FLT" FMId="ROOT" FMName="CtrTur" />
+				<sectionDesc name="F2RCYL1FLT" FMId="ROOT" FMName="CtrClamR" />
+				<sectionDesc name="F2LCYL1FLT" FMId="ROOT" FMName="CtrClamL" />
+				<sectionDesc name="F3SpinM1DEF" FMId="ROOT" FMName="F3SpinM1STR" />
+				<sectionDesc name="RUN1PROC_Pre" FMId="ROOT" FMName="process" />
+				<sectionDesc name="RUN1PROC" FMId="ROOT" FMName="process" />
+				<sectionDesc name="RUN1PROC_Post" FMId="ROOT" FMName="process" />
+				<sectionDesc name="AscF1PROC_Pre" FMId="ROOT" FMName="F1" />
+				<sectionDesc name="AscF1PROC" FMId="ROOT" FMName="F1" />
+				<sectionDesc name="AscF1PROC_Post" FMId="ROOT" FMName="F1" />
+				<sectionDesc name="ClaF1PROC_Pre" FMId="ROOT" FMName="F2" />
+				<sectionDesc name="ClaF1PROC" FMId="ROOT" FMName="F2" />
+				<sectionDesc name="ClaF1PROC_Post" FMId="ROOT" FMName="F2" />
+				<sectionDesc name="SpinF1PROC_Pre" FMId="ROOT" FMName="F3" />
+				<sectionDesc name="SpinF1PROC" FMId="ROOT" FMName="F3" />
+				<sectionDesc name="SpinF1PROC_Post" FMId="ROOT" FMName="F3" />
+				<sectionDesc name="F1TurM1ACT" FMId="ROOT" FMName="CtrTur" />
+				<sectionDesc name="F2RCYL1ACT" FMId="ROOT" FMName="CtrClamR" />
+				<sectionDesc name="F2LCYL1ACT" FMId="ROOT" FMName="CtrClamL" />
+				<sectionDesc name="F3SpinM1ACT" FMId="ROOT" FMName="F3SpinM1STR" />
+				<sectionDesc name="CB_ExchangeIO" FMId="ROOT" />
+			</taskDesc>
+			<FMDesc name="F1" FMId="1">
+				<FMDesc name="F1TurM1VAD" FMId="2">
+					<FMDesc name="CtrTur" FMId="3">
+					</FMDesc>
+				</FMDesc>
+			</FMDesc>
+			<FMDesc name="F2" FMId="4">
+				<FMDesc name="F2RCYL1VAD" FMId="5">
+					<FMDesc name="CtrClamR" FMId="6">
+					</FMDesc>
+				</FMDesc>
+				<FMDesc name="F2LCYL1VAD" FMId="7">
+					<FMDesc name="CtrClamL" FMId="8">
+					</FMDesc>
+				</FMDesc>
+			</FMDesc>
+			<FMDesc name="F3" FMId="9">
+				<FMDesc name="F3SpinM1VAD" FMId="10">
+					<FMDesc name="F3SpinM1STR" FMId="11">
+					</FMDesc>
+				</FMDesc>
+			</FMDesc>
+		</resource>
+	</logicConf>
+	<program>
+		<identProgram name="CB_PLC_Exchanges" type="section" task="MAST" />
+		<STSource>
+(* Prepare the data of emission towards the other PLCs *)
+
+(* Recover the data transmit from other PLCs  *)
+</STSource>
+	</program>
+	<program>
+		<identProgram name="CB_ExchangeIO" type="section" task="MAST" />
+		<STSource>
+(* ************************************************************ *)
+(* Used for simulation with ControlBuild                       *)
+(* ************************************************************ *)
+
+(* Inhibiton of the physical inputs acquisition *)
+%sw8.0 := true;
+
+(* Copy the buffer of reception towards physical inputs *)
+WORD_TO_BIT (IN := CB_buffer_InputPLC[0],
+	BIT0 =&gt; CB_tmp16Bool[0],
+	BIT1 =&gt; CB_tmp16Bool[1],
+	BIT2 =&gt; CB_tmp16Bool[2],
+	BIT3 =&gt; CB_tmp16Bool[3],
+	BIT4 =&gt; CB_tmp16Bool[4],
+	BIT5 =&gt; CB_tmp16Bool[5],
+	BIT6 =&gt; CB_tmp16Bool[6],
+	BIT7 =&gt; CB_tmp16Bool[7],
+	BIT8 =&gt; CB_tmp16Bool[8],
+	BIT9 =&gt; CB_tmp16Bool[9],
+	BIT10 =&gt; CB_tmp16Bool[10],
+	BIT11 =&gt; CB_tmp16Bool[11],
+	BIT12 =&gt; CB_tmp16Bool[12],
+	BIT13 =&gt; CB_tmp16Bool[13],
+	BIT14 =&gt; CB_tmp16Bool[14],
+	BIT15 =&gt; CB_tmp16Bool[15]);
+F3SpinM1_forwardPB := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[0]);
+F3SpinM1_stopPB := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[1]);
+leftVarMode := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[2]);
+PBPower := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[3]);
+pbEmergStop := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[4]);
+rightVarMode := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[5]);
+piece := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[6]);
+leftVarCycle := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[7]);
+PBStart := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[8]);
+F3SpinM1_acknowledgePB := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[9]);
+rightVarCycle := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[10]);
+forwardEnd := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[11]);
+forwardDeceleration := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[12]);
+backwardEnd := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[13]);
+backwardDeceleration := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[14]);
+F1TurM1_forwardFB := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[15]);
+WORD_TO_BIT (IN := CB_buffer_InputPLC[1],
+	BIT0 =&gt; CB_tmp16Bool[0],
+	BIT1 =&gt; CB_tmp16Bool[1],
+	BIT2 =&gt; CB_tmp16Bool[2],
+	BIT3 =&gt; CB_tmp16Bool[3],
+	BIT4 =&gt; CB_tmp16Bool[4],
+	BIT5 =&gt; CB_tmp16Bool[5],
+	BIT6 =&gt; CB_tmp16Bool[6],
+	BIT7 =&gt; CB_tmp16Bool[7],
+	BIT8 =&gt; CB_tmp16Bool[8],
+	BIT9 =&gt; CB_tmp16Bool[9],
+	BIT10 =&gt; CB_tmp16Bool[10],
+	BIT11 =&gt; CB_tmp16Bool[11],
+	BIT12 =&gt; CB_tmp16Bool[12],
+	BIT13 =&gt; CB_tmp16Bool[13],
+	BIT14 =&gt; CB_tmp16Bool[14],
+	BIT15 =&gt; CB_tmp16Bool[15]);
+F1TurM1_highSpeedFB := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[0]);
+F1TurM1_backwardFB := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[1]);
+F1TurM1_highSpeedPB := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[2]);
+F1TurM1_backwardPB := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[3]);
+F1TurM1_forwardPB := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[4]);
+F1TurM1_thermalFB := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[5]);
+F1TurM1_lowSpeedFB := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[6]);
+F1TurM1_lowSpeedPB := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[7]);
+F1TurM1_stopPB := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[8]);
+F2RCYL1_outletSensor := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[9]);
+F2RCYL1_inletSensor := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[10]);
+F2LCYL1_inletSensor := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[11]);
+F2LCYL1_outletSensor := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[12]);
+F2RCYL1_valveWorkPB := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[13]);
+F2LCYL1_valveWorkPB := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[14]);
+F3SpinM1_forwardFB := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[15]);
+WORD_TO_BIT (IN := CB_buffer_InputPLC[2],
+	BIT0 =&gt; CB_tmp16Bool[0],
+	BIT1 =&gt; CB_tmp16Bool[1],
+	BIT2 =&gt; CB_tmp16Bool[2],
+	BIT3 =&gt; CB_tmp16Bool[3],
+	BIT4 =&gt; CB_tmp16Bool[4],
+	BIT5 =&gt; CB_tmp16Bool[5],
+	BIT6 =&gt; CB_tmp16Bool[6],
+	BIT7 =&gt; CB_tmp16Bool[7],
+	BIT8 =&gt; CB_tmp16Bool[8],
+	BIT9 =&gt; CB_tmp16Bool[9],
+	BIT10 =&gt; CB_tmp16Bool[10],
+	BIT11 =&gt; CB_tmp16Bool[11],
+	BIT12 =&gt; CB_tmp16Bool[12],
+	BIT13 =&gt; CB_tmp16Bool[13],
+	BIT14 =&gt; CB_tmp16Bool[14],
+	BIT15 =&gt; CB_tmp16Bool[15]);
+F3SpinM1_thermalFB := WRITE_INPUT_EBOOL (INP := CB_tmp16Bool[0]);
+WORD_TO_BIT (IN := CB_buffer_InputPLC[3],
+	BIT0 =&gt; CB_tmp16Bool[0],
+	BIT1 =&gt; CB_tmp16Bool[1],
+	BIT2 =&gt; CB_tmp16Bool[2],
+	BIT3 =&gt; CB_tmp16Bool[3],
+	BIT4 =&gt; CB_tmp16Bool[4],
+	BIT5 =&gt; CB_tmp16Bool[5],
+	BIT6 =&gt; CB_tmp16Bool[6],
+	BIT7 =&gt; CB_tmp16Bool[7],
+	BIT8 =&gt; CB_tmp16Bool[8],
+	BIT9 =&gt; CB_tmp16Bool[9],
+	BIT10 =&gt; CB_tmp16Bool[10],
+	BIT11 =&gt; CB_tmp16Bool[11],
+	BIT12 =&gt; CB_tmp16Bool[12],
+	BIT13 =&gt; CB_tmp16Bool[13],
+	BIT14 =&gt; CB_tmp16Bool[14],
+	BIT15 =&gt; CB_tmp16Bool[15]);
+
+
+(* Copy physical outputs towards the buffer of emission *)
+CB_tmpWord := BIT_TO_WORD (
+	BIT0 := F3SpinM1_forwardCmd,
+	BIT1 := RUN1_loadingRequest,
+	BIT2 := RUN1_unloadingRequest,
+	BIT3 := lowSpeedAscF1,
+	BIT4 := highSpeedAscF1,
+	BIT5 := backwardAscF1,
+	BIT6 := forwardAscF1,
+	BIT7 := F1TurM1_lowSpeedCmd,
+	BIT8 := F1TurM1_forwardCmd,
+	BIT9 := F1TurM1_backwardCmd,
+	BIT10 := F1TurM1_highSpeedCmd,
+	BIT11 := F2RCYL1_workCmd,
+	BIT12 := F2LCYL1_workCmd,
+	BIT13 := FALSE,
+	BIT14 := FALSE,
+	BIT15 := FALSE);
+CB_buffer_OutputPLC[0] :=  CB_tmpWord;
+</STSource>
+	</program>
+<program>
+	<identProgram name="WKM1PROC" type="section" task="MAST" />
+	<LDSource nbColumns="11">
+		<networkLD>
+			<typeLine>
+				<labelCell label="Label1">
+					<comment>Power up</comment>
+				</labelCell>
+				<emptyCell nbCells="10" />
+			</typeLine>
+			<typeLine>
+				<shortCircuit>
+					<VLink />
+					<contact typeContact="PContact" contactVariableName="PBPower" />
+				</shortCircuit>
+				<contact typeContact="closedContact" contactVariableName="liveWKM1" />
+				<FFBBlock instanceName="sr11" typeName="SR" enEnO="true">
+					<objPosition posX="2" posY="1" />
+					<descriptionFFB>
+						<inputVariable formalParameter="S1" />
+						<inputVariable formalParameter="R" />
+						<outputVariable formalParameter="Q1" />
+					</descriptionFFB>
+				</FFBBlock>
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<coil typeCoil="coil" coilVariableName="liveWKM1" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<contact typeContact="openContact" contactVariableName="liveWKM1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<emptyLine nbRows="1" />
+			</typeLine>
+			<typeLine>
+				<labelCell label="Label2">
+					<comment>Emergency stop</comment>
+				</labelCell>
+				<emptyCell nbCells="10" />
+			</typeLine>
+			<typeLine>
+				<contact typeContact="closedContact" contactVariableName="pbEmergStop" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<coil typeCoil="setCoil" coilVariableName="emergencyStateWKM1" />
+			</typeLine>
+			<typeLine>
+				<contact typeContact="NContact" contactVariableName="F3SpinM1_acknowledgePB" />
+				<HLink nbCells="1" />
+				<contact typeContact="openContact" contactVariableName="pbEmergStop" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<coil typeCoil="resetCoil" coilVariableName="emergencyStateWKM1" />
+			</typeLine>
+			<typeLine>
+				<emptyLine nbRows="1" />
+			</typeLine>
+			<typeLine>
+				<labelCell label="Label3">
+					<comment>Operating modes management</comment>
+				</labelCell>
+				<emptyCell nbCells="10" />
+			</typeLine>
+			<typeLine>
+				<contact typeContact="openContact" contactVariableName="liveWKM1" />
+				<HLink nbCells="1" />
+				<shortCircuit>
+					<VLink />
+					<contact typeContact="closedContact" contactVariableName="emergencyStateWKM1" />
+				</shortCircuit>
+				<HLink nbCells="1" />
+				<contact typeContact="openContact" contactVariableName="leftVarMode" />
+				<HLink nbCells="1" />
+				<contact typeContact="closedContact" contactVariableName="rightVarMode" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<coil typeCoil="coil" coilVariableName="autoModeWKM1" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<HLink nbCells="1" />
+				<contact typeContact="closedContact" contactVariableName="leftVarMode" />
+				<HLink nbCells="1" />
+				<contact typeContact="openContact" contactVariableName="rightVarMode" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<coil typeCoil="coil" coilVariableName="manualModeWKM1" />
+			</typeLine>
+			<typeLine>
+				<contact typeContact="PContact" contactVariableName="PBStart" />
+				<contact typeContact="openContact" contactVariableName="RUN1_cycleEnd" />
+				<shortCircuit>
+					<VLink />
+					<contact typeContact="openContact" contactVariableName="autoModeWKM1" />
+				</shortCircuit>
+				<HLink nbCells="1" />
+				<contact typeContact="openContact" contactVariableName="leftVarCycle" />
+				<HLink nbCells="1" />
+				<contact typeContact="closedContact" contactVariableName="rightVarCycle" />
+				<HLink nbCells="1" />
+				<contact typeContact="closedContact" contactVariableName="batchProdWKM1" />
+				<contact typeContact="closedContact" contactVariableName="emptyProdWKM1" />
+				<coil typeCoil="setCoil" coilVariableName="unitProdWKM1" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<VLink />
+				<HLink nbCells="1" />
+				<contact typeContact="closedContact" contactVariableName="leftVarCycle" />
+				<HLink nbCells="1" />
+				<contact typeContact="openContact" contactVariableName="rightVarCycle" />
+				<HLink nbCells="1" />
+				<contact typeContact="closedContact" contactVariableName="unitProdWKM1" />
+				<contact typeContact="closedContact" contactVariableName="emptyProdWKM1" />
+				<coil typeCoil="setCoil" coilVariableName="batchProdWKM1" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<HLink nbCells="1" />
+				<contact typeContact="closedContact" contactVariableName="leftVarCycle" />
+				<HLink nbCells="1" />
+				<contact typeContact="closedContact" contactVariableName="rightVarCycle" />
+				<HLink nbCells="1" />
+				<contact typeContact="closedContact" contactVariableName="unitProdWKM1" />
+				<contact typeContact="closedContact" contactVariableName="batchProdWKM1" />
+				<coil typeCoil="setCoil" coilVariableName="emptyProdWKM1" />
+			</typeLine>
+			<typeLine>
+				<shortCircuit>
+					<VLink />
+					<contact typeContact="NContact" contactVariableName="RUN1_cycleEnd" />
+				</shortCircuit>
+				<contact typeContact="openContact" contactVariableName="emptyProdWKM1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<coil typeCoil="resetCoil" coilVariableName="emptyProdWKM1" />
+			</typeLine>
+			<typeLine>
+				<VLink />
+				<contact typeContact="openContact" contactVariableName="unitProdWKM1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<coil typeCoil="resetCoil" coilVariableName="unitProdWKM1" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<contact typeContact="openContact" contactVariableName="batchProdWKM1" />
+				<HLink nbCells="1" />
+				<contact typeContact="closedContact" contactVariableName="autoModeWKM1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<coil typeCoil="resetCoil" coilVariableName="batchProdWKM1" />
+			</typeLine>
+			<typeLine>
+				<emptyLine nbRows="1" />
+			</typeLine>
+			<typeLine>
+				<labelCell label="Label4">
+				</labelCell>
+				<emptyCell nbCells="10" />
+			</typeLine>
+			<linkFB>
+				<linkSource parentObjectName="sr11" pinName="Q1">
+					<objPosition posX="3" posY="3" />
+				</linkSource>
+				<linkDestination parentObjectName="" pinName="IN1">
+					<objPosition posX="10" posY="1" />
+				</linkDestination>
+			</linkFB>
+			<linkFB>
+				<linkSource parentObjectName="" pinName="OUT1">
+					<objPosition posX="1" posY="1" />
+				</linkSource>
+				<linkDestination parentObjectName="sr11" pinName="S1">
+					<objPosition posX="2" posY="3" />
+				</linkDestination>
+			</linkFB>
+			<linkFB>
+				<linkSource parentObjectName="" pinName="OUT1">
+					<objPosition posX="1" posY="2" />
+				</linkSource>
+				<linkDestination parentObjectName="sr11" pinName="R">
+					<objPosition posX="2" posY="4" />
+				</linkDestination>
+			</linkFB>
+		</networkLD>
+	</LDSource>
+</program>
+<program>
+	<identProgram name="F1TurM1FLT" type="section" task="MAST" />
+	<LDSource nbColumns="11">
+		<networkLD>
+			<typeLine>
+				<labelCell label="Label1">
+					<comment>Fault aknowledgement</comment>
+				</labelCell>
+				<emptyCell nbCells="10" />
+			</typeLine>
+			<typeLine>
+				<shortCircuit>
+					<VLink />
+					<contact typeContact="openContact" contactVariableName="F3SpinM1_acknowledgePB" />
+				</shortCircuit>
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<coil typeCoil="resetCoil" coilVariableName="F1TurM1_thermalFault" />
+			</typeLine>
+			<typeLine>
+				<VLink />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<coil typeCoil="resetCoil" coilVariableName="F1TurM1_forwardFBFault" />
+			</typeLine>
+			<typeLine>
+				<VLink />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<coil typeCoil="resetCoil" coilVariableName="F1TurM1_backwardFBFault" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<coil typeCoil="resetCoil" coilVariableName="F1TurM1_generalFault" />
+			</typeLine>
+			<typeLine>
+				<emptyLine nbRows="1" />
+			</typeLine>
+			<typeLine>
+				<labelCell label="Label2">
+					<comment>Fault of forward and backward feedbacks</comment>
+				</labelCell>
+				<emptyCell nbCells="10" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<FFBBlock instanceName="TON_FW2" typeName="CB_TON" enEnO="true">
+					<objPosition posX="3" posY="7" />
+					<descriptionFFB>
+						<inputVariable formalParameter="IN" />
+						<inputVariable formalParameter="PT" effectiveParameter="T#0h0m2s0ms" />
+						<outputVariable formalParameter="Q0" />
+						<outputVariable formalParameter="CV" />
+					</descriptionFFB>
+				</FFBBlock>
+				<emptyCell nbCells="2" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<contact typeContact="openContact" contactVariableName="F1TurM1_highSpeedCmd" />
+				<shortCircuit>
+					<VLink />
+					<HLink nbCells="1" />
+				</shortCircuit>
+				<contact typeContact="openContact" contactVariableName="F1TurM1_forwardCmd" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<contact typeContact="openContact" contactVariableName="F1TurM1_lowSpeedCmd" />
+				<HLink nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<emptyLine nbRows="1" />
+			</typeLine>
+			<typeLine>
+				<shortCircuit>
+					<VLink />
+					<contact typeContact="openContact" contactVariableName="TON_FW2.Q0" />
+				</shortCircuit>
+				<HLink nbCells="1" />
+				<contact typeContact="closedContact" contactVariableName="F1TurM1_forwardFB" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<shortCircuit>
+					<VLink />
+					<HLink nbCells="1" />
+				</shortCircuit>
+				<coil typeCoil="setCoil" coilVariableName="F1TurM1_forwardFBFault" />
+			</typeLine>
+			<typeLine>
+				<VLink />
+				<HLink nbCells="1" />
+				<contact typeContact="openContact" contactVariableName="F1TurM1_highSpeedCmd" />
+				<contact typeContact="closedContact" contactVariableName="F1TurM1_highSpeedFB" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<shortCircuit>
+					<VLink />
+					<HLink nbCells="1" />
+				</shortCircuit>
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<HLink nbCells="1" />
+				<contact typeContact="openContact" contactVariableName="F1TurM1_lowSpeedCmd" />
+				<contact typeContact="closedContact" contactVariableName="F1TurM1_lowSpeedFB" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<emptyLine nbRows="1" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<FFBBlock instanceName="TON_BW2" typeName="CB_TON" enEnO="true">
+					<objPosition posX="3" posY="15" />
+					<descriptionFFB>
+						<inputVariable formalParameter="IN" />
+						<inputVariable formalParameter="PT" effectiveParameter="T#0h0m2s0ms" />
+						<outputVariable formalParameter="Q0" />
+						<outputVariable formalParameter="CV" />
+					</descriptionFFB>
+				</FFBBlock>
+				<emptyCell nbCells="2" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<contact typeContact="openContact" contactVariableName="F1TurM1_highSpeedCmd" />
+				<shortCircuit>
+					<VLink />
+					<HLink nbCells="1" />
+				</shortCircuit>
+				<contact typeContact="openContact" contactVariableName="F1TurM1_backwardCmd" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<contact typeContact="openContact" contactVariableName="F1TurM1_lowSpeedCmd" />
+				<HLink nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<emptyLine nbRows="1" />
+			</typeLine>
+			<typeLine>
+				<shortCircuit>
+					<VLink />
+					<contact typeContact="openContact" contactVariableName="TON_BW2.Q0" />
+				</shortCircuit>
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<contact typeContact="closedContact" contactVariableName="F1TurM1_backwardFB" />
+				<shortCircuit>
+					<VLink />
+					<HLink nbCells="1" />
+				</shortCircuit>
+				<coil typeCoil="setCoil" coilVariableName="F1TurM1_backwardFBFault" />
+			</typeLine>
+			<typeLine>
+				<VLink />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<contact typeContact="openContact" contactVariableName="F1TurM1_highSpeedCmd" />
+				<shortCircuit>
+					<VLink />
+					<contact typeContact="closedContact" contactVariableName="F1TurM1_highSpeedFB" />
+				</shortCircuit>
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<contact typeContact="openContact" contactVariableName="F1TurM1_lowSpeedCmd" />
+				<contact typeContact="closedContact" contactVariableName="F1TurM1_lowSpeedFB" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<emptyLine nbRows="1" />
+			</typeLine>
+			<typeLine>
+				<labelCell label="Label3">
+					<comment>Electric fault</comment>
+				</labelCell>
+				<emptyCell nbCells="10" />
+			</typeLine>
+			<typeLine>
+				<contact typeContact="closedContact" contactVariableName="F1TurM1_thermalFB" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<coil typeCoil="setCoil" coilVariableName="F1TurM1_thermalFault" />
+			</typeLine>
+			<typeLine>
+				<emptyLine nbRows="1" />
+			</typeLine>
+			<typeLine>
+				<labelCell label="Label4">
+					<comment>General fault</comment>
+				</labelCell>
+				<emptyCell nbCells="10" />
+			</typeLine>
+			<typeLine>
+				<HLink nbCells="1" />
+				<contact typeContact="openContact" contactVariableName="F1TurM1_thermalFault" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<shortCircuit>
+					<VLink />
+					<HLink nbCells="1" />
+				</shortCircuit>
+				<coil typeCoil="setCoil" coilVariableName="F1TurM1_generalFault" />
+			</typeLine>
+			<typeLine>
+				<HLink nbCells="1" />
+				<contact typeContact="openContact" contactVariableName="F1TurM1_forwardFBFault" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<shortCircuit>
+					<VLink />
+					<HLink nbCells="1" />
+				</shortCircuit>
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<HLink nbCells="1" />
+				<contact typeContact="openContact" contactVariableName="F1TurM1_backwardFBFault" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<emptyLine nbRows="1" />
+			</typeLine>
+			<linkFB>
+				<linkSource parentObjectName="" pinName="OUT1">
+					<objPosition posX="2" posY="8" />
+				</linkSource>
+				<linkDestination parentObjectName="TON_FW2" pinName="IN">
+					<objPosition posX="3" posY="9" />
+				</linkDestination>
+			</linkFB>
+			<linkFB>
+				<linkSource parentObjectName="" pinName="OUT1">
+					<objPosition posX="2" posY="16" />
+				</linkSource>
+				<linkDestination parentObjectName="TON_BW2" pinName="IN">
+					<objPosition posX="3" posY="17" />
+				</linkDestination>
+			</linkFB>
+		</networkLD>
+	</LDSource>
+</program>
+<program>
+	<identProgram name="F2RCYL1FLT" type="section" task="MAST" />
+	<LDSource nbColumns="11">
+		<networkLD>
+			<typeLine>
+				<labelCell label="Label1">
+					<comment>Fault acknowledgement</comment>
+				</labelCell>
+				<emptyCell nbCells="10" />
+			</typeLine>
+			<typeLine>
+				<shortCircuit>
+					<VLink />
+					<contact typeContact="openContact" contactVariableName="F3SpinM1_acknowledgePB" />
+				</shortCircuit>
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<coil typeCoil="resetCoil" coilVariableName="discFltRCYL1" />
+			</typeLine>
+			<typeLine>
+				<VLink />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<coil typeCoil="resetCoil" coilVariableName="outletFltRCYL1" />
+			</typeLine>
+			<typeLine>
+				<VLink />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<coil typeCoil="resetCoil" coilVariableName="inletFltRCYL1" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<coil typeCoil="resetCoil" coilVariableName="F2RCYL1_generalFault" />
+			</typeLine>
+			<typeLine>
+				<emptyLine nbRows="1" />
+			</typeLine>
+			<typeLine>
+				<labelCell label="Label2">
+					<comment>Faults of movements</comment>
+				</labelCell>
+				<emptyCell nbCells="10" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<FFBBlock instanceName="TON_OUT2" typeName="CB_TON" enEnO="true">
+					<objPosition posX="2" posY="7" />
+					<descriptionFFB>
+						<inputVariable formalParameter="IN" />
+						<inputVariable formalParameter="PT" effectiveParameter="presetMvtRCYL1" />
+						<outputVariable formalParameter="Q0" />
+						<outputVariable formalParameter="CV" />
+					</descriptionFFB>
+				</FFBBlock>
+				<emptyCell nbCells="2" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<contact typeContact="openContact" contactVariableName="F2RCYL1_workCmd" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<contact typeContact="closedContact" contactVariableName="F2RCYL1_outletSensor" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<coil typeCoil="setCoil" coilVariableName="outletFltRCYL1" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<emptyLine nbRows="1" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<FFBBlock instanceName="TON_IN2" typeName="CB_TON" enEnO="true">
+					<objPosition posX="2" posY="11" />
+					<descriptionFFB>
+						<inputVariable formalParameter="IN" />
+						<inputVariable formalParameter="PT" effectiveParameter="presetMvtRCYL1" />
+						<outputVariable formalParameter="Q0" />
+						<outputVariable formalParameter="CV" />
+					</descriptionFFB>
+				</FFBBlock>
+				<emptyCell nbCells="2" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<contact typeContact="closedContact" contactVariableName="F2RCYL1_workCmd" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<contact typeContact="closedContact" contactVariableName="F2RCYL1_inletSensor" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<coil typeCoil="setCoil" coilVariableName="inletFltRCYL1" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<emptyLine nbRows="1" />
+			</typeLine>
+			<typeLine>
+				<labelCell label="Label3">
+					<comment>Discordance fault</comment>
+				</labelCell>
+				<emptyCell nbCells="10" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<FFBBlock instanceName="TON_DISC2" typeName="CB_TON" enEnO="true">
+					<objPosition posX="4" posY="16" />
+					<descriptionFFB>
+						<inputVariable formalParameter="IN" />
+						<inputVariable formalParameter="PT" effectiveParameter="presetDiscRCYL1" />
+						<outputVariable formalParameter="Q0" />
+						<outputVariable formalParameter="CV" />
+					</descriptionFFB>
+				</FFBBlock>
+				<emptyCell nbCells="2" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<contact typeContact="openContact" contactVariableName="F2RCYL1_outletSensor" />
+				<HLink nbCells="1" />
+				<contact typeContact="openContact" contactVariableName="F2RCYL1_inletSensor" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<coil typeCoil="setCoil" coilVariableName="discFltRCYL1" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<emptyLine nbRows="1" />
+			</typeLine>
+			<typeLine>
+				<labelCell label="Label4">
+					<comment>General fault</comment>
+				</labelCell>
+				<emptyCell nbCells="10" />
+			</typeLine>
+			<typeLine>
+				<HLink nbCells="1" />
+				<contact typeContact="openContact" contactVariableName="discFltRCYL1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<shortCircuit>
+					<VLink />
+					<HLink nbCells="1" />
+				</shortCircuit>
+				<coil typeCoil="setCoil" coilVariableName="F2RCYL1_generalFault" />
+			</typeLine>
+			<typeLine>
+				<HLink nbCells="1" />
+				<contact typeContact="openContact" contactVariableName="outletFltRCYL1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<shortCircuit>
+					<VLink />
+					<HLink nbCells="1" />
+				</shortCircuit>
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<HLink nbCells="1" />
+				<contact typeContact="openContact" contactVariableName="inletFltRCYL1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<emptyLine nbRows="1" />
+			</typeLine>
+			<linkFB>
+				<linkSource parentObjectName="" pinName="OUT1">
+					<objPosition posX="0" posY="8" />
+				</linkSource>
+				<linkDestination parentObjectName="TON_OUT2" pinName="IN">
+					<objPosition posX="2" posY="9" />
+				</linkDestination>
+			</linkFB>
+			<linkFB>
+				<linkSource parentObjectName="TON_OUT2" pinName="Q0">
+					<objPosition posX="3" posY="9" />
+				</linkSource>
+				<linkDestination parentObjectName="" pinName="IN1">
+					<objPosition posX="6" posY="8" />
+				</linkDestination>
+			</linkFB>
+			<linkFB>
+				<linkSource parentObjectName="TON_IN2" pinName="Q0">
+					<objPosition posX="3" posY="13" />
+				</linkSource>
+				<linkDestination parentObjectName="" pinName="IN1">
+					<objPosition posX="6" posY="12" />
+				</linkDestination>
+			</linkFB>
+			<linkFB>
+				<linkSource parentObjectName="" pinName="OUT1">
+					<objPosition posX="0" posY="12" />
+				</linkSource>
+				<linkDestination parentObjectName="TON_IN2" pinName="IN">
+					<objPosition posX="2" posY="13" />
+				</linkDestination>
+			</linkFB>
+			<linkFB>
+				<linkSource parentObjectName="TON_DISC2" pinName="Q0">
+					<objPosition posX="5" posY="18" />
+				</linkSource>
+				<linkDestination parentObjectName="" pinName="IN1">
+					<objPosition posX="10" posY="17" />
+				</linkDestination>
+			</linkFB>
+			<linkFB>
+				<linkSource parentObjectName="" pinName="OUT1">
+					<objPosition posX="2" posY="17" />
+				</linkSource>
+				<linkDestination parentObjectName="TON_DISC2" pinName="IN">
+					<objPosition posX="4" posY="18" />
+				</linkDestination>
+			</linkFB>
+		</networkLD>
+	</LDSource>
+</program>
+<program>
+	<identProgram name="F2LCYL1FLT" type="section" task="MAST" />
+	<LDSource nbColumns="11">
+		<networkLD>
+			<typeLine>
+				<labelCell label="Label1">
+					<comment>Fault acknowledgement</comment>
+				</labelCell>
+				<emptyCell nbCells="10" />
+			</typeLine>
+			<typeLine>
+				<shortCircuit>
+					<VLink />
+					<contact typeContact="openContact" contactVariableName="F3SpinM1_acknowledgePB" />
+				</shortCircuit>
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<coil typeCoil="resetCoil" coilVariableName="discFltLCYL1" />
+			</typeLine>
+			<typeLine>
+				<VLink />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<coil typeCoil="resetCoil" coilVariableName="outletFltLCYL1" />
+			</typeLine>
+			<typeLine>
+				<VLink />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<coil typeCoil="resetCoil" coilVariableName="inletFltLCYL1" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<coil typeCoil="resetCoil" coilVariableName="F2LCYL1_generalFault" />
+			</typeLine>
+			<typeLine>
+				<emptyLine nbRows="1" />
+			</typeLine>
+			<typeLine>
+				<labelCell label="Label2">
+					<comment>Faults of movements</comment>
+				</labelCell>
+				<emptyCell nbCells="10" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<FFBBlock instanceName="TON_OUT4" typeName="CB_TON" enEnO="true">
+					<objPosition posX="2" posY="7" />
+					<descriptionFFB>
+						<inputVariable formalParameter="IN" />
+						<inputVariable formalParameter="PT" effectiveParameter="presetMvtLCYL1" />
+						<outputVariable formalParameter="Q0" />
+						<outputVariable formalParameter="CV" />
+					</descriptionFFB>
+				</FFBBlock>
+				<emptyCell nbCells="2" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<contact typeContact="openContact" contactVariableName="F2LCYL1_workCmd" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<contact typeContact="closedContact" contactVariableName="F2LCYL1_outletSensor" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<coil typeCoil="setCoil" coilVariableName="outletFltLCYL1" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<emptyLine nbRows="1" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<FFBBlock instanceName="TON_IN4" typeName="CB_TON" enEnO="true">
+					<objPosition posX="2" posY="11" />
+					<descriptionFFB>
+						<inputVariable formalParameter="IN" />
+						<inputVariable formalParameter="PT" effectiveParameter="presetMvtLCYL1" />
+						<outputVariable formalParameter="Q0" />
+						<outputVariable formalParameter="CV" />
+					</descriptionFFB>
+				</FFBBlock>
+				<emptyCell nbCells="2" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<contact typeContact="closedContact" contactVariableName="F2LCYL1_workCmd" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<contact typeContact="closedContact" contactVariableName="F2LCYL1_inletSensor" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<coil typeCoil="setCoil" coilVariableName="inletFltLCYL1" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<emptyLine nbRows="1" />
+			</typeLine>
+			<typeLine>
+				<labelCell label="Label3">
+					<comment>Discordance fault</comment>
+				</labelCell>
+				<emptyCell nbCells="10" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<FFBBlock instanceName="TON_DISC4" typeName="CB_TON" enEnO="true">
+					<objPosition posX="4" posY="16" />
+					<descriptionFFB>
+						<inputVariable formalParameter="IN" />
+						<inputVariable formalParameter="PT" effectiveParameter="presetDiscLCYL1" />
+						<outputVariable formalParameter="Q0" />
+						<outputVariable formalParameter="CV" />
+					</descriptionFFB>
+				</FFBBlock>
+				<emptyCell nbCells="2" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<contact typeContact="openContact" contactVariableName="F2LCYL1_outletSensor" />
+				<HLink nbCells="1" />
+				<contact typeContact="openContact" contactVariableName="F2LCYL1_inletSensor" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<coil typeCoil="setCoil" coilVariableName="discFltLCYL1" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<emptyLine nbRows="1" />
+			</typeLine>
+			<typeLine>
+				<labelCell label="Label4">
+					<comment>General fault</comment>
+				</labelCell>
+				<emptyCell nbCells="10" />
+			</typeLine>
+			<typeLine>
+				<HLink nbCells="1" />
+				<contact typeContact="openContact" contactVariableName="discFltLCYL1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<shortCircuit>
+					<VLink />
+					<HLink nbCells="1" />
+				</shortCircuit>
+				<coil typeCoil="setCoil" coilVariableName="F2LCYL1_generalFault" />
+			</typeLine>
+			<typeLine>
+				<HLink nbCells="1" />
+				<contact typeContact="openContact" contactVariableName="outletFltLCYL1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<shortCircuit>
+					<VLink />
+					<HLink nbCells="1" />
+				</shortCircuit>
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<HLink nbCells="1" />
+				<contact typeContact="openContact" contactVariableName="inletFltLCYL1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<emptyLine nbRows="1" />
+			</typeLine>
+			<linkFB>
+				<linkSource parentObjectName="" pinName="OUT1">
+					<objPosition posX="0" posY="8" />
+				</linkSource>
+				<linkDestination parentObjectName="TON_OUT4" pinName="IN">
+					<objPosition posX="2" posY="9" />
+				</linkDestination>
+			</linkFB>
+			<linkFB>
+				<linkSource parentObjectName="TON_OUT4" pinName="Q0">
+					<objPosition posX="3" posY="9" />
+				</linkSource>
+				<linkDestination parentObjectName="" pinName="IN1">
+					<objPosition posX="6" posY="8" />
+				</linkDestination>
+			</linkFB>
+			<linkFB>
+				<linkSource parentObjectName="TON_IN4" pinName="Q0">
+					<objPosition posX="3" posY="13" />
+				</linkSource>
+				<linkDestination parentObjectName="" pinName="IN1">
+					<objPosition posX="6" posY="12" />
+				</linkDestination>
+			</linkFB>
+			<linkFB>
+				<linkSource parentObjectName="" pinName="OUT1">
+					<objPosition posX="0" posY="12" />
+				</linkSource>
+				<linkDestination parentObjectName="TON_IN4" pinName="IN">
+					<objPosition posX="2" posY="13" />
+				</linkDestination>
+			</linkFB>
+			<linkFB>
+				<linkSource parentObjectName="TON_DISC4" pinName="Q0">
+					<objPosition posX="5" posY="18" />
+				</linkSource>
+				<linkDestination parentObjectName="" pinName="IN1">
+					<objPosition posX="10" posY="17" />
+				</linkDestination>
+			</linkFB>
+			<linkFB>
+				<linkSource parentObjectName="" pinName="OUT1">
+					<objPosition posX="2" posY="17" />
+				</linkSource>
+				<linkDestination parentObjectName="TON_DISC4" pinName="IN">
+					<objPosition posX="4" posY="18" />
+				</linkDestination>
+			</linkFB>
+		</networkLD>
+	</LDSource>
+</program>
+<program>
+	<identProgram name="F3SpinM1DEF" type="section" task="MAST" />
+	<LDSource nbColumns="11">
+		<networkLD>
+			<typeLine>
+				<labelCell label="Label1">
+					<comment>Acknowledgement of faults</comment>
+				</labelCell>
+				<emptyCell nbCells="10" />
+			</typeLine>
+			<typeLine>
+				<shortCircuit>
+					<VLink />
+					<contact typeContact="openContact" contactVariableName="F3SpinM1_acknowledgePB" />
+				</shortCircuit>
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<coil typeCoil="resetCoil" coilVariableName="F3SpinM1_thermalFault" />
+			</typeLine>
+			<typeLine>
+				<VLink />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<coil typeCoil="resetCoil" coilVariableName="F3SpinM1_forwardFault" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<coil typeCoil="resetCoil" coilVariableName="F3SpinM1_generalFault" />
+			</typeLine>
+			<typeLine>
+				<emptyLine nbRows="1" />
+			</typeLine>
+			<typeLine>
+				<labelCell label="Label2">
+					<comment>Fault of forward feedback</comment>
+				</labelCell>
+				<emptyCell nbCells="10" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<FFBBlock instanceName="TON_FB2" typeName="CB_TON" enEnO="true">
+					<objPosition posX="2" posY="6" />
+					<descriptionFFB>
+						<inputVariable formalParameter="IN" />
+						<inputVariable formalParameter="PT" effectiveParameter="T#0h0m2s0ms" />
+						<outputVariable formalParameter="Q0" />
+						<outputVariable formalParameter="CV" />
+					</descriptionFFB>
+				</FFBBlock>
+				<emptyCell nbCells="2" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<contact typeContact="openContact" contactVariableName="F3SpinM1_forwardCmd" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<contact typeContact="closedContact" contactVariableName="F3SpinM1_forwardFB" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<coil typeCoil="setCoil" coilVariableName="F3SpinM1_forwardFault" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<emptyLine nbRows="1" />
+			</typeLine>
+			<typeLine>
+				<labelCell label="Label3">
+					<comment>Electric fault</comment>
+				</labelCell>
+				<emptyCell nbCells="10" />
+			</typeLine>
+			<typeLine>
+				<contact typeContact="closedContact" contactVariableName="F3SpinM1_thermalFB" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<coil typeCoil="setCoil" coilVariableName="F3SpinM1_thermalFault" />
+			</typeLine>
+			<typeLine>
+				<emptyLine nbRows="1" />
+			</typeLine>
+			<typeLine>
+				<labelCell label="Label4">
+					<comment>General fault</comment>
+				</labelCell>
+				<emptyCell nbCells="10" />
+			</typeLine>
+			<typeLine>
+				<HLink nbCells="1" />
+				<contact typeContact="openContact" contactVariableName="F3SpinM1_thermalFault" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<shortCircuit>
+					<VLink />
+					<HLink nbCells="1" />
+				</shortCircuit>
+				<coil typeCoil="setCoil" coilVariableName="F3SpinM1_generalFault" />
+			</typeLine>
+			<typeLine>
+				<HLink nbCells="1" />
+				<contact typeContact="openContact" contactVariableName="F3SpinM1_forwardFault" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<emptyLine nbRows="1" />
+			</typeLine>
+			<linkFB>
+				<linkSource parentObjectName="" pinName="OUT1">
+					<objPosition posX="0" posY="7" />
+				</linkSource>
+				<linkDestination parentObjectName="TON_FB2" pinName="IN">
+					<objPosition posX="2" posY="8" />
+				</linkDestination>
+			</linkFB>
+			<linkFB>
+				<linkSource parentObjectName="TON_FB2" pinName="Q0">
+					<objPosition posX="3" posY="8" />
+				</linkSource>
+				<linkDestination parentObjectName="" pinName="IN1">
+					<objPosition posX="5" posY="7" />
+				</linkDestination>
+			</linkFB>
+		</networkLD>
+	</LDSource>
+</program>
+<program>
+	<identProgram name="RUN1PROC_Pre" type="section" task="MAST" />
+	<STSource>IF RE(F3SpinM1_acknowledgePB) THEN
+	RUN1_movementFault := 0;
+END_IF;
+IF ((RUN1PROC_S_12.x AND (RUN1_cnt &gt;= RUN1_fastDescentDuration)) AND NOT forwardDeceleration) THEN
+	RUN1_movementFault := 1;
+END_IF;
+IF ((RUN1PROC_S_13.x AND (RUN1_cnt &gt;= RUN1_slowDescentDuration)) AND NOT forwardEnd) THEN
+	RUN1_movementFault := 2;
+END_IF;
+IF ((RUN1PROC_S_14.x AND (RUN1_cnt &gt;= fastAscentDurationRUN1)) AND NOT backwardDeceleration) THEN
+	RUN1_movementFault := 3;
+END_IF;
+IF ((RUN1PROC_S_15.x AND (RUN1_cnt &gt;= slowAscentDurationRUN1)) AND NOT backwardEnd) THEN
+	RUN1_movementFault := 4;
+END_IF;
+IF ((RUN1PROC_S_12.x AND forwardEnd) AND NOT forwardDeceleration) THEN
+	RUN1_movementFault := 5;
+END_IF;
+IF ((RUN1PROC_S_14.x AND backwardEnd) AND NOT backwardDeceleration) THEN
+	RUN1_movementFault := 6;
+END_IF;
+IF ((RUN1PROC_S_13.x OR RUN1PROC_S_14.x) AND backwardEnd) THEN
+	RUN1_movementFault := 7;
+END_IF;
+IF ((((RUN1PROC_S_11.x OR RUN1PROC_S_13.x) OR RUN1PROC_S_16.x) OR RUN1PROC_S_17.x) AND backwardDeceleration) THEN
+	RUN1_movementFault := 8;
+END_IF;
+IF ((((RUN1PROC_S_11.x OR RUN1PROC_S_15.x) OR RUN1PROC_S_16.x) OR RUN1PROC_S_17.x) AND forwardDeceleration) THEN
+	RUN1_movementFault := 9;
+END_IF;
+IF ((((RUN1PROC_S_11.x OR RUN1PROC_S_15.x) OR RUN1PROC_S_16.x) OR RUN1PROC_S_17.x) AND forwardEnd) THEN
+	RUN1_movementFault := 10;
+END_IF;
+RUN1_noFaultCond := ((((clampingFaultClaF1 = 0) AND (motorFaultAscF1 = 0)) AND (rotationFaultSpinF1 = 0)) AND (RUN1_movementFault = 0));
+RUN1_initialCond := (RUN1_noFaultCond AND ((piece AND (RE(unitProdWKM1) OR batchProdWKM1)) OR emptyProdWKM1));
+RUN1PROC_S_12_edge := RUN1PROC_S_12.x;
+RUN1PROC_S_13_edge := RUN1PROC_S_13.x;
+RUN1PROC_S_14_edge := RUN1PROC_S_14.x;
+RUN1PROC_S_15_edge := RUN1PROC_S_15.x;
+</STSource>
+</program>
+<SFCProgram>
+	<identProgram name="RUN1PROC" type="section" task="MAST" />
+	<chartSource name="run">
+		<networkSFC>
+			<step stepName="RUN1PROC_S_10" stepType="initialStep">
+				<objPosition posX="1" posY="1" />
+				<action qualifier="NONE">
+					<actionName>
+						<sectionName>A_RUN1PROC_S_10_1</sectionName>
+					</actionName>
+					<tValue />
+				</action>
+				<action qualifier="P0">
+					<actionName>
+						<sectionName>A_RUN1PROC_S_10_2</sectionName>
+					</actionName>
+					<tValue />
+				</action>
+				<comment>Wait for a new cycle
+Request for a new piece</comment>
+			</step>
+			<step stepName="RUN1PROC_S_11" stepType="step">
+				<objPosition posX="1" posY="3" />
+				<action qualifier="NONE">
+					<actionName>
+						<sectionName>A_RUN1PROC_S_11_1</sectionName>
+					</actionName>
+					<tValue />
+				</action>
+				<action qualifier="P0">
+					<actionName>
+						<sectionName>A_RUN1PROC_S_11_2</sectionName>
+					</actionName>
+					<tValue />
+				</action>
+				<comment>request for clamping of the 
+work piece</comment>
+			</step>
+			<step stepName="RUN1PROC_S_12" stepType="step">
+				<objPosition posX="1" posY="6" />
+				<action qualifier="NONE">
+					<actionName>
+						<sectionName>A_RUN1PROC_S_12_1</sectionName>
+					</actionName>
+					<tValue />
+				</action>
+				<action qualifier="P0">
+					<actionName>
+						<sectionName>A_RUN1PROC_S_12_2</sectionName>
+					</actionName>
+					<tValue />
+				</action>
+				<comment>rotation of the spindle
+fast descent of the frame</comment>
+			</step>
+			<step stepName="RUN1PROC_S_13" stepType="step">
+				<objPosition posX="1" posY="8" />
+				<action qualifier="NONE">
+					<actionName>
+						<sectionName>A_RUN1PROC_S_13_1</sectionName>
+					</actionName>
+					<tValue />
+				</action>
+				<action qualifier="P0">
+					<actionName>
+						<sectionName>A_RUN1PROC_S_13_2</sectionName>
+					</actionName>
+					<tValue />
+				</action>
+				<comment>slow descent of the frame
+(for drilling of the workpiece)</comment>
+			</step>
+			<step stepName="RUN1PROC_S_14" stepType="step">
+				<objPosition posX="1" posY="11" />
+				<action qualifier="NONE">
+					<actionName>
+						<sectionName>A_RUN1PROC_S_14_1</sectionName>
+					</actionName>
+					<tValue />
+				</action>
+				<action qualifier="P0">
+					<actionName>
+						<sectionName>A_RUN1PROC_S_14_2</sectionName>
+					</actionName>
+					<tValue />
+				</action>
+				<comment>fast ascent of the frame</comment>
+			</step>
+			<step stepName="RUN1PROC_S_15" stepType="step">
+				<objPosition posX="1" posY="14" />
+				<action qualifier="NONE">
+					<actionName>
+						<sectionName>A_RUN1PROC_S_15_1</sectionName>
+					</actionName>
+					<tValue />
+				</action>
+				<action qualifier="P0">
+					<actionName>
+						<sectionName>A_RUN1PROC_S_15_2</sectionName>
+					</actionName>
+					<tValue />
+				</action>
+				<comment>slow ascent of the frame
+stop of the spindle rotation</comment>
+			</step>
+			<step stepName="RUN1PROC_S_16" stepType="step">
+				<objPosition posX="1" posY="16" />
+				<action qualifier="NONE">
+					<actionName>
+						<sectionName>A_RUN1PROC_S_16_1</sectionName>
+					</actionName>
+					<tValue />
+				</action>
+				<action qualifier="P0">
+					<actionName>
+						<sectionName>A_RUN1PROC_S_16_2</sectionName>
+					</actionName>
+					<tValue />
+				</action>
+				<comment>request for work piece release</comment>
+			</step>
+			<step stepName="RUN1PROC_S_17" stepType="step">
+				<objPosition posX="1" posY="19" />
+				<action qualifier="NONE">
+					<actionName>
+						<sectionName>A_RUN1PROC_S_17_1</sectionName>
+					</actionName>
+					<tValue />
+				</action>
+				<action qualifier="P0">
+					<actionName>
+						<sectionName>A_RUN1PROC_S_17_2</sectionName>
+					</actionName>
+					<tValue />
+				</action>
+				<comment>request for unloading of the work piece</comment>
+			</step>
+			<transition>
+				<objPosition posX="1" posY="20" />
+				<transitionCondition>
+					<sectionName>RUN1PROC_T_17</sectionName>
+				</transitionCondition>
+				<comment>exit of the work piece</comment>
+			</transition>
+			<transition>
+				<objPosition posX="1" posY="18" />
+				<transitionCondition>
+					<sectionName>RUN1PROC_T_16</sectionName>
+				</transitionCondition>
+				<comment>clamping element is open</comment>
+			</transition>
+			<transition>
+				<objPosition posX="1" posY="15" />
+				<transitionCondition>
+					<sectionName>RUN1PROC_T_15</sectionName>
+				</transitionCondition>
+				<comment>spindle stopped AND frame in rest position</comment>
+			</transition>
+			<transition>
+				<objPosition posX="1" posY="12" />
+				<transitionCondition>
+					<sectionName>RUN1PROC_T_14</sectionName>
+				</transitionCondition>
+				<comment>passing in front of the top slowdown sensor</comment>
+			</transition>
+			<transition>
+				<objPosition posX="1" posY="10" />
+				<transitionCondition>
+					<sectionName>RUN1PROC_T_13</sectionName>
+				</transitionCondition>
+				<comment>endOfDrilling</comment>
+			</transition>
+			<transition>
+				<objPosition posX="1" posY="7" />
+				<transitionCondition>
+					<sectionName>RUN1PROC_T_12</sectionName>
+				</transitionCondition>
+				<comment>passing in front of the down slowdown sensor</comment>
+			</transition>
+			<transition>
+				<objPosition posX="1" posY="4" />
+				<transitionCondition>
+					<sectionName>RUN1PROC_T_11</sectionName>
+				</transitionCondition>
+				<comment>work piece clamped</comment>
+			</transition>
+			<transition>
+				<objPosition posX="1" posY="2" />
+				<transitionCondition>
+					<sectionName>RUN1PROC_T_10</sectionName>
+				</transitionCondition>
+				<comment>cycle request AND piece presence </comment>
+			</transition>
+			<linkSFC>
+				<directedLinkSource objectType="transition">
+					<objPosition posX="1" posY="4" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="step">
+					<objPosition posX="1" posY="6" />
+				</directedLinkDestination>
+			</linkSFC>
+			<linkSFC>
+				<directedLinkSource objectType="step">
+					<objPosition posX="1" posY="16" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="transition">
+					<objPosition posX="1" posY="18" />
+				</directedLinkDestination>
+			</linkSFC>
+			<linkSFC>
+				<directedLinkSource objectType="step">
+					<objPosition posX="1" posY="8" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="transition">
+					<objPosition posX="1" posY="10" />
+				</directedLinkDestination>
+			</linkSFC>
+			<linkSFC>
+				<directedLinkSource objectType="transition">
+					<objPosition posX="1" posY="12" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="step">
+					<objPosition posX="1" posY="14" />
+				</directedLinkDestination>
+			</linkSFC>
+			<linkSFC>
+				<directedLinkSource objectType="transition">
+					<objPosition posX="1" posY="20" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="step">
+					<objPosition posX="1" posY="1" />
+				</directedLinkDestination>
+			</linkSFC>
+		</networkSFC>
+	</chartSource>
+	<actionSource name="A_RUN1PROC_S_11_1">
+		<STSource>RUN1_clamping := true;
+</STSource>
+	</actionSource>
+	<actionSource name="A_RUN1PROC_S_12_1">
+		<STSource>RUN1_fastDescent := true;
+RUN1_rotation := true;
+RUN1_cnt := (RUN1_cnt + 1);
+</STSource>
+	</actionSource>
+	<actionSource name="A_RUN1PROC_S_10_2">
+		<STSource>RUN1_loadingRequest := false;
+RUN1_cycleEnd := false;
+</STSource>
+	</actionSource>
+	<actionSource name="A_RUN1PROC_S_11_2">
+		<STSource>RUN1_clamping := false;
+</STSource>
+	</actionSource>
+	<actionSource name="A_RUN1PROC_S_12_2">
+		<STSource>RUN1_fastDescent := false;
+RUN1_rotation := false;
+</STSource>
+	</actionSource>
+	<actionSource name="A_RUN1PROC_S_10_1">
+		<STSource>RUN1_loadingRequest := true;
+RUN1_cycleEnd := true;
+</STSource>
+	</actionSource>
+	<actionSource name="A_RUN1PROC_S_13_1">
+		<STSource>RUN1_slowDescent := true;
+RUN1_rotation := true;
+RUN1_cnt := (RUN1_cnt + 1);
+</STSource>
+	</actionSource>
+	<actionSource name="A_RUN1PROC_S_13_2">
+		<STSource>RUN1_slowDescent := false;
+RUN1_rotation := false;
+</STSource>
+	</actionSource>
+	<actionSource name="A_RUN1PROC_S_14_1">
+		<STSource>RUN1_fastAscent := true;
+RUN1_rotation := true;
+RUN1_cnt := (RUN1_cnt + 1);
+</STSource>
+	</actionSource>
+	<actionSource name="A_RUN1PROC_S_14_2">
+		<STSource>RUN1_fastAscent := false;
+RUN1_rotation := false;
+</STSource>
+	</actionSource>
+	<actionSource name="A_RUN1PROC_S_15_1">
+		<STSource>RUN1_slowAscent := true;
+RUN1_cnt := (RUN1_cnt + 1);
+</STSource>
+	</actionSource>
+	<actionSource name="A_RUN1PROC_S_15_2">
+		<STSource>RUN1_slowAscent := false;
+</STSource>
+	</actionSource>
+	<actionSource name="A_RUN1PROC_S_16_1">
+		<STSource>RUN1_releasing := true;
+</STSource>
+	</actionSource>
+	<actionSource name="A_RUN1PROC_S_16_2">
+		<STSource>RUN1_releasing := false;
+</STSource>
+	</actionSource>
+	<actionSource name="A_RUN1PROC_S_17_1">
+		<STSource>RUN1_cycleEnd := true;
+RUN1_unloadingRequest := true;
+</STSource>
+	</actionSource>
+	<actionSource name="A_RUN1PROC_S_17_2">
+		<STSource>RUN1_cycleEnd := false;
+RUN1_unloadingRequest := false;
+</STSource>
+	</actionSource>
+	<transitionSource name="RUN1PROC_T_10">
+		<STSource>RUN1_initialCond</STSource>
+	</transitionSource>
+	<transitionSource name="RUN1PROC_T_11">
+		<STSource>clampingOKClaF1</STSource>
+	</transitionSource>
+	<transitionSource name="RUN1PROC_T_12">
+		<STSource>forwardDeceleration</STSource>
+	</transitionSource>
+	<transitionSource name="RUN1PROC_T_13">
+		<STSource>forwardEnd</STSource>
+	</transitionSource>
+	<transitionSource name="RUN1PROC_T_14">
+		<STSource>backwardDeceleration</STSource>
+	</transitionSource>
+	<transitionSource name="RUN1PROC_T_15">
+		<STSource>backwardEnd</STSource>
+	</transitionSource>
+	<transitionSource name="RUN1PROC_T_16">
+		<STSource>releasingOKClaF1</STSource>
+	</transitionSource>
+	<transitionSource name="RUN1PROC_T_17">
+		<STSource>NOT piece</STSource>
+	</transitionSource>
+</SFCProgram>
+<program>
+	<identProgram name="RUN1PROC_Post" type="section" task="MAST" />
+	<STSource>IF ((((RUN1PROC_S_10.x OR RE(RUN1PROC_S_12_edge)) OR RE(RUN1PROC_S_13_edge)) OR RE(RUN1PROC_S_14_edge)) OR RE(RUN1PROC_S_15_edge)) THEN
+	RUN1_cnt := 0;
+END_IF;
+RUN1_faultyState := NOT RUN1_noFaultCond;
+</STSource>
+</program>
+<program>
+	<identProgram name="AscF1PROC_Pre" type="section" task="MAST" />
+	<STSource>IF RE(F3SpinM1_acknowledgePB) THEN
+	motorFaultAscF1 := 0;
+END_IF;
+IF ((AscF1PROC_S_21.x OR AscF1PROC_S_41.x) AND F1TurM1_generalFault) THEN
+	motorFaultAscF1 := 1;
+END_IF;
+IF ((AscF1PROC_S_31.x OR AscF1PROC_S_11.x) AND F1TurM1_generalFault) THEN
+	motorFaultAscF1 := 2;
+END_IF;
+IF ((AscF1PROC_S_21.x OR AscF1PROC_S_11.x) AND F1TurM1_generalFault) THEN
+	motorFaultAscF1 := 3;
+END_IF;
+IF ((AscF1PROC_S_41.x OR AscF1PROC_S_31.x) AND F1TurM1_generalFault) THEN
+	motorFaultAscF1 := 4;
+END_IF;
+</STSource>
+</program>
+<SFCProgram>
+	<identProgram name="AscF1PROC" type="section" task="MAST" />
+	<chartSource name="descent">
+		<networkSFC>
+			<step stepName="AscF1PROC_S_10" stepType="initialStep">
+				<objPosition posX="9" posY="1" />
+			</step>
+			<step stepName="AscF1PROC_S_11" stepType="step">
+				<objPosition posX="9" posY="4" />
+				<action qualifier="NONE">
+					<actionName>
+						<sectionName>A_AscF1PROC_S_11_1</sectionName>
+					</actionName>
+					<tValue />
+				</action>
+				<action qualifier="P0">
+					<actionName>
+						<sectionName>A_AscF1PROC_S_11_2</sectionName>
+					</actionName>
+					<tValue />
+				</action>
+				<comment>backward command
+high speed command</comment>
+			</step>
+			<transition>
+				<objPosition posX="9" posY="5" />
+				<transitionCondition>
+					<sectionName>AscF1PROC_T_11</sectionName>
+				</transitionCondition>
+				<comment>Cancellation of the high ascent request</comment>
+			</transition>
+			<transition>
+				<objPosition posX="9" posY="2" />
+				<transitionCondition>
+					<sectionName>AscF1PROC_T_10</sectionName>
+				</transitionCondition>
+				<comment>Fast ascent request</comment>
+			</transition>
+			<linkSFC>
+				<directedLinkSource objectType="transition">
+					<objPosition posX="9" posY="5" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="step">
+					<objPosition posX="9" posY="1" />
+				</directedLinkDestination>
+			</linkSFC>
+			<linkSFC>
+				<directedLinkSource objectType="transition">
+					<objPosition posX="9" posY="2" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="step">
+					<objPosition posX="9" posY="4" />
+				</directedLinkDestination>
+			</linkSFC>
+			<step stepName="AscF1PROC_S_20" stepType="initialStep">
+				<objPosition posX="1" posY="1" />
+			</step>
+			<step stepName="AscF1PROC_S_21" stepType="step">
+				<objPosition posX="1" posY="4" />
+				<action qualifier="NONE">
+					<actionName>
+						<sectionName>A_AscF1PROC_S_21_1</sectionName>
+					</actionName>
+					<tValue />
+				</action>
+				<action qualifier="P0">
+					<actionName>
+						<sectionName>A_AscF1PROC_S_21_2</sectionName>
+					</actionName>
+					<tValue />
+				</action>
+				<comment>forward command
+high speed command</comment>
+			</step>
+			<transition>
+				<objPosition posX="1" posY="5" />
+				<transitionCondition>
+					<sectionName>AscF1PROC_T_21</sectionName>
+				</transitionCondition>
+				<comment>Cancellation of the high descent request</comment>
+			</transition>
+			<transition>
+				<objPosition posX="1" posY="2" />
+				<transitionCondition>
+					<sectionName>AscF1PROC_T_20</sectionName>
+				</transitionCondition>
+				<comment>Fast descent request</comment>
+			</transition>
+			<linkSFC>
+				<directedLinkSource objectType="transition">
+					<objPosition posX="1" posY="2" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="step">
+					<objPosition posX="1" posY="4" />
+				</directedLinkDestination>
+			</linkSFC>
+			<linkSFC>
+				<directedLinkSource objectType="transition">
+					<objPosition posX="1" posY="5" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="step">
+					<objPosition posX="1" posY="1" />
+				</directedLinkDestination>
+			</linkSFC>
+			<step stepName="AscF1PROC_S_30" stepType="initialStep">
+				<objPosition posX="9" posY="9" />
+			</step>
+			<step stepName="AscF1PROC_S_31" stepType="step">
+				<objPosition posX="9" posY="12" />
+				<action qualifier="NONE">
+					<actionName>
+						<sectionName>A_AscF1PROC_S_31_1</sectionName>
+					</actionName>
+					<tValue />
+				</action>
+				<action qualifier="P0">
+					<actionName>
+						<sectionName>A_AscF1PROC_S_31_2</sectionName>
+					</actionName>
+					<tValue />
+				</action>
+				<comment>backward command
+low speed command</comment>
+			</step>
+			<transition>
+				<objPosition posX="9" posY="13" />
+				<transitionCondition>
+					<sectionName>AscF1PROC_T_31</sectionName>
+				</transitionCondition>
+				<comment>Cancellation of the low ascent request</comment>
+			</transition>
+			<transition>
+				<objPosition posX="9" posY="11" />
+				<transitionCondition>
+					<sectionName>AscF1PROC_T_30</sectionName>
+				</transitionCondition>
+				<comment>Slow ascent request</comment>
+			</transition>
+			<linkSFC>
+				<directedLinkSource objectType="transition">
+					<objPosition posX="9" posY="13" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="step">
+					<objPosition posX="9" posY="9" />
+				</directedLinkDestination>
+			</linkSFC>
+			<linkSFC>
+				<directedLinkSource objectType="step">
+					<objPosition posX="9" posY="9" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="transition">
+					<objPosition posX="9" posY="11" />
+				</directedLinkDestination>
+			</linkSFC>
+			<step stepName="AscF1PROC_S_40" stepType="initialStep">
+				<objPosition posX="1" posY="10" />
+			</step>
+			<step stepName="AscF1PROC_S_41" stepType="step">
+				<objPosition posX="1" posY="12" />
+				<action qualifier="NONE">
+					<actionName>
+						<sectionName>A_AscF1PROC_S_41_1</sectionName>
+					</actionName>
+					<tValue />
+				</action>
+				<action qualifier="P0">
+					<actionName>
+						<sectionName>A_AscF1PROC_S_41_2</sectionName>
+					</actionName>
+					<tValue />
+				</action>
+				<comment>forward command
+low speed command</comment>
+			</step>
+			<transition>
+				<objPosition posX="1" posY="14" />
+				<transitionCondition>
+					<sectionName>AscF1PROC_T_41</sectionName>
+				</transitionCondition>
+				<comment>Cancellation of the low descent request</comment>
+			</transition>
+			<transition>
+				<objPosition posX="1" posY="11" />
+				<transitionCondition>
+					<sectionName>AscF1PROC_T_40</sectionName>
+				</transitionCondition>
+				<comment>Slow descent request</comment>
+			</transition>
+			<linkSFC>
+				<directedLinkSource objectType="transition">
+					<objPosition posX="1" posY="14" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="step">
+					<objPosition posX="1" posY="10" />
+				</directedLinkDestination>
+			</linkSFC>
+			<linkSFC>
+				<directedLinkSource objectType="step">
+					<objPosition posX="1" posY="12" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="transition">
+					<objPosition posX="1" posY="14" />
+				</directedLinkDestination>
+			</linkSFC>
+		</networkSFC>
+	</chartSource>
+	<actionSource name="A_AscF1PROC_S_11_1">
+		<STSource>backwardAscF1 := true;
+highSpeedAscF1 := true;
+</STSource>
+	</actionSource>
+	<actionSource name="A_AscF1PROC_S_21_1">
+		<STSource>forwardAscF1 := true;
+highSpeedAscF1 := true;
+</STSource>
+	</actionSource>
+	<actionSource name="A_AscF1PROC_S_31_2">
+		<STSource>backwardAscF1 := false;
+lowSpeedAscF1 := false;
+</STSource>
+	</actionSource>
+	<actionSource name="A_AscF1PROC_S_31_1">
+		<STSource>backwardAscF1 := true;
+lowSpeedAscF1 := true;
+</STSource>
+	</actionSource>
+	<actionSource name="A_AscF1PROC_S_11_2">
+		<STSource>backwardAscF1 := false;
+highSpeedAscF1 := false;
+</STSource>
+	</actionSource>
+	<actionSource name="A_AscF1PROC_S_21_2">
+		<STSource>forwardAscF1 := false;
+highSpeedAscF1 := false;
+</STSource>
+	</actionSource>
+	<actionSource name="A_AscF1PROC_S_41_1">
+		<STSource>forwardAscF1 := true;
+lowSpeedAscF1 := true;
+</STSource>
+	</actionSource>
+	<actionSource name="A_AscF1PROC_S_41_2">
+		<STSource>forwardAscF1 := false;
+lowSpeedAscF1 := false;
+</STSource>
+	</actionSource>
+	<transitionSource name="AscF1PROC_T_11">
+		<STSource>(NOT RUN1_fastAscent OR (motorFaultAscF1 &gt; 0))</STSource>
+	</transitionSource>
+	<transitionSource name="AscF1PROC_T_20">
+		<STSource>(RUN1_fastDescent AND (motorFaultAscF1 = 0))</STSource>
+	</transitionSource>
+	<transitionSource name="AscF1PROC_T_21">
+		<STSource>(NOT RUN1_fastDescent OR (motorFaultAscF1 &gt; 0))</STSource>
+	</transitionSource>
+	<transitionSource name="AscF1PROC_T_30">
+		<STSource>(RUN1_slowAscent AND (motorFaultAscF1 = 0))</STSource>
+	</transitionSource>
+	<transitionSource name="AscF1PROC_T_31">
+		<STSource>(NOT RUN1_slowAscent OR (motorFaultAscF1 &gt; 0))</STSource>
+	</transitionSource>
+	<transitionSource name="AscF1PROC_T_40">
+		<STSource>(RUN1_slowDescent AND (motorFaultAscF1 = 0))</STSource>
+	</transitionSource>
+	<transitionSource name="AscF1PROC_T_41">
+		<STSource>(NOT RUN1_slowDescent OR (motorFaultAscF1 &gt; 0))</STSource>
+	</transitionSource>
+	<transitionSource name="AscF1PROC_T_10">
+		<STSource>(RUN1_fastAscent AND (motorFaultAscF1 = 0))</STSource>
+	</transitionSource>
+</SFCProgram>
+<program>
+	<identProgram name="AscF1PROC_Post" type="section" task="MAST" />
+	<STSource></STSource>
+</program>
+<program>
+	<identProgram name="ClaF1PROC_Pre" type="section" task="MAST" />
+	<STSource>IF ((ClaF1PROC_S_10.x OR ClaF1PROC_S_12.x) AND RE(F3SpinM1_acknowledgePB)) THEN
+	clampingFaultClaF1 := 0;
+END_IF;
+IF (ClaF1PROC_S_11.x AND F2RCYL1_generalFault) THEN
+	clampingFaultClaF1 := 1;
+END_IF;
+IF (ClaF1PROC_S_11.x AND F2LCYL1_generalFault) THEN
+	clampingFaultClaF1 := 2;
+END_IF;
+IF (ClaF1PROC_S_13.x AND F2RCYL1_generalFault) THEN
+	clampingFaultClaF1 := 3;
+END_IF;
+IF (ClaF1PROC_S_13.x AND F2LCYL1_generalFault) THEN
+	clampingFaultClaF1 := 4;
+END_IF;
+</STSource>
+</program>
+<SFCProgram>
+	<identProgram name="ClaF1PROC" type="section" task="MAST" />
+	<chartSource name="clamping">
+		<networkSFC>
+			<step stepName="ClaF1PROC_S_10" stepType="initialStep">
+				<objPosition posX="1" posY="1" />
+				<action qualifier="NONE">
+					<actionName>
+						<sectionName>A_ClaF1PROC_S_10_1</sectionName>
+					</actionName>
+					<tValue />
+				</action>
+				<action qualifier="P0">
+					<actionName>
+						<sectionName>A_ClaF1PROC_S_10_2</sectionName>
+					</actionName>
+					<tValue />
+				</action>
+				<comment>Wait in rest position :
+clamping elements are open
+Signalling releasing OK</comment>
+			</step>
+			<altJoint width="5" relativePos="0">
+				<objPosition posX="5" posY="13" />
+			</altJoint>
+			<step stepName="ClaF1PROC_S_11" stepType="step">
+				<objPosition posX="1" posY="4" />
+				<comment>Locking orders to
+right element and 
+left element</comment>
+			</step>
+			<altBranch width="12" relativePos="0">
+				<objPosition posX="1" posY="5" />
+			</altBranch>
+			<altJoint width="2" relativePos="0">
+				<objPosition posX="1" posY="3" />
+			</altJoint>
+			<step stepName="ClaF1PROC_S_12" stepType="step">
+				<objPosition posX="1" posY="6" />
+				<action qualifier="NONE">
+					<actionName>
+						<sectionName>A_ClaF1PROC_S_12_1</sectionName>
+					</actionName>
+					<tValue />
+				</action>
+				<action qualifier="P0">
+					<actionName>
+						<sectionName>A_ClaF1PROC_S_12_2</sectionName>
+					</actionName>
+					<tValue />
+				</action>
+				<comment>Wait in rest position :
+clamping elements are closed
+Signalling clamping OK</comment>
+			</step>
+			<step stepName="ClaF1PROC_S_13" stepType="step">
+				<objPosition posX="1" posY="9" />
+				<comment>Unlocking orders to
+right element and 
+left element</comment>
+			</step>
+			<altBranch width="9" relativePos="0">
+				<objPosition posX="1" posY="10" />
+			</altBranch>
+			<altJoint width="5" relativePos="0">
+				<objPosition posX="1" posY="8" />
+			</altJoint>
+			<step stepName="ClaF1PROC_S_14" stepType="step">
+				<objPosition posX="9" posY="12" />
+				<comment>Manual change of the situation
+(no command in automatic mode)</comment>
+			</step>
+			<altJoint width="4" relativePos="0">
+				<objPosition posX="9" posY="11" />
+			</altJoint>
+			<transition>
+				<objPosition posX="5" posY="10" />
+				<transitionCondition>
+					<sectionName>ClaF1PROC_T_16</sectionName>
+				</transitionCondition>
+				<comment>Right and left elements are unlocked</comment>
+			</transition>
+			<transition>
+				<objPosition posX="1" posY="8" />
+				<transitionCondition>
+					<sectionName>ClaF1PROC_T_12</sectionName>
+				</transitionCondition>
+				<comment>Releasing request</comment>
+			</transition>
+			<transition>
+				<objPosition posX="1" posY="5" />
+				<transitionCondition>
+					<sectionName>ClaF1PROC_T_11</sectionName>
+				</transitionCondition>
+				<comment>Right and left elements are locked</comment>
+			</transition>
+			<transition>
+				<objPosition posX="1" posY="2" />
+				<transitionCondition>
+					<sectionName>ClaF1PROC_T_10</sectionName>
+				</transitionCondition>
+				<comment>Clamping request</comment>
+			</transition>
+			<transition>
+				<objPosition posX="1" posY="10" />
+				<transitionCondition>
+					<sectionName>ClaF1PROC_T_15</sectionName>
+				</transitionCondition>
+				<comment>Clamping request</comment>
+			</transition>
+			<transition>
+				<objPosition posX="5" posY="5" />
+				<transitionCondition>
+					<sectionName>ClaF1PROC_T_13</sectionName>
+				</transitionCondition>
+				<comment>Releasing request</comment>
+			</transition>
+			<transition>
+				<objPosition posX="12" posY="5" />
+				<transitionCondition>
+					<sectionName>ClaF1PROC_T_14</sectionName>
+				</transitionCondition>
+				<comment>Clamping fault detected</comment>
+			</transition>
+			<transition>
+				<objPosition posX="9" posY="10" />
+				<transitionCondition>
+					<sectionName>ClaF1PROC_T_17</sectionName>
+				</transitionCondition>
+				<comment>Clamping fault detected</comment>
+			</transition>
+			<transition>
+				<objPosition posX="9" posY="13" />
+				<transitionCondition>
+					<sectionName>ClaF1PROC_T_18</sectionName>
+				</transitionCondition>
+				<comment>Right and left elements are locked</comment>
+			</transition>
+			<linkSFC>
+				<directedLinkSource objectType="transition">
+					<objPosition posX="1" posY="10" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="altJoint">
+					<objPosition posX="2" posY="3" />
+				</directedLinkDestination>
+			</linkSFC>
+			<linkSFC>
+				<directedLinkSource objectType="altJoint">
+					<objPosition posX="1" posY="3" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="step">
+					<objPosition posX="1" posY="4" />
+				</directedLinkDestination>
+			</linkSFC>
+			<linkSFC>
+				<directedLinkSource objectType="altBranch">
+					<objPosition posX="1" posY="5" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="transition">
+					<objPosition posX="1" posY="5" />
+				</directedLinkDestination>
+			</linkSFC>
+			<linkSFC>
+				<directedLinkSource objectType="step">
+					<objPosition posX="1" posY="6" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="transition">
+					<objPosition posX="1" posY="8" />
+				</directedLinkDestination>
+			</linkSFC>
+			<linkSFC>
+				<directedLinkSource objectType="altJoint">
+					<objPosition posX="5" posY="13" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="step">
+					<objPosition posX="1" posY="1" />
+				</directedLinkDestination>
+			</linkSFC>
+			<linkSFC>
+				<directedLinkSource objectType="transition">
+					<objPosition posX="5" posY="5" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="altJoint">
+					<objPosition posX="5" posY="8" />
+				</directedLinkDestination>
+			</linkSFC>
+			<linkSFC>
+				<directedLinkSource objectType="altJoint">
+					<objPosition posX="1" posY="8" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="step">
+					<objPosition posX="1" posY="9" />
+				</directedLinkDestination>
+			</linkSFC>
+			<linkSFC>
+				<directedLinkSource objectType="altBranch">
+					<objPosition posX="5" posY="10" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="transition">
+					<objPosition posX="5" posY="10" />
+				</directedLinkDestination>
+			</linkSFC>
+			<linkSFC>
+				<directedLinkSource objectType="altBranch">
+					<objPosition posX="9" posY="10" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="transition">
+					<objPosition posX="9" posY="10" />
+				</directedLinkDestination>
+			</linkSFC>
+			<linkSFC>
+				<directedLinkSource objectType="altBranch">
+					<objPosition posX="1" posY="10" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="transition">
+					<objPosition posX="1" posY="10" />
+				</directedLinkDestination>
+			</linkSFC>
+			<linkSFC>
+				<directedLinkSource objectType="transition">
+					<objPosition posX="12" posY="5" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="altJoint">
+					<objPosition posX="12" posY="11" />
+				</directedLinkDestination>
+			</linkSFC>
+			<linkSFC>
+				<directedLinkSource objectType="altJoint">
+					<objPosition posX="9" posY="11" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="step">
+					<objPosition posX="9" posY="12" />
+				</directedLinkDestination>
+			</linkSFC>
+			<linkSFC>
+				<directedLinkSource objectType="transition">
+					<objPosition posX="5" posY="10" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="altJoint">
+					<objPosition posX="5" posY="13" />
+				</directedLinkDestination>
+			</linkSFC>
+			<linkSFC>
+				<directedLinkSource objectType="transition">
+					<objPosition posX="1" posY="2" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="altJoint">
+					<objPosition posX="1" posY="3" />
+				</directedLinkDestination>
+			</linkSFC>
+			<linkSFC>
+				<directedLinkSource objectType="altBranch">
+					<objPosition posX="12" posY="5" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="transition">
+					<objPosition posX="12" posY="5" />
+				</directedLinkDestination>
+			</linkSFC>
+			<linkSFC>
+				<directedLinkSource objectType="altBranch">
+					<objPosition posX="5" posY="5" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="transition">
+					<objPosition posX="5" posY="5" />
+				</directedLinkDestination>
+			</linkSFC>
+			<linkSFC>
+				<directedLinkSource objectType="transition">
+					<objPosition posX="9" posY="10" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="altJoint">
+					<objPosition posX="10" posY="11" />
+				</directedLinkDestination>
+			</linkSFC>
+		</networkSFC>
+	</chartSource>
+	<actionSource name="A_ClaF1PROC_S_10_1">
+		<STSource>IF (clampingFaultClaF1 = 0) THEN
+	releasingOKClaF1 := true;
+END_IF;
+</STSource>
+	</actionSource>
+	<actionSource name="A_ClaF1PROC_S_12_1">
+		<STSource>clampingOKClaF1 := true;
+</STSource>
+	</actionSource>
+	<actionSource name="A_ClaF1PROC_S_10_2">
+		<STSource>releasingOKClaF1 := false;
+</STSource>
+	</actionSource>
+	<actionSource name="A_ClaF1PROC_S_12_2">
+		<STSource>clampingOKClaF1 := false;
+</STSource>
+	</actionSource>
+	<transitionSource name="ClaF1PROC_T_16">
+		<STSource>(F2RCYL1_inletSensor AND F2LCYL1_inletSensor)</STSource>
+	</transitionSource>
+	<transitionSource name="ClaF1PROC_T_17">
+		<STSource>(clampingFaultClaF1 &gt; 0)</STSource>
+	</transitionSource>
+	<transitionSource name="ClaF1PROC_T_18">
+		<STSource>(F2RCYL1_inletSensor AND F2LCYL1_inletSensor)</STSource>
+	</transitionSource>
+	<transitionSource name="ClaF1PROC_T_10">
+		<STSource>((RUN1_clamping AND NOT RUN1_releasing) AND (clampingFaultClaF1 = 0))</STSource>
+	</transitionSource>
+	<transitionSource name="ClaF1PROC_T_11">
+		<STSource>(F2RCYL1_outletSensor AND F2LCYL1_outletSensor)</STSource>
+	</transitionSource>
+	<transitionSource name="ClaF1PROC_T_12">
+		<STSource>((RUN1_releasing AND NOT RUN1_clamping) AND (clampingFaultClaF1 = 0))</STSource>
+	</transitionSource>
+	<transitionSource name="ClaF1PROC_T_13">
+		<STSource>(RUN1_releasing AND NOT RUN1_clamping)</STSource>
+	</transitionSource>
+	<transitionSource name="ClaF1PROC_T_14">
+		<STSource>(clampingFaultClaF1 &gt; 0)</STSource>
+	</transitionSource>
+	<transitionSource name="ClaF1PROC_T_15">
+		<STSource>(RUN1_clamping AND NOT RUN1_releasing)</STSource>
+	</transitionSource>
+</SFCProgram>
+<program>
+	<identProgram name="ClaF1PROC_Post" type="section" task="MAST" />
+	<STSource>leftLockingClaF1 := (ClaF1PROC_S_11.x OR ClaF1PROC_S_12.x);
+rightLockingClaF1 := (ClaF1PROC_S_11.x OR ClaF1PROC_S_12.x);
+</STSource>
+</program>
+<program>
+	<identProgram name="SpinF1PROC_Pre" type="section" task="MAST" />
+	<STSource>IF RE(F3SpinM1_acknowledgePB) THEN
+	rotationFaultSpinF1 := 0;
+END_IF;
+IF (SpinF1PROC_S_11.x AND F3SpinM1_generalFault) THEN
+	rotationFaultSpinF1 := 1;
+END_IF;
+</STSource>
+</program>
+<SFCProgram>
+	<identProgram name="SpinF1PROC" type="section" task="MAST" />
+	<chartSource name="spindle">
+		<networkSFC>
+			<step stepName="SpinF1PROC_S_10" stepType="initialStep">
+				<objPosition posX="1" posY="1" />
+			</step>
+			<step stepName="SpinF1PROC_S_11" stepType="step">
+				<objPosition posX="1" posY="4" />
+				<action qualifier="NONE">
+					<actionName>
+						<sectionName>A_SpinF1PROC_S_11_1</sectionName>
+					</actionName>
+					<tValue />
+				</action>
+				<action qualifier="P0">
+					<actionName>
+						<sectionName>A_SpinF1PROC_S_11_2</sectionName>
+					</actionName>
+					<tValue />
+				</action>
+				<comment>contactor excitation</comment>
+			</step>
+			<transition>
+				<objPosition posX="1" posY="5" />
+				<transitionCondition>
+					<sectionName>SpinF1PROC_T_11</sectionName>
+				</transitionCondition>
+				<comment>Stop rotation request</comment>
+			</transition>
+			<transition>
+				<objPosition posX="1" posY="2" />
+				<transitionCondition>
+					<sectionName>SpinF1PROC_T_10</sectionName>
+				</transitionCondition>
+				<comment>Rotation request</comment>
+			</transition>
+			<linkSFC>
+				<directedLinkSource objectType="transition">
+					<objPosition posX="1" posY="2" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="step">
+					<objPosition posX="1" posY="4" />
+				</directedLinkDestination>
+			</linkSFC>
+			<linkSFC>
+				<directedLinkSource objectType="transition">
+					<objPosition posX="1" posY="5" />
+				</directedLinkSource>
+				<directedLinkDestination objectType="step">
+					<objPosition posX="1" posY="1" />
+				</directedLinkDestination>
+			</linkSFC>
+		</networkSFC>
+	</chartSource>
+	<actionSource name="A_SpinF1PROC_S_11_2">
+		<STSource>contactorSpinF1 := false;
+</STSource>
+	</actionSource>
+	<actionSource name="A_SpinF1PROC_S_11_1">
+		<STSource>contactorSpinF1 := true;
+</STSource>
+	</actionSource>
+	<transitionSource name="SpinF1PROC_T_10">
+		<STSource>(RUN1_rotation AND (rotationFaultSpinF1 = 0))</STSource>
+	</transitionSource>
+	<transitionSource name="SpinF1PROC_T_11">
+		<STSource>(NOT RUN1_rotation OR (rotationFaultSpinF1 &gt; 0))</STSource>
+	</transitionSource>
+</SFCProgram>
+<program>
+	<identProgram name="SpinF1PROC_Post" type="section" task="MAST" />
+	<STSource></STSource>
+</program>
+<program>
+	<identProgram name="F1TurM1ACT" type="section" task="MAST" />
+	<LDSource nbColumns="11">
+		<networkLD>
+			<typeLine>
+				<labelCell label="Label1">
+					<comment>Forward command</comment>
+				</labelCell>
+				<emptyCell nbCells="10" />
+			</typeLine>
+			<typeLine>
+				<contact typeContact="openContact" contactVariableName="autoModeWKM1" />
+				<contact typeContact="openContact" contactVariableName="forwardAscF1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<shortCircuit>
+					<VLink />
+					<HLink nbCells="1" />
+				</shortCircuit>
+				<contact typeContact="closedContact" contactVariableName="F1TurM1_generalFault" />
+				<coil typeCoil="coil" coilVariableName="F1TurM1_forwardCmd" />
+			</typeLine>
+			<typeLine>
+				<shortCircuit>
+					<VLink />
+					<contact typeContact="openContact" contactVariableName="manualModeWKM1" />
+				</shortCircuit>
+				<contact typeContact="openContact" contactVariableName="F1TurM1_forwardPB" />
+				<shortCircuit>
+					<VLink />
+					<contact typeContact="closedContact" contactVariableName="F1TurM1_backwardPB" />
+				</shortCircuit>
+				<contact typeContact="closedContact" contactVariableName="F1TurM1_stopPB" />
+				<contact typeContact="closedContact" contactVariableName="F1TurM1_backwardCmd" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<contact typeContact="openContact" contactVariableName="F1TurM1_forwardCmd" />
+				<HLink nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<emptyLine nbRows="1" />
+			</typeLine>
+			<typeLine>
+				<labelCell label="Label2">
+					<comment>Backward command</comment>
+				</labelCell>
+				<emptyCell nbCells="10" />
+			</typeLine>
+			<typeLine>
+				<contact typeContact="openContact" contactVariableName="autoModeWKM1" />
+				<contact typeContact="openContact" contactVariableName="backwardAscF1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<shortCircuit>
+					<VLink />
+					<HLink nbCells="1" />
+				</shortCircuit>
+				<contact typeContact="closedContact" contactVariableName="F1TurM1_generalFault" />
+				<coil typeCoil="coil" coilVariableName="F1TurM1_backwardCmd" />
+			</typeLine>
+			<typeLine>
+				<shortCircuit>
+					<VLink />
+					<contact typeContact="openContact" contactVariableName="manualModeWKM1" />
+				</shortCircuit>
+				<contact typeContact="openContact" contactVariableName="F1TurM1_backwardPB" />
+				<shortCircuit>
+					<VLink />
+					<contact typeContact="closedContact" contactVariableName="F1TurM1_forwardPB" />
+				</shortCircuit>
+				<contact typeContact="closedContact" contactVariableName="F1TurM1_stopPB" />
+				<contact typeContact="closedContact" contactVariableName="F1TurM1_forwardCmd" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<contact typeContact="openContact" contactVariableName="F1TurM1_backwardCmd" />
+				<HLink nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<emptyLine nbRows="1" />
+			</typeLine>
+			<typeLine>
+				<labelCell label="Label3">
+					<comment>High speed and low speed commands</comment>
+				</labelCell>
+				<emptyCell nbCells="10" />
+			</typeLine>
+			<typeLine>
+				<contact typeContact="openContact" contactVariableName="autoModeWKM1" />
+				<contact typeContact="openContact" contactVariableName="highSpeedAscF1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<shortCircuit>
+					<VLink />
+					<HLink nbCells="1" />
+				</shortCircuit>
+				<contact typeContact="closedContact" contactVariableName="F1TurM1_generalFault" />
+				<coil typeCoil="coil" coilVariableName="F1TurM1_highSpeedCmd" />
+			</typeLine>
+			<typeLine>
+				<shortCircuit>
+					<VLink />
+					<contact typeContact="openContact" contactVariableName="manualModeWKM1" />
+				</shortCircuit>
+				<shortCircuit>
+					<VLink />
+					<contact typeContact="openContact" contactVariableName="F1TurM1_highSpeedPB" />
+				</shortCircuit>
+				<contact typeContact="closedContact" contactVariableName="F1TurM1_lowSpeedPB" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<contact typeContact="openContact" contactVariableName="F1TurM1_highSpeedCmd" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<contact typeContact="openContact" contactVariableName="autoModeWKM1" />
+				<contact typeContact="openContact" contactVariableName="lowSpeedAscF1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<shortCircuit>
+					<VLink />
+					<HLink nbCells="1" />
+				</shortCircuit>
+				<contact typeContact="closedContact" contactVariableName="F1TurM1_generalFault" />
+				<coil typeCoil="coil" coilVariableName="F1TurM1_lowSpeedCmd" />
+			</typeLine>
+			<typeLine>
+				<shortCircuit>
+					<VLink />
+					<contact typeContact="openContact" contactVariableName="manualModeWKM1" />
+				</shortCircuit>
+				<shortCircuit>
+					<VLink />
+					<contact typeContact="openContact" contactVariableName="F1TurM1_lowSpeedPB" />
+				</shortCircuit>
+				<contact typeContact="closedContact" contactVariableName="F1TurM1_highSpeedPB" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<contact typeContact="openContact" contactVariableName="F1TurM1_lowSpeedCmd" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<emptyLine nbRows="1" />
+			</typeLine>
+		</networkLD>
+	</LDSource>
+</program>
+<program>
+	<identProgram name="F2RCYL1ACT" type="section" task="MAST" />
+	<LDSource nbColumns="11">
+		<networkLD>
+			<typeLine>
+				<labelCell label="Label1">
+					<comment>Work command</comment>
+				</labelCell>
+				<emptyCell nbCells="10" />
+			</typeLine>
+			<typeLine>
+				<contact typeContact="openContact" contactVariableName="autoModeWKM1" />
+				<contact typeContact="openContact" contactVariableName="rightLockingClaF1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<shortCircuit>
+					<VLink />
+					<HLink nbCells="1" />
+				</shortCircuit>
+				<contact typeContact="closedContact" contactVariableName="F2RCYL1_generalFault" />
+				<coil typeCoil="coil" coilVariableName="F2RCYL1_workCmd" />
+			</typeLine>
+			<typeLine>
+				<contact typeContact="openContact" contactVariableName="manualModeWKM1" />
+				<contact typeContact="openContact" contactVariableName="F2RCYL1_valveWorkPB" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<emptyLine nbRows="1" />
+			</typeLine>
+		</networkLD>
+	</LDSource>
+</program>
+<program>
+	<identProgram name="F2LCYL1ACT" type="section" task="MAST" />
+	<LDSource nbColumns="11">
+		<networkLD>
+			<typeLine>
+				<labelCell label="Label1">
+					<comment>Work command</comment>
+				</labelCell>
+				<emptyCell nbCells="10" />
+			</typeLine>
+			<typeLine>
+				<contact typeContact="openContact" contactVariableName="autoModeWKM1" />
+				<contact typeContact="openContact" contactVariableName="leftLockingClaF1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<shortCircuit>
+					<VLink />
+					<HLink nbCells="1" />
+				</shortCircuit>
+				<contact typeContact="closedContact" contactVariableName="F2LCYL1_generalFault" />
+				<coil typeCoil="coil" coilVariableName="F2LCYL1_workCmd" />
+			</typeLine>
+			<typeLine>
+				<contact typeContact="openContact" contactVariableName="manualModeWKM1" />
+				<contact typeContact="openContact" contactVariableName="F2LCYL1_valveWorkPB" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<emptyLine nbRows="1" />
+			</typeLine>
+		</networkLD>
+	</LDSource>
+</program>
+<program>
+	<identProgram name="F3SpinM1ACT" type="section" task="MAST" />
+	<LDSource nbColumns="11">
+		<networkLD>
+			<typeLine>
+				<labelCell label="Label1">
+					<comment>Forward command</comment>
+				</labelCell>
+				<emptyCell nbCells="10" />
+			</typeLine>
+			<typeLine>
+				<contact typeContact="openContact" contactVariableName="autoModeWKM1" />
+				<contact typeContact="openContact" contactVariableName="contactorSpinF1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<shortCircuit>
+					<VLink />
+					<HLink nbCells="1" />
+				</shortCircuit>
+				<contact typeContact="closedContact" contactVariableName="F3SpinM1_generalFault" />
+				<coil typeCoil="coil" coilVariableName="F3SpinM1_forwardCmd" />
+			</typeLine>
+			<typeLine>
+				<shortCircuit>
+					<VLink />
+					<contact typeContact="openContact" contactVariableName="manualModeWKM1" />
+				</shortCircuit>
+				<shortCircuit>
+					<VLink />
+					<contact typeContact="openContact" contactVariableName="F3SpinM1_forwardPB" />
+				</shortCircuit>
+				<contact typeContact="closedContact" contactVariableName="F3SpinM1_stopPB" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<HLink nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<emptyCell nbCells="1" />
+				<contact typeContact="openContact" contactVariableName="F3SpinM1_forwardCmd" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+				<emptyCell nbCells="1" />
+			</typeLine>
+			<typeLine>
+				<emptyLine nbRows="1" />
+			</typeLine>
+		</networkLD>
+	</LDSource>
+</program>
+	<IOScreen version="V1.0" />
+	<settings>
+		<operatorScreens displayScreenNumber="0" fullScreen="0" />
+		<editors LDRightJustify="0" LDNbColumn="11" />
+		<languageExtension generalProc="1" generalSub="1" macroSections="1" multiToken="1" nbActiveStep="32" nbActiveActions="96" setStep="1" parallelBranches="1" multiEvolution="1" STExpressions="1" EBoolEdge="1" intDIntAsWordDWord="1" extractAnyBit="1" directRepArray="0" dynamicArray="0" arraySizeCompCheck="0" leadingDigit="0" extCharSet="0" emptyParam="1" jumpAndLabel="1" multiAssign="0" nestedComment="0" />
+		<build variableNotUsed="0" multiWritingOfVar="0" paramNotAssign="0" multiFBInstance="1" overlOfAdd="1" actif="0" comment="1" animTable="0" application="0" applevel="1" system="1" language="STRID_FRANCAIS" ldLink="0" ldOptCode="0" virtCodeGenEnable="0" freeKbytes="1" />
+	</settings>
+</FEFExchangeFile>

@@ -1,0 +1,7 @@
+ autoMode IB1
+ manualMode IB2
+ autoCmd IB3
+ onPB IB4
+ offPB IB5
+ generalFault IB6
+ cmd OB7

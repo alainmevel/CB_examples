@@ -1,0 +1,572 @@
+ ~ LF1
+ ~ LF2
+ ~ LF3
+ ~ LB4
+ ~ LF5
+ ~ LB6
+ ~ LB7
+ ~ LF8
+ ~ LB9
+ ~ LB10
+ ~ LF11
+ ~ LI12
+ ~ LB13
+ ~ LB14
+ ~ LB15
+ ~ LB16
+ ~ LB17
+ ~ LB18
+ ~ LB19
+ ~ LB20
+ ~ LB21
+ ~ LB22
+ ~ LB23
+ ~ LB24
+ ~ LB25
+ ~ LB26
+ ~ LB27
+ ~ LB28
+ ~ LB29
+ ~ LI30
+ ~ LI31
+ ~ LB32
+ ~ LB33
+ ~ LB34
+ ~ LB35
+ ~ LB36
+ ~ LB37
+ ~ LB38
+ ~ LB39
+ ~ LB40
+ ~ LB41
+ ~ LB42
+ ~ LB43
+ ~ LB44
+ ~ LB45
+ ~ LB46
+ ~ LB47
+ ~ LB48
+ ~ LB49
+ ~ LI50
+<equipment_library:binary_encoder sensors1/binary_encoder1/ 1 binaryInput 50 encoderFreezing 49 bit00 48 bit01 47 bit02 46 bit03 45 bit04 44 bit05 43 bit06 42 bit07 41 bit08 40 bit09 39 bit10 38 bit11 37 bit12 36 bit13 35 bit14 34 bit15 33 bit16 32 wordOutput 31>
+<equipment_library:gray_encoder sensors1/gray_encoder1/ 1 binaryInput 30 encoderFreezing 29 bit00 28 bit01 27 bit02 26 bit03 25 bit04 24 bit05 23 bit06 22 bit07 21 bit08 20 bit09 19 bit10 18 bit11 17 bit12 16 bit13 15 bit14 14 bit15 13 wordOutput 12>
+<equipment_library:range_sensor sensors1/range_sensor1/ 1 level 11 sensorSupply 10 rangeSensor 9>
+<equipment_library:threshold_sensor sensors1/threshold_sensor1/ 1 level 8 sensorSupply 7 thresholdSensor 6>
+<equipment_library:analog_sensor sensors1/analog_sensor1/ 1 measure 5 sensorSupply 4 realValue 3 intValue 2 dintValue 1>
+ ~ LF51
+ ~ LF52
+ ~ LF53
+ ~ LF54
+ ~ LF55
+ ~ LF56
+ ~ LF57
+ ~ LI58
+ ~ LI59
+ ~ LF60
+ ~ LF61
+ ~ LF62
+ ~ LF63
+ ~ LF64
+ ~ LF65
+ ~ LF66
+ ~ LF67
+ ~ LF68
+ ~ LF69
+ ~ LB70
+ ~ LB71
+ ~ LB72
+ ~ LB73
+ ~ LB74
+ ~ LB75
+ ~ LB76
+ ~ LB77
+ ~ LB78
+ ~ LB79
+ ~ LB80
+ ~ LB81
+ ~ LB82
+ ~ LB83
+ ~ LB84
+ ~ LB85
+ ~ LB86
+ ~ LB87
+ ~ LB88
+ ~ LB89
+ ~ LB90
+ ~ LB91
+ ~ LB92
+ ~ LB93
+ ~ LB94
+ ~ LB95
+ ~ LB96
+ ~ LB97
+ ~ LB98
+ ~ LB99
+ ~ LB100
+ ~ LF101
+ ~ LF102
+ ~ LF103
+ ~ LI104
+ ~ LI105
+ ~ LI106
+ ~ LI107
+ ~ LF108
+ ~ LF109
+ ~ LI110
+ ~ LI111
+ ~ LF112
+ ~ LF113
+ ~ LI114
+ ~ LI115
+ ~ LF116
+ ~ LF117
+ ~ LI118
+ ~ LI119
+ ~ LF120
+ ~ LF121
+ ~ LF122
+ ~ LF123
+ ~ LF124
+ ~ LF125
+ ~ LF126
+ ~ LF127
+ ~ LF128
+ ~ LF129
+ ~ LF130
+ ~ LI131
+ ~ LI132
+ ~ LF133
+ ~ LF134
+ ~ LF135
+<equipment_library:addition toolbox1/addition1/ 1 in1 135 in2 134 value 133 dintValue 132 intValue 131>
+<equipment_library:addition_10 toolbox1/addition_101/ 1 in1 130 in2 129 in3 128 in4 127 in5 126 in6 125 in7 124 in8 123 in9 122 in10 121 realValue 120 dintValue 119 intValue 118>
+<equipment_library:bounded_scale toolbox1/bounded_scale1/ 1 inputValue 117 realValue 116 dintValue 115 intValue 114>
+<equipment_library:coef_scale toolbox1/coef_scale1/ 1 inputValue 113 outputValue 112>
+<equipment_library:int2real_scale toolbox1/int2real_scale1/ 1 inputValueD 111 inputValueI 110 outputValue 109>
+<equipment_library:real2int_scale toolbox1/real2int_scale1/ 1 inputValue 108 dintValue 107 intValue 106>
+<equipment_library:int2real_conversion toolbox1/int2real_conversion1/ 1 dintInput 105 intInput 104 output 103>
+<equipment_library:linear_function toolbox1/linear_function1/ 1 input 102 output 101>
+<equipment_library:logical_and toolbox1/logical_and1/ 1 inputBit1 100 inputBit2 99 ouputBit 98>
+<equipment_library:logical_and_10 toolbox1/logical_and_101/ 1 inputBit1 97 inputBit2 96 inputBit3 95 inputBit4 94 inputBit5 93 inputBit6 92 inputBit7 91 inputBit8 90 inputBit9 89 inputBit10 88 outputBit 87>
+<equipment_library:logical_or toolbox1/logical_or1/ 1 inputBit1 86 inputBit2 85 outputBit 84>
+<equipment_library:logical_xor toolbox1/logical_xor1/ 1 inputBit1 83 inputBit2 82 outputBit 81>
+<equipment_library:logical_or_10 toolbox1/logical_or_101/ 1 inputBit1 80 inputBit2 79 inputBit3 78 inputBit4 77 inputBit5 76 inputBit6 75 inputBit7 74 inputBit8 73 inputBit9 72 inputBit10 71 outputBit 70>
+<equipment_library:average toolbox1/average1/ 1 input1 69 input2 68 result 67>
+<equipment_library:average_5 toolbox1/average_51/ 1 input1 66 input2 65 input3 64 input4 63 input5 62 result 61>
+<equipment_library:real2int_conversion toolbox1/real2int_conversion1/ 1 input 60 dintOutput 59 intOutput 58>
+<equipment_library:trend toolbox1/trend1/ 1 gradient 57 interceptPoint 56 A 55 B 54 time 53 realOutput 52 theoricalOutput 51>
+ ~ LB136
+ ~ LB137
+ ~ LB138
+ ~ LB139
+ ~ LB140
+ ~ LB141
+ ~ LB142
+ ~ LB143
+ ~ LB144
+ ~ LB145
+ ~ LB146
+ ~ LB147
+ ~ LB148
+ ~ LB149
+ ~ LB150
+ ~ LB151
+ ~ LB152
+ ~ LB153
+ ~ LB154
+ ~ LB155
+ ~ LB156
+ ~ LB157
+ ~ LB158
+ ~ LB159
+ ~ LB160
+ ~ LB161
+<equipment_library:fuse power1/fuse1/ 1 energyBefore 161 sensorSupply 160 fuseState 159 energyAfter 158>
+<equipment_library:relay power1/relay1/ 1 contactorInterlock 157 cmdSupply 156 sensorSupply 155 energyBefore 154 interlockFB 153 energyAfter 152>
+<equipment_library:circuit_braker power1/circuit_braker1/ 1 energyBefore 151 sensorSupply 150 thermal 149 energyAfter 148>
+<equipment_library:power_supply power1/power_supply1/ 1 inputEnergy 147 outputEnergy 146>
+<equipment_library:light power1/light1/ 1 luminous 145>
+<equipment_library:switch_3pos_2outputs power1/switch_3pos_2outputs1/ 1 leftVariable 144 rightVariable 143>
+<equipment_library:switch_2pos_2outputs power1/switch_2pos_2outputs1/ 1 leftVariable 142 rightVariable 141>
+<equipment_library:switch_2pos_1output power1/switch_2pos_1output1/ 1 variable 140>
+<equipment_library:illuminated_button power1/illuminated_button1/ 1 luminous 139 PB 138>
+<equipment_library:maintained_button power1/maintained_button1/ 1 pb 137>
+<equipment_library:momentary_button power1/momentary_button1/ 1 PB 136>
+ ~ LF162
+ ~ LF163
+ ~ LB164
+ ~ LF165
+ ~ LF166
+ ~ LB167
+ ~ LB168
+ ~ LF169
+ ~ LF170
+ ~ LB171
+ ~ LB172
+ ~ LB173
+ ~ LB174
+ ~ LF175
+ ~ LF176
+ ~ LB177
+ ~ LB178
+ ~ LF179
+ ~ LF180
+ ~ LB181
+ ~ LB182
+ ~ LF183
+ ~ LF184
+ ~ LB185
+ ~ LF186
+ ~ LB187
+ ~ LF188
+ ~ LF189
+ ~ LB190
+ ~ LF191
+ ~ LF192
+ ~ LF193
+ ~ LF194
+ ~ LF195
+ ~ LF196
+ ~ LF197
+ ~ LF198
+ ~ LB199
+ ~ LB200
+ ~ LB201
+ ~ LB202
+ ~ LF203
+ ~ LF204
+ ~ LF205
+ ~ LF206
+ ~ LF207
+ ~ LB208
+ ~ LB209
+ ~ LF210
+ ~ LF211
+ ~ LF212
+ ~ LF213
+ ~ LF214
+ ~ LB215
+ ~ LB216
+ ~ LF217
+ ~ LF218
+ ~ LF219
+ ~ LF220
+ ~ LF221
+ ~ LF222
+ ~ LF223
+ ~ LB224
+ ~ LF225
+ ~ LB226
+ ~ LF227
+ ~ LB228
+ ~ LF229
+ ~ LF230
+ ~ LF231
+ ~ LF232
+ ~ LF233
+ ~ LB234
+ ~ LF235
+ ~ LF236
+ ~ LF237
+ ~ LF238
+ ~ LF239
+ ~ LF240
+ ~ LF241
+ ~ LF242
+ ~ LF243
+ ~ LF244
+ ~ LF245
+ ~ LF246
+<equipment_library:axle actuators1/axle1/ 1 speed 246 positionTranslat 245 percentTranslat 244 incTranslat 243>
+<equipment_library:hopper actuators1/hopper1/ 1 volumeExtraction 242 volumeFilling 241 densityInput 240 levelHopper 239 densityOutput 238 weight 237 percentLevel 236 volumeOutput 235>
+<equipment_library:cam_1dir_1speed actuators1/cam_1dir_1speed1/ 1 forward 234 positionTranslat 233 percentTranslat 232 incrementTranslat 231 angleRotationDeg 230 angleRotationRad 229>
+<equipment_library:balance actuators1/balance1/ 1 reset 228 weight 227 calibration 226 valueWeight 225 stableWeight 224>
+<equipment_library:cam actuators1/cam1/ 1 rotationSpeedRadS 223 rotationSpeedDegS 222 positionTranslat 221 percentTranslat 220 incrementTranslat 219 angleRotationDeg 218 angleRotationRad 217>
+<equipment_library:cam_1dir_2speed actuators1/cam_1dir_2speed1/ 1 highSpeed 216 lowSpeed 215 positionTranslat 214 percentTranslat 213 incrementTranslat 212 angleRotationDeg 211 angleRotationRad 210>
+<equipment_library:cam_2dir_1speed actuators1/cam_2dir_1speed1/ 1 forward 209 backward 208 positionTranslat 207 percentTranslat 206 incrementTranslat 205 angleRotationDeg 204 angleRotationRad 203>
+<equipment_library:cam_2dir_2speed actuators1/cam_2dir_2speed1/ 1 highSpeed 202 lowSpeed 201 forward 200 backward 199 positionTranslat 198 percentTranslat 197 incrementTranslat 196 angleRotationDeg 195 angleRotationRad 194>
+<equipment_library:conveyor_belt actuators1/conveyor_belt1/ 1 volumeIn 193 depositPosition 192 speed 191 openValve 190 volumeOutFwd 189 volumeOutBwd 188 controllerRot 187 volumeOutValve 186>
+<equipment_library:ramp_1dir_1speed actuators1/ramp_1dir_1speed1/ 1 fwdState 185 positionRamp 184 percentRamp 183>
+<equipment_library:ramp_1dir_2speed actuators1/ramp_1dir_2speed1/ 1 fwdHighSpeedState 182 fwdLowSpeedState 181 positionRamp 180 percentRamp 179>
+<equipment_library:ramp_2dir_1speed actuators1/ramp_2dir_1speed1/ 1 fwdState 178 bwdState 177 positionRamp 176 percentRamp 175>
+<equipment_library:ramp_2dir_2speed actuators1/ramp_2dir_2speed1/ 1 fwdHighSpeedState 174 fwdLowSpeedState 173 bwdHighSpeedState 172 bwdLowSpeedState 171 positionRamp 170 percentRamp 169>
+<equipment_library:double_acting_rod actuators1/double_acting_rod1/ 1 pipeWork 168 pipeRest 167 rodPosition 166 rodPercent 165>
+<equipment_library:single_acting_rod actuators1/single_acting_rod1/ 1 pipeWork 164 rodPosition 163 rodPercent 162>
+ ~ LB247
+ ~ LB248
+ ~ LB249
+ ~ LB250
+ ~ LB251
+ ~ LB252
+ ~ LB253
+ ~ LB254
+ ~ LB255
+ ~ LB256
+ ~ LB257
+ ~ LB258
+ ~ LB259
+ ~ LB260
+ ~ LB261
+ ~ LB262
+ ~ LB263
+ ~ LB264
+ ~ LB265
+ ~ LB266
+ ~ LB267
+ ~ LB268
+ ~ LB269
+ ~ LB270
+ ~ LB271
+ ~ LB272
+ ~ LB273
+ ~ LB274
+ ~ LB275
+ ~ LB276
+ ~ LB277
+ ~ LB278
+ ~ LB279
+ ~ LB280
+ ~ LB281
+ ~ LB282
+ ~ LB283
+ ~ LB284
+ ~ LB285
+ ~ LB286
+ ~ LB287
+ ~ LB288
+ ~ LB289
+ ~ LB290
+ ~ LB291
+ ~ LB292
+ ~ LB293
+ ~ LB294
+ ~ LB295
+ ~ LB296
+ ~ LB297
+ ~ LB298
+ ~ LB299
+ ~ LB300
+ ~ LB301
+ ~ LB302
+ ~ LB303
+ ~ LB304
+ ~ LB305
+ ~ LB306
+ ~ LB307
+ ~ LB308
+ ~ LB309
+ ~ LB310
+ ~ LB311
+ ~ LB312
+ ~ LB313
+ ~ LB314
+ ~ LB315
+ ~ LB316
+ ~ LB317
+<equipment_library:contactor preactuators1/contactor1/ 1 voltage380 317 cmdSupply 316 sensorSupply 315 forward 314 forwardState 313 contactorFB 312 thermal 311>
+<equipment_library:contactor_1dir_2speed preactuators1/contactor_1dir_2speed1/ 1 voltage380 310 cmdSupply 309 sensorSupply 308 highSpeed 307 lowSpeed 306 fwdHsState 305 fwdLsState 304 highSpeedFB 303 lowSpeedFB 302 thermal 301>
+<equipment_library:contactor_2dir_1speed preactuators1/contactor_2dir_1speed1/ 1 voltage380 300 cmdSupply 299 sensorSupply 298 forward 297 backward 296 fwdHsState 295 bwdHsState 294 forwardFB 293 backwardFB 292 thermal 291>
+<equipment_library:contactor_2dir_2speed preactuators1/contactor_2dir_2speed1/ 1 voltage380 290 cmdSupply 289 sensorSupply 288 forward 287 backward 286 highSpeed 285 lowSpeed 284 fwdHsState 283 fwdLsState 282 bwdHsState 281 bwdLsState 280 forwardFB 279 backwardFB 278 highSpeedFB 277 lowSpeedFB 276 thermal 275>
+<equipment_library:control_valve_32 preactuators1/control_valve_321/ 1 energy 274 cmdSupply 273 ctrlValve 272 pipeWork 271 pipeRest 270 workingMode 269>
+<equipment_library:control_valve_53 preactuators1/control_valve_531/ 1 valveWork 268 valveRest 267 energy 266 cmdSupply 265 pipeWork 264 pipeRest 263 workMode 262 restMode 261>
+<equipment_library:control_valve_52 preactuators1/control_valve_521/ 1 energy 260 cmdSupply 259 valveWork 258 valveRest 257 pipeWork 256 pipeRest 255 workMode 254 restMode 253>
+<equipment_library:control_valve_42 preactuators1/control_valve_421/ 1 energy 252 cmdSupply 251 ctrlValve 250 pipeWork 249 pipeRest 248 workingMode 247>
+ ~ LF318
+ ~ LF319
+ ~ LB320
+ ~ LB321
+ ~ LF322
+ ~ LB323
+ ~ LB324
+ ~ LB325
+ ~ LB326
+ ~ LF327
+ ~ LF328
+ ~ LB329
+ ~ LB330
+ ~ LB331
+ ~ LB332
+ ~ LB333
+ ~ LB334
+ ~ LB335
+ ~ LB336
+ ~ LB337
+ ~ LB338
+ ~ LB339
+ ~ LB340
+ ~ LF341
+ ~ LF342
+ ~ LB343
+ ~ LB344
+ ~ LB345
+ ~ LB346
+ ~ LB347
+ ~ LB348
+ ~ LB349
+ ~ LB350
+ ~ LF351
+ ~ LF352
+ ~ LB353
+ ~ LB354
+ ~ LB355
+ ~ LB356
+ ~ LB357
+ ~ LB358
+ ~ LB359
+ ~ LB360
+ ~ LF361
+ ~ LF362
+ ~ LB363
+ ~ LB364
+ ~ LB365
+ ~ LB366
+ ~ LB367
+ ~ LB368
+<equipment_library:motor_1dir_1speed motors1/motor_1dir_1speed1/ 1 voltage380 368 cmdSupply 367 sensorSupply 366 forward 365 forwardFB 364 thermal 363 speedVal 362 speedPercent 361>
+<equipment_library:motor_1dir_2speed motors1/motor_1dir_2speed1/ 1 voltage380 360 cmdSupply 359 sensorSupply 358 highSpeed 357 lowSpeed 356 highSpeedFB 355 lowSpeedFB 354 thermal 353 speedVal 352 speedPercent 351>
+<equipment_library:motor_2dir_1speed motors1/motor_2dir_1speed1/ 1 voltage380 350 cmdSupply 349 sensorSupply 348 forward 347 backward 346 forwardFB 345 backwardFB 344 thermal 343 speedVal 342 speedPercent 341>
+<equipment_library:motor_2dir_2speed motors1/motor_2dir_2speed1/ 1 voltage380 340 cmdSupply 339 sensorSupply 338 forward 337 backward 336 highSpeed 335 lowSpeed 334 forwardFB 333 backwardFB 332 highSpeedFB 331 lowSpeedFB 330 thermal 329 speedVal 328 speedPercent 327>
+<equipment_library:variable_speed_drive motors1/variable_speed_drive1/ 1 voltage380 326 cmdSupply 325 sensorSupply 324 forward 323 speedSetpoint 322 forwardFB 321 thermal 320 speedVal 319 speedPercent 318>
+ ~ LF369
+ ~ LF370
+ ~ LF371
+ ~ LB372
+ ~ LB373
+ ~ LB374
+ ~ LB375
+ ~ LB376
+ ~ LB377
+ ~ LB378
+ ~ LF379
+ ~ LF380
+ ~ LF381
+ ~ LB382
+ ~ LB383
+ ~ LB384
+ ~ LB385
+ ~ LB386
+ ~ LB387
+ ~ LB388
+ ~ LB389
+ ~ LB390
+ ~ LB391
+ ~ LF392
+ ~ LF393
+ ~ LF394
+ ~ LB395
+ ~ LB396
+ ~ LB397
+ ~ LB398
+ ~ LB399
+ ~ LB400
+ ~ LB401
+ ~ LF402
+ ~ LF403
+ ~ LF404
+ ~ LB405
+ ~ LB406
+ ~ LB407
+ ~ LB408
+ ~ LB409
+ ~ LB410
+<equipment_library:single_acting_jack jacks1/single_acting_jack1/ 1 energy 410 cmdSupply 409 sensorSupply 408 valveWork 407 outletSensor 406 inletSensor 405 rodPosition 404 rodPercent 403 incrementValue 402>
+<equipment_library:double_acting_jack jacks1/double_acting_jack1/ 1 energy 401 cmdSupply 400 sensorSupply 399 valveWork 398 valveRest 397 outletSensor 396 inletSensor 395 rodPosition 394 rodPercent 393 incrementValue 392>
+<equipment_library:electric_jack jacks1/electric_jack1/ 1 voltage380 391 cmdSupply 390 sensorSupply 389 valveWork 388 valveRest 387 outletSensor 386 inletSensor 385 valveOpen 384 valveClosed 383 thermal 382 rodPosition 381 rodPercent 380 incrementValue 379>
+<equipment_library:double_acting_jack_lmp jacks1/double_acting_jack_lmp1/ 1 energy 378 cmdSupply 377 sensorSupply 376 valveWork 375 valveRest 374 outletSensor 373 inletSensor 372 rodPosition 371 rodPercent 370 incrementValue 369>
+ ~ LF411
+ ~ LF412
+ ~ LB413
+ ~ LB414
+ ~ LF415
+ ~ LB416
+ ~ LB417
+ ~ LB418
+ ~ LB419
+ ~ LF420
+ ~ LF421
+ ~ LF422
+ ~ LB423
+ ~ LB424
+ ~ LF425
+ ~ LF426
+ ~ LB427
+ ~ LB428
+ ~ LB429
+ ~ LB430
+ ~ LF431
+ ~ LF432
+ ~ LB433
+ ~ LB434
+ ~ LF435
+ ~ LB436
+ ~ LB437
+ ~ LB438
+ ~ LB439
+ ~ LF440
+ ~ LF441
+ ~ LF442
+ ~ LF443
+ ~ LB444
+ ~ LB445
+ ~ LB446
+ ~ LB447
+ ~ LB448
+ ~ LF449
+ ~ LB450
+ ~ LB451
+ ~ LB452
+ ~ LB453
+ ~ LB454
+ ~ LF455
+ ~ LF456
+ ~ LB457
+ ~ LB458
+ ~ LB459
+ ~ LB460
+ ~ LB461
+ ~ LB462
+ ~ LB463
+ ~ LB464
+ ~ LF465
+ ~ LF466
+ ~ LB467
+ ~ LB468
+ ~ LB469
+ ~ LB470
+ ~ LB471
+ ~ LB472
+ ~ LF473
+ ~ LF474
+ ~ LF475
+ ~ LF476
+ ~ LF477
+ ~ LB478
+ ~ LB479
+ ~ LF480
+ ~ LB481
+ ~ LB482
+ ~ LB483
+ ~ LB484
+ ~ LF485
+ ~ LF486
+ ~ LB487
+ ~ LB488
+ ~ LF489
+ ~ LB490
+ ~ LB491
+ ~ LB492
+ ~ LB493
+ ~ LB494
+ ~ LF495
+ ~ LF496
+<equipment_library:flow_sensor batch1/flow_sensor1/ 1 inputFlow 496 outputFlow 495>
+<equipment_library:on_off_valve batch1/on_off_valve1/ 1 voltage380 494 cmdSupply 493 sensorSupply 492 openCmd 491 closeCmd 490 inputFlow 489 openedSensor 488 closedSensor 487 outputFlow 486 percentOpening 485>
+<equipment_library:single_acting_valve batch1/single_acting_valve1/ 1 voltage380 484 cmdSupply 483 sensorSupply 482 openCmd 481 inputFlow 480 openedSensor 479 closedSensor 478 outputFlow 477 percentOpening 476>
+<equipment_library:tank batch1/tank1/ 1 inletFlow 475 outletFlow 474 tankLevel 473>
+<equipment_library:agitator_1speed batch1/agitator_1speed1/ 1 voltage380 472 cmdSupply 471 sensorSupply 470 cmd 469 cmdFB 468 thermal 467 speedVal 466 speedPercent 465>
+<equipment_library:agitator_2speed batch1/agitator_2speed1/ 1 voltage380 464 cmdSupply 463 sensorSupply 462 highSpeed 461 lowSpeed 460 highSpeedFB 459 lowSpeedFB 458 thermal 457 speedVal 456 speedPercent 455>
+<equipment_library:motorized_valve batch1/motorized_valve1/ 1 voltage380 454 cmdSupply 453 sensorSupply 452 openCmd 451 closeCmd 450 inputFlow 449 openedSensor 448 closedSensor 447 thermal 446 openFB 445 closeFB 444 outputFlow 443 percentOpening 442>
+<equipment_library:flow_compute batch1/flow_compute1/ 1 inputFlow 441 outputFlow 440>
+<equipment_library:on_off_pump batch1/on_off_pump1/ 1 voltage380 439 cmdSupply 438 sensorSupply 437 onCmd 436 inputFlow 435 onFB 434 thermal 433 speedVal 432 outputFlow 431>
+<equipment_library:analog_pump batch1/analog_pump1/ 1 voltage380 430 cmdSupply 429 sensorSupply 428 onCmd 427 setpoint 426 inputFlow 425 onFB 424 thermal 423 speedVal 422 outputFlow 421>
+<equipment_library:control_valve batch1/control_valve1/ 1 inputFlow 420 voltage380 419 cmdSupply 418 sensorSupply 417 onCmd 416 setpoint 415 openedSensor 414 closedSensor 413 outputFlow 412 percentOpening 411>

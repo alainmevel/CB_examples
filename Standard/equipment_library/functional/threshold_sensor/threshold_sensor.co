@@ -1,0 +1,7 @@
+ level IF1
+ sensorSupply IB2
+ thresholdSensor OB3
+ threshold PF4
+ wiringLogic PB5
+ d_sensor DB6
+ v_d_sensor DB7

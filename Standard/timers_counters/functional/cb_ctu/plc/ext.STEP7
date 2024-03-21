@@ -1,0 +1,5 @@
+UTF8#1 11 TNI Sos mac124 2 
+
+1 92 1 2 531 FUNCTION_BLOCK CB_CTUTITLE = 'Compteur'VERSION : '1.0'AUTHOR  : 'TNI'NAME    : 'CB_CTU'FAMILY  : 'CB'VAR_INPUT  // Paramtres d'entre  CU : BOOL;  R : BOOL;  PV : INT;END_VARVAR_OUTPUT // Paramtres de sortie    QU : BOOL;    CV : INT; END_VARIF R THEN   // Raz CV    CV := 0;ELSE    IF (CU AND (CV < 32767)) THEN       CV := CV + 1;    // Incrementation valeur courante        END_IF;END_IF;            QU:= (CV >= PV);    // Affectation des sorties                                END_FUNCTION_BLOCK0 0 0 0 
+2 73 6 suffix1 4 .scl0 
+SŒI

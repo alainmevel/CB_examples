@@ -1,0 +1,20 @@
+
+FUNCTION CB_max_dint : dint
+
+
+TITLE = ' Search for the greater variable '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : maxDint
+FAMILY  : TNI
+
+VAR_INPUT
+    IN0 : DINT;
+    IN1 : DINT;
+END_VAR
+
+BEGIN
+
+    CB_max_dint := MAX(IN1 := IN0, IN2 := IN1);
+
+END_FUNCTION

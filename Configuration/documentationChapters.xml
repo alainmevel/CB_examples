@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<DOCUMENTATION_CHAPTER_LIST>
+	<CHAPTER NAME="SRS" TITLE="Software Requirements Specification" LEVEL="APPLICATION" EDITABLE="true">
+	</CHAPTER>
+	<CHAPTER NAME="SRTS" TITLE="Software Requirements Test Specification" LEVEL="APPLICATION" EDITABLE="true">
+	</CHAPTER>
+	<CHAPTER NAME="SAS" TITLE="Software Architecture Specification" LEVEL="APPLICATION" EDITABLE="true">
+	</CHAPTER>
+	<CHAPTER NAME="SDS" TITLE="Software Design Specification" LEVEL="APPLICATION" EDITABLE="true">
+	</CHAPTER>
+	<CHAPTER NAME="SMDS" TITLE="Software Module Design Specification" LEVEL="MAC" EDITABLE="true">
+	</CHAPTER>
+	<CHAPTER NAME="SMTS" TITLE="Software Module Test Specification" LEVEL="MAC" EDITABLE="true">
+	</CHAPTER>
+	<CHAPTER NAME="CD" TITLE="Component Description" LEVEL="TERMINAL" EDITABLE="true">
+	</CHAPTER>
+</DOCUMENTATION_CHAPTER_LIST>

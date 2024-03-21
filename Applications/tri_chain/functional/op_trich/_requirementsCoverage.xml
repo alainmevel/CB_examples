@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: controlbuild -->
+
+<APPLICATION_REQUIREMENTS>
+	<NODE NAME="op_trich" TYPE="mac" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\op_trich" UUID="5ae9297d-5be9-454d-b4a1-b1bbf7955194">
+		<CHILDREN>
+			<NODE NAME="creation1" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\creation" UUID="4ca91d77-42ed-4c57-8ebf-c2eff2bd24e2">
+				<CHILDREN>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="chain1" TYPE="mac" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\op_chain" UUID="a8492b99-4e13-4707-8930-5f8792650018">
+				<CHILDREN>
+					<NODE NAME="motor1dir" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\motor_1dir_1speed" UUID="22c78be9-4b53-4ba8-8b21-023e0d834062">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="runButton" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\button" UUID="772c3b9b-d4ce-4483-a10a-ab8ac0e43066">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="start_sensor" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\passing_sensor" UUID="287e0fc7-1f2e-4f09-a325-13598d8df58c">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="end_sensor" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\passing_sensor" UUID="5f72515b-835f-42de-8f48-63c0c36a88e9">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="chain" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\conveyor" UUID="4edceac9-5517-4e1f-b002-df994bd5ab96">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="chain2" TYPE="mac" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\op_chain" UUID="928bfd24-b9a3-48e9-9bdc-c900bdffb527">
+				<CHILDREN>
+					<NODE NAME="motor1dir" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\motor_1dir_1speed" UUID="7d4fe748-ca69-4a19-9b8f-bd22865950ae">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="runButton" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\button" UUID="f89b730a-d76c-4b4d-9dbb-fb9904d48840">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="start_sensor" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\passing_sensor" UUID="5561a80a-4e25-4834-8e34-7e9433fe6f28">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="end_sensor" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\passing_sensor" UUID="195e58dc-b5dd-4b55-99ad-804b026f98de">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="chain" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\conveyor" UUID="d6322d04-6364-4cdf-ad6e-f2c87da2c0f4">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="creation2" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\creation" UUID="149fa405-67f8-42cc-b1df-e460ebbeea2a">
+				<CHILDREN>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="chain3" TYPE="mac" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\op_chain" UUID="d02da9fd-e752-4245-9e17-5272db378930">
+				<CHILDREN>
+					<NODE NAME="motor1dir" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\motor_1dir_1speed" UUID="8ed4a761-70a4-4566-845a-2778a416671c">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="runButton" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\button" UUID="10cef75e-d7a1-4aa3-b88e-ab4f160d5c4c">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="start_sensor" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\passing_sensor" UUID="30413c34-da10-4fb9-b70e-ad782d9abb9c">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="end_sensor" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\passing_sensor" UUID="249aed90-5122-4fa6-a2a6-32dd78571d25">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="chain" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\conveyor" UUID="ccfe7cdb-615c-4715-84e2-7bdc5164ccb6">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="outputChain" TYPE="mac" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\op_chain" UUID="78fadb69-a068-47b1-aa78-1d2a771b6fc0">
+				<CHILDREN>
+					<NODE NAME="motor1dir" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\motor_1dir_1speed" UUID="05abf035-16c1-4df9-b50a-8aac2eab1c94">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="runButton" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\button" UUID="85eb2f37-ef3e-4afd-a3e2-b700fd5ecc21">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="start_sensor" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\passing_sensor" UUID="8282d9b4-0a83-45a9-bab2-2f808553729a">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="end_sensor" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\passing_sensor" UUID="ee7f1716-ed90-4f3a-9933-cdfb9ee18183">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="chain" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\conveyor" UUID="9ccd68a6-8e6e-40fa-84f9-9171660f176e">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="shuttle" TYPE="mac" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\op_shuttle" UUID="66a66a16-2651-4c85-b1ea-240a72cce502">
+				<CHILDREN>
+					<NODE NAME="motor2dir" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\motor_2dir_1speed" UUID="445adb6f-7971-4e2c-a2f0-acd824827981">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="chainMotor" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\motor_1dir_1speed" UUID="1a2e2629-99a6-434d-b805-78fe6db9538f">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="axle" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\axle" UUID="fa69836d-3879-43af-8dc9-8ca13dc74ae5">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="shuttle" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\shuttle" UUID="64c1fd8b-3c7b-4ae8-a81e-3d26cfa88285">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="pos1Sensor" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\range_sensor" UUID="ec1975cc-7d83-47b6-abe8-7d33fe34e938">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="pos2Sensor" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\range_sensor" UUID="21a18b1a-3f12-4566-af69-ced1fc1fe467">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="pos3Sensor" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\range_sensor" UUID="58ec486f-7c56-4cd7-81e2-d6a9418f8a7a">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="endSensor" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\passing_sensor2" UUID="5be65093-240e-4d64-a8ac-e96895cf8b04">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="runButton" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\button" UUID="00cdfd2d-59e9-4b61-bc20-8584e26fc5f7">
+				<CHILDREN>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="creation3" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\creation" UUID="6f4b1e2e-63f4-4dbd-bbfb-682da2d40c0d">
+				<CHILDREN>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="trash" TYPE="c" MODEL_PATH="e:\dev\ControlBuild_2012-1\examples\examples\Applications\tri_chain\functional\trash" UUID="bc2c26c2-b55e-41c6-bdd7-6b8fc13f97c1">
+				<CHILDREN>
+				</CHILDREN>
+			</NODE>
+		</CHILDREN>
+	</NODE>
+</APPLICATION_REQUIREMENTS>

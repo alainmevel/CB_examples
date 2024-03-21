@@ -1,0 +1,110 @@
+FUNCTION FC82: VOID
+AUTHOR : CB
+VAR_INPUT
+        combE : INT;
+END_VAR
+
+LABEL
+        combi_e, actions, combi_s;
+END_LABEL
+
+BEGIN
+        IF (combE = 0) THEN GOTO actions;
+        END_IF;
+(* Gestion des combinatoires d'entree *)
+combi_e: ;
+RETURN;
+
+(* Gestion des actions du graphe *)
+actions: 
+(* Step activity of Step10 *)
+IF DB82.Step10.X THEN
+"DB120".KNEAD1_nbCycles := 0;
+END_IF;
+
+(* Step activity of Step11 *)
+
+(* Step activity of Step12 *)
+IF DB82.Step12.S1 THEN
+"DB120".KNEAD1_knead := TRUE;
+END_IF;
+IF DB82.Step12.X THEN
+"DB120".KNEAD1_knead := TRUE;
+END_IF;
+IF DB82.Step12.S0 THEN
+"DB120".KNEAD1_knead := FALSE;
+END_IF;
+
+(* Step activity of Step13 *)
+IF DB82.Step13.S1 THEN
+"DB120".KNEAD1_knead := TRUE;
+END_IF;
+IF DB82.Step13.X THEN
+"DB120".KNEAD1_knead := TRUE;
+END_IF;
+IF DB82.Step13.S0 THEN
+"DB120".KNEAD1_knead := FALSE;
+END_IF;
+
+(* Step activity of Step14 *)
+IF DB82.Step14.S1 THEN
+"DB120".KNEAD1_evacuateMixture := TRUE;
+END_IF;
+IF DB82.Step14.X THEN
+"DB120".KNEAD1_evacuateMixture := TRUE;
+END_IF;
+IF DB82.Step14.S0 THEN
+"DB120".KNEAD1_evacuateMixture := FALSE;
+END_IF;
+
+(* Step activity of Step15 *)
+IF DB82.Step15.X THEN
+IF (DB82.Step15.S1) THEN
+	"DB120".KNEAD1_nbCycles := "DB120".KNEAD1_nbCycles + 1;
+END_IF;
+END_IF;
+
+(* Step activity of Step16 *)
+IF DB82.Step16.S1 THEN
+"DB120".KNEAD1_clean := TRUE;
+"DB120".KNEAD1_knead := TRUE;
+END_IF;
+IF DB82.Step16.X THEN
+"DB120".KNEAD1_clean := TRUE;
+
+"DB120".KNEAD1_knead := TRUE;
+
+"DB120".KNEAD1_nbCycles := 0;
+END_IF;
+IF DB82.Step16.S0 THEN
+"DB120".KNEAD1_clean := FALSE;
+"DB120".KNEAD1_knead := FALSE;
+END_IF;
+
+(* Step activity of Step17 *)
+IF DB82.Step17.S1 THEN
+"DB120".KNEAD1_kneadingOK := TRUE;
+END_IF;
+IF DB82.Step17.X THEN
+"DB120".KNEAD1_kneadingOK := TRUE;
+END_IF;
+IF DB82.Step17.S0 THEN
+"DB120".KNEAD1_kneadingOK := FALSE;
+END_IF;
+
+(* Gestion des combinatoires de sortie *)
+combi_s: 
+IF NOT "DB120".WKM1_cycleInProgress THEN
+	"DB120".KNEAD1_knead := FALSE;
+	
+	"DB120".KNEAD1_clean := FALSE;
+	
+	"DB120".KNEAD1_evacuateMixture := FALSE;
+END_IF;
+
+"DB120".KNEAD1_cleaningEnd := NOT "DB120".WKM1_cycleInProgress OR NOT "DB120".KNEAD1_clean;
+
+"DB120".KNEAD1_evacMixtureEnd := NOT "DB120".WKM1_cycleInProgress OR NOT "DB120".KNEAD1_evacuateMixture;
+
+(* Memory edges *)
+END_FUNCTION

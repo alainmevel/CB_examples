@@ -1,0 +1,24 @@
+
+FUNCTION CB_sub_dt_t : DT
+
+TITLE = ' Substract a date and time to a date and time'
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : subDt_t
+FAMILY  : TNI
+
+VAR_INPUT
+    IN0 : DT;
+    IN1 : TIME;
+END_VAR
+VAR_TEMP
+    CIN0 : DT;
+    temp1 : DT;
+END_VAR
+
+
+BEGIN
+    CIN0 := IN0;
+    temp1 := CIN0 - IN1;  
+    CB_sub_dt_t := temp1;
+END_FUNCTION

@@ -1,0 +1,24 @@
+ AlarmD1L OB1
+ AlarmD2L OB2
+ AlarmD3L OB3
+ AlarmD1R OB4
+ AlarmD2R OB5
+ AlarmD3R OB6
+ ~ LB7
+ ~ LB8
+ ~ LB9
+ ~ LB10
+ ~ LB11
+ ~ LB12
+ ~ LB13
+ ~ LB14
+ ~ LB15
+ ~ LB16
+ ~ LB17
+ ~ LB18
+<tni_train:op_alarm AlarmD1L/ 1 enableAlarm 18 resetKey 17 alarm 1>
+<tni_train:op_alarm AlarmD2L/ 1 enableAlarm 16 resetKey 15 alarm 2>
+<tni_train:op_alarm AlarmD3L/ 1 enableAlarm 14 resetKey 13 alarm 3>
+<tni_train:op_alarm AlarmD1R/ 1 enableAlarm 12 resetKey 11 alarm 4>
+<tni_train:op_alarm AlarmD2R/ 1 enableAlarm 10 resetKey 9 alarm 5>
+<tni_train:op_alarm AlarmD3R/ 1 enableAlarm 8 resetKey 7 alarm 6>

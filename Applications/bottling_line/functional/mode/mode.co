@@ -1,0 +1,15 @@
+ powerUpPB IB1
+ emergencyStopPB IB2
+ manual IB3
+ auto IB4
+ acknowledgePB IB5
+ powerUp OB6
+ autoMode OB7
+ manualMode OB8
+ emStp LB9
+ sr1_Q1 LB10
+ sr1_i_sr LI11
+ powerUpPB_PREV LB12
+ powerUpPB_EDGE LI13
+ acknowledgePB_PREV LB14
+ acknowledgePB_EDGE LI15

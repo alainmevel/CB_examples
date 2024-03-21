@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild2019_1 -->
+
+<TARGET_LIST>
+	<TARGET NAME="aPC" OS="nt" SIMULATION_OS="nt" IP_Address="127.0.0.1" IP_Address2="127.0.0.1" IP_Address3="127.0.0.1" IP_Address4="127.0.0.1" HOSTNAME="" HOSTNAME2="" HOSTNAME3="" HOSTNAME4="" PORT="1024" IDENTIFIER="58078926-a1af-4590-b8a9-bcc07700c894" INTERNAL_FIELD_BUS="FALSE">
+		<io_boards>
+		</io_boards>
+	</TARGET>
+	<TARGET NAME="aQNX" OS="qnx" SIMULATION_OS="nt" IP_Address="192.168.6.100" IP_Address2="127.0.0.1" IP_Address3="127.0.0.1" IP_Address4="127.0.0.1" HOSTNAME="" HOSTNAME2="" HOSTNAME3="" HOSTNAME4="" PORT="1024" IDENTIFIER="10d3eff6-2d42-4615-9e48-a5dd2db89e1a" INTERNAL_FIELD_BUS="FALSE">
+		<io_boards>
+		</io_boards>
+	</TARGET>
+</TARGET_LIST>

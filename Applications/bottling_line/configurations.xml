@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<CONFS>
+	<ORGANIC_CONF PATH="\organic" />
+	<EMB_CONFS>
+		<EMB_CONF NAME="pl7_bottling" PATH="\hardwareArchitecture\pl7_bottling" />
+		<EMB_CONF NAME="siemens_bottling" PATH="\hardwareArchitecture\siemens_bottling" />
+		<EMB_CONF NAME="unity_bottling" PATH="\hardwareArchitecture\unity_bottling" />
+	</EMB_CONFS>
+</CONFS>

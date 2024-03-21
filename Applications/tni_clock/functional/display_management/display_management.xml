@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-03T11:13:48-01:00" />
+	<contentHeader name="display_management">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="32" y="8" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+			<pou name="tni_clock.display_management" pouType="functionBlock">
+				<interface>
+					<inputVars>
+						<variable name="hh">
+							<type>
+								<SINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>315839d9-009e-46d9-a365-55dd1686ebc8</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="mn">
+							<type>
+								<SINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>7809daa2-fb94-42b8-abc0-f42b74f296ff</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="sec">
+							<type>
+								<SINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>eebed4bd-8cfc-4210-b585-ec0bf61858f9</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>DateAndTime</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="tick">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>clock tick</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>e5f38dba-8ad3-475e-b3b8-2c6ab0a080cb</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>fromQuartz</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="pressure">
+							<type>
+								<INT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>e337d8cc-1ef9-47c1-8b14-2e542b1e4f95</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>PressureSensor</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inOutVars>
+						<variable name="B1">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Setting mode</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>e4e74db3-5f67-414c-a985-23cc732ec8b4</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="B2">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Time adjustment</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>6564892e-0b1e-4f18-9b09-6da4cab7e4a0</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="B3">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Pressure/Time mode</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>27281e85-8f0c-4b52-98b4-3307c64af36f</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="B4">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Light</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>f4ea27f7-d10a-4328-8c13-cca99437ff3b</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>Buttons</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inoutVars</value>
+							</data>
+						</addData>
+					</inOutVars>
+					<outputVars>
+						<variable name="displayValue">
+							<type>
+								<array>
+									<dimension lower="1" upper="8" />
+									<baseType>
+										<BYTE />
+									</baseType>
+								</array>
+							</type>
+							<initialValue>
+								<arrayValue>
+									<value repetitionValue="8">
+										<simpleValue value="0" />
+									</value>
+								</arrayValue>
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>2930c2e8-b717-458f-b025-15338de5eb7c</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>LCD</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<outputVars>
+						<variable name="switchOnLight">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>15daba98-d005-47a5-afc8-abede872fe97</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<localVars>
+						<variable name="displayTime">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>f444c8fa-33b3-4b22-b677-d8f1343d18d4</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="lampSwitchOnTime">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>a7475209-67cb-43ae-9b18-af49bbc8989a</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>localVars</value>
+							</data>
+						</addData>
+					</localVars>
+					<localVars constant="true">
+						<variable name="pulseTime">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="10" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>6693bf56-e27a-4f54-8a3a-9c2cc2ad95e7</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>parameterVars</value>
+							</data>
+						</addData>
+					</localVars>
+					<addData>
+						<data name="Geensys.CB.groupIn" handleUnknown="preserve">
+							<value>DateAndTime,,fromQuartz,,PressureSensor,</value>
+						</data>
+						<data name="Geensys.CB.groupInout" handleUnknown="preserve">
+							<value>Buttons,</value>
+						</data>
+						<data name="Geensys.CB.groupOut" handleUnknown="preserve">
+							<value>LCD,</value>
+						</data>
+					</addData>
+				</interface>
+				<actions>
+				</actions>
+				<body>
+					<ST>(***** time/pressure selection button push management ******)
+(* button push temporisation for 10s *)
+IF ((B3 OR displayTime &gt; 0.0) AND tick) THEN
+(* one RE of tick every 2 cycles. CLOCK_PERIOD corresponds to quartz frequency *)
+&#9;displayTime := displayTime + (CLOCK_PERIOD/1000000.0 * 2.0); 
+END_IF;
+IF (displayTime &gt; 10.0) OR NOT B3 THEN
+&#9;B3 := FALSE;
+&#9;displayTime := 0.0;
+END_IF;
+
+
+IF B3 THEN
+(***** Pressure display *****)
+(* Every digit take the ascii value corresponding to the measure *)
+&#9;displayValue[1] := 48 + pressure/1000;
+&#9;displayValue[2] := 48 + (pressure - ((pressure/1000)*1000))/100;
+&#9;displayValue[3] := 48 + (pressure - ((pressure/1000)*1000) - (((pressure - ((pressure/1000)*1000))/100)*100))/10;
+&#9;displayValue[4] := 48 + (pressure - ((pressure/1000)*1000) - (((pressure - ((pressure/1000)*1000))/100)*100) - (((pressure - ((pressure/1000)*1000) - (((pressure - ((pressure/1000)*1000))/100)*100))/10)*10));
+&#9;displayValue[5] := 32 (* space *);
+&#9;displayValue[6] := 104 (* $h *);
+&#9;displayValue[7] := 80 (* $P *);
+&#9;displayValue[8] := 97 (* $a *);
+
+ELSE
+(***** Time display *****)
+(* Every digit take the ascii value corresponding to the current time*)
+&#9;displayValue[1] := 48 + hh/10;
+&#9;displayValue[2] := 48 + (hh - ((hh/10)*10));
+&#9;displayValue[3] := 58 (* $: *);
+&#9;displayValue[4] := 48 + mn/10;
+&#9;displayValue[5] := 48 + (mn - ((mn/10)*10));
+&#9;displayValue[6] := 58 (* $: *);
+&#9;displayValue[7] := 48 + sec/10;
+&#9;displayValue[8] := 48 + (sec - ((sec/10)*10));
+END_IF;
+
+(**** Lighting management ****)
+(* button push temporisation for 3s *)
+IF ((B4 OR lampSwitchOnTime &gt;0) AND tick) THEN
+(* one RE of tick every 2 cycles. CLOCK_PERIOD corresponds to quartz frequency *)
+&#9;lampSwitchOnTime := lampSwitchOnTime + (CLOCK_PERIOD/1000000 * 2.0); 
+END_IF;
+IF (lampSwitchOnTime &gt; 3) THEN
+&#9;B4 := FALSE;
+&#9;lampSwitchOnTime:= 0;
+END_IF;
+switchOnLight := lampSwitchOnTime&gt;0.0;
+</ST>
+				</body>
+				<addData>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+				</addData>
+			</pou>
+		</pous>
+	</types>
+	<instances>
+		<configurations />
+	</instances>
+</project>

@@ -1,0 +1,40 @@
+ mvt1 IB1
+ mvt2 IB2
+ mvt3 IB3
+ mvt4 IB4
+ moveToLeft IB5
+ moveToRight IB6
+ chainMvt IB7
+ ON OB8
+ run1 OB9
+ startSensor1 OB10
+ endSensor1 OB11
+ run2 OB12
+ startSensor2 OB13
+ endSensor2 OB14
+ run3 OB15
+ startSensor3 OB16
+ endSensor3 OB17
+ endSensor4 OB18
+ sensor1 OB19
+ sensor2 OB20
+ sensor3 OB21
+ endSensor OB22
+ ~ LB23
+ ~ LI24
+ ~ LB25
+ ~ LB26
+ ~ LB27
+ ~ LI28
+ ~ LB29
+ ~ LI30
+<tri_chain:creation creation1/ 1 idProd 30 creationFailed 29>
+<tri_chain:op_chain chain1/ 1 forward 1 localRun 9 start_sensor 10 end_sensor 11>
+<tri_chain:op_chain chain2/ 1 forward 2 localRun 12 start_sensor 13 end_sensor 14>
+<tri_chain:creation creation2/ 1 idProd 28 creationFailed 27>
+<tri_chain:op_chain chain3/ 1 forward 3 localRun 15 start_sensor 16 end_sensor 17>
+<tri_chain:op_chain outputChain/ 1 forward 4 localRun 26 start_sensor 25 end_sensor 18>
+<tri_chain:op_shuttle shuttle/ 1 forward 6 backward 5 chainMotorOn 7 sensor_Pos1 19 sensor_Pos2 20 sensor_Pos3 21 end_sensor 22>
+<tri_chain:button runButton/ 1 output 8>
+<tri_chain:creation creation3/ 1 idProd 24 creationFailed 23>
+<tri_chain:trash trash/ 1>

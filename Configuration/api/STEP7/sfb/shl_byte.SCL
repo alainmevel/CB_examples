@@ -1,0 +1,19 @@
+
+FUNCTION CB_shl_byte : BYTE
+
+TITLE = ' shift on bit string '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : shlByte
+FAMILY  : TNI
+
+VAR_INPUT
+    IN : BYTE;
+    N : INT;
+END_VAR
+
+BEGIN
+
+    CB_shl_byte := SHL(IN := IN, N := N);
+
+END_FUNCTION

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<MODEL_REQUIREMENTS>
+	<FUNCTIONAL_TREE TYPE="mac">
+		<CHILDREN>
+			<NODE NAME="generalPanel" TYPE="mac">
+				<CHILDREN>
+					<NODE NAME="acknowledgePB" MODEL_PATH="Standard\equipment_library\momentary_button">
+					</NODE>
+					<NODE NAME="powerUp" MODEL_PATH="Standard\equipment_library\momentary_button">
+					</NODE>
+					<NODE NAME="modeSwitch" MODEL_PATH="Standard\equipment_library\switch_2pos_2outputs">
+					</NODE>
+					<NODE NAME="startCyclePB" MODEL_PATH="Standard\equipment_library\momentary_button">
+					</NODE>
+					<NODE NAME="endCyclePB" MODEL_PATH="Standard\equipment_library\momentary_button">
+					</NODE>
+					<NODE NAME="bpCloture" MODEL_PATH="Standard\equipment_library\momentary_button">
+					</NODE>
+					<NODE NAME="emergencyStop" MODEL_PATH="Standard\equipment_library\maintained_button">
+					</NODE>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="recipe" MODEL_PATH="Applications\batch\recipe">
+			</NODE>
+			<NODE NAME="workingModes" MODEL_PATH="Applications\batch\mode">
+			</NODE>
+			<NODE NAME="management" MODEL_PATH="Applications\batch\management">
+			</NODE>
+			<NODE NAME="manufacturing" MODEL_PATH="Applications\batch\manufacturing">
+			</NODE>
+		</CHILDREN>
+	</FUNCTIONAL_TREE>
+</MODEL_REQUIREMENTS>

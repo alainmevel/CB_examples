@@ -1,0 +1,1161 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-03T11:13:39-01:00" />
+	<contentHeader name="manufacturing">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="32" y="8" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+			<pou name="batch.manufacturing" pouType="program">
+				<interface>
+					<inputVars>
+						<variable name="cycleInProgress">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>09f5370d-caf9-4103-a0f8-bbed2274697d</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="acknowledgePB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Acknowledgement pushbutton</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>540c2158-d04f-4c4a-a0a1-5acedc33086c</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="flourWeighingRequest">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>29df94cb-c0bb-415a-8d14-66645bea9656</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="syrupWeighingRequest">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>918ea933-1468-4f0b-a9b4-267786ae8ded</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="kneadingRequest">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>ad91aede-5537-490c-8fc5-c5b7ae9e70b4</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="autoMode">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>automatic mode</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>93cd4ad3-a1fe-4279-b0cf-c9a075bddcbd</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="manualMode">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>manual mode</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>48ef646c-df15-440d-9792-ec2a1b75d577</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>Modes</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="flourWeight">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>0bc9a662-ad29-4695-bdda-8e7004e8c24a</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>FlourSetting</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="syrup1Weight">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>60c3a34d-5feb-46ab-9ff2-51eeae54335f</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="syrup2Weight">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>641b754d-7253-44d9-86ec-0b1f03ecaa0d</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="syrup3Weight">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>efd354c5-2918-4372-aa4a-0d18ea340b18</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>SyrupSetting</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<outputVars>
+						<variable name="generalFault">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>589e0b92-c92a-441b-b39f-8c18fb0e6951</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="kneadingOK">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>7ebee7c8-e8dc-4b6b-8ace-a8ee8df2dcee</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="flourWeighingOk">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>02756307-d359-484d-af90-4145684ed0bc</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="syrupWeighingOk">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>185e823d-b216-4e47-82db-5b14bae91b84</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<addData>
+						<data name="Geensys.CB.groupIn" handleUnknown="preserve">
+							<value>Modes,,FlourSetting,,SyrupSetting,</value>
+						</data>
+					</addData>
+				</interface>
+				<actions>
+				</actions>
+				<body>
+					<FBD>
+						<inVariable localId="0">
+							<position x="264" y="144" />
+							<expression>cycleInProgress</expression>
+						</inVariable>
+						<inVariable localId="1">
+							<position x="264" y="432" />
+							<expression>cycleInProgress</expression>
+						</inVariable>
+						<inVariable localId="2">
+							<position x="1080" y="144" />
+							<expression>cycleInProgress</expression>
+						</inVariable>
+						<inVariable localId="3">
+							<position x="264" y="168" />
+							<expression>acknowledgePB</expression>
+						</inVariable>
+						<inVariable localId="4">
+							<position x="264" y="480" />
+							<expression>acknowledgePB</expression>
+						</inVariable>
+						<inVariable localId="5">
+							<position x="1056" y="192" />
+							<expression>acknowledgePB</expression>
+						</inVariable>
+						<inVariable localId="6">
+							<position x="264" y="192" />
+							<expression>flourWeighingRequest</expression>
+						</inVariable>
+						<inVariable localId="7">
+							<position x="264" y="456" />
+							<expression>syrupWeighingRequest</expression>
+						</inVariable>
+						<inVariable localId="8">
+							<position x="1080" y="168" />
+							<expression>kneadingRequest</expression>
+						</inVariable>
+						<inVariable localId="9">
+							<position x="264" y="240" />
+							<expression>autoMode</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Modes</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>264,240</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="10">
+							<position x="264" y="504" />
+							<expression>autoMode</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Modes</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>264,504</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="11">
+							<position x="1056" y="216" />
+							<expression>autoMode</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Modes</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>1056,216</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="12">
+							<position x="264" y="240" />
+							<expression>manualMode</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Modes</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>264,240</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="13">
+							<position x="264" y="504" />
+							<expression>manualMode</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Modes</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>264,504</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="14">
+							<position x="1056" y="216" />
+							<expression>manualMode</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Modes</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>1056,216</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="15">
+							<position x="264" y="216" />
+							<expression>flourWeight</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>FlourSetting</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>264,216</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="16">
+							<position x="264" y="408" />
+							<expression>syrup1Weight</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>SyrupSetting</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>264,408</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="17">
+							<position x="264" y="408" />
+							<expression>syrup2Weight</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>SyrupSetting</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>264,408</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="18">
+							<position x="264" y="408" />
+							<expression>syrup3Weight</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>SyrupSetting</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>264,408</value>
+								</data>
+							</addData>
+						</inVariable>
+						<outVariable localId="19">
+							<position x="1464" y="408" />
+							<connectionPointIn>
+								<connection refLocalId="20" formalParameter="generalFault" />
+							</connectionPointIn>
+							<expression>generalFault</expression>
+						</outVariable>
+						<outVariable localId="21">
+							<position x="1560" y="144" />
+							<connectionPointIn>
+								<connection refLocalId="22" formalParameter="kneadingOK" />
+							</connectionPointIn>
+							<expression>kneadingOK</expression>
+						</outVariable>
+						<outVariable localId="23">
+							<position x="792" y="96" />
+							<connectionPointIn>
+								<connection refLocalId="24" formalParameter="weighingOk" />
+							</connectionPointIn>
+							<expression>flourWeighingOk</expression>
+						</outVariable>
+						<outVariable localId="25">
+							<position x="792" y="504" />
+							<connectionPointIn>
+								<connection refLocalId="26" formalParameter="weighingOk" />
+							</connectionPointIn>
+							<expression>syrupWeighingOk</expression>
+						</outVariable>
+						<block localId="24" width="384" height="192" typeName="batch.flour" instanceName="flour">
+							<position x="312" y="96" />
+							<inputVariables>
+								<variable formalParameter="cycleInProgress">
+									<connectionPointIn>
+										<connection refLocalId="0">
+											<position x="272" y="144" />
+											<position x="285" y="144" />
+											<position x="285" y="144" />
+											<position x="312" y="144" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="acknowledgePB">
+									<connectionPointIn>
+										<connection refLocalId="3">
+											<position x="272" y="168" />
+											<position x="285" y="168" />
+											<position x="285" y="168" />
+											<position x="312" y="168" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="weighingRequest">
+									<connectionPointIn>
+										<connection refLocalId="6">
+											<position x="272" y="192" />
+											<position x="288" y="192" />
+											<position x="288" y="192" />
+											<position x="312" y="192" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="flourWeight">
+									<connectionPointIn>
+										<connection refLocalId="15">
+											<position x="272" y="216" />
+											<position x="287" y="216" />
+											<position x="287" y="216" />
+											<position x="312" y="216" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="autoMode">
+									<connectionPointIn>
+										<connection refLocalId="9">
+											<position x="272" y="240" />
+											<position x="286" y="240" />
+											<position x="286" y="240" />
+											<position x="312" y="240" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="manualMode">
+									<connectionPointIn>
+										<connection refLocalId="12">
+											<position x="272" y="240" />
+											<position x="286" y="240" />
+											<position x="286" y="240" />
+											<position x="312" y="240" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="flourExtraction">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="weighingOk">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="fault">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>Modes:264@240,Modes,FlourSetting:264@216,FlourSetting</value>
+								</data>
+								<data name="Geensys.CB.UNIT" handleUnknown="preserve">
+									<value>F1</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value> : F1</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>1064f3f0-baa9-4dcf-869d-e681a81091b8</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="26" width="384" height="168" typeName="batch.syrup" instanceName="syrup">
+							<position x="312" y="360" />
+							<inputVariables>
+								<variable formalParameter="syrup1Weight">
+									<connectionPointIn>
+										<connection refLocalId="16">
+											<position x="272" y="408" />
+											<position x="289" y="408" />
+											<position x="289" y="408" />
+											<position x="312" y="408" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="syrup2Weight">
+									<connectionPointIn>
+										<connection refLocalId="17">
+											<position x="272" y="408" />
+											<position x="289" y="408" />
+											<position x="289" y="408" />
+											<position x="312" y="408" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="syrup3Weight">
+									<connectionPointIn>
+										<connection refLocalId="18">
+											<position x="272" y="408" />
+											<position x="289" y="408" />
+											<position x="289" y="408" />
+											<position x="312" y="408" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="cycleInProgress">
+									<connectionPointIn>
+										<connection refLocalId="1">
+											<position x="272" y="432" />
+											<position x="288" y="432" />
+											<position x="288" y="432" />
+											<position x="312" y="432" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="weighingRequest">
+									<connectionPointIn>
+										<connection refLocalId="7">
+											<position x="272" y="456" />
+											<position x="287" y="456" />
+											<position x="287" y="456" />
+											<position x="312" y="456" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="acknowledgePB">
+									<connectionPointIn>
+										<connection refLocalId="4">
+											<position x="272" y="480" />
+											<position x="287" y="480" />
+											<position x="287" y="480" />
+											<position x="312" y="480" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="autoMode">
+									<connectionPointIn>
+										<connection refLocalId="10">
+											<position x="272" y="504" />
+											<position x="286" y="504" />
+											<position x="286" y="504" />
+											<position x="312" y="504" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="manualMode">
+									<connectionPointIn>
+										<connection refLocalId="13">
+											<position x="272" y="504" />
+											<position x="286" y="504" />
+											<position x="286" y="504" />
+											<position x="312" y="504" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="weighingOk">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="fault">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="syrupExtraction">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>Modes:264@504,Modes,SyrupSetting:264@408,SyrupSetting</value>
+								</data>
+								<data name="Geensys.CB.UNIT" handleUnknown="preserve">
+									<value>F2</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value> : F2</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>b76c90ea-8b40-4c8c-aa1d-55def322e6d2</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="22" width="384" height="216" typeName="batch.mixture" instanceName="mixture">
+							<position x="1128" y="96" />
+							<inputVariables>
+								<variable formalParameter="cycleInProgress">
+									<connectionPointIn>
+										<connection refLocalId="2">
+											<position x="1088" y="144" />
+											<position x="1105" y="144" />
+											<position x="1105" y="144" />
+											<position x="1128" y="144" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="kneadingRequest">
+									<connectionPointIn>
+										<connection refLocalId="8">
+											<position x="1088" y="168" />
+											<position x="1104" y="168" />
+											<position x="1104" y="168" />
+											<position x="1128" y="168" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="acknowledgePB">
+									<connectionPointIn>
+										<connection refLocalId="5">
+											<position x="1064" y="192" />
+											<position x="1089" y="192" />
+											<position x="1089" y="192" />
+											<position x="1128" y="192" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="autoMode">
+									<connectionPointIn>
+										<connection refLocalId="11">
+											<position x="1064" y="216" />
+											<position x="1087" y="216" />
+											<position x="1087" y="216" />
+											<position x="1128" y="216" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="manualMode">
+									<connectionPointIn>
+										<connection refLocalId="14">
+											<position x="1064" y="216" />
+											<position x="1087" y="216" />
+											<position x="1087" y="216" />
+											<position x="1128" y="216" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="syrupExtraction">
+									<connectionPointIn>
+										<connection refLocalId="26" formalParameter="syrupExtraction">
+											<position x="696" y="456" />
+											<position x="797" y="456" />
+											<position x="797" y="240" />
+											<position x="1128" y="240" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="flourExtraction">
+									<connectionPointIn>
+										<connection refLocalId="24" formalParameter="flourExtraction">
+											<position x="696" y="144" />
+											<position x="905" y="144" />
+											<position x="905" y="264" />
+											<position x="1128" y="264" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="kneadingOK">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="fault">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>Modes:1056@216,Modes</value>
+								</data>
+								<data name="Geensys.CB.UNIT" handleUnknown="preserve">
+									<value>F3</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value> : F3</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>495620f6-e603-449e-a288-8473f26df6ef</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="20" width="312" height="119" typeName="faults" instanceName="faults1">
+							<position x="1104" y="360" />
+							<inputVariables>
+								<variable formalParameter="fault3">
+									<connectionPointIn>
+										<connection refLocalId="22" formalParameter="fault">
+											<position x="1512" y="168" />
+											<position x="1566" y="168" />
+											<position x="1566" y="343" />
+											<position x="1069" y="343" />
+											<position x="1069" y="408" />
+											<position x="1104" y="408" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="fault2">
+									<connectionPointIn>
+										<connection refLocalId="24" formalParameter="fault">
+											<position x="696" y="192" />
+											<position x="895" y="192" />
+											<position x="895" y="432" />
+											<position x="1104" y="432" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="fault1">
+									<connectionPointIn>
+										<connection refLocalId="26" formalParameter="fault">
+											<position x="696" y="432" />
+											<position x="865" y="432" />
+											<position x="865" y="456" />
+											<position x="1104" y="456" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="generalFault">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.NU" handleUnknown="preserve">
+									<value>1</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value> : &lt;UNIT&gt;</value>
+								</data>
+								<data name="Geensys.CB.SY" handleUnknown="preserve">
+									<value>GenFLT</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>e11233fa-2db1-418a-a9ff-7a2266f1d4d4</value>
+								</data>
+							</addData>
+						</block>
+					</FBD>
+					<documentation>
+						<xhtml:pre>CB.group=Modes,264,240
+CB.group=Modes,264,504
+CB.group=Modes,1056,216
+CB.group=FlourSetting,264,216
+CB.group=SyrupSetting,264,408
+</xhtml:pre>
+					</documentation>
+				</body>
+				<addData>
+					<data name="Geensys.CB.AutomaticScheduling" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+				</addData>
+			</pou>
+			<pou name="faults" pouType="functionBlock">
+				<interface>
+					<inputVars>
+						<variable name="fault3">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>d2fcdb1c-a444-4e5d-b43d-0dfd2b1d4975</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="fault2">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>93acf72b-be4e-42fe-92dd-22e1b9ecb649</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="fault1">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>7095f710-d9f4-43a2-901b-2f4bc318f722</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<outputVars>
+						<variable name="generalFault">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>884b72d7-c9c3-45b9-9001-5b55ad271ea4</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>generalFault&lt;SY&gt;&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<addData>
+					</addData>
+				</interface>
+				<actions>
+				</actions>
+				<body>
+					<LD>
+						<leftPowerRail localId="5">
+							<position x="0" y="100" />
+						</leftPowerRail>
+						<label localId="0" label="1">
+							<position x="0" y="0" />
+						</label>
+						<contact localId="1">
+							<position x="0" y="100" />
+							<connectionPointIn>
+								<connection refLocalId="5">
+									<position x="10" y="150" />
+									<position x="10" y="150" />
+									<position x="10" y="150" />
+									<position x="10" y="150" />
+								</connection>
+							</connectionPointIn>
+							<variable>fault1</variable>
+						</contact>
+						<contact localId="2">
+							<position x="0" y="200" />
+							<variable>fault2</variable>
+						</contact>
+						<contact localId="3">
+							<position x="0" y="300" />
+							<variable>fault3</variable>
+						</contact>
+						<coil localId="4">
+							<position x="1000" y="100" />
+							<connectionPointIn>
+								<connection refLocalId="3">
+									<position x="90" y="350" />
+									<position x="1000" y="350" />
+									<position x="1000" y="150" />
+									<position x="1010" y="150" />
+								</connection>
+								<connection refLocalId="1">
+									<position x="90" y="150" />
+									<position x="100" y="150" />
+									<position x="100" y="150" />
+									<position x="1010" y="150" />
+								</connection>
+								<connection refLocalId="2">
+									<position x="90" y="250" />
+									<position x="1000" y="250" />
+									<position x="1000" y="150" />
+									<position x="1010" y="150" />
+								</connection>
+							</connectionPointIn>
+							<variable>generalFault</variable>
+						</coil>
+						<rightPowerRail localId="6">
+							<position x="1100" y="100" />
+							<connectionPointIn>
+								<connection refLocalId="4" />
+							</connectionPointIn>
+						</rightPowerRail>
+					</LD>
+				</body>
+				<addData>
+					<data name="Geensys.CB.COMPONENT_CLASS" handleUnknown="preserve">
+						<value>CONTROL_UNIT</value>
+					</data>
+					<data name="Geensys.CB.COMPONENT_CLASS_UUID" handleUnknown="preserve">
+						<value>2edda594-a0f5-4376-8025-1a0fad969398</value>
+					</data>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+				</addData>
+			</pou>
+		</pous>
+	</types>
+	<instances>
+		<configurations />
+	</instances>
+</project>

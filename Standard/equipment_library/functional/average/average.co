@@ -1,0 +1,5 @@
+ input1 IF1
+ input2 IF2
+ result OF3
+ d_average DB4
+ v_d_average DF5

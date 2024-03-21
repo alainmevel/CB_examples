@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<MODEL_REQUIREMENTS>
+	<FUNCTIONAL_TREE TYPE="mac">
+		<CHILDREN>
+			<NODE NAME="panel" TYPE="mac">
+				<CHILDREN>
+					<NODE NAME="switch" MODEL_PATH="Standard\equipment_library\switch_3pos_2outputs">
+					</NODE>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="cmdOfJack" MODEL_PATH="Standard\cmd_equipment_library\cmd_double_acting_jack_lmp">
+			</NODE>
+			<NODE NAME="jack" MODEL_PATH="Standard\equipment_library\double_acting_jack_lmp">
+			</NODE>
+		</CHILDREN>
+	</FUNCTIONAL_TREE>
+</MODEL_REQUIREMENTS>

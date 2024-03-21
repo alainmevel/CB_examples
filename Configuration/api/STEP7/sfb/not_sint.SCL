@@ -1,0 +1,19 @@
+
+FUNCTION CB_not_sint : INT
+
+
+TITLE = ' Bit string inversion '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : notSint
+FAMILY  : TNI
+
+VAR_INPUT
+    IN : INT;
+END_VAR
+
+BEGIN
+
+    CB_not_sint := WORD_TO_INT(NOT (INT_TO_WORD(IN)) AND 16#00FF);
+
+END_FUNCTION

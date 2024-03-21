@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<MODEL_REQUIREMENTS>
+	<FUNCTIONAL_TREE TYPE="mac">
+		<CHILDREN>
+			<NODE NAME="filling" MODEL_PATH="Standard\io_library\io_single_acting_valve">
+			</NODE>
+			<NODE NAME="emptying" MODEL_PATH="Standard\io_library\io_single_acting_valve">
+			</NODE>
+			<NODE NAME="tank" MODEL_PATH="Standard\equipment_library\tank">
+			</NODE>
+			<NODE NAME="extraction" MODEL_PATH="Standard\io_library\io_on_off_pump">
+			</NODE>
+			<NODE NAME="levelScale" MODEL_PATH="Standard\equipment_library\bounded_scale">
+			</NODE>
+			<NODE NAME="highLevel" MODEL_PATH="Standard\equipment_library\threshold_sensor">
+			</NODE>
+			<NODE NAME="lowLevel" MODEL_PATH="Standard\equipment_library\threshold_sensor">
+			</NODE>
+			<NODE NAME="levelMeasurement" MODEL_PATH="Standard\equipment_library\analog_sensor">
+			</NODE>
+		</CHILDREN>
+	</FUNCTIONAL_TREE>
+</MODEL_REQUIREMENTS>

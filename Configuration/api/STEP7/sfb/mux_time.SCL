@@ -1,0 +1,29 @@
+
+FUNCTION CB_mux_Time : TIME
+
+
+TITLE = ' Multiplexer on N variable '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : muxTime
+FAMILY  : TNI
+
+VAR_INPUT
+    K : INT;
+    IN0 : TIME;
+    IN1 : TIME;
+    IN2 : TIME;
+    IN3 : TIME;
+    IN4 : TIME;
+    IN5 : TIME;
+    IN6 : TIME;
+    IN7 : TIME;
+    IN8 : TIME;
+    IN9 : TIME;
+END_VAR
+
+BEGIN
+
+CB_mux_Time := MUX (K := K, IN0 := IN0, IN1 := IN1, IN2 := IN2, IN3 := IN3, IN4 := IN4, IN5 := IN5, IN6 := IN6, IN7 := IN7, IN8 := IN8, IN9:= IN9 );
+
+END_FUNCTION

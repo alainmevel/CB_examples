@@ -1,0 +1,22 @@
+ compressedAir IF1
+ cmdSupply IB2
+ sensorSupply IB3
+ enableOpening IB4
+ enableClosing IB5
+ closedDoorState OB6
+ openedDoorState OB7
+ faultState OI8
+ ~ LB9
+ ~ LB10
+ ~ LB11
+ ~ LB12
+ ~ LB13
+ ~ LB14
+ ~ LB15
+ ~ LB16
+ ~ LB17
+ ~ LB18
+<tni_train:pb_door doorPB/ 1 doorPB 15>
+<tni_train:op_door_locking doorLocking/ 1 lockingCmd 9 unlockingCmd 10 doorLocked 13 doorUnlocked 14 lockActive 18>
+<tni_train:cp_door doorControlPart/ 1 enableOpening 4 enableClosing 5 openedDoor 11 closedDoor 12 lockedDoor 13 unlockedDoor 14 openingRequest 15 doorOpeningCmd 16 doorClosingCmd 17 doorLockingCmd 9 doorUnlockingCmd 10 closedDoorState 6 openedDoorState 7 faultState 8>
+<tni_train:op_door door/ 1 compressedAir 1 cmdSupply 2 sensorSupply 3 openDoorCmd 16 closeDoorCmd 17 lockActive 18 doorOpened 11 doorClosed 12>

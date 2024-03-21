@@ -1,0 +1,43 @@
+FUNCTION_BLOCK FB 63
+
+CMPSET
+	S7Graph-Version: 5100
+         WarningLevel: None
+         FBInterface: Minimum
+         SSBLevel: Individual
+         ASMsgLevel: No
+         TargetMachine: AS300StdBlock
+         RuntimeBlock: FC 70
+         CritAvail: F
+         SSkipOn: F
+         AckReq: F
+         SyncAvail: F
+         PermILMan: F
+         SWMLocked: F
+         InitVarStat: 4401
+         SaveSwitching: F
+END_CMPSET
+
+INITIAL_STEP Step10 (*$_NUM 10*)  :
+(* $_COM  *)
+END_STEP
+
+STEP Step11 (*$_NUM 11*)  :
+(* $_COM contactor excitation *)
+END_STEP
+
+TRANSITION Trans10 (*$_NUM 10*) 
+	FROM (Step10)
+	TO (Step11) :
+CONDITION := "DB90".RUN1_rotation AND ("DB90".rotationFaultSpinF1 ==D L#0)
+END_TRANSITION
+
+TRANSITION Trans11 (*$_NUM 11*) 
+	FROM (Step11)
+	TO (Step10) (*$_JUMP*) :
+CONDITION := NOT "DB90".RUN1_rotation OR ("DB90".rotationFaultSpinF1 >D L#0)
+END_TRANSITION
+
+
+
+END_FUNCTION_BLOCK

@@ -1,0 +1,109 @@
+FUNCTION_BLOCK FB 82
+
+CMPSET
+	S7Graph-Version: 5100
+         WarningLevel: None
+         FBInterface: Minimum
+         SSBLevel: Individual
+         ASMsgLevel: No
+         TargetMachine: AS300StdBlock
+         RuntimeBlock: FC 70
+         CritAvail: F
+         SSkipOn: F
+         AckReq: F
+         SyncAvail: F
+         PermILMan: F
+         SWMLocked: F
+         InitVarStat: 4401
+         SaveSwitching: F
+END_CMPSET
+
+INITIAL_STEP Step10 (*$_NUM 10*)  :
+(* $_COM  *)
+END_STEP
+
+STEP Step11 (*$_NUM 11*)  :
+(* $_COM  *)
+END_STEP
+
+STEP Step12 (*$_NUM 12*)  :
+(* $_COM  *)
+END_STEP
+
+STEP Step13 (*$_NUM 13*)  :
+(* $_COM  *)
+END_STEP
+
+STEP Step14 (*$_NUM 14*)  :
+(* $_COM  *)
+END_STEP
+
+STEP Step15 (*$_NUM 15*)  :
+(* $_COM  *)
+END_STEP
+
+STEP Step16 (*$_NUM 16*)  :
+(* $_COM  *)
+END_STEP
+
+STEP Step17 (*$_NUM 17*)  :
+(* $_COM  *)
+END_STEP
+
+TRANSITION Trans10 (*$_NUM 10*) 
+	FROM (Step10)
+	TO (Step11) :
+CONDITION := "DB120".WKM1_cycleInProgress
+END_TRANSITION
+
+TRANSITION Trans11 (*$_NUM 11*) 
+	FROM (Step11)
+	TO (Step12) :
+CONDITION := "DB120".WKM1_cycleInProgress AND "DB120".MGT1_kneadingRq
+END_TRANSITION
+
+TRANSITION Trans12 (*$_NUM 12*) 
+	FROM (Step12)
+	TO (Step13) :
+CONDITION := NOT "DB120".MGT1_kneadingRq
+END_TRANSITION
+
+TRANSITION Trans13 (*$_NUM 13*) 
+	FROM (Step13)
+	TO (Step14) :
+CONDITION := Step13.T >= T#20s
+END_TRANSITION
+
+TRANSITION Trans14 (*$_NUM 14*) 
+	FROM (Step14)
+	TO (Step15) :
+CONDITION := "DB120".KNEAD1_mixtureLevel <=D L#1
+END_TRANSITION
+
+TRANSITION Trans15 (*$_NUM 15*) 
+	FROM (Step15)
+	TO (Step17) :
+CONDITION := "DB120".KNEAD1_nbCycles <D "DB120".KNEAD1_nbOfCleanCycles
+END_TRANSITION
+
+TRANSITION Trans16 (*$_NUM 16*) 
+	FROM (Step15)
+	TO (Step16) :
+CONDITION := "DB120".KNEAD1_nbCycles >=D "DB120".KNEAD1_nbOfCleanCycles
+END_TRANSITION
+
+TRANSITION Trans17 (*$_NUM 17*) 
+	FROM (Step16)
+	TO (Step17) :
+CONDITION := Step16.T >= T#30s
+END_TRANSITION
+
+TRANSITION Trans18 (*$_NUM 18*) 
+	FROM (Step17)
+	TO (Step11) (*$_JUMP*) :
+CONDITION := Step17.T >= T#500MS
+END_TRANSITION
+
+
+
+END_FUNCTION_BLOCK

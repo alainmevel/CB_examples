@@ -1,0 +1,29 @@
+
+FUNCTION CB_mux_dint : DINT
+
+
+TITLE = ' Multiplexer on N variable '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : muxDint
+FAMILY  : TNI
+
+VAR_INPUT
+    K : INT;
+    IN0 : DINT;
+    IN1 : DINT;
+    IN2 : DINT;
+    IN3 : DINT;
+    IN4 : DINT;
+    IN5 : DINT;
+    IN6 : DINT;
+    IN7 : DINT;
+    IN8 : DINT;
+    IN9 : DINT;
+END_VAR
+
+BEGIN
+
+CB_mux_dint := MUX (K := K, IN0 := IN0, IN1 := IN1, IN2 := IN2, IN3 := IN3, IN4 := IN4, IN5 := IN5, IN6 := IN6, IN7 := IN7, IN8 := IN8, IN9:= IN9 );
+
+END_FUNCTION

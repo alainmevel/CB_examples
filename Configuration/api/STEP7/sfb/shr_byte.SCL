@@ -1,0 +1,19 @@
+
+FUNCTION CB_shr_byte : BYTE
+
+TITLE = ' shift on bit string '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : shrByte
+FAMILY  : TNI
+
+VAR_INPUT
+    IN : BYTE;
+    N : INT;
+END_VAR
+
+BEGIN
+
+    CB_shr_byte := SHR(IN := IN, N := N);
+
+END_FUNCTION

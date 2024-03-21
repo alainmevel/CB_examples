@@ -1,0 +1,40 @@
+FUNCTION_BLOCK FB95
+TITLE = 'pilot_Z2'
+AUTHOR : CB
+
+VAR
+	pilot_Z2FV1VAD : FB90;
+	pilot_Z2EV1VAD : FB92;
+	pilot_Z2EXP1VAD : FB94;
+END_VAR
+
+
+BEGIN
+
+
+NETWORK
+TITLE = 
+//
+//	pilot/pilot_Z2/pilot_Z2FV1VAD
+CALL #pilot_Z2FV1VAD;
+
+
+
+NETWORK
+TITLE = 
+//
+//	pilot/pilot_Z2/pilot_Z2EV1VAD
+CALL #pilot_Z2EV1VAD;
+
+
+
+NETWORK
+TITLE = 
+//
+//	pilot/pilot_Z2/pilot_Z2EXP1VAD
+CALL #pilot_Z2EXP1VAD;
+
+
+
+
+END_FUNCTION_BLOCK

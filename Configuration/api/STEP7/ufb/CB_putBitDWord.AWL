@@ -1,0 +1,60 @@
+FUNCTION "CB_putBitDWord" : VOID
+TITLE =Put a bit in a DWORD
+AUTHOR : CB
+FAMILY : TNI
+NAME : putBitDW
+VERSION : 0.1
+
+
+VAR_INPUT
+  N : INT ;	//number of the bit (0 - 31)
+  Value : BOOL ;	//Value to put
+END_VAR
+VAR_IN_OUT
+  IN : DWORD ;	//DWORD source
+END_VAR
+BEGIN
+NETWORK
+TITLE =Control N
+
+      L     #N; 
+      L     0; // test N > 0
+      <I    ; 
+      JC    err; 
+      TAK   ; 
+      L     31; // Test N <= 31
+      >I    ; 
+      JC    err; 
+      JU    ok; 
+err:  BEU   ; // Return if error
+ok:   NOP   0; // Continue if ok
+NETWORK
+TITLE =Write the value in the bit N
+
+      A     #Value; 
+      JC    _set; // Jump if value = True
+
+      L     #N; // Reset the bit N
+      L     #IN; 
+      RRD   ; 
+      L     DW#16#FFFFFFFE; 
+      AD    ; 
+      L     #N; 
+      TAK   ; 
+      RLD   ; 
+      T     #IN; 
+      BEU   ; 
+
+_set: L     #N; // set the bit N
+      L     #IN; 
+      RRD   ; 
+      L     DW#16#1; 
+      OD    ; 
+      L     #N; 
+      TAK   ; 
+      RLD   ; 
+      T     #IN; 
+      BE    ; 
+
+END_FUNCTION
+

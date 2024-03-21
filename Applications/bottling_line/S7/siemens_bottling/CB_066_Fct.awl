@@ -1,0 +1,41 @@
+FUNCTION_BLOCK FB66
+TITLE = 'fault_Z4CONV1VAD'
+AUTHOR : CB
+
+VAR
+	Z4CONV1DEF : FB64;
+END_VAR
+
+
+BEGIN
+
+
+NETWORK
+TITLE = 
+//
+//	fault/fault_Z4/fault_Z4CONV1VAD/Z4CONV1DEF
+A	Q01.3;
+=	L	0.0;
+BLD	103;
+A	I06.1;
+=	L	0.1;
+BLD	103;
+A	I06.0;
+=	L	0.2;
+BLD	103;
+A	I01.6;
+=	L	0.3;
+BLD	103;
+CALL #Z4CONV1DEF(
+	forwardCmd := L	0.0,
+	thermalFB := L	0.1,
+	forwardFB := L	0.2,
+	acknowledgePB := L	0.3,
+	generalFault := "DB110".Z4CONV1_generalFault
+);
+NOP 0;
+
+
+
+
+END_FUNCTION_BLOCK

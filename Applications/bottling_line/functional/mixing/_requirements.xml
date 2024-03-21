@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<MODEL_REQUIREMENTS>
+	<FUNCTIONAL_TREE TYPE="mac">
+		<CHILDREN>
+			<NODE NAME="agitator" MODEL_PATH="Standard\io_library\io_agitator_2speed">
+			</NODE>
+			<NODE NAME="flow" MODEL_PATH="Standard\equipment_library\flow_compute">
+			</NODE>
+			<NODE NAME="valve5" MODEL_PATH="Standard\io_library\io_single_acting_valve">
+			</NODE>
+			<NODE NAME="mixingTank" MODEL_PATH="Standard\equipment_library\tank">
+			</NODE>
+			<NODE NAME="levelScale" MODEL_PATH="Standard\equipment_library\bounded_scale">
+			</NODE>
+			<NODE NAME="highLevel3" MODEL_PATH="Standard\equipment_library\threshold_sensor">
+			</NODE>
+			<NODE NAME="lowLevel3" MODEL_PATH="Standard\equipment_library\threshold_sensor">
+			</NODE>
+			<NODE NAME="levelMeasurement" MODEL_PATH="Standard\equipment_library\analog_sensor">
+			</NODE>
+		</CHILDREN>
+	</FUNCTIONAL_TREE>
+</MODEL_REQUIREMENTS>

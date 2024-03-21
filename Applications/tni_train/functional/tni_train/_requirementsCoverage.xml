@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild2019_1 -->
+
+<APPLICATION_REQUIREMENTS>
+	<NODE NAME="tni_train" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\tni_train" UUID="8c0a3f5a-d4ae-440a-ab1b-b466f18e5b42">
+		<CHILDREN>
+			<NODE NAME="cab1" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cab" UUID="f30c804e-1737-4618-a799-ea45842f2c13">
+				<CHILDREN>
+					<NODE NAME="key2position" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\key2position" UUID="c983105a-acb5-4168-9424-4559a93a46d7">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="service_side" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\service_side" UUID="4d828ea1-663d-4c6a-9dbe-d0d694806c1b">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="closingPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb" UUID="3e9af797-252b-4f36-a4ca-1e7d9ff5a85d">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="trainSpeed" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\speed" UUID="f4192089-3e0f-42de-a081-54d552350163">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="cabControlPart" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_cab" UUID="a58b9a45-eae9-458c-bbf8-cb49d6946242">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="cab2" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cab" UUID="7f03007f-3058-4168-967f-e401f2560a97">
+				<CHILDREN>
+					<NODE NAME="key2position" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\key2position" UUID="e7d0e3ef-609b-4f72-ad68-77f8041c7fbb">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="service_side" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\service_side" UUID="d298f868-aacd-491d-8779-ba7f4a5af2f1">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="closingPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb" UUID="83001747-d37a-4575-953e-383cdb8d1349">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="trainSpeed" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\speed" UUID="bd8521fb-13aa-4a6e-b5cb-2f7f0bd6f579">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="cabControlPart" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_cab" UUID="2de8c3ff-ad2f-4b2d-a199-7d3637c06089">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="motorCar1" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\car" UUID="8122388c-f367-41c5-a68b-b9b3c09d837a">
+				<CHILDREN>
+					<NODE NAME="authorizations" TYPE="logi" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\authorizations" UUID="6894f556-0eca-462d-96f2-3cddc807c1f6">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="alarms" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarms" UUID="ecd72692-470a-4e4d-a820-6b307a8959cf">
+						<CHILDREN>
+							<NODE NAME="AlarmD1L" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarm" UUID="4efffc7d-3e27-4d8c-8905-72a41cf15be8">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="AlarmD2L" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarm" UUID="928b5ccc-9127-460a-a376-5d68b6cfd248">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="AlarmD3L" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarm" UUID="a1aa2370-70bb-4b7d-9133-7b7b2fa5ecd0">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="AlarmD1R" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarm" UUID="bd00afb5-9dac-4ad4-9728-2a185a3d8151">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="AlarmD2R" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarm" UUID="d603e6f4-ebbc-4f54-96a4-694e7e9b04ca">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="AlarmD3R" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarm" UUID="aed66229-99c6-47c0-a591-7def720c90bb">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="doorL1" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\door" UUID="d7e50036-a2e4-4545-a538-ef27d86c98ac">
+						<CHILDREN>
+							<NODE NAME="doorPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb_door" UUID="a3da40a2-3e6c-4fd8-988e-5c1b00279956">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorLocking" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door_locking" UUID="d7bfde8a-5de7-47d1-9ee8-dc8a3e6b3498">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorControlPart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_door" UUID="b4ee167c-e2d7-488e-bf54-3e0f6824d6ad">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="door" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door" UUID="3eecfa1d-8b57-4e57-bbab-f4f245c69a44">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="doorL2" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\door" UUID="fdf95a4f-ce20-463a-885a-ac4a884349bd">
+						<CHILDREN>
+							<NODE NAME="doorPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb_door" UUID="52f54c8c-b444-4dfb-b33e-8bb1dbd03448">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorLocking" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door_locking" UUID="4a5e91b3-9476-4176-99ab-1b1ec6174f1c">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorControlPart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_door" UUID="83f47ccb-e09a-4174-a1ea-838d2f5f7c95">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="door" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door" UUID="8cdce95e-37bc-4737-9281-847c9da7ed8c">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="doorL3" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\door" UUID="522143e1-bce8-432a-8d9a-607149e4e1f1">
+						<CHILDREN>
+							<NODE NAME="doorPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb_door" UUID="690168e7-96bb-4894-98ff-d383671fd9f8">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorLocking" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door_locking" UUID="0867d6fe-3fe6-40c0-b84a-dc54cbe68503">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorControlPart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_door" UUID="a39b0268-7400-4b3d-9c6f-39bdd4fed9a7">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="door" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door" UUID="5183239f-e217-4b7a-8a5c-f8dc92fb97f3">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="doorR1" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\door" UUID="2e0620b7-6c2c-40cd-9b73-436579707f6f">
+						<CHILDREN>
+							<NODE NAME="doorPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb_door" UUID="e80c0a0c-9be3-4c7e-874f-ec9703444883">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorLocking" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door_locking" UUID="f2addf7e-8bdd-45d9-ba76-7932a7f85203">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorControlPart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_door" UUID="477032d2-509c-4370-97d8-f55df4ad3a88">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="door" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door" UUID="db92893b-47e9-4906-a2c5-ab276a1e632d">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="doorR2" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\door" UUID="7ad59a65-75ba-48dc-9ac3-57788b371c14">
+						<CHILDREN>
+							<NODE NAME="doorPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb_door" UUID="9dd65039-cc0f-468c-90e6-41624632bc39">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorLocking" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door_locking" UUID="90fe4e2d-a142-4b62-a009-2bfa00b35274">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorControlPart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_door" UUID="3058b845-1b3c-41bd-bd3c-cc8f8ce400ce">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="door" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door" UUID="c17b47da-eb43-4fc1-9cd2-2ec6cddcd548">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="doorR3" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\door" UUID="e9fb8c10-f4d2-4f80-a037-7dd3d0cf37fd">
+						<CHILDREN>
+							<NODE NAME="doorPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb_door" UUID="7bc68ed8-1460-4634-8fa4-e18f481ca3f2">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorLocking" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door_locking" UUID="c7f8e057-f53e-496d-aeee-6dd69f91029e">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorControlPart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_door" UUID="4eb73dd1-5b02-48f8-bb0d-4cf1b6fb23b7">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="door" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door" UUID="b9ca94e5-b6c5-4104-8ff8-1ce127f87619">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="car1" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\car" UUID="4be9efdd-361e-4f25-9c57-f5e66dc16853">
+				<CHILDREN>
+					<NODE NAME="authorizations" TYPE="logi" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\authorizations" UUID="bba9e8e0-f7ad-439a-8909-03656144b125">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="alarms" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarms" UUID="ba1274d7-e8cc-487a-a162-d245eee173b5">
+						<CHILDREN>
+							<NODE NAME="AlarmD1L" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarm" UUID="461b1458-c527-4095-9c87-b400172becc2">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="AlarmD2L" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarm" UUID="503d0e90-3e6c-4cc2-880b-53d9d38126e5">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="AlarmD3L" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarm" UUID="b16d89de-5332-421e-ac8c-94cdc77f157b">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="AlarmD1R" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarm" UUID="60579d91-9101-46f7-b23d-3adb892c4561">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="AlarmD2R" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarm" UUID="28573e15-4d21-48f6-91cb-4461df2b2364">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="AlarmD3R" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarm" UUID="c0ee1f37-c789-46a6-b7a2-ee5fbcacf69c">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="doorL1" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\door" UUID="41f7fbb3-bb13-4f4c-be5c-c2bb87bcac13">
+						<CHILDREN>
+							<NODE NAME="doorPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb_door" UUID="47e386a6-b913-4a3a-a247-a6b8eaf5be87">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorLocking" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door_locking" UUID="6ffea4a1-67d6-4c25-9eb6-5263dfe5fbd2">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorControlPart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_door" UUID="fb5bc9af-bb87-4de7-81be-6575871a5352">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="door" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door" UUID="65bd0e48-5a18-4a56-95c2-a8d5adfb0011">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="doorL2" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\door" UUID="639a6424-bdf8-4c39-aa31-69b75d2f041d">
+						<CHILDREN>
+							<NODE NAME="doorPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb_door" UUID="23c9ad8a-f5fd-47b7-8353-19aed30a65b6">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorLocking" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door_locking" UUID="b8edef62-a170-4042-809e-93f4fdf83033">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorControlPart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_door" UUID="eb7e3c91-802a-4b19-8b83-6ebff8b24f56">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="door" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door" UUID="ea745c08-4eb2-4896-9d3b-ad69eebdf29f">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="doorL3" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\door" UUID="2c825d95-3826-422e-b69f-8214ce76ea5b">
+						<CHILDREN>
+							<NODE NAME="doorPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb_door" UUID="fdc471e7-5016-412b-982a-6401682ba778">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorLocking" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door_locking" UUID="72ef043e-29ca-40da-ac02-4aab61d3aa80">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorControlPart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_door" UUID="8788401d-5e79-4a95-bccd-7a626529501e">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="door" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door" UUID="2286e69d-a887-4e2f-8498-d5283ae5b26b">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="doorR1" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\door" UUID="cc951ed4-fb6c-4c87-b897-4ba78a53d72f">
+						<CHILDREN>
+							<NODE NAME="doorPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb_door" UUID="953d6fb5-8b7a-42a6-b6e7-4393e020ec12">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorLocking" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door_locking" UUID="2113c554-d541-45b7-8464-ece709c69943">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorControlPart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_door" UUID="13611a36-42db-4fcf-b8dc-7fb2803e3303">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="door" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door" UUID="7e9d5ef8-6866-4f6a-964f-36b258788d84">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="doorR2" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\door" UUID="aa685dba-774c-4bb0-b3ab-56d12f050e23">
+						<CHILDREN>
+							<NODE NAME="doorPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb_door" UUID="c05f421a-856a-4e47-9fdd-3a85b3f9a3ea">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorLocking" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door_locking" UUID="2b8a76fc-576f-45d7-b21d-188709f51c3f">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorControlPart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_door" UUID="1ffe3cb1-048f-4ad0-9bd6-fdc24ee1b329">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="door" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door" UUID="c7c43643-c338-4cb5-aa26-b936d4167c92">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="doorR3" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\door" UUID="54e35ce2-cf21-4da8-9c31-79dcf954eb58">
+						<CHILDREN>
+							<NODE NAME="doorPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb_door" UUID="817c5a15-2849-4c20-b0d7-b7977239c25b">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorLocking" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door_locking" UUID="0a184352-4fce-4f06-9a75-1cba7947df74">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorControlPart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_door" UUID="f6ab27d4-5bcc-43ec-b25b-69413e848b57">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="door" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door" UUID="cfc23dc3-d326-4bcc-ae23-5b8f2075e010">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="car2" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\car" UUID="4152a12b-ec91-4819-bb5e-5dcdca55ba87">
+				<CHILDREN>
+					<NODE NAME="authorizations" TYPE="logi" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\authorizations" UUID="a80b08fc-f769-4061-a92c-fb770eb8e457">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="alarms" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarms" UUID="40405c32-f95c-4824-91c5-231b586b126b">
+						<CHILDREN>
+							<NODE NAME="AlarmD1L" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarm" UUID="3f244547-e7b3-4518-9403-47eb2f462ac0">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="AlarmD2L" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarm" UUID="92e5b407-5cd4-4182-864c-6e12ca60a68c">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="AlarmD3L" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarm" UUID="efce2718-6b95-40fb-8869-9f619d4e66fa">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="AlarmD1R" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarm" UUID="5c686682-d2d8-45d7-ae8f-196e81c3fd45">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="AlarmD2R" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarm" UUID="1fdb7fa3-a3da-48f8-b354-4b16d8a4afc9">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="AlarmD3R" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarm" UUID="02f94a35-5732-4bb6-8c8e-18af3311a9f8">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="doorL1" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\door" UUID="b6cbe0e9-6052-47bc-adf6-979d7cd0fc4b">
+						<CHILDREN>
+							<NODE NAME="doorPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb_door" UUID="f2bde813-689a-4109-b396-6ea176dd03cf">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorLocking" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door_locking" UUID="bf59e2ff-b164-4055-a61a-73e7f470e43b">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorControlPart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_door" UUID="d97f1868-bc6f-4639-93ee-9e61ce54ec40">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="door" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door" UUID="6f0e40f3-a983-44ae-afee-28f2a33a4260">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="doorL2" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\door" UUID="f43c9333-f1c9-4251-8322-044fd5236cc5">
+						<CHILDREN>
+							<NODE NAME="doorPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb_door" UUID="33ff7536-385a-4feb-b871-08dc0a9015b9">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorLocking" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door_locking" UUID="0984a849-ee00-48d1-a5c7-3bf35cad96e9">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorControlPart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_door" UUID="4e95ba2b-17c3-46e4-8753-b46e9d9d857b">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="door" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door" UUID="aeb66020-2fff-48b3-b0da-d3c3e8c54318">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="doorL3" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\door" UUID="e7c7a4d2-9eb1-4412-8ae1-b6e7d45a1b1f">
+						<CHILDREN>
+							<NODE NAME="doorPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb_door" UUID="4d762377-97f3-413c-aa7a-21107675ff73">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorLocking" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door_locking" UUID="abf7b48b-34a0-4caf-b9d4-7c8c3085d1e2">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorControlPart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_door" UUID="fc3e4339-00b6-4e8e-8335-03b7bd4e4b12">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="door" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door" UUID="e8f88043-ed8d-4265-9f6b-746f0d32cca4">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="doorR1" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\door" UUID="ecb3b8f8-efc7-4f6b-98d7-438ecd6476f4">
+						<CHILDREN>
+							<NODE NAME="doorPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb_door" UUID="fdee3a68-a436-4e6c-a1a8-b704c73566d5">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorLocking" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door_locking" UUID="68015a56-cd32-4670-920c-8ad0f70ea9f6">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorControlPart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_door" UUID="b3d3847e-18fa-4a51-afcf-113e7eddc480">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="door" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door" UUID="7961ffbc-c367-42a0-b8cc-dc3dff4bf4b3">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="doorR2" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\door" UUID="2bbe856e-9625-4194-abd9-f28ee5b9835e">
+						<CHILDREN>
+							<NODE NAME="doorPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb_door" UUID="89b12c41-61db-46c8-b33d-f427b1eb2f98">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorLocking" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door_locking" UUID="3ba3ade3-fff1-4652-935a-bcd309105de8">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorControlPart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_door" UUID="d46157ff-5ebb-4f9a-8677-23bdcbedabf5">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="door" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door" UUID="e6be20a4-d54d-4425-a005-909d2531a5b1">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="doorR3" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\door" UUID="9fa6a443-2228-42b6-a2fa-7709b3c11ef5">
+						<CHILDREN>
+							<NODE NAME="doorPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb_door" UUID="82c08f2e-4167-42f9-9252-7a2d9c85e3dd">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorLocking" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door_locking" UUID="2b9458eb-8eb0-4cd3-8820-513fef68bb05">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorControlPart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_door" UUID="b512051e-1187-4b51-8ca2-8b264ef74a81">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="door" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door" UUID="39bb576b-aeba-489b-9748-1d0f2fa23f24">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="car3" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\car" UUID="f882bcef-c342-418a-8c6f-3a04b96d984a">
+				<CHILDREN>
+					<NODE NAME="authorizations" TYPE="logi" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\authorizations" UUID="b6d28917-0ec7-46a7-b15b-aa826524fcc5">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="alarms" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarms" UUID="4cecb746-ef76-4aaa-92bf-d32a7c10b11a">
+						<CHILDREN>
+							<NODE NAME="AlarmD1L" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarm" UUID="bc10478b-7602-4042-a545-7e561e672d93">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="AlarmD2L" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarm" UUID="b3c00347-8e24-4b19-a89d-49cec78142a8">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="AlarmD3L" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarm" UUID="42fd810f-1ff5-4f01-921b-4408368fc9ee">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="AlarmD1R" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarm" UUID="13b5f300-5de7-44e1-b6ca-b337ec3ad3c3">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="AlarmD2R" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarm" UUID="3ea312aa-cee9-42eb-a4b1-b2998ee8e5ed">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="AlarmD3R" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarm" UUID="654866a4-0c46-417f-9f2e-39b5b61f3e09">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="doorL1" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\door" UUID="4b142245-3dd7-41a7-a58e-b3a064f9f314">
+						<CHILDREN>
+							<NODE NAME="doorPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb_door" UUID="531234ef-d4fd-4bd4-aebc-8f95bc8f39b3">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorLocking" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door_locking" UUID="fad6e127-74f7-48ae-bf49-02c961c65df5">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorControlPart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_door" UUID="32eecbe4-fff7-4d61-9cf1-33bb95d1915d">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="door" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door" UUID="3bc2e66e-c01a-414d-bc1b-8c23023ad041">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="doorL2" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\door" UUID="6e3db7fd-c486-44a0-a974-8a12c0847a66">
+						<CHILDREN>
+							<NODE NAME="doorPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb_door" UUID="e2063fd1-bfb1-4a3b-9af5-5cc7dd1c4234">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorLocking" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door_locking" UUID="f62dfb50-4060-48ce-9a1b-a455c7b2f4f9">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorControlPart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_door" UUID="622c21ec-3266-493b-a756-469d349def1f">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="door" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door" UUID="4596be78-55c9-4820-8820-072ce3ba810e">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="doorL3" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\door" UUID="f711a881-4def-444c-bd08-caf93f39ebe2">
+						<CHILDREN>
+							<NODE NAME="doorPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb_door" UUID="27a71581-21ed-4575-8ab0-b5f5ce95c176">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorLocking" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door_locking" UUID="050b29c5-0792-4016-bf83-3874ed261117">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorControlPart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_door" UUID="7117255d-684c-4895-9c2c-d9f4305065e9">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="door" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door" UUID="d8e5b375-db0a-451c-bcd2-651c96210c19">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="doorR1" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\door" UUID="3bb79667-856f-48c1-a069-006586fd05ed">
+						<CHILDREN>
+							<NODE NAME="doorPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb_door" UUID="ffcda674-8828-4d48-b42f-d77534494af9">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorLocking" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door_locking" UUID="6b6266a0-b03d-4191-a920-c5a80a338cfb">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorControlPart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_door" UUID="339a8a18-05ee-4a19-bc89-4a62b9eb16c3">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="door" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door" UUID="5b183ccd-135e-4813-b177-2dff93ff4a00">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="doorR2" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\door" UUID="30d151c5-648a-4e96-8ab0-eff7e12b726a">
+						<CHILDREN>
+							<NODE NAME="doorPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb_door" UUID="4c6d8125-9bed-41fb-a647-9b582703ef0e">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorLocking" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door_locking" UUID="472549ef-837a-48b7-aea9-633c319f28ee">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorControlPart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_door" UUID="61c166e5-06bb-4e33-aba3-a9b5306d0964">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="door" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door" UUID="1cd864ce-6f84-46cd-8bed-d6775ac08190">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="doorR3" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\door" UUID="bc7cbc51-47f0-4875-ba08-a3a03e70bd52">
+						<CHILDREN>
+							<NODE NAME="doorPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb_door" UUID="03f2b32f-0a8d-4a9b-a4e9-bf964ab6cdbd">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorLocking" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door_locking" UUID="d2d28054-83c7-4883-9f6a-6219f3302f4a">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorControlPart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_door" UUID="844cbc60-1e28-40b4-b007-44b088dd11b7">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="door" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door" UUID="92209784-3512-4f0f-937a-f50af2ce8a76">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="motorCar2" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\car" UUID="978e243c-0a19-433e-8b74-c80d7e0753d5">
+				<CHILDREN>
+					<NODE NAME="authorizations" TYPE="logi" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\authorizations" UUID="d956854d-d051-455b-9e87-446b42454e82">
+						<CHILDREN>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="alarms" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarms" UUID="d381b69f-bca9-4d06-be94-05210329eff4">
+						<CHILDREN>
+							<NODE NAME="AlarmD1L" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarm" UUID="ed0bb532-ced0-4211-9a4c-7b4b8fe9a3da">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="AlarmD2L" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarm" UUID="db1deecc-b688-42ce-8e3a-f480a20bb2f5">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="AlarmD3L" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarm" UUID="731ba1d2-33d0-44c2-aed1-15500e4befe1">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="AlarmD1R" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarm" UUID="17846f87-7820-4e83-b296-f31b2b565a34">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="AlarmD2R" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarm" UUID="efba37af-cc5a-4d36-a215-b9df69cddd2c">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="AlarmD3R" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_alarm" UUID="f6cb6d98-be64-4388-8eae-700884fce593">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="doorL1" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\door" UUID="99763698-e40a-4379-8262-36846e2550da">
+						<CHILDREN>
+							<NODE NAME="doorPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb_door" UUID="aff46334-030a-4a91-8c3f-d199c547dfdf">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorLocking" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door_locking" UUID="19d000db-aca6-4b61-b4fa-05ead74b0b4e">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorControlPart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_door" UUID="f011a2dd-799e-454e-8739-16f6d6dddc0a">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="door" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door" UUID="3a51c4c4-e5dd-4765-acfc-a751b13a7326">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="doorL2" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\door" UUID="499661d7-e8a5-484b-94b3-40e72fc8bc5b">
+						<CHILDREN>
+							<NODE NAME="doorPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb_door" UUID="752f421c-72f5-4932-a469-f125999a05ff">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorLocking" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door_locking" UUID="2f7ca175-f7a8-4302-8e29-d000c3246b7d">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorControlPart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_door" UUID="f898c4bf-0e5a-45e9-9755-55f0c87c1c8c">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="door" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door" UUID="56fcf910-5053-4f44-b9a5-cba1f5f85f7b">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="doorL3" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\door" UUID="57d06362-24ed-4207-a64d-650ef19214c3">
+						<CHILDREN>
+							<NODE NAME="doorPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb_door" UUID="6e811970-0025-4899-a545-41136825a7a9">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorLocking" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door_locking" UUID="245a342a-f19a-427b-9140-106a1abf5767">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorControlPart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_door" UUID="8119aab7-6f03-490e-8b9e-7907908eac35">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="door" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door" UUID="4cced894-efb5-4208-8312-caa87371510f">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="doorR1" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\door" UUID="ced8b7fa-64e7-4858-b0a6-bc5386f2f86c">
+						<CHILDREN>
+							<NODE NAME="doorPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb_door" UUID="137ff9cb-20a8-474c-894b-1acfc42fdb05">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorLocking" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door_locking" UUID="c48b9ed0-3935-414a-ad45-dc553568ebb7">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorControlPart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_door" UUID="92f3d0c0-1322-4728-a790-df3674ae8156">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="door" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door" UUID="dc861012-35e9-4828-ae2d-116c140022bf">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="doorR2" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\door" UUID="b0f9d7ba-317a-4ea3-8860-fce2b3df7afa">
+						<CHILDREN>
+							<NODE NAME="doorPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb_door" UUID="62e97f5d-f138-4237-91dd-67992ec65268">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorLocking" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door_locking" UUID="3c4fb4b4-6edd-4916-9e66-c1ee3bec410b">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorControlPart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_door" UUID="e3e76870-7d38-41cc-91b0-c09593a74a79">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="door" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door" UUID="40ba6271-935a-48b6-be8f-7edb3619b0f4">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+					<NODE NAME="doorR3" TYPE="mac" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\door" UUID="00496239-c618-4816-8ab2-ddbbee5c69d6">
+						<CHILDREN>
+							<NODE NAME="doorPB" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\pb_door" UUID="295efc68-5b2b-406a-9614-2d007b987721">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorLocking" TYPE="rel" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door_locking" UUID="12016948-7baf-4ef7-9751-27f061ac0a89">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="doorControlPart" TYPE="graf" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\cp_door" UUID="4c406c0a-08c3-4f80-9628-f507bb40c2bb">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+							<NODE NAME="door" TYPE="st" MODEL_PATH="E:\Applis_cb\cb2019_1\examples\Applications\tni_train\functional\op_door" UUID="7d23afda-37a6-42ed-8573-9dccd3bed619">
+								<CHILDREN>
+								</CHILDREN>
+							</NODE>
+						</CHILDREN>
+					</NODE>
+				</CHILDREN>
+			</NODE>
+		</CHILDREN>
+	</NODE>
+</APPLICATION_REQUIREMENTS>

@@ -1,0 +1,29 @@
+
+FUNCTION CB_mux_tod : TOD
+
+
+TITLE = ' Multiplexer on N variable '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : muxTod
+FAMILY  : TNI
+
+VAR_INPUT
+    K : INT;
+    IN0 : TOD;
+    IN1 : TOD;
+    IN2 : TOD;
+    IN3 : TOD;
+    IN4 : TOD;
+    IN5 : TOD;
+    IN6 : TOD;
+    IN7 : TOD;
+    IN8 : TOD;
+    IN9 : TOD;
+END_VAR
+
+BEGIN
+
+CB_mux_tod := MUX (K := K, IN0 := IN0, IN1 := IN1, IN2 := IN2, IN3 := IN3, IN4 := IN4, IN5 := IN5, IN6 := IN6, IN7 := IN7, IN8 := IN8, IN9:= IN9 );
+
+END_FUNCTION

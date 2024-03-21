@@ -1,0 +1,21 @@
+
+FUNCTION CB_limit_tod : TOD
+
+
+TITLE = ' Limiting (min and max) a variable '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : limiTod
+FAMILY  : TNI
+
+VAR_INPUT
+    MN : TOD;
+    IN : TOD;
+    MX : TOD;
+END_VAR
+
+BEGIN
+
+CB_limit_tod := LIMIT(MN := MN, IN := IN, MX := MX); 
+
+END_FUNCTION

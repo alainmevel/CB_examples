@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-03T11:13:41-01:00" />
+	<contentHeader name="preparation">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="32" y="8" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+			<pou name="bottling_line.preparation" pouType="functionBlock">
+				<interface>
+					<inputVars>
+						<variable name="preparationRequest">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>06496ea5-0790-472f-8f58-5b45f037d164</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="productionWaiting">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>e504608b-a1b0-442a-a211-cdc7a8a72954</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="highLevel1">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>3cee63e9-a018-4b53-914a-f57fa0162284</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="highLevel2">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>f176a244-39a3-4d56-829f-6750dc5d8216</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="highLevel3">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>26fbe3fc-d5dd-4fdc-9101-745141befc24</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>Levels</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<outputVars>
+						<variable name="preparationValve1">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>5beb90c6-bbe6-4081-9d40-625fd10b7178</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="preparationValve2">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>b0d392d8-5787-4371-9018-ef35e08ff3a5</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="preparationValve3">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>fed6b82e-724c-4207-9950-fb80b362d213</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="preparationValve4">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>f301e1f8-10fa-4146-95ee-41db1df94957</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="preparationPump1">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>3e9b3bd7-b792-438d-9562-63a93161e311</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="preparationPump2">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>0446b0e9-6266-4da4-b101-956dc50b55bf</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="preparationAgit">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>6d6a1bd4-2eec-4de1-8ba6-21189a23902a</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>FunctionsRequests</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<outputVars>
+						<variable name="preparationEnd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>09d0880a-8bdb-4269-81ac-7d25b34e4893</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<addData>
+						<data name="Geensys.CB.groupIn" handleUnknown="preserve">
+							<value>Levels,</value>
+						</data>
+						<data name="Geensys.CB.groupOut" handleUnknown="preserve">
+							<value>FunctionsRequests,</value>
+						</data>
+					</addData>
+				</interface>
+				<actions>
+				</actions>
+				<body>
+					<SFC>
+						<label localId="0" label="G1">
+							<position x="0" y="0" />
+						</label>
+						<step name="10" localId="1" initialStep="true">
+							<position x="96" y="96" />
+							<connectionPointIn>
+								<connection refLocalId="5">
+									<position x="128" y="764" />
+									<position x="128" y="784" />
+									<position x="72" y="784" />
+									<position x="72" y="84" />
+									<position x="128" y="84" />
+									<position x="128" y="96" />
+								</connection>
+							</connectionPointIn>
+							<addData>
+								<data name="Geensys.CB.comment" handleUnknown="preserve">
+									<value>Initial step</value>
+								</data>
+							</addData>
+						</step>
+						<actionBlock localId="9" width="218" height="64">
+							<position x="176" y="656" />
+							<connectionPointIn>
+								<connection refLocalId="2" />
+							</connectionPointIn>
+							<action localId="10">
+								<relPosition x="0" y="0" />
+								<inline>
+									<ST>preparationEnd;</ST>
+								</inline>
+							</action>
+						</actionBlock>
+						<step name="13" localId="2">
+							<position x="96" y="656" />
+							<connectionPointIn>
+								<connection refLocalId="6">
+									<position x="128" y="620" />
+									<position x="128" y="644" />
+									<position x="128" y="644" />
+									<position x="128" y="656" />
+								</connection>
+							</connectionPointIn>
+							<addData>
+								<data name="Geensys.CB.comment" handleUnknown="preserve">
+									<value>End of preparation</value>
+								</data>
+							</addData>
+						</step>
+						<actionBlock localId="11" width="224" height="120">
+							<position x="176" y="456" />
+							<connectionPointIn>
+								<connection refLocalId="3" />
+							</connectionPointIn>
+							<action localId="12">
+								<relPosition x="0" y="0" />
+								<inline>
+									<ST>preparationAgit;
+preparationPump1;
+preparationPump2;
+preparationValve3;
+preparationValve4;</ST>
+								</inline>
+							</action>
+						</actionBlock>
+						<step name="12" localId="3">
+							<position x="96" y="456" />
+							<connectionPointIn>
+								<connection refLocalId="7">
+									<position x="128" y="420" />
+									<position x="128" y="444" />
+									<position x="128" y="444" />
+									<position x="128" y="456" />
+								</connection>
+							</connectionPointIn>
+							<addData>
+								<data name="Geensys.CB.comment" handleUnknown="preserve">
+									<value>Filling of tanks 3</value>
+								</data>
+							</addData>
+						</step>
+						<actionBlock localId="13" width="224" height="136">
+							<position x="176" y="240" />
+							<connectionPointIn>
+								<connection refLocalId="4" />
+							</connectionPointIn>
+							<action localId="14">
+								<relPosition x="0" y="0" />
+								<inline>
+									<ST>IF NOT highLevel1 THEN
+&#9;preparationValve1;
+END_IF;
+IF NOT highLevel2 THEN
+&#9;preparationValve2;
+END_IF;</ST>
+								</inline>
+							</action>
+						</actionBlock>
+						<step name="11" localId="4">
+							<position x="96" y="240" />
+							<connectionPointIn>
+								<connection refLocalId="8">
+									<position x="128" y="204" />
+									<position x="128" y="228" />
+									<position x="128" y="228" />
+									<position x="128" y="240" />
+								</connection>
+							</connectionPointIn>
+							<addData>
+								<data name="Geensys.CB.comment" handleUnknown="preserve">
+									<value>Filling of tanks 1 and 2</value>
+								</data>
+							</addData>
+						</step>
+						<transition localId="5">
+							<position x="112" y="756" />
+							<connectionPointIn>
+								<connection refLocalId="2">
+									<position x="128" y="720" />
+									<position x="128" y="732" />
+									<position x="128" y="732" />
+									<position x="128" y="756" />
+								</connection>
+							</connectionPointIn>
+							<condition>
+								<inline name="5">
+									<ST>productionWaiting</ST>
+								</inline>
+							</condition>
+							<addData>
+								<data name="Geensys.CB.index" handleUnknown="preserve">
+									<value>13</value>
+								</data>
+								<data name="Geensys.CB.comment" handleUnknown="preserve">
+									<value>Master waiting for production</value>
+								</data>
+							</addData>
+						</transition>
+						<transition localId="6">
+							<position x="112" y="612" />
+							<connectionPointIn>
+								<connection refLocalId="3">
+									<position x="128" y="520" />
+									<position x="128" y="588" />
+									<position x="128" y="588" />
+									<position x="128" y="612" />
+								</connection>
+							</connectionPointIn>
+							<condition>
+								<inline name="6">
+									<ST>highLevel3</ST>
+								</inline>
+							</condition>
+							<addData>
+								<data name="Geensys.CB.index" handleUnknown="preserve">
+									<value>12</value>
+								</data>
+								<data name="Geensys.CB.comment" handleUnknown="preserve">
+									<value>Tanks 3 filled</value>
+								</data>
+							</addData>
+						</transition>
+						<transition localId="7">
+							<position x="112" y="412" />
+							<connectionPointIn>
+								<connection refLocalId="4">
+									<position x="128" y="304" />
+									<position x="128" y="388" />
+									<position x="128" y="388" />
+									<position x="128" y="412" />
+								</connection>
+							</connectionPointIn>
+							<condition>
+								<inline name="7">
+									<ST>highLevel1 AND highLevel2 </ST>
+								</inline>
+							</condition>
+							<addData>
+								<data name="Geensys.CB.index" handleUnknown="preserve">
+									<value>11</value>
+								</data>
+								<data name="Geensys.CB.comment" handleUnknown="preserve">
+									<value>Tanks 1 and 2 filled</value>
+								</data>
+							</addData>
+						</transition>
+						<transition localId="8">
+							<position x="112" y="196" />
+							<connectionPointIn>
+								<connection refLocalId="1">
+									<position x="128" y="160" />
+									<position x="128" y="172" />
+									<position x="128" y="172" />
+									<position x="128" y="196" />
+								</connection>
+							</connectionPointIn>
+							<condition>
+								<inline name="8">
+									<ST>preparationRequest</ST>
+								</inline>
+							</condition>
+							<addData>
+								<data name="Geensys.CB.index" handleUnknown="preserve">
+									<value>10</value>
+								</data>
+								<data name="Geensys.CB.comment" handleUnknown="preserve">
+									<value>Preparation request</value>
+								</data>
+							</addData>
+						</transition>
+					</SFC>
+				</body>
+				<addData>
+					<data name="Geensys.CB.Or_Divergences_Exclusivity" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+					<data name="Geensys.CB.COMPONENT_CLASS" handleUnknown="preserve">
+						<value>PROCESS</value>
+					</data>
+					<data name="Geensys.CB.COMPONENT_CLASS_UUID" handleUnknown="preserve">
+						<value>efe67f35-7746-4c41-87ee-86d6ccbf6b60</value>
+					</data>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+				</addData>
+			</pou>
+		</pous>
+	</types>
+	<instances>
+		<configurations />
+	</instances>
+</project>

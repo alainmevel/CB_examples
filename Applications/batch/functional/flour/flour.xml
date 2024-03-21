@@ -1,0 +1,1251 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-03T11:13:38-01:00" />
+	<contentHeader name="flour">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="32" y="8" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+			<pou name="batch.flour" pouType="program">
+				<interface>
+					<inputVars>
+						<variable name="cycleInProgress">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>21915c0a-47e4-4635-bf43-3e7184c3d70c</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="acknowledgePB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Acknowledgement pushbutton</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>dd13ec16-719c-49e9-905b-766f0b283df8</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="weighingRequest">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>6f63834b-c4af-4e2a-b776-3f1241f87ecf</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="flourWeight">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>705e46c6-d6b8-4ee9-8b77-30efdd5b8072</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>FlourSetting</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="autoMode">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>automatic mode</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>46e0ee1d-686c-45de-8671-06c2af89577f</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="manualMode">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>manual mode</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>a7c6af4e-ae21-40f1-9fba-ea7afbff5f23</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>Modes</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<outputVars>
+						<variable name="flourExtraction">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>c8650e22-a9b1-4972-a5d0-1318b141c5e2</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="weighingOk">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>bc538653-75a3-47e6-96a8-11fb5094dfb5</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="fault">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>5706192a-9487-4dad-a590-32253aaac99e</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<addData>
+						<data name="Geensys.CB.groupIn" handleUnknown="preserve">
+							<value>FlourSetting,,Modes,</value>
+						</data>
+					</addData>
+				</interface>
+				<actions>
+				</actions>
+				<body>
+					<FBD>
+						<inVariable localId="0">
+							<position x="168" y="168" />
+							<expression>cycleInProgress</expression>
+						</inVariable>
+						<inVariable localId="1">
+							<position x="576" y="360" />
+							<expression>acknowledgePB</expression>
+						</inVariable>
+						<inVariable localId="2">
+							<position x="600" y="624" />
+							<expression>acknowledgePB</expression>
+						</inVariable>
+						<inVariable localId="3">
+							<position x="600" y="936" />
+							<expression>acknowledgePB</expression>
+						</inVariable>
+						<inVariable localId="4">
+							<position x="168" y="144" />
+							<expression>weighingRequest</expression>
+						</inVariable>
+						<inVariable localId="5">
+							<position x="168" y="192" />
+							<expression>flourWeight</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>FlourSetting</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>168,192</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="6">
+							<position x="576" y="384" />
+							<expression>autoMode</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Modes</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>576,384</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="7">
+							<position x="600" y="648" />
+							<expression>autoMode</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Modes</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>600,648</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="8">
+							<position x="600" y="960" />
+							<expression>autoMode</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Modes</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>600,960</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="9">
+							<position x="576" y="384" />
+							<expression>manualMode</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Modes</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>576,384</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="10">
+							<position x="600" y="648" />
+							<expression>manualMode</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Modes</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>600,648</value>
+								</data>
+							</addData>
+						</inVariable>
+						<inVariable localId="11">
+							<position x="600" y="960" />
+							<expression>manualMode</expression>
+							<addData>
+								<data name="Geensys.CB.group" handleUnknown="preserve">
+									<value>Modes</value>
+								</data>
+								<data name="Geensys.CB.groupPosition" handleUnknown="preserve">
+									<value>600,960</value>
+								</data>
+							</addData>
+						</inVariable>
+						<outVariable localId="12">
+							<position x="1488" y="1008" />
+							<connectionPointIn>
+								<connection refLocalId="13" formalParameter="outputFlow" />
+							</connectionPointIn>
+							<expression>flourExtraction</expression>
+						</outVariable>
+						<outVariable localId="14">
+							<position x="768" y="120" />
+							<connectionPointIn>
+								<connection refLocalId="15" formalParameter="weighingOk" />
+							</connectionPointIn>
+							<expression>weighingOk</expression>
+						</outVariable>
+						<outVariable localId="16">
+							<position x="1704" y="864" />
+							<connectionPointIn>
+								<connection refLocalId="17" formalParameter="fault" />
+							</connectionPointIn>
+							<expression>fault</expression>
+						</outVariable>
+						<block localId="18" width="426" height="209" typeName="io_library.io_on_off_valve" instanceName="airArrival">
+							<position x="792" y="312" />
+							<inputVariables>
+								<variable formalParameter="acknowledgePB">
+									<connectionPointIn>
+										<connection refLocalId="1">
+											<position x="584" y="360" />
+											<position x="757" y="360" />
+											<position x="757" y="360" />
+											<position x="792" y="360" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="autoMode">
+									<connectionPointIn>
+										<connection refLocalId="6">
+											<position x="584" y="384" />
+											<position x="753" y="384" />
+											<position x="753" y="384" />
+											<position x="792" y="384" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="manualMode">
+									<connectionPointIn>
+										<connection refLocalId="9">
+											<position x="584" y="384" />
+											<position x="753" y="384" />
+											<position x="753" y="384" />
+											<position x="792" y="384" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="autoCloseCmd">
+									<connectionPointIn>
+										<connection refLocalId="15" formalParameter="introFlourEnd">
+											<position x="648" y="144" />
+											<position x="737" y="144" />
+											<position x="737" y="408" />
+											<position x="792" y="408" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="autoOpenCmd">
+									<connectionPointIn>
+										<connection refLocalId="15" formalParameter="introduceFlour">
+											<position x="648" y="144" />
+											<position x="743" y="144" />
+											<position x="743" y="408" />
+											<position x="792" y="408" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="inputFlow">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="openedSensor">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="closedSensor">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="generalFault">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="outputFlow">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="percentOpening">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>Modes:576@384,Modes</value>
+								</data>
+								<data name="Geensys.CB.NU" handleUnknown="preserve">
+									<value>1</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value> (VAD)  0AArr1 :  (VAD)  0AArr1 :  (VAD)  0AArr1 :  (VAD)  0AArr1 :  (VAD)  0AArr1 :  (VAD)  0AArr1 :  (VAD)  0AArr1 :  (VAD)  0AArr1 :  (VAD)  0AArr1 :  (VAD)  0AArr1 : Integrated object C/C+OP of an on/off valve : 0</value>
+								</data>
+								<data name="Geensys.CB.SY" handleUnknown="preserve">
+									<value>AArr</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>21f53523-c97c-4ab2-a2b5-7e79d3369af5</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="13" width="399" height="192" typeName="io_library.io_on_off_valve" instanceName="extractingValve">
+							<position x="816" y="888" />
+							<inputVariables>
+								<variable formalParameter="acknowledgePB">
+									<connectionPointIn>
+										<connection refLocalId="3">
+											<position x="608" y="936" />
+											<position x="781" y="936" />
+											<position x="781" y="936" />
+											<position x="816" y="936" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="autoMode">
+									<connectionPointIn>
+										<connection refLocalId="8">
+											<position x="608" y="960" />
+											<position x="777" y="960" />
+											<position x="777" y="960" />
+											<position x="816" y="960" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="manualMode">
+									<connectionPointIn>
+										<connection refLocalId="11">
+											<position x="608" y="960" />
+											<position x="777" y="960" />
+											<position x="777" y="960" />
+											<position x="816" y="960" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="autoCloseCmd">
+									<connectionPointIn>
+										<connection refLocalId="15" formalParameter="exitFlourEnd">
+											<position x="648" y="144" />
+											<position x="697" y="144" />
+											<position x="697" y="984" />
+											<position x="816" y="984" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="autoOpenCmd">
+									<connectionPointIn>
+										<connection refLocalId="15" formalParameter="exitFlour">
+											<position x="648" y="144" />
+											<position x="717" y="144" />
+											<position x="717" y="984" />
+											<position x="816" y="984" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="inputFlow">
+									<connectionPointIn>
+										<connection refLocalId="19" formalParameter="outputFlow">
+											<position x="1752" y="696" />
+											<position x="1782" y="696" />
+											<position x="1782" y="1141" />
+											<position x="777" y="1141" />
+											<position x="777" y="1008" />
+											<position x="816" y="1008" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="openedSensor">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="closedSensor">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="generalFault">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="outputFlow">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="percentOpening">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>Modes:600@960,Modes</value>
+								</data>
+								<data name="Geensys.CB.NU" handleUnknown="preserve">
+									<value>1</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value> (VAD)  0ExtV1 :  (VAD)  0ExtV1 :  (VAD)  0ExtV1 :  (VAD)  0ExtV1 :  (VAD)  0ExtV1 :  (VAD)  0ExtV1 :  (VAD)  0ExtV1 :  (VAD)  0ExtV1 :  (VAD)  0ExtV1 :  (VAD)  0ExtV1 : Integrated object C/C+OP of an on/off valve : 0</value>
+								</data>
+								<data name="Geensys.CB.SY" handleUnknown="preserve">
+									<value>ExtV</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>ac101a47-6ff3-4d5f-a73c-4d070c74ad6b</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="20" width="406" height="210" typeName="io_library.io_on_off_valve" instanceName="airExtraction">
+							<position x="816" y="576" />
+							<inputVariables>
+								<variable formalParameter="acknowledgePB">
+									<connectionPointIn>
+										<connection refLocalId="2">
+											<position x="608" y="624" />
+											<position x="781" y="624" />
+											<position x="781" y="624" />
+											<position x="816" y="624" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="autoMode">
+									<connectionPointIn>
+										<connection refLocalId="7">
+											<position x="608" y="648" />
+											<position x="777" y="648" />
+											<position x="777" y="648" />
+											<position x="816" y="648" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="manualMode">
+									<connectionPointIn>
+										<connection refLocalId="10">
+											<position x="608" y="648" />
+											<position x="777" y="648" />
+											<position x="777" y="648" />
+											<position x="816" y="648" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="autoCloseCmd">
+									<connectionPointIn>
+										<connection refLocalId="15" formalParameter="exitFlourEnd">
+											<position x="648" y="144" />
+											<position x="697" y="144" />
+											<position x="697" y="672" />
+											<position x="816" y="672" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="autoOpenCmd">
+									<connectionPointIn>
+										<connection refLocalId="15" formalParameter="exitFlour">
+											<position x="648" y="144" />
+											<position x="717" y="144" />
+											<position x="717" y="672" />
+											<position x="816" y="672" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="inputFlow">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="openedSensor">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="closedSensor">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="generalFault">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="outputFlow">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="percentOpening">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>Modes:600@648,Modes</value>
+								</data>
+								<data name="Geensys.CB.NU" handleUnknown="preserve">
+									<value>1</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value> (VAD)  0AExt1 :  (VAD)  0AExt1 :  (VAD)  0AExt1 :  (VAD)  0AExt1 :  (VAD)  0AExt1 :  (VAD)  0AExt1 :  (VAD)  0AExt1 :  (VAD)  0AExt1 :  (VAD)  0AExt1 :  (VAD)  0AExt1 : Integrated object C/C+OP of an on/off valve : 0</value>
+								</data>
+								<data name="Geensys.CB.SY" handleUnknown="preserve">
+									<value>AExt</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>f46b0269-ac11-45dd-9847-ede050a1ab2c</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="21" width="278" height="96" typeName="equipment_library.tank" instanceName="flourWeighing">
+							<position x="1344" y="384" />
+							<inputVariables>
+								<variable formalParameter="inletFlow">
+									<connectionPointIn>
+										<connection refLocalId="18" formalParameter="outputFlow">
+											<position x="1218" y="408" />
+											<position x="1285" y="408" />
+											<position x="1285" y="432" />
+											<position x="1344" y="432" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="outletFlow">
+									<connectionPointIn>
+										<connection refLocalId="13" formalParameter="outputFlow">
+											<position x="1215" y="984" />
+											<position x="1289" y="984" />
+											<position x="1289" y="456" />
+											<position x="1344" y="456" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="tankLevel">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.PY" handleUnknown="preserve">
+									<value>TK</value>
+								</data>
+								<data name="Geensys.CB.targetablePropertyName" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value>This module simulates the behaviour of the level in a tank.
+The input data for draining and filling are analog flows. : &lt;UNIT&gt;_TK&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>d87dff2e-6b12-4ae3-b2ba-86ba685f0b20</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="19" width="288" height="72" typeName="equipment_library.flow_compute" instanceName="flow">
+							<position x="1464" y="648" />
+							<inputVariables>
+								<variable formalParameter="inputFlow">
+									<connectionPointIn>
+										<connection refLocalId="21" formalParameter="tankLevel">
+											<position x="1622" y="432" />
+											<position x="1622" y="500" />
+											<position x="1429" y="500" />
+											<position x="1429" y="696" />
+											<position x="1464" y="696" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="outputFlow">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.PY" handleUnknown="preserve">
+									<value>FLOW</value>
+								</data>
+								<data name="Geensys.CB.targetablePropertyName" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value>This module computes the flow in litre / min.
+It should be set at the inlet of the circuit or at the outlet of a tank. : &lt;UNIT&gt;_FLOW&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>4c0f903d-385c-4906-9381-ce83291f24fe</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="22" width="264" height="96" typeName="equipment_library.analog_sensor" instanceName="level">
+							<position x="1464" y="528" />
+							<inputVariables>
+								<variable formalParameter="measure">
+									<connectionPointIn>
+										<connection refLocalId="21" formalParameter="tankLevel">
+											<position x="1622" y="432" />
+											<position x="1622" y="503" />
+											<position x="1429" y="503" />
+											<position x="1429" y="576" />
+											<position x="1464" y="576" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="sensorSupply">
+									<connectionPointIn>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="realValue">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="intValue">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="dintValue">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.PY" handleUnknown="preserve">
+									<value>LSS</value>
+								</data>
+								<data name="Geensys.CB.targetablePropertyName" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value>This module simulates the behaviour of an analog sensor.
+It allows to create a fault on the measured quantity. : &lt;UNIT&gt;_LSS&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>69af492b-452d-45ca-b862-2a32c67e3554</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="17" width="240" height="120" typeName="faults" instanceName="faults1">
+							<position x="1416" y="816" />
+							<inputVariables>
+								<variable formalParameter="generalFault3">
+									<connectionPointIn>
+										<connection refLocalId="18" formalParameter="generalFault">
+											<position x="1218" y="384" />
+											<position x="1270" y="384" />
+											<position x="1270" y="864" />
+											<position x="1416" y="864" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="generalFault2">
+									<connectionPointIn>
+										<connection refLocalId="20" formalParameter="generalFault">
+											<position x="1222" y="648" />
+											<position x="1275" y="648" />
+											<position x="1275" y="888" />
+											<position x="1416" y="888" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="generalFault1">
+									<connectionPointIn>
+										<connection refLocalId="13" formalParameter="generalFault">
+											<position x="1215" y="960" />
+											<position x="1386" y="960" />
+											<position x="1386" y="912" />
+											<position x="1416" y="912" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="fault">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.NU" handleUnknown="preserve">
+									<value>1</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value> : 0</value>
+								</data>
+								<data name="Geensys.CB.SY" handleUnknown="preserve">
+									<value>FLT</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>1eea8970-27b1-4bcf-8950-ac0b1199a468</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="15" width="408" height="192" typeName="batch.flour_weighing" instanceName="flourManagement">
+							<position x="240" y="72" />
+							<inputVariables>
+								<variable formalParameter="weighingRequest">
+									<connectionPointIn>
+										<connection refLocalId="4">
+											<position x="176" y="144" />
+											<position x="197" y="144" />
+											<position x="197" y="120" />
+											<position x="240" y="120" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="cycleInProgress">
+									<connectionPointIn>
+										<connection refLocalId="0">
+											<position x="176" y="168" />
+											<position x="199" y="168" />
+											<position x="199" y="144" />
+											<position x="240" y="144" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="weighedWeight">
+									<connectionPointIn>
+										<connection refLocalId="23" formalParameter="dintValue">
+											<position x="1752" y="288" />
+											<position x="1782" y="288" />
+											<position x="1782" y="342" />
+											<position x="196" y="342" />
+											<position x="196" y="168" />
+											<position x="240" y="168" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="flourWeight">
+									<connectionPointIn>
+										<connection refLocalId="5">
+											<position x="176" y="192" />
+											<position x="199" y="192" />
+											<position x="199" y="192" />
+											<position x="240" y="192" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="weighingOk">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="introduceFlour">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="introFlourEnd">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="exitFlour">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="exitFlourEnd">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>FlourSetting:168@192,FlourSetting</value>
+								</data>
+								<data name="Geensys.CB.NU" handleUnknown="preserve">
+									<value>1</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value> : 0</value>
+								</data>
+								<data name="Geensys.CB.SY" handleUnknown="preserve">
+									<value>FloMGT</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>e6e8e357-8b1e-43f0-a146-c7befed30fef</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="23" width="383" height="96" typeName="equipment_library.bounded_scale" instanceName="scale">
+							<position x="1369" y="216" />
+							<inputVariables>
+								<variable formalParameter="inputValue">
+									<connectionPointIn>
+										<connection refLocalId="22" formalParameter="realValue">
+											<position x="1728" y="576" />
+											<position x="1763" y="576" />
+											<position x="1763" y="348" />
+											<position x="1334" y="348" />
+											<position x="1334" y="264" />
+											<position x="1369" y="264" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="realValue">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="dintValue">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="intValue">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.PY" handleUnknown="preserve">
+									<value>BND</value>
+								</data>
+								<data name="Geensys.CB.targetablePropertyName" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value>This module simulates a scaling equation. Form of the scaling equation is y = k (ax + b). : &lt;UNIT&gt;_BND&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>04709091-49eb-42db-bf9d-8e624bfed3b4</value>
+								</data>
+							</addData>
+						</block>
+					</FBD>
+					<documentation>
+						<xhtml:pre>CB.group=FlourSetting,168,192
+CB.group=Modes,576,384
+CB.group=Modes,600,648
+CB.group=Modes,600,960
+</xhtml:pre>
+					</documentation>
+				</body>
+				<addData>
+					<data name="Geensys.CB.AutomaticScheduling" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="Geensys.CB.COMPONENT_CLASS" handleUnknown="preserve">
+						<value>CONTROL_UNIT</value>
+					</data>
+					<data name="Geensys.CB.COMPONENT_CLASS_UUID" handleUnknown="preserve">
+						<value>2edda594-a0f5-4376-8025-1a0fad969398</value>
+					</data>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+				</addData>
+			</pou>
+			<pou name="faults" pouType="functionBlock">
+				<interface>
+					<inputVars>
+						<variable name="generalFault3">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>D&#233;faut g&#233;n&#233;ral</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>1913c849-4803-42d5-a8b4-1e762d672b21</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>defGeneral&lt;SY&gt;&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="generalFault2">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>D&#233;faut g&#233;n&#233;ral</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>dc1f790c-8d74-42d6-a542-8862f52ef251</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>defGeneral&lt;SY&gt;&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="generalFault1">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>D&#233;faut g&#233;n&#233;ral</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>d5b87272-ef7b-48de-b714-6c5f3293ad2a</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>defGeneral&lt;SY&gt;&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<outputVars>
+						<variable name="fault">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>87d398a2-7305-40a1-aee2-f8d5e5283ac5</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>faut&lt;SY&gt;&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<addData>
+					</addData>
+				</interface>
+				<actions>
+				</actions>
+				<body>
+					<LD>
+						<leftPowerRail localId="5">
+							<position x="0" y="100" />
+						</leftPowerRail>
+						<label localId="0" label="1">
+							<position x="0" y="0" />
+						</label>
+						<contact localId="1">
+							<position x="0" y="100" />
+							<connectionPointIn>
+								<connection refLocalId="5">
+									<position x="10" y="150" />
+									<position x="10" y="150" />
+									<position x="10" y="150" />
+									<position x="10" y="150" />
+								</connection>
+							</connectionPointIn>
+							<variable>generalFault1</variable>
+						</contact>
+						<contact localId="2">
+							<position x="0" y="200" />
+							<variable>generalFault2</variable>
+						</contact>
+						<contact localId="3">
+							<position x="0" y="300" />
+							<variable>generalFault3</variable>
+						</contact>
+						<coil localId="4">
+							<position x="1000" y="100" />
+							<connectionPointIn>
+								<connection refLocalId="3">
+									<position x="90" y="350" />
+									<position x="1000" y="350" />
+									<position x="1000" y="150" />
+									<position x="1010" y="150" />
+								</connection>
+								<connection refLocalId="1">
+									<position x="90" y="150" />
+									<position x="100" y="150" />
+									<position x="100" y="150" />
+									<position x="1010" y="150" />
+								</connection>
+								<connection refLocalId="2">
+									<position x="90" y="250" />
+									<position x="1000" y="250" />
+									<position x="1000" y="150" />
+									<position x="1010" y="150" />
+								</connection>
+							</connectionPointIn>
+							<variable>fault</variable>
+						</coil>
+						<rightPowerRail localId="6">
+							<position x="1100" y="100" />
+							<connectionPointIn>
+								<connection refLocalId="4" />
+							</connectionPointIn>
+						</rightPowerRail>
+					</LD>
+				</body>
+				<addData>
+					<data name="Geensys.CB.COMPONENT_CLASS" handleUnknown="preserve">
+						<value>CONTROL_UNIT</value>
+					</data>
+					<data name="Geensys.CB.COMPONENT_CLASS_UUID" handleUnknown="preserve">
+						<value>2edda594-a0f5-4376-8025-1a0fad969398</value>
+					</data>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+				</addData>
+			</pou>
+		</pous>
+	</types>
+	<instances>
+		<configurations />
+	</instances>
+</project>

@@ -1,0 +1,58 @@
+FUNCTION_BLOCK FB98
+TITLE = 'pilot_Z3AGIT1VAD'
+AUTHOR : CB
+
+VAR
+	Z3AGIT1ACT : FB96;
+END_VAR
+
+
+BEGIN
+
+
+NETWORK
+TITLE = 
+//
+//	pilot/pilot_Z3/pilot_Z3AGIT1VAD/Z3AGIT1ACT
+A	"DB110".WKM1_autoMode;
+=	L	0.0;
+BLD	103;
+A	"DB110".WKM1_manualMode;
+=	L	0.1;
+BLD	103;
+A	"DB110".RstMGT1_hiSpeedAgit;
+=	L	0.2;
+BLD	103;
+A	"DB110".RstMGT1_loSpeedAgit;
+=	L	0.3;
+BLD	103;
+A	I04.5;
+=	L	0.4;
+BLD	103;
+A	I04.3;
+=	L	0.5;
+BLD	103;
+A	I04.1;
+=	L	0.6;
+BLD	103;
+A	"DB110".Z3AGIT1_generalFault;
+=	L	0.7;
+BLD	103;
+CALL #Z3AGIT1ACT(
+	autoMode := L	0.0,
+	manualMode := L	0.1,
+	autoHSCmd := L	0.2,
+	autoLSCmd := L	0.3,
+	highSpeedPB := L	0.4,
+	lowSpeedPB := L	0.5,
+	stopPB := L	0.6,
+	generalFault := L	0.7,
+	highSpeedCmd := Q00.6,
+	lowSpeedCmd := Q00.7
+);
+NOP 0;
+
+
+
+
+END_FUNCTION_BLOCK

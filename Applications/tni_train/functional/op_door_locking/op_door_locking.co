@@ -1,0 +1,12 @@
+ lockingCmd IB1
+ unlockingCmd IB2
+ doorLocked OB3
+ doorUnlocked OB4
+ lockActive OB5
+ i_rs1 LI6
+ d_unlockedSensor DB7
+ v_d_unlockedSensor DB8
+ d_lockedSensor DB9
+ v_d_lockedSensor DB10
+ rs1_Q1 LB11
+ rs1_i_rs LI12

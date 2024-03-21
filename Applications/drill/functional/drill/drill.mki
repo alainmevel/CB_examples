@@ -1,0 +1,336 @@
+
+### User options :
+# $Id: options.mk 513 2023-01-05 14:13:40Z EM7 $
+#options de compilation et d'edition de lien :
+_CC_OPTS=-DSY_MSW -DWIN32 -DGCC -m32
+_CPP_OPTS=$(_CINCL)
+
+_LD_LIBS=-Xlinker -no-whole-archive -lkernel32
+_LD_OPTS=-Xlinker -whole-archive -m32
+
+#edition de liens :
+_LD1=gcc -o $@ $(_LD_OPTS)
+_LD2=$(_LD_LIBS)
+#edition de liens intermediaire :
+_LDI1=ar -ruv $@
+_LDI2=
+_AR=ar
+#compilation :
+_CC1=gcc -c -o $@ -I.. $(_CPP_OPTS) $(_CC_OPTS)
+_CC2=
+
+
+
+### Categories definition :
+TOOL_MACH=MinGW
+drill_o=$(TOOL_MACH)
+drill_obj=obj
+momentary_button_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Standard/equipment_library/functional/momentary_button
+momentary_button_o=$(momentary_button_c)/$(TOOL_MACH)
+momentary_button_obj=$(momentary_button_c)/obj
+switch_2pos_2outputs_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Standard/equipment_library/functional/switch_2pos_2outputs
+switch_2pos_2outputs_o=$(switch_2pos_2outputs_c)/$(TOOL_MACH)
+switch_2pos_2outputs_obj=$(switch_2pos_2outputs_c)/obj
+maintained_button_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Standard/equipment_library/functional/maintained_button
+maintained_button_o=$(maintained_button_c)/$(TOOL_MACH)
+maintained_button_obj=$(maintained_button_c)/obj
+mode_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/drill/functional/mode
+mode_o=$(mode_c)/$(TOOL_MACH)
+mode_obj=$(mode_c)/obj
+function_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/drill/functional/function
+function_o=$(function_c)/$(TOOL_MACH)
+function_obj=$(function_c)/obj
+run_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/drill/functional/run
+run_o=$(run_c)/$(TOOL_MACH)
+run_obj=$(run_c)/obj
+mdescent_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/drill/functional/mdescent
+mdescent_o=$(mdescent_c)/$(TOOL_MACH)
+mdescent_obj=$(mdescent_c)/obj
+descent_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/drill/functional/descent
+descent_o=$(descent_c)/$(TOOL_MACH)
+descent_obj=$(descent_c)/obj
+io_engine_2d2s_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Standard/io_library/functional/io_engine_2d2s
+io_engine_2d2s_o=$(io_engine_2d2s_c)/$(TOOL_MACH)
+io_engine_2d2s_obj=$(io_engine_2d2s_c)/obj
+motor_2dir_2speed_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Standard/equipment_library/functional/motor_2dir_2speed
+motor_2dir_2speed_o=$(motor_2dir_2speed_c)/$(TOOL_MACH)
+motor_2dir_2speed_obj=$(motor_2dir_2speed_c)/obj
+cmd_motor_2d2s_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Standard/cmd_equipment_library/functional/cmd_motor_2d2s
+cmd_motor_2d2s_o=$(cmd_motor_2d2s_c)/$(TOOL_MACH)
+cmd_motor_2d2s_obj=$(cmd_motor_2d2s_c)/obj
+cb_ton_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Standard/timers_counters/functional/cb_ton
+cb_ton_o=$(cb_ton_c)/$(TOOL_MACH)
+cb_ton_obj=$(cb_ton_c)/obj
+turret_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/drill/functional/turret
+turret_o=$(turret_c)/$(TOOL_MACH)
+turret_obj=$(turret_c)/obj
+mclamping_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/drill/functional/mclamping
+mclamping_o=$(mclamping_c)/$(TOOL_MACH)
+mclamping_obj=$(mclamping_c)/obj
+clamping_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/drill/functional/clamping
+clamping_o=$(clamping_c)/$(TOOL_MACH)
+clamping_obj=$(clamping_c)/obj
+io_single_acting_jack_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Standard/io_library/functional/io_single_acting_jack
+io_single_acting_jack_o=$(io_single_acting_jack_c)/$(TOOL_MACH)
+io_single_acting_jack_obj=$(io_single_acting_jack_c)/obj
+switch_2pos_1output_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Standard/equipment_library/functional/switch_2pos_1output
+switch_2pos_1output_o=$(switch_2pos_1output_c)/$(TOOL_MACH)
+switch_2pos_1output_obj=$(switch_2pos_1output_c)/obj
+cmd_single_acting_jack_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Standard/cmd_equipment_library/functional/cmd_single_acting_jack
+cmd_single_acting_jack_o=$(cmd_single_acting_jack_c)/$(TOOL_MACH)
+cmd_single_acting_jack_obj=$(cmd_single_acting_jack_c)/obj
+single_acting_jack_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Standard/equipment_library/functional/single_acting_jack
+single_acting_jack_o=$(single_acting_jack_c)/$(TOOL_MACH)
+single_acting_jack_obj=$(single_acting_jack_c)/obj
+mspindle_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/drill/functional/mspindle
+mspindle_o=$(mspindle_c)/$(TOOL_MACH)
+mspindle_obj=$(mspindle_c)/obj
+spindle_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/drill/functional/spindle
+spindle_o=$(spindle_c)/$(TOOL_MACH)
+spindle_obj=$(spindle_c)/obj
+io_engine_1d1s_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Standard/io_library/functional/io_engine_1d1s
+io_engine_1d1s_o=$(io_engine_1d1s_c)/$(TOOL_MACH)
+io_engine_1d1s_obj=$(io_engine_1d1s_c)/obj
+motor_1dir_1speed_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Standard/equipment_library/functional/motor_1dir_1speed
+motor_1dir_1speed_o=$(motor_1dir_1speed_c)/$(TOOL_MACH)
+motor_1dir_1speed_obj=$(motor_1dir_1speed_c)/obj
+cmd_motor_1d1s_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Standard/cmd_equipment_library/functional/cmd_motor_1d1s
+cmd_motor_1d1s_o=$(cmd_motor_1d1s_c)/$(TOOL_MACH)
+cmd_motor_1d1s_obj=$(cmd_motor_1d1s_c)/obj
+piece_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/drill/functional/piece
+piece_o=$(piece_c)/$(TOOL_MACH)
+piece_obj=$(piece_c)/obj
+_simu_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/embedded/nt_simu/embedded
+_simu_o=$(_simu_c)/$(TOOL_MACH)
+
+### Directories for the search of includes :
+_CINCL=-IC:/PROGRA~2/ControlBuild_Trunk/tooldir -IC:/Users/Public/DassaultSystemes/ControlBuild_Trunk/embedded/nt_simu/embedded  -IC:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/drill/functional/drill -IC:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications -IC:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Standard -IC:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Specific
+
+### Link rules :
+cible : $(drill_o) $(momentary_button_o) $(switch_2pos_2outputs_o) $(maintained_button_o) $(mode_o) $(function_o) $(run_o) $(mdescent_o) $(descent_o) $(io_engine_2d2s_o) $(motor_2dir_2speed_o) $(cmd_motor_2d2s_o) $(cb_ton_o) $(turret_o) $(mclamping_o) $(clamping_o) $(io_single_acting_jack_o) $(switch_2pos_1output_o) $(cmd_single_acting_jack_o) $(single_acting_jack_o) $(mspindle_o) $(spindle_o) $(io_engine_1d1s_o) $(motor_1dir_1speed_o) $(cmd_motor_1d1s_o) $(piece_o) $(drill_obj) $(drill_obj)/drill.exe
+	@echo "Compilation Ok"
+
+$(drill_o)/_drill_1.a : drill.mki $(drill_o)/drill.o $(momentary_button_o)/momentary_button.o $(switch_2pos_2outputs_o)/switch_2pos_2outputs.o $(maintained_button_o)/maintained_button.o $(mode_o)/mode.o $(function_o)/function.o $(run_o)/run.o $(mdescent_o)/mdescent.o $(descent_o)/descent.o $(io_engine_2d2s_o)/io_engine_2d2s.o 
+	rm -f $@ 
+	$(_LDI1) $(drill_o)/drill.o $(momentary_button_o)/momentary_button.o $(switch_2pos_2outputs_o)/switch_2pos_2outputs.o $(maintained_button_o)/maintained_button.o $(mode_o)/mode.o $(function_o)/function.o $(run_o)/run.o $(mdescent_o)/mdescent.o $(descent_o)/descent.o $(io_engine_2d2s_o)/io_engine_2d2s.o $(_LDI2)
+	$(_AR) s $@
+
+$(drill_o)/_drill_2.a : drill.mki $(motor_2dir_2speed_o)/motor_2dir_2speed.o $(cmd_motor_2d2s_o)/cmd_motor_2d2s.o $(cb_ton_o)/cb_ton.o $(turret_o)/turret.o $(mclamping_o)/mclamping.o $(clamping_o)/clamping.o $(io_single_acting_jack_o)/io_single_acting_jack.o $(switch_2pos_1output_o)/switch_2pos_1output.o $(cmd_single_acting_jack_o)/cmd_single_acting_jack.o $(single_acting_jack_o)/single_acting_jack.o 
+	rm -f $@ 
+	$(_LDI1) $(motor_2dir_2speed_o)/motor_2dir_2speed.o $(cmd_motor_2d2s_o)/cmd_motor_2d2s.o $(cb_ton_o)/cb_ton.o $(turret_o)/turret.o $(mclamping_o)/mclamping.o $(clamping_o)/clamping.o $(io_single_acting_jack_o)/io_single_acting_jack.o $(switch_2pos_1output_o)/switch_2pos_1output.o $(cmd_single_acting_jack_o)/cmd_single_acting_jack.o $(single_acting_jack_o)/single_acting_jack.o $(_LDI2)
+	$(_AR) s $@
+
+$(drill_o)/_drill_3.a : drill.mki $(mspindle_o)/mspindle.o $(spindle_o)/spindle.o $(io_engine_1d1s_o)/io_engine_1d1s.o $(motor_1dir_1speed_o)/motor_1dir_1speed.o $(cmd_motor_1d1s_o)/cmd_motor_1d1s.o $(piece_o)/piece.o $(drill_o)/_init.o 
+	rm -f $@ 
+	$(_LDI1) $(mspindle_o)/mspindle.o $(spindle_o)/spindle.o $(io_engine_1d1s_o)/io_engine_1d1s.o $(motor_1dir_1speed_o)/motor_1dir_1speed.o $(cmd_motor_1d1s_o)/cmd_motor_1d1s.o $(piece_o)/piece.o $(drill_o)/_init.o $(_LDI2)
+	$(_AR) s $@
+
+$(drill_obj)/drill.exe : $(drill_o)/_drill_1.a $(drill_o)/_drill_2.a $(drill_o)/_drill_3.a $(_simu_o)/cb_main.o $(_simu_o)/cb_memory.o $(_simu_o)/cb_hook.o $(_simu_o)/cb_io.o $(_simu_o)/cb_products.o $(_simu_o)/iec_1131.o $(drill_o)/_sign.o 
+	$(_LD1) $(drill_o)/_drill_1.a $(drill_o)/_drill_2.a $(drill_o)/_drill_3.a $(_simu_o)/cb_main.o $(_simu_o)/cb_memory.o $(_simu_o)/cb_hook.o $(_simu_o)/cb_io.o $(_simu_o)/cb_products.o $(_simu_o)/iec_1131.o $(drill_o)/_sign.o $(_LD2)
+
+$(drill_o)/_sign.o :
+	@echo "int getSignature(void) { return " > _sign.c
+	@echo "0" >> _sign.c
+	@echo "; }" >> _sign.c
+	@echo "int getGenerationTime(void) { return " >> _sign.c
+	@echo "1246547473" >> _sign.c
+	@echo "; }" >> _sign.c
+	$(_CC1) _sign.c
+	$(_CC2)
+	@echo "New Signature"
+
+### Directories making for .o files :
+$(drill_o) :
+	@mkdir $@
+$(momentary_button_o) :
+	@mkdir $@
+$(switch_2pos_2outputs_o) :
+	@mkdir $@
+$(maintained_button_o) :
+	@mkdir $@
+$(mode_o) :
+	@mkdir $@
+$(function_o) :
+	@mkdir $@
+$(run_o) :
+	@mkdir $@
+$(mdescent_o) :
+	@mkdir $@
+$(descent_o) :
+	@mkdir $@
+$(io_engine_2d2s_o) :
+	@mkdir $@
+$(motor_2dir_2speed_o) :
+	@mkdir $@
+$(cmd_motor_2d2s_o) :
+	@mkdir $@
+$(cb_ton_o) :
+	@mkdir $@
+$(turret_o) :
+	@mkdir $@
+$(mclamping_o) :
+	@mkdir $@
+$(clamping_o) :
+	@mkdir $@
+$(io_single_acting_jack_o) :
+	@mkdir $@
+$(switch_2pos_1output_o) :
+	@mkdir $@
+$(cmd_single_acting_jack_o) :
+	@mkdir $@
+$(single_acting_jack_o) :
+	@mkdir $@
+$(mspindle_o) :
+	@mkdir $@
+$(spindle_o) :
+	@mkdir $@
+$(io_engine_1d1s_o) :
+	@mkdir $@
+$(motor_1dir_1speed_o) :
+	@mkdir $@
+$(cmd_motor_1d1s_o) :
+	@mkdir $@
+$(piece_o) :
+	@mkdir $@
+$(drill_obj) :
+	@mkdir $@
+$(momentary_button_obj) :
+	@mkdir $@
+$(switch_2pos_2outputs_obj) :
+	@mkdir $@
+$(maintained_button_obj) :
+	@mkdir $@
+$(mode_obj) :
+	@mkdir $@
+$(function_obj) :
+	@mkdir $@
+$(run_obj) :
+	@mkdir $@
+$(mdescent_obj) :
+	@mkdir $@
+$(descent_obj) :
+	@mkdir $@
+$(io_engine_2d2s_obj) :
+	@mkdir $@
+$(motor_2dir_2speed_obj) :
+	@mkdir $@
+$(cmd_motor_2d2s_obj) :
+	@mkdir $@
+$(cb_ton_obj) :
+	@mkdir $@
+$(turret_obj) :
+	@mkdir $@
+$(mclamping_obj) :
+	@mkdir $@
+$(clamping_obj) :
+	@mkdir $@
+$(io_single_acting_jack_obj) :
+	@mkdir $@
+$(switch_2pos_1output_obj) :
+	@mkdir $@
+$(cmd_single_acting_jack_obj) :
+	@mkdir $@
+$(single_acting_jack_obj) :
+	@mkdir $@
+$(mspindle_obj) :
+	@mkdir $@
+$(spindle_obj) :
+	@mkdir $@
+$(io_engine_1d1s_obj) :
+	@mkdir $@
+$(motor_1dir_1speed_obj) :
+	@mkdir $@
+$(cmd_motor_1d1s_obj) :
+	@mkdir $@
+$(piece_obj) :
+	@mkdir $@
+
+### Compilation rules :
+$(drill_o)/drill.o : drill.c drill.h
+	$(_CC1) drill.c
+	$(_CC2)
+$(momentary_button_o)/momentary_button.o : $(momentary_button_c)/momentary_button.c $(momentary_button_c)/momentary_button.h
+	$(_CC1) $(momentary_button_c)/momentary_button.c
+	$(_CC2)
+$(switch_2pos_2outputs_o)/switch_2pos_2outputs.o : $(switch_2pos_2outputs_c)/switch_2pos_2outputs.c $(switch_2pos_2outputs_c)/switch_2pos_2outputs.h
+	$(_CC1) $(switch_2pos_2outputs_c)/switch_2pos_2outputs.c
+	$(_CC2)
+$(maintained_button_o)/maintained_button.o : $(maintained_button_c)/maintained_button.c $(maintained_button_c)/maintained_button.h
+	$(_CC1) $(maintained_button_c)/maintained_button.c
+	$(_CC2)
+$(mode_o)/mode.o : $(mode_c)/mode.c $(mode_c)/mode.h
+	$(_CC1) $(mode_c)/mode.c
+	$(_CC2)
+$(function_o)/function.o : $(function_c)/function.c $(function_c)/function.h
+	$(_CC1) $(function_c)/function.c
+	$(_CC2)
+$(run_o)/run.o : $(run_c)/run.c $(run_c)/run.h
+	$(_CC1) $(run_c)/run.c
+	$(_CC2)
+$(mdescent_o)/mdescent.o : $(mdescent_c)/mdescent.c $(mdescent_c)/mdescent.h
+	$(_CC1) $(mdescent_c)/mdescent.c
+	$(_CC2)
+$(descent_o)/descent.o : $(descent_c)/descent.c $(descent_c)/descent.h
+	$(_CC1) $(descent_c)/descent.c
+	$(_CC2)
+$(io_engine_2d2s_o)/io_engine_2d2s.o : $(io_engine_2d2s_c)/io_engine_2d2s.c $(io_engine_2d2s_c)/io_engine_2d2s.h
+	$(_CC1) $(io_engine_2d2s_c)/io_engine_2d2s.c
+	$(_CC2)
+$(motor_2dir_2speed_o)/motor_2dir_2speed.o : $(motor_2dir_2speed_c)/motor_2dir_2speed.c $(motor_2dir_2speed_c)/motor_2dir_2speed.h
+	$(_CC1) $(motor_2dir_2speed_c)/motor_2dir_2speed.c
+	$(_CC2)
+$(cmd_motor_2d2s_o)/cmd_motor_2d2s.o : $(cmd_motor_2d2s_c)/cmd_motor_2d2s.c $(cmd_motor_2d2s_c)/cmd_motor_2d2s.h
+	$(_CC1) $(cmd_motor_2d2s_c)/cmd_motor_2d2s.c
+	$(_CC2)
+$(cb_ton_o)/cb_ton.o : $(cb_ton_c)/cb_ton.c $(cb_ton_c)/cb_ton.h
+	$(_CC1) $(cb_ton_c)/cb_ton.c
+	$(_CC2)
+$(turret_o)/turret.o : $(turret_c)/turret.c $(turret_c)/turret.h
+	$(_CC1) $(turret_c)/turret.c
+	$(_CC2)
+$(mclamping_o)/mclamping.o : $(mclamping_c)/mclamping.c $(mclamping_c)/mclamping.h
+	$(_CC1) $(mclamping_c)/mclamping.c
+	$(_CC2)
+$(clamping_o)/clamping.o : $(clamping_c)/clamping.c $(clamping_c)/clamping.h
+	$(_CC1) $(clamping_c)/clamping.c
+	$(_CC2)
+$(io_single_acting_jack_o)/io_single_acting_jack.o : $(io_single_acting_jack_c)/io_single_acting_jack.c $(io_single_acting_jack_c)/io_single_acting_jack.h
+	$(_CC1) $(io_single_acting_jack_c)/io_single_acting_jack.c
+	$(_CC2)
+$(switch_2pos_1output_o)/switch_2pos_1output.o : $(switch_2pos_1output_c)/switch_2pos_1output.c $(switch_2pos_1output_c)/switch_2pos_1output.h
+	$(_CC1) $(switch_2pos_1output_c)/switch_2pos_1output.c
+	$(_CC2)
+$(cmd_single_acting_jack_o)/cmd_single_acting_jack.o : $(cmd_single_acting_jack_c)/cmd_single_acting_jack.c $(cmd_single_acting_jack_c)/cmd_single_acting_jack.h
+	$(_CC1) $(cmd_single_acting_jack_c)/cmd_single_acting_jack.c
+	$(_CC2)
+$(single_acting_jack_o)/single_acting_jack.o : $(single_acting_jack_c)/single_acting_jack.c $(single_acting_jack_c)/single_acting_jack.h
+	$(_CC1) $(single_acting_jack_c)/single_acting_jack.c
+	$(_CC2)
+$(mspindle_o)/mspindle.o : $(mspindle_c)/mspindle.c $(mspindle_c)/mspindle.h
+	$(_CC1) $(mspindle_c)/mspindle.c
+	$(_CC2)
+$(spindle_o)/spindle.o : $(spindle_c)/spindle.c $(spindle_c)/spindle.h
+	$(_CC1) $(spindle_c)/spindle.c
+	$(_CC2)
+$(io_engine_1d1s_o)/io_engine_1d1s.o : $(io_engine_1d1s_c)/io_engine_1d1s.c $(io_engine_1d1s_c)/io_engine_1d1s.h
+	$(_CC1) $(io_engine_1d1s_c)/io_engine_1d1s.c
+	$(_CC2)
+$(motor_1dir_1speed_o)/motor_1dir_1speed.o : $(motor_1dir_1speed_c)/motor_1dir_1speed.c $(motor_1dir_1speed_c)/motor_1dir_1speed.h
+	$(_CC1) $(motor_1dir_1speed_c)/motor_1dir_1speed.c
+	$(_CC2)
+$(cmd_motor_1d1s_o)/cmd_motor_1d1s.o : $(cmd_motor_1d1s_c)/cmd_motor_1d1s.c $(cmd_motor_1d1s_c)/cmd_motor_1d1s.h
+	$(_CC1) $(cmd_motor_1d1s_c)/cmd_motor_1d1s.c
+	$(_CC2)
+$(piece_o)/piece.o : $(piece_c)/piece.c $(piece_c)/piece.h
+	$(_CC1) $(piece_c)/piece.c
+	$(_CC2)
+$(drill_o)/_init.o : _init.c _init.h
+	$(_CC1) _init.c
+	$(_CC2)
+
+### Compilation rules for externals functions :
+$(_simu_o)/iec_1131.o : $(_simu_c)/iec_1131.c $(_simu_c)/iec_1131.h
+	$(_CC1) $(_simu_c)/iec_1131.c
+	$(_CC2)
+
+### Compilation rules for externals fbs :

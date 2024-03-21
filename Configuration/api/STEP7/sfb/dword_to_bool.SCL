@@ -1,0 +1,23 @@
+
+FUNCTION CB_dword_to_bool : BOOL
+
+
+TITLE = ' Convert a double integer into an boolean '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : DworToBo
+FAMILY  : TNI
+
+VAR_INPUT
+    IN : DWORD;
+END_VAR
+
+VAR_TEMP
+
+END_VAR    
+
+BEGIN
+
+CB_dword_to_bool := DWORD_TO_BOOL(IN);
+
+END_FUNCTION

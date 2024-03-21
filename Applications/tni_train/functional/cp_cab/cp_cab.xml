@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-03T11:13:51-01:00" />
+	<contentHeader name="cp_cab">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="100" y="100" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+			<pou name="tni_train.cp_cab" pouType="functionBlock">
+				<interface>
+					<inputVars>
+						<variable name="keyCabEnabled">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>a53f7ce4-23f1-4661-9ae9-5369fadb1829</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="keyCabDisabled">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>8b93c875-4f30-4f0f-b545-1372360ce4dd</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="rightServiceSide">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>1768cdde-88bd-4552-adbf-5b6efb455943</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="leftServiceSide">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>f4998c1d-ad22-42b8-8f34-e4185a21910e</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="pbDoorClosing">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>820d5320-0212-4274-8284-8cbec77c12c2</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="speed">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>560f2d4d-c13e-4eb6-8633-e4372700afbf</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="keyCabEnabled2">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>5e4ff5ee-9ab9-4d1f-9b14-774d2794b89a</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="keyCabDisabled2">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>0a19049c-1252-4d8b-abe9-245078b3dff9</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<outputVars>
+						<variable name="enableOpeningRightC1">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>a22f4b14-b29b-49e6-8a71-3ac9dee258ea</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="enableOpeningLeftC1">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>cf055fcb-5c33-4db3-be2c-05fcb2cd3a7c</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="enableClosingRightC1">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>55fac426-6bb7-4457-a0a6-338ef1e4b635</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="enableClosingLeftC1">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>e5570e6d-aa55-4ebb-820c-5e0d9e99eb3a</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>Authorizations</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<outputVars>
+						<variable name="cabEnabled">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>49b8a29a-6137-4696-986b-b015dc07192c</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="cabDisabled">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>5b292880-2881-4a3f-a492-07f6bacbf9d0</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="cabIncoherence">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>48c0dc0f-d2b7-4094-b08f-5f22aa2af743</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<localVars constant="true">
+						<variable name="limitLowSpeed">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="6.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>bbd335d1-af81-4d9b-80a4-6409a3a6e9d6</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>parameterVars</value>
+							</data>
+						</addData>
+					</localVars>
+					<addData>
+						<data name="Geensys.CB.groupOut" handleUnknown="preserve">
+							<value>Authorizations,</value>
+						</data>
+					</addData>
+				</interface>
+				<actions>
+				</actions>
+				<body>
+					<LD>
+						<leftPowerRail localId="23">
+							<position x="0" y="100" />
+						</leftPowerRail>
+						<label localId="0" label="1">
+							<position x="0" y="0" />
+						</label>
+						<contact localId="4">
+							<position x="0" y="100" />
+							<variable>keyCabEnabled</variable>
+						</contact>
+						<contact localId="6">
+							<position x="0" y="200" />
+							<variable>keyCabDisabled</variable>
+						</contact>
+						<contact localId="7">
+							<position x="0" y="300" />
+							<variable>keyCabEnabled</variable>
+						</contact>
+						<inVariable localId="14">
+							<position x="0" y="400" />
+							<expression>speed</expression>
+						</inVariable>
+						<inVariable localId="22">
+							<position x="0" y="500" />
+							<expression>limitLowSpeed</expression>
+						</inVariable>
+						<contact localId="17">
+							<position x="0" y="600" />
+							<variable>pbDoorClosing</variable>
+						</contact>
+						<block localId="21" width="200" height="200" typeName="lt_real" instanceName="ltreal">
+							<position x="100" y="400" />
+							<inputVariables>
+								<variable formalParameter="IN0">
+									<connectionPointIn>
+										<connection refLocalId="14">
+											<position x="90" y="450" />
+											<position x="100" y="450" />
+											<position x="100" y="450" />
+											<position x="120" y="450" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="IN1">
+									<connectionPointIn>
+										<connection refLocalId="22">
+											<position x="90" y="550" />
+											<position x="100" y="550" />
+											<position x="100" y="550" />
+											<position x="120" y="550" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables />
+							<outputVariables>
+								<variable formalParameter="OUT">
+								</variable>
+							</outputVariables>
+						</block>
+						<contact localId="5" negated="true">
+							<position x="200" y="100" />
+							<connectionPointIn>
+								<connection refLocalId="4">
+									<position x="90" y="150" />
+									<position x="100" y="150" />
+									<position x="100" y="150" />
+									<position x="210" y="150" />
+								</connection>
+							</connectionPointIn>
+							<variable>keyCabEnabled2</variable>
+						</contact>
+						<contact localId="8">
+							<position x="200" y="300" />
+							<connectionPointIn>
+								<connection refLocalId="7">
+									<position x="90" y="350" />
+									<position x="100" y="350" />
+									<position x="100" y="350" />
+									<position x="210" y="350" />
+								</connection>
+							</connectionPointIn>
+							<variable>keyCabEnabled2</variable>
+						</contact>
+						<contact localId="10">
+							<position x="300" y="400" />
+							<connectionPointIn>
+								<connection refLocalId="21" formalParameter="OUT">
+									<position x="280" y="450" />
+									<position x="300" y="450" />
+									<position x="300" y="450" />
+									<position x="310" y="450" />
+								</connection>
+							</connectionPointIn>
+							<variable>cabEnabled</variable>
+						</contact>
+						<contact localId="18">
+							<position x="300" y="600" />
+							<connectionPointIn>
+								<connection refLocalId="17">
+									<position x="90" y="650" />
+									<position x="100" y="650" />
+									<position x="100" y="650" />
+									<position x="310" y="650" />
+								</connection>
+							</connectionPointIn>
+							<variable>cabEnabled</variable>
+						</contact>
+						<contact localId="15">
+							<position x="700" y="400" />
+							<connectionPointIn>
+								<connection refLocalId="10">
+									<position x="390" y="450" />
+									<position x="400" y="450" />
+									<position x="400" y="450" />
+									<position x="710" y="450" />
+								</connection>
+							</connectionPointIn>
+							<variable>rightServiceSide</variable>
+						</contact>
+						<contact localId="16">
+							<position x="700" y="500" />
+							<connectionPointIn>
+								<connection refLocalId="10">
+									<position x="390" y="450" />
+									<position x="400" y="450" />
+									<position x="400" y="550" />
+									<position x="710" y="550" />
+								</connection>
+							</connectionPointIn>
+							<variable>leftServiceSide</variable>
+						</contact>
+						<contact localId="19">
+							<position x="700" y="600" />
+							<connectionPointIn>
+								<connection refLocalId="18">
+									<position x="390" y="650" />
+									<position x="400" y="650" />
+									<position x="400" y="650" />
+									<position x="710" y="650" />
+								</connection>
+							</connectionPointIn>
+							<variable>rightServiceSide</variable>
+						</contact>
+						<contact localId="20">
+							<position x="700" y="700" />
+							<connectionPointIn>
+								<connection refLocalId="18">
+									<position x="390" y="650" />
+									<position x="400" y="650" />
+									<position x="400" y="750" />
+									<position x="710" y="750" />
+								</connection>
+							</connectionPointIn>
+							<variable>leftServiceSide</variable>
+						</contact>
+						<coil localId="1">
+							<position x="1000" y="100" />
+							<connectionPointIn>
+								<connection refLocalId="5">
+									<position x="290" y="150" />
+									<position x="300" y="150" />
+									<position x="300" y="150" />
+									<position x="1010" y="150" />
+								</connection>
+							</connectionPointIn>
+							<variable>cabEnabled</variable>
+						</coil>
+						<coil localId="2">
+							<position x="1000" y="200" />
+							<connectionPointIn>
+								<connection refLocalId="6">
+									<position x="90" y="250" />
+									<position x="100" y="250" />
+									<position x="100" y="250" />
+									<position x="1010" y="250" />
+								</connection>
+							</connectionPointIn>
+							<variable>cabDisabled</variable>
+						</coil>
+						<coil localId="3">
+							<position x="1000" y="300" />
+							<connectionPointIn>
+								<connection refLocalId="8">
+									<position x="290" y="350" />
+									<position x="300" y="350" />
+									<position x="300" y="350" />
+									<position x="1010" y="350" />
+								</connection>
+							</connectionPointIn>
+							<variable>cabIncoherence</variable>
+						</coil>
+						<coil localId="12">
+							<position x="1000" y="400" />
+							<connectionPointIn>
+								<connection refLocalId="15">
+									<position x="790" y="450" />
+									<position x="800" y="450" />
+									<position x="800" y="450" />
+									<position x="1010" y="450" />
+								</connection>
+							</connectionPointIn>
+							<variable>enableOpeningRightC1</variable>
+						</coil>
+						<coil localId="13">
+							<position x="1000" y="500" />
+							<connectionPointIn>
+								<connection refLocalId="16">
+									<position x="790" y="550" />
+									<position x="800" y="550" />
+									<position x="800" y="550" />
+									<position x="1010" y="550" />
+								</connection>
+							</connectionPointIn>
+							<variable>enableOpeningLeftC1</variable>
+						</coil>
+						<coil localId="9">
+							<position x="1000" y="600" />
+							<connectionPointIn>
+								<connection refLocalId="19">
+									<position x="790" y="650" />
+									<position x="800" y="650" />
+									<position x="800" y="650" />
+									<position x="1010" y="650" />
+								</connection>
+							</connectionPointIn>
+							<variable>enableClosingRightC1</variable>
+						</coil>
+						<coil localId="11">
+							<position x="1000" y="700" />
+							<connectionPointIn>
+								<connection refLocalId="20">
+									<position x="790" y="750" />
+									<position x="800" y="750" />
+									<position x="800" y="750" />
+									<position x="1010" y="750" />
+								</connection>
+							</connectionPointIn>
+							<variable>enableClosingLeftC1</variable>
+						</coil>
+						<rightPowerRail localId="24">
+							<position x="1100" y="100" />
+							<connectionPointIn>
+								<connection refLocalId="1" />
+								<connection refLocalId="2" />
+								<connection refLocalId="3" />
+								<connection refLocalId="9" />
+								<connection refLocalId="11" />
+								<connection refLocalId="12" />
+								<connection refLocalId="13" />
+							</connectionPointIn>
+						</rightPowerRail>
+					</LD>
+				</body>
+				<addData>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+				</addData>
+			</pou>
+		</pous>
+	</types>
+	<instances>
+		<configurations />
+	</instances>
+</project>

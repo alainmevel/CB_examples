@@ -1,0 +1,70 @@
+FUNCTION FC76: VOID
+AUTHOR : CB
+VAR_INPUT
+        combE : INT;
+END_VAR
+
+LABEL
+        combi_e, actions, combi_s;
+END_LABEL
+
+BEGIN
+        IF (combE = 0) THEN GOTO actions;
+        END_IF;
+(* Gestion des combinatoires d'entree *)
+combi_e: ;
+RETURN;
+
+(* Gestion des actions du graphe *)
+actions: 
+(* Step activity of Step10 *)
+IF DB76.Step10.X THEN
+"DB110".CONV1_encoder := 0;
+END_IF;
+
+(* Step activity of Step11 *)
+IF DB76.Step11.S1 THEN
+"DB110".CONV1_valve5 := TRUE;
+END_IF;
+IF DB76.Step11.X THEN
+"DB110".CONV1_valve5 := TRUE;
+END_IF;
+IF DB76.Step11.S0 THEN
+"DB110".CONV1_valve5 := FALSE;
+END_IF;
+
+(* Step activity of Step12 *)
+IF DB76.Step12.X THEN
+Q00.0 := TRUE;
+
+Q00.1 := TRUE;
+END_IF;
+
+(* Step activity of Step13 *)
+IF DB76.Step13.X THEN
+Q00.0 := FALSE;
+
+Q00.1 := FALSE;
+END_IF;
+
+(* Step activity of Step14 *)
+IF DB76.Step14.S1 THEN
+"DB110".CONV1_convoy := TRUE;
+END_IF;
+IF DB76.Step14.X THEN
+"DB110".CONV1_convoy := TRUE;
+
+IF (I00.7 AND NOT M0.6) THEN
+	"DB110".CONV1_encoder := "DB110".CONV1_encoder + "DB110".CONV1_increment;
+END_IF;
+END_IF;
+IF DB76.Step14.S0 THEN
+"DB110".CONV1_convoy := FALSE;
+END_IF;
+
+(* Gestion des combinatoires de sortie *)
+combi_s: ;
+
+(* Memory edges *)
+M0.6 := I00.7;
+END_FUNCTION

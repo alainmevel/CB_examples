@@ -1,0 +1,21 @@
+
+FUNCTION CB_limit_real : REAL
+
+
+TITLE = ' Limiting (min and max) a variable '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : limiReal
+FAMILY  : TNI
+
+VAR_INPUT
+    MN : REAL;
+    IN : REAL;
+    MX : REAL;
+END_VAR
+
+BEGIN
+
+CB_limit_real := LIMIT(MN := MN, IN := IN, MX := MX); 
+
+END_FUNCTION

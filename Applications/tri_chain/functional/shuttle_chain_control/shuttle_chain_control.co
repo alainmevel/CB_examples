@@ -1,0 +1,16 @@
+ globalRunning IB1
+ endSensor IB2
+ depositEnabled IB3
+ captureEnabled IB4
+ movement OB5
+ depositRequest OB6
+ depositFinished OB7
+ _X_10 LB8
+ _X_11 LB9
+ _X_12 LB10
+ _X_13 LB11
+ _X_14 LB12
+ _X_11_PREV LB13
+ _X_12_PREV LB14
+ _X_13_PREV LB15
+ _X_14_PREV LB16

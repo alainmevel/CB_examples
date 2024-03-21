@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<CB_COMPONENT NAME="cp_trich" COMMENTS="" COMMENTS_PATTERN="" PICTURE_PATH="" INSTANCE_NAMIMG_PATTERN="" COMPONENT_CLASS="" AP_DEC="T_ElementTableActeursProduits TableActeursProduits[] = {
+&#9;{{0, 0, 0, 0}, {0, 0, 0, 0},
+&#9;0, 0, 0, 0, {{0, 0}, {0, 0}}}
+};
+T_Instance NbActeurs = 0;
+T_Instance NbProduits = 0;
+T_Instance NbActeursEtProduits = 0;
+
+void globalesInit()
+{
+}" SIGNATURE="2147483647" GENERATION_DATE="1331111657" SAFE_MODE="True" BREAKPOINT="False" GEN_STATUS="good">
+	<MODEL_REQUIREMENTS>
+&#9;
+		<COMMENTS />
+&#9;
+		<FUNCTIONAL_TREE TYPE="mac">
+&#9;&#9;
+			<CHILDREN>
+&#9;&#9;&#9;
+				<NODE NAME="chain1" MODEL_PATH="Applications\tri_chain\input_chain_control">
+&#9;&#9;&#9;&#9;
+					<NODE NAME="chain2" MODEL_PATH="Applications\tri_chain\input_chain_control">
+&#9;&#9;&#9;&#9;&#9;
+						<NODE NAME="chain3" MODEL_PATH="Applications\tri_chain\input_chain_control">
+&#9;&#9;&#9;&#9;&#9;&#9;
+							<NODE NAME="shuttleControl" MODEL_PATH="Applications\tri_chain\shuttle_control">
+								<NODE NAME="shuttleChain" MODEL_PATH="Applications\tri_chain\shuttle_chain_control">
+									<NODE NAME="outputChain" MODEL_PATH="Applications\tri_chain\output_chain_control" /></NODE></NODE></NODE></NODE></NODE></CHILDREN></FUNCTIONAL_TREE></MODEL_REQUIREMENTS>
+</CB_COMPONENT>

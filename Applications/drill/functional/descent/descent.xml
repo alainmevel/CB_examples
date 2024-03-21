@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-03T11:13:44-01:00" />
+	<contentHeader name="descent">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="32" y="8" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+			<pou name="drill.descent" pouType="functionBlock">
+				<interface>
+					<inputVars>
+						<variable name="acknowledgePB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>21813c6a-4bad-45e6-9d4d-635dbb0abc77</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="slowAscent">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>42a20faf-4073-462c-aa85-e9b65d849930</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="fastAscent">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>f5790520-22cb-4ac6-9df9-0f4feb174951</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="slowDescent">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>c3d52d71-fca6-45cc-861c-fa7c0b411dec</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="fastDescent">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>43572e4f-3a4f-465e-a0bc-454b927265c0</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>FunctionsRequests</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="equipmentFault">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>45a3d62d-0346-448f-a169-d307bc27795a</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<outputVars>
+						<variable name="motorFault">
+							<type>
+								<DINT />
+							</type>
+							<initialValue>
+								<simpleValue value="0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>61d3c25c-2d66-43e2-9253-e2a79255a3cd</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>motorFault&lt;SY&gt;&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<outputVars>
+						<variable name="forward">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>83364f07-b0a8-4b01-af21-f70cb7433cc3</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>forward&lt;SY&gt;&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="backward">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>ff300c08-6a27-4407-8e22-b2da1717fcd0</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>backward&lt;SY&gt;&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="highSpeed">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>8c9b5345-cff1-4d72-aa18-6f3bab0c1c13</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>highSpeed&lt;SY&gt;&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="lowSpeed">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>57b7e057-e70a-4cd5-8180-f7e536c8cc99</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>lowSpeed&lt;SY&gt;&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>Orders</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<addData>
+						<data name="Geensys.CB.groupIn" handleUnknown="preserve">
+							<value>FunctionsRequests,</value>
+						</data>
+						<data name="Geensys.CB.groupOut" handleUnknown="preserve">
+							<value>Orders,</value>
+						</data>
+					</addData>
+				</interface>
+				<actions>
+					<action name="PreSFC">
+						<body>
+							<ST>
+IF((RE acknowledgePB)) THEN
+&#9;motorFault := 0;
+END_IF;
+IF((X21 OR X41) AND equipmentFault) THEN
+&#9;motorFault := 1;
+END_IF;
+IF((X31 OR X11) AND equipmentFault) THEN
+&#9;motorFault := 2;
+END_IF;
+IF ((X21 OR X11) AND equipmentFault) THEN
+&#9;motorFault := 3;
+END_IF;
+IF ((X41 OR X31) AND equipmentFault) THEN
+&#9;motorFault := 4;
+END_IF;
+
+</ST>
+						</body>
+					</action>
+				</actions>
+				<body>
+					<SFC>
+						<label localId="0" label="G1">
+							<position x="0" y="0" />
+						</label>
+						<step name="10" localId="1" initialStep="true">
+							<position x="617" y="92" />
+							<connectionPointIn>
+								<connection refLocalId="3">
+									<position x="649" y="383" />
+									<position x="649" y="403" />
+									<position x="547" y="403" />
+									<position x="547" y="72" />
+									<position x="649" y="72" />
+									<position x="649" y="92" />
+								</connection>
+							</connectionPointIn>
+							<addData>
+							</addData>
+						</step>
+						<actionBlock localId="5" width="263" height="64">
+							<position x="697" y="262" />
+							<connectionPointIn>
+								<connection refLocalId="2" />
+							</connectionPointIn>
+							<action localId="6">
+								<relPosition x="0" y="0" />
+								<inline>
+									<ST>backward;
+highSpeed;</ST>
+								</inline>
+							</action>
+						</actionBlock>
+						<step name="11" localId="2">
+							<position x="617" y="262" />
+							<connectionPointIn>
+								<connection refLocalId="4">
+									<position x="649" y="213" />
+									<position x="649" y="246" />
+									<position x="649" y="246" />
+									<position x="649" y="262" />
+								</connection>
+							</connectionPointIn>
+							<addData>
+								<data name="Geensys.CB.comment" handleUnknown="preserve">
+									<value>backward command
+high speed command</value>
+								</data>
+							</addData>
+						</step>
+						<transition localId="3">
+							<position x="633" y="375" />
+							<connectionPointIn>
+								<connection refLocalId="2">
+									<position x="649" y="326" />
+									<position x="649" y="342" />
+									<position x="649" y="342" />
+									<position x="649" y="375" />
+								</connection>
+							</connectionPointIn>
+							<condition>
+								<inline name="3">
+									<ST>NOT fastAscent OR (motorFault &gt; 0)</ST>
+								</inline>
+							</condition>
+							<addData>
+								<data name="Geensys.CB.index" handleUnknown="preserve">
+									<value>11</value>
+								</data>
+								<data name="Geensys.CB.comment" handleUnknown="preserve">
+									<value>Cancellation of the high ascent request</value>
+								</data>
+							</addData>
+						</transition>
+						<transition localId="4">
+							<position x="633" y="205" />
+							<connectionPointIn>
+								<connection refLocalId="1">
+									<position x="649" y="156" />
+									<position x="649" y="172" />
+									<position x="649" y="172" />
+									<position x="649" y="205" />
+								</connection>
+							</connectionPointIn>
+							<condition>
+								<inline name="4">
+									<ST>fastAscent AND (motorFault = 0) </ST>
+								</inline>
+							</condition>
+							<addData>
+								<data name="Geensys.CB.index" handleUnknown="preserve">
+									<value>10</value>
+								</data>
+								<data name="Geensys.CB.comment" handleUnknown="preserve">
+									<value>Fast ascent request</value>
+								</data>
+							</addData>
+						</transition>
+						<label localId="7" label="G2">
+							<position x="0" y="0" />
+						</label>
+						<step name="20" localId="8" initialStep="true">
+							<position x="94" y="100" />
+							<connectionPointIn>
+								<connection refLocalId="10">
+									<position x="126" y="391" />
+									<position x="126" y="411" />
+									<position x="24" y="411" />
+									<position x="24" y="80" />
+									<position x="126" y="80" />
+									<position x="126" y="100" />
+								</connection>
+							</connectionPointIn>
+							<addData>
+							</addData>
+						</step>
+						<actionBlock localId="12" width="256" height="64">
+							<position x="174" y="270" />
+							<connectionPointIn>
+								<connection refLocalId="9" />
+							</connectionPointIn>
+							<action localId="13">
+								<relPosition x="0" y="0" />
+								<inline>
+									<ST>forward;
+highSpeed;</ST>
+								</inline>
+							</action>
+						</actionBlock>
+						<step name="21" localId="9">
+							<position x="94" y="270" />
+							<connectionPointIn>
+								<connection refLocalId="11">
+									<position x="126" y="221" />
+									<position x="126" y="254" />
+									<position x="126" y="254" />
+									<position x="126" y="270" />
+								</connection>
+							</connectionPointIn>
+							<addData>
+								<data name="Geensys.CB.comment" handleUnknown="preserve">
+									<value>forward command
+high speed command</value>
+								</data>
+							</addData>
+						</step>
+						<transition localId="10">
+							<position x="110" y="383" />
+							<connectionPointIn>
+								<connection refLocalId="9">
+									<position x="126" y="334" />
+									<position x="126" y="350" />
+									<position x="126" y="350" />
+									<position x="126" y="383" />
+								</connection>
+							</connectionPointIn>
+							<condition>
+								<inline name="10">
+									<ST>NOT fastDescent OR (motorFault &gt; 0)</ST>
+								</inline>
+							</condition>
+							<addData>
+								<data name="Geensys.CB.index" handleUnknown="preserve">
+									<value>21</value>
+								</data>
+								<data name="Geensys.CB.comment" handleUnknown="preserve">
+									<value>Cancellation of the high descent request</value>
+								</data>
+							</addData>
+						</transition>
+						<transition localId="11">
+							<position x="110" y="213" />
+							<connectionPointIn>
+								<connection refLocalId="8">
+									<position x="126" y="164" />
+									<position x="126" y="180" />
+									<position x="126" y="180" />
+									<position x="126" y="213" />
+								</connection>
+							</connectionPointIn>
+							<condition>
+								<inline name="11">
+									<ST>fastDescent AND (motorFault = 0) </ST>
+								</inline>
+							</condition>
+							<addData>
+								<data name="Geensys.CB.index" handleUnknown="preserve">
+									<value>20</value>
+								</data>
+								<data name="Geensys.CB.comment" handleUnknown="preserve">
+									<value>Fast descent request</value>
+								</data>
+							</addData>
+						</transition>
+						<label localId="14" label="G3">
+							<position x="0" y="0" />
+						</label>
+						<step name="30" localId="15" initialStep="true">
+							<position x="611" y="627" />
+							<connectionPointIn>
+								<connection refLocalId="17">
+									<position x="643" y="918" />
+									<position x="643" y="938" />
+									<position x="541" y="938" />
+									<position x="541" y="607" />
+									<position x="643" y="607" />
+									<position x="643" y="627" />
+								</connection>
+							</connectionPointIn>
+							<addData>
+							</addData>
+						</step>
+						<actionBlock localId="19" width="255" height="64">
+							<position x="692" y="800" />
+							<connectionPointIn>
+								<connection refLocalId="16" />
+							</connectionPointIn>
+							<action localId="20">
+								<relPosition x="0" y="0" />
+								<inline>
+									<ST>backward;
+lowSpeed;</ST>
+								</inline>
+							</action>
+						</actionBlock>
+						<step name="31" localId="16">
+							<position x="612" y="800" />
+							<connectionPointIn>
+								<connection refLocalId="18">
+									<position x="643" y="748" />
+									<position x="643" y="748" />
+									<position x="644" y="748" />
+									<position x="644" y="800" />
+								</connection>
+							</connectionPointIn>
+							<addData>
+								<data name="Geensys.CB.comment" handleUnknown="preserve">
+									<value>backward command
+low speed command</value>
+								</data>
+							</addData>
+						</step>
+						<transition localId="17">
+							<position x="627" y="910" />
+							<connectionPointIn>
+								<connection refLocalId="16">
+									<position x="644" y="864" />
+									<position x="644" y="879" />
+									<position x="643" y="879" />
+									<position x="643" y="910" />
+								</connection>
+							</connectionPointIn>
+							<condition>
+								<inline name="17">
+									<ST>NOT slowAscent OR (motorFault &gt; 0)</ST>
+								</inline>
+							</condition>
+							<addData>
+								<data name="Geensys.CB.index" handleUnknown="preserve">
+									<value>31</value>
+								</data>
+								<data name="Geensys.CB.comment" handleUnknown="preserve">
+									<value>Cancellation of the low ascent request</value>
+								</data>
+							</addData>
+						</transition>
+						<transition localId="18">
+							<position x="627" y="740" />
+							<connectionPointIn>
+								<connection refLocalId="15">
+									<position x="643" y="691" />
+									<position x="643" y="707" />
+									<position x="643" y="707" />
+									<position x="643" y="740" />
+								</connection>
+							</connectionPointIn>
+							<condition>
+								<inline name="18">
+									<ST>slowAscent AND (motorFault = 0) </ST>
+								</inline>
+							</condition>
+							<addData>
+								<data name="Geensys.CB.index" handleUnknown="preserve">
+									<value>30</value>
+								</data>
+								<data name="Geensys.CB.comment" handleUnknown="preserve">
+									<value>Slow ascent request</value>
+								</data>
+							</addData>
+						</transition>
+						<label localId="21" label="G4">
+							<position x="0" y="0" />
+						</label>
+						<step name="40" localId="22" initialStep="true">
+							<position x="93" y="643" />
+							<connectionPointIn>
+								<connection refLocalId="24">
+									<position x="125" y="934" />
+									<position x="125" y="954" />
+									<position x="23" y="954" />
+									<position x="23" y="623" />
+									<position x="125" y="623" />
+									<position x="125" y="643" />
+								</connection>
+							</connectionPointIn>
+							<addData>
+							</addData>
+						</step>
+						<actionBlock localId="26" width="269" height="64">
+							<position x="173" y="813" />
+							<connectionPointIn>
+								<connection refLocalId="23" />
+							</connectionPointIn>
+							<action localId="27">
+								<relPosition x="0" y="0" />
+								<inline>
+									<ST>forward;
+lowSpeed;</ST>
+								</inline>
+							</action>
+						</actionBlock>
+						<step name="41" localId="23">
+							<position x="93" y="813" />
+							<connectionPointIn>
+								<connection refLocalId="25">
+									<position x="125" y="764" />
+									<position x="125" y="797" />
+									<position x="125" y="797" />
+									<position x="125" y="813" />
+								</connection>
+							</connectionPointIn>
+							<addData>
+								<data name="Geensys.CB.comment" handleUnknown="preserve">
+									<value>forward command
+low speed command</value>
+								</data>
+							</addData>
+						</step>
+						<transition localId="24">
+							<position x="109" y="926" />
+							<connectionPointIn>
+								<connection refLocalId="23">
+									<position x="125" y="877" />
+									<position x="125" y="893" />
+									<position x="125" y="893" />
+									<position x="125" y="926" />
+								</connection>
+							</connectionPointIn>
+							<condition>
+								<inline name="24">
+									<ST>NOT slowDescent OR (motorFault &gt; 0)</ST>
+								</inline>
+							</condition>
+							<addData>
+								<data name="Geensys.CB.index" handleUnknown="preserve">
+									<value>41</value>
+								</data>
+								<data name="Geensys.CB.comment" handleUnknown="preserve">
+									<value>Cancellation of the low descent request</value>
+								</data>
+							</addData>
+						</transition>
+						<transition localId="25">
+							<position x="109" y="756" />
+							<connectionPointIn>
+								<connection refLocalId="22">
+									<position x="125" y="707" />
+									<position x="125" y="723" />
+									<position x="125" y="723" />
+									<position x="125" y="756" />
+								</connection>
+							</connectionPointIn>
+							<condition>
+								<inline name="25">
+									<ST>slowDescent AND (motorFault = 0) </ST>
+								</inline>
+							</condition>
+							<addData>
+								<data name="Geensys.CB.index" handleUnknown="preserve">
+									<value>40</value>
+								</data>
+								<data name="Geensys.CB.comment" handleUnknown="preserve">
+									<value>Slow descent request</value>
+								</data>
+							</addData>
+						</transition>
+					</SFC>
+				</body>
+				<addData>
+					<data name="Geensys.CB.Or_Divergences_Exclusivity" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+					<data name="Geensys.CB.COMPONENT_CLASS" handleUnknown="preserve">
+						<value>PROCESS</value>
+					</data>
+					<data name="Geensys.CB.COMPONENT_CLASS_UUID" handleUnknown="preserve">
+						<value>efe67f35-7746-4c41-87ee-86d6ccbf6b60</value>
+					</data>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+				</addData>
+			</pou>
+		</pous>
+	</types>
+	<instances>
+		<configurations />
+	</instances>
+</project>

@@ -1,0 +1,27 @@
+ cycleInProgress IB1
+ acknowledgePB IB2
+ flourWeighingRequest IB3
+ syrupWeighingRequest IB4
+ kneadingRequest IB5
+ autoMode IB6
+ manualMode IB7
+ flourWeight II8
+ syrup1Weight II9
+ syrup2Weight II10
+ syrup3Weight II11
+ generalFault OB12
+ kneadingOK OB13
+ flourWeighingOk OB14
+ syrupWeighingOk OB15
+ ~ LF16
+ ~ LF17
+ ~ LB18
+ ~ LB19
+ ~ LB20
+<batch:flour flour/ 1 cycleInProgress 1 acknowledgePB 2 weighingRequest 3 flourWeight 8 autoMode 6 manualMode 7 flourExtraction 17 weighingOk 14 fault 19>
+<batch:syrup syrup/ 1 syrup1Weight 9 syrup2Weight 10 syrup3Weight 11 cycleInProgress 1 weighingRequest 4 acknowledgePB 2 autoMode 6 manualMode 7 weighingOk 15 fault 20 syrupExtraction 16>
+<batch:mixture mixture/ 1 cycleInProgress 1 kneadingRequest 5 acknowledgePB 2 autoMode 6 manualMode 7 syrupExtraction 16 flourExtraction 17 kneadingOK 13 fault 18>
+ faults1/fault3 IB18
+ faults1/fault2 IB19
+ faults1/fault1 IB20
+ faults1/generalFault OB12

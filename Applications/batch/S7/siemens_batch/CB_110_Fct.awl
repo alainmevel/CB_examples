@@ -1,0 +1,147 @@
+FUNCTION_BLOCK FB110
+TITLE = 'pilot_F3'
+AUTHOR : CB
+
+VAR
+	F3AgitM1ACT : FB103;
+	F3CleanV1ACT : FB86;
+	F3MiXExV1ACT : FB86;
+END_VAR
+
+
+BEGIN
+
+
+NETWORK
+TITLE = 
+//
+//	pilot/pilot_F3/F3AgitM1ACT
+A	"DB120".WKM1_autoMode;
+=	L	0.0;
+BLD	103;
+A	"DB120".WKM1_manualMode;
+=	L	0.1;
+BLD	103;
+A	"DB120".KNEAD1_knead;
+=	L	0.2;
+BLD	103;
+A	I00.1;
+=	L	0.3;
+BLD	103;
+A	I00.3;
+=	L	0.4;
+BLD	103;
+A	"DB120".F3AgitM1_generalFault;
+=	L	0.5;
+BLD	103;
+CALL #F3AgitM1ACT(
+	autoMode := L	0.0,
+	manualMode := L	0.1,
+	autoCmd := L	0.2,
+	forwardPB := L	0.3,
+	stopPB := L	0.4,
+	generalFault := L	0.5,
+	cmd := Q00.0
+);
+NOP 0;
+
+
+
+NETWORK
+TITLE = 
+//
+//	pilot/pilot_F3/F3CleanV1ACT
+A	"DB120".WKM1_autoMode;
+=	L	0.0;
+BLD	103;
+A	"DB120".WKM1_manualMode;
+=	L	0.1;
+BLD	103;
+A	"DB120".KNEAD1_cleaningEnd;
+=	L	0.2;
+BLD	103;
+A	"DB120".KNEAD1_clean;
+=	L	0.3;
+BLD	103;
+A	I04.5;
+=	L	0.4;
+BLD	103;
+A	I04.6;
+=	L	0.5;
+BLD	103;
+A	I01.3;
+=	L	0.6;
+BLD	103;
+A	I01.4;
+=	L	0.7;
+BLD	103;
+A	"DB120".F3CleanV1_generalFault;
+=	L	1.0;
+BLD	103;
+CALL #F3CleanV1ACT(
+	autoMode := L	0.0,
+	manualMode := L	0.1,
+	autoCloseCmd := L	0.2,
+	autoOpenCmd := L	0.3,
+	closedSensorFB := L	0.4,
+	openedSensorFB := L	0.5,
+	closeValvePB := L	0.6,
+	openValvePB := L	0.7,
+	generalFault := L	1.0,
+	closeCmd := Q00.2,
+	openCmd := Q00.1
+);
+NOP 0;
+
+
+
+NETWORK
+TITLE = 
+//
+//	pilot/pilot_F3/F3MiXExV1ACT
+A	"DB120".WKM1_autoMode;
+=	L	0.0;
+BLD	103;
+A	"DB120".WKM1_manualMode;
+=	L	0.1;
+BLD	103;
+A	"DB120".KNEAD1_evacMixtureEnd;
+=	L	0.2;
+BLD	103;
+A	"DB120".KNEAD1_evacuateMixture;
+=	L	0.3;
+BLD	103;
+A	I04.3;
+=	L	0.4;
+BLD	103;
+A	I04.4;
+=	L	0.5;
+BLD	103;
+A	I02.5;
+=	L	0.6;
+BLD	103;
+A	I03.0;
+=	L	0.7;
+BLD	103;
+A	"DB120".F3MiXExV1_generalFault;
+=	L	1.0;
+BLD	103;
+CALL #F3MiXExV1ACT(
+	autoMode := L	0.0,
+	manualMode := L	0.1,
+	autoCloseCmd := L	0.2,
+	autoOpenCmd := L	0.3,
+	closedSensorFB := L	0.4,
+	openedSensorFB := L	0.5,
+	closeValvePB := L	0.6,
+	openValvePB := L	0.7,
+	generalFault := L	1.0,
+	closeCmd := Q00.7,
+	openCmd := Q01.0
+);
+NOP 0;
+
+
+
+
+END_FUNCTION_BLOCK

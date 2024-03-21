@@ -1,0 +1,19 @@
+
+FUNCTION CB_sint_to_real : REAL
+
+
+TITLE = ' Convert an integer into a real '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : sintToRe
+FAMILY  : TNI
+
+VAR_INPUT
+    IN : INT;
+END_VAR
+
+BEGIN
+
+CB_sint_to_real := INT_TO_REAL(IN);
+
+END_FUNCTION

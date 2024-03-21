@@ -1,0 +1,104 @@
+DATA_BLOCK DB 110
+TITLE =
+STRUCT
+WKM1_manualMode : BOOL;	// :
+WKM1_autoMode : BOOL;	// :
+WKM1_powerUp : BOOL;	// :
+Z2EXP1_generalFault : BOOL;	// : Z2_EXP1 : General fault of the pump
+Z2EV1_generalFault : BOOL;	// : Z2_EV1 : General fault of the pump
+Z2FV1_generalFault : BOOL;	// : Z2_FV1 : General fault of the pump
+Z1EXP1_generalFault : BOOL;	// : Z1_EXP1 : General fault of the pump
+Z1EV1_generalFault : BOOL;	// : Z1_EV1 : General fault of the pump
+Z1FV1_generalFault : BOOL;	// : Z1_FV1 : General fault of the pump
+Z3AGIT1_generalFault : BOOL;	// : Z3_AGIT1 : General fault of the agitator
+Z3EV1_generalFault : BOOL;	// : Z3_EV1 : General fault of the pump
+Z4CONV1_generalFault : BOOL;	// : Z4_CONV1 : General fault of the motor
+RstMGT1_loSpeedAgit : BOOL;	// : <CLASS_PATTERN>
+RstMGT1_hiSpeedAgit : BOOL;	// : <CLASS_PATTERN>
+valve2RqstMGT1 : BOOL;	// : <CLASS_PATTERN>
+valve1RqstMGT1 : BOOL;	// : <CLASS_PATTERN>
+CONV1_valve5 : BOOL;	// : _ : <CLASS_PATTERN>
+valve3RqstMGT1 : BOOL;	// : <CLASS_PATTERN>
+valve4RqstMGT1 : BOOL;	// : <CLASS_PATTERN>
+CONV1_convoy : BOOL;	// : _ : <CLASS_PATTERN>
+pump2RqstMGT1 : BOOL;	// : <CLASS_PATTERN>
+pump1RqstMGT1 : BOOL;	// : <CLASS_PATTERN>
+MAST1_initEnd : BOOL;	// : _ :
+MAST1_initializationRqst : BOOL;	// : _ :
+MAST1_preparationRqst : BOOL;	// : _ :
+MAST1_productionRqst : BOOL;	// : _ :
+MAST1_closingRqst : BOOL;	// : _ :
+MAST1_masterInStandBy : BOOL;	// : _ :
+MAST1_productionWaiting : BOOL;	// : _ :
+TkMGT1_pump1 : BOOL;	// : _ :
+TkMGT1_pump2 : BOOL;	// : _ :
+TkMGT1_valve1 : BOOL;	// : _ :
+TkMGT1_valve2 : BOOL;	// : _ :
+TkMGT1_valve3 : BOOL;	// : _ :
+TkMGT1_valve4 : BOOL;	// : _ :
+TkMGT1_lowSpeedAgitator : BOOL;	// : _ :
+TkMGT1_highSpeedAgitator : BOOL;	// : _ :
+TkMGT1_closingEnd : BOOL;	// : _ :
+PREP1_preparationValve1 : BOOL;	// : _ :
+PREP1_preparationValve2 : BOOL;	// : _ :
+PREP1_preparationValve3 : BOOL;	// : _ :
+PREP1_preparationValve4 : BOOL;	// : _ :
+PREP1_preparationPump1 : BOOL;	// : _ :
+PREP1_preparationPump2 : BOOL;	// : _ :
+PREP1_preparationAgit : BOOL;	// : _ :
+PREP1_preparationEnd : BOOL;	// : _ :
+CONV1_encoder : INT;	// : _ :
+CONV1_value : INT;	// : _ :
+CONV1_increment : INT;	// : _ :
+END_STRUCT;
+BEGIN
+WKM1_manualMode := FALSE;
+WKM1_autoMode := FALSE;
+WKM1_powerUp := FALSE;
+Z2EXP1_generalFault := FALSE;
+Z2EV1_generalFault := FALSE;
+Z2FV1_generalFault := FALSE;
+Z1EXP1_generalFault := FALSE;
+Z1EV1_generalFault := FALSE;
+Z1FV1_generalFault := FALSE;
+Z3AGIT1_generalFault := FALSE;
+Z3EV1_generalFault := FALSE;
+Z4CONV1_generalFault := FALSE;
+RstMGT1_loSpeedAgit := FALSE;
+RstMGT1_hiSpeedAgit := FALSE;
+valve2RqstMGT1 := FALSE;
+valve1RqstMGT1 := FALSE;
+CONV1_valve5 := FALSE;
+valve3RqstMGT1 := FALSE;
+valve4RqstMGT1 := FALSE;
+CONV1_convoy := FALSE;
+pump2RqstMGT1 := FALSE;
+pump1RqstMGT1 := FALSE;
+MAST1_initEnd := FALSE;
+MAST1_initializationRqst := FALSE;
+MAST1_preparationRqst := FALSE;
+MAST1_productionRqst := FALSE;
+MAST1_closingRqst := FALSE;
+MAST1_masterInStandBy := FALSE;
+MAST1_productionWaiting := FALSE;
+TkMGT1_pump1 := FALSE;
+TkMGT1_pump2 := FALSE;
+TkMGT1_valve1 := FALSE;
+TkMGT1_valve2 := FALSE;
+TkMGT1_valve3 := FALSE;
+TkMGT1_valve4 := FALSE;
+TkMGT1_lowSpeedAgitator := FALSE;
+TkMGT1_highSpeedAgitator := FALSE;
+TkMGT1_closingEnd := FALSE;
+PREP1_preparationValve1 := FALSE;
+PREP1_preparationValve2 := FALSE;
+PREP1_preparationValve3 := FALSE;
+PREP1_preparationValve4 := FALSE;
+PREP1_preparationPump1 := FALSE;
+PREP1_preparationPump2 := FALSE;
+PREP1_preparationAgit := FALSE;
+PREP1_preparationEnd := FALSE;
+CONV1_encoder := 0;
+CONV1_value := 10;
+CONV1_increment := 1;
+END_DATA_BLOCK

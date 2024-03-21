@@ -1,0 +1,160 @@
+FUNCTION_BLOCK FB93
+TITLE = 'pilot_F1'
+AUTHOR : CB
+
+VAR
+	F1AArr1ACT : FB86;
+	F1ExtV1ACT : FB86;
+	F1AExt1ACT : FB86;
+END_VAR
+
+
+BEGIN
+
+
+NETWORK
+TITLE = 
+//
+//	pilot/pilot_F1/F1AArr1ACT
+A	"DB120".WKM1_autoMode;
+=	L	0.0;
+BLD	103;
+A	"DB120".WKM1_manualMode;
+=	L	0.1;
+BLD	103;
+A	"DB120".FloMGT1_introFlourEnd;
+=	L	0.2;
+BLD	103;
+A	"DB120".FloMGT1_introduceFlour;
+=	L	0.3;
+BLD	103;
+A	I02.3;
+=	L	0.4;
+BLD	103;
+A	I02.4;
+=	L	0.5;
+BLD	103;
+A	I02.6;
+=	L	0.6;
+BLD	103;
+A	I02.7;
+=	L	0.7;
+BLD	103;
+A	"DB120".F1AArr1_generalFault;
+=	L	1.0;
+BLD	103;
+CALL #F1AArr1ACT(
+	autoMode := L	0.0,
+	manualMode := L	0.1,
+	autoCloseCmd := L	0.2,
+	autoOpenCmd := L	0.3,
+	closedSensorFB := L	0.4,
+	openedSensorFB := L	0.5,
+	closeValvePB := L	0.6,
+	openValvePB := L	0.7,
+	generalFault := L	1.0,
+	closeCmd := Q00.6,
+	openCmd := Q00.5
+);
+NOP 0;
+
+
+
+NETWORK
+TITLE = 
+//
+//	pilot/pilot_F1/F1ExtV1ACT
+A	"DB120".WKM1_autoMode;
+=	L	0.0;
+BLD	103;
+A	"DB120".WKM1_manualMode;
+=	L	0.1;
+BLD	103;
+A	"DB120".FloMGT1_exitFlourEnd;
+=	L	0.2;
+BLD	103;
+A	"DB120".FloMGT1_exitFlour;
+=	L	0.3;
+BLD	103;
+A	I02.1;
+=	L	0.4;
+BLD	103;
+A	I02.2;
+=	L	0.5;
+BLD	103;
+A	I03.3;
+=	L	0.6;
+BLD	103;
+A	I03.4;
+=	L	0.7;
+BLD	103;
+A	"DB120".F1ExtV1_generalFault;
+=	L	1.0;
+BLD	103;
+CALL #F1ExtV1ACT(
+	autoMode := L	0.0,
+	manualMode := L	0.1,
+	autoCloseCmd := L	0.2,
+	autoOpenCmd := L	0.3,
+	closedSensorFB := L	0.4,
+	openedSensorFB := L	0.5,
+	closeValvePB := L	0.6,
+	openValvePB := L	0.7,
+	generalFault := L	1.0,
+	closeCmd := Q01.4,
+	openCmd := Q01.3
+);
+NOP 0;
+
+
+
+NETWORK
+TITLE = 
+//
+//	pilot/pilot_F1/F1AExt1ACT
+A	"DB120".WKM1_autoMode;
+=	L	0.0;
+BLD	103;
+A	"DB120".WKM1_manualMode;
+=	L	0.1;
+BLD	103;
+A	"DB120".FloMGT1_exitFlourEnd;
+=	L	0.2;
+BLD	103;
+A	"DB120".FloMGT1_exitFlour;
+=	L	0.3;
+BLD	103;
+A	I01.7;
+=	L	0.4;
+BLD	103;
+A	I02.0;
+=	L	0.5;
+BLD	103;
+A	I03.7;
+=	L	0.6;
+BLD	103;
+A	I04.0;
+=	L	0.7;
+BLD	103;
+A	"DB120".F1AExt1_generalFault;
+=	L	1.0;
+BLD	103;
+CALL #F1AExt1ACT(
+	autoMode := L	0.0,
+	manualMode := L	0.1,
+	autoCloseCmd := L	0.2,
+	autoOpenCmd := L	0.3,
+	closedSensorFB := L	0.4,
+	openedSensorFB := L	0.5,
+	closeValvePB := L	0.6,
+	openValvePB := L	0.7,
+	generalFault := L	1.0,
+	closeCmd := Q02.0,
+	openCmd := Q01.7
+);
+NOP 0;
+
+
+
+
+END_FUNCTION_BLOCK

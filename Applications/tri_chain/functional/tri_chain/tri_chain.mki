@@ -1,0 +1,286 @@
+
+### User options :
+# $Id: options.mk 513 2023-01-05 14:13:40Z EM7 $
+#options de compilation et d'edition de lien :
+_CC_OPTS=-DSY_MSW -DWIN32 -DGCC -m32
+_CPP_OPTS=$(_CINCL)
+
+_LD_LIBS=-Xlinker -no-whole-archive -lkernel32
+_LD_OPTS=-Xlinker -whole-archive -m32
+
+#edition de liens :
+_LD1=gcc -o $@ $(_LD_OPTS)
+_LD2=$(_LD_LIBS)
+#edition de liens intermediaire :
+_LDI1=ar -ruv $@
+_LDI2=
+_AR=ar
+#compilation :
+_CC1=gcc -c -o $@ -I.. $(_CPP_OPTS) $(_CC_OPTS)
+_CC2=
+
+
+
+### Categories definition :
+TOOL_MACH=MinGW
+tri_chain_o=$(TOOL_MACH)
+tri_chain_obj=obj
+cp_trich_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/tri_chain/functional/cp_trich
+cp_trich_o=$(cp_trich_c)/$(TOOL_MACH)
+cp_trich_obj=$(cp_trich_c)/obj
+input_chain_control_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/tri_chain/functional/input_chain_control
+input_chain_control_o=$(input_chain_control_c)/$(TOOL_MACH)
+input_chain_control_obj=$(input_chain_control_c)/obj
+shuttle_control_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/tri_chain/functional/shuttle_control
+shuttle_control_o=$(shuttle_control_c)/$(TOOL_MACH)
+shuttle_control_obj=$(shuttle_control_c)/obj
+shuttle_chain_control_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/tri_chain/functional/shuttle_chain_control
+shuttle_chain_control_o=$(shuttle_chain_control_c)/$(TOOL_MACH)
+shuttle_chain_control_obj=$(shuttle_chain_control_c)/obj
+output_chain_control_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/tri_chain/functional/output_chain_control
+output_chain_control_o=$(output_chain_control_c)/$(TOOL_MACH)
+output_chain_control_obj=$(output_chain_control_c)/obj
+op_trich_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/tri_chain/functional/op_trich
+op_trich_o=$(op_trich_c)/$(TOOL_MACH)
+op_trich_obj=$(op_trich_c)/obj
+creation_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/tri_chain/functional/creation
+creation_o=$(creation_c)/$(TOOL_MACH)
+creation_obj=$(creation_c)/obj
+op_chain_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/tri_chain/functional/op_chain
+op_chain_o=$(op_chain_c)/$(TOOL_MACH)
+op_chain_obj=$(op_chain_c)/obj
+motor1dir_1speed_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/tri_chain/functional/motor1dir_1speed
+motor1dir_1speed_o=$(motor1dir_1speed_c)/$(TOOL_MACH)
+motor1dir_1speed_obj=$(motor1dir_1speed_c)/obj
+button_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/tri_chain/functional/button
+button_o=$(button_c)/$(TOOL_MACH)
+button_obj=$(button_c)/obj
+passing_sensor_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/tri_chain/functional/passing_sensor
+passing_sensor_o=$(passing_sensor_c)/$(TOOL_MACH)
+passing_sensor_obj=$(passing_sensor_c)/obj
+conveyor1_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/tri_chain/functional/conveyor1
+conveyor1_o=$(conveyor1_c)/$(TOOL_MACH)
+conveyor1_obj=$(conveyor1_c)/obj
+op_shuttle_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/tri_chain/functional/op_shuttle
+op_shuttle_o=$(op_shuttle_c)/$(TOOL_MACH)
+op_shuttle_obj=$(op_shuttle_c)/obj
+motor2dir_1speed_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/tri_chain/functional/motor2dir_1speed
+motor2dir_1speed_o=$(motor2dir_1speed_c)/$(TOOL_MACH)
+motor2dir_1speed_obj=$(motor2dir_1speed_c)/obj
+axle_tri_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/tri_chain/functional/axle_tri
+axle_tri_o=$(axle_tri_c)/$(TOOL_MACH)
+axle_tri_obj=$(axle_tri_c)/obj
+shuttle_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/tri_chain/functional/shuttle
+shuttle_o=$(shuttle_c)/$(TOOL_MACH)
+shuttle_obj=$(shuttle_c)/obj
+rangesensor_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/tri_chain/functional/rangesensor
+rangesensor_o=$(rangesensor_c)/$(TOOL_MACH)
+rangesensor_obj=$(rangesensor_c)/obj
+passing_sensor2_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/tri_chain/functional/passing_sensor2
+passing_sensor2_o=$(passing_sensor2_c)/$(TOOL_MACH)
+passing_sensor2_obj=$(passing_sensor2_c)/obj
+trash_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/tri_chain/functional/trash
+trash_o=$(trash_c)/$(TOOL_MACH)
+trash_obj=$(trash_c)/obj
+boxtri_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/tri_chain/functional/boxtri
+boxtri_o=$(boxtri_c)/$(TOOL_MACH)
+boxtri_obj=$(boxtri_c)/obj
+_simu_c=C:/Users/Public/DassaultSystemes/ControlBuild_Trunk/embedded/nt_simu/embedded
+_simu_o=$(_simu_c)/$(TOOL_MACH)
+
+### Directories for the search of includes :
+_CINCL=-IC:/PROGRA~2/ControlBuild_Trunk/tooldir -IC:/Users/Public/DassaultSystemes/ControlBuild_Trunk/embedded/nt_simu/embedded  -IC:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications/tri_chain/functional/tri_chain -IC:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Applications -IC:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Specific -IC:/Users/Public/DassaultSystemes/ControlBuild_Trunk/examples/examples/Standard
+
+### Link rules :
+cible : $(tri_chain_o) $(cp_trich_o) $(input_chain_control_o) $(shuttle_control_o) $(shuttle_chain_control_o) $(output_chain_control_o) $(op_trich_o) $(creation_o) $(op_chain_o) $(motor1dir_1speed_o) $(button_o) $(passing_sensor_o) $(conveyor1_o) $(op_shuttle_o) $(motor2dir_1speed_o) $(axle_tri_o) $(shuttle_o) $(rangesensor_o) $(passing_sensor2_o) $(trash_o) $(boxtri_o) $(tri_chain_obj) $(tri_chain_obj)/tri_chain.exe
+	@echo "Compilation Ok"
+
+$(tri_chain_o)/_tri_chain_1.a : tri_chain.mki $(tri_chain_o)/tri_chain.o $(cp_trich_o)/cp_trich.o $(input_chain_control_o)/input_chain_control.o $(shuttle_control_o)/shuttle_control.o $(shuttle_chain_control_o)/shuttle_chain_control.o $(output_chain_control_o)/output_chain_control.o $(op_trich_o)/op_trich.o $(creation_o)/creation.o $(op_chain_o)/op_chain.o $(motor1dir_1speed_o)/motor1dir_1speed.o 
+	rm -f $@ 
+	$(_LDI1) $(tri_chain_o)/tri_chain.o $(cp_trich_o)/cp_trich.o $(input_chain_control_o)/input_chain_control.o $(shuttle_control_o)/shuttle_control.o $(shuttle_chain_control_o)/shuttle_chain_control.o $(output_chain_control_o)/output_chain_control.o $(op_trich_o)/op_trich.o $(creation_o)/creation.o $(op_chain_o)/op_chain.o $(motor1dir_1speed_o)/motor1dir_1speed.o $(_LDI2)
+	$(_AR) s $@
+
+$(tri_chain_o)/_tri_chain_2.a : tri_chain.mki $(button_o)/button.o $(passing_sensor_o)/passing_sensor.o $(conveyor1_o)/conveyor1.o $(op_shuttle_o)/op_shuttle.o $(motor2dir_1speed_o)/motor2dir_1speed.o $(axle_tri_o)/axle_tri.o $(shuttle_o)/shuttle.o $(rangesensor_o)/rangesensor.o $(passing_sensor2_o)/passing_sensor2.o $(trash_o)/trash.o 
+	rm -f $@ 
+	$(_LDI1) $(button_o)/button.o $(passing_sensor_o)/passing_sensor.o $(conveyor1_o)/conveyor1.o $(op_shuttle_o)/op_shuttle.o $(motor2dir_1speed_o)/motor2dir_1speed.o $(axle_tri_o)/axle_tri.o $(shuttle_o)/shuttle.o $(rangesensor_o)/rangesensor.o $(passing_sensor2_o)/passing_sensor2.o $(trash_o)/trash.o $(_LDI2)
+	$(_AR) s $@
+
+$(tri_chain_o)/_tri_chain_3.a : tri_chain.mki $(boxtri_o)/boxtri.o $(tri_chain_o)/_init.o 
+	rm -f $@ 
+	$(_LDI1) $(boxtri_o)/boxtri.o $(tri_chain_o)/_init.o $(_LDI2)
+	$(_AR) s $@
+
+$(tri_chain_obj)/tri_chain.exe : $(tri_chain_o)/_tri_chain_1.a $(tri_chain_o)/_tri_chain_2.a $(tri_chain_o)/_tri_chain_3.a $(_simu_o)/cb_main.o $(_simu_o)/cb_memory.o $(_simu_o)/cb_hook.o $(_simu_o)/cb_io.o $(_simu_o)/cb_products.o $(_simu_o)/iec_1131.o $(tri_chain_o)/_sign.o 
+	$(_LD1) $(tri_chain_o)/_tri_chain_1.a $(tri_chain_o)/_tri_chain_2.a $(tri_chain_o)/_tri_chain_3.a $(_simu_o)/cb_main.o $(_simu_o)/cb_memory.o $(_simu_o)/cb_hook.o $(_simu_o)/cb_io.o $(_simu_o)/cb_products.o $(_simu_o)/iec_1131.o $(tri_chain_o)/_sign.o $(_LD2)
+
+$(tri_chain_o)/_sign.o :
+	@echo "int getSignature(void) { return " > _sign.c
+	@echo "0" >> _sign.c
+	@echo "; }" >> _sign.c
+	@echo "int getGenerationTime(void) { return " >> _sign.c
+	@echo "1246547679" >> _sign.c
+	@echo "; }" >> _sign.c
+	$(_CC1) _sign.c
+	$(_CC2)
+	@echo "New Signature"
+
+### Directories making for .o files :
+$(tri_chain_o) :
+	@mkdir $@
+$(cp_trich_o) :
+	@mkdir $@
+$(input_chain_control_o) :
+	@mkdir $@
+$(shuttle_control_o) :
+	@mkdir $@
+$(shuttle_chain_control_o) :
+	@mkdir $@
+$(output_chain_control_o) :
+	@mkdir $@
+$(op_trich_o) :
+	@mkdir $@
+$(creation_o) :
+	@mkdir $@
+$(op_chain_o) :
+	@mkdir $@
+$(motor1dir_1speed_o) :
+	@mkdir $@
+$(button_o) :
+	@mkdir $@
+$(passing_sensor_o) :
+	@mkdir $@
+$(conveyor1_o) :
+	@mkdir $@
+$(op_shuttle_o) :
+	@mkdir $@
+$(motor2dir_1speed_o) :
+	@mkdir $@
+$(axle_tri_o) :
+	@mkdir $@
+$(shuttle_o) :
+	@mkdir $@
+$(rangesensor_o) :
+	@mkdir $@
+$(passing_sensor2_o) :
+	@mkdir $@
+$(trash_o) :
+	@mkdir $@
+$(boxtri_o) :
+	@mkdir $@
+$(tri_chain_obj) :
+	@mkdir $@
+$(cp_trich_obj) :
+	@mkdir $@
+$(input_chain_control_obj) :
+	@mkdir $@
+$(shuttle_control_obj) :
+	@mkdir $@
+$(shuttle_chain_control_obj) :
+	@mkdir $@
+$(output_chain_control_obj) :
+	@mkdir $@
+$(op_trich_obj) :
+	@mkdir $@
+$(creation_obj) :
+	@mkdir $@
+$(op_chain_obj) :
+	@mkdir $@
+$(motor1dir_1speed_obj) :
+	@mkdir $@
+$(button_obj) :
+	@mkdir $@
+$(passing_sensor_obj) :
+	@mkdir $@
+$(conveyor1_obj) :
+	@mkdir $@
+$(op_shuttle_obj) :
+	@mkdir $@
+$(motor2dir_1speed_obj) :
+	@mkdir $@
+$(axle_tri_obj) :
+	@mkdir $@
+$(shuttle_obj) :
+	@mkdir $@
+$(rangesensor_obj) :
+	@mkdir $@
+$(passing_sensor2_obj) :
+	@mkdir $@
+$(trash_obj) :
+	@mkdir $@
+$(boxtri_obj) :
+	@mkdir $@
+
+### Compilation rules :
+$(tri_chain_o)/tri_chain.o : tri_chain.c tri_chain.h
+	$(_CC1) tri_chain.c
+	$(_CC2)
+$(cp_trich_o)/cp_trich.o : $(cp_trich_c)/cp_trich.c $(cp_trich_c)/cp_trich.h
+	$(_CC1) $(cp_trich_c)/cp_trich.c
+	$(_CC2)
+$(input_chain_control_o)/input_chain_control.o : $(input_chain_control_c)/input_chain_control.c $(input_chain_control_c)/input_chain_control.h
+	$(_CC1) $(input_chain_control_c)/input_chain_control.c
+	$(_CC2)
+$(shuttle_control_o)/shuttle_control.o : $(shuttle_control_c)/shuttle_control.c $(shuttle_control_c)/shuttle_control.h
+	$(_CC1) $(shuttle_control_c)/shuttle_control.c
+	$(_CC2)
+$(shuttle_chain_control_o)/shuttle_chain_control.o : $(shuttle_chain_control_c)/shuttle_chain_control.c $(shuttle_chain_control_c)/shuttle_chain_control.h
+	$(_CC1) $(shuttle_chain_control_c)/shuttle_chain_control.c
+	$(_CC2)
+$(output_chain_control_o)/output_chain_control.o : $(output_chain_control_c)/output_chain_control.c $(output_chain_control_c)/output_chain_control.h
+	$(_CC1) $(output_chain_control_c)/output_chain_control.c
+	$(_CC2)
+$(op_trich_o)/op_trich.o : $(op_trich_c)/op_trich.c $(op_trich_c)/op_trich.h
+	$(_CC1) $(op_trich_c)/op_trich.c
+	$(_CC2)
+$(creation_o)/creation.o : $(creation_c)/creation.c $(creation_c)/creation.h
+	$(_CC1) $(creation_c)/creation.c
+	$(_CC2)
+$(op_chain_o)/op_chain.o : $(op_chain_c)/op_chain.c $(op_chain_c)/op_chain.h
+	$(_CC1) $(op_chain_c)/op_chain.c
+	$(_CC2)
+$(motor1dir_1speed_o)/motor1dir_1speed.o : $(motor1dir_1speed_c)/motor1dir_1speed.c $(motor1dir_1speed_c)/motor1dir_1speed.h
+	$(_CC1) $(motor1dir_1speed_c)/motor1dir_1speed.c
+	$(_CC2)
+$(button_o)/button.o : $(button_c)/button.c $(button_c)/button.h
+	$(_CC1) $(button_c)/button.c
+	$(_CC2)
+$(passing_sensor_o)/passing_sensor.o : $(passing_sensor_c)/passing_sensor.c $(passing_sensor_c)/passing_sensor.h
+	$(_CC1) $(passing_sensor_c)/passing_sensor.c
+	$(_CC2)
+$(conveyor1_o)/conveyor1.o : $(conveyor1_c)/conveyor1.c $(conveyor1_c)/conveyor1.h
+	$(_CC1) $(conveyor1_c)/conveyor1.c
+	$(_CC2)
+$(op_shuttle_o)/op_shuttle.o : $(op_shuttle_c)/op_shuttle.c $(op_shuttle_c)/op_shuttle.h
+	$(_CC1) $(op_shuttle_c)/op_shuttle.c
+	$(_CC2)
+$(motor2dir_1speed_o)/motor2dir_1speed.o : $(motor2dir_1speed_c)/motor2dir_1speed.c $(motor2dir_1speed_c)/motor2dir_1speed.h
+	$(_CC1) $(motor2dir_1speed_c)/motor2dir_1speed.c
+	$(_CC2)
+$(axle_tri_o)/axle_tri.o : $(axle_tri_c)/axle_tri.c $(axle_tri_c)/axle_tri.h
+	$(_CC1) $(axle_tri_c)/axle_tri.c
+	$(_CC2)
+$(shuttle_o)/shuttle.o : $(shuttle_c)/shuttle.c $(shuttle_c)/shuttle.h
+	$(_CC1) $(shuttle_c)/shuttle.c
+	$(_CC2)
+$(rangesensor_o)/rangesensor.o : $(rangesensor_c)/rangesensor.c $(rangesensor_c)/rangesensor.h
+	$(_CC1) $(rangesensor_c)/rangesensor.c
+	$(_CC2)
+$(passing_sensor2_o)/passing_sensor2.o : $(passing_sensor2_c)/passing_sensor2.c $(passing_sensor2_c)/passing_sensor2.h
+	$(_CC1) $(passing_sensor2_c)/passing_sensor2.c
+	$(_CC2)
+$(trash_o)/trash.o : $(trash_c)/trash.c $(trash_c)/trash.h
+	$(_CC1) $(trash_c)/trash.c
+	$(_CC2)
+$(boxtri_o)/boxtri.o : $(boxtri_c)/boxtri.c $(boxtri_c)/boxtri.h
+	$(_CC1) $(boxtri_c)/boxtri.c
+	$(_CC2)
+$(tri_chain_o)/_init.o : _init.c _init.h
+	$(_CC1) _init.c
+	$(_CC2)
+
+### Compilation rules for externals functions :
+$(_simu_o)/iec_1131.o : $(_simu_c)/iec_1131.c $(_simu_c)/iec_1131.h
+	$(_CC1) $(_simu_c)/iec_1131.c
+	$(_CC2)
+
+### Compilation rules for externals fbs :

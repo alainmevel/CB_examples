@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<AWTSynoptic screenX="1600" screenY="2262" name="control_valve_52.xman" description="" date="03/10/2023" time="11:13" version="3.0_draft3" source="controlbuild " bkgColor="white" identifier="7744a3dd-d408-4120-96e9-a0ca0da7086f" gridExtent="10" designLevel="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Colors>
+		<Color colorId="black" r="0" g="0" b="0" invisible="false" />
+		<Color colorId="white" r="255" g="255" b="255" invisible="false" />
+		<Color colorId="red" r="255" g="0" b="0" invisible="false" />
+		<Color colorId="yellow" r="255" g="255" b="0" invisible="false" />
+		<Color colorId="blue" r="0" g="0" b="255" invisible="false" />
+		<Color colorId="green" r="0" g="255" b="0" invisible="false" />
+		<Color colorId="purple" r="128" g="0" b="128" invisible="false" />
+		<Color colorId="brown" r="128" g="64" b="0" invisible="false" />
+		<Color colorId="gray" r="192" g="192" b="192" invisible="false" />
+		<Color colorId="orange" r="255" g="128" b="0" invisible="false" />
+		<Color colorId="pink" r="255" g="128" b="255" invisible="false" />
+		<Color colorId="transparent" invisible="true" />
+		<Color colorId="other" r="0" g="0" b="0" invisible="false" />
+		<Color colorId="visible" invisible="false" />
+	</Colors>
+	<Objects>
+		<Group>
+			<Basic xInit="460" yInit="400" xFinal="780" yFinal="560" xCenter="620" yCenter="480" />
+			<Comment>CB.form_name=Control_Valve
+CB.num_rep=1
+</Comment>
+			<Rectangle>
+				<Basic xInit="620" yInit="400" xFinal="780" yFinal="560" xCenter="700" yCenter="480" />
+				<Style lineStyle="solid" lineWidth="2" lineColor="black" lineEnd="round" patternStyle="full" patternColor="gray" />
+			</Rectangle>
+			<Rectangle>
+				<Basic xInit="460" yInit="400" xFinal="780" yFinal="560" xCenter="620" yCenter="480" />
+				<Style lineStyle="solid" lineWidth="2" lineColor="black" lineEnd="round" patternStyle="full" patternColor="gray" />
+			</Rectangle>
+			<Translation2>
+				<XAxisMoving>
+					<Expression>300</Expression>
+				</XAxisMoving>
+				<YAxisMoving>
+					<Expression>400</Expression>
+				</YAxisMoving>
+				<ComplexCondition>
+					<Expression>slidePosition = 0</Expression>
+					<Condition var="Var8" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>4a1490b9-4bd5-42a9-be97-9579ab0890e8</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</Translation2>
+			<Translation2>
+				<XAxisMoving>
+					<Expression>460</Expression>
+				</XAxisMoving>
+				<YAxisMoving>
+					<Expression>400</Expression>
+				</YAxisMoving>
+				<ComplexCondition>
+					<Expression>slidePosition = 1</Expression>
+					<Condition var="Var8" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>94347cad-1a39-40ae-9bbc-41ae10b932e1</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</Translation2>
+		</Group>
+		<Group>
+			<Basic xInit="780" yInit="450" xFinal="840" yFinal="510" xCenter="810" yCenter="480" />
+			<Comment>CB.form_name=Valve_Rest
+CB.num_rep=1
+</Comment>
+			<Rectangle>
+				<Basic xInit="780" yInit="450" xFinal="840" yFinal="510" xCenter="810" yCenter="480" />
+				<Style lineStyle="solid" lineWidth="2" lineColor="black" lineEnd="round" patternStyle="full" patternColor="gray" />
+			</Rectangle>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="red" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>valveRest AND (slidePosition = 0)</Expression>
+					<Condition var="Var3" rank="0" />
+					<Condition var="Var8" rank="1" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>938638f0-906a-4d9b-9ec8-3cf4673a67ba</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<Translation2>
+				<XAxisMoving>
+					<Expression>620</Expression>
+				</XAxisMoving>
+				<YAxisMoving>
+					<Expression>450</Expression>
+				</YAxisMoving>
+				<ComplexCondition>
+					<Expression>valveRest AND (slidePosition = 0)</Expression>
+					<Condition var="Var3" rank="0" />
+					<Condition var="Var8" rank="1" />
+				</ComplexCondition>
+				<addData>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>5b0ab9db-5084-47d3-b547-2666e04e4bad</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</Translation2>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="red" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>valveRest AND (slidePosition = 1)</Expression>
+					<Condition var="Var3" rank="0" />
+					<Condition var="Var8" rank="1" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>d1866b7b-c981-4dc5-85e1-8c42f94b5b23</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<Translation2>
+				<XAxisMoving>
+					<Expression>780</Expression>
+				</XAxisMoving>
+				<YAxisMoving>
+					<Expression>450</Expression>
+				</YAxisMoving>
+				<ComplexCondition>
+					<Expression>valveRest AND (slidePosition = 1)</Expression>
+					<Condition var="Var3" rank="0" />
+					<Condition var="Var8" rank="1" />
+				</ComplexCondition>
+				<addData>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>d14c1f84-f435-4b1f-b048-bf2e0a15f286</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</Translation2>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="gray" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>NOT (valveRest) AND (slidePosition = 0)</Expression>
+					<Condition var="Var3" rank="0" />
+					<Condition var="Var8" rank="1" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>8e6842d5-fbec-4916-92d7-9cdfd6217ed5</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<Translation2>
+				<XAxisMoving>
+					<Expression>620</Expression>
+				</XAxisMoving>
+				<YAxisMoving>
+					<Expression>450</Expression>
+				</YAxisMoving>
+				<ComplexCondition>
+					<Expression>NOT (valveRest) AND (slidePosition = 0)</Expression>
+					<Condition var="Var3" rank="0" />
+					<Condition var="Var8" rank="1" />
+				</ComplexCondition>
+				<addData>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>312d6ea4-43b4-49ac-b273-007b014d694a</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</Translation2>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="gray" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>NOT (valveRest) AND (slidePosition = 1)</Expression>
+					<Condition var="Var3" rank="0" />
+					<Condition var="Var8" rank="1" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>f0e3e46a-53d4-47c9-8e7a-ea5b4358864a</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<Translation2>
+				<XAxisMoving>
+					<Expression>780</Expression>
+				</XAxisMoving>
+				<YAxisMoving>
+					<Expression>450</Expression>
+				</YAxisMoving>
+				<ComplexCondition>
+					<Expression>NOT (valveRest) AND (slidePosition = 1)</Expression>
+					<Condition var="Var3" rank="0" />
+					<Condition var="Var8" rank="1" />
+				</ComplexCondition>
+				<addData>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>a3e01d21-c165-4fbe-bfbd-d41d9cc85d54</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</Translation2>
+		</Group>
+		<Group>
+			<Basic xInit="240" yInit="450" xFinal="300" yFinal="510" xCenter="270" yCenter="480" />
+			<Comment>CB.form_name=Valve_Work
+CB.num_rep=1
+</Comment>
+			<Rectangle>
+				<Basic xInit="240" yInit="450" xFinal="300" yFinal="510" xCenter="270" yCenter="480" />
+				<Style lineStyle="solid" lineWidth="2" lineColor="black" lineEnd="round" patternStyle="full" patternColor="gray" />
+			</Rectangle>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="red" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>valveWork AND (slidePosition = 1)</Expression>
+					<Condition var="Var2" rank="0" />
+					<Condition var="Var8" rank="1" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>58c64f1f-3c84-4552-bf4a-d0f9fdd9eb8c</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<Translation2>
+				<XAxisMoving>
+					<Expression>400</Expression>
+				</XAxisMoving>
+				<YAxisMoving>
+					<Expression>450</Expression>
+				</YAxisMoving>
+				<ComplexCondition>
+					<Expression>valveWork AND (slidePosition = 1)</Expression>
+					<Condition var="Var2" rank="0" />
+					<Condition var="Var8" rank="1" />
+				</ComplexCondition>
+				<addData>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>974d6886-8016-4c91-a61a-6dd361224d95</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</Translation2>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="red" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>valveWork AND (slidePosition = 0)</Expression>
+					<Condition var="Var2" rank="0" />
+					<Condition var="Var8" rank="1" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>fcd590e6-40ae-42f0-8140-2d51a1269d98</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<Translation2>
+				<XAxisMoving>
+					<Expression>240</Expression>
+				</XAxisMoving>
+				<YAxisMoving>
+					<Expression>450</Expression>
+				</YAxisMoving>
+				<ComplexCondition>
+					<Expression>valveWork AND (slidePosition = 0)</Expression>
+					<Condition var="Var2" rank="0" />
+					<Condition var="Var8" rank="1" />
+				</ComplexCondition>
+				<addData>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>f1bb1a1e-4914-4519-bc2f-d15f95601a2a</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</Translation2>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="gray" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>NOT (valveWork) AND (slidePosition = 0)</Expression>
+					<Condition var="Var2" rank="0" />
+					<Condition var="Var8" rank="1" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>88253ce5-177b-4333-a53f-6b57ef2043cd</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<Translation2>
+				<XAxisMoving>
+					<Expression>240</Expression>
+				</XAxisMoving>
+				<YAxisMoving>
+					<Expression>450</Expression>
+				</YAxisMoving>
+				<ComplexCondition>
+					<Expression>NOT (valveWork) AND (slidePosition = 0)</Expression>
+					<Condition var="Var2" rank="0" />
+					<Condition var="Var8" rank="1" />
+				</ComplexCondition>
+				<addData>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>444a0bd4-394f-4f2c-87d7-b04458713bf5</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</Translation2>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="gray" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>NOT (valveWork) AND (slidePosition = 1)</Expression>
+					<Condition var="Var2" rank="0" />
+					<Condition var="Var8" rank="1" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>f196678d-e939-4539-afde-a8f0cdce8c45</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<Translation2>
+				<XAxisMoving>
+					<Expression>400</Expression>
+				</XAxisMoving>
+				<YAxisMoving>
+					<Expression>450</Expression>
+				</YAxisMoving>
+				<ComplexCondition>
+					<Expression>NOT (valveWork) AND (slidePosition = 1)</Expression>
+					<Condition var="Var2" rank="0" />
+					<Condition var="Var8" rank="1" />
+				</ComplexCondition>
+				<addData>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>9667e0e4-5438-4938-a5cc-c20ff0930e3c</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</Translation2>
+		</Group>
+		<Group>
+			<Basic xInit="520" yInit="560" xFinal="560" yFinal="1000" xCenter="540" yCenter="780" />
+			<Comment>CB.form_name=Input_Pipe
+CB.num_rep=1
+</Comment>
+			<Rectangle>
+				<Basic xInit="520" yInit="560" xFinal="560" yFinal="1000" xCenter="540" yCenter="780" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="blue" />
+			</Rectangle>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="blue" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<Condition var="Var0" rank="0" />
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>88f8aefd-1e4c-436e-bb98-bcc6e5f8d2b1</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<Translation2>
+				<XAxisMoving>
+					<Expression>520</Expression>
+				</XAxisMoving>
+				<YAxisMoving>
+					<Expression>560</Expression>
+				</YAxisMoving>
+				<Condition var="Var0" rank="0" />
+				<addData>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>b6633822-53b0-41a8-b88e-99eafc71ed75</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</Translation2>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="gray" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>NOT (energy)</Expression>
+					<Condition var="Var0" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>ca27f9a7-830b-4317-8dd6-050a5044ee6d</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<Translation2>
+				<XAxisMoving>
+					<Expression>520</Expression>
+				</XAxisMoving>
+				<YAxisMoving>
+					<Expression>560</Expression>
+				</YAxisMoving>
+				<Condition var="Var0" rank="0" />
+				<addData>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>bb983173-a39d-41f0-aff2-51fe507c0f29</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</Translation2>
+		</Group>
+		<Group>
+			<Basic xInit="280" yInit="0" xFinal="520" yFinal="400" xCenter="400" yCenter="200" />
+			<Comment>CB.form_name=Pipe_Work
+CB.num_rep=1
+</Comment>
+			<Rectangle>
+				<Basic xInit="280" yInit="160" xFinal="520" yFinal="200" xCenter="400" yCenter="180" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="blue" />
+			</Rectangle>
+			<Rectangle>
+				<Basic xInit="480" yInit="160" xFinal="520" yFinal="400" xCenter="500" yCenter="280" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="blue" />
+			</Rectangle>
+			<Rectangle>
+				<Basic xInit="280" yInit="0" xFinal="320" yFinal="200" xCenter="300" yCenter="100" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="blue" />
+			</Rectangle>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="blue" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<Condition var="Var4" rank="0" />
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>c7d55f0c-c98f-4e17-9440-903bbef6f153</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<Translation2>
+				<XAxisMoving>
+					<Expression>280</Expression>
+				</XAxisMoving>
+				<YAxisMoving>
+					<Expression>0</Expression>
+				</YAxisMoving>
+				<Condition var="Var4" rank="0" />
+				<addData>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>901099d9-ccdc-4606-97f5-59fa6ebe0547</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</Translation2>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="gray" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>NOT (pipeWork)</Expression>
+					<Condition var="Var4" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>95e9e46a-7089-4713-bf46-ce4d784df8fd</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<Translation2>
+				<XAxisMoving>
+					<Expression>280</Expression>
+				</XAxisMoving>
+				<YAxisMoving>
+					<Expression>0</Expression>
+				</YAxisMoving>
+				<Condition var="Var4" rank="0" />
+				<addData>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>1aff3dfe-ecce-4384-9fc1-27b3c8fa55eb</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</Translation2>
+		</Group>
+		<Group>
+			<Basic xInit="560" yInit="0" xFinal="820" yFinal="400" xCenter="690" yCenter="200" />
+			<Comment>CB.form_name=Pipe_Rest
+CB.num_rep=1
+</Comment>
+			<Rectangle>
+				<Basic xInit="560" yInit="160" xFinal="820" yFinal="200" xCenter="690" yCenter="180" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="gray" />
+			</Rectangle>
+			<Rectangle>
+				<Basic xInit="780" yInit="0" xFinal="820" yFinal="200" xCenter="800" yCenter="100" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="gray" />
+			</Rectangle>
+			<Rectangle>
+				<Basic xInit="560" yInit="160" xFinal="600" yFinal="400" xCenter="580" yCenter="280" />
+				<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="gray" />
+			</Rectangle>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="blue" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<Condition var="Var5" rank="0" />
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>fffdc64b-ada5-4403-9b08-74d65b41e89f</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<Translation2>
+				<XAxisMoving>
+					<Expression>560</Expression>
+				</XAxisMoving>
+				<YAxisMoving>
+					<Expression>0</Expression>
+				</YAxisMoving>
+				<Condition var="Var5" rank="0" />
+				<addData>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>254d2ec0-966c-4ef3-a349-c389a24def09</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</Translation2>
+			<ChangeColorOnBit colorFillBitOn="visible" colorFillBitOff="null" colorFillBitUnavailable="null" colorStrokeBitOn="gray" colorStrokeBitOff="null" colorStrokeBitUnavailable="null">
+				<ComplexCondition>
+					<Expression>NOT (pipeRest)</Expression>
+					<Condition var="Var5" rank="0" />
+				</ComplexCondition>
+				<addData>
+					<data name="BorderColor" handleUnknown="preserve">
+						<value>false</value>
+					</data>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>36ecc774-b066-43a2-9ace-a57681bee676</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</ChangeColorOnBit>
+			<Translation2>
+				<XAxisMoving>
+					<Expression>560</Expression>
+				</XAxisMoving>
+				<YAxisMoving>
+					<Expression>0</Expression>
+				</YAxisMoving>
+				<Condition var="Var5" rank="0" />
+				<addData>
+					<data name="IdentifierProperty" handleUnknown="preserve">
+						<value>63bcb345-9f2c-43c6-a8ec-c7b7ebdb5a0f</value>
+					</data>
+					<data name="IsThenAction" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+				</addData>
+			</Translation2>
+		</Group>
+	</Objects>
+	<Vars>
+		<Var varId="Var6" type="BOOL" name="workMode" />
+		<Var varId="Var4" type="BOOL" name="pipeWork" />
+		<Var varId="Var7" type="BOOL" name="restMode" />
+		<Var varId="Var12" type="BOOL" name="v_d_work" />
+		<Var varId="Var2" type="BOOL" name="valveWork" />
+		<Var varId="Var1" type="BOOL" name="cmdSupply" />
+		<Var varId="Var11" type="BOOL" name="d_work" />
+		<Var varId="Var5" type="BOOL" name="pipeRest" />
+		<Var varId="Var10" type="BOOL" name="v_d_rest" />
+		<Var varId="Var8" type="DINT" name="slidePosition" />
+		<Var varId="Var9" type="BOOL" name="d_rest" />
+		<Var varId="Var0" type="BOOL" name="energy" />
+		<Var varId="Var3" type="BOOL" name="valveRest" />
+	</Vars>
+	<Fonts>
+	</Fonts>
+	<Meta>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var6</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>ef371ca1-6ff3-4249-8855-0eed9992adef</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var4</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>1b4c565b-2050-4ac8-83f7-fcaabacc4b7d</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var7</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>ec5afc1f-0789-463f-a0fe-b42c8d4f30ed</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var12</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>8528b4bc-6bb4-42c2-9af3-25e5fe712713</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var2</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>c933b304-377a-4375-8a8f-654b308e6ba4</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var1</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>d98ebb50-9da9-4408-b462-9396a07ffd45</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var11</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>d40be5bf-878b-4068-9f40-937b4439c64f</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var5</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>f2115936-b589-47e7-a0c3-788af9eb52ca</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var10</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>b2cc5af4-a626-4f7e-b0a2-abe52d67355c</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var8</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>82449904-d023-40ff-84df-27ab218e0c58</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var9</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>9e9a6bad-10c1-4208-b85e-9407187dac9e</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var0</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>1db09af9-c124-4c50-95ad-df8e1b10aca9</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var3</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>83adffea-f140-4d0b-b2ec-febec6df5b3b</ParamValue>
+			</Param>
+		</Metadata>
+	</Meta>
+</AWTSynoptic>

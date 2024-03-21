@@ -1,0 +1,21 @@
+
+FUNCTION CB_limit_byte : BYTE
+
+
+TITLE = ' Limiting (min and max) a variable '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : limiByte
+FAMILY  : TNI
+
+VAR_INPUT
+    MN : BYTE;
+    IN : BYTE;
+    MX : BYTE;
+END_VAR
+
+BEGIN
+
+CB_limit_byte := DINT_TO_BYTE(LIMIT(MN := BYTE_TO_DINT(MN), IN := BYTE_TO_DINT(IN), MX := BYTE_TO_DINT(MX))); 
+
+END_FUNCTION

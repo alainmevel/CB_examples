@@ -1,0 +1,19 @@
+
+FUNCTION CB_ror_byte : BYTE
+
+TITLE = ' shift on bit string '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : rorByte
+FAMILY  : TNI
+
+VAR_INPUT
+    IN : BYTE;
+    N : INT;
+END_VAR
+
+BEGIN
+
+    CB_ror_byte := ROR(IN := IN, N := N);
+
+END_FUNCTION

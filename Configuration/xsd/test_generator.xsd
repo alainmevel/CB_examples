@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: controlbuild -->
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="PROPERTIES_FILE">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="PROPERTIES_SET"/>
+				<xs:element ref="PROPERTIES_SETx"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="PROPERTIES_SET">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="LANGUAGES"/>
+				<xs:element ref="PROPERTY"/>
+			</xs:sequence>
+			<xs:attribute name="NAME" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="PROPERTIES_SETx">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="LANGUAGES"/>
+				<xs:element ref="PROPERTY"/>
+			</xs:sequence>
+			<xs:attribute name="NAME" type="xs:string"  use="required"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="LANGUAGES">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="LANGUAGE"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="LANGUAGE">
+		<xs:complexType>
+			<xs:attribute name="NAME" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="PROPERTY">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="LANGUAGES"/>
+				<xs:element ref="APPLIED_TO"/>
+			</xs:sequence>
+			<xs:attribute name="NAME" type="xs:string" use="required"/>
+			<xs:attribute name="TYPE" type="xs:string"/>
+			<xs:attribute name="DEFAULT"/>
+			<xs:attribute name="LOWERBOUND"/>
+			<xs:attribute name="UPPERBOUND"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="APPLIED_TO">
+		<xs:complexType>
+			<xs:attribute name="CLASS" type="xs:string"  use="required"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,1369 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-03T11:13:41-01:00" />
+	<contentHeader name="bottling_line">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="32" y="8" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+			<pou name="bottling_line.bottling_line" pouType="program">
+				<interface>
+					<addData>
+					</addData>
+				</interface>
+				<actions>
+				</actions>
+				<body>
+					<FBD>
+						<block localId="0" width="264" height="120" typeName="panel" instanceName="generalPanel">
+							<position x="24" y="0" />
+							<inputVariables>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="acknowledgePB">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="powerUpPB">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="emergencyStopPB">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="manual">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="auto">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="startCyclePB">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="initPB">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="preparationPB">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="productionPB">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="closingPB">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.targetablePropertyName" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>25d3576d-548c-48ec-8ddf-83e9fe199c38</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="1" width="336" height="96" typeName="bottling_line.mode" instanceName="workingModes">
+							<position x="384" y="72" />
+							<inputVariables>
+								<variable formalParameter="powerUpPB">
+									<connectionPointIn>
+										<connection refLocalId="0" formalParameter="powerUpPB">
+											<position x="288" y="72" />
+											<position x="345" y="72" />
+											<position x="345" y="120" />
+											<position x="384" y="120" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="emergencyStopPB">
+									<connectionPointIn>
+										<connection refLocalId="0" formalParameter="emergencyStopPB">
+											<position x="288" y="72" />
+											<position x="345" y="72" />
+											<position x="345" y="120" />
+											<position x="384" y="120" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="manual">
+									<connectionPointIn>
+										<connection refLocalId="0" formalParameter="manual">
+											<position x="288" y="72" />
+											<position x="345" y="72" />
+											<position x="345" y="120" />
+											<position x="384" y="120" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="auto">
+									<connectionPointIn>
+										<connection refLocalId="0" formalParameter="auto">
+											<position x="288" y="72" />
+											<position x="345" y="72" />
+											<position x="345" y="120" />
+											<position x="384" y="120" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="acknowledgePB">
+									<connectionPointIn>
+										<connection refLocalId="0" formalParameter="acknowledgePB">
+											<position x="288" y="48" />
+											<position x="345" y="48" />
+											<position x="345" y="144" />
+											<position x="384" y="144" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="powerUp">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="autoMode">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="manualMode">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>0.Panel,Panel</value>
+								</data>
+								<data name="Geensys.CB.NU" handleUnknown="preserve">
+									<value>1</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value> : &lt;UNIT&gt;</value>
+								</data>
+								<data name="Geensys.CB.SY" handleUnknown="preserve">
+									<value>WKM</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>53f978ef-a7da-435e-83dc-f29fdcee6ac0</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="2" width="360" height="312" typeName="bottling_line.process" instanceName="process">
+							<position x="384" y="264" />
+							<inputVariables>
+								<variable formalParameter="highLevel1">
+									<connectionPointIn>
+										<connection refLocalId="3" formalParameter="highLevel">
+											<position x="1344" y="48" />
+											<position x="1398" y="48" />
+											<position x="1398" y="262" />
+											<position x="349" y="262" />
+											<position x="349" y="312" />
+											<position x="384" y="312" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="lowLevel1">
+									<connectionPointIn>
+										<connection refLocalId="3" formalParameter="lowLevel">
+											<position x="1344" y="48" />
+											<position x="1398" y="48" />
+											<position x="1398" y="262" />
+											<position x="349" y="262" />
+											<position x="349" y="312" />
+											<position x="384" y="312" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="highLevel2">
+									<connectionPointIn>
+										<connection refLocalId="4" formalParameter="highLevel">
+											<position x="1368" y="336" />
+											<position x="1422" y="336" />
+											<position x="1422" y="630" />
+											<position x="311" y="630" />
+											<position x="311" y="336" />
+											<position x="384" y="336" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="lowLevel2">
+									<connectionPointIn>
+										<connection refLocalId="4" formalParameter="lowLevel">
+											<position x="1368" y="336" />
+											<position x="1422" y="336" />
+											<position x="1422" y="630" />
+											<position x="311" y="630" />
+											<position x="311" y="336" />
+											<position x="384" y="336" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="highLevel3">
+									<connectionPointIn>
+										<connection refLocalId="5" formalParameter="highLevel">
+											<position x="1416" y="696" />
+											<position x="1451" y="696" />
+											<position x="1451" y="622" />
+											<position x="316" y="622" />
+											<position x="316" y="360" />
+											<position x="384" y="360" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="lowLevel3">
+									<connectionPointIn>
+										<connection refLocalId="5" formalParameter="lowLevel">
+											<position x="1416" y="696" />
+											<position x="1451" y="696" />
+											<position x="1451" y="617" />
+											<position x="316" y="617" />
+											<position x="316" y="360" />
+											<position x="384" y="360" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="startCyclePB">
+									<connectionPointIn>
+										<connection refLocalId="0" formalParameter="startCyclePB">
+											<position x="288" y="96" />
+											<position x="321" y="96" />
+											<position x="321" y="384" />
+											<position x="384" y="384" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="initPB">
+									<connectionPointIn>
+										<connection refLocalId="0" formalParameter="initPB">
+											<position x="288" y="96" />
+											<position x="321" y="96" />
+											<position x="321" y="384" />
+											<position x="384" y="384" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="preparationPB">
+									<connectionPointIn>
+										<connection refLocalId="0" formalParameter="preparationPB">
+											<position x="288" y="96" />
+											<position x="321" y="96" />
+											<position x="321" y="384" />
+											<position x="384" y="384" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="productionPB">
+									<connectionPointIn>
+										<connection refLocalId="0" formalParameter="productionPB">
+											<position x="288" y="96" />
+											<position x="321" y="96" />
+											<position x="321" y="384" />
+											<position x="384" y="384" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="closingPB">
+									<connectionPointIn>
+										<connection refLocalId="0" formalParameter="closingPB">
+											<position x="288" y="96" />
+											<position x="321" y="96" />
+											<position x="321" y="384" />
+											<position x="384" y="384" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="pulseGenerator">
+									<connectionPointIn>
+										<connection refLocalId="6" formalParameter="pulse">
+											<position x="1440" y="936" />
+											<position x="1475" y="936" />
+											<position x="1475" y="763" />
+											<position x="325" y="763" />
+											<position x="325" y="408" />
+											<position x="384" y="408" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="bottleFilled">
+									<connectionPointIn>
+										<connection refLocalId="6" formalParameter="bottleFilled">
+											<position x="1440" y="936" />
+											<position x="1475" y="936" />
+											<position x="1475" y="763" />
+											<position x="325" y="763" />
+											<position x="325" y="408" />
+											<position x="384" y="408" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="bottlePresent">
+									<connectionPointIn>
+										<connection refLocalId="6" formalParameter="bottlePresent">
+											<position x="1440" y="936" />
+											<position x="1475" y="936" />
+											<position x="1475" y="763" />
+											<position x="325" y="763" />
+											<position x="325" y="408" />
+											<position x="384" y="408" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="load">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="evacuate">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="convoy">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="pump1">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="pump2">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="valve1">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="valve2">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="valve3">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="valve4">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="loSpeedAgitator">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="hiSpeedAgitator">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="valve5">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>3.Sensors,Levels1,0.PushButtons,PushButtons,6.FeedBacks,ConveyorFB,5.Sensors,Levels3,4.Sensors,Levels2</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>62e6e974-a88c-47cf-971d-56a771fd346b</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="3" width="384" height="192" typeName="bottling_line.pumping" instanceName="pumpingTank1">
+							<position x="960" y="0" />
+							<inputVariables>
+								<variable formalParameter="fillingValve">
+									<connectionPointIn>
+										<connection refLocalId="2" formalParameter="valve1">
+											<position x="744" y="336" />
+											<position x="864" y="336" />
+											<position x="864" y="48" />
+											<position x="960" y="48" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="emptyingValve">
+									<connectionPointIn>
+										<connection refLocalId="2" formalParameter="valve3">
+											<position x="744" y="336" />
+											<position x="868" y="336" />
+											<position x="868" y="48" />
+											<position x="960" y="48" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="extractionPump">
+									<connectionPointIn>
+										<connection refLocalId="2" formalParameter="pump1">
+											<position x="744" y="336" />
+											<position x="873" y="336" />
+											<position x="873" y="48" />
+											<position x="960" y="48" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="acknowledgePB">
+									<connectionPointIn>
+										<connection refLocalId="0" formalParameter="acknowledgePB">
+											<position x="288" y="48" />
+											<position x="937" y="48" />
+											<position x="937" y="72" />
+											<position x="960" y="72" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="autoMode">
+									<connectionPointIn>
+										<connection refLocalId="1" formalParameter="autoMode">
+											<position x="720" y="144" />
+											<position x="864" y="144" />
+											<position x="864" y="96" />
+											<position x="960" y="96" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="manualMode">
+									<connectionPointIn>
+										<connection refLocalId="1" formalParameter="manualMode">
+											<position x="720" y="144" />
+											<position x="864" y="144" />
+											<position x="864" y="96" />
+											<position x="960" y="96" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="lowLevel">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="highLevel">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="pumpingFlow">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="level">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>1.Modes,Modes</value>
+								</data>
+								<data name="Geensys.CB.UNIT" handleUnknown="preserve">
+									<value>Z1</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value> : Z1</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>9aff7a8d-12a6-44f7-b63f-ad8ecf52d2f2</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="4" width="384" height="192" typeName="bottling_line.pumping" instanceName="pumpingTank2">
+							<position x="984" y="288" />
+							<inputVariables>
+								<variable formalParameter="fillingValve">
+									<connectionPointIn>
+										<connection refLocalId="2" formalParameter="valve2">
+											<position x="744" y="336" />
+											<position x="869" y="336" />
+											<position x="869" y="336" />
+											<position x="984" y="336" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="emptyingValve">
+									<connectionPointIn>
+										<connection refLocalId="2" formalParameter="valve4">
+											<position x="744" y="336" />
+											<position x="864" y="336" />
+											<position x="864" y="336" />
+											<position x="984" y="336" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="extractionPump">
+									<connectionPointIn>
+										<connection refLocalId="2" formalParameter="pump2">
+											<position x="744" y="336" />
+											<position x="859" y="336" />
+											<position x="859" y="336" />
+											<position x="984" y="336" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="acknowledgePB">
+									<connectionPointIn>
+										<connection refLocalId="0" formalParameter="acknowledgePB">
+											<position x="288" y="48" />
+											<position x="936" y="48" />
+											<position x="936" y="360" />
+											<position x="984" y="360" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="autoMode">
+									<connectionPointIn>
+										<connection refLocalId="1" formalParameter="autoMode">
+											<position x="720" y="144" />
+											<position x="854" y="144" />
+											<position x="854" y="384" />
+											<position x="984" y="384" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="manualMode">
+									<connectionPointIn>
+										<connection refLocalId="1" formalParameter="manualMode">
+											<position x="720" y="144" />
+											<position x="854" y="144" />
+											<position x="854" y="384" />
+											<position x="984" y="384" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="lowLevel">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="highLevel">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="pumpingFlow">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="level">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>1.Modes,Modes</value>
+								</data>
+								<data name="Geensys.CB.UNIT" handleUnknown="preserve">
+									<value>Z2</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value> : Z2</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>dfcec461-d8d8-4074-a5fa-40611fdadf82</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="7" width="216" height="119" typeName="equipment_library.addition" instanceName="flowsAdd">
+							<position x="1536" y="264" />
+							<inputVariables>
+								<variable formalParameter="in1">
+									<connectionPointIn>
+										<connection refLocalId="3" formalParameter="pumpingFlow">
+											<position x="1344" y="72" />
+											<position x="1488" y="72" />
+											<position x="1488" y="312" />
+											<position x="1536" y="312" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="in2">
+									<connectionPointIn>
+										<connection refLocalId="4" formalParameter="pumpingFlow">
+											<position x="1368" y="360" />
+											<position x="1488" y="360" />
+											<position x="1488" y="336" />
+											<position x="1536" y="336" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="value">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="dintValue">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="intValue">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.targetablePropertyName" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value>This module simulates the addition of two real numbers. : &lt;UNIT&gt;_&lt;PY&gt;&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>9ec20f20-43ff-4081-bdbb-047b72dfb2ab</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="5" width="384" height="216" typeName="bottling_line.mixing" instanceName="mixing">
+							<position x="1032" y="648" />
+							<inputVariables>
+								<variable formalParameter="autoMode">
+									<connectionPointIn>
+										<connection refLocalId="1" formalParameter="autoMode">
+											<position x="720" y="144" />
+											<position x="854" y="144" />
+											<position x="854" y="696" />
+											<position x="1032" y="696" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="manualMode">
+									<connectionPointIn>
+										<connection refLocalId="1" formalParameter="manualMode">
+											<position x="720" y="144" />
+											<position x="854" y="144" />
+											<position x="854" y="696" />
+											<position x="1032" y="696" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="acknowledgePB">
+									<connectionPointIn>
+										<connection refLocalId="0" formalParameter="acknowledgePB">
+											<position x="288" y="48" />
+											<position x="937" y="48" />
+											<position x="937" y="720" />
+											<position x="1032" y="720" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="fillingValve">
+									<connectionPointIn>
+										<connection refLocalId="2" formalParameter="valve5">
+											<position x="744" y="360" />
+											<position x="840" y="360" />
+											<position x="840" y="768" />
+											<position x="1032" y="768" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="hiSpeedAgitator">
+									<connectionPointIn>
+										<connection refLocalId="2" formalParameter="hiSpeedAgitator">
+											<position x="744" y="336" />
+											<position x="873" y="336" />
+											<position x="873" y="792" />
+											<position x="1032" y="792" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="loSpeedAgitator">
+									<connectionPointIn>
+										<connection refLocalId="2" formalParameter="loSpeedAgitator">
+											<position x="744" y="336" />
+											<position x="865" y="336" />
+											<position x="865" y="816" />
+											<position x="1032" y="816" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="inputFlow">
+									<connectionPointIn>
+										<connection refLocalId="7" formalParameter="value">
+											<position x="1752" y="312" />
+											<position x="1791" y="312" />
+											<position x="1791" y="541" />
+											<position x="983" y="541" />
+											<position x="983" y="840" />
+											<position x="1032" y="840" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="highLevel">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="lowLevel">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="level">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="outputFlow">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>1.Modes,Modes</value>
+								</data>
+								<data name="Geensys.CB.UNIT" handleUnknown="preserve">
+									<value>Z3</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value> : Z3</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>490fdd88-f479-4103-81ce-8f2f68d7fae0</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="6" width="384" height="144" typeName="bottling_line.drive" instanceName="drive">
+							<position x="1056" y="888" />
+							<inputVariables>
+								<variable formalParameter="autoMode">
+									<connectionPointIn>
+										<connection refLocalId="1" formalParameter="autoMode">
+											<position x="720" y="144" />
+											<position x="852" y="144" />
+											<position x="852" y="936" />
+											<position x="1056" y="936" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="manualMode">
+									<connectionPointIn>
+										<connection refLocalId="1" formalParameter="manualMode">
+											<position x="720" y="144" />
+											<position x="852" y="144" />
+											<position x="852" y="936" />
+											<position x="1056" y="936" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="acknowledgePB">
+									<connectionPointIn>
+										<connection refLocalId="0" formalParameter="acknowledgePB">
+											<position x="288" y="48" />
+											<position x="936" y="48" />
+											<position x="936" y="960" />
+											<position x="1056" y="960" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="load">
+									<connectionPointIn>
+										<connection refLocalId="2" formalParameter="load">
+											<position x="744" y="312" />
+											<position x="873" y="312" />
+											<position x="873" y="984" />
+											<position x="1056" y="984" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="evacuate">
+									<connectionPointIn>
+										<connection refLocalId="2" formalParameter="evacuate">
+											<position x="744" y="312" />
+											<position x="873" y="312" />
+											<position x="873" y="984" />
+											<position x="1056" y="984" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="convoy">
+									<connectionPointIn>
+										<connection refLocalId="2" formalParameter="convoy">
+											<position x="744" y="312" />
+											<position x="873" y="312" />
+											<position x="873" y="984" />
+											<position x="1056" y="984" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+								<variable formalParameter="inputFlow">
+									<connectionPointIn>
+										<connection refLocalId="5" formalParameter="outputFlow">
+											<position x="1416" y="744" />
+											<position x="1465" y="744" />
+											<position x="1465" y="878" />
+											<position x="1007" y="878" />
+											<position x="1007" y="1008" />
+											<position x="1056" y="1008" />
+										</connection>
+									</connectionPointIn>
+								</variable>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="bottlePresent">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="bottleFilled">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="pulse">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.connectionIn" handleUnknown="preserve">
+									<value>1.Modes,Modes,2.ConveyorFunctionRequests,FunctionRequests</value>
+								</data>
+								<data name="Geensys.CB.UNIT" handleUnknown="preserve">
+									<value>Z4</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value> : Z4</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>315f9d56-b19f-4f37-8187-1baccfc64c24</value>
+								</data>
+							</addData>
+						</block>
+					</FBD>
+				</body>
+				<addData>
+					<data name="Geensys.CB.AutomaticScheduling" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+				</addData>
+			</pou>
+			<pou name="panel" pouType="program">
+				<interface>
+					<outputVars>
+						<variable name="acknowledgePB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>bd23aba7-f8c9-4a9c-8784-e5529075bed5</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<outputVars>
+						<variable name="powerUpPB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>0af42e70-1b24-41d2-9132-a8f536453d18</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="emergencyStopPB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>d12bb75b-5f23-499e-b245-fad2a17a2f08</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="manual">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>da2fadd9-f7bc-49d6-bbb0-56c9a9d74e59</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="auto">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>5249d552-449f-49ea-84bf-55cf4a23d217</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>Panel</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<outputVars>
+						<variable name="startCyclePB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>98115b66-f7cb-4dcb-b5df-622d8f7ec116</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="initPB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>baf8eed3-3b53-45a9-bceb-794f6da92eb9</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="preparationPB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>2c29039b-0824-46bc-b0d0-c263fb78a56e</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="productionPB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>79e3b376-eff6-4a83-88c6-6adc6fdb4540</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="closingPB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>3fd465bf-1c0e-4d45-9885-54bb2aa5796c</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>PushButtons</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<addData>
+						<data name="Geensys.CB.groupOut" handleUnknown="preserve">
+							<value>Panel,,PushButtons,</value>
+						</data>
+					</addData>
+				</interface>
+				<actions>
+				</actions>
+				<body>
+					<FBD>
+						<outVariable localId="0">
+							<position x="1032" y="72" />
+							<connectionPointIn>
+								<connection refLocalId="1" formalParameter="PB" />
+							</connectionPointIn>
+							<expression>acknowledgePB</expression>
+						</outVariable>
+						<outVariable localId="2">
+							<position x="1032" y="192" />
+							<connectionPointIn>
+								<connection refLocalId="3" formalParameter="PB" />
+							</connectionPointIn>
+							<expression>powerUpPB</expression>
+						</outVariable>
+						<outVariable localId="4">
+							<position x="1032" y="312" />
+							<connectionPointIn>
+								<connection refLocalId="5" formalParameter="pb" />
+							</connectionPointIn>
+							<expression>emergencyStopPB</expression>
+						</outVariable>
+						<outVariable localId="6">
+							<position x="1032" y="456" />
+							<connectionPointIn>
+								<connection refLocalId="7" formalParameter="rightVariable" />
+							</connectionPointIn>
+							<expression>manual</expression>
+						</outVariable>
+						<outVariable localId="8">
+							<position x="1032" y="432" />
+							<connectionPointIn>
+								<connection refLocalId="7" formalParameter="leftVariable" />
+							</connectionPointIn>
+							<expression>auto</expression>
+						</outVariable>
+						<outVariable localId="9">
+							<position x="1008" y="576" />
+							<connectionPointIn>
+								<connection refLocalId="10" formalParameter="PB" />
+							</connectionPointIn>
+							<expression>startCyclePB</expression>
+						</outVariable>
+						<outVariable localId="11">
+							<position x="1032" y="696" />
+							<connectionPointIn>
+								<connection refLocalId="12" formalParameter="PB" />
+							</connectionPointIn>
+							<expression>initPB</expression>
+						</outVariable>
+						<outVariable localId="13">
+							<position x="1008" y="816" />
+							<connectionPointIn>
+								<connection refLocalId="14" formalParameter="leftVariable" />
+							</connectionPointIn>
+							<expression>preparationPB</expression>
+						</outVariable>
+						<outVariable localId="15">
+							<position x="1008" y="840" />
+							<connectionPointIn>
+								<connection refLocalId="14" formalParameter="rightVariable" />
+							</connectionPointIn>
+							<expression>productionPB</expression>
+						</outVariable>
+						<outVariable localId="16">
+							<position x="1008" y="936" />
+							<connectionPointIn>
+								<connection refLocalId="17" formalParameter="PB" />
+							</connectionPointIn>
+							<expression>closingPB</expression>
+						</outVariable>
+						<block localId="1" width="505" height="96" typeName="equipment_library.momentary_button" instanceName="acknowledgePB">
+							<position x="432" y="24" />
+							<inputVariables>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="PB">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.PY" handleUnknown="preserve">
+									<value>PbACK</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value>This module simulates a momentary contact push button. : &lt;UNIT&gt;_PbACK&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>593f4639-0dd2-4aab-a9c6-28a8a023ef8d</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="3" width="505" height="96" typeName="equipment_library.momentary_button" instanceName="powerUpPB">
+							<position x="432" y="144" />
+							<inputVariables>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="PB">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.PY" handleUnknown="preserve">
+									<value>PbPwUP</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value>This module simulates a momentary contact push button. : &lt;UNIT&gt;_PbPwUP&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>af61e2b6-c4dd-425f-8a36-c2151662aec0</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="5" width="503" height="96" typeName="equipment_library.maintained_button" instanceName="emergencyStopPB">
+							<position x="432" y="264" />
+							<inputVariables>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="pb">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.PY" handleUnknown="preserve">
+									<value>ES</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value>This module simulates a maintained contact push button. : &lt;UNIT&gt;_ES&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>4349b87b-94e6-4329-ae0c-48dd3d26ac16</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="7" width="504" height="96" typeName="equipment_library.switch_2pos_2outputs" instanceName="modesSwitch">
+							<position x="432" y="384" />
+							<inputVariables>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="leftVariable">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="rightVariable">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.PY" handleUnknown="preserve">
+									<value>MODES</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value>This module simulates a switch with 2 positions and 2 outputs. : _MODES</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>7685b3c8-04a0-48ab-b09a-b79bdec76963</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="10" width="505" height="96" typeName="equipment_library.momentary_button" instanceName="startCyclePB">
+							<position x="432" y="528" />
+							<inputVariables>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="PB">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.PY" handleUnknown="preserve">
+									<value>PbSCY</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value>This module simulates a momentary contact push button. : &lt;UNIT&gt;_PbSCY&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>2537a231-cf70-439a-a2d1-b68673487f56</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="12" width="505" height="96" typeName="equipment_library.momentary_button" instanceName="initPB">
+							<position x="432" y="648" />
+							<inputVariables>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="PB">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.PY" handleUnknown="preserve">
+									<value>PbINIT</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value>This module simulates a momentary contact push button. : &lt;UNIT&gt;_PbINIT&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>579c77e6-5c51-4ea3-a8d4-eb8e591bf2de</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="14" width="504" height="96" typeName="equipment_library.switch_2pos_2outputs" instanceName="productionSwitch">
+							<position x="432" y="768" />
+							<inputVariables>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="leftVariable">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+								<variable formalParameter="rightVariable">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.PY" handleUnknown="preserve">
+									<value>SWITCH</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value>This module simulates a switch with 2 positions and 2 outputs. : _SWITCH</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>9a728cad-2fb4-407a-9f8a-38a62e1eca70</value>
+								</data>
+							</addData>
+						</block>
+						<block localId="17" width="505" height="96" typeName="equipment_library.momentary_button" instanceName="closingPB">
+							<position x="432" y="888" />
+							<inputVariables>
+							</inputVariables>
+							<inOutVariables>
+							</inOutVariables>
+							<outputVariables>
+								<variable formalParameter="PB">
+									<connectionPointOut>
+									</connectionPointOut>
+								</variable>
+							</outputVariables>
+							<addData>
+								<data name="Geensys.CB.PY" handleUnknown="preserve">
+									<value>PbCLO</value>
+								</data>
+								<data name="Geensys.CB.commentsProperty" handleUnknown="preserve">
+									<value>This module simulates a momentary contact push button. : &lt;UNIT&gt;_PbCLO&lt;NU&gt;</value>
+								</data>
+								<data name="Geensys.CB.UUID" handleUnknown="preserve">
+									<value>e9937b6c-4c0b-4c17-91a8-03544d1eb054</value>
+								</data>
+							</addData>
+						</block>
+					</FBD>
+				</body>
+				<addData>
+					<data name="Geensys.CB.AutomaticScheduling" handleUnknown="preserve">
+						<value>true</value>
+					</data>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+				</addData>
+			</pou>
+		</pous>
+	</types>
+	<instances>
+		<configurations />
+	</instances>
+</project>

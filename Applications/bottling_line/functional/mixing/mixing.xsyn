@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<AWTSynoptic screenX="1600" screenY="2262" name="mixing.xsyn" description="" date="03/10/2023" time="11:13" version="3.0_draft3" source="controlbuild " bkgColor="white" identifier="c4bc3c27-189e-4a96-bbf1-0ac91cf5f83a" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Colors>
+		<Color colorId="black" r="0" g="0" b="0" invisible="false" />
+		<Color colorId="white" r="255" g="255" b="255" invisible="false" />
+		<Color colorId="red" r="255" g="0" b="0" invisible="false" />
+		<Color colorId="yellow" r="255" g="255" b="0" invisible="false" />
+		<Color colorId="blue" r="0" g="0" b="255" invisible="false" />
+		<Color colorId="green" r="0" g="255" b="0" invisible="false" />
+		<Color colorId="purple" r="128" g="0" b="128" invisible="false" />
+		<Color colorId="brown" r="128" g="64" b="0" invisible="false" />
+		<Color colorId="gray" r="192" g="192" b="192" invisible="false" />
+		<Color colorId="orange" r="255" g="128" b="0" invisible="false" />
+		<Color colorId="pink" r="255" g="128" b="255" invisible="false" />
+		<Color colorId="transparent" invisible="true" />
+		<Color colorId="other" r="0" g="0" b="0" invisible="false" />
+		<Color colorId="visible" invisible="false" />
+	</Colors>
+	<Objects>
+		<Text font="font0" textColor="blue" hAlign="left" vAlign="top">
+			<Basic xInit="142" yInit="353" xFinal="242" yFinal="403" xCenter="192" yCenter="378" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="white" />
+			<Content>Valve5</Content>
+		</Text>
+		<Text font="font1" textColor="black" hAlign="left" vAlign="top">
+			<Basic xInit="362" yInit="353" xFinal="462" yFinal="393" xCenter="412" yCenter="373" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="white" />
+			<Content>Tank 3</Content>
+		</Text>
+		<Text font="font0" textColor="purple" hAlign="left" vAlign="top">
+			<Basic xInit="542" yInit="263" xFinal="662" yFinal="313" xCenter="602" yCenter="288" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="white" />
+			<Content>Low L3</Content>
+		</Text>
+		<Text font="font0" textColor="purple" hAlign="left" vAlign="top">
+			<Basic xInit="542" yInit="103" xFinal="652" yFinal="153" xCenter="597" yCenter="128" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="white" />
+			<Content>High L3</Content>
+		</Text>
+		<Widget src="equipment_library\single_acting_valve\single_acting_valve_pipe">
+			<Basic xInit="238" yInit="328" xFinal="252" yFinal="542" xCenter="245" yCenter="435" />
+			<Comment>CB.instance_path=valve5\valve
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=238
+CB.rotation_centerY=542
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\single_acting_valve\single_acting_valve">
+			<Basic xInit="310" yInit="409" xFinal="454" yFinal="492" xCenter="382" yCenter="450" />
+			<Comment>CB.instance_path=valve5\valve
+CB.rotation_angle=90
+CB.symmetry_kind=2
+CB.rotation_centerX=310
+CB.rotation_centerY=492
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\tank\tank">
+			<Basic xInit="95" yInit="123" xFinal="496" yFinal="332" xCenter="295" yCenter="227" />
+			<Comment>CB.instance_path=mixingTank
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=95
+CB.rotation_centerY=332
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\threshold_sensor\threshold_sensor">
+			<Basic xInit="502" yInit="134" xFinal="568" yFinal="176" xCenter="535" yCenter="155" />
+			<Comment>CB.instance_path=highLevel3
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=502
+CB.rotation_centerY=176
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\threshold_sensor\threshold_sensor">
+			<Basic xInit="502" yInit="294" xFinal="568" yFinal="336" xCenter="535" yCenter="315" />
+			<Comment>CB.instance_path=highLevel3
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=502
+CB.rotation_centerY=336
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\analog_sensor\level_sensor">
+			<Basic xInit="360" yInit="51" xFinal="538" yFinal="153" xCenter="449" yCenter="102" />
+			<Comment>CB.instance_path=levelMeasurement
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=360
+CB.rotation_centerY=153
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\agitator_2speed\agitator_2speed">
+			<Basic xInit="182" yInit="29" xFinal="315" yFinal="226" xCenter="248" yCenter="127" />
+			<Comment>CB.instance_path=agitator\agitator
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=182
+CB.rotation_centerY=226
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+	</Objects>
+	<Vars>
+	</Vars>
+	<Fonts>
+		<Font fontId="font0" family="Arial" size="7pt" style="normal" weight="normal" text-decoration="none" letter-spacing="0" word-spacing="0" />
+		<Font fontId="font1" family="Arial" size="9pt" style="normal" weight="normal" text-decoration="none" letter-spacing="0" word-spacing="0" />
+	</Fonts>
+	<Meta>
+		<Metadata type="synoptic">
+			<Param>
+				<ParamName>groundPlanOnxyz</ParamName>
+				<ParamValue>3</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskpx</ParamName>
+				<ParamValue>0</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskpy</ParamName>
+				<ParamValue>0</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskpz</ParamName>
+				<ParamValue>0</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskdx</ParamName>
+				<ParamValue>10</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskdy</ParamName>
+				<ParamValue>10</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskdz</ParamName>
+				<ParamValue>10</ParamValue>
+			</Param>
+		</Metadata>
+	</Meta>
+</AWTSynoptic>

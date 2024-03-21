@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<MODEL_REQUIREMENTS>
+	<FUNCTIONAL_TREE TYPE="mac">
+		<CHILDREN>
+			<NODE NAME="generalPanel" TYPE="mac">
+				<CHILDREN>
+					<NODE NAME="acknowledgePB" MODEL_PATH="Standard\equipment_library\momentary_button">
+					</NODE>
+					<NODE NAME="powerUpPB" MODEL_PATH="Standard\equipment_library\momentary_button">
+					</NODE>
+					<NODE NAME="emergencyStopPB" MODEL_PATH="Standard\equipment_library\maintained_button">
+					</NODE>
+					<NODE NAME="modesSwitch" MODEL_PATH="Standard\equipment_library\switch_2pos_2outputs">
+					</NODE>
+					<NODE NAME="startCyclePB" MODEL_PATH="Standard\equipment_library\momentary_button">
+					</NODE>
+					<NODE NAME="initPB" MODEL_PATH="Standard\equipment_library\momentary_button">
+					</NODE>
+					<NODE NAME="productionSwitch" MODEL_PATH="Standard\equipment_library\switch_2pos_2outputs">
+					</NODE>
+					<NODE NAME="closingPB" MODEL_PATH="Standard\equipment_library\momentary_button">
+					</NODE>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="workingModes" MODEL_PATH="Applications\bottling_line\mode">
+			</NODE>
+			<NODE NAME="process" MODEL_PATH="Applications\bottling_line\process">
+			</NODE>
+			<NODE NAME="pumpingTank1" MODEL_PATH="Applications\bottling_line\pumping">
+			</NODE>
+			<NODE NAME="pumpingTank2" MODEL_PATH="Applications\bottling_line\pumping">
+			</NODE>
+			<NODE NAME="flowsAdd" MODEL_PATH="Standard\equipment_library\addition">
+			</NODE>
+			<NODE NAME="mixing" MODEL_PATH="Applications\bottling_line\mixing">
+			</NODE>
+			<NODE NAME="drive" MODEL_PATH="Applications\bottling_line\drive">
+			</NODE>
+		</CHILDREN>
+	</FUNCTIONAL_TREE>
+</MODEL_REQUIREMENTS>

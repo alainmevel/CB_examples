@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<CB_COMPONENT NAME="motor2dir_1speed" COMMENTS="This module simulates the behaviour of a motor with 2 directions and 1speed and its electrical control logic." COMMENTS_PATTERN="This module simulates the behaviour of a motor with 2 directions and 1speed and its electrical control logic." PICTURE_PATH="" INSTANCE_NAMIMG_PATTERN="" COMPONENT_CLASS="" AP_DEC="" SIGNATURE="" GENERATION_DATE="" SAFE_MODE="False" BREAKPOINT="False" GEN_STATUS="good" COMPONENT_CLASS_UUID="" PLMId="">
+	<MODEL_REQUIREMENTS>
+		<FUNCTIONAL_TREE TYPE="c" />
+	</MODEL_REQUIREMENTS>
+	<externalSrcs />
+</CB_COMPONENT>

@@ -1,0 +1,18 @@
+
+FUNCTION CB_mul_t_int : TIME
+
+
+TITLE = ' Multiplying a time '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : mulTiIn
+FAMILY  : TNI
+
+VAR_INPUT
+    IN0 : TIME;
+    IN1 : INT;
+END_VAR
+
+BEGIN
+    CB_mul_t_int := IN0 * IN1;  
+END_FUNCTION

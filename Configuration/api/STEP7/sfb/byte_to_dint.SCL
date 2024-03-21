@@ -1,0 +1,18 @@
+
+FUNCTION CB_byte_to_dint : DINT
+
+TITLE = ' Convert a byte into a Dint '
+VERSION : '1.0'
+AUTHOR  : CB
+NAME    : bytToDin
+FAMILY  : TNI
+
+VAR_INPUT
+    IN : BYTE;
+END_VAR
+
+BEGIN
+
+CB_byte_to_dint := BYTE_TO_DINT(IN);
+
+END_FUNCTION

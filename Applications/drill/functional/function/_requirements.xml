@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<MODEL_REQUIREMENTS>
+	<FUNCTIONAL_TREE TYPE="mac">
+		<CHILDREN>
+			<NODE NAME="functionChart" MODEL_PATH="Applications\drill\run">
+			</NODE>
+			<NODE NAME="descent" MODEL_PATH="Applications\drill\mdescent">
+			</NODE>
+			<NODE NAME="clamping" MODEL_PATH="Applications\drill\mclamping">
+			</NODE>
+			<NODE NAME="spindle" MODEL_PATH="Applications\drill\mspindle">
+			</NODE>
+		</CHILDREN>
+	</FUNCTIONAL_TREE>
+</MODEL_REQUIREMENTS>

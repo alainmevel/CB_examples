@@ -1,0 +1,45 @@
+FUNCTION_BLOCK FB 68
+TITLE = 'mixture_fault_faults'
+AUTHOR : CB
+
+
+VAR_INPUT
+	generalFault1 : BOOL := FALSE;	//Défaut général moteur
+	generalFault2 : BOOL := FALSE;	//Défaut général
+	generalFault3 : BOOL := FALSE;	//Défaut général
+END_VAR
+
+VAR_OUTPUT
+	fault : BOOL := FALSE;	//
+END_VAR
+
+BEGIN
+
+
+NETWORK
+TITLE = 
+//
+L1:	O	generalFault3;
+O	generalFault1;
+O	generalFault2;
+=	fault;
+
+
+
+
+NETWORK
+TITLE = 
+//
+L2:	NOP 0
+
+
+
+NETWORK
+TITLE = 
+//
+L3:	NOP 0
+
+
+
+
+END_FUNCTION_BLOCK
