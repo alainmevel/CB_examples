@@ -1,5 +1,0 @@
-UTF8#1 11 TNI Sos mac124 2 
-
-1 92 1 2 549 FUNCTION_BLOCK CB_CTDTITLE = 'Dcompteur'VERSION : '1.0'AUTHOR  : 'TNI'NAME    : 'CB_CTD'FAMILY  : 'CB'VAR_INPUT  // Paramétres d'entreés  CD : BOOL;  LOAD : BOOL;  PV : INT;END_VARVAR_OUTPUT // Paramtres de sortie    QD : BOOL;    CV : INT; END_VARBEGINIF LOAD THEN   // Charge Preset    CV := PV;ELSE    IF (CD AND (CV > -32768)) THEN       CV := CV - 1;    // Dcrementation valeur courante        END_IF;END_IF;            QD := (CV <= 0);      // Affectation des sorties                        END_FUNCTION_BLOCK0 0 0 0 
-2 73 6 suffix1 4 .scl0 
-�0CS

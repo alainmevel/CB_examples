@@ -1,1 +1,0 @@
-Component "passing_sensor2": some branches have not been covered or some variables have not changed

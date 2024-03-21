@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<!-- Generator: ControlBuild -->
-
-<CONFS>
-	<ORGANIC_CONF NAME="Default" PATH="\organic">
-		<EMB_CONFS>
-		</EMB_CONFS>
-	</ORGANIC_CONF>
-</CONFS>

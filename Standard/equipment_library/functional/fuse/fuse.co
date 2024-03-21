@@ -1,7 +1,0 @@
- energyBefore IB1
- sensorSupply IB2
- fuseState OB3
- energyAfter OB4
- wiringLogic PB5
- d_electric DB6
- v_d_electric DB7

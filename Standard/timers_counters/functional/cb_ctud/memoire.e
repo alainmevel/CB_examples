@@ -1,5 +1,0 @@
-CU B 5 0
-CD B 6 0
-R B 7 0
-LOAD B 8 0
-PV I 523 0

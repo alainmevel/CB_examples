@@ -1,8 +1,0 @@
-generalPanel/cycleSwitch/leftVariable false
-generalPanel/cycleSwitch/rightVariable true
-generalPanel/emergencyStop/PBLogic false
-functional/descent/motorOfTurret/motor/nominalTime 0.05
-functional/descent/motorOfTurret/motor/nominalLowSpeed 100.0
-functional/descent/motorOfTurret/motor/nominalHighSpeed 200.0
-functional/clamping/leftJack/jack/time2extend 1.0
-functional/clamping/rightJack/jack/time2extend 1.0

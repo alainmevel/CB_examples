@@ -1,6 +1,0 @@
- enableAlarm IB1
- resetKey IB2
- alarm OB3
- i_rs1 LI4
- rs1_Q1 LB5
- rs1_i_rs LI6

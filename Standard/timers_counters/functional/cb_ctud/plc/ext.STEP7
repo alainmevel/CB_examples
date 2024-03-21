@@ -1,5 +1,0 @@
-UTF8#1 11 TNI Sos mac124 2 
-
-1 92 1 2 994 FUNCTION_BLOCK CB_CTUDTITLE = 'Compteur / DÃ©compteur'VERSION : '1.0'AUTHOR  : 'TNI'NAME    : 'CB_CTUD'FAMILY  : 'CB'VAR_INPUT  // Paramtres d'entre  CU : BOOL;  CD : BOOL;  R : BOOL;  LOAD : BOOL;  PV : INT;END_VARVAR_OUTPUT // Paramtres de sortie    QU : BOOL;    QD : BOOL;    CV : INT; END_VARIF R THEN       // Raz CV    CV := 0;ELSE    IF LOAD THEN        CV := PV;     // Charge Preset    ELSE        IF (NOT (CU AND  CD)) THEN          // Test cohrence entre            IF (CU AND (CV < 32767)) THEN                CV := CV + 1;           // Incrementation valeur courante            ELSE                IF (CD AND (CV > -32768)) THEN                    CV := CV - 1;       // Dcrmentation valeur courante                END_IF;            END_IF;        END_IF;    END_IF;           END_IF;QU := (CV >= PV);     // Affectation des sortiesQD := (CV <= 0);                                                                END_FUNCTION_BLOCK0 0 0 0 
-2 73 6 suffix1 4 .scl0 
-3WÊC

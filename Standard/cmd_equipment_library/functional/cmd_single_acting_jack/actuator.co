@@ -1,6 +1,0 @@
- autoMode IB1
- manualMode IB2
- autoWorkCmd IB3
- valveWorkPB IB4
- generalFault IB5
- workCmd OB6

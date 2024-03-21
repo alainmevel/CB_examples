@@ -1,7 +1,0 @@
- inputValue IF1
- dintValue OI2
- intValue OI3
- coefficient PF4
- offset PF5
- d_scale DB6
- v_d_scale DI7

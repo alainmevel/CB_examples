@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<!-- Generator: ControlBuild -->
-
-<CB_COMPONENT NAME="rangesensor" COMMENTS="This module simulates the behaviour of an over threshold sensor with a detection area." COMMENTS_PATTERN="This module simulates the behaviour of an over threshold sensor with a detection area." PICTURE_PATH="" INSTANCE_NAMIMG_PATTERN="" COMPONENT_CLASS="" AP_DEC="" SIGNATURE="" GENERATION_DATE="" SAFE_MODE="False" BREAKPOINT="False" GEN_STATUS="good" COMPONENT_CLASS_UUID="" PLMId="">
-	<MODEL_REQUIREMENTS>
-		<FUNCTIONAL_TREE TYPE="c" />
-	</MODEL_REQUIREMENTS>
-	<externalSrcs />
-</CB_COMPONENT>

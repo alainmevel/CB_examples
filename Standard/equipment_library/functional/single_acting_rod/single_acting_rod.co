@@ -1,8 +1,0 @@
- pipeWork IB1
- rodPosition OF2
- rodPercent OF3
- increment LF4
- length PF5
- timeOutput PF6
- d_locking DB7
- v_d_locking DF8
