@@ -1,8 +1,0 @@
- inputBit1 IB1
- inputBit2 IB2
- outputBit OB3
- input1Logic PB4
- input2Logic PB5
- outputLogic PB6
- d_output DB7
- v_d_output DB8

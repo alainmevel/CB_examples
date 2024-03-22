@@ -1,7 +1,0 @@
- inletFlow IF1
- outletFlow IF2
- tankLevel OF3
- percent LF4
- capacity PF5
- d_level DB6
- v_d_level DF7

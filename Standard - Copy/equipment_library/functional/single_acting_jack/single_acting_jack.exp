@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<!-- Generator: ControlBuild -->
-
-<CB_COMPONENT NAME="single_acting_jack" COMMENTS="This module simulates a single-acting jack driven by a three-way, two positions control valve " COMMENTS_PATTERN="&lt;CLASS_PATTERN&gt;" PICTURE_PATH="" INSTANCE_NAMIMG_PATTERN="&lt;CLASS_PATTERN&gt;" COMPONENT_CLASS="SIMULATION" SAFE_MODE="False" BREAKPOINT="False" GEN_STATUS="good">
-	<MODEL_REQUIREMENTS>
-		<FUNCTIONAL_TREE TYPE="c" />
-	</MODEL_REQUIREMENTS>
-	<externalSrcs />
-</CB_COMPONENT>

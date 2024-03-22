@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<!-- Generator: ControlBuild -->
-
-<CB_COMPONENT NAME="control_valve_52" COMMENTS="This module simulates a five-way, two positions control valve used to drive a double-acting jack." COMMENTS_PATTERN="&lt;CLASS_PATTERN&gt;" PICTURE_PATH="" INSTANCE_NAMIMG_PATTERN="&lt;CLASS_PATTERN&gt;" COMPONENT_CLASS="SIMULATION" SAFE_MODE="False" BREAKPOINT="False" GEN_STATUS="good">
-	<MODEL_REQUIREMENTS>
-		<FUNCTIONAL_TREE TYPE="c" />
-	</MODEL_REQUIREMENTS>
-	<externalSrcs />
-</CB_COMPONENT>

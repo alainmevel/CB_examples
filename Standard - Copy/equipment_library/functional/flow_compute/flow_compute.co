@@ -1,6 +1,0 @@
- inputFlow IF1
- outputFlow OF2
- unit LF3
- flowMax PF4
- flowPerHour PB5
- flowPerMinute PB6

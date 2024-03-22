@@ -1,9 +1,0 @@
- input1 IF1
- input2 IF2
- input3 IF3
- input4 IF4
- input5 IF5
- result OF6
- nbInputs PI7
- d_average DB8
- v_d_average DF9

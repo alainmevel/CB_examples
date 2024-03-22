@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<!-- Generator: ControlBuild -->
-
-<CB_COMPONENT NAME="flow_sensor" COMMENTS="This module simulates the behaviour of a flow sensor. The flow is measured in litre / min (use this module with the module flow_compute)." COMMENTS_PATTERN="&lt;CLASS_PATTERN&gt;" PICTURE_PATH="" INSTANCE_NAMIMG_PATTERN="&lt;CLASS_PATTERN&gt;" COMPONENT_CLASS="SIMULATION" SAFE_MODE="False" BREAKPOINT="False" GEN_STATUS="good">
-	<MODEL_REQUIREMENTS>
-		<FUNCTIONAL_TREE TYPE="c" />
-	</MODEL_REQUIREMENTS>
-	<externalSrcs />
-</CB_COMPONENT>

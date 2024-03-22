@@ -1,8 +1,0 @@
- level IF1
- sensorSupply IB2
- rangeSensor OB3
- threshold PF4
- range PF5
- wiringLogic PB6
- d_sensor DB7
- v_d_sensor DB8

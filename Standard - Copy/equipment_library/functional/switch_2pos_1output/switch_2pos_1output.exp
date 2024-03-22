@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<!-- Generator: ControlBuild -->
-
-<CB_COMPONENT NAME="switch_2pos_1output" COMMENTS="This module simulates a switch with 2 positions and 1 output." COMMENTS_PATTERN="&lt;CLASS_PATTERN&gt;" PICTURE_PATH="" INSTANCE_NAMIMG_PATTERN="&lt;CLASS_PATTERN&gt;" COMPONENT_CLASS="SIMULATION" SAFE_MODE="False" BREAKPOINT="False" GEN_STATUS="good">
-	<MODEL_REQUIREMENTS>
-		<FUNCTIONAL_TREE TYPE="st" />
-	</MODEL_REQUIREMENTS>
-</CB_COMPONENT>

@@ -1,7 +1,0 @@
- inputFlow IF1
- outputFlow OF2
- unit LF3
- flowPerHour PB4
- flowPerMinute PB5
- d_flow DB6
- v_d_flow DF7
