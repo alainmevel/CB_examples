@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<AWTSynoptic screenX="1600" screenY="2262" name="pump.xsyn" description="" date="03/10/2023" time="11:12" version="3.0_draft3" source="controlbuild " bkgColor="white" identifier="27727393-c8e2-4966-9632-b6aebca47d4b" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Colors>
+		<Color colorId="black" r="0" g="0" b="0" invisible="false" />
+		<Color colorId="white" r="255" g="255" b="255" invisible="false" />
+		<Color colorId="red" r="255" g="0" b="0" invisible="false" />
+		<Color colorId="yellow" r="255" g="255" b="0" invisible="false" />
+		<Color colorId="blue" r="0" g="0" b="255" invisible="false" />
+		<Color colorId="green" r="0" g="255" b="0" invisible="false" />
+		<Color colorId="purple" r="128" g="0" b="128" invisible="false" />
+		<Color colorId="brown" r="128" g="64" b="0" invisible="false" />
+		<Color colorId="gray" r="192" g="192" b="192" invisible="false" />
+		<Color colorId="orange" r="255" g="128" b="0" invisible="false" />
+		<Color colorId="pink" r="255" g="128" b="255" invisible="false" />
+		<Color colorId="transparent" invisible="true" />
+		<Color colorId="other" r="0" g="0" b="0" invisible="false" />
+		<Color colorId="visible" invisible="false" />
+	</Colors>
+	<Objects>
+		<Text font="font0" textColor="black" hAlign="left" vAlign="top">
+			<Basic xInit="254" yInit="252" xFinal="324" yFinal="306" xCenter="289" yCenter="279" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="white" />
+			<Content>OFF</Content>
+		</Text>
+		<Text font="font0" textColor="black" hAlign="left" vAlign="top">
+			<Basic xInit="66" yInit="252" xFinal="136" yFinal="306" xCenter="101" yCenter="279" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="white" />
+			<Content>ON</Content>
+		</Text>
+		<Widget src="equipment_library\momentary_button\blue_momentary_pb">
+			<Basic xInit="28" yInit="308" xFinal="178" yFinal="444" xCenter="103" yCenter="376" />
+			<Comment>CB.instance_path=panel\onPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=28
+CB.rotation_centerY=444
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\momentary_button\black_momentary_pb">
+			<Basic xInit="216" yInit="306" xFinal="366" yFinal="444" xCenter="291" yCenter="375" />
+			<Comment>CB.instance_path=panel\offPB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=216
+CB.rotation_centerY=444
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\on_off_pump\on_off_pump">
+			<Basic xInit="508" yInit="58" xFinal="650" yFinal="204" xCenter="579" yCenter="131" />
+			<Comment>CB.instance_path=pump
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=508
+CB.rotation_centerY=204
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<CustomObject name="Switch" author="Dassault Syst&#232;mes">
+			<Basic xInit="42" yInit="88" xFinal="240" yFinal="256" xCenter="141" yCenter="172" />
+			<Param>
+				<ParamName>readOnly</ParamName>
+				<ParamValue>false</ParamValue>
+			</Param>
+			<CustomAnimation name="Switch" author="Dassault Syst&#232;mes">
+				<Condition var="Var0" rank="0" index="0" scale="1" offset="0" color="000000" width="1" style="0" />
+				<Condition var="Var1" rank="1" index="0" scale="1" offset="0" color="010000" width="1" style="0" />
+			</CustomAnimation>
+		</CustomObject>
+		<CustomObject name="PushButton" author="Dassault Syst&#232;mes">
+			<Basic xInit="500" yInit="282" xFinal="646" yFinal="356" xCenter="573" yCenter="319" />
+			<Param>
+				<ParamName>pressedButtonColor</ParamName>
+				<ParamValue>red</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>releasedButtonColor</ParamName>
+				<ParamValue>rgb(224,223,227)</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>pressedButtonImage</ParamName>
+				<ParamValue>null</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>releasedButtonImage</ParamName>
+				<ParamValue>null</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>impulsiveButtonPropertyName</ParamName>
+				<ParamValue>false</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>impulsiveTimePropertyName</ParamName>
+				<ParamValue>1000</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>readOnly</ParamName>
+				<ParamValue>false</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>shapeStyle</ParamName>
+				<ParamValue>1</ParamValue>
+			</Param>
+			<CustomAnimation name="PushButton" author="Dassault Syst&#232;mes">
+				<Condition var="Var2" rank="0" index="0" scale="1" offset="0" color="010000" width="1" style="0" />
+			</CustomAnimation>
+		</CustomObject>
+		<CustomObject name="PushButton" author="Dassault Syst&#232;mes">
+			<Basic xInit="756" yInit="194" xFinal="910" yFinal="350" xCenter="833" yCenter="272" />
+			<Param>
+				<ParamName>pressedButtonColor</ParamName>
+				<ParamValue>red</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>releasedButtonColor</ParamName>
+				<ParamValue>rgb(224,223,227)</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>pressedButtonImage</ParamName>
+				<ParamValue>null</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>releasedButtonImage</ParamName>
+				<ParamValue>null</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>impulsiveButtonPropertyName</ParamName>
+				<ParamValue>false</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>impulsiveTimePropertyName</ParamName>
+				<ParamValue>1000</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>readOnly</ParamName>
+				<ParamValue>false</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>shapeStyle</ParamName>
+				<ParamValue>1</ParamValue>
+			</Param>
+			<CustomAnimation name="PushButton" author="Dassault Syst&#232;mes">
+				<Condition var="Var3" rank="0" index="0" scale="1" offset="0" color="010000" width="1" style="0" />
+			</CustomAnimation>
+		</CustomObject>
+		<CustomObject name="Light" author="Dassault Syst&#232;mes">
+			<Basic xInit="496" yInit="430" xFinal="622" yFinal="530" xCenter="559" yCenter="480" />
+			<Param>
+				<ParamName>lightOnColor</ParamName>
+				<ParamValue>red</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>lightOffColor</ParamName>
+				<ParamValue>rgb(224,223,227)</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>lightOnImage</ParamName>
+				<ParamValue>null</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>lightOffImage</ParamName>
+				<ParamValue>null</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>readOnly</ParamName>
+				<ParamValue>false</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>shapeStyle</ParamName>
+				<ParamValue>2</ParamValue>
+			</Param>
+			<CustomAnimation name="Light" author="Dassault Syst&#232;mes">
+				<Condition var="Var4" rank="0" index="0" scale="1" offset="0" color="000000" width="1" style="0" />
+			</CustomAnimation>
+		</CustomObject>
+		<CustomObject name="Light" author="Dassault Syst&#232;mes">
+			<Basic xInit="688" yInit="426" xFinal="814" yFinal="526" xCenter="751" yCenter="476" />
+			<Param>
+				<ParamName>lightOnColor</ParamName>
+				<ParamValue>red</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>lightOffColor</ParamName>
+				<ParamValue>rgb(224,223,227)</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>lightOnImage</ParamName>
+				<ParamValue>null</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>lightOffImage</ParamName>
+				<ParamValue>null</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>readOnly</ParamName>
+				<ParamValue>false</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>shapeStyle</ParamName>
+				<ParamValue>2</ParamValue>
+			</Param>
+			<CustomAnimation name="Light" author="Dassault Syst&#232;mes">
+				<Condition var="Var5" rank="0" index="0" scale="1" offset="0" color="000000" width="1" style="0" />
+			</CustomAnimation>
+		</CustomObject>
+		<CustomObject name="Light" author="Dassault Syst&#232;mes">
+			<Basic xInit="950" yInit="196" xFinal="1084" yFinal="348" xCenter="1017" yCenter="272" />
+			<Param>
+				<ParamName>lightOnColor</ParamName>
+				<ParamValue>red</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>lightOffColor</ParamName>
+				<ParamValue>rgb(224,223,227)</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>lightOnImage</ParamName>
+				<ParamValue>null</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>lightOffImage</ParamName>
+				<ParamValue>null</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>readOnly</ParamName>
+				<ParamValue>false</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>shapeStyle</ParamName>
+				<ParamValue>2</ParamValue>
+			</Param>
+			<CustomAnimation name="Light" author="Dassault Syst&#232;mes">
+				<Condition var="Var6" rank="0" index="0" scale="1" offset="0" color="000000" width="1" style="0" />
+			</CustomAnimation>
+		</CustomObject>
+	</Objects>
+	<Vars>
+		<Var varId="Var5" type="BOOL" instance="cmdOfMotor/faults/" name="thermalFault" />
+		<Var varId="Var0" type="BOOL" name="autoMode" />
+		<Var varId="Var3" type="BOOL" name="acknowledgePB" />
+		<Var varId="Var1" type="BOOL" name="manualMode" />
+		<Var varId="Var6" type="BOOL" instance="cmdOfMotor/faults/" name="generalFault" />
+		<Var varId="Var2" type="BOOL" name="autoCmd" />
+		<Var varId="Var4" type="BOOL" instance="cmdOfMotor/faults/" name="onFBFault" />
+	</Vars>
+	<Fonts>
+		<Font fontId="font0" family="Arial" size="12pt" style="normal" weight="normal" text-decoration="none" letter-spacing="0" word-spacing="0" />
+	</Fonts>
+	<Meta>
+		<Metadata type="synoptic">
+			<Param>
+				<ParamName>groundPlanOnxyz</ParamName>
+				<ParamValue>3</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskpx</ParamName>
+				<ParamValue>0</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskpy</ParamName>
+				<ParamValue>0</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskpz</ParamName>
+				<ParamValue>0</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskdx</ParamName>
+				<ParamValue>10</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskdy</ParamName>
+				<ParamValue>10</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskdz</ParamName>
+				<ParamValue>10</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var5</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>00000000-0000-0000-0000-000000000000</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var0</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>98d43347-c185-4cfe-937c-0cff09749beb</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var3</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>65f24290-d1ba-45a9-a423-fada22e523b0</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var1</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>38bc5956-6c75-491e-b5a5-a22320af52f7</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var6</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>00000000-0000-0000-0000-000000000000</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var2</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>db19facb-ed73-4c13-a198-25782eaa867b</ParamValue>
+			</Param>
+		</Metadata>
+		<Metadata type="variables">
+			<Param>
+				<ParamName>variableIdentifier</ParamName>
+				<ParamValue>Var4</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>modelIdentifierProperty</ParamName>
+				<ParamValue>00000000-0000-0000-0000-000000000000</ParamValue>
+			</Param>
+		</Metadata>
+	</Meta>
+</AWTSynoptic>

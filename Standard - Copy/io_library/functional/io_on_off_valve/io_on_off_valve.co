@@ -1,0 +1,23 @@
+ acknowledgePB IB1
+ autoMode IB2
+ manualMode IB3
+ autoCloseCmd IB4
+ autoOpenCmd IB5
+ inputFlow IF6
+ openedSensor OB7
+ closedSensor OB8
+ generalFault OB9
+ outputFlow OF10
+ percentOpening OF11
+ ~ LB12
+ ~ LB13
+ ~ LB14
+ ~ LB15
+ ~ LB16
+ ~ LB17
+ ~ LB18
+ panel1/closeValvePB OB15
+ panel1/openValvePB OB16
+<equipment_library:switch_3pos_2outputs panel1/switch/ 1 leftVariable 15 rightVariable 16>
+<cmd_equipment_library:cmd_on_off_valve cmdOfValve/ 1 autoMode 2 manualMode 3 closedSensorFB 8 openedSensorFB 7 autoCloseCmd 4 autoOpenCmd 5 closeValvePB 15 openValvePB 16 acknowledgePB 1 closeCmd 18 openCmd 17 generalFault 9>
+<equipment_library:on_off_valve valve/ 1 voltage380 14 cmdSupply 13 sensorSupply 12 openCmd 17 closeCmd 18 inputFlow 6 openedSensor 7 closedSensor 8 outputFlow 10 percentOpening 11>

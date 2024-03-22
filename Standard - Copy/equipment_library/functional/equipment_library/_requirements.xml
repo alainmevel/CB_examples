@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<MODEL_REQUIREMENTS>
+	<FUNCTIONAL_TREE TYPE="mac">
+		<CHILDREN>
+			<NODE NAME="sensors1" TYPE="mac">
+				<CHILDREN>
+					<NODE NAME="binary_encoder1" MODEL_PATH="Standard\equipment_library\binary_encoder">
+					</NODE>
+					<NODE NAME="gray_encoder1" MODEL_PATH="Standard\equipment_library\gray_encoder">
+					</NODE>
+					<NODE NAME="range_sensor1" MODEL_PATH="Standard\equipment_library\range_sensor">
+					</NODE>
+					<NODE NAME="threshold_sensor1" MODEL_PATH="Standard\equipment_library\threshold_sensor">
+					</NODE>
+					<NODE NAME="analog_sensor1" MODEL_PATH="Standard\equipment_library\analog_sensor">
+					</NODE>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="toolbox1" TYPE="mac">
+				<CHILDREN>
+					<NODE NAME="addition1" MODEL_PATH="Standard\equipment_library\addition">
+					</NODE>
+					<NODE NAME="addition_101" MODEL_PATH="Standard\equipment_library\addition_10">
+					</NODE>
+					<NODE NAME="bounded_scale1" MODEL_PATH="Standard\equipment_library\bounded_scale">
+					</NODE>
+					<NODE NAME="coef_scale1" MODEL_PATH="Standard\equipment_library\coef_scale">
+					</NODE>
+					<NODE NAME="int2real_scale1" MODEL_PATH="Standard\equipment_library\int2real_scale">
+					</NODE>
+					<NODE NAME="real2int_scale1" MODEL_PATH="Standard\equipment_library\real2int_scale">
+					</NODE>
+					<NODE NAME="int2real_conversion1" MODEL_PATH="Standard\equipment_library\int2real_conversion">
+					</NODE>
+					<NODE NAME="linear_function1" MODEL_PATH="Standard\equipment_library\linear_function">
+					</NODE>
+					<NODE NAME="logical_and1" MODEL_PATH="Standard\equipment_library\logical_and">
+					</NODE>
+					<NODE NAME="logical_and_101" MODEL_PATH="Standard\equipment_library\logical_and_10">
+					</NODE>
+					<NODE NAME="logical_or1" MODEL_PATH="Standard\equipment_library\logical_or">
+					</NODE>
+					<NODE NAME="logical_xor1" MODEL_PATH="Standard\equipment_library\logical_xor">
+					</NODE>
+					<NODE NAME="logical_or_101" MODEL_PATH="Standard\equipment_library\logical_or_10">
+					</NODE>
+					<NODE NAME="average1" MODEL_PATH="Standard\equipment_library\average">
+					</NODE>
+					<NODE NAME="average_51" MODEL_PATH="Standard\equipment_library\average_5">
+					</NODE>
+					<NODE NAME="real2int_conversion1" MODEL_PATH="Standard\equipment_library\real2int_conversion">
+					</NODE>
+					<NODE NAME="trend1" MODEL_PATH="Standard\equipment_library\trend">
+					</NODE>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="power1" TYPE="mac">
+				<CHILDREN>
+					<NODE NAME="fuse1" MODEL_PATH="Standard\equipment_library\fuse">
+					</NODE>
+					<NODE NAME="relay1" MODEL_PATH="Standard\equipment_library\relay">
+					</NODE>
+					<NODE NAME="circuit_braker1" MODEL_PATH="Standard\equipment_library\circuit_braker">
+					</NODE>
+					<NODE NAME="power_supply1" MODEL_PATH="Standard\equipment_library\power_supply">
+					</NODE>
+					<NODE NAME="light1" MODEL_PATH="Standard\equipment_library\light">
+					</NODE>
+					<NODE NAME="switch_3pos_2outputs1" MODEL_PATH="Standard\equipment_library\switch_3pos_2outputs">
+					</NODE>
+					<NODE NAME="switch_2pos_2outputs1" MODEL_PATH="Standard\equipment_library\switch_2pos_2outputs">
+					</NODE>
+					<NODE NAME="switch_2pos_1output1" MODEL_PATH="Standard\equipment_library\switch_2pos_1output">
+					</NODE>
+					<NODE NAME="illuminated_button1" MODEL_PATH="Standard\equipment_library\illuminated_button">
+					</NODE>
+					<NODE NAME="maintained_button1" MODEL_PATH="Standard\equipment_library\maintained_button">
+					</NODE>
+					<NODE NAME="momentary_button1" MODEL_PATH="Standard\equipment_library\momentary_button">
+					</NODE>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="actuators1" TYPE="mac">
+				<CHILDREN>
+					<NODE NAME="axle1" MODEL_PATH="Standard\equipment_library\axle">
+					</NODE>
+					<NODE NAME="hopper1" MODEL_PATH="Standard\equipment_library\hopper">
+					</NODE>
+					<NODE NAME="cam_1dir_1speed1" MODEL_PATH="Standard\equipment_library\cam_1dir_1speed">
+					</NODE>
+					<NODE NAME="balance1" MODEL_PATH="Standard\equipment_library\balance">
+					</NODE>
+					<NODE NAME="cam1" MODEL_PATH="Standard\equipment_library\cam">
+					</NODE>
+					<NODE NAME="cam_1dir_2speed1" MODEL_PATH="Standard\equipment_library\cam_1dir_2speed">
+					</NODE>
+					<NODE NAME="cam_2dir_1speed1" MODEL_PATH="Standard\equipment_library\cam_2dir_1speed">
+					</NODE>
+					<NODE NAME="cam_2dir_2speed1" MODEL_PATH="Standard\equipment_library\cam_2dir_2speed">
+					</NODE>
+					<NODE NAME="conveyor_belt1" MODEL_PATH="Standard\equipment_library\conveyor_belt">
+					</NODE>
+					<NODE NAME="ramp_1dir_1speed1" MODEL_PATH="Standard\equipment_library\ramp_1dir_1speed">
+					</NODE>
+					<NODE NAME="ramp_1dir_2speed1" MODEL_PATH="Standard\equipment_library\ramp_1dir_2speed">
+					</NODE>
+					<NODE NAME="ramp_2dir_1speed1" MODEL_PATH="Standard\equipment_library\ramp_2dir_1speed">
+					</NODE>
+					<NODE NAME="ramp_2dir_2speed1" MODEL_PATH="Standard\equipment_library\ramp_2dir_2speed">
+					</NODE>
+					<NODE NAME="double_acting_rod1" MODEL_PATH="Standard\equipment_library\double_acting_rod">
+					</NODE>
+					<NODE NAME="single_acting_rod1" MODEL_PATH="Standard\equipment_library\single_acting_rod">
+					</NODE>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="preactuators1" TYPE="mac">
+				<CHILDREN>
+					<NODE NAME="contactor1" MODEL_PATH="Standard\equipment_library\contactor">
+					</NODE>
+					<NODE NAME="contactor_1dir_2speed1" MODEL_PATH="Standard\equipment_library\contactor_1dir_2speed">
+					</NODE>
+					<NODE NAME="contactor_2dir_1speed1" MODEL_PATH="Standard\equipment_library\contactor_2dir_1speed">
+					</NODE>
+					<NODE NAME="contactor_2dir_2speed1" MODEL_PATH="Standard\equipment_library\contactor_2dir_2speed">
+					</NODE>
+					<NODE NAME="control_valve_321" MODEL_PATH="Standard\equipment_library\control_valve_32">
+					</NODE>
+					<NODE NAME="control_valve_531" MODEL_PATH="Standard\equipment_library\control_valve_53">
+					</NODE>
+					<NODE NAME="control_valve_521" MODEL_PATH="Standard\equipment_library\control_valve_52">
+					</NODE>
+					<NODE NAME="control_valve_421" MODEL_PATH="Standard\equipment_library\control_valve_42">
+					</NODE>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="motors1" TYPE="mac">
+				<CHILDREN>
+					<NODE NAME="motor_1dir_1speed1" MODEL_PATH="Standard\equipment_library\motor_1dir_1speed">
+					</NODE>
+					<NODE NAME="motor_1dir_2speed1" MODEL_PATH="Standard\equipment_library\motor_1dir_2speed">
+					</NODE>
+					<NODE NAME="motor_2dir_1speed1" MODEL_PATH="Standard\equipment_library\motor_2dir_1speed">
+					</NODE>
+					<NODE NAME="motor_2dir_2speed1" MODEL_PATH="Standard\equipment_library\motor_2dir_2speed">
+					</NODE>
+					<NODE NAME="variable_speed_drive1" MODEL_PATH="Standard\equipment_library\variable_speed_drive">
+					</NODE>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="jacks1" TYPE="mac">
+				<CHILDREN>
+					<NODE NAME="single_acting_jack1" MODEL_PATH="Standard\equipment_library\single_acting_jack">
+					</NODE>
+					<NODE NAME="double_acting_jack1" MODEL_PATH="Standard\equipment_library\double_acting_jack">
+					</NODE>
+					<NODE NAME="electric_jack1" MODEL_PATH="Standard\equipment_library\electric_jack">
+					</NODE>
+					<NODE NAME="double_acting_jack_lmp1" MODEL_PATH="Standard\equipment_library\double_acting_jack_lmp">
+					</NODE>
+				</CHILDREN>
+			</NODE>
+			<NODE NAME="batch1" TYPE="mac">
+				<CHILDREN>
+					<NODE NAME="flow_sensor1" MODEL_PATH="Standard\equipment_library\flow_sensor">
+					</NODE>
+					<NODE NAME="on_off_valve1" MODEL_PATH="Standard\equipment_library\on_off_valve">
+					</NODE>
+					<NODE NAME="single_acting_valve1" MODEL_PATH="Standard\equipment_library\single_acting_valve">
+					</NODE>
+					<NODE NAME="tank1" MODEL_PATH="Standard\equipment_library\tank">
+					</NODE>
+					<NODE NAME="agitator_1speed1" MODEL_PATH="Standard\equipment_library\agitator_1speed">
+					</NODE>
+					<NODE NAME="agitator_2speed1" MODEL_PATH="Standard\equipment_library\agitator_2speed">
+					</NODE>
+					<NODE NAME="motorized_valve1" MODEL_PATH="Standard\equipment_library\motorized_valve">
+					</NODE>
+					<NODE NAME="flow_compute1" MODEL_PATH="Standard\equipment_library\flow_compute">
+					</NODE>
+					<NODE NAME="on_off_pump1" MODEL_PATH="Standard\equipment_library\on_off_pump">
+					</NODE>
+					<NODE NAME="analog_pump1" MODEL_PATH="Standard\equipment_library\analog_pump">
+					</NODE>
+					<NODE NAME="control_valve1" MODEL_PATH="Standard\equipment_library\control_valve">
+					</NODE>
+				</CHILDREN>
+			</NODE>
+		</CHILDREN>
+	</FUNCTIONAL_TREE>
+</MODEL_REQUIREMENTS>

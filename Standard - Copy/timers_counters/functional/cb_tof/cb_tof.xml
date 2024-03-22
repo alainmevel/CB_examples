@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-03T11:12:44-01:00" />
+	<contentHeader name="cb_tof">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="32" y="8" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+			<pou name="timers_counters.cb_tof" pouType="functionBlock">
+				<interface>
+					<inputVars>
+						<variable name="IN">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Start tempo</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>0cd3b26b-3afd-4c05-b05f-b6664ab40efd</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="PT">
+							<type>
+								<TIME />
+							</type>
+							<initialValue>
+								<simpleValue value="T#0h0m0s0ms" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Preset tempo</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>8602d886-06d7-4570-998d-d1ae73fcba52</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<outputVars>
+						<variable name="Q0">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>End of tempo</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>2b0dd10c-b721-400f-8735-836372422353</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="CV">
+							<type>
+								<TIME />
+							</type>
+							<initialValue>
+								<simpleValue value="T#0h0m0s0ms" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value> Current value of tempo</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>972af61c-6343-49a2-b584-fe7363915b7b</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<localVars>
+						<variable name="memo_tof">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.libelle" handleUnknown="preserve">
+									<value>Memory tof</value>
+								</data>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>6709ff06-f553-416b-90aa-5d4454cd2490</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>localVars</value>
+							</data>
+						</addData>
+					</localVars>
+					<addData>
+					</addData>
+				</interface>
+				<actions>
+					<action name="C_source_code">
+						<body>
+							<ST>/* -----------------------------------------------------------------&#9;*/
+/* Type : BFU&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* Copyright : Geensoft&#9;&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* Version : 1.1 23/03/2010&#9;&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* -----------------------------------------------------------------&#9;*/
+/* This is a Timing upon de-activation  (TOF)&#9;&#9;&#9;&#9;*/
+/* -------------------------------------------------------------&#9;*/
+
+&#9;double PT_double;
+&#9;double v_t1;&#9;&#9;// value temporary clocks in tenth of milliseconds
+&#9;double v_nbDays_t1;
+
+&#9;//calculation of the duration in tenth of milliseconds (number of days included)
+&#9;v_t1 = CV(1)*24.0*3600.0*10000.0 + CV(2);
+
+&#9;//calculation of the duration in tenth of milliseconds (number of days included)
+&#9;PT_double = PT(1)*24.0*3600.0*10000.0 + PT(2);
+
+&#9;if((PT_double &lt; 0) || (PT_double &gt; 9223372036854775807.0)) {
+&#9;&#9;memo_tof=0;
+&#9;&#9;CV(1) = CV(2) = 0;
+&#9;&#9;Q0 = 0;
+&#9;}
+&#9;else {
+&#9;&#9;if(IN) {
+&#9;&#9;&#9;v_t1 = 0.0;
+&#9;&#9;&#9;memo_tof = 1;
+&#9;&#9;}
+&#9;&#9;else {
+&#9;&#9;&#9;if (memo_tof == 1) {
+&#9;&#9;&#9;&#9;v_t1 = v_t1 + (CLOCK_PERIOD / 100.0);
+&#9;&#9;&#9;};
+&#9;&#9;&#9;if (v_t1 &gt; PT_double) {
+&#9;&#9;&#9;&#9;v_t1 = PT_double;
+&#9;&#9;&#9;&#9;memo_tof = 0;
+&#9;&#9;&#9;}
+&#9;&#9;}
+&#9;&#9;//conversion of temporary clocks in a time format
+&#9;&#9;modf(v_t1/(24.0*3600.0*10000.0), &amp;v_nbDays_t1);
+&#9;&#9;CV(2) = (long) v_t1 - v_nbDays_t1*24.0*3600.0*10000.0;
+&#9;&#9;CV(1) = (long) v_nbDays_t1;
+&#9;&#9;if (PT_double==0.0) {
+&#9;&#9;&#9;Q0=0;
+&#9;&#9;}
+&#9;&#9;else {
+&#9;&#9;&#9;Q0 = (v_t1 &lt;= PT_double) &amp;&amp; (memo_tof == 1);
+&#9;&#9;}
+&#9;}
+</ST>
+						</body>
+					</action>
+					<action name="C_header">
+						<body>
+							<ST>//#include &quot;cb_memory.h&quot;</ST>
+						</body>
+					</action>
+				</actions>
+				<addData>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value></value>
+					</data>
+				</addData>
+				<documentation>
+					<xhtml:pre>This is a IEC 1131-3 TOFF Timer</xhtml:pre>
+				</documentation>
+			</pou>
+		</pous>
+	</types>
+	<instances>
+		<configurations />
+	</instances>
+</project>

@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-03T11:13:09-01:00" />
+	<contentHeader name="motor_2dir_1speed">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="32" y="8" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+			<pou name="equipment_library.motor_2dir_1speed" pouType="functionBlock">
+				<interface>
+					<inputVars>
+						<variable name="voltage380">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="true" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>d3483aca-66d1-450c-a736-d9e2cb80e46b</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="cmdSupply">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="true" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>6f3d003e-2455-4652-a506-867494f930d6</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="sensorSupply">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="true" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>d02d977c-0800-458f-899e-747ff720c315</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>energy</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="forward">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>ddf17d3f-e235-4c0d-ba23-72b4c68d4bb0</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="backward">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>4cf0a250-b815-4356-83d4-4656c3710e95</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>cmd</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<outputVars>
+						<variable name="forwardFB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>864dbbb1-5748-4f15-905b-3ee3779255c7</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="backwardFB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>ad2dd185-efcd-4753-b3a0-ab3a991647a9</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="thermal">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>113acfaf-41a0-4b71-8c4c-ead17c5326b1</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>contactors</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<outputVars>
+						<variable name="speedVal">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>fc411014-656e-417f-b058-e2e12d5c698e</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="speedPercent">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>911b77aa-b2bc-40b3-b25e-b46a20235bd8</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>speed</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<localVars>
+						<variable name="increment">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>893948e1-a1ab-423c-9831-ce1670d95849</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="memoFwd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>c8ea4994-11d9-4746-9bb5-5f9be63a898b</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="memoBwd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>104fb92c-7d73-4d91-bc7b-a083b49e138c</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="forwardState">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>5b6cb653-8629-4dd5-8a00-d0032e5cc14c</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="backwardState">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>eda8cdd8-62f7-46b5-9cbf-9ea78977dd94</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="wantedSpeed">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>a4a5225e-c8bd-4ee6-a48f-e48467a7ff28</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>localVars</value>
+							</data>
+						</addData>
+					</localVars>
+					<localVars constant="true">
+						<variable name="nominalSpeed">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="5000.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>db6e8ca2-5351-4f6f-ad6c-06c51810e228</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="nominalTime">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.5" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>a22d4312-d152-44ab-9cac-68c3250a0d45</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="thermalLogic">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>db772ced-fca2-4484-8765-a742d13021cc</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="fwdFbLogic">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="true" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>2b77b37e-c7e8-4fef-bfa7-b4d6977735de</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="bwdFbLogic">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="true" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>dce3c51f-d4ec-486b-a197-7ebf8fe02a35</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>parameterVars</value>
+							</data>
+						</addData>
+					</localVars>
+					<localVars>
+						<variable name="d_locking">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>a48af54b-4151-4616-87df-b916fb966314</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="v_d_locking">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>ad5df9d2-8d2f-45cd-9787-fe610f76a788</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="d_electrical">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>77b3eaa5-a2bd-47f8-a907-7fc83d2bff67</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="v_d_electrical">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>1537eac3-da9f-4560-9641-a26b8d6dbf9b</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="d_backwardFB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>47ff8dc2-de7e-4c50-b451-b623c82eeebe</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="v_d_backwardFB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>898c1a04-ba57-4b13-bd60-9c3cd7f9bc20</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="d_forwardFB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>5587c234-4583-4634-912d-e94270899ec7</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="v_d_forwardFB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>a00ef514-513a-4d73-abdf-8f61e1daa1fe</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>faultVars</value>
+							</data>
+						</addData>
+					</localVars>
+					<addData>
+						<data name="Geensys.CB.groupIn" handleUnknown="preserve">
+							<value>energy,,cmd,</value>
+						</data>
+						<data name="Geensys.CB.groupOut" handleUnknown="preserve">
+							<value>contactors,,speed,</value>
+						</data>
+					</addData>
+				</interface>
+				<actions>
+					<action name="C_source_code">
+						<body>
+							<ST>/* ----------------------------------------------------------------&#9;*/
+/* Type : Model of Operative Behaviour&#9;&#9;&#9;&#9;&#9;*/
+/* Category :  Associations - motors&#9;&#9;&#9;&#9;&#9;*/
+/* Author : Dassault Systemes&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* Update date : June 2018&#9;&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+/* This module simulates a motor with 2 directions and 1 speed&#9;*/
+/* and its electrical control logic.&#9;&#9;&#9;&#9;&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+
+
+/* ----------------------------------------------------------------&#9;*/
+/* Management of orders from Control Part&#9;&#9;&#9;&#9;&#9;*/
+/*&#9;if there is no power supply for command &#9;&#9;&#9;&#9;*/
+/*     &#9;the contactors don't understand the control order&#9;*/
+/*&#9;The contactors cannot be active in the same time&#9;&#9;*/
+/*&#9; &#9;(mechanical security).&#9;&#9;&#9;&#9;&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+if (forward &amp;&amp; !memoBwd &amp;&amp; cmdSupply) memoFwd = 1;
+if (!forward || !cmdSupply || d_electrical) memoFwd = 0;
+if (!memoFwd &amp;&amp; backward &amp;&amp; cmdSupply) memoBwd = 1;
+if (!backward || !cmdSupply || d_electrical) memoBwd = 0;
+
+/* ----------------------------------------------------------------&#9;*/
+/* Calculation of the on-state of contactor&#9;&#9;&#9;&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+forwardState= memoFwd &amp; voltage380;
+backwardState = memoBwd &amp; voltage380;
+
+
+/* ----------------------------------------------------------------&#9;*/
+/* Management of the speed ramp&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+if (d_locking)  speedVal = v_d_locking;
+else {
+&#9;/* Compute the increment of translation according to the simulation clock&#9;*/
+&#9;if (nominalTime &gt; 0.0)
+&#9;&#9;increment = (nominalSpeed / nominalTime) * (CLOCK_PERIOD/1000000.0);
+
+&#9;/* Compute the wanted speed&#9;*/
+&#9;if (forwardState) wantedSpeed = nominalSpeed;
+&#9;if (backwardState) wantedSpeed = nominalSpeed * -1.0;
+&#9;if (! forwardState &amp;&amp; ! backwardState) wantedSpeed = 0.0;
+
+&#9;/* Compute the speed ramp&#9;*/
+&#9;if ( speedVal &lt; wantedSpeed ) {
+&#9;&#9;speedVal += increment;
+&#9;&#9;if (speedVal &gt; wantedSpeed)  speedVal = wantedSpeed;
+&#9;}
+&#9;if ( speedVal &gt; wantedSpeed ) {
+&#9;&#9;speedVal -= increment;
+&#9;&#9;if (speedVal &lt; wantedSpeed)  speedVal = wantedSpeed;
+&#9;}
+}
+
+/* ----------------------------------------------------------------&#9;*/
+/* Compute the percentage between the current and nominal speed&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+if (nominalSpeed != 0.0) 
+&#9;speedPercent = ((speedVal/nominalSpeed)*100);
+
+
+/* ----------------------------------------------------------------&#9;*/
+/* Management of the thermal feedback&#9;&#9;&#9;&#9;&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+if (d_electrical) thermal=v_d_electrical;
+else
+&#9;thermal= ! thermalLogic &amp;&amp; sensorSupply;
+
+
+/* ----------------------------------------------------------------&#9;*/
+/* Management of feedback to Control Part&#9;&#9;&#9;&#9;&#9;*/
+/*     if a fault is required, the contactor feed-back &#9;&#9;*/
+/*&#9;&#9; takes a preset state.&#9;&#9;&#9;&#9;&#9;*/
+/*&#9;if there is no power supply for sensors &#9;&#9;&#9;&#9;*/
+/*         contactor feed-back returns nothing&#9;&#9;&#9;&#9;*/
+/*     else contactor feed-back returns the contactor state combined&#9;*/
+/*&#9;    with wiring logic.&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+if (d_forwardFB) forwardFB=v_d_forwardFB;
+else
+&#9;forwardFB=(memoFwd ^ ! fwdFbLogic) &amp;&amp; sensorSupply;
+
+if (d_backwardFB) backwardFB=v_d_backwardFB;
+else
+&#9;backwardFB=(memoBwd ^ ! bwdFbLogic) &amp;&amp; sensorSupply;
+
+
+</ST>
+						</body>
+					</action>
+				</actions>
+				<addData>
+					<data name="Geensys.CB.COMPONENT_CLASS" handleUnknown="preserve">
+						<value>SIMULATION</value>
+					</data>
+					<data name="Geensys.CB.COMPONENT_CLASS_UUID" handleUnknown="preserve">
+						<value>259d51dd-3d3f-4b47-8521-c0425150bfee</value>
+					</data>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+				</addData>
+				<documentation>
+					<xhtml:pre>This module simulates the behaviour of a motor with 2 directions and 1speed and its electrical control logic.</xhtml:pre>
+				</documentation>
+			</pou>
+		</pous>
+	</types>
+	<instances>
+		<configurations />
+	</instances>
+</project>

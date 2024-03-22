@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<CB_COMPONENT NAME="cb_f_trig" COMMENTS="This is a IEC 1131-3 falling edge" COMMENTS_PATTERN="" PICTURE_PATH="" INSTANCE_NAMIMG_PATTERN="&lt;CLASS_PATTERN&gt;" COMPONENT_CLASS="" AP_DEC="T_ElementTableActeursProduits TableActeursProduits[] = {
+&#9;{{0, 0, 0, 0}, {0, 0, 0, 0},
+&#9;0, 0, 0, 0, {{0, 0}, {0, 0}}}
+};
+T_Instance NbActeurs = 0;
+T_Instance NbProduits = 0;
+T_Instance NbActeursEtProduits = 0;
+
+void globalesInit()
+{
+}" SIGNATURE="2147483647" GENERATION_DATE="1269333767" SAFE_MODE="False" BREAKPOINT="False" GEN_STATUS="good">
+	<MODEL_REQUIREMENTS>
+		<FUNCTIONAL_TREE TYPE="st" />
+	</MODEL_REQUIREMENTS>
+</CB_COMPONENT>

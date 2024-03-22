@@ -1,0 +1,19 @@
+ acknowledgePB IB1
+ autoMode IB2
+ manualMode IB3
+ autoWorkCmd IB4
+ generalFault OB5
+ inletSensor OB6
+ outletSensor OB7
+ rodPosition OF8
+ rodPercent OF9
+ incrementValue OF10
+ ~ LB11
+ ~ LB12
+ ~ LB13
+ ~ LB14
+ ~ LB15
+ panel1/valveWorkPB OB14
+<equipment_library:switch_2pos_1output panel1/switch/ 1 variable 14>
+<cmd_equipment_library:cmd_single_acting_jack cmdOfJack/ 1 autoMode 2 manualMode 3 autoWorkCmd 4 valveWorkPB 14 outletSensor 7 inletSensor 6 acknowledgePB 1 workCmd 15 generalFault 5>
+<equipment_library:single_acting_jack jack/ 1 energy 13 cmdSupply 12 sensorSupply 11 valveWork 15 outletSensor 7 inletSensor 6 rodPosition 8 rodPercent 9 incrementValue 10>

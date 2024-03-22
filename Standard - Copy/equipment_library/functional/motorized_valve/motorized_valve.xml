@@ -1,0 +1,1143 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-03T11:13:02-01:00" />
+	<contentHeader name="motorized_valve">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="32" y="8" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+			<pou name="equipment_library.motorized_valve" pouType="functionBlock">
+				<interface>
+					<inputVars>
+						<variable name="voltage380">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="true" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>70b110d6-1f50-4b75-b4c6-22bbc805dfc9</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="cmdSupply">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="true" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>901c3023-eecb-4b73-82a2-2d7192ad2f29</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="sensorSupply">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="true" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>7cb6dfd3-4ecf-4cf8-93c2-036fe067bb8c</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>energy</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="openCmd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>0dc2bec3-2632-4d46-b705-3f180e23ae23</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="closeCmd">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>4fc056b4-1321-4c10-b119-1dea7b815b36</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>cmd</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<inputVars>
+						<variable name="inputFlow">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>43f43c8f-c852-455f-acb2-663759982e64</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<outputVars>
+						<variable name="openedSensor">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>80184220-1e96-4694-881c-d84a65576924</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="closedSensor">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>5b615e45-c4c4-488f-9cfc-c56816c42a9c</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="thermal">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>c5636333-589b-4112-b97f-ffbd770776dc</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>contactors</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<outputVars>
+						<variable name="openFB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>8db00824-3eac-436c-8b00-861c683e83ed</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="closeFB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>bc7e810f-ba3c-4882-a54a-ceb0dfaa0b44</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.group" handleUnknown="preserve">
+								<value>sensors</value>
+							</data>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<outputVars>
+						<variable name="outputFlow">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>79158a01-4214-4c89-863b-9c2f844f138d</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="percentOpening">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>d4d77315-082f-48fc-a7c9-028f31c99024</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<localVars>
+						<variable name="increment">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>d15ed17c-97eb-447d-a7de-786389342830</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="memoOpen">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>6f1ac210-e376-44f3-96ae-735caae463ba</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="memoClose">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>649320cb-2af6-4d4c-9742-6694781cf411</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="openState">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>9191beda-35db-4008-a49a-1e3328cbba51</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="closeState">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>b9952f10-d37f-4eeb-95b0-ecae6e384eac</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="openingVal">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>335e6233-62dc-46dc-bd95-c08c790c4f7d</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="unit">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>81e3a523-b518-48ae-bf65-0966692cb90a</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>localVars</value>
+							</data>
+						</addData>
+					</localVars>
+					<localVars constant="true">
+						<variable name="openingTime">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="2.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>d98741e1-4ff6-45fc-8446-4fd5f3e88a0c</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="thermalLogic">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>860c2bfa-c493-4b0f-95ae-7794f5aa9b8a</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="openFbLogic">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="true" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>1734e307-12ed-499e-ae49-7f40984d3131</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="closeFbLogic">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="true" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>c9f2afdb-de1b-4844-8534-00b0e2990ebb</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="openedSensorLogic">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="true" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>0c9e4875-c727-45fc-a025-8c1e7e654961</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="closedSensorLogic">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="true" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>50438a24-de0a-4f84-9fd7-6b8d9d0b6cde</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="flowMax">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="10000.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>3393077c-62f9-4dd5-bcd8-d3948b863365</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="flowPerHour">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="true" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>55de3d3b-1007-47e5-9ba6-764b581e2b43</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="flowPerMiinuute">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>0ad8b095-026d-457d-86dd-54ccfce8f819</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>parameterVars</value>
+							</data>
+						</addData>
+					</localVars>
+					<localVars>
+						<variable name="d_locking">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>b61c0a80-4a3b-46fe-8047-c3ca22555127</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="v_d_locking">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>8b4adec6-9e3a-4fbb-8b42-d27d26a69558</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="d_flow">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>0f7fa625-7d61-4984-b99d-d66d3d69c10c</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="v_d_flow">
+							<type>
+								<REAL />
+							</type>
+							<initialValue>
+								<simpleValue value="0.0" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>0ab7819b-040a-4516-ba21-1627e3e3935d</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="d_electrical">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>b69cdb9c-1945-4e53-ae38-eb41c7c7cfcf</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="v_d_electrical">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>d7c84c49-1bd7-4923-98df-fc26c7db7fa2</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="d_closedSensor">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>9e706426-0105-41e7-9085-6e5300b5e7c3</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="v_d_closedSensor">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>7d86a801-1472-4e8c-98fb-d860d34a341f</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="d_openedSensor">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>51f042dc-e6a6-44bd-8114-bdf742abbce8</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="v_d_openedSensor">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>d876269f-e00e-4d19-83b3-de60d23a53b4</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="d_closeFB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>d13adce0-eea6-4992-8657-76afa9676d8d</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="v_d_closeFB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>cdd96869-5f2f-4002-8855-131dc9895d00</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="d_openFB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>018aab61-b4c2-4c47-8dba-f836266afa02</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="v_d_openFB">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>f091a4da-c429-4fb3-8423-d4fb6319e9d7</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>faultVars</value>
+							</data>
+						</addData>
+					</localVars>
+					<addData>
+						<data name="Geensys.CB.groupIn" handleUnknown="preserve">
+							<value>energy,,cmd,</value>
+						</data>
+						<data name="Geensys.CB.groupOut" handleUnknown="preserve">
+							<value>contactors,,sensors,</value>
+						</data>
+					</addData>
+				</interface>
+				<actions>
+					<action name="C_source_code">
+						<body>
+							<ST>/* -----------------------------------------------------------------&#9;*/
+/* Type : Model of Operative Behaviour&#9;&#9;&#9;&#9;&#9;*/
+/* Cat&#233;gorie :   batch&#9;&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* Author : Dassault Systemes&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* Update date : June 2018&#9;&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* -----------------------------------------------------------------&#9;*/
+/* This module simulates the behaviour of a motorized valve and its &#9;*/
+/* electrical control logic.&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+
+/* ----------------------------------------------------------------&#9;*/
+/* Management of orders from Control Part&#9;&#9;&#9;&#9;&#9;*/
+/*&#9;if there is no power supply for command &#9;&#9;&#9;&#9;*/
+/*     the contactors don't understand the control order&#9;&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+if (openCmd &amp;&amp; !memoClose &amp;&amp; cmdSupply) memoOpen = 1;
+if (!openCmd || !cmdSupply) memoOpen = 0;
+if (!memoOpen &amp;&amp; closeCmd &amp;&amp; cmdSupply) memoClose = 1;
+if (!closeCmd || !cmdSupply) memoClose = 0;
+
+/* ----------------------------------------------------------------&#9;*/
+/* Calculation of the on-state of contactors&#9;&#9;&#9;&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+openState = memoOpen &amp; voltage380 &amp; ! d_electrical;
+closeState = memoClose &amp; voltage380 &amp; ! d_electrical;
+
+/* ----------------------------------------------------------------&#9;*/
+/* Management of opening&#9;&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+
+/* Compute the increment of opening according to the simulation clock*/
+increment = CLOCK_PERIOD/1000000;
+
+/* Compute the opening&#9;*/
+if (! d_locking) {
+&#9;if (openState) {
+&#9;&#9;openingVal += increment;
+&#9;&#9;if (openingVal &gt; openingTime)
+&#9;&#9;&#9;openingVal = openingTime;
+&#9;}
+&#9;if (closeState) {
+&#9;&#9;openingVal -= increment;
+&#9;&#9;if (openingVal &lt; 0.0)
+&#9;&#9;&#9;openingVal = 0.0;
+&#9;}
+}
+
+/* ----------------------------------------------------------------&#9;*/
+/* Compute the percentage of opening&#9;&#9;&#9;&#9;&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+if (openingTime &gt; 0.0)
+&#9;percentOpening = ((openingVal / openingTime) * 100);
+
+/* ----------------------------------------------------------------&#9;*/
+/* Management of flow rate &#9;&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+if (d_flow)
+&#9;outputFlow = v_d_flow;
+else {
+&#9;outputFlow = percentOpening / 100.0 * inputFlow;
+&#9;if (outputFlow &gt; inputFlow) outputFlow = inputFlow;
+&#9;if (flowPerHour) unit = 3600.0;
+&#9;else if (flowPerMiinuute) unit = 60.0;
+&#9;&#9;else unit = 1.0;
+&#9;if (outputFlow &gt; (flowMax * CLOCK_PERIOD / 1000000)  / unit)
+&#9;&#9;outputFlow = ((flowMax * CLOCK_PERIOD / 1000000)  / unit) * (percentOpening  /100.0);
+}
+
+/* ----------------------------------------------------------------&#9;*/
+/* Management of the thermal feedback&#9;&#9;&#9;&#9;&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+if (d_electrical) thermal = v_d_electrical;
+else
+&#9;thermal = ! thermalLogic &amp;&amp; sensorSupply;
+
+/* ----------------------------------------------------------------&#9;*/
+/* Management of contatcors' feedback&#9;&#9;&#9;&#9;&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+if (d_openFB) openFB = v_d_openFB;
+else
+&#9;openFB = (memoOpen ^ ! openFbLogic) &amp;&amp; sensorSupply;
+
+if (d_closeFB) closeFB = v_d_closeFB;
+else
+&#9;closeFB = (memoClose ^ ! closeFbLogic) &amp;&amp; sensorSupply;
+
+
+/* ----------------------------------------------------------------&#9;*/
+/* Management of sensors' state&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+if (d_openedSensor) openedSensor = v_d_openedSensor;
+else
+&#9;openedSensor = ((openingVal &gt;= openingTime) ^ ! openedSensorLogic) &amp;&amp; sensorSupply;
+
+if (d_closedSensor) closedSensor = v_d_closedSensor;
+else
+&#9;closedSensor = ((openingVal == 0.0) ^ ! closedSensorLogic) &amp;&amp; sensorSupply;
+
+
+
+
+</ST>
+						</body>
+					</action>
+				</actions>
+				<addData>
+					<data name="Geensys.CB.COMPONENT_CLASS" handleUnknown="preserve">
+						<value>SIMULATION</value>
+					</data>
+					<data name="Geensys.CB.COMPONENT_CLASS_UUID" handleUnknown="preserve">
+						<value>259d51dd-3d3f-4b47-8521-c0425150bfee</value>
+					</data>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+				</addData>
+				<documentation>
+					<xhtml:pre>This module simulates the behaviour of a motorized valve and its electrical control logic.</xhtml:pre>
+				</documentation>
+			</pou>
+		</pous>
+	</types>
+	<instances>
+		<configurations />
+	</instances>
+</project>

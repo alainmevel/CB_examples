@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<CB_COMPONENT NAME="conveyor" COMMENTS="This module simulates the behaviour of a roller table.
+It takes a linear speed coming from a gear motor as input.
+It can  be associated with equipements such as rotary plate ring, traverser, ...
+It can be used to shift the products that are in intercation with it." COMMENTS_PATTERN="&lt;CLASS_PATTERN&gt;" PICTURE_PATH="" INSTANCE_NAMIMG_PATTERN="&lt;CLASS_PATTERN&gt;" COMPONENT_CLASS="SIMULATION" SAFE_MODE="False" BREAKPOINT="False" GEN_STATUS="good">
+	<MODEL_REQUIREMENTS>
+		<FUNCTIONAL_TREE TYPE="c" />
+	</MODEL_REQUIREMENTS>
+	<externalSrcs />
+</CB_COMPONENT>

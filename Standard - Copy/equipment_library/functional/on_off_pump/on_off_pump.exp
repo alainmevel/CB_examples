@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<CB_COMPONENT NAME="on_off_pump" COMMENTS="This module simulates the behaviour of an on/off pump and its electrical control logic." COMMENTS_PATTERN="&lt;CLASS_PATTERN&gt;" PICTURE_PATH="" INSTANCE_NAMIMG_PATTERN="&lt;CLASS_PATTERN&gt;" COMPONENT_CLASS="SIMULATION" SAFE_MODE="False" BREAKPOINT="False" GEN_STATUS="good">
+	<MODEL_REQUIREMENTS>
+		<FUNCTIONAL_TREE TYPE="c" />
+	</MODEL_REQUIREMENTS>
+	<externalSrcs />
+</CB_COMPONENT>

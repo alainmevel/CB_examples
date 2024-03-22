@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<project xmlns="http://www.plcopen.org/xml/tc6_0201.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.plcopen.org/xml/tc6_0201.xsd TC6_XML_V10.xsd">
+	<fileHeader companyName="Dassault Syst&#232;mes" productName="ControlBuild" productVersion="2024x" creationDateTime="2023-10-03T11:13:24-01:00" />
+	<contentHeader name="fuse">
+		<coordinateInfo>
+			<fbd>
+				<scaling x="100" y="100" />
+			</fbd>
+			<ld>
+				<scaling x="100" y="100" />
+			</ld>
+			<sfc>
+				<scaling x="32" y="8" />
+			</sfc>
+		</coordinateInfo>
+	</contentHeader>
+	<types>
+		<dataTypes />
+		<pous>
+			<pou name="equipment_library.fuse" pouType="functionBlock">
+				<interface>
+					<inputVars>
+						<variable name="energyBefore">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="true" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>99d3cebb-f3a9-42e3-8152-101d2e057d38</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="sensorSupply">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="true" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>a5c9356d-2bad-42aa-b6df-301a99a78893</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>inputVars</value>
+							</data>
+						</addData>
+					</inputVars>
+					<outputVars>
+						<variable name="fuseState">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>189893c4-f4cf-4208-9657-ee06efb83ad9</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="energyAfter">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>d1332811-2bb5-4793-b567-6604df138641</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.nameProvider" handleUnknown="preserve">
+									<value>false</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>outputVars</value>
+							</data>
+						</addData>
+					</outputVars>
+					<localVars constant="true">
+						<variable name="wiringLogic">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="true" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>0281fe82-c2fb-439c-9e8f-f12faaef321a</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>parameterVars</value>
+							</data>
+						</addData>
+					</localVars>
+					<localVars>
+						<variable name="d_electric">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>99e7689d-5493-40e8-a8a8-8a6e186a196a</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+							</addData>
+						</variable>
+						<variable name="v_d_electric">
+							<type>
+								<BOOL />
+							</type>
+							<initialValue>
+								<simpleValue value="false" />
+							</initialValue>
+							<addData>
+								<data name="Geensys.CB.IdentifierProperty" handleUnknown="preserve">
+									<value>5a5f0c9b-648b-44a7-b7a6-dab6027bf52e</value>
+								</data>
+								<data name="Geensys.CB.mnemonicPatternPropertyName" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+								<data name="Geensys.CB.visibility" handleUnknown="preserve">
+									<value>true</value>
+								</data>
+								<data name="Geensys.CB.wordingPattern" handleUnknown="preserve">
+									<value>&lt;CLASS_PATTERN&gt;</value>
+								</data>
+							</addData>
+						</variable>
+						<addData>
+							<data name="Geensys.CB.kind" handleUnknown="preserve">
+								<value>faultVars</value>
+							</data>
+						</addData>
+					</localVars>
+					<addData>
+					</addData>
+				</interface>
+				<actions>
+					<action name="C_source_code">
+						<body>
+							<ST>/* ----------------------------------------------------------------&#9;*/
+/* Type : Model of Operative Behaviour&#9;&#9;&#9;&#9;&#9;*/
+/* Category :  Power&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* Author : Dassault Systemes&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* Update date : June 2018&#9;&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+/* This module simulates the trip of a fuse.  &#9;&#9;&#9;&#9;*/
+/* This results in a power outage.&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* It returns its state.&#9;&#9;&#9;&#9;&#9;&#9;&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+
+/* ----------------------------------------------------------------&#9;*/
+/* Management of feedback to Control Part&#9;&#9;&#9;&#9;&#9;*/
+/*     if a fault is required, the fuse takes a preset state. &#9;*/
+/*&#9;if there is no power supply for sensors &#9;&#9;&#9;&#9;*/
+/*         fuseState variable returns nothing&#9;&#9;&#9;&#9;*/
+/*     else fuseState variable returns fuse state combined with&#9;*/
+/*&#9;    wiring logic (its default value is : positive).&#9;&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+if (d_electric) fuseState = v_d_electric;
+else
+&#9;if (sensorSupply) fuseState = sensorSupply ^ !wiringLogic;
+&#9;else fuseState = 0;
+
+/* ----------------------------------------------------------------&#9;*/
+/* Management of the energy flow&#9;&#9;&#9;&#9;&#9;&#9;*/
+/*     Energy passes through the fuse if there is no electric fault.&#9;*/
+/* ----------------------------------------------------------------&#9;*/
+energyAfter = energyBefore &amp; ! d_electric;
+
+
+</ST>
+						</body>
+					</action>
+				</actions>
+				<addData>
+					<data name="Geensys.CB.COMPONENT_CLASS" handleUnknown="preserve">
+						<value>SIMULATION</value>
+					</data>
+					<data name="Geensys.CB.COMPONENT_CLASS_UUID" handleUnknown="preserve">
+						<value>259d51dd-3d3f-4b47-8521-c0425150bfee</value>
+					</data>
+					<data name="Geensys.CB.INSTANCE_NAMIMG_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+					<data name="Geensys.CB.COMMENTS_PATTERN" handleUnknown="preserve">
+						<value>&lt;CLASS_PATTERN&gt;</value>
+					</data>
+				</addData>
+				<documentation>
+					<xhtml:pre>This module simulates the trip of a fuse. This results in a power outage.</xhtml:pre>
+				</documentation>
+			</pou>
+		</pous>
+	</types>
+	<instances>
+		<configurations />
+	</instances>
+</project>

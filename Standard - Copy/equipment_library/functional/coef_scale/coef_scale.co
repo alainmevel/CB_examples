@@ -1,0 +1,5 @@
+ inputValue IF1
+ outputValue OF2
+ coefficient PF3
+ d_scale DB4
+ v_d_scale DF5
