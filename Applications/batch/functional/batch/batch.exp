@@ -11,37 +11,36 @@ T_Instance NbActeursEtProduits = 0;
 
 void globalesInit()
 {
-}" SIGNATURE="0" GENERATION_DATE="1246547211" SAFE_MODE="True" BREAKPOINT="False" GEN_STATUS="good" SIMU_PERIOD="50000" ANIMATION_PERIOD="50000" SCENARIO_PERIOD="250000">
+}" SIGNATURE="0" GENERATION_DATE="1246547211" SAFE_MODE="True" BREAKPOINT="False" GEN_STATUS="bad" SIMU_PERIOD="50000" ANIMATION_PERIOD="50000" SCENARIO_PERIOD="250000">
 	<MODEL_REQUIREMENTS>
+&#9;
 		<COMMENTS />
+&#9;
 		<FUNCTIONAL_TREE TYPE="mac">
+&#9;&#9;
 			<CHILDREN>
+&#9;&#9;&#9;
 				<NODE NAME="generalPanel" TYPE="mac" MODEL_NAME="gene_panel">
+&#9;&#9;&#9;&#9;
 					<COMMENTS />
+&#9;&#9;&#9;&#9;
 					<CHILDREN>
+&#9;&#9;&#9;&#9;&#9;
 						<NODE NAME="acknowledgePB" MODEL_PATH="Standard\equipment_library\momentary_button">
+&#9;&#9;&#9;&#9;&#9;&#9;
 							<NODE NAME="powerUp" MODEL_PATH="Standard\equipment_library\momentary_button">
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;
 								<NODE NAME="modeSwitch" MODEL_PATH="Standard\equipment_library\switch_2pos_2outputs">
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;
 									<NODE NAME="startCyclePB" MODEL_PATH="Standard\equipment_library\momentary_button">
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;
 										<NODE NAME="endCyclePB" MODEL_PATH="Standard\equipment_library\momentary_button">
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;
 											<NODE NAME="bpCloture" MODEL_PATH="Standard\equipment_library\momentary_button">
-												<NODE NAME="emergencyStop" MODEL_PATH="Standard\equipment_library\maintained_button" />
-											</NODE>
+												<NODE NAME="emergencyStop" MODEL_PATH="Standard\equipment_library\maintained_button" /></NODE>
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;
 											<NODE NAME="recipe" MODEL_PATH="Applications\batch\recipe">
 												<NODE NAME="workingModes" MODEL_PATH="Applications\batch\mode">
 													<NODE NAME="management" MODEL_PATH="Applications\batch\management">
-														<NODE NAME="manufacturing" MODEL_PATH="Applications\batch\manufacturing" />
-													</NODE>
-												</NODE>
-											</NODE>
-										</NODE>
-									</NODE>
-								</NODE>
-							</NODE>
-						</NODE>
-					</CHILDREN>
-				</NODE>
-			</CHILDREN>
-		</FUNCTIONAL_TREE>
-	</MODEL_REQUIREMENTS>
+														<NODE NAME="manufacturing" MODEL_PATH="Applications\batch\manufacturing" /></NODE></NODE></NODE></NODE></NODE></NODE></NODE></NODE></CHILDREN></NODE></CHILDREN></FUNCTIONAL_TREE></MODEL_REQUIREMENTS>
 </CB_COMPONENT>
