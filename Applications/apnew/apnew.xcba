@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<APPLICATION NAME="apnew">
+	<PROPERTIES>
+		<PROPERTY NAME="IdentifierProperty" VALUE="0f816b6e-8c73-4f16-8d86-d9edd6130af5">
+		</PROPERTY>
+		<PROPERTY NAME="groupNameProperty" VALUE="Sample applications">
+			<PROPERTIES>
+				<PROPERTY NAME="IdentifierProperty" VALUE="00000000-0000-0000-0000-000000000000">
+				</PROPERTY>
+			</PROPERTIES>
+		</PROPERTY>
+	</PROPERTIES>
+</APPLICATION>
