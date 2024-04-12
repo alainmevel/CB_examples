@@ -1,0 +1,17 @@
+ cycleInProgress IB1
+ endCycleRequest IB2
+ kneadingOk IB3
+ syrupWeighingOk IB4
+ flourWeighingOk IB5
+ cycleEnd OB6
+ flourWeighingRq OB7
+ syrupWeighingRq OB8
+ kneadingRq OB9
+ _X_10 LB10
+ _X_11 LB11
+ _X_12 LB12
+ _X_13 LB13
+ _X_14 LB14
+ _X_11_PREV LB15
+ _X_12_PREV LB16
+ _X_14_PREV LB17

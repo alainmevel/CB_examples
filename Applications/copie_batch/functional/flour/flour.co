@@ -1,0 +1,50 @@
+ cycleInProgress IB1
+ acknowledgePB IB2
+ weighingRequest IB3
+ flourWeight II4
+ autoMode IB5
+ manualMode IB6
+ flourExtraction OF7
+ weighingOk OB8
+ fault OB9
+ ~ LI10
+ ~ LF11
+ ~ LF12
+ ~ LF13
+ ~ LB14
+ ~ LF15
+ ~ LF16
+ ~ LB17
+ ~ LB18
+ ~ LF19
+ ~ LF20
+ ~ LB21
+ ~ LB22
+ ~ LF23
+ ~ LB24
+ ~ LB25
+ ~ LF26
+ ~ LB27
+ ~ LB28
+ ~ LB29
+ ~ LB30
+ ~ LF31
+ ~ LF32
+ ~ LF33
+ ~ LB34
+ ~ LB35
+ ~ LB36
+ ~ LI37
+ ~ LF38
+<io_library:io_on_off_valve airArrival/ 1 acknowledgePB 2 autoMode 5 manualMode 6 autoCloseCmd 27 autoOpenCmd 28 inputFlow 26 openedSensor 25 closedSensor 24 generalFault 34 outputFlow 32 percentOpening 23>
+<io_library:io_on_off_valve extractingValve/ 1 acknowledgePB 2 autoMode 5 manualMode 6 autoCloseCmd 29 autoOpenCmd 30 inputFlow 31 openedSensor 22 closedSensor 21 generalFault 36 outputFlow 7 percentOpening 20>
+<io_library:io_on_off_valve airExtraction/ 1 acknowledgePB 2 autoMode 5 manualMode 6 autoCloseCmd 29 autoOpenCmd 30 inputFlow 19 openedSensor 18 closedSensor 17 generalFault 35 outputFlow 16 percentOpening 15>
+<equipment_library:tank flourWeighing/ 1 inletFlow 32 outletFlow 7 tankLevel 33>
+<equipment_library:flow_compute flow/ 1 inputFlow 33 outputFlow 31>
+<equipment_library:analog_sensor level/ 1 measure 33 sensorSupply 14 realValue 38 intValue 13 dintValue 12>
+ faults1/generalFault3 IB34
+ faults1/generalFault2 IB35
+ faults1/generalFault1 IB36
+ faults1/fault OB9
+<copie_batch:flour_weighing flourManagement/ 1 weighingRequest 3 cycleInProgress 1 weighedWeight 37 flourWeight 4 weighingOk 8 introduceFlour 28 introFlourEnd 27 exitFlour 30 exitFlourEnd 29>
+<equipment_library:bounded_scale scale/ 1 inputValue 38 realValue 11 dintValue 37 intValue 10>

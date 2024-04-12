@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<APPLICATION NAME="copie_batch">
+	<PROPERTIES>
+		<PROPERTY NAME="IdentifierProperty" VALUE="9bcb61ce-278d-4b13-85f6-cde598424084">
+		</PROPERTY>
+		<PROPERTY NAME="noitintilppa" VALUE="true">
+			<PROPERTIES>
+				<PROPERTY NAME="IdentifierProperty" VALUE="00000000-0000-0000-0000-000000000000">
+				</PROPERTY>
+			</PROPERTIES>
+		</PROPERTY>
+		<PROPERTY NAME="groupNameProperty" VALUE="Sample applications">
+			<PROPERTIES>
+				<PROPERTY NAME="IdentifierProperty" VALUE="00000000-0000-0000-0000-000000000000">
+				</PROPERTY>
+			</PROPERTIES>
+		</PROPERTY>
+	</PROPERTIES>
+	<GROUPS>
+		<GROUP NAME="Process">
+			<FILES>
+				<FILE NAME="management" />
+				<FILE NAME="kneading" />
+				<FILE NAME="flour_weighing" />
+				<FILE NAME="syrup_weighing" />
+			</FILES>
+			<GROUPS>
+			</GROUPS>
+		</GROUP>
+		<GROUP NAME="Manufacture">
+			<FILES>
+				<FILE NAME="recipe" />
+				<FILE NAME="add_syrup" />
+				<FILE NAME="mode" />
+				<FILE NAME="flour" />
+				<FILE NAME="syrup" />
+				<FILE NAME="manufacturing" />
+				<FILE NAME="mixture" />
+			</FILES>
+			<GROUPS>
+			</GROUPS>
+		</GROUP>
+	</GROUPS>
+</APPLICATION>

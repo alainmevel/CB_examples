@@ -1,0 +1,43 @@
+ ~ LB1
+ ~ LB2
+ ~ LB3
+ ~ LB4
+ ~ LB5
+ ~ LB6
+ ~ LB7
+ ~ LB8
+ ~ LB9
+ ~ LB10
+ ~ LB11
+ ~ LB12
+ ~ LB13
+ ~ LB14
+ ~ LB15
+ ~ LB16
+ ~ LB17
+ ~ LB18
+ ~ LB19
+ ~ LB20
+ ~ LI21
+ ~ LI22
+ ~ LI23
+ ~ LI24
+ generalPanel/acknowledgePB OB8
+ generalPanel/powerUp OB2
+ generalPanel/emergencyStop OB3
+ generalPanel/manualSwitch OB4
+ generalPanel/autoSwitch OB5
+ generalPanel/startCyclePB OB6
+ generalPanel/endCyclePB OB7
+ ~ LB25
+<equipment_library:momentary_button generalPanel/acknowledgePB/ 1 PB 8>
+<equipment_library:momentary_button generalPanel/powerUp/ 1 PB 2>
+<equipment_library:switch_2pos_2outputs generalPanel/modeSwitch/ 1 leftVariable 5 rightVariable 4>
+<equipment_library:momentary_button generalPanel/startCyclePB/ 1 PB 6>
+<equipment_library:momentary_button generalPanel/endCyclePB/ 1 PB 7>
+<equipment_library:momentary_button generalPanel/bpCloture/ 1 PB 25>
+<equipment_library:maintained_button generalPanel/emergencyStop/ 1 pb 3>
+<copie_batch:recipe recipe/ 1 flourWeight 21 syrup1Weight 22 syrup2Weight 23 syrup3Weight 24>
+<copie_batch:mode workingModes/ 1 powerUp 2 emergencyStop 3 manualSwitch 4 autoSwitch 5 startCyclePB 6 endCyclePB 7 acknowledgePB 8 cycleEnd 9 generalFault 10 live 1 autoMode 19 manualMode 20 cycleInProgress 11 endCycleRequest 12>
+<copie_batch:management management/ 1 cycleInProgress 11 endCycleRequest 12 kneadingOk 13 syrupWeighingOk 14 flourWeighingOk 15 cycleEnd 9 flourWeighingRq 16 syrupWeighingRq 17 kneadingRq 18>
+<copie_batch:manufacturing manufacturing/ 1 cycleInProgress 11 acknowledgePB 8 flourWeighingRequest 16 syrupWeighingRequest 17 kneadingRequest 18 autoMode 19 manualMode 20 flourWeight 21 syrup1Weight 22 syrup2Weight 23 syrup3Weight 24 generalFault 10 kneadingOK 13 flourWeighingOk 15 syrupWeighingOk 14>

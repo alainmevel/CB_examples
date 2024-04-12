@@ -1,0 +1,52 @@
+ cycleInProgress IB1
+ kneadingRequest IB2
+ acknowledgePB IB3
+ autoMode IB4
+ manualMode IB5
+ syrupExtraction IF6
+ flourExtraction IF7
+ kneadingOK OB8
+ fault OB9
+ ~ LI10
+ ~ LF11
+ ~ LF12
+ ~ LF13
+ ~ LB14
+ ~ LF15
+ ~ LB16
+ ~ LB17
+ ~ LF18
+ ~ LF19
+ ~ LB20
+ ~ LB21
+ ~ LF22
+ ~ LF23
+ ~ LF24
+ ~ LF25
+ ~ LF26
+ ~ LI27
+ ~ LB28
+ ~ LB29
+ ~ LB30
+ ~ LB31
+ ~ LB32
+ ~ LF33
+ ~ LF34
+ ~ LF35
+ ~ LB36
+ ~ LB37
+ ~ LB38
+ ~ LF39
+<copie_batch:add_syrup collectedMixture/ 1 flowSyrup1 6 flowSyrup2 7 flowSyrup3 25 flow 34>
+<equipment_library:flow_compute flow/ 1 inputFlow 26 outputFlow 33>
+<copie_batch:kneading kneading/ 1 kneadingRequest 2 cycleInProgress 1 mixtureLevel 27 kneadingOK 8 knead 28 clean 30 cleaningEnd 29 evacuateMixture 32 evacMixtureEnd 31>
+<io_library:io_agitator_1speed motorOfAgitator/ 1 acknowledgePB 3 autoMode 4 manualMode 5 autoCmd 28 generalFault 36 speedVal 24 speedPercent 23>
+<io_library:io_on_off_valve cleaningValve/ 1 acknowledgePB 3 autoMode 4 manualMode 5 autoCloseCmd 29 autoOpenCmd 30 inputFlow 22 openedSensor 21 closedSensor 20 generalFault 37 outputFlow 19 percentOpening 18>
+<io_library:io_on_off_valve mixtureExtractingValve/ 1 acknowledgePB 3 autoMode 4 manualMode 5 autoCloseCmd 31 autoOpenCmd 32 inputFlow 33 openedSensor 17 closedSensor 16 generalFault 38 outputFlow 35 percentOpening 15>
+<equipment_library:tank mixtureWeighing/ 1 inletFlow 34 outletFlow 35 tankLevel 26>
+ faults1/generalFault1 IB36
+ faults1/generalFault2 IB37
+ faults1/generalFault3 IB38
+ faults1/fault OB9
+<equipment_library:analog_sensor level/ 1 measure 26 sensorSupply 14 realValue 39 intValue 13 dintValue 12>
+<equipment_library:bounded_scale scale/ 1 inputValue 39 realValue 11 dintValue 27 intValue 10>

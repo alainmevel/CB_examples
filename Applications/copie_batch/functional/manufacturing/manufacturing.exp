@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<CB_COMPONENT NAME="manufacturing" COMMENTS="" COMMENTS_PATTERN="" PICTURE_PATH="" INSTANCE_NAMIMG_PATTERN="" COMPONENT_CLASS="" SAFE_MODE="True" BREAKPOINT="False" GEN_STATUS="good">
+	<MODEL_REQUIREMENTS>
+&#9;
+		<COMMENTS />
+&#9;
+		<FUNCTIONAL_TREE TYPE="mac">
+			<CHILDREN>
+				<NODE NAME="flour" MODEL_PATH="Applications\copie_batch\flour" />
+				<NODE NAME="syrup" MODEL_PATH="Applications\copie_batch\syrup" />
+				<NODE NAME="mixture" MODEL_PATH="Applications\copie_batch\mixture" />
+				<NODE NAME="faults1" TYPE="rel" MODEL_NAME="faults" /></CHILDREN></FUNCTIONAL_TREE></MODEL_REQUIREMENTS>
+</CB_COMPONENT>

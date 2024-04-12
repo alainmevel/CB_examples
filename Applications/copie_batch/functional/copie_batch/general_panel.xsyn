@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<AWTSynoptic screenX="1600" screenY="2262" name="general_panel.xsyn" description="" date="12/04/2024" time="14:05" version="3.0_draft3" source="controlbuild " bkgColor="white" identifier="7f56f1de-5040-42a8-91ca-1651243ebaa1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Colors>
+		<Color colorId="black" r="0" g="0" b="0" invisible="false" />
+		<Color colorId="white" r="255" g="255" b="255" invisible="false" />
+		<Color colorId="red" r="255" g="0" b="0" invisible="false" />
+		<Color colorId="yellow" r="255" g="255" b="0" invisible="false" />
+		<Color colorId="blue" r="0" g="0" b="255" invisible="false" />
+		<Color colorId="green" r="0" g="255" b="0" invisible="false" />
+		<Color colorId="purple" r="128" g="0" b="128" invisible="false" />
+		<Color colorId="brown" r="128" g="64" b="0" invisible="false" />
+		<Color colorId="gray" r="192" g="192" b="192" invisible="false" />
+		<Color colorId="orange" r="255" g="128" b="0" invisible="false" />
+		<Color colorId="pink" r="255" g="128" b="255" invisible="false" />
+		<Color colorId="transparent" invisible="true" />
+		<Color colorId="other" r="0" g="0" b="0" invisible="false" />
+		<Color colorId="visible" invisible="false" />
+	</Colors>
+	<Objects>
+		<Text font="font0" textColor="black" hAlign="left" vAlign="top">
+			<Basic xInit="342" yInit="248" xFinal="502" yFinal="282" xCenter="422" yCenter="265" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="transparent" />
+			<Content>  End of cycle</Content>
+		</Text>
+		<Text font="font0" textColor="black" hAlign="left" vAlign="top">
+			<Basic xInit="110" yInit="250" xFinal="260" yFinal="284" xCenter="185" yCenter="267" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="transparent" />
+			<Content>AUTO - MANU</Content>
+		</Text>
+		<Text font="font0" textColor="black" hAlign="left" vAlign="top">
+			<Basic xInit="440" yInit="101" xFinal="532" yFinal="135" xCenter="486" yCenter="118" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="transparent" />
+			<Content>  ACK</Content>
+		</Text>
+		<Text font="font0" textColor="black" hAlign="left" vAlign="top">
+			<Basic xInit="270" yInit="104" xFinal="362" yFinal="138" xCenter="316" yCenter="121" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="transparent" />
+			<Content>  Cycle</Content>
+		</Text>
+		<Text font="font0" textColor="black" hAlign="left" vAlign="top">
+			<Basic xInit="104" yInit="104" xFinal="200" yFinal="138" xCenter="152" yCenter="121" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="transparent" lineEnd="round" patternStyle="full" patternColor="transparent" />
+			<Content>Power up</Content>
+		</Text>
+		<Rectangle>
+			<Basic xInit="82" yInit="56" xFinal="552" yFinal="588" xCenter="317" yCenter="322" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="gray" />
+		</Rectangle>
+		<Rectangle>
+			<Basic xInit="94" yInit="46" xFinal="564" yFinal="578" xCenter="329" yCenter="312" />
+			<Style lineStyle="solid" lineWidth="1" lineColor="black" lineEnd="round" patternStyle="full" patternColor="rgb(128,128,128)" />
+		</Rectangle>
+		<Widget src="equipment_library\momentary_button\blue_momentary_pb">
+			<Basic xInit="98" yInit="144" xFinal="198" yFinal="234" xCenter="148" yCenter="189" />
+			<Comment>CB.instance_path=generalPanel\powerUp
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=98
+CB.rotation_centerY=234
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\momentary_button\green_momentary_pb">
+			<Basic xInit="266" yInit="146" xFinal="364" yFinal="232" xCenter="315" yCenter="189" />
+			<Comment>CB.instance_path=generalPanel\startCyclePB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=266
+CB.rotation_centerY=232
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\momentary_button\black_momentary_pb">
+			<Basic xInit="432" yInit="144" xFinal="536" yFinal="234" xCenter="484" yCenter="189" />
+			<Comment>CB.instance_path=generalPanel\acknowledgePB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=432
+CB.rotation_centerY=234
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\switch_2pos_2outputs\switch_2pos_2outputs">
+			<Basic xInit="106" yInit="290" xFinal="262" yFinal="428" xCenter="184" yCenter="359" />
+			<Comment>CB.instance_path=generalPanel\modeSwitch
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=106
+CB.rotation_centerY=428
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\maintained_button\emergency_stop">
+			<Basic xInit="230" yInit="402" xFinal="402" yFinal="560" xCenter="316" yCenter="481" />
+			<Comment>CB.instance_path=generalPanel\emergencyStop
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=230
+CB.rotation_centerY=560
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+		<Widget src="equipment_library\momentary_button\yellow_momentary_pb">
+			<Basic xInit="370" yInit="292" xFinal="474" yFinal="380" xCenter="422" yCenter="336" />
+			<Comment>CB.instance_path=generalPanel\endCyclePB
+CB.rotation_angle=0
+CB.symmetry_kind=0
+CB.rotation_centerX=370
+CB.rotation_centerY=380
+</Comment>
+			<addData>
+			</addData>
+		</Widget>
+	</Objects>
+	<Vars>
+	</Vars>
+	<Fonts>
+		<Font fontId="font0" family="Arial" size="7pt" style="normal" weight="normal" text-decoration="none" letter-spacing="0" word-spacing="0" />
+	</Fonts>
+	<Meta>
+		<Metadata type="synoptic">
+			<Param>
+				<ParamName>groundPlanOnxyz</ParamName>
+				<ParamValue>3</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskpx</ParamName>
+				<ParamValue>0</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskpy</ParamName>
+				<ParamValue>0</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskpz</ParamName>
+				<ParamValue>0</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskdx</ParamName>
+				<ParamValue>10</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskdy</ParamName>
+				<ParamValue>10</ParamValue>
+			</Param>
+			<Param>
+				<ParamName>referenceMaskdz</ParamName>
+				<ParamValue>10</ParamValue>
+			</Param>
+		</Metadata>
+	</Meta>
+</AWTSynoptic>

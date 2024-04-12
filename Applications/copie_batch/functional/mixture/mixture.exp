@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<CB_COMPONENT NAME="mixture" COMMENTS="" COMMENTS_PATTERN="&lt;CLASS_PATTERN&gt;" PICTURE_PATH="" INSTANCE_NAMIMG_PATTERN="&lt;CLASS_PATTERN&gt;" COMPONENT_CLASS="CONTROL_UNIT" SAFE_MODE="True" BREAKPOINT="False" GEN_STATUS="good">
+	<MODEL_REQUIREMENTS>
+&#9;
+		<COMMENTS />
+&#9;
+		<FUNCTIONAL_TREE TYPE="mac">
+&#9;&#9;
+			<CHILDREN>
+&#9;&#9;&#9;
+				<NODE NAME="collectedMixture" MODEL_PATH="Applications\copie_batch\add_syrup">
+&#9;&#9;&#9;&#9;
+					<NODE NAME="flow" MODEL_PATH="Standard\equipment_library\flow_compute">
+&#9;&#9;&#9;&#9;&#9;
+						<NODE NAME="kneading" MODEL_PATH="Applications\copie_batch\kneading">
+&#9;&#9;&#9;&#9;&#9;&#9;
+							<NODE NAME="motorOfAgitator" MODEL_PATH="Standard\io_library\io_agitator_1speed" />
+&#9;&#9;&#9;&#9;&#9;&#9;
+							<NODE NAME="cleaningValve" MODEL_PATH="Standard\io_library\io_on_off_valve" />
+&#9;&#9;&#9;&#9;&#9;&#9;
+							<NODE NAME="mixtureExtractingValve" MODEL_PATH="Standard\io_library\io_on_off_valve" />
+&#9;&#9;&#9;&#9;&#9;&#9;
+							<NODE NAME="mixtureWeighing" MODEL_PATH="Standard\equipment_library\tank">
+&#9;&#9;&#9;&#9;&#9;&#9;&#9;
+								<NODE NAME="faults1" TYPE="rel" MODEL_NAME="faults">
+									<NODE NAME="level" MODEL_PATH="Standard\equipment_library\analog_sensor">
+										<NODE NAME="scale" MODEL_PATH="Standard\equipment_library\bounded_scale" /></NODE></NODE></NODE></NODE></NODE></NODE></CHILDREN></FUNCTIONAL_TREE></MODEL_REQUIREMENTS>
+</CB_COMPONENT>
