@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Generator: ControlBuild -->
+
+<APPLICATION NAME="ap_master">
+	<PROPERTIES>
+		<PROPERTY NAME="IdentifierProperty" VALUE="bf758ace-14bb-4b1d-8df8-27f5dc81128a">
+		</PROPERTY>
+		<PROPERTY NAME="groupNameProperty" VALUE="Sample applications">
+			<PROPERTIES>
+				<PROPERTY NAME="IdentifierProperty" VALUE="00000000-0000-0000-0000-000000000000">
+				</PROPERTY>
+			</PROPERTIES>
+		</PROPERTY>
+	</PROPERTIES>
+</APPLICATION>
